@@ -1,329 +1,48 @@
 {
-"count": 210,
+"count": 256,
 "data": [
     {
-        "name": "Open Tools",
-        "link": "https://opentools.ai/?ref=aidirectori.es",
-        "submission_link": "https://opentools.ai/friends/launch-tool?ref=aidirectori.es",
-        "domain_rating": 64,
-        "monthly_visits": 3000000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "DIRECTORIES20",
-        "dealText": "20% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1849087452373291008/_op6UtG8_400x400.png"
-    },
-    {
-        "name": "Toolfolio",
-        "link": "https://toolfolio.io/",
-        "submission_link": "https://toolfolio.io/boosts#skiptheline",
-        "domain_rating": 37,
-        "monthly_visits": 207000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "TF10",
-        "dealText": "10% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1979166137083404288/p8GVBB-M_400x400.png"
-     },
-    {
-        "name": "PeerPush",
-        "link": "https://peerpush.net",
-        "submission_link": "https://peerpush.net/submit",
-        "domain_rating": 63,
-        "monthly_visits": 85000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "AIDIRECTORIES10",
-        "dealText": "10% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1956758245562793984/iTHkvAFK_400x400.jpg"
-     },
-     {
-        "name": "Uneed Best",
-        "link": "https://www.uneed.best?atp=aidirectories",
-        "submission_link": "https://www.uneed.best?atp=aidirectories",
-        "domain_rating": 66,
-        "monthly_visits": 252000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "AIDIRECTORIES",
-        "dealText": "20% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1749808918518509568/BzqYq2qf_400x400.png"
-    },
-    {
-        "name": "AI Top Tools",
-        "link": "https://aitoptools.com?ref=aidirectories",
-        "submission_link": "https://aitoptools.com/account/submit-tool?ref=aidirectories",
-        "domain_rating": 48,
-        "monthly_visits": 260000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "AID20",
-        "dealText": "20% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1749843669824274432/Hobf7v6D_400x400.jpg"
-    },
-    {
-        "name": "aitools.fyi",
-        "link": "https://aitools.fyi/?ref=aidirectori.es",
-        "submission_link": "https://aitools.fyi/submit?ref=aidirectori.es",
-        "domain_rating": 44,
-        "monthly_visits": 790000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "AID30",
-        "dealText": "30% Discount"
-    },
-    {
-        "name": "TrustMRR",
-        "link": "https://trustmrr.com/?ref=aidirectories",
-        "submission_link": "https://trustmrr.com/?ref=aidirectories",
-        "domain_rating": 33,
-        "monthly_visits": 80000,
-        "submission_experience": "Good",
-        "pricing": "Free",
-        "icon": "https://cdn.aidirectori.es/icons/faviconV2%20(29).png"
-    },
-    {
-        "name": "BasedTools",
-        "link": "https://basedtools.ai?ref=aidirectories",
-        "submission_link": "https://buy.stripe.com/5kA2ax0aD7b93bG3cc?ref=aidirectories",
-        "domain_rating": 46,
-        "monthly_visits": 109800,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "SERG20",
-        "dealText": "70% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1755128156628131840/6P3EZ-z1_400x400.jpg"
-    },
-    {
-        "name": "Dokey AI",
-        "link": "https://dokeyai.com/?ref=aidirectori.es",
-        "submission_link": "https://dokeyai.com/submit?ref=aidirecotri.es",
-        "domain_rating": 53,
-        "monthly_visits": 7100,
-        "submission_experience": "Good",
-        "pricing": "Free",
-        "dealCode": "DIRECTORY50",
-        "dealText": "50% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1792492898237214720/FcPQ01Bi_400x400.jpg"
-    },
-    {
-        "name": "Tiny Startups",
-        "link": "https://www.tinystartups.co/?ref=aidirectori.es",
-        "submission_link": "https://buy.stripe.com/aEU7vOb0s2fugkUdRy",
-        "domain_rating": 46,
-        "monthly_visits": 10000,
-        "submission_experience": "Good",
-        "pricing": "Free",
-        "dealCode": "Buy 1 take 2",
-        "dealText": "Buy 1 take 2",
-        "icon": "https://cdn.prod.website-files.com/657b3d8ca1cab4015f06c850/65f57018d631fa7967ddaf12_icon.svg"
-    },
-    {
-        "name": "Startup Spotlight",
-        "link": "https://www.startupspotlight.co?ref=aidirectories",
-        "submission_link": "https://buy.stripe.com/aEU7vOb0s2fugkUdRy",
-        "domain_rating": 25,
-        "monthly_visits": 5000,
-        "submission_experience": "Good",
-        "pricing": "Free",
-        "dealCode": "Buy 1 take 2",
-        "dealText": "Buy 1 take 2",
-        "icon": "https://cdn.prod.website-files.com/657b3d8ca1cab4015f06c850/66edda4b853c47efe45e9b42_icon.png"
-    },
-    {
-        "name": "Top AI Tools",
-        "link": "https://topai.tools/?aff=8Mjlz",
-        "submission_link": "https://topai.tools/submit?aff=8Mjlz",
-        "domain_rating": 53,
-        "monthly_visits": 2400000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "Q3ODY5NA",
-        "dealText": "10% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1626279065995943940/qaxFGlrt_400x400.jpg"
-    },
-    {
-        "name": "Appscribed",
-        "link": "https://appscribed.com/?ref=aidirectori.es",
-        "submission_link": "https://appscribed.com/product-list/?linkId=lp_097578&sourceId=aidirectories&tenantId=appscribed",
-        "domain_rating": 44,
-        "monthly_visits": 60000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "TOOL10",
-        "dealText": "10% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1854512086170406913/hGo5Uyrr_400x400.jpg"
-    },
-    {
-        "name": "AI Best Tools",
-        "link": "https://aibest.tools/?ref=aidirectories",
-        "submission_link": "https://aibest.tools/submit?ref=aidirectories",
-        "domain_rating": 45,
-        "monthly_visits": 4000,
-        "submission_experience": "Good",
-        "pricing": "FREE",
-        "dealCode": "AIDIRECTORIES30",
-        "dealText": "30% discount",
-        "icon": "https://aibest.tools/favicon.ico"
-    },
-    {
-        "name": "Toolio AI",
-        "link": "https://toolio.ai/?ref=aidirectories",
-        "submission_link": "https://toolio.ai/submit-a-tool?ref=aidirectories",
-        "domain_rating": 40,
-        "monthly_visits": 23000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "TOOLIO48",
-        "dealText": "48% Discount",
-        "icon": "https://uploads-ssl.webflow.com/65c65e7858f778b425edee6b/66435f945840e853a4effe94_Toolio_logo.webp"
-    },
-    {
-        "name": "BotsFloor",
-        "link": "https://botsfloor.com/?ref=aidirectories",
-        "submission_link": "https://botsfloor.com/submit?ref=aidirectories",
-        "domain_rating": 41,
-        "monthly_visits": 1200,
-        "submission_experience": "Good",
-        "pricing": "Free",
-        "icon": "https://cdn.aidirectori.es/icons/botsfloor.png"
-    },
-    {
-        "name": "That AI Collection",
-        "link": "https://www.thataicollection.com/",
-        "submission_link": "https://aicollection.lemonsqueezy.com?aff=8Mjlz",
-        "domain_rating": 41,
-        "monthly_visits": 553400,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "AZNJUYMQ",
-        "dealText": "10% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1652202412222889986/ixH50eBo_400x400.jpg"
-    },
-    {
-        "name": "AI Tools One",
-        "link": "https://aitoolsone.com?ref=aidirectories",
-        "submission_link": "https://aitoolsone.com/submit/?ref=aidirectories",
-        "domain_rating": 32,
-        "monthly_visits": 30000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "AIDIR20",
-        "dealText": "20% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1755562365028909056/w9z8YTEW_400x400.jpg"
-    },
-    {
-        "name": "AIStage",
-        "link": "https://aistage.net?ref=aidirectories",
-        "submission_link": "https://aistage.net/submit/?ref=aidirectories",
-        "domain_rating": 38,
+        "name": "100 AI Apps",
+        "link": "https://100apps.org/",
+        "submission_link": "https://100apps.org/",
+        "domain_rating": 0.6,
         "monthly_visits": 1000,
         "submission_experience": "Good",
-        "pricing": "Free",
-        "dealCode": "AIDIRECTORIES50",
-        "dealText": "50% Discount"
+        "pricing": "Paid"
     },
     {
-        "name": "SEOFAI",
-        "link": "https://seofai.com/?ref=aidirectori.es",
-        "submission_link": "https://seofai.com/submit-ai-tool/?ref=aidirectori.es",
-        "domain_rating": 17,
-        "monthly_visits": 127300,
+        "name": "1000 Tools",
+        "link": "https://1000.tools/",
+        "submission_link": "https://1000.tools/my/tools/create",
+        "domain_rating": 23,
+        "monthly_visits": 7500,
         "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "AIDirectories10",
-        "dealText": "10% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1711867419776454656/Ym9do8Zm_400x400.jpg"
+        "pricing": "Paid"
     },
     {
-        "name": "AlterOpen",
-        "link": "https://alteropen.com/?ref=aidirectori.es",
-        "submission_link": "https://alteropen.com/submit/pack?ref=aidirectori.es",
-        "domain_rating": 39,
-        "monthly_visits": 2000,
+        "name": "1000gpt.shop",
+        "link": "https://1000gpt.shop/",
+        "submission_link": "https://buy.stripe.com/dR6eVi1lRgj9bsY4gg",
+        "domain_rating": 1,
+        "monthly_visits": 1000,
         "submission_experience": "Good",
-        "pricing": "Free",
-        "dealCode": "AIDIRECTORISERG70",
-        "dealText": "70% Discount"
+        "pricing": "Paid"
     },
     {
-        "name": "Aura ++",
-        "link": "https://auraplusplus.com/?ref=aidirectories",
-        "submission_link": "https://auraplusplus.com/listing/basic-product-details?ref=aidirectories",
-        "domain_rating": 57,
-        "monthly_visits": 5000,
+        "name": "1payment Tools",
+        "link": "https://1payment.tools/",
+        "submission_link": "https://1payment.tools/cabinet/apps/new",
+        "domain_rating": 0.8,
+        "monthly_visits": 1000,
         "submission_experience": "Good",
-        "pricing": "Free",
-        "dealCode": "50AIDIRECTORIES",
-        "dealText": "50% Discount",
-        "icon": "https://cdn.aidirectori.es/icons/aura.png"
+        "pricing": "Paid"
     },
     {
-        "name": "GetByte",
-        "link": "https://getbyte.tech?ref=aidirectories",
-        "submission_link": "https://getbyte.tech/listing/basic-product-details?ref=aidirectories",
-        "domain_rating": 14,
-        "monthly_visits": 3500,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "AIDIR40",
-        "dealText": "40% Discount"
-    },
-
-    {
-        "name": "AI Tool Trek",
-        "link": "https://aitooltrek.com/?ref=aidirectori.es",
-        "submission_link": "https://aitooltrek.com/submit?ref=aidirectori.es",
-        "domain_rating": 44,
-        "monthly_visits": 3500,
-        "submission_experience": "Good",
-        "pricing": "Free",
-        "dealCode": "AIDIRVIP",
-        "dealText": "50% Discount",
-        "icon": "https://aitooltrek.com/images/favicon.svg"
-    },
-    {
-        "name": "AI Zones",
-        "link": "https://aizones.io/?ref=aidirectories",
-        "submission_link": "https://aizones.io/submit?ref=aidirectories",
-        "domain_rating": 30,
-        "monthly_visits": 100000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "aidirectories50",
-        "dealText": "50% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1755998314158333952/VD6sKjta_400x400.jpg"
-    },
-    {
-        "name": "OpenAlternative",
-        "link": "https://openalternative.co/?ref=aidirectories",
-        "submission_link": "https://openalternative.co/submit",
-        "domain_rating": 40,
-        "monthly_visits": 275000,
-        "submission_experience": "Good",
-        "pricing": "Free",
-        "dealCode": "AIDIR20",
-        "dealText": "20% Discount",
-        "icon": "https://openalternative.co/favicon.png"
-    },
-    {
-        "name": "LaunchIgniter",
-        "link": "https://launchigniter.com/?ref=aidirectories",
-        "submission_link": "https://launchigniter.com/submit?ref=aidirectories",
-        "domain_rating": 68,
-        "monthly_visits": 500,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "dealCode": "AIDIRECTORIES30",
-        "dealText": "30% Discount",
-        "icon": "https://pbs.twimg.com/profile_images/1915733068134178817/PTm4mwqV_400x400.png"
-    },
-    {
-        "name": "Human or Not",
-        "link": "https://www.humanornot.co/?ref=aidirectori.es",
-        "submission_link": "https://www.humanornot.co/submit-tool?ref=aidirectori.es",
-        "domain_rating": 6,
-        "monthly_visits": 52000,
+        "name": "Advanced Innovation",
+        "link": "https://www.advanced-innovation.io/",
+        "submission_link": "https://www.advanced-innovation.io/ki-tool-einreichen",
+        "domain_rating": 20,
+        "monthly_visits": 25000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
@@ -337,163 +56,13 @@
         "pricing": "Paid"
     },
     {
-        "name": "Aifyles",
-        "link": "https://aifyles.com/?ref=aidirectories",
-        "submission_link": "https://gumroad.com/a/539321875/btegb",
-        "domain_rating": 9,
-        "monthly_visits": 30000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "icon": "https://pbs.twimg.com/profile_images/1761364010199621632/VCRrp3H7_400x400.jpg"
-    },
-    {
-        "name": "There's An AI For That",
-        "link": "https://theresanaiforthat.com?via=aidirectories",
-        "submission_link": "https://theresanaiforthat.com/get-featured/#opt_submit?via=aidirectories",
-        "domain_rating": 75,
-        "monthly_visits": 5400000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "icon": "https://pbs.twimg.com/profile_images/1795256389721337856/cWLOcGy4_400x400.jpg"
-    },
-    {
-        "name": "AI Top Rank",
-        "link": "https://aitoprank.com/?ref=aidirectories",
-        "submission_link": "https://aitoprank.com/?ref=aidirectories",
-        "domain_rating": 10,
-        "monthly_visits": 5000,
+        "name": "Afford Hunt",
+        "link": "https://affordhunt.com",
+        "submission_link": "https://t.co/zZB1Yxgf8s",
+        "domain_rating": 56,
+        "monthly_visits": 80000,
         "submission_experience": "Good",
         "pricing": "Free"
-    },
-    {
-        "name": "Simple Lister",
-        "link": "https://simplelister.com?ref=aidirectori.es",
-        "submission_link": "https://simplelister.com/submit?ref=aidirectori.es",
-        "domain_rating": 26,
-        "monthly_visits": 9000,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "Yaatd",
-        "link": "https://yaatd.com?ref=aidirectori.es",
-        "submission_link": "https://yaatd.com/submit?ref=aidirectori.es",
-        "domain_rating": 39,
-        "monthly_visits": 100,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    
-    {
-        "name": "Startup Heroes",
-        "link": "https://startupheroes.io/?ref=aidirectori.es",
-        "submission_link": "https://startupheroes.io/submit/?ref=aidirectori.es",
-        "domain_rating": 38,
-        "monthly_visits": 2000,
-        "submission_experience": "Good",
-        "pricing": "Paid",
-        "icon": "https://startupheroes.io/wp-content/uploads/startup-heroes-stacked-logo-black.svg"
-    },
-    {
-        "name": "ProSaasHub",
-        "link": "https://prosaashub.com/?ref=aidirectories",
-        "submission_link": "https://prosaashub.com/?ref=aidirectories",
-        "domain_rating": 0.6,
-        "monthly_visits": 50,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "AllYourTech",
-        "link": "https://allyourtech.ai/?ref=aidirectories",
-        "submission_link": "https://allyourtech.ai/ai-tools/submit/?ref=aidirectories",
-        "domain_rating": 1.7,
-        "monthly_visits": 0,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "AI For Me! Wiki ",
-        "link": "https://aiforme.wiki/?ref=aidirectories",
-        "submission_link": "https://www.aiforme.wiki/",
-        "domain_rating": 0,
-        "monthly_visits": 0,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "AIPROFIND.com",
-        "link": "https://aiprofind.com/?ref=aidirectories",
-        "submission_link": "https://www.aiprofind.com/checkout/3/?ref=aidirectories",
-        "domain_rating": 0,
-        "monthly_visits": 0,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "Directories",
-        "link": "https://directories.so/?ref=aidirectories",
-        "submission_link": "https://tally.so/r/3qby88",
-        "domain_rating": 8,
-        "monthly_visits": 1500,
-        "submission_experience": "Good",
-        "pricing": "Free",
-        "icon":"https://pbs.twimg.com/profile_images/1790469353093120001/EUHAHqm8_400x400.jpg"
-    },
-    {
-        "name": "All The AI Tools",
-        "link": "https://alltheaitools.com",
-        "submission_link": "https://alltheaitools.com/submit-tool",
-        "domain_rating": 4,
-        "monthly_visits": 1000,
-        "submission_experience": "Good",
-        "pricing": "Free",
-        "icon": "https://pbs.twimg.com/profile_images/1849854362325295104/bVvbMZc5_400x400.jpg"
-    },
-    {
-        "name": "Stackviv AI",
-        "link": "https://stackviv.ai/",
-        "submission_link": "https://tally.so/r/waE1jE",
-        "domain_rating": 10,
-        "monthly_visits": 1000,
-        "submission_experience": "Good",
-        "pricing": "Paid"
-    },
-    {
-        "name": "AI Pulse",
-        "link": "https://www.aipulse.fyi",
-        "submission_link": "https://www.aipulse.fyi",
-        "domain_rating": 0,
-        "monthly_visits": 0,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "GroupifyAI",
-        "link": " https://groupify.ai/?ref=aidirectories",
-        "submission_link": "https://groupify.ai/new-tool-form?ref=aidirectories",
-        "domain_rating": 0.1,
-        "monthly_visits": 3400,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "Wavel",
-        "link": " https://www.wavel.io/?ref=aidirectories",
-        "submission_link": "https://www.wavel.io/submit-tool",
-        "domain_rating": 10,
-        "monthly_visits": 12000,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "Pro Link Builders",
-        "link": "https://prolinkbuilders.co.uk/?ref=aidirectories",
-        "submission_link": "https://prolinkbuilders.co.uk/istings/create/?ref=aidirectories",
-        "domain_rating": 5,
-        "monthly_visits": 400,
-        "submission_experience": "Good",
-        "pricing": "Paid"
     },
     {
         "name": "AI Agent Store",
@@ -505,72 +74,21 @@
         "pricing": "Paid"
     },
     {
-        "name": "RankYourAI",
-        "link": "https://rankyourai.com/?ref=aidirectories",
-        "submission_link": "https://rankyourai.com/?ref=aidirectories",
-        "domain_rating": 35,
-        "monthly_visits": 0,
+        "name": "AI Best Tools",
+        "link": "https://aibest.tools/",
+        "submission_link": "https://aibest.tools/submit",
+        "domain_rating": 45,
+        "monthly_visits": 4000,
         "submission_experience": "Good",
-        "pricing": "Paid"
-    },
-    {
-        "name": "100 AI Apps",
-        "link": "https://100apps.org/?ref=aidirectori.es",
-        "submission_link": "https://100apps.org/?ref=aidirectori.es",
-        "domain_rating": 0.6,
-        "monthly_visits": 1000,
-        "submission_experience": "Good",
-        "pricing": "Paid"
-    },
-    {
-        "name": "1000 Tools",
-        "link": "https://1000.tools/?ref=aidirectori.es",
-        "submission_link": "https://1000.tools/my/tools/create?ref=aidirectori.es",
-        "domain_rating": 23,
-        "monthly_visits": 7500,
-        "submission_experience": "Good",
-        "pricing": "Paid"
-    },
-    {
-        "name": "1000gpt.shop",
-        "link": "https://1000gpt.shop/?ref=aidirectori.es",
-        "submission_link": "https://buy.stripe.com/dR6eVi1lRgj9bsY4gg",
-        "domain_rating": 1,
-        "monthly_visits": 1000,
-        "submission_experience": "Good",
-        "pricing": "Paid"
-    },
-    {
-        "name": "1payment Tools",
-        "link": "https://1payment.tools/?ref=aidirectori.es",
-        "submission_link": "https://1payment.tools/cabinet/apps/new?ref=aidirectori.es",
-        "domain_rating": 0.8,
-        "monthly_visits": 1000,
-        "submission_experience": "Good",
-        "pricing": "Paid"
-    },
-    {
-        "name": "Advanced Innovation",
-        "link": "https://www.advanced-innovation.io/?ref=aidirectories",
-        "submission_link": "https://www.advanced-innovation.io/ki-tool-einreichen?ref=aidirectories",
-        "domain_rating": 20,
-        "monthly_visits": 25000,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "Afford Hunt",
-        "link": "https://affordhunt.com?ref=aidirectories",
-        "submission_link": "https://t.co/zZB1Yxgf8s",
-        "domain_rating": 56,
-        "monthly_visits": 80000,
-        "submission_experience": "Good",
-        "pricing": "Free"
+        "pricing": "Free",
+        "dealCode": "AIDIRECTORIES30",
+        "dealText": "30% discount",
+        "icon": "https://aibest.tools/favicon.ico"
     },
     {
         "name": "AI Center",
-        "link": "https://aicenter.ai/?ref=aidirectories",
-        "submission_link": "https://aicenter.ai/products/submit?ref=aidirectories",
+        "link": "https://aicenter.ai/",
+        "submission_link": "https://aicenter.ai/products/submit",
         "domain_rating": 10,
         "monthly_visits": 5000,
         "submission_experience": "Good",
@@ -578,8 +96,8 @@
     },
     {
         "name": "AI combined",
-        "link": "https://aicombined.com?ref=aidirectories",
-        "submission_link": "https://aicombined.com/add-listing?ref=aidirectories/",
+        "link": "https://aicombined.com",
+        "submission_link": "https://aicombined.com/add-listing",
         "domain_rating": 10,
         "monthly_visits": 5000,
         "submission_experience": "Good",
@@ -587,8 +105,8 @@
     },
     {
         "name": "AI Depot",
-        "link": "https://aidepot.co/?ref=aidirectories",
-        "submission_link": "https://t.co/d7KH891ypL?ref=aidirectories",
+        "link": "https://aidepot.co/",
+        "submission_link": "https://t.co/d7KH891ypL",
         "domain_rating": 11,
         "monthly_visits": 30000,
         "submission_experience": "",
@@ -614,8 +132,8 @@
     },
     {
         "name": "AI Dude Info",
-        "link": "https://www.aiwizard.ai/?ref=aidirectories",
-        "submission_link": "https://aidude.info/submit-your-tool?ref=aidirectories",
+        "link": "https://aidude.info/",
+        "submission_link": "https://aidude.info/submit-your-tool",
         "domain_rating": 13,
         "monthly_visits": 84700,
         "submission_experience": "Good",
@@ -640,6 +158,15 @@
         "pricing": "Free"
     },
     {
+        "name": "AI For Me! Wiki",
+        "link": "https://aiforme.wiki/",
+        "submission_link": "https://www.aiforme.wiki/",
+        "domain_rating": 0,
+        "monthly_visits": 0,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
         "name": "AI Gadget",
         "link": "https://aigadget.io/",
         "submission_link": "https://aigadget.io/",
@@ -654,15 +181,6 @@
         "submission_link": "https://www.aihub.fyi/form",
         "domain_rating": 22,
         "monthly_visits": 1300,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "AI Hunter",
-        "link": "https://ai-hunter.io/",
-        "submission_link": "https://ai-hunter.io/submit-ai-tool/",
-        "domain_rating": 10,
-        "monthly_visits": 5000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
@@ -686,8 +204,8 @@
     },
     {
         "name": "AI Library",
-        "link": "https://library.phygital.plus/?ref=aidirectories",
-        "submission_link": "https://library.phygital.plus/tool-submission?ref=aidirectories",
+        "link": "https://library.phygital.plus/",
+        "submission_link": "https://library.phygital.plus/tool-submission",
         "domain_rating": 17,
         "monthly_visits": 25000,
         "submission_experience": "Good",
@@ -703,9 +221,18 @@
         "pricing": "Free"
     },
     {
+        "name": "AI Pulse",
+        "link": "https://www.aipulse.fyi",
+        "submission_link": "https://www.aipulse.fyi",
+        "domain_rating": 0,
+        "monthly_visits": 0,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
         "name": "AI scout",
-        "link": "https://aiscout.net/ref=aidirectori.es",
-        "submission_link": "https://aiscout.net/submit-listing/details/ref=aidirectori.es",
+        "link": "https://aiscout.net/",
+        "submission_link": "https://aiscout.net/submit-listing/details/",
         "domain_rating": 43,
         "monthly_visits": 5000,
         "submission_experience": "Good",
@@ -749,8 +276,8 @@
     },
     {
         "name": "AI To Grow",
-        "link": "https://aitogrow.com/?ref=aidirectories",
-        "submission_link": "https://aitogrow.com/#send-your-tool/?ref=aidirectories",
+        "link": "https://aitogrow.com/",
+        "submission_link": "https://aitogrow.com/#send-your-tool",
         "domain_rating": 15,
         "monthly_visits": 5000,
         "submission_experience": "Good",
@@ -800,6 +327,18 @@
         "monthly_visits": 30000,
         "submission_experience": "Bad",
         "pricing": ""
+    },
+    {
+        "name": "AI Tool Trek",
+        "link": "https://aitooltrek.com/",
+        "submission_link": "https://aitooltrek.com/submit",
+        "domain_rating": 44,
+        "monthly_visits": 3500,
+        "submission_experience": "Good",
+        "pricing": "Free",
+        "dealCode": "AIDIRVIP",
+        "dealText": "50% Discount",
+        "icon": "https://aitooltrek.com/images/favicon.svg"
     },
     {
         "name": "AI Tools Arena",
@@ -866,17 +405,29 @@
     },
     {
         "name": "AI Tools Neil Patel",
-        "link": "https://aitools.neilpatel.com/?ref=aidirectori.es",
-        "submission_link": "https://aitools.neilpatel.com/submit/?ref=aidirectori.es",
+        "link": "https://aitools.neilpatel.com/",
+        "submission_link": "https://aitools.neilpatel.com/submit/",
         "domain_rating": 91,
         "monthly_visits": 6000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
+        "name": "AI Tools One",
+        "link": "https://aitoolsone.com",
+        "submission_link": "https://aitoolsone.com/submit/",
+        "domain_rating": 32,
+        "monthly_visits": 30000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "AIDIR20",
+        "dealText": "20% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1755562365028909056/w9z8YTEW_400x400.jpg"
+    },
+    {
         "name": "AI Tools Up",
-        "link": "https://aitoolsup.com/?ref=aidirectori.es",
-        "submission_link": "https://aitoolsup.com/submit-tool/?ref=aidirectori.es",
+        "link": "https://aitoolsup.com/",
+        "submission_link": "https://aitoolsup.com/submit-tool/",
         "domain_rating": 2,
         "monthly_visits": 700,
         "submission_experience": "Good",
@@ -893,8 +444,8 @@
     },
     {
         "name": "AI Toolz Dir",
-        "link": "https://www.aitoolzdir.com/?ref=aidirectori.es",
-        "submission_link": "https://www.aitoolzdir.com/submit/?ref=aidirectori.es",
+        "link": "https://www.aitoolzdir.com/",
+        "submission_link": "https://www.aitoolzdir.com/submit/",
         "domain_rating": 24,
         "monthly_visits": 400,
         "submission_experience": "Good",
@@ -902,26 +453,38 @@
     },
     {
         "name": "AI Top Picks",
-        "link": "https://www.aitoppicks.com/?ref=aidirectori.es",
-        "submission_link": "https://www.aitoppicks.com/?ref=aidirectori.es",
+        "link": "https://www.aitoppicks.com/",
+        "submission_link": "https://www.aitoppicks.com/",
         "domain_rating": 10,
         "monthly_visits": 5800,
         "submission_experience": "",
         "pricing": "Paid"
     },
     {
-        "name": "AIPure",
-        "link": "https://aipure.ai/?ref=aidirectori.es",
-        "submission_link": "https://aipure.ai/submit?ref=aidirectori.es",
-        "domain_rating": 55,
-        "monthly_visits": 383800,
+        "name": "AI Top Rank",
+        "link": "https://aitoprank.com/",
+        "submission_link": "https://aitoprank.com/",
+        "domain_rating": 10,
+        "monthly_visits": 5000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
+        "name": "AI Top Tools",
+        "link": "https://aitoptools.com",
+        "submission_link": "https://aitoptools.com/account/submit-tool",
+        "domain_rating": 48,
+        "monthly_visits": 260000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "AID20",
+        "dealText": "20% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1749843669824274432/Hobf7v6D_400x400.jpg"
+    },
+    {
         "name": "AI trendz",
-        "link": "https://aitrendz.xyz/?ref=aidirectories",
-        "submission_link": "https://aitrendz.xyz/submit-ai-link/?ref=aidirectories",
+        "link": "https://aitrendz.xyz/",
+        "submission_link": "https://aitrendz.xyz/submit-ai-link/",
         "domain_rating": 8,
         "monthly_visits": 90,
         "submission_experience": "",
@@ -929,8 +492,8 @@
     },
     {
         "name": "AI Valley",
-        "link": "https://aivalley.ai/?ref=aidirectories",
-        "submission_link": "https://aivalley.ai/submit-tool/?ref=aidirectories",
+        "link": "https://aivalley.ai/",
+        "submission_link": "https://aivalley.ai/submit-tool/",
         "domain_rating": 25,
         "monthly_visits": 230000,
         "submission_experience": "Good",
@@ -938,17 +501,79 @@
     },
     {
         "name": "AI Wizard",
-        "link": "https://www.aiwizard.ai/?ref=aidirectories",
-        "submission_link": "https://www.aiwizard.ai/submit?ref=aidirectories",
+        "link": "https://www.aiwizard.ai/",
+        "submission_link": "https://www.aiwizard.ai/submit",
         "domain_rating": 10,
         "monthly_visits": 5000,
         "submission_experience": "",
         "pricing": "Paid"
     },
     {
+        "name": "AI Zones",
+        "link": "https://aizones.io/",
+        "submission_link": "https://aizones.io/submit",
+        "domain_rating": 30,
+        "monthly_visits": 100000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "aidirectories50",
+        "dealText": "50% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1755998314158333952/VD6sKjta_400x400.jpg"
+    },
+    {
+        "name": "Aifyles",
+        "link": "https://aifyles.com/",
+        "submission_link": "https://gumroad.com/a/539321875/btegb",
+        "domain_rating": 9,
+        "monthly_visits": 30000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "icon": "https://pbs.twimg.com/profile_images/1761364010199621632/VCRrp3H7_400x400.jpg"
+    },
+    {
+        "name": "AIPROFIND.com",
+        "link": "https://aiprofind.com/",
+        "submission_link": "https://www.aiprofind.com/checkout/3/",
+        "domain_rating": 0,
+        "monthly_visits": 0,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
+        "name": "AIPure",
+        "link": "https://aipure.ai/",
+        "submission_link": "https://aipure.ai/submit",
+        "domain_rating": 55,
+        "monthly_visits": 383800,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
+        "name": "AIStage",
+        "link": "https://aistage.net",
+        "submission_link": "https://aistage.net/submit/",
+        "domain_rating": 38,
+        "monthly_visits": 1000,
+        "submission_experience": "Good",
+        "pricing": "Free",
+        "dealCode": "AIDIRECTORIES50",
+        "dealText": "50% Discount"
+    },
+    {
+        "name": "aitools.fyi",
+        "link": "https://aitools.fyi/",
+        "submission_link": "https://aitools.fyi/submit",
+        "domain_rating": 44,
+        "monthly_visits": 790000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "AID30",
+        "dealText": "30% Discount"
+    },
+    {
         "name": "AIX Collection",
-        "link": "https://aixcollection.com/?ref=aidirectories",
-        "submission_link": "https://aixcollection.com/submit?ref=aidirectories",
+        "link": "https://aixcollection.com/",
+        "submission_link": "https://aixcollection.com/submit",
         "domain_rating": 10,
         "monthly_visits": 100,
         "submission_experience": "Good",
@@ -956,17 +581,27 @@
     },
     {
         "name": "Aixploria",
-        "link": "https://www.aixploria.com/en/?ref=aidirectories",
-        "submission_link": "https://www.aixploria.com/en/add-ai/?ref=aidirectories",
+        "link": "https://www.aixploria.com/en/",
+        "submission_link": "https://www.aixploria.com/en/add-ai/",
         "domain_rating": 17,
         "monthly_visits": 584000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
+        "name": "All The AI Tools",
+        "link": "https://alltheaitools.com",
+        "submission_link": "https://alltheaitools.com/submit-tool",
+        "domain_rating": 4,
+        "monthly_visits": 1000,
+        "submission_experience": "Good",
+        "pricing": "Free",
+        "icon": "https://pbs.twimg.com/profile_images/1849854362325295104/bVvbMZc5_400x400.jpg"
+    },
+    {
         "name": "All things AI",
-        "link": "https://allthingsai.com/?ref=aidirectories",
-        "submission_link": "https://allthingsai.com/submit?ref=aidirectories",
+        "link": "https://allthingsai.com/",
+        "submission_link": "https://allthingsai.com/submit",
         "domain_rating": 27,
         "monthly_visits": 500000,
         "submission_experience": "Bad",
@@ -983,17 +618,26 @@
     },
     {
         "name": "AllStartups Info",
-        "link": "https://www.allstartups.info/?ref=aidirectori.es",
-        "submission_link": "https://www.allstartups.info/Startups/Submit?ref=aidirectories",
+        "link": "https://www.allstartups.info/",
+        "submission_link": "https://www.allstartups.info/Startups/Submit",
         "domain_rating": 33,
         "monthly_visits": 17000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
+        "name": "AllYourTech",
+        "link": "https://allyourtech.ai/",
+        "submission_link": "https://allyourtech.ai/ai-tools/submit/",
+        "domain_rating": 1.7,
+        "monthly_visits": 0,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
         "name": "Altern AI",
-        "link": "https://altern.ai/?ref=aidirectori.es",
-        "submission_link": "https://altern.ai/dash/submit?ref=aidirectori.es",
+        "link": "https://altern.ai/",
+        "submission_link": "https://altern.ai/dash/submit",
         "domain_rating": 25,
         "monthly_visits": 180000,
         "submission_experience": "Good",
@@ -1019,12 +663,23 @@
     },
     {
         "name": "AlternativeTo",
-        "link": "https://alternativeto.net/?ref=aidirectori.es",
-        "submission_link": "https://alternativeto.net/manage-item/?ref=aidirectori.es",
+        "link": "https://alternativeto.net/",
+        "submission_link": "https://alternativeto.net/manage-item/",
         "domain_rating": 80,
         "monthly_visits": 1300000,
         "submission_experience": "Good",
         "pricing": "Free"
+    },
+    {
+        "name": "AlterOpen",
+        "link": "https://alteropen.com/",
+        "submission_link": "https://alteropen.com/submit/pack",
+        "domain_rating": 39,
+        "monthly_visits": 2000,
+        "submission_experience": "Good",
+        "pricing": "Free",
+        "dealCode": "AIDIRECTORISERG70",
+        "dealText": "70% Discount"
     },
     {
         "name": "Amaete AI",
@@ -1037,8 +692,8 @@
     },
     {
         "name": "Ankore",
-        "link": "https://ankore.io?ref=aidirectori.es",
-        "submission_link": "https://ankore.io/submit/?ref=aidirectori.es",
+        "link": "https://ankore.io",
+        "submission_link": "https://ankore.io/submit/",
         "domain_rating": 0.4,
         "monthly_visits": 1500,
         "submission_experience": "Good",
@@ -1046,8 +701,8 @@
     },
     {
         "name": "Anyfp",
-        "link": "https://anyfp.com/?ref=aidirectori.es",
-        "submission_link": "https://anyfp.com/contact/?ref=aidirectori.es",
+        "link": "https://anyfp.com/",
+        "submission_link": "https://anyfp.com/contact/",
         "domain_rating": 33,
         "monthly_visits": 1000,
         "submission_experience": "Good",
@@ -1055,35 +710,29 @@
     },
     {
         "name": "Apps and Websites",
-        "link": "https://appsandwebsites.com/?ref=aidirectori.es",
-        "submission_link": "https://landing.mycloudmedia.co.uk/apps-and-websites-submit-ai-or-saas-tool/new-submission.html?ref=aidirectori.es",
+        "link": "https://appsandwebsites.com/",
+        "submission_link": "https://landing.mycloudmedia.co.uk/apps-and-websites-submit-ai-or-saas-tool/new-submission.html",
         "domain_rating": 21,
         "monthly_visits": 5000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
-        "name": "Apps and Websites",
-        "link": "https://appsandwebsites.com/",
-        "submission_link": "https://landing.mycloudmedia.co.uk/apps-and-websites-submit-ai-or-saas-tool/new-submission.html",
-        "domain_rating": 18,
-        "monthly_visits": 6000,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "Appscriber",
+        "name": "Appscribed",
         "link": "https://appscribed.com/",
-        "submission_link": "https://appscribed.com/product-list/?ref=aidirectori.es",
-        "domain_rating": 34,
-        "monthly_visits": 42100,
+        "submission_link": "https://appscribed.com/product-list/",
+        "domain_rating": 44,
+        "monthly_visits": 60000,
         "submission_experience": "Good",
-        "pricing": "Free"
+        "pricing": "Paid",
+        "dealCode": "TOOL10",
+        "dealText": "10% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1854512086170406913/hGo5Uyrr_400x400.jpg"
     },
     {
         "name": "AppsHunter",
-        "link": "https://appsthunder.com/?ref=aidirectori.es",
-        "submission_link": "https://appsthunder.com/submit-your-app/?ref=aidirectori.es",
+        "link": "https://appsthunder.com/",
+        "submission_link": "https://appsthunder.com/submit-your-app/",
         "domain_rating": 29,
         "monthly_visits": 5000,
         "submission_experience": "Good",
@@ -1099,6 +748,30 @@
         "pricing": ""
     },
     {
+        "name": "Aura ++",
+        "link": "https://auraplusplus.com/",
+        "submission_link": "https://auraplusplus.com/listing/basic-product-details",
+        "domain_rating": 57,
+        "monthly_visits": 5000,
+        "submission_experience": "Good",
+        "pricing": "Free",
+        "dealCode": "50AIDIRECTORIES",
+        "dealText": "50% Discount",
+        "icon": "https://cdn.aidirectori.es/icons/aura.png"
+    },
+    {
+        "name": "BasedTools",
+        "link": "https://basedtools.ai",
+        "submission_link": "https://buy.stripe.com/5kA2ax0aD7b93bG3cc",
+        "domain_rating": 46,
+        "monthly_visits": 109800,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "SERG20",
+        "dealText": "70% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1755128156628131840/6P3EZ-z1_400x400.jpg"
+    },
+    {
         "name": "Ben’s Bites News",
         "link": "https://news.bensbites.co/",
         "submission_link": "https://news.bensbites.com/submit",
@@ -1109,8 +782,8 @@
     },
     {
         "name": "Best AI To",
-        "link": "https://bestaito.com/?ref=aidirectori.es",
-        "submission_link": "https://bestaito.com/submit-a-ai-tool/?ref=aidirectori.es",
+        "link": "https://bestaito.com/",
+        "submission_link": "https://bestaito.com/submit-a-ai-tool/",
         "domain_rating": 12,
         "monthly_visits": 162000,
         "submission_experience": "Good",
@@ -1127,8 +800,8 @@
     },
     {
         "name": "BestWebDesignTools",
-        "link": "https://bestwebdesigntools.com/?ref=aidirectori.es",
-        "submission_link": "https://bestwebdesigntools.com/submit/?ref=aidirectori.es",
+        "link": "https://bestwebdesigntools.com/",
+        "submission_link": "https://bestwebdesigntools.com/submit/",
         "domain_rating": 3.7,
         "monthly_visits": 3000,
         "submission_experience": "Good",
@@ -1145,17 +818,27 @@
     },
     {
         "name": "BizRaw",
-        "link": "https://bizraw.com/?ref=aidirectori.es",
-        "submission_link": "https://bizraw.com/whats-new/posts/98/?ref=aidirectori.es",
+        "link": "https://bizraw.com/",
+        "submission_link": "https://bizraw.com/whats-new/posts/98/",
         "domain_rating": 73,
         "monthly_visits": 0,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
+        "name": "BotsFloor",
+        "link": "https://botsfloor.com/",
+        "submission_link": "https://botsfloor.com/submit",
+        "domain_rating": 41,
+        "monthly_visits": 1200,
+        "submission_experience": "Good",
+        "pricing": "Free",
+        "icon": "https://cdn.aidirectori.es/icons/botsfloor.png"
+    },
+    {
         "name": "BroUseAI",
-        "link": "https://www.brouseai.com/?ref=aidirectori.es",
-        "submission_link": "https://www.brouseai.com/?ref=aidirectori.es",
+        "link": "https://www.brouseai.com/",
+        "submission_link": "https://www.brouseai.com/",
         "domain_rating": 17,
         "monthly_visits": 10000,
         "submission_experience": "Good",
@@ -1163,8 +846,8 @@
     },
     {
         "name": "Buffer Apps",
-        "link": "https://www.bufferapps.com/?ref=aidirectori.es",
-        "submission_link": "https://www.bufferapps.com/beta-listing/new?ref=aidirectori.es",
+        "link": "https://www.bufferapps.com/",
+        "submission_link": "https://www.bufferapps.com/beta-listing/new",
         "domain_rating": 11,
         "monthly_visits": 5000,
         "submission_experience": "Good",
@@ -1181,8 +864,8 @@
     },
     {
         "name": "ChatGate AI",
-        "link": "https://explore.chatgate.ai/?ref=aidirectori.es",
-        "submission_link": "https://explore.chatgate.ai/submit-your-tool/?ref=aidirectori.es",
+        "link": "https://explore.chatgate.ai/",
+        "submission_link": "https://explore.chatgate.ai/submit-your-tool/",
         "domain_rating": 18,
         "monthly_visits": 5000,
         "submission_experience": "Good",
@@ -1208,10 +891,19 @@
     },
     {
         "name": "Creator Supply",
-        "link": "https://creator.supply/?ref=aidirecori.es",
-        "submission_link": "https://kevinbhagat.lemonsqueezy.com/buy/6747a484-e8ee-4302-a90a-af378cc72678/?ref=aidirecori.es",
+        "link": "https://creator.supply/",
+        "submission_link": "https://kevinbhagat.lemonsqueezy.com/buy/6747a484-e8ee-4302-a90a-af378cc72678/",
         "domain_rating": 21,
         "monthly_visits": 1000,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
+        "name": "Critiqs AI",
+        "link": "https://critiqs.ai/",
+        "submission_link": "https://critiqs.ai/submit-ai-tool/",
+        "domain_rating": 21,
+        "monthly_visits": 2000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
@@ -1225,18 +917,9 @@
         "pricing": ""
     },
     {
-        "name": "Critiqs AI",
-        "link": " https://critiqs.ai/?ref=aidirectori.es",
-        "submission_link": "https://critiqs.ai/submit-ai-tool/?ref=aidirectori.es",
-        "domain_rating": 21,
-        "monthly_visits": 2000,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
         "name": "Crunchbase",
-        "link": "https://www.crunchbase.com/?ref=aidirectori.es",
-        "submission_link": "https://www.crunchbase.com/add-new/?ref=aidirectori.es",
+        "link": "https://www.crunchbase.com/",
+        "submission_link": "https://www.crunchbase.com/add-new/",
         "domain_rating": 80,
         "monthly_visits": 10000000,
         "submission_experience": "Good",
@@ -1253,17 +936,26 @@
     },
     {
         "name": "Dang AI",
-        "link": "https://dang.ai/?ref=aidirectori.es",
-        "submission_link": "https://dang.ai/?ref=aidirectori.es",
+        "link": "https://dang.ai/",
+        "submission_link": "https://dang.ai/",
         "domain_rating": 45,
         "monthly_visits": 27700,
         "submission_experience": "Good",
         "pricing": "Paid"
     },
     {
+        "name": "DetectorTools.ai",
+        "link": "https://detectortools.ai/",
+        "submission_link": "https://detectortools.ai/submit-tool/",
+        "domain_rating": 17,
+        "monthly_visits": 4000,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
         "name": "Dev Hunt",
-        "link": "https://devhunt.org/?ref=aidirectori.es",
-        "submission_link": "https://devhunt.org/account/tools/new?ref=aidirectori.es",
+        "link": "https://devhunt.org/",
+        "submission_link": "https://devhunt.org/account/tools/new",
         "domain_rating": 56,
         "monthly_visits": 65000,
         "submission_experience": "Good",
@@ -1297,15 +989,6 @@
         "pricing": "Free"
     },
     {
-        "name": "DetectorTools.ai",
-        "link": "https://detectortools.ai/",
-        "submission_link": "https://detectortools.ai/submit-tool/",
-        "domain_rating": 17,
-        "monthly_visits": 4000,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
         "name": "Digi Pro Tools",
         "link": "https://digiprotoolz.com/",
         "submission_link": "https://digiprotoolz.com/contact-us/",
@@ -1316,7 +999,7 @@
     },
     {
         "name": "Digital Agency Network",
-        "link": "https://digitalagencynetwork.com/?ref=aidirecotri.es",
+        "link": "https://digitalagencynetwork.com/",
         "submission_link": "https://digitalagencynetwork.com/join-free-listing-tools/",
         "domain_rating": 76,
         "monthly_visits": 528000,
@@ -1325,22 +1008,44 @@
     },
     {
         "name": "DigitalSamaritan",
-        "link": "https://www.digitalsamaritan.co/?ref=aidirecotri.es",
-        "submission_link": "https://www.digitalsamaritan.co/add-your-product?ref=aidirecotri.es",
+        "link": "https://www.digitalsamaritan.co/",
+        "submission_link": "https://www.digitalsamaritan.co/add-your-product",
         "domain_rating": 35,
         "monthly_visits": 10000,
         "submission_experience": "Good",
         "pricing": "Paid"
     },
     {
+        "name": "Directories",
+        "link": "https://directories.so/",
+        "submission_link": "https://tally.so/r/3qby88",
+        "domain_rating": 8,
+        "monthly_visits": 1500,
+        "submission_experience": "Good",
+        "pricing": "Free",
+        "icon": "https://pbs.twimg.com/profile_images/1790469353093120001/EUHAHqm8_400x400.jpg"
+    },
+    {
         "name": "Disrupt500",
-        "link": "https://www.disrupt500.com/?ref=aidirectori.es",
-        "submission_link": "https://www.disrupt500.com/submit-your-tool?ref=aidirectori.es",
+        "link": "https://www.disrupt500.com/",
+        "submission_link": "https://www.disrupt500.com/submit-your-tool",
         "domain_rating": 19,
         "monthly_visits": 3000,
-        "submission_experience": "Paid",
+        "submission_experience": "",
         "pricing": "Free",
         "icon": "https://www.disrupt500.com/content/images/size/w30/2024/09/New-Disrupt500-LOGO-Final.png"
+    },
+    {
+        "name": "Dokey AI",
+        "link": "https://dokeyai.com/",
+        "submission_link": "https://dokeyai.com/submit",
+        "domain_rating": 53,
+        "monthly_visits": 7100,
+        "submission_experience": "Good",
+        "pricing": "Free",
+        "dealCode": "DIRECTORY50",
+        "dealText": "50% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1792492898237214720/FcPQ01Bi_400x400.jpg"
     },
     {
         "name": "DoMore",
@@ -1353,8 +1058,8 @@
     },
     {
         "name": "Drop Your AI",
-        "link": "https://www.dropyourai.com/?ref=aidirectori.es",
-        "submission_link": "https://www.dropyourai.com/submit-tool?ref=aidirectori.es",
+        "link": "https://www.dropyourai.com/",
+        "submission_link": "https://www.dropyourai.com/submit-tool",
         "domain_rating": 16,
         "monthly_visits": 6800,
         "submission_experience": "Good",
@@ -1389,7 +1094,7 @@
     },
     {
         "name": "Educator Tools",
-        "link": "https://aieducator.tools/?ref=aidrectories",
+        "link": "https://aieducator.tools/",
         "submission_link": "https://docs.google.com/forms/d/e/1FAIpQLSdXXbiHAdQTWUSzLvU6xw-asbIoppIiQo0W9PuZLw2DnkhKew/viewform?usp=send_form",
         "domain_rating": 25,
         "monthly_visits": 131000,
@@ -1406,27 +1111,27 @@
         "pricing": ""
     },
     {
-        "name": "Faind AI",
-        "link": "https://faind.ai/?ref=aidirectori.es",
-        "submission_link": "https://faind.ai/submit-a-tool/?ref=aidirectori.es",
-        "domain_rating": 10,
-        "monthly_visits": 5000,
-        "submission_experience": "Bad",
-        "pricing": "Free"
-    },
-    {
         "name": "F6S",
-        "link": "https://www.f6s.com/?ref=aidirectori.es",
-        "submission_link": "https://www.f6s.com/?ref=aidirectori.es",
+        "link": "https://www.f6s.com/",
+        "submission_link": "https://www.f6s.com/",
         "domain_rating": 86,
         "monthly_visits": 1600000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
+        "name": "Faind AI",
+        "link": "https://faind.ai/",
+        "submission_link": "https://faind.ai/submit-a-tool/",
+        "domain_rating": 10,
+        "monthly_visits": 5000,
+        "submission_experience": "Bad",
+        "pricing": "Free"
+    },
+    {
         "name": "Fazier",
-        "link": "https://fazier.com/?ref=aidirectori.es",
-        "submission_link": "https://fazier.com/submit?ref=aidirectori.es",
+        "link": "https://fazier.com/",
+        "submission_link": "https://fazier.com/submit",
         "domain_rating": 5,
         "monthly_visits": 5000,
         "submission_experience": "Good",
@@ -1434,8 +1139,8 @@
     },
     {
         "name": "FinancesOnline",
-        "link": "https://financesonline.com/?ref=aidirectories",
-        "submission_link": "https://financesonline.com/add-product/?ref=aidirectories",
+        "link": "https://financesonline.com/",
+        "submission_link": "https://financesonline.com/add-product/",
         "domain_rating": 87,
         "monthly_visits": 1200000,
         "submission_experience": "Good",
@@ -1443,8 +1148,8 @@
     },
     {
         "name": "Find Cool Tools",
-        "link": "https://findcool.tools?ref=aidirectori.es",
-        "submission_link": "https://findcool.tools?ref=aidirectori.es",
+        "link": "https://findcool.tools",
+        "submission_link": "https://findcool.tools",
         "domain_rating": 10,
         "monthly_visits": 2300,
         "submission_experience": "Good",
@@ -1452,8 +1157,8 @@
     },
     {
         "name": "Find My AI Tool",
-        "link": "https://findmyaitool.com/?ref=aidirectori.es",
-        "submission_link": "https://findmyaitool.com/submit-tool/?ref=aidirectori.es",
+        "link": "https://findmyaitool.com/",
+        "submission_link": "https://findmyaitool.com/submit-tool/",
         "domain_rating": 36,
         "monthly_visits": 69000,
         "submission_experience": "Good",
@@ -1461,8 +1166,8 @@
     },
     {
         "name": "First 100 users",
-        "link": "https://www.first100users.com/?ref=aidirectori.es",
-        "submission_link": "https://www.first100users.com/submit/?ref=aidirectori.es",
+        "link": "https://www.first100users.com/",
+        "submission_link": "https://www.first100users.com/submit/",
         "domain_rating": 18,
         "monthly_visits": 200,
         "submission_experience": "Good",
@@ -1470,8 +1175,8 @@
     },
     {
         "name": "Flip Bytes",
-        "link": "https://www.flipbytes.com/?ref=aidirectori.es",
-        "submission_link": "https://www.flipbytes.com/?ref=aidirectori.es",
+        "link": "https://www.flipbytes.com/",
+        "submission_link": "https://www.flipbytes.com/",
         "domain_rating": 10,
         "monthly_visits": 70,
         "submission_experience": "",
@@ -1479,8 +1184,8 @@
     },
     {
         "name": "Free AI Apps",
-        "link": "https://freeappsai.com?ref=aidirectories",
-        "submission_link": "https://freeappsai.com/add?ref=aidirectories",
+        "link": "https://freeappsai.com",
+        "submission_link": "https://freeappsai.com/add",
         "domain_rating": 9,
         "monthly_visits": 4200,
         "submission_experience": "Good",
@@ -1488,8 +1193,8 @@
     },
     {
         "name": "Free AI Tool",
-        "link": "https://freeaitool.ai/?ref=aidirectories",
-        "submission_link": "https://freeaitool.ai/submit?ref=aidirectories",
+        "link": "https://freeaitool.ai/",
+        "submission_link": "https://freeaitool.ai/submit",
         "domain_rating": 25,
         "monthly_visits": 7000,
         "submission_experience": "Good",
@@ -1497,8 +1202,8 @@
     },
     {
         "name": "Free AI Tools Directory",
-        "link": "https://free-ai-tools-directory.com/?ref=aidirectories",
-        "submission_link": "https://free-ai-tools-directory.com/submit-request/?ref=aidirectories",
+        "link": "https://free-ai-tools-directory.com/",
+        "submission_link": "https://free-ai-tools-directory.com/submit-request/",
         "domain_rating": 11,
         "monthly_visits": 23000,
         "submission_experience": "Good",
@@ -1506,8 +1211,8 @@
     },
     {
         "name": "Future AGI tools",
-        "link": "https://www.futureagitools.com?ref=aidirectori.es",
-        "submission_link": "https://www.futureagitools.com/submit-a-site?ref=aidirectori.es",
+        "link": "https://www.futureagitools.com",
+        "submission_link": "https://www.futureagitools.com/submit-a-site",
         "domain_rating": 10,
         "monthly_visits": 5000,
         "submission_experience": "Good",
@@ -1515,8 +1220,8 @@
     },
     {
         "name": "Future Tools",
-        "link": "https://www.futuretools.io/?ref=aidirectori.es",
-        "submission_link": "https://www.futuretools.io/submit-a-tool?ref=aidirectori.es",
+        "link": "https://www.futuretools.io/",
+        "submission_link": "https://www.futuretools.io/submit-a-tool",
         "domain_rating": 44,
         "monthly_visits": 3000000,
         "submission_experience": "Good",
@@ -1524,17 +1229,28 @@
     },
     {
         "name": "Futurepedia",
-        "link": "https://www.futurepedia.io/?ref=aidirectori.es",
-        "submission_link": "https://www.futurepedia.io/submit-tool?ref=aidirectori.es",
+        "link": "https://www.futurepedia.io/",
+        "submission_link": "https://www.futurepedia.io/submit-tool",
         "domain_rating": 62,
         "monthly_visits": 5000000,
         "submission_experience": "Good",
         "pricing": "Paid"
     },
     {
+        "name": "GetByte",
+        "link": "https://getbyte.tech",
+        "submission_link": "https://getbyte.tech/listing/basic-product-details",
+        "domain_rating": 14,
+        "monthly_visits": 3500,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "AIDIR40",
+        "dealText": "40% Discount"
+    },
+    {
         "name": "Getlatka",
-        "link": "https://getlatka.com/?ref=aidirectories",
-        "submission_link": "https://getlatka.com/saas-companies?ref=aidirectories",
+        "link": "https://getlatka.com/",
+        "submission_link": "https://getlatka.com/saas-companies",
         "domain_rating": 71,
         "monthly_visits": 20000,
         "submission_experience": "Good",
@@ -1542,8 +1258,8 @@
     },
     {
         "name": "Good AI Tools",
-        "link": "https://goodaitools.com/?ref=aidirectories",
-        "submission_link": "https://goodaitools.com/submit?ref=aidirectories",
+        "link": "https://goodaitools.com/",
+        "submission_link": "https://goodaitools.com/submit",
         "domain_rating": 0,
         "monthly_visits": 0,
         "submission_experience": "Good",
@@ -1551,8 +1267,8 @@
     },
     {
         "name": "GPT Academy",
-        "link": "https://www.gptacademy.co/?ref=aidirectories",
-        "submission_link": "https://www.gptacademy.co/submit?ref=aidirectories",
+        "link": "https://www.gptacademy.co/",
+        "submission_link": "https://www.gptacademy.co/submit",
         "domain_rating": 14,
         "monthly_visits": 24000,
         "submission_experience": "Good",
@@ -1560,8 +1276,8 @@
     },
     {
         "name": "Gpt Forge",
-        "link": "https://gptforge.net/?ref=aidirectories",
-        "submission_link": "https://forms.gle/8h1SokDHfcPwkbaZ8?ref=aidirectories",
+        "link": "https://gptforge.net/",
+        "submission_link": "https://forms.gle/8h1SokDHfcPwkbaZ8",
         "domain_rating": 14,
         "monthly_visits": 41000,
         "submission_experience": "Good",
@@ -1569,20 +1285,37 @@
     },
     {
         "name": "GPT Stack",
-        "link": "https://www.gpt-stack.com?ref=aidirectories",
-        "submission_link": "https://www.gpt-stack.com/add-resourc?ref=aidirectoriese",
+        "link": "https://www.gpt-stack.com",
+        "submission_link": "https://www.gpt-stack.com/add-resourc",
         "domain_rating": 10,
         "monthly_visits": 100,
         "submission_experience": "Good",
         "pricing": "Free"
     },
-
     {
         "name": "GPTs Hunter",
-        "link": "https://www.gptshunter.com/?ref=aidirectori.es",
-        "submission_link": "https://www.gptshunter.com/submit-gpt?ref=aidirectori.es",
+        "link": "https://www.gptshunter.com/",
+        "submission_link": "https://www.gptshunter.com/submit-gpt",
         "domain_rating": 59,
         "monthly_visits": 400000,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
+        "name": "GroupifyAI",
+        "link": "https://groupify.ai/",
+        "submission_link": "https://groupify.ai/new-tool-form",
+        "domain_rating": 0.1,
+        "monthly_visits": 3400,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
+        "name": "Hack the Prompt",
+        "link": "https://hacktheprompt.com",
+        "submission_link": "https://hacktheprompt.com/submit-new-ai-tools",
+        "domain_rating": 2,
+        "monthly_visits": 600,
         "submission_experience": "Good",
         "pricing": "Free"
     },
@@ -1596,11 +1329,11 @@
         "pricing": ""
     },
     {
-        "name": "Hack the Prompt",
-        "link": "https://hacktheprompt.com",
-        "submission_link": "https://hacktheprompt.com/submit-new-ai-tools",
-        "domain_rating": 2,
-        "monthly_visits": 600,
+        "name": "Human or Not",
+        "link": "https://www.humanornot.co/",
+        "submission_link": "https://www.humanornot.co/submit-tool",
+        "domain_rating": 6,
+        "monthly_visits": 52000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
@@ -1615,8 +1348,8 @@
     },
     {
         "name": "iLib",
-        "link": "https://www.ilib.com/?ref=aidirectori.es",
-        "submission_link": "https://www.ilib.com/dashboard/submissions/new?ref=aidirectori.es",
+        "link": "https://www.ilib.com/",
+        "submission_link": "https://www.ilib.com/dashboard/submissions/new",
         "domain_rating": 16,
         "monthly_visits": 19000,
         "submission_experience": "Good",
@@ -1624,7 +1357,7 @@
     },
     {
         "name": "Insanely Cool Tools",
-        "link": "https://www.insanelycooltools.com/?ref=aidirectori.es",
+        "link": "https://www.insanelycooltools.com/",
         "submission_link": "https://tally.so/r/31kxN1",
         "domain_rating": 35,
         "monthly_visits": 8400,
@@ -1651,8 +1384,8 @@
     },
     {
         "name": "Invent List",
-        "link": "https://inventlist.com/?ref=aidirectori.es",
-        "submission_link": "https://inventlist.com/sites/new?ref=aidirectori.es",
+        "link": "https://inventlist.com/",
+        "submission_link": "https://inventlist.com/sites/new",
         "domain_rating": 2.5,
         "monthly_visits": 200,
         "submission_experience": "Good",
@@ -1660,8 +1393,8 @@
     },
     {
         "name": "Ismailblogger",
-        "link": "https://ismailblogger.com/tools-ai/?ref=aidirectori.es",
-        "submission_link": "https://ismailblogger.com/submit-tools/?ref=aidirectori.es",
+        "link": "https://ismailblogger.com/tools-ai/",
+        "submission_link": "https://ismailblogger.com/submit-tools/",
         "domain_rating": 46,
         "monthly_visits": 10000,
         "submission_experience": "Good",
@@ -1678,8 +1411,8 @@
     },
     {
         "name": "KitPloit",
-        "link": "https://www.kitploit.com/?ref=aidirectories",
-        "submission_link": "https://www.kitploit.com/p/submit-tool.html?ref=aidirectories",
+        "link": "https://www.kitploit.com/",
+        "submission_link": "https://www.kitploit.com/p/submit-tool.html",
         "domain_rating": 57,
         "monthly_visits": 2100000,
         "submission_experience": "Good",
@@ -1705,12 +1438,24 @@
     },
     {
         "name": "Launched Site",
-        "link": "https://launched.site?ref=aidirectori.es",
-        "submission_link": "https://launched.site/submit?ref=aidirectori.es",
+        "link": "https://launched.site",
+        "submission_link": "https://launched.site/submit",
         "domain_rating": 45,
         "monthly_visits": 10000,
         "submission_experience": "Good",
         "pricing": "Free"
+    },
+    {
+        "name": "LaunchIgniter",
+        "link": "https://launchigniter.com/",
+        "submission_link": "https://launchigniter.com/submit",
+        "domain_rating": 68,
+        "monthly_visits": 500,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "AIDIRECTORIES30",
+        "dealText": "30% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1915733068134178817/PTm4mwqV_400x400.png"
     },
     {
         "name": "Launching Next",
@@ -1723,8 +1468,8 @@
     },
     {
         "name": "Live Apps",
-        "link": "https://liveapps.ai/?ref=aidirectori.es",
-        "submission_link": "https://liveapps.ai/become-a-partner/?ref=aidirectori.es",
+        "link": "https://liveapps.ai/",
+        "submission_link": "https://liveapps.ai/become-a-partner/",
         "domain_rating": 12,
         "monthly_visits": 500,
         "submission_experience": "Good",
@@ -1732,8 +1477,8 @@
     },
     {
         "name": "Look AI Tools",
-        "link": "https://lookaitools.com/?ref=aidirectori.es",
-        "submission_link": "https://lookaitools.com/submission-service/?ref=aidirectori.es",
+        "link": "https://lookaitools.com/",
+        "submission_link": "https://lookaitools.com/submission-service/",
         "domain_rating": 6,
         "monthly_visits": 130,
         "submission_experience": "Good",
@@ -1762,14 +1507,14 @@
         "link": "https://microlaunch.net",
         "submission_link": "https://tally.so/r/mYaR6N",
         "domain_rating": 38,
-        "monthly_visits":54400,
+        "monthly_visits": 54400,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
         "name": "MicroStartups",
-        "link": "https://www.microstartups.co/?ref=aidirectori.es",
-        "submission_link": "https://www.microstartups.co/list-your-startup/?ref=aidirectori.es",
+        "link": "https://www.microstartups.co/",
+        "submission_link": "https://www.microstartups.co/list-your-startup/",
         "domain_rating": 3.1,
         "monthly_visits": 0,
         "submission_experience": "Good",
@@ -1777,8 +1522,8 @@
     },
     {
         "name": "Next Gen Tools",
-        "link": "https://nextgentools.me/?ref=aidirecories",
-        "submission_link": "https://nextgentools.me/submit-your-tool?ref=aidirecories",
+        "link": "https://nextgentools.me/",
+        "submission_link": "https://nextgentools.me/submit-your-tool",
         "domain_rating": 27,
         "monthly_visits": 47000,
         "submission_experience": "Good",
@@ -1786,8 +1531,8 @@
     },
     {
         "name": "NextGenTool",
-        "link": "https://nextgentool.io/?ref=aidirecories",
-        "submission_link": "https://nextgentool.io/submit/?ref=aidirecories",
+        "link": "https://nextgentool.io/",
+        "submission_link": "https://nextgentool.io/submit/",
         "domain_rating": 12,
         "monthly_visits": 300,
         "submission_experience": "Good",
@@ -1795,8 +1540,8 @@
     },
     {
         "name": "Nextpedia",
-        "link": "https://www.nextpedia.io/?ref=aidirecories",
-        "submission_link": "https://www.nextpedia.io/submit-tool/?ref=aidirecories",
+        "link": "https://www.nextpedia.io/",
+        "submission_link": "https://www.nextpedia.io/submit-tool/",
         "domain_rating": 11,
         "monthly_visits": 8000,
         "submission_experience": "Bad",
@@ -1813,17 +1558,41 @@
     },
     {
         "name": "Open Future",
-        "link": "https://openfuture.ai/?ref=aidirectori.es",
-        "submission_link": "https://openfuture.ai/submit-tool/?ref=aidirectori.es",
+        "link": "https://openfuture.ai/",
+        "submission_link": "https://openfuture.ai/submit-tool/",
         "domain_rating": 31,
         "monthly_visits": 496000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
+        "name": "Open Tools",
+        "link": "https://opentools.ai/",
+        "submission_link": "https://opentools.ai/friends/launch-tool",
+        "domain_rating": 64,
+        "monthly_visits": 3000000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "DIRECTORIES20",
+        "dealText": "20% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1849087452373291008/_op6UtG8_400x400.png"
+    },
+    {
+        "name": "OpenAlternative",
+        "link": "https://openalternative.co/",
+        "submission_link": "https://openalternative.co/submit",
+        "domain_rating": 40,
+        "monthly_visits": 275000,
+        "submission_experience": "Good",
+        "pricing": "Free",
+        "dealCode": "AIDIR20",
+        "dealText": "20% Discount",
+        "icon": "https://openalternative.co/favicon.png"
+    },
+    {
         "name": "Orbic AI",
-        "link": "https://orbic.ai/?ref=aidirectori.es",
-        "submission_link": "https://orbic.ai/submit/tools/?ref=aidirectori.es",
+        "link": "https://orbic.ai/",
+        "submission_link": "https://orbic.ai/submit/tools/",
         "domain_rating": 5,
         "monthly_visits": 100,
         "submission_experience": "Good",
@@ -1839,9 +1608,21 @@
         "pricing": "Free"
     },
     {
+        "name": "PeerPush",
+        "link": "https://peerpush.net",
+        "submission_link": "https://peerpush.net/submit",
+        "domain_rating": 63,
+        "monthly_visits": 85000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "AIDIRECTORIES10",
+        "dealText": "10% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1956758245562793984/iTHkvAFK_400x400.jpg"
+    },
+    {
         "name": "PitchWall",
-        "link": "https://pitchwall.co/?ref=aidirectories",
-        "submission_link": "https://pitchwall.co/product/submit?ref=aidirectories",
+        "link": "https://pitchwall.co/",
+        "submission_link": "https://pitchwall.co/product/submit",
         "domain_rating": 64,
         "monthly_visits": 59000,
         "submission_experience": "Good",
@@ -1857,20 +1638,20 @@
         "pricing": "Paid"
     },
     {
+        "name": "Pro Link Builders",
+        "link": "https://prolinkbuilders.co.uk/",
+        "submission_link": "https://prolinkbuilders.co.uk/istings/create/",
+        "domain_rating": 5,
+        "monthly_visits": 400,
+        "submission_experience": "Good",
+        "pricing": "Paid"
+    },
+    {
         "name": "Product Hunt",
         "link": "https://www.producthunt.com/",
         "submission_link": "https://www.producthunt.com/posts/new",
         "domain_rating": 75,
         "monthly_visits": 6000000,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "Promptzone",
-        "link": "https://www.promptzone.com/",
-        "submission_link": "https://www.promptzone.com/",
-        "domain_rating": 25,
-        "monthly_visits": 53000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
@@ -1884,8 +1665,26 @@
         "pricing": "Free"
     },
     {
+        "name": "Promptzone",
+        "link": "https://www.promptzone.com/",
+        "submission_link": "https://www.promptzone.com/",
+        "domain_rating": 25,
+        "monthly_visits": 53000,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
+        "name": "ProSaasHub",
+        "link": "https://prosaashub.com/",
+        "submission_link": "https://prosaashub.com/",
+        "domain_rating": 0.6,
+        "monthly_visits": 50,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
         "name": "PureFuture",
-        "link": "https://purefuture.net/?ref=aidirectories",
+        "link": "https://purefuture.net/",
         "submission_link": "https://purefuture.net/contact/",
         "domain_rating": 13,
         "monthly_visits": 22000,
@@ -1893,9 +1692,18 @@
         "pricing": "Free"
     },
     {
+        "name": "RankYourAI",
+        "link": "https://rankyourai.com/",
+        "submission_link": "https://rankyourai.com/",
+        "domain_rating": 35,
+        "monthly_visits": 0,
+        "submission_experience": "Good",
+        "pricing": "Paid"
+    },
+    {
         "name": "Resource fyi",
-        "link": "https://resource.fyi/?ref=aidirecori.es",
-        "submission_link": "https://resource.fyi/account/submit/?ref=aidirecori.es",
+        "link": "https://resource.fyi/",
+        "submission_link": "https://resource.fyi/account/submit/",
         "domain_rating": 39,
         "monthly_visits": 5000,
         "submission_experience": "Good",
@@ -1903,8 +1711,8 @@
     },
     {
         "name": "Robingood",
-        "link": "https://tools.robingood.com/?ref=aidirecori.es",
-        "submission_link": "https://tools.robingood.com/?ref=aidirecori.es",
+        "link": "https://tools.robingood.com/",
+        "submission_link": "https://tools.robingood.com/",
         "domain_rating": 33,
         "monthly_visits": 5600,
         "submission_experience": "Good",
@@ -1921,8 +1729,8 @@
     },
     {
         "name": "Saas Po",
-        "link": "https://www.saaspo.com/?ref=aidirectori.es",
-        "submission_link": "https://www.saaspo.com/submit?ref=aidirectori.es",
+        "link": "https://www.saaspo.com/",
+        "submission_link": "https://www.saaspo.com/submit",
         "domain_rating": 29,
         "monthly_visits": 69000,
         "submission_experience": "Good",
@@ -1930,8 +1738,8 @@
     },
     {
         "name": "Saas Surf",
-        "link": "https://saassurf.com/?ref=aidirectori.es",
-        "submission_link": "https://saassurf.com/submit-a-product#submit?ref=aidirectori.es",
+        "link": "https://saassurf.com/",
+        "submission_link": "https://saassurf.com/submit-a-product#submit",
         "domain_rating": 21,
         "monthly_visits": 31000,
         "submission_experience": "Good",
@@ -1957,12 +1765,24 @@
     },
     {
         "name": "SaasWorthy",
-        "link": "https://www.saasworthy.com/?ref=aidirectori.es",
+        "link": "https://www.saasworthy.com/",
         "submission_link": "https://mailchi.mp/caea48b0c7ac/saasworthy-product-listing",
         "domain_rating": 72,
         "monthly_visits": 172000,
         "submission_experience": "Good",
         "pricing": "Free"
+    },
+    {
+        "name": "SEOFAI",
+        "link": "https://seofai.com/",
+        "submission_link": "https://seofai.com/submit-ai-tool/",
+        "domain_rating": 17,
+        "monthly_visits": 127300,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "AIDirectories10",
+        "dealText": "10% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1711867419776454656/Ym9do8Zm_400x400.jpg"
     },
     {
         "name": "Sick Tools",
@@ -1975,8 +1795,8 @@
     },
     {
         "name": "Sidebar",
-        "link": "https://sidebar.io/?ref=aidirectori.es",
-        "submission_link": "https://sidebar.io/submit?ref=aidirectori.es",
+        "link": "https://sidebar.io/",
+        "submission_link": "https://sidebar.io/submit",
         "domain_rating": 71,
         "monthly_visits": 68000,
         "submission_experience": "Good",
@@ -1984,17 +1804,26 @@
     },
     {
         "name": "SideProjectors",
-        "link": "https://www.sideprojectors.com/?ref=aidirectori.es",
-        "submission_link": "https://www.sideprojectors.com/?ref=aidirectori.es",
+        "link": "https://www.sideprojectors.com/",
+        "submission_link": "https://www.sideprojectors.com/",
         "domain_rating": 67,
         "monthly_visits": 52600,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
+        "name": "Simple Lister",
+        "link": "https://simplelister.com",
+        "submission_link": "https://simplelister.com/submit",
+        "domain_rating": 26,
+        "monthly_visits": 9000,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
         "name": "Sitelike",
-        "link": "https://www.sitelike.org/?ref=aidirectori.es",
-        "submission_link": "https://www.sitelike.org/add-site/?ref=aidirectori.es",
+        "link": "https://www.sitelike.org/",
+        "submission_link": "https://www.sitelike.org/add-site/",
         "domain_rating": 70,
         "monthly_visits": 1300000,
         "submission_experience": "Good",
@@ -2002,8 +1831,8 @@
     },
     {
         "name": "Smart Tools",
-        "link": "https://www.smart-tools.ai/?ref=aidirectori.es",
-        "submission_link": "https://www.smart-tools.ai/en/submit/?ref=aidirectori.es",
+        "link": "https://www.smart-tools.ai/",
+        "submission_link": "https://www.smart-tools.ai/en/submit/",
         "domain_rating": 11,
         "monthly_visits": 123000,
         "submission_experience": "Good",
@@ -2029,8 +1858,8 @@
     },
     {
         "name": "Source Forge",
-        "link": "https://sourceforge.net/?ref=aidirectori.es",
-        "submission_link": "https://sourceforge.net/create/?ref=aidirectori.es",
+        "link": "https://sourceforge.net/",
+        "submission_link": "https://sourceforge.net/create/",
         "domain_rating": 92,
         "monthly_visits": 2500000,
         "submission_experience": "Good",
@@ -2047,26 +1876,26 @@
     },
     {
         "name": "Stackshare",
-        "link": "https://stackshare.io/?ref=aidirectories",
-        "submission_link": "https://stackshare.io/submit/?ref=aidirectories",
+        "link": "https://stackshare.io/",
+        "submission_link": "https://stackshare.io/submit/",
         "domain_rating": 79,
         "monthly_visits": 1600000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
-        "name": "Startup AI Tools",
-        "link": "https://www.startups.fyi/",
-        "submission_link": "https://tally.so/r/3lOGLk",
-        "domain_rating": 22,
-        "monthly_visits": 13000,
+        "name": "Stackviv AI",
+        "link": "https://stackviv.ai/",
+        "submission_link": "https://tally.so/r/waE1jE",
+        "domain_rating": 10,
+        "monthly_visits": 1000,
         "submission_experience": "Good",
-        "pricing": "Free"
+        "pricing": "Paid"
     },
     {
         "name": "Startup Base",
-        "link": "https://startupbase.io/?ref=aidirectori.es",
-        "submission_link": "https://startupbase.io/submissions/start?ref=aidirectori.es",
+        "link": "https://startupbase.io/",
+        "submission_link": "https://startupbase.io/submissions/start",
         "domain_rating": 50,
         "monthly_visits": 3000,
         "submission_experience": "Good",
@@ -2083,16 +1912,26 @@
     },
     {
         "name": "Startup Collections",
-        "link": "https://startupcollections.com/?ref=aidirectories",
-        "submission_link": "https://startupcollections.com/submit-product/?ref=aidirectories",
+        "link": "https://startupcollections.com/",
+        "submission_link": "https://startupcollections.com/submit-product/",
         "domain_rating": 22,
         "monthly_visits": 5000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
+        "name": "Startup Heroes",
+        "link": "https://startupheroes.io/",
+        "submission_link": "https://startupheroes.io/submit/",
+        "domain_rating": 38,
+        "monthly_visits": 2000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "icon": "https://startupheroes.io/wp-content/uploads/startup-heroes-stacked-logo-black.svg"
+    },
+    {
         "name": "Startup Pitch",
-        "link": "https://thestartuppitch.com/?ref=aidirectories",
+        "link": "https://thestartuppitch.com/",
         "submission_link": "https://thestartuppitch.com/post-a-pitch/",
         "domain_rating": 40,
         "monthly_visits": 5000,
@@ -2101,8 +1940,8 @@
     },
     {
         "name": "Startup Ranking",
-        "link": "https://www.startupranking.com/?ref=aidirectori.es",
-        "submission_link": "https://www.startupranking.com/startup/create/url-validation?ref=aidirectori.es",
+        "link": "https://www.startupranking.com/",
+        "submission_link": "https://www.startupranking.com/startup/create/url-validation",
         "domain_rating": 67,
         "monthly_visits": 25000,
         "submission_experience": "Good",
@@ -2110,17 +1949,29 @@
     },
     {
         "name": "Startup Roulette",
-        "link": "https://startuproulette.com/?ref=aidirectories",
-        "submission_link": "https://startuproulette.com/promote-my-startup/?ref=aidirectories",
+        "link": "https://startuproulette.com/",
+        "submission_link": "https://startuproulette.com/promote-my-startup/",
         "domain_rating": 21,
         "monthly_visits": 0,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
+        "name": "Startup Spotlight",
+        "link": "https://www.startupspotlight.co",
+        "submission_link": "https://buy.stripe.com/aEU7vOb0s2fugkUdRy",
+        "domain_rating": 25,
+        "monthly_visits": 5000,
+        "submission_experience": "Good",
+        "pricing": "Free",
+        "dealCode": "Buy 1 take 2",
+        "dealText": "Buy 1 take 2",
+        "icon": "https://cdn.prod.website-files.com/657b3d8ca1cab4015f06c850/66edda4b853c47efe45e9b42_icon.png"
+    },
+    {
         "name": "Startup Stage",
-        "link": "https://startupstage.app/?ref=aidirectori.es",
-        "submission_link": "https://startupstage.app/startups/new?ref=aidirectori.es",
+        "link": "https://startupstage.app/",
+        "submission_link": "https://startupstage.app/startups/new",
         "domain_rating": 25,
         "monthly_visits": 3000,
         "submission_experience": "Good",
@@ -2137,7 +1988,7 @@
     },
     {
         "name": "Startup88",
-        "link": "https://startup88.com/?ref=aidirectories",
+        "link": "https://startup88.com/",
         "submission_link": "https://startup88.typeform.com/to/CRjWqM?typeform-source=startup88.com",
         "domain_rating": 27,
         "monthly_visits": 300,
@@ -2146,7 +1997,7 @@
     },
     {
         "name": "Startups.fyi",
-        "link": "https://www.startups.fyi/?ref=aidirectori.es",
+        "link": "https://www.startups.fyi/",
         "submission_link": "https://tally.so/r/3lOGLk",
         "domain_rating": 25,
         "monthly_visits": 13000,
@@ -2155,8 +2006,8 @@
     },
     {
         "name": "Super Tools",
-        "link": "https://supertools.therundown.ai/?ref=aidirectori.es",
-        "submission_link": "https://supertools.therundown.ai/submit?ref=aidirectori.es",
+        "link": "https://supertools.therundown.ai/",
+        "submission_link": "https://supertools.therundown.ai/submit",
         "domain_rating": 55,
         "monthly_visits": 257200,
         "submission_experience": "Good",
@@ -2164,8 +2015,8 @@
     },
     {
         "name": "SustainabilitySoftwares",
-        "link": "https://sustainabilitysoftwares.com?ref=aidirectori.es",
-        "submission_link": "https://sustainabilitysoftwares.com/submit?ref=aidirectori.es",
+        "link": "https://sustainabilitysoftwares.com",
+        "submission_link": "https://sustainabilitysoftwares.com/submit",
         "domain_rating": 0,
         "monthly_visits": 1000,
         "submission_experience": "Good",
@@ -2173,8 +2024,8 @@
     },
     {
         "name": "Synoptica",
-        "link": "https://synoptica.com/?ref=aidirectori.es",
-        "submission_link": "https://synoptica.com/submit-an-ai-tool/?ref=aidirectori.es",
+        "link": "https://synoptica.com/",
+        "submission_link": "https://synoptica.com/submit-an-ai-tool/",
         "domain_rating": 17,
         "monthly_visits": 5000,
         "submission_experience": "Good",
@@ -2182,12 +2033,24 @@
     },
     {
         "name": "Tekpon",
-        "link": "https://tekpon.com/get-listed/?ref=aidirectori.es",
-        "submission_link": "https://tekpon.com/get-listed/?ref=aidirectori.es",
+        "link": "https://tekpon.com/get-listed/",
+        "submission_link": "https://tekpon.com/get-listed/",
         "domain_rating": 54,
         "monthly_visits": 134000,
         "submission_experience": "Good",
         "pricing": "Free"
+    },
+    {
+        "name": "That AI Collection",
+        "link": "https://www.thataicollection.com/",
+        "submission_link": "https://aicollection.lemonsqueezy.com",
+        "domain_rating": 41,
+        "monthly_visits": 553400,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "AZNJUYMQ",
+        "dealText": "10% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1652202412222889986/ixH50eBo_400x400.jpg"
     },
     {
         "name": "The ai Generation",
@@ -2200,8 +2063,8 @@
     },
     {
         "name": "The AI Warehouse",
-        "link": "https://www.thewarehouse.ai/?ref=aidirectories",
-        "submission_link": "https://inside.thewarehouse.ai/submissions?ref=aidirectories",
+        "link": "https://www.thewarehouse.ai/",
+        "submission_link": "https://inside.thewarehouse.ai/submissions",
         "domain_rating": 11,
         "monthly_visits": 6000,
         "submission_experience": "Good",
@@ -2226,8 +2089,30 @@
         "pricing": "Free"
     },
     {
+        "name": "There's An AI For That",
+        "link": "https://theresanaiforthat.com",
+        "submission_link": "https://theresanaiforthat.com/get-featured/#opt_submit",
+        "domain_rating": 75,
+        "monthly_visits": 5400000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "icon": "https://pbs.twimg.com/profile_images/1795256389721337856/cWLOcGy4_400x400.jpg"
+    },
+    {
+        "name": "Tiny Startups",
+        "link": "https://www.tinystartups.co/",
+        "submission_link": "https://buy.stripe.com/aEU7vOb0s2fugkUdRy",
+        "domain_rating": 46,
+        "monthly_visits": 10000,
+        "submission_experience": "Good",
+        "pricing": "Free",
+        "dealCode": "Buy 1 take 2",
+        "dealText": "Buy 1 take 2",
+        "icon": "https://cdn.prod.website-files.com/657b3d8ca1cab4015f06c850/65f57018d631fa7967ddaf12_icon.svg"
+    },
+    {
         "name": "TipSeason",
-        "link": "https://tipseason.com/ai-tools?ref=aidirectori.es",
+        "link": "https://tipseason.com/ai-tools",
         "submission_link": "https://tipseason.com/ai-tools/submit",
         "domain_rating": 27,
         "monthly_visits": 30000,
@@ -2236,8 +2121,8 @@
     },
     {
         "name": "Tool AI",
-        "link": "https://toolai.io/?ref=aidirectories",
-        "submission_link": "https://toolai.io/en/submit?ref=aidirectories",
+        "link": "https://toolai.io/",
+        "submission_link": "https://toolai.io/en/submit",
         "domain_rating": 7,
         "monthly_visits": 75000,
         "submission_experience": "Good",
@@ -2245,8 +2130,8 @@
     },
     {
         "name": "Tool Directory",
-        "link": "https://tooldirectory.ai/?ref=aidirectori.es",
-        "submission_link": "https://https://tooldirectory.ai/submit-tool?ref=aidirectori.es",
+        "link": "https://tooldirectory.ai/",
+        "submission_link": "https://https://tooldirectory.ai/submit-tool",
         "domain_rating": 50,
         "monthly_visits": 4000,
         "submission_experience": "Good",
@@ -2262,6 +2147,18 @@
         "pricing": "Free"
     },
     {
+        "name": "Toolfolio",
+        "link": "https://toolfolio.io/",
+        "submission_link": "https://toolfolio.io/boosts#skiptheline",
+        "domain_rating": 37,
+        "monthly_visits": 207000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "TF10",
+        "dealText": "10% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1979166137083404288/p8GVBB-M_400x400.png"
+    },
+    {
         "name": "Toolify.ai",
         "link": "https://www.toolify.ai/",
         "submission_link": "https://www.toolify.ai/login?from=%2Fsubmit",
@@ -2271,9 +2168,21 @@
         "pricing": "Paid"
     },
     {
+        "name": "Toolio AI",
+        "link": "https://toolio.ai/",
+        "submission_link": "https://toolio.ai/submit-a-tool",
+        "domain_rating": 40,
+        "monthly_visits": 23000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "TOOLIO48",
+        "dealText": "48% Discount",
+        "icon": "https://uploads-ssl.webflow.com/65c65e7858f778b425edee6b/66435f945840e853a4effe94_Toolio_logo.webp"
+    },
+    {
         "name": "ToolList.ai",
-        "link": "https://toollist.ai/?ref=aidirectories",
-        "submission_link": "https://toollist.ai/submit-tool?ref=aidirectories",
+        "link": "https://toollist.ai/",
+        "submission_link": "https://toollist.ai/submit-tool",
         "domain_rating": 17,
         "monthly_visits": 12000,
         "submission_experience": "Good",
@@ -2290,19 +2199,10 @@
     },
     {
         "name": "Tools AI Online",
-        "link": "https://www.tools-ai.online/?ref=aidirectories",
-        "submission_link": "https://www.tools-ai.online/tool-submit?ref=aidirectories",
+        "link": "https://www.tools-ai.online/",
+        "submission_link": "https://www.tools-ai.online/tool-submit",
         "domain_rating": 11,
         "monthly_visits": 67000,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "Tools Directory",
-        "link": "https://aitoolsdirectory.com/?ref=aidirectori.es",
-        "submission_link": "https://aitoolsdirectory.com/submit-tool?ref=aidirectori.es",
-        "domain_rating": 10,
-        "monthly_visits": 100,
         "submission_experience": "Good",
         "pricing": "Free"
     },
@@ -2335,7 +2235,7 @@
     },
     {
         "name": "ToolsFine",
-        "link": "https://toolsfine.com/?ref=aidirectories",
+        "link": "https://toolsfine.com/",
         "submission_link": "https://tally.so/r/3qVzOG",
         "domain_rating": 38,
         "monthly_visits": 34000,
@@ -2352,9 +2252,31 @@
         "pricing": "Paid"
     },
     {
+        "name": "Top AI Tools",
+        "link": "https://topai.tools/",
+        "submission_link": "https://topai.tools/submit",
+        "domain_rating": 53,
+        "monthly_visits": 2400000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "Q3ODY5NA",
+        "dealText": "10% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1626279065995943940/qaxFGlrt_400x400.jpg"
+    },
+    {
+        "name": "TrustMRR",
+        "link": "https://trustmrr.com/",
+        "submission_link": "https://trustmrr.com/",
+        "domain_rating": 33,
+        "monthly_visits": 80000,
+        "submission_experience": "Good",
+        "pricing": "Free",
+        "icon": "https://cdn.aidirectori.es/icons/faviconV2%20(29).png"
+    },
+    {
         "name": "Twelve Tools",
-        "link": "https://twelve.tools/?ref=aidirectories",
-        "submission_link": "https://twelve.tools/submit-your-tool?ref=aidirectories",
+        "link": "https://twelve.tools/",
+        "submission_link": "https://twelve.tools/submit-your-tool",
         "domain_rating": 65,
         "monthly_visits": 10000,
         "submission_experience": "Good",
@@ -2368,6 +2290,18 @@
         "monthly_visits": 500,
         "submission_experience": "Good",
         "pricing": "Paid"
+    },
+    {
+        "name": "Uneed Best",
+        "link": "https://www.uneed.best",
+        "submission_link": "https://www.uneed.best",
+        "domain_rating": 66,
+        "monthly_visits": 252000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "AIDIRECTORIES",
+        "dealText": "20% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1749808918518509568/BzqYq2qf_400x400.png"
     },
     {
         "name": "Unloc.tools",
@@ -2388,11 +2322,11 @@
         "pricing": "Paid"
     },
     {
-        "name": "Warehouse AI",
-        "link": "https://www.thewarehouse.ai/",
-        "submission_link": "https://www.thewarehouse.ai/product-submission",
+        "name": "Wavel",
+        "link": "https://www.wavel.io/",
+        "submission_link": "https://www.wavel.io/submit-tool",
         "domain_rating": 10,
-        "monthly_visits": 15000,
+        "monthly_visits": 12000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
@@ -2417,7 +2351,7 @@
     {
         "name": "Whatsthebigdata",
         "link": "https://whatsthebigdata.com/",
-        "submission_link": "https://whatsthebigdata.com/submit-new-ai-tool/?ref=aidirectori.es",
+        "submission_link": "https://whatsthebigdata.com/submit-new-ai-tool/",
         "domain_rating": 60,
         "monthly_visits": 2700000,
         "submission_experience": "Good",
@@ -2426,16 +2360,25 @@
     {
         "name": "Woi AI",
         "link": "https://woy.ai/",
-        "submission_link": "https://woy.ai/submit?ref=aidirectori.es",
+        "submission_link": "https://woy.ai/submit",
         "domain_rating": 64,
         "monthly_visits": 43400,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
+        "name": "Yaatd",
+        "link": "https://yaatd.com",
+        "submission_link": "https://yaatd.com/submit",
+        "domain_rating": 39,
+        "monthly_visits": 100,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
         "name": "Your Story",
-        "link": "https://yourstory.com/?ref=aidirecori.es",
-        "submission_link": "https://eu.frms.link/g4juley/?ref=aidirecori.es",
+        "link": "https://yourstory.com/",
+        "submission_link": "https://eu.frms.link/g4juley/",
         "domain_rating": 86,
         "monthly_visits": 8758000,
         "submission_experience": "Good",

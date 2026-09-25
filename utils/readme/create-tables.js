@@ -1,35 +1,32 @@
+const { experienceLabel, pricingLabel, dealLabel, formatNumber, formatRating } = require('../i18n-de')
+
+const HEADER = '| Verzeichnis | Eintragen | Domain Rating | Besuche/Monat | Einreichung | Preis |\n|---|---|---|---|---|---|\n'
+
+function badge(value, goodValue, label) {
+    if (!value) return ''
+    return value === goodValue ? `**🟢 ${label}**` : `**🔴 ${label}**`
+}
+
 function createRow(directory) {
-    const { name, link, submission_link, domain_rating, monthly_visits, submission_experience, pricing } = directory;
+    const { name, link, submission_link, domain_rating, monthly_visits, submission_experience, pricing } = directory
 
-    // Determine the display color for submission experience and pricing
-    let experience_result = '';
-    if (submission_experience) {
-        experience_result = submission_experience === 'Good' ? `**🟢 ${submission_experience}**` : `**🔴 ${submission_experience}**`;
-    }
+    const experience = badge(submission_experience, 'Good', experienceLabel(submission_experience))
+    const price = badge(pricing, 'Free', pricingLabel(pricing))
+    const visits = monthly_visits ? formatNumber(monthly_visits) : 'k. A.'
 
-    let price_result = '';
-    if (pricing) {
-        price_result = pricing === 'Free' ? `**🟢 ${pricing}**` : `**🔴 ${pricing}**`;
-    }
-
-    return `| ${name} | [${name}](${link}) | [Submit](${submission_link}) | ${domain_rating} | ${monthly_visits} | ${experience_result} | ${price_result} |\n`;
+    return `| [${name}](${link}) | [Eintragen](${submission_link}) | ${formatRating(domain_rating)} | ${visits} | ${experience} | ${price} |\n`
 }
 
-function createTables(directoriesList) {
-    // Table headings
-    let table = `| Name | Link | Submission Link | Domain Rating | Monthly Visits | Submission Experience | Pricing |\n|---|---|---|---|---|---|---|\n`;
-
-    // Add each directory as a row
-    directoriesList.forEach(directory => {
-        table += createRow(directory);
-    });
-
-    return `\n\n### AI Directories\n${table}`;
+function createTable(directoriesList) {
+    return HEADER + directoriesList.map(createRow).join('')
 }
 
-module.exports = function (resources) {
-    // Generate tables from resources
-    const tables = createTables(resources);
+function createDealTable(directoriesList) {
+    const rows = directoriesList
+        .map((d) => `| [${d.name}](${d.link}) | \`${d.dealCode}\` | ${dealLabel(d.dealText)} | ${formatRating(d.domain_rating)} |\n`)
+        .join('')
 
-    return `\n\n${tables}`;
+    return `| Verzeichnis | Code | Vorteil | Domain Rating |\n|---|---|---|---|\n${rows}`
 }
+
+module.exports = { createTable, createDealTable }

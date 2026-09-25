@@ -1,7 +1,7 @@
 {
   "name": "ai-directories",
   "author": "Sergiu Chiriac",
-  "description": "The API of AI Directories listed on The Directory",
+  "description": "KI-Verzeichnisse: deutsche Liste der AI Directories mit Website, JSON-API und llms.txt",
   "version": "0.1.0",
   "private": true,
   "engines": {

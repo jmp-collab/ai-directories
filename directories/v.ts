@@ -5,7 +5,7 @@ export const directories: Directory[] = [
         "name": "Victrays",
         "link": "https://victrays.com/",
         "submission_link": "https://victrays.com/submit-tool/",
-        "domain_rating": 10.0,
+        "domain_rating": 10,
         "monthly_visits": 5000,
         "submission_experience": "Good",
         "pricing": "Paid"

@@ -1,9 +1,9 @@
-# Pull Request Template
+# Pull Request
 
-Please ensure all items below are checked before creating a pull request:
+Bitte vor dem Absenden alle Punkte prüfen:
 
--   [ ] My changes were made in the `directories` folder, not in the auto-generated `README.md` file or `db` folder
--   [ ] My submission is formatted according to the guidelines in the [contributing guide](CONTRIBUTING.md)
--   [ ] My submission is ordered alphabetically based on the resource `name`
--   [ ] My submission has a useful description
--   [ ] I have searched the repository for any relevant issues or pull requests
+-   [ ] Meine Änderungen liegen im Ordner `directories`, nicht in der automatisch erzeugten `README.md` oder im Ordner `db`
+-   [ ] Der Eintrag entspricht dem Format aus dem [Leitfaden fürs Mitmachen](CONTRIBUTING.md)
+-   [ ] Der Eintrag ist alphabetisch nach `name` einsortiert
+-   [ ] Die Links enthalten keine Referral- oder Affiliate-Parameter
+-   [ ] Ich habe nach bestehenden Issues und Pull Requests zum selben Verzeichnis gesucht
