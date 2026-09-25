@@ -2,11 +2,11 @@ import {Directory} from "../types/directory";
 
 export const directories: Directory[] = [
     {
-        "name": "Warehouse AI",
-        "link": "https://www.thewarehouse.ai/",
-        "submission_link": "https://www.thewarehouse.ai/product-submission",
-        "domain_rating": 10.0,
-        "monthly_visits": 15000,
+        "name": "Wavel",
+        "link": "https://www.wavel.io/",
+        "submission_link": "https://www.wavel.io/submit-tool",
+        "domain_rating": 10,
+        "monthly_visits": 12000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
@@ -16,15 +16,6 @@ export const directories: Directory[] = [
         "submission_link": "https://www.webwiki.com/info/add-website.html",
         "domain_rating": 77,
         "monthly_visits": 15000,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "Woi AI",
-        "link": "https://woy.ai/",
-        "submission_link": "https://woy.ai/submit?ref=aidirectori.es",
-        "domain_rating": 64,
-        "monthly_visits": 43400,
         "submission_experience": "Good",
         "pricing": "Free"
     },
@@ -40,10 +31,19 @@ export const directories: Directory[] = [
     {
         "name": "Whatsthebigdata",
         "link": "https://whatsthebigdata.com/",
-        "submission_link": "https://whatsthebigdata.com/submit-new-ai-tool/?ref=aidirectori.es",
+        "submission_link": "https://whatsthebigdata.com/submit-new-ai-tool/",
         "domain_rating": 60,
         "monthly_visits": 2700000,
         "submission_experience": "Good",
         "pricing": "Free"
-    }
+    },
+    {
+        "name": "Woi AI",
+        "link": "https://woy.ai/",
+        "submission_link": "https://woy.ai/submit",
+        "domain_rating": 64,
+        "monthly_visits": 43400,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
 ]

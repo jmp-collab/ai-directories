@@ -11,6 +11,18 @@ export const directories: Directory[] = [
         "pricing": "Paid"
     },
     {
+        "name": "Uneed Best",
+        "link": "https://www.uneed.best",
+        "submission_link": "https://www.uneed.best",
+        "domain_rating": 66,
+        "monthly_visits": 252000,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "AIDIRECTORIES",
+        "dealText": "20% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1749808918518509568/BzqYq2qf_400x400.png"
+    },
+    {
         "name": "Unloc.tools",
         "link": "https://www.unloc.tools/",
         "submission_link": "https://www.unloc.tools/submit-tool",

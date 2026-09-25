@@ -1,27 +1,28 @@
-# Contributing
+# Mitmachen
 
 ---
 
-> ❗️ The `README.md` file and the `/db` folder are auto-generated, so please **_do not_** edit them.
-> Changes related to directories should happen within the `/directories` folder.
+> ❗️ Die `README.md` und der Ordner `/db` werden automatisch erzeugt. Bitte nicht direkt bearbeiten.
+> Änderungen an Verzeichnissen gehören in den Ordner `/directories`.
 
 ---
 
-Everyone is welcome to collaborate to this project, but please take into consideration the following:
+Jeder kann mitmachen. Damit die Liste brauchbar bleibt, ein paar Regeln:
 
--   directories should align with the purpose of the project
--   directories shouldn't be a duplicate; a text search on the README file should be enough to find this answer
--   the list of directories is written in TypeScript; if you need assistance on this matter, please open an issue with the resource's information
--   make sure to check all items listed on the [pull request template](PULL_REQUEST_TEMPLATE.md) before submitting your contribution
+-   Das Verzeichnis muss zum Projekt passen: eine Plattform, auf der man ein KI-Tool, SaaS oder Startup eintragen kann.
+-   Keine Dubletten. Eine kurze Suche in der README reicht, um das zu prüfen.
+-   Die Liste ist in TypeScript geschrieben. Wenn du damit nicht klarkommst, öffne einfach ein Issue mit den Daten, dann trägt es jemand für dich ein.
+-   Vor dem Pull Request die Punkte aus dem [Pull-Request-Template](PULL_REQUEST_TEMPLATE) abhaken.
 
-## Adding a resource
+## Verzeichnis hinzufügen
 
--   resources are organized alphabetically in separate files in the `directories` folder; use the resource `name` property to determine which file it belongs to
--   within the file, keep the alphabetical order, again based on the resource `name` property
+-   Die Einträge liegen alphabetisch in einzelnen Dateien im Ordner `directories`. Der erste Buchstabe des `name` entscheidet über die Datei, Namen mit Ziffer am Anfang kommen in `0-9.ts`.
+-   Innerhalb der Datei ebenfalls alphabetisch nach `name` sortieren.
+-   Keine Referral- oder Affiliate-Parameter in den Links (`?ref=`, `?via=`, `?aff=` usw.).
 
-### Resource format
+### Format
 
-Each resource belongs to an object, as such:
+Jedes Verzeichnis ist ein Objekt:
 
 ```typescript
 // directories/t.ts
@@ -32,53 +33,58 @@ Each resource belongs to an object, as such:
     "submission_link": "https://www.thedirectory.com/new",
     "domain_rating": 27,
     "monthly_visits": 37000,
+    "submission_experience": "Good",
     "pricing": "Paid"
 },
 ```
 
-Observe that:
+Die Felder:
 
--   `name` is a **string** and **required**.
--   `link` is a **string** and required.
+-   `name`: **string**, Pflicht. Den Markennamen so schreiben, wie das Verzeichnis ihn selbst schreibt, nicht übersetzen („AI Finder“ bleibt „AI Finder“).
+-   `link`: **string**, Pflicht. Startseite des Verzeichnisses, beginnt mit `https://` oder `http://`.
+-   `submission_link`: **string**, Pflicht. Direkter Link zum Eintragsformular, beginnt mit `https://` oder `http://`.
+-   `domain_rating`: **number**, Pflicht. Ahrefs Domain Rating (0 bis 100).
+-   `monthly_visits`: **number**, Pflicht. Geschätzte Besuche pro Monat.
+-   `pricing`: **string**, Pflicht. `Free` oder `Paid`.
+-   `submission_experience`: **string**, optional. `Good`, `Bad` oder leer. Wird beim Review gesetzt: `Good` gibt es, wenn das Formular funktioniert und der Eintrag ohne Umwege live geht.
+-   `dealCode` / `dealText`: optional. Rabattcode und Vorteil, z. B. `"dealText": "20% Discount"`.
 
-    -   Must start with `http://` or `https://`.
--   `submission_link` is a **string** and required.
+> Warum englische Werte? `Good`, `Bad`, `Free` und `Paid` sind Datenwerte für API und Generatoren. Die deutschen Labels („Reibungslos“, „Kostenlos“ …) kommen aus `utils/i18n-de.js`. Bitte nicht übersetzen, sonst stimmen Farben und Filter nicht mehr.
 
-    -   Must start with `http://` or `https://`.
--   `domain_rating` is a **number** and **required**.
--   `monthly_visits` is a **number** and **required**.
--   `pricing` is a **string** and required.
+## Verzeichnis bearbeiten
 
-    -   Should be `Free` or `Paid`.
+Toter Link, falscher Preis, veraltete Zahlen? Einfach korrigieren und einen Pull Request aufmachen.
 
------
+## Andere Beiträge
 
--   `submission_experience` is a **string**.
+Änderungen, die nichts mit den Verzeichnissen zu tun haben, sind willkommen. Öffne vorher bitte ein Issue und beschreib kurz, was du vorhast.
 
-    -   Later will be defined by admin on PR. In order to get the `Good` badge make sure everything works smoothly.
+## Code-Formatierung
 
+Das Projekt nutzt [Prettier](https://prettier.io/) und [ESLint](https://eslint.org/). `npm install` installiert beides im Projekt.
 
+## README und DB aktualisieren
 
-## Editing a resource
+Nach Änderungen in `/directories`:
 
-If you find that an existing resource could benefit from some editing, feel free to make modifications.
+```bash
+npm run update-db
+npm run update-readme
+```
 
-## Other contributions
+## Website lokal starten
 
-Contributions not related to the directories are also welcome, but please open an issue explaining the changes you have in mind before making a pull request.
+```bash
+npm install
+npm run dev
+```
 
-## Code formatting and linting
+Für den Produktiv-Build `NEXT_PUBLIC_SITE_URL` auf die echte Domain setzen (siehe `.env.example`), sonst zeigen Canonicals, Sitemap und `llms.txt` auf `localhost`.
 
-This project relies on [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/) for code formatting and error/standards checking, so please ensure you have both installed globally or run `npm install` in order to install them in the project directory.
+## Hilfe nötig?
 
-## Updating README and DB
-
-This repository uses a GitHub action to automatically update `README.md` and `db` (which serves our API), so no action is required from you.
-
-## Need assistance?
-
-The directories lists are created in TypeScript, and if you're unable to make a contribution for this or any other reason, feel free to open an issue explaining your situation, so another developer can help you get your resource in the lists.
+Wenn du mit TypeScript nicht weiterkommst oder aus einem anderen Grund keinen Pull Request aufmachen kannst, öffne ein Issue. Jemand anderes hilft dir, das Verzeichnis in die Liste zu bekommen.
 
 ---
 
-## Thank you for contributing
+## Danke fürs Mitmachen!

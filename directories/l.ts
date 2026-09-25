@@ -2,33 +2,6 @@ import {Directory} from "../types/directory";
 
 export const directories: Directory[] = [
     {
-        "name": "Launched Site",
-        "link": "https://launched.site?ref=aidirectori.es",
-        "submission_link": "https://launched.site/submit?ref=aidirectori.es",
-        "domain_rating": 45,
-        "monthly_visits": 10000,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "Launched",
-        "link": "https://launched.io/",
-        "submission_link": "https://launched.io/SubmitStartup",
-        "domain_rating": 38.0,
-        "monthly_visits": 2400,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
-        "name": "Launching Next",
-        "link": "https://www.launchingnext.com/",
-        "submission_link": "https://www.launchingnext.com/submit/",
-        "domain_rating": 51.0,
-        "monthly_visits": 13000,
-        "submission_experience": "Good",
-        "pricing": "Free"
-    },
-    {
         "name": "Lachief",
         "link": "https://www.lachief.io/",
         "submission_link": "https://tally.so/r/w4Jb4b",
@@ -38,20 +11,59 @@ export const directories: Directory[] = [
         "pricing": "Free"
     },
     {
-        "name": "Look AI Tools",
-        "link": "https://lookaitools.com/?ref=aidirectori.es",
-        "submission_link": "https://lookaitools.com/submission-service/?ref=aidirectori.es",
-        "domain_rating": 6,
-        "monthly_visits": 130,
+        "name": "Launched",
+        "link": "https://launched.io/",
+        "submission_link": "https://launched.io/SubmitStartup",
+        "domain_rating": 38,
+        "monthly_visits": 2400,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
+        "name": "Launched Site",
+        "link": "https://launched.site",
+        "submission_link": "https://launched.site/submit",
+        "domain_rating": 45,
+        "monthly_visits": 10000,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
+        "name": "LaunchIgniter",
+        "link": "https://launchigniter.com/",
+        "submission_link": "https://launchigniter.com/submit",
+        "domain_rating": 68,
+        "monthly_visits": 500,
+        "submission_experience": "Good",
+        "pricing": "Paid",
+        "dealCode": "AIDIRECTORIES30",
+        "dealText": "30% Discount",
+        "icon": "https://pbs.twimg.com/profile_images/1915733068134178817/PTm4mwqV_400x400.png"
+    },
+    {
+        "name": "Launching Next",
+        "link": "https://www.launchingnext.com/",
+        "submission_link": "https://www.launchingnext.com/submit/",
+        "domain_rating": 51,
+        "monthly_visits": 13000,
         "submission_experience": "Good",
         "pricing": "Free"
     },
     {
         "name": "Live Apps",
-        "link": "https://liveapps.ai/?ref=aidirectori.es",
-        "submission_link": "https://liveapps.ai/become-a-partner/?ref=aidirectori.es",
+        "link": "https://liveapps.ai/",
+        "submission_link": "https://liveapps.ai/become-a-partner/",
         "domain_rating": 12,
         "monthly_visits": 500,
+        "submission_experience": "Good",
+        "pricing": "Free"
+    },
+    {
+        "name": "Look AI Tools",
+        "link": "https://lookaitools.com/",
+        "submission_link": "https://lookaitools.com/submission-service/",
+        "domain_rating": 6,
+        "monthly_visits": 130,
         "submission_experience": "Good",
         "pricing": "Free"
     },
