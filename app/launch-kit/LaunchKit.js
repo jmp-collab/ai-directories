@@ -115,7 +115,7 @@ const OUTPUTS = [
 ]
 
 export default function LaunchKit({ directories }) {
-    const [f, setF] = useState(EMPTY)
+    const [f, setF] = useState(EXAMPLE)
     const [dir, setDir] = useState('product-hunt')
 
     useEffect(() => {
