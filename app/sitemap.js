@@ -1,10 +1,18 @@
 import { getDirectories, LISTS } from '../lib/data'
 import { absoluteUrl } from '../lib/site'
+import { ARTIKEL } from '../lib/ratgeber'
 
 export default function sitemap() {
     const lastModified = new Date()
     return [
         { url: absoluteUrl('/'), lastModified, changeFrequency: 'weekly', priority: 1 },
+        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar'].map((path) => ({
+            url: absoluteUrl(path),
+            lastModified,
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        })),
+        ...ARTIKEL.map((a) => ({ url: absoluteUrl(`/ratgeber/${a.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
         { url: absoluteUrl('/quiz'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
         { url: absoluteUrl('/vergleich'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
         { url: absoluteUrl('/ueber-jean'), lastModified, changeFrequency: 'monthly', priority: 0.6 },

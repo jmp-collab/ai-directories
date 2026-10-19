@@ -57,10 +57,13 @@ export default function RootLayout({ children }) {
                                     <Link href="/liste/kostenlos">Gratis 🎁</Link>
                                 </li>
                                 <li>
-                                    <Link href="/liste/domain-rating-50-plus">DR 50+ 💪</Link>
+                                    <Link href="/deutsche-ki-verzeichnisse">DACH 🇩🇪</Link>
                                 </li>
                                 <li>
-                                    <Link href="/liste/rabattcodes">Rabatt 🤑</Link>
+                                    <Link href="/launch-kit">Launch-Kit 🧰</Link>
+                                </li>
+                                <li>
+                                    <Link href="/ratgeber">Ratgeber 📖</Link>
                                 </li>
                                 <li>
                                     <Link href="/quiz">Quiz 🎯</Link>

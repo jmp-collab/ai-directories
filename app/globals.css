@@ -1287,3 +1287,153 @@ body.bart-modus {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* ---------- DACH, Launch-Kit, Ratgeber, Glossar ---------- */
+
+td.wrap {
+    white-space: normal;
+    min-width: 260px;
+    font-size: 0.9rem;
+}
+
+.source {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.kit {
+    display: grid;
+    gap: 24px;
+}
+
+.kit-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px 18px;
+}
+
+.kit-form span,
+.kit-utm-select span {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 4px;
+}
+
+.kit-form input,
+.kit-form select,
+.kit-utm-select select {
+    width: 100%;
+    font: inherit;
+    font-size: 0.95rem;
+    padding: 8px 10px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.kit-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 4px 0 0;
+}
+
+.kit-out h2 {
+    margin-top: 0.6em;
+}
+
+.kit-block {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    margin: 12px 0;
+}
+
+.kit-block-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 14px;
+}
+
+.kit-count {
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+    margin-right: auto;
+}
+
+.kit-count.over,
+.kit-warn {
+    color: var(--bad-fg);
+    font-weight: 700;
+}
+
+.kit-text {
+    white-space: pre-line;
+    margin: 0.5em 0 0.2em;
+    overflow-wrap: anywhere;
+}
+
+.kit-hint {
+    color: var(--muted);
+}
+
+.kit-utm-select {
+    display: block;
+    max-width: 420px;
+}
+
+.toc {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 18px;
+    max-width: 640px;
+    margin: 20px 0;
+}
+
+.toc ol {
+    margin: 6px 0 0;
+    padding-left: 1.3em;
+}
+
+.prose {
+    max-width: 70ch;
+}
+
+.prose p {
+    margin: 0 0 1em;
+}
+
+.glossar > div {
+    padding: 8px 0;
+    border-bottom: 2px solid var(--border);
+}
+
+.glossar dd {
+    color: var(--text);
+}
+
+@media (max-width: 720px) {
+    .site-header nav {
+        width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .site-header nav ul {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        padding-bottom: 2px;
+    }
+}
