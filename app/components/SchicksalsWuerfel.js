@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const SPRUECHE = [
+    (d) => `Ich sag: ${d.name}. Und ich lieg selten daneben, höchstens beim Tippen.`,
     (d) => `${d.name} hat gesprochen. Widerspruch ist zwecklos.`,
     (d) => `Das Orakel sagt: ${d.name}. Das Orakel hat keine Ahnung von SEO, aber Selbstvertrauen.`,
     (d) => `${d.name}! Trag dich ein, bevor du es dir anders überlegst.`,
@@ -38,7 +39,7 @@ export default function SchicksalsWuerfel({ options }) {
                 {!result && <p>Keine Lust auf Tabellen? Der Würfel wählt ein kostenloses, reibungsloses Verzeichnis für dich.</p>}
                 {result && (
                     <>
-                        <p className="dice-line">{result.line}</p>
+                        <p className="dice-line">🧔 {result.line}</p>
                         <p>
                             <Link href={`/verzeichnis/${result.d.slug}`}>
                                 <strong>{result.d.name}</strong> im Detail

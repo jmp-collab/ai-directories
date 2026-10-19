@@ -97,7 +97,7 @@ export default function DirectoryPage({ params }) {
             </header>
 
             <div className={`verdict verdict-${verdict.tone}`}>
-                <p className="verdict-label">Das Urteil des Gerichts: {verdict.short}</p>
+                <p className="verdict-label">Jeans Urteil: {verdict.short}</p>
                 <p>
                     <strong>{d.name}</strong> ist ein {d.pricing ? `${pricingLabel(d.pricing).toLowerCase()}es ` : ''}Verzeichnis mit Domain Rating {formatRating(d.domain_rating)} und
                     {d.monthly_visits ? ` rund ${formatVisits(d.monthly_visits)} Besuchen im Monat.` : ' ohne belastbare Traffic-Daten.'}{' '}

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Jean from './components/Jean'
 
 export default function NotFound() {
     return (
@@ -9,6 +10,7 @@ export default function NotFound() {
                 Die Seite gibt es nicht (mehr). Vielleicht wurde sie umbenannt, aus der Liste geflogen oder hat sich einfach
                 eine Auszeit genommen. Wir haben unter dem Sofa nachgesehen. Nur Staub und ein nofollow-Link.
             </p>
+            <Jean>Ich hab hier auch nichts gefunden. Und ich finde sonst alles, sogar Backlinks auf Seite 7.</Jean>
             <p>
                 <Link className="button" href="/">
                     Zurück zu allen KI-Verzeichnissen →

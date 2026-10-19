@@ -3,6 +3,7 @@ import DirectoryTable from './components/DirectoryTable'
 import JsonLd from './components/JsonLd'
 import Faq, { faqSchema } from './components/Faq'
 import SchicksalsWuerfel from './components/SchicksalsWuerfel'
+import Jean, { HELLO } from './components/Jean'
 import { getDirectories, getSiteStats } from '../lib/data'
 import { SITE_NAME, SITE_URL, absoluteUrl } from '../lib/site'
 import getFaq from '../utils/faq-de'
@@ -81,6 +82,9 @@ export default function Home() {
                     klappt. {stats.free.length} sind kostenlos, bei {stats.freeAndSmooth.length} geht der Eintrag gratis und ohne
                     Stolpersteine. Der Rest ist Arbeit, Kaffee und gelegentlich Fluchen.
                 </p>
+                <Jean>
+                    {HELLO[new Date().getDate() % HELLO.length]} <Link href="/ueber-jean">Mehr über mich →</Link>
+                </Jean>
                 <SchicksalsWuerfel
                     options={stats.freeAndSmooth.map((d) => ({
                         name: d.name,
@@ -197,6 +201,18 @@ export default function Home() {
                     <dt>Preis</dt>
                     <dd>Kostenlos oder kostenpflichtig. Viele kostenlose Verzeichnisse verkaufen zusätzlich Featured-Plätze. Gratis ist selten ganz gratis, aber oft nah dran.</dd>
                 </dl>
+            </section>
+
+            <section aria-labelledby="wer">
+                <h2 id="wer">Wer steckt dahinter? 🧔</h2>
+                <div className="about-head">
+                    <img className="about-photo" src="/jean.jpg" alt="Jean Maurice Port" width="120" height="120" loading="lazy" />
+                    <p>
+                        Ich bin Jean, SEO-Manager bei der MotoMobilityGroup (Racing Planet, Scooter Center und Co.). Diese Liste
+                        ist mein Nebenprojekt: ehrlich bewertet, mit Humor und ohne Affiliate-Tricks.{' '}
+                        <Link href="/ueber-jean">Meine Projekte und Profile →</Link>
+                    </p>
+                </div>
             </section>
 
             <section aria-labelledby="faq">

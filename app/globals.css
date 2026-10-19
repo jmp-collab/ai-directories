@@ -868,3 +868,108 @@ tbody tr:hover a {
         white-space: normal;
     }
 }
+
+/* ---------- Jean ---------- */
+
+.jean {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    margin: 20px 0;
+    max-width: 640px;
+}
+
+.jean-face {
+    flex: 0 0 84px;
+    width: 84px;
+    animation: bob 3s ease-in-out infinite;
+}
+
+.jean-face svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.bubble {
+    position: relative;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    box-shadow: var(--shadow);
+    min-width: 0;
+}
+
+.bubble::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    bottom: 18px;
+    border: 8px solid transparent;
+    border-right-color: var(--border);
+    border-left: 0;
+}
+
+.bubble b {
+    color: var(--accent);
+}
+
+.about-head {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-head > div,
+.about-head > p {
+    flex: 1 1 260px;
+    min-width: 0;
+}
+
+.about-photo {
+    border-radius: 50%;
+    border: 3px solid var(--border);
+    box-shadow: var(--shadow);
+    object-fit: cover;
+    transform: rotate(-3deg);
+}
+
+.link-cards {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+}
+
+.link-cards li {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.link-cards a {
+    text-decoration: none;
+}
+
+.link-cards span {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+@keyframes bob {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-4px) rotate(-2deg);
+    }
+}
