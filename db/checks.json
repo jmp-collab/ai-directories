@@ -263,7 +263,8 @@
   "link_type": "kostenlos dofollow nur für die Top 3, bezahlt immer",
   "quote": "Free launches require badge verification, go through manual review before they go live, and only top 3 products get backlinks. Basic gives you 1 guaranteed backlink launch with no review and no waiting.",
   "source": "https://launchigniter.com/pricing",
-  "status": null
+  "status": null,
+  "free_dofollow": false
  },
  "all-top-startups": {
   "approval": "Bezahlt: Eintrag in unter 48 Stunden; kostenlose Einträge derzeit ausgesetzt (Rückstau von Hunderten)",
@@ -291,14 +292,16 @@
   "link_type": "dofollow garantiert nur bei Premium",
   "quote": "Most projects are reviewed and approved within 24-48 hours. Premium and Premium Plus projects receive priority review.",
   "source": "https://auraplusplus.com/faq",
-  "status": null
+  "status": null,
+  "free_dofollow": false
  },
  "dev-hunt": {
   "approval": "Eintrag kostenlos sofort als eigene Seite; Launch-Woche gegen Gebühr frei wählbar",
   "link_type": "kostenlos nofollow, bezahlter Launch dofollow",
   "quote": "Listing a tool is free: every tool gets a permanent page with a nofollow link. Launching costs $19 once: you choose the launch week, get a spot in the newsletter, and your link becomes dofollow.",
   "source": "https://devhunt.org/faq",
-  "status": null
+  "status": null,
+  "free_dofollow": false
  },
  "software-suggest": {
   "approval": "8 bis 48 Arbeitsstunden, Prüfung in Eingangsreihenfolge (Support-Artikel von 2020)",
