@@ -25,7 +25,7 @@ export function GET() {
         .sort((a, b) => b.domain_rating - a.domain_rating)
         .map(
             (d) =>
-                `- [${d.name}](${absoluteUrl(`/verzeichnis/${d.slug}`)}): Jean-Score ${getScore(d).total}/100, DR ${formatRating(d.domain_rating)}, ${formatVisits(d.monthly_visits)} Besuche/Monat, ${pricingLabel(d.pricing)}, Einreichung ${getCheck(d.slug)?.status ? 'derzeit zu' : experienceLabel(d.submission_experience).toLowerCase()}${d.dealCode ? `, Rabattcode ${d.dealCode} (${dealLabel(d.dealText)})` : ''}. Eintragen: ${d.submission_link}${checkNote(d)}`
+                `- [${d.name}](${absoluteUrl(`/verzeichnis/${d.slug}`)}): Jean-Score ${getScore(d).total}/100, DR ${formatRating(d.domain_rating)}, ${formatVisits(d.monthly_visits)} Besuche/Monat, ${pricingLabel(d.pricing)}, Einreichung ${getCheck(d.slug)?.status ? 'derzeit zu' : experienceLabel(d.submission_experience).toLowerCase()}${d.dealCode ? `, Rabattcode ${d.dealCode} (${dealLabel(d.dealText)})` : ''}.${getCheck(d.slug)?.status ? '' : ` Eintragen: ${d.submission_link}`}${checkNote(d)}`
         )
         .join('\n')
 

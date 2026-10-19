@@ -436,5 +436,82 @@
   "quote": "Review SLA is 3 business days, weekends excluded.",
   "source": "https://toolsfine.com/submit",
   "status": null
+ },
+ "launched": {
+  "approval": "In der Regel bis zu 24 Stunden bis zur Veröffentlichung",
+  "link_type": null,
+  "quote": "Typically it takes up to 24 hours from submission to publication (given the review was positive).",
+  "source": "https://launched.io/newsubmission",
+  "status": null
+ },
+ "startup-heroes": {
+  "approval": "Nach Zahlung (10 $) meist in 30 Minuten oder weniger live",
+  "link_type": null,
+  "quote": "For new startups, after payment and submission you can typically be listed in 30 mins or less.",
+  "source": "https://startupheroes.io/submit/",
+  "status": null
+ },
+ "aistage": {
+  "approval": "Nur bezahlt: Prüfung in 48 Stunden",
+  "link_type": "dofollow",
+  "quote": "Review in 48 hours - Listing & Traffic Forever - Get DR 70+ dofollow backlinks",
+  "source": "https://aistage.net/pricing",
+  "status": null
+ },
+ "find-my-ai-tool": {
+  "approval": "Nur bezahlt; jede Einreichung wird vom Team geprüft, keine Zeitangabe",
+  "link_type": null,
+  "quote": "Every submission is reviewed by our team before it is published. You will be notified by email once your AI tool is live.",
+  "source": "https://findmyaitool.com/submit-tool/",
+  "status": null
+ },
+ "startup-buffer": {
+  "approval": "Kostenlos: 1–2 Monate wegen hoher Nachfrage",
+  "link_type": null,
+  "quote": "How long does review take? Reviews can take 1-2 months due to high demand. We'll email you when it's processed.",
+  "source": "https://startupbuffer.com/site/contact",
+  "status": null
+ },
+ "ai-tool-net": {
+  "approval": "Kostenlos: Veröffentlichung binnen 30 Tagen; bezahlte Schnellspur in 24 Stunden",
+  "link_type": "dofollow",
+  "quote": "Free - Published within 30 days - Basic tool submission - Do-Follow SEO backlink",
+  "source": "https://www.aitoolnet.com/submit",
+  "status": null
+ },
+ "digitalsamaritan": {
+  "approval": null,
+  "link_type": null,
+  "quote": "BADAK178 | Orchard – Smartphone Refurbished Berkualitas | Hemat Hingga 70%",
+  "source": "https://www.digitalsamaritan.co/add-your-product",
+  "status": "Die Einreichungsseite zeigt einen fremden Smartphone-Shop (vermutlich gekapert), kein Formular."
+ },
+ "paggu": {
+  "approval": "Kostenlos, Besprechung nur wenn die Kriterien passen, keine Zeitangabe; gegen Gebühr sofort",
+  "link_type": null,
+  "quote": "Submitting your startup is absolutely free. In case you want to jump the line and get your startup reviewed immediately, we might charge a small fee.",
+  "source": "https://www.paggu.com/submit-your-startup/",
+  "status": null
+ },
+ "rankyourai": {
+  "approval": "Nur bezahlt (29 $): in 48 Stunden oder weniger veröffentlicht",
+  "link_type": "dofollow",
+  "quote": "Featured Listing ✅ | SEO DoFollow Backlink ✅ | Listing Indexed on Google ✅ | Published in 48h or less ✅ | Price (one-time payment) $29 USD",
+  "source": "https://rankyourai.com/p/submit/",
+  "status": null
+ },
+ "trustmrr": {
+  "approval": "Basis-Eintrag kostenlos, setzt verifizierten Umsatz über einen Zahlungsanbieter voraus; keine Zeitangabe",
+  "link_type": "dofollow nur als bezahltes Zusatzpaket (19 $)",
+  "quote": "The current one-time add-ons for regular startup listings are Dofollow authority link ($19), AI visibility boost ($79), and Side-panel sponsor spot, which starts at $399 for 7 days",
+  "source": "https://trustmrr.com/faq",
+  "status": null
+ },
+ "saas-ai-tools": {
+  "approval": "Kostenlos in der normalen Warteschlange ohne Zeitangabe; Featured in 3 Werktagen",
+  "link_type": null,
+  "quote": "Can I still submit my tool for free? Yes. Free submissions are still open. They join the normal review queue and do not include a featured spot.",
+  "source": "https://saasaitools.com/get-featured/",
+  "status": null
  }
 }

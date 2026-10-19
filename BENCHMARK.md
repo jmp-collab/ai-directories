@@ -36,11 +36,11 @@ Stand: Oktober 2026. Maßstab für das Ziel „beste deutschsprachige Seite für
 | Traffic pro Verzeichnis | ✅ | ❌ | ✅ |
 | Frische Zweitmessung (Semrush) | ✅ (47 Top-Verzeichnisse) | ❌ | ✅ (Ahrefs, 42) |
 | Warnung bei auffälligem DR | ✅ | ❌ | ✅ (im Text) |
-| Freischaltdauer mit Zitat und Quelle | ✅ (49 Verzeichnisse, eigene Seite /freischaltung) | ❌ | ❌ |
+| Freischaltdauer mit Zitat und Quelle | ✅ (59 Verzeichnisse, eigene Seite /freischaltung) | ❌ | ❌ |
 | Status geprüft (Einreichung möglich?) | ✅ (6 Ausfälle markiert) | ❌ | ❌ |
 | Preis (kostenlos/bezahlt) | ✅ | ✅ | ✅ |
 | Qualität der Einreichung | ✅ (reibungslos/hakelig) | ❌ | ❌ |
-| dofollow/nofollow | teilweise (18, mit Quelle) | ✅ | ❌ |
+| dofollow/nofollow | teilweise (22, mit Quelle) | ✅ | ❌ |
 | Rabattcodes | ✅ (25) | ❌ | ❌ |
 | Deutsche Verzeichnisse mit DSGVO-Hinweisen | ✅ (11) | ❌ | ❌ |
 | Eigene Detailseite je Verzeichnis | ✅ (256) | teilweise | ❌ |
@@ -57,7 +57,7 @@ Stand: Oktober 2026. Maßstab für das Ziel „beste deutschsprachige Seite für
 
 1. **dofollow/nofollow** fehlt. IdeaProof hat das Feld. Nächster Schritt: Link-Attribut je Verzeichnis selbst prüfen und als Datenfeld ergänzen.
 2. **Aktualität**: DR und Traffic der Hauptliste stammen aus der Ursprungsliste. **Teilweise geschlossen:** Für 47 der 50 stärksten Verzeichnisse wurden Authority Score und verweisende Domains im Oktober 2026 frisch bei Semrush gemessen und stehen auf den Detailseiten. Dabei fielen drei Einträge mit DR ab 50, aber Authority Score von 10 oder weniger auf (AI Infinity, BizRaw, Afford Hunt). Sie tragen jetzt eine Warnung. Offen: organischer Traffic (Semrush-Guthaben aufgebraucht) und die übrigen 206 Verzeichnisse.
-3. **Genehmigungsdauer**: **Teilweise geschlossen.** Für 49 Verzeichnisse steht die Freischaltdauer mit wörtlichem Zitat und Quelle auf `/freischaltung` und den Detailseiten. Von 107 geprüften Verzeichnissen machen die übrigen keine eigene Angabe.
+3. **Genehmigungsdauer**: **Teilweise geschlossen.** Für 59 Verzeichnisse steht die Freischaltdauer mit wörtlichem Zitat und Quelle auf `/freischaltung` und den Detailseiten. Von 121 geprüften Verzeichnissen machen die übrigen keine eigene Angabe.
 
 Diese Lücken stehen bewusst hier, damit die Seite ehrlich besser wird statt nur lauter.
 

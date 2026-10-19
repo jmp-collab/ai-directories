@@ -350,6 +350,11 @@ abbr {
     text-decoration: none;
 }
 
+.submit-closed {
+    color: var(--muted);
+    white-space: nowrap;
+}
+
 .empty {
     color: var(--muted);
 }

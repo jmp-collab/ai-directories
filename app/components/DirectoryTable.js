@@ -168,15 +168,19 @@ export default function DirectoryTable({ directories, interactive = true, defaul
                                     <ExperienceBadge value={d.submission_experience} blocked={d.blocked} />
                                 </td>
                                 <td>
-                                    <a
-                                        className="submit-link"
-                                        href={d.submission_link}
-                                        target="_blank"
-                                        rel="nofollow noopener noreferrer"
-                                        aria-label={`${d.name}: Tool eintragen (externer Link)`}
-                                    >
-                                        Eintragen ↗ 🚀
-                                    </a>
+                                    {d.blocked ? (
+                                        <span className="submit-closed">zu ⛔</span>
+                                    ) : (
+                                        <a
+                                            className="submit-link"
+                                            href={d.submission_link}
+                                            target="_blank"
+                                            rel="nofollow noopener noreferrer"
+                                            aria-label={`${d.name}: Tool eintragen (externer Link)`}
+                                        >
+                                            Eintragen ↗ 🚀
+                                        </a>
+                                    )}
                                 </td>
                             </tr>
                         ))}
