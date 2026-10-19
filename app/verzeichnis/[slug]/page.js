@@ -117,8 +117,8 @@ export default function DirectoryPage({ params }) {
             <Jean>{jeanLine(d)}</Jean>
 
             <p className="cta-row">
-                <a className="button" href={d.submission_link} target="_blank" rel="nofollow noopener noreferrer">
-                    {hasStatusIssue(d.slug) ? `Einreichungsseite von ${d.name} ansehen ↗` : `Jetzt bei ${d.name} eintragen 🚀`}
+                <a className="button" href={hasStatusIssue(d.slug) ? d.link : d.submission_link} target="_blank" rel="nofollow noopener noreferrer">
+                    {hasStatusIssue(d.slug) ? `Website von ${d.name} ansehen ↗` : `Jetzt bei ${d.name} eintragen 🚀`}
                 </a>
                 <a href={d.link} target="_blank" rel="nofollow noopener noreferrer">
                     Erst mal die Website bestaunen ↗
