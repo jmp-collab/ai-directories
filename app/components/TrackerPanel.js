@@ -35,7 +35,7 @@ export default function TrackerPanel({ directories }) {
                     {count} von {total} eingetragen
                 </p>
             </div>
-            <div className="tracker-bar" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={count}>
+            <div className="tracker-bar" role="progressbar" aria-label="Fortschritt deiner Einträge" aria-valuemin={0} aria-valuemax={total} aria-valuenow={count}>
                 <span style={{ width: `${Math.max(percent, count ? 2 : 0)}%` }} />
             </div>
             <p className="tracker-text">

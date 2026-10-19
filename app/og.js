@@ -23,7 +23,7 @@ export function ogImage({ eyebrow, title, score, footer }) {
                     <div
                         style={{
                             display: 'flex',
-                            background: '#d6246e',
+                            background: '#b3164f',
                             color: '#fff',
                             fontSize: 34,
                             fontWeight: 800,
