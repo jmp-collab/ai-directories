@@ -556,5 +556,61 @@
   "quote": "A new era of Crazy about Startups is coming. We are rebuilding Crazy About Startups from the ground up with powerful tools, curated resources, and a stronger founder community.",
   "source": "https://crazyaboutstartups.com/",
   "status": "Die Seite wird komplett neu aufgebaut, Einreichen ist derzeit nicht möglich."
+ },
+ "domore": {
+  "approval": "Keine Zeitangabe; bezahlter Eintrag kann abgelehnt werden, dann sofortige Erstattung",
+  "link_type": "dofollow nur beim bezahlten Eintrag",
+  "quote": "Pro Listing (lifetime) - Highlighted background for your project in the catalog. - Do-follow links leading to your portal",
+  "source": "https://domore.ai/contact-us",
+  "status": null
+ },
+ "next-gen-tools": {
+  "approval": "Jedes Tool wird von Hand geprüft, keine Zeitangabe; Affiliate-Links werden abgelehnt",
+  "link_type": null,
+  "quote": "We do review every tool manually before publishing it on the site. Do not submit your affiliate link to a tool. It will not be approved.",
+  "source": "https://nextgentools.me/submit-your-tool",
+  "status": null
+ },
+ "tipseason": {
+  "approval": "Kostenlos: Warteschlange über 90 Tage; bezahlt (ab 49 $) in 24–48 Stunden",
+  "link_type": "dofollow beim bezahlten Eintrag beworben",
+  "quote": "Get maximum visibility for your AI tool, reach thousands of potential customers, and rank better on Google with a sponsored post and do-follow backlink.",
+  "source": "https://tipseason.com/ai-tools/submit",
+  "status": null
+ },
+ "simple-lister": {
+  "approval": "Kostenlose Plätze für die nächsten 9 Monate ausgebucht; bezahlt (15 €) mit Wunschtermin",
+  "link_type": null,
+  "quote": "All slots for the next 9 months are full! Only paid submissions are being accepted.",
+  "source": "https://simplelister.com/submit",
+  "status": null
+ },
+ "free-ai-tool": {
+  "approval": null,
+  "link_type": null,
+  "quote": "Submissions Paused. We are not currently accepting new paid submissions.",
+  "source": "https://freeaitool.ai/submit",
+  "status": "Einreichungen laut FreeAITool derzeit pausiert."
+ },
+ "educator-tools": {
+  "approval": "Kostenlos, redaktionelle Prüfung vor Freischaltung, keine Zeitangabe",
+  "link_type": null,
+  "quote": "Our editorial team checks the listing against our standards. Once approved, your listing goes live with a public profile and review section.",
+  "source": "https://aieducator.tools/for-companies",
+  "status": null
+ },
+ "startups-fyi": {
+  "approval": "Jede Einreichung wird geprüft, bei Ablehnung sofortige Erstattung; keine Zeitangabe",
+  "link_type": null,
+  "quote": "All submissions are vetted and any startup not meeting our quality standards will be rejected and refunded immediately.",
+  "source": "https://www.startups.fyi/boost",
+  "status": null
+ },
+ "startup-spotlight": {
+  "approval": "Nur per bezahltem Gebot (ab 10 $), danach sofort live",
+  "link_type": null,
+  "quote": "Bids start at $10. Bidding keeps the bar high — it filters out spam and low-effort submissions",
+  "source": "https://www.startupspotlight.co/submit",
+  "status": null
  }
 }

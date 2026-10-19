@@ -4,7 +4,7 @@
 
 **Kurz gesagt:** Das ist eine gepflegte Liste mit 256 KI-Verzeichnissen, Startup-Plattformen und Launch-Seiten. Zu jedem Eintrag stehen Domain Rating, geschätzte Besuche pro Monat, ob der Eintrag kostenlos ist und wie reibungslos die Einreichung läuft. 164 davon kosten nichts, bei 158 ist der Eintrag kostenlos **und** unkompliziert.
 
-Stand: September 2026 · Daten als JSON: [`db/directories.json`](db/directories.json)
+Stand: September 2026 · **Live:** [jmp-collab.github.io/ai-directories](https://jmp-collab.github.io/ai-directories/) · Daten als JSON: [`db/directories.json`](db/directories.json)
 
 ---
 > ❗️ Diese `README.md` und der Ordner `/db` werden automatisch erzeugt. Bitte nicht direkt bearbeiten. Änderungen an Verzeichnissen gehören in den Ordner `/directories`, siehe [Mitmachen](CONTRIBUTING.md).
