@@ -8,7 +8,8 @@ export function PriceBadge({ value }) {
         </span>
 }
 
-export function ExperienceBadge({ value }) {
+export function ExperienceBadge({ value, blocked = false }) {
+    if (blocked) return <span className="badge badge-bad">⛔ Gerade zu</span>
     if (!value) return <span className="badge badge-neutral">{experienceLabel(value)}</span>
     return <span className={`badge ${value === 'Good' ? 'badge-good' : 'badge-bad'}`}>
             {value === 'Good' ? '🧈 ' : '🌵 '}

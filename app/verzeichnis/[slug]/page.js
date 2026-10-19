@@ -13,7 +13,7 @@ import ScoreBar from '../../components/ScoreBar'
 import CopyButton from '../../components/CopyButton'
 import FreshBox from '../../components/FreshBox'
 import CheckBox from '../../components/CheckBox'
-import { getCheck } from '../../../lib/checks'
+import { getCheck, hasStatusIssue } from '../../../lib/checks'
 import { absoluteUrl } from '../../../lib/site'
 import { dealLabel, formatRating, formatVisits, pricingLabel } from '../../../utils/i18n-de'
 
@@ -100,7 +100,7 @@ export default function DirectoryPage({ params }) {
                 <div>
                     <h1>{d.name} eintragen: lohnt sich das? Wir haben nachgerechnet (halbwegs)</h1>
                     <p className="badges">
-                        <PriceBadge value={d.pricing} /> <ExperienceBadge value={d.submission_experience} />
+                        <PriceBadge value={d.pricing} /> <ExperienceBadge value={d.submission_experience} blocked={hasStatusIssue(d.slug)} />
                     </p>
                 </div>
             </header>
@@ -150,7 +150,7 @@ export default function DirectoryPage({ params }) {
                     <div>
                         <dt>Einreichung</dt>
                         <dd>
-                            <ExperienceBadge value={d.submission_experience} />
+                            <ExperienceBadge value={d.submission_experience} blocked={hasStatusIssue(d.slug)} />
                         </dd>
                     </div>
                 </dl>
