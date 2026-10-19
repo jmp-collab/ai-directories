@@ -309,5 +309,68 @@
   "quote": "All products submitted are reviewed in the order in which they are received. It can take over 8 to 48 working hours to approve your software.",
   "source": "https://softwaresuggestsupport.freshdesk.com/support/solutions/articles/33000204427-when-will-my-listing-go-live-",
   "status": null
+ },
+ "dokey-ai": {
+  "approval": "Kostenloses Paket: Prüfung in 48 Stunden (Partner-Link im Footer nötig); bezahltes Paket: 24 Stunden",
+  "link_type": "dofollow beim bezahlten Paket genannt",
+  "quote": "Review in 24 hours - Launched on Featured - Get dofollow links, ~20 backlinks - Listing in open-sourced data - Listing on website forever",
+  "source": "https://dokeyai.com/pricing",
+  "status": null
+ },
+ "launching-next": {
+  "approval": "Kostenlos: tägliche Sichtung ohne Garantie; Prüfung innerhalb 1 Werktag nur mit 99-$-Upgrade",
+  "link_type": null,
+  "quote": "We review submissions every day, and you'll receive an email if we publish your startup. Submitting to Launching Next is free, but if you want your startup to be considered for publication within 1-business day, we offer a $99 upgrade on the next page.",
+  "source": "https://www.launchingnext.com/submit/",
+  "status": null
+ },
+ "tool-directory": {
+  "approval": "Median 5 Werktage, jede Einreichung von Hand geprüft",
+  "link_type": null,
+  "quote": "An editor compares the submission against our criteria. Median time: 5 working days. We may write back with questions.",
+  "source": "https://tooldirectory.ai/submit-tool",
+  "status": null
+ },
+ "basedtools": {
+  "approval": "Kostenlos: Prüfung in 24 Stunden (Backlink und DR über 15 nötig); Premium sofort live",
+  "link_type": "dofollow beim Premium-Weg genannt",
+  "quote": "Free Track $0 Add below code to your home page, your submission will be reviewed within 24 hours. Make sure your tool has >15DR to be listed.",
+  "source": "https://www.basedtools.ai/submit",
+  "status": null
+ },
+ "tiny-startups": {
+  "approval": "Jeder Eintrag wird von Hand freigegeben, keine Zeitangabe",
+  "link_type": "dofollow",
+  "quote": "Earn a powerful DR 71+ do-follow backlink to boost your SEO & AI visibility",
+  "source": "https://www.tinystartups.com/submit",
+  "status": null
+ },
+ "dang-ai": {
+  "approval": "Kostenlos: bis zu 4 Wochen (Backlink nötig); Basic 49 $: rund 4 Tage",
+  "link_type": null,
+  "quote": "Basic $49 Skip the backlink and get reviewed in about 4 days with a Featured badge. - No backlink required - 4 day review time",
+  "source": "https://dang.ai/pricing",
+  "status": null
+ },
+ "ai-best-tools": {
+  "approval": "Nur bezahlt (6,90 $), dann sofort gelistet",
+  "link_type": null,
+  "quote": "Regular Listing $6.9 9.9 Listed to our website immediately Update product information anytime",
+  "source": "https://aibest.tools/submit",
+  "status": null
+ },
+ "launched-site": {
+  "approval": null,
+  "link_type": null,
+  "quote": "What Is LAUNCHED? The Fastest AI Website Builder for Real Businesses",
+  "source": "https://launched.site/submit",
+  "status": "Kein Verzeichnis mehr: Die Einreichungsseite zeigt nur noch einen KI-Website-Baukasten, kein Formular."
+ },
+ "aitools-fyi": {
+  "approval": null,
+  "link_type": null,
+  "quote": "Includes submission to 1 established AI tools directory with DR 40+ at the time of submission. Boost My Tool covers any applicable directory submission fee.",
+  "source": "https://aitools.fyi/submit",
+  "status": "Kein eigener Eintrag mehr: /submit verkauft nur noch Einreichungen bei anderen Verzeichnissen."
  }
 }

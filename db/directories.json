@@ -1322,11 +1322,11 @@
     {
         "name": "Hacker News",
         "link": "https://hackernews.com/",
-        "submission_link": "https://hackernews.com/",
+        "submission_link": "https://news.ycombinator.com/submit",
         "domain_rating": 44,
         "monthly_visits": 300000,
         "submission_experience": "",
-        "pricing": ""
+        "pricing": "Free"
     },
     {
         "name": "Human or Not",
@@ -2131,7 +2131,7 @@
     {
         "name": "Tool Directory",
         "link": "https://tooldirectory.ai/",
-        "submission_link": "https://https://tooldirectory.ai/submit-tool",
+        "submission_link": "https://tooldirectory.ai/submit-tool",
         "domain_rating": 50,
         "monthly_visits": 4000,
         "submission_experience": "Good",

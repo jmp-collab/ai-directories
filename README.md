@@ -2,7 +2,7 @@
 
 # KI-Verzeichnisse: 256 AI Directories, in die du dein KI-Tool eintragen kannst
 
-**Kurz gesagt:** Das ist eine gepflegte Liste mit 256 KI-Verzeichnissen, Startup-Plattformen und Launch-Seiten. Zu jedem Eintrag stehen Domain Rating, geschätzte Besuche pro Monat, ob der Eintrag kostenlos ist und wie reibungslos die Einreichung läuft. 163 davon kosten nichts, bei 158 ist der Eintrag kostenlos **und** unkompliziert.
+**Kurz gesagt:** Das ist eine gepflegte Liste mit 256 KI-Verzeichnissen, Startup-Plattformen und Launch-Seiten. Zu jedem Eintrag stehen Domain Rating, geschätzte Besuche pro Monat, ob der Eintrag kostenlos ist und wie reibungslos die Einreichung läuft. 164 davon kosten nichts, bei 158 ist der Eintrag kostenlos **und** unkompliziert.
 
 Stand: September 2026 · Daten als JSON: [`db/directories.json`](db/directories.json)
 
@@ -376,7 +376,7 @@ Ja, in Maßen. Die Links sind oft nofollow, stärken aber das Linkprofil, die Ma
 Für den Launch reichen 20 bis 40 sorgfältig ausgewählte Einträge. Fang mit den kostenlosen, reibungslosen Verzeichnissen mit hoher Domain Rating an und zahle nur dort, wo Traffic und Zielgruppe wirklich passen.
 
 ### Welche KI-Verzeichnisse sind kostenlos?
-Aktuell 163 von 256. Bei 158 davon ist die Einreichung außerdem reibungslos. Die stärksten sind Source Forge, AI Tools Neil Patel, AI Infinity, FinancesOnline und Your Story.
+Aktuell 164 von 256. Bei 158 davon ist die Einreichung außerdem reibungslos. Die stärksten sind Source Forge, FinancesOnline, Your Story, F6S und DevPost (ohne gesperrte Verzeichnisse und ohne zweifelhaften DR).
 
 ### Wie trage ich mein KI-Tool in ein Verzeichnis ein?
 Halte Name, Einzeiler, Beschreibung (100 bis 300 Wörter), Logo, 3 bis 5 Screenshots, Kategorie und Preismodell bereit, dann dauert ein Eintrag 5 bis 10 Minuten. Nutz überall denselben Namen und dieselbe Kurzbeschreibung. Das hilft Suchmaschinen und KI-Systemen, dein Tool als eine Marke zu erkennen.
