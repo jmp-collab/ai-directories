@@ -170,7 +170,7 @@ export default function Home() {
                         <Link href="/deutsche-ki-verzeichnisse">
                             <strong>Deutsche KI-Verzeichnisse 🇩🇪</strong>
                         </Link>
-                        <span>11 deutschsprachige Portale mit Traffic, Authority Score und DSGVO-Hinweisen. Gibt es so nirgends sonst.</span>
+                        <span>11 deutschsprachige Portale mit Traffic, Authority Score und DSGVO-Hinweisen.</span>
                     </li>
                     <li>
                         <Link href="/launch-kit">

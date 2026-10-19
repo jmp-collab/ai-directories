@@ -60,8 +60,8 @@ export default function DachPage() {
                     aber mit genau dem Publikum, das „DSGVO-konform“ als Kaufgrund liest.
                 </p>
                 <Jean>
-                    Diese Liste gibt es so nirgendwo sonst. Die Portale sind gesammelt, die Zahlen bei Semrush nachgeschlagen.
-                    Gern geschehen, Kaffee nehme ich in bar.
+                    Eine Sammlung deutscher Verzeichnisse zum Eintragen haben wir bei unserer Recherche nirgends gefunden, also
+                    gibt es sie jetzt hier. Zahlen von Semrush, Kaffee nehme ich in bar.
                 </Jean>
             </section>
 
