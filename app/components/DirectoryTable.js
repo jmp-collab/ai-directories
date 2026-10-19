@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { PriceBadge, ExperienceBadge } from './Badges'
 import { formatRating, formatVisits } from '../../utils/i18n-de'
 import { getScore } from '../../lib/score'
+import { hasStatusIssue } from '../../lib/checks'
 import useTracker, { RANKS } from './useTracker'
 import konfetti from '../../lib/konfetti'
 
@@ -40,14 +41,14 @@ export default function DirectoryTable({ directories, interactive = true, defaul
         return () => window.removeEventListener('keydown', onKey)
     }, [interactive])
 
-    const scored = useMemo(() => directories.map((d) => ({ ...d, score: getScore(d).total })), [directories])
+    const scored = useMemo(() => directories.map((d) => ({ ...d, score: getScore(d).total, blocked: hasStatusIssue(d.slug) })), [directories])
 
     const rows = useMemo(() => {
         const q = query.trim().toLowerCase()
         return scored
             .filter((d) => !q || d.name.toLowerCase().includes(q) || d.link.toLowerCase().includes(q))
             .filter((d) => pricing === 'all' || d.pricing === pricing)
-            .filter((d) => experience === 'all' || d.submission_experience === experience)
+            .filter((d) => experience === 'all' || (experience === 'Closed' ? d.blocked : !d.blocked && d.submission_experience === experience))
             .filter((d) => status === 'all' || (status === 'open' ? !done.has(d.slug) : done.has(d.slug)))
             .sort(SORTS[sort].fn)
     }, [scored, query, pricing, experience, status, sort, done])
@@ -87,6 +88,7 @@ export default function DirectoryTable({ directories, interactive = true, defaul
                             <option value="all">Alle</option>
                             <option value="Good">Reibungslos 🧈</option>
                             <option value="Bad">Hakelig 🌵</option>
+                            <option value="Closed">Gerade zu ⛔</option>
                         </select>
                     </label>
                     <label>
@@ -163,7 +165,7 @@ export default function DirectoryTable({ directories, interactive = true, defaul
                                     <PriceBadge value={d.pricing} />
                                 </td>
                                 <td>
-                                    <ExperienceBadge value={d.submission_experience} />
+                                    <ExperienceBadge value={d.submission_experience} blocked={d.blocked} />
                                 </td>
                                 <td>
                                     <a
