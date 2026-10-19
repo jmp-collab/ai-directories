@@ -6,7 +6,7 @@ export default function sitemap() {
     const lastModified = new Date()
     return [
         { url: absoluteUrl('/'), lastModified, changeFrequency: 'weekly', priority: 1 },
-        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar'].map((path) => ({
+        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar', '/freischaltung'].map((path) => ({
             url: absoluteUrl(path),
             lastModified,
             changeFrequency: 'monthly',

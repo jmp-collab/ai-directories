@@ -68,5 +68,124 @@
   "quote": null,
   "source": "https://mailchi.mp/caea48b0c7ac/saasworthy-product-listing",
   "status": "Der hinterlegte Einreichungslink ist veraltet. Einreichung direkt auf saasworthy.com suchen."
+ },
+ "theres-an-ai-for-that": {
+  "approval": "Durchschnittlich 1-2 Tage Bearbeitungszeit",
+  "link_type": null,
+  "quote": "The average processing time for submissions is 1-2 days.",
+  "source": "https://theresanaiforthat.com/get-featured/",
+  "status": null
+ },
+ "futurepedia": {
+  "approval": "Verified Listing: Veröffentlichung innerhalb von 2 Werktagen (Basic Listing mit 7 Tagen ausverkauft)",
+  "link_type": null,
+  "quote": "Basic Listing $247(Sold Out) ... Published within 7 days | Verified Listing $497 ... Published within 2 business days",
+  "source": "https://www.futurepedia.io/submit-tool",
+  "status": null
+ },
+ "future-tools": {
+  "approval": "Keine Garantie und keine Rückmeldung; ist ein Tool nach einer Woche nicht gelistet, darf es erneut eingereicht werden",
+  "link_type": null,
+  "quote": "If you submitted a tool and it was not listed within a week of submission, you can resubmit it and we will review it again.",
+  "source": "https://www.futuretools.io/faq",
+  "status": null
+ },
+ "whatsthebigdata": {
+  "approval": "Prüfung in der Regel innerhalb von 2-3 Werktagen",
+  "link_type": null,
+  "quote": "Our team typically reviews submissions within 2-3 business days.",
+  "source": "https://whatsthebigdata.com/submit-new-ai-tool/",
+  "status": null
+ },
+ "top-ai-tools": {
+  "approval": "Fast Track: live innerhalb von 24-48 Stunden",
+  "link_type": null,
+  "quote": "Fast Track listings go live within 24-48 hours after submission.",
+  "source": "https://topai.tools/submit",
+  "status": null
+ },
+ "kitploit": {
+  "approval": null,
+  "link_type": null,
+  "quote": "We're Under Maintenance. Our website is currently undergoing scheduled maintenance.",
+  "source": "https://www.kitploit.com/p/submit-tool.html",
+  "status": "Website laut eigener Angabe im Wartungsmodus; Einreichungsseite derzeit nicht nutzbar."
+ },
+ "easy-with-ai": {
+  "approval": "Prüfung und Listung meist innerhalb von 24 Stunden",
+  "link_type": "dofollow",
+  "quote": "Tool submissions are usually reviewed and listed within 24 hours of being submitted. | The link to your tool will be dofollow",
+  "source": "https://easywithai.com/submit-tool/",
+  "status": null
+ },
+ "that-ai-collection": {
+  "approval": null,
+  "link_type": "dofollow",
+  "quote": "a do-follow link to your website",
+  "source": "https://thataicollection.com/submit",
+  "status": null
+ },
+ "aipure": {
+  "approval": "Listung innerhalb von 2 Werktagen",
+  "link_type": null,
+  "quote": "It takes 2 business days for your product to be listed.",
+  "source": "https://aipure.ai/submit",
+  "status": null
+ },
+ "toolify-ai": {
+  "approval": "Innerhalb von 48 Stunden gelistet, ohne Warteschlange",
+  "link_type": "dofollow",
+  "quote": "Appeared in Listing and Just Launched within 48 hours, no queue. | Your website will get no less than 6 quality dofollow links from Toolify.",
+  "source": "https://www.toolify.ai/submit",
+  "status": null
+ },
+ "lachief": {
+  "approval": "Kostenloser Eintrag: nach Freigabe bis zu 7 Tage bis zur Veröffentlichung",
+  "link_type": null,
+  "quote": "If your free listing is approved, it can take up to 7-days to go live on our platform.",
+  "source": "https://tally.so/r/w4Jb4b",
+  "status": null
+ },
+ "ai-finder": {
+  "approval": null,
+  "link_type": null,
+  "quote": null,
+  "source": "https://ai-finder.net/add",
+  "status": "Einreichungsseite ai-finder.net/add nicht abrufbar (nicht gefunden), Startseite zeigt nur eine Weiterleitung; Link vermutlich tot."
+ },
+ "ai-top-tools": {
+  "approval": "Standard-Einreichungen meist in 2-5 Werktagen geprüft, bezahlte Featured-Einträge innerhalb von 24 Stunden",
+  "link_type": "dofollow",
+  "quote": "Standard submissions are typically reviewed within 2–5 business days. Paid featured listings are reviewed within 24 hours. | with do-follow backlinks from DR 55+ sites",
+  "source": "https://aitoptools.com/help/",
+  "status": null
+ },
+ "super-tools": {
+  "approval": null,
+  "link_type": null,
+  "quote": "Email support@therundown.ai with your tool's name, URL, category, and a one-sentence description, and our team will review it for inclusion in Supertools.",
+  "source": "https://supertools.therundown.ai/submit",
+  "status": "Kein Formular mehr; Empfehlungen nur noch per E-Mail an support@therundown.ai."
+ },
+ "uneed-best": {
+  "approval": "Kostenlose Warteschlange: Launch-Termin wird zugewiesen, höchstens 5 Monate im Voraus",
+  "link_type": "dofollow ab 20 Upvotes",
+  "quote": "We assign your launch date, at most 5 months out. An upvote score of 10 to stay published, 20 for the do-follow backlink.",
+  "source": "https://www.uneed.best/pricing",
+  "status": null
+ },
+ "toolfolio": {
+  "approval": "Freigabe meist innerhalb von 24-48 Stunden",
+  "link_type": "dofollow (laut Boost-Seite)",
+  "quote": "Approval usually takes 24–48 hours | Get Listed within 24 hours - Do-follow link",
+  "source": "https://toolfolio.io/boosts",
+  "status": null
+ },
+ "altern-ai": {
+  "approval": "Prüfung meist innerhalb weniger Tage",
+  "link_type": null,
+  "quote": "Most submissions are reviewed within a few days.",
+  "source": "https://altern.ai/submit",
+  "status": null
  }
 }
