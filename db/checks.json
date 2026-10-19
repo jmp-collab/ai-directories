@@ -257,5 +257,54 @@
   "quote": "The submission of new software on our platform is generally open to everyone. However, a user account is required to create new entries.",
   "source": "https://alternative.me/how-to/submit-software",
   "status": null
+ },
+ "launchigniter": {
+  "approval": "Kostenlos: manuelle Prüfung vor Livegang, Termin nicht garantiert; bezahlt: ohne Prüf-Warteschlange, fester Termin",
+  "link_type": "kostenlos dofollow nur für die Top 3, bezahlt immer",
+  "quote": "Free launches require badge verification, go through manual review before they go live, and only top 3 products get backlinks. Basic gives you 1 guaranteed backlink launch with no review and no waiting.",
+  "source": "https://launchigniter.com/pricing",
+  "status": null
+ },
+ "all-top-startups": {
+  "approval": "Bezahlt: Eintrag in unter 48 Stunden; kostenlose Einträge derzeit ausgesetzt (Rückstau von Hunderten)",
+  "link_type": null,
+  "quote": "Getting featured is free but we have currently suspended free listings. We are reviewing backlog of hundreds of startup submissions. You can skip the waiting queue.",
+  "source": "https://alltopstartups.com/submit-startup/",
+  "status": null
+ },
+ "ebool": {
+  "approval": "Kostenlos: rund 6 Monate; Premium, Pro und Super: 2–3 Werktage",
+  "link_type": null,
+  "quote": "Free submissions enter a standard review queue with a waiting time of around 6 months. Premium, Pro, and Super listings are reviewed and approved within 2–3 business days",
+  "source": "https://www.ebool.com/submit",
+  "status": null
+ },
+ "peerpush": {
+  "approval": "Kostenlos: Warteschlange hinter zahlenden Nutzern, kann lang sein; bezahlt sofort live",
+  "link_type": null,
+  "quote": "There is a free option, but free submissions wait in the launch queue, which can be long, and the product is not visible until its slot. Paid plans go live instantly or on the date you pick",
+  "source": "https://peerpush.com/",
+  "status": null
+ },
+ "aura-plus-plus": {
+  "approval": "Meist 24–48 Stunden, Premium wird bevorzugt geprüft",
+  "link_type": "dofollow garantiert nur bei Premium",
+  "quote": "Most projects are reviewed and approved within 24-48 hours. Premium and Premium Plus projects receive priority review.",
+  "source": "https://auraplusplus.com/faq",
+  "status": null
+ },
+ "dev-hunt": {
+  "approval": "Eintrag kostenlos sofort als eigene Seite; Launch-Woche gegen Gebühr frei wählbar",
+  "link_type": "kostenlos nofollow, bezahlter Launch dofollow",
+  "quote": "Listing a tool is free: every tool gets a permanent page with a nofollow link. Launching costs $19 once: you choose the launch week, get a spot in the newsletter, and your link becomes dofollow.",
+  "source": "https://devhunt.org/faq",
+  "status": null
+ },
+ "software-suggest": {
+  "approval": "8 bis 48 Arbeitsstunden, Prüfung in Eingangsreihenfolge (Support-Artikel von 2020)",
+  "link_type": null,
+  "quote": "All products submitted are reviewed in the order in which they are received. It can take over 8 to 48 working hours to approve your software.",
+  "source": "https://softwaresuggestsupport.freshdesk.com/support/solutions/articles/33000204427-when-will-my-listing-go-live-",
+  "status": null
  }
 }
