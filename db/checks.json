@@ -372,5 +372,69 @@
   "quote": "Includes submission to 1 established AI tools directory with DR 40+ at the time of submission. Boost My Tool covers any applicable directory submission fee.",
   "source": "https://aitools.fyi/submit",
   "status": "Kein eigener Eintrag mehr: /submit verkauft nur noch Einreichungen bei anderen Verzeichnissen."
+ },
+ "appscribed": {
+  "approval": "Nur bezahlt: 24–48 Stunden nach redaktioneller Prüfung, bei Ablehnung Erstattung",
+  "link_type": null,
+  "quote": "When will my tool get listed? Within 24-48 hours. If the tool doesn’t fit our needs, we will issue a refund within 48 hours.",
+  "source": "https://appscribed.com/product-list/",
+  "status": null
+ },
+ "ai-tool-trek": {
+  "approval": "Kostenlos (mit Backlink auf der eigenen Startseite): Prüfung in 72 Stunden, Veröffentlichung binnen 15 Tagen",
+  "link_type": "dofollow",
+  "quote": "Reviewed within 72 hours and listed within 15 days Build a dofollow backlink foundation Your submission will be removed once the backlink is removed",
+  "source": "https://aitooltrek.com/submit",
+  "status": null
+ },
+ "botsfloor": {
+  "approval": "Bezahlt: meist 24–48 Stunden (die Seite heißt inzwischen BotStash)",
+  "link_type": null,
+  "quote": "How quickly will my product be listed? Most paid submissions are reviewed and published within 24-48 hours.",
+  "source": "https://botsfloor.com/submit",
+  "status": null
+ },
+ "startup-pitch": {
+  "approval": "Bezahlte Stufen in 24 Stunden, günstigste Stufe in der Warteschlange ohne Zeitangabe",
+  "link_type": null,
+  "quote": "Pitches are processed within 24 hours and Jump The Queue.",
+  "source": "https://thestartuppitch.com/post-a-pitch/",
+  "status": null
+ },
+ "bens-bites-news": {
+  "approval": null,
+  "link_type": null,
+  "quote": "Ben's Bites | Substack. What I'm learning building with agents (plus tools worth trying)",
+  "source": "https://news.bensbites.com/submit",
+  "status": "Kein News-Board mehr: Die Einreichungsseite leitet auf den Ben's-Bites-Newsletter bei Substack um."
+ },
+ "alteropen": {
+  "approval": "Bezahltes Paket: Prüfung in 24 Stunden, kein Backlink nötig",
+  "link_type": null,
+  "quote": "Submit without backlink! ... No backlink required - Review in 24 hours - Free update in 7 days - Listing on website forever",
+  "source": "https://alteropen.com/submit/pack",
+  "status": null
+ },
+ "yaatd": {
+  "approval": "Kostenlos: Veröffentlichung nach 90 Tagen Warteschlange; bezahlt sofort live",
+  "link_type": "kostenlos nofollow, bezahlt dofollow",
+  "free_dofollow": false,
+  "quote": "Published after a 90-day editorial queue - Standard placement, English only - nofollow backlink",
+  "source": "https://yaatd.com/submit",
+  "status": null
+ },
+ "microlaunch": {
+  "approval": null,
+  "link_type": "dofollow als Leistung des bezahlten Pakets beworben",
+  "quote": "Lifetime SEO DR64+ Do-follow Backlinks.",
+  "source": "https://microlaunch.net/premium",
+  "status": null
+ },
+ "toolsfine": {
+  "approval": "Bezahlt: Prüfung in 3 Werktagen",
+  "link_type": null,
+  "quote": "Review SLA is 3 business days, weekends excluded.",
+  "source": "https://toolsfine.com/submit",
+  "status": null
  }
 }
