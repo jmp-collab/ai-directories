@@ -513,5 +513,48 @@
   "quote": "Can I still submit my tool for free? Yes. Free submissions are still open. They join the normal review queue and do not include a featured spot.",
   "source": "https://saasaitools.com/get-featured/",
   "status": null
+ },
+ "mars-ai-directory": {
+  "approval": "Kostenlos: rund 3 Monate; gegen 49 $ sofort",
+  "link_type": "kostenlos nofollow, bezahlt dofollow",
+  "free_dofollow": false,
+  "quote": "Approximately, we add new tools within three months. We will publish it with a no-follow link. However, you can publish your tool immediately and get a forever do-follow link.",
+  "source": "https://www.marsx.dev/ai-startups",
+  "status": null
+ },
+ "ai-tools-one": {
+  "approval": "Nur bezahlt: nach Prüfung binnen 2 Werktagen live",
+  "link_type": null,
+  "quote": "After you submit, we review your tool to ensure it meets our guidelines. If all looks good, your tool will be live within 2 business days.",
+  "source": "https://aitoolsone.com/submit-ai-tool/",
+  "status": null
+ },
+ "post-make": {
+  "approval": "Kostenlos mit Postmake-Badge oder bezahlt ohne Badge; jede Einreichung von Hand geprüft, keine Zeitangabe",
+  "link_type": null,
+  "quote": "Get listed for free with a Postmake badge, or choose a paid plan for a permanent listing with no badge requirement. We manually review all submissions to make sure they're a good fit for the directory.",
+  "source": "https://postmake.io/submit",
+  "status": null
+ },
+ "saas-po": {
+  "approval": "Prüfung „so schnell wie möglich“, Aufnahme nicht garantiert",
+  "link_type": null,
+  "quote": "Know a great design you think we should feature? Fill out the form below and we'll review it ASAP!",
+  "source": "https://www.saaspo.com/submit",
+  "status": null
+ },
+ "anyfp": {
+  "approval": "Kostenlos, von einem Menschen geprüft, keine Zeitangabe",
+  "link_type": null,
+  "quote": "Want your AI tool in the catalog? Use the submission form. It's free and reviewed by a human.",
+  "source": "https://anyfp.com/contact/",
+  "status": null
+ },
+ "crazy-about-startups": {
+  "approval": null,
+  "link_type": null,
+  "quote": "A new era of Crazy about Startups is coming. We are rebuilding Crazy About Startups from the ground up with powerful tools, curated resources, and a stronger founder community.",
+  "source": "https://crazyaboutstartups.com/",
+  "status": "Die Seite wird komplett neu aufgebaut, Einreichen ist derzeit nicht möglich."
  }
 }
