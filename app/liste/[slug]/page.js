@@ -62,7 +62,7 @@ export default function ListPage({ params }) {
             <DirectoryTable directories={list.items} />
 
             <section aria-labelledby="weitere">
-                <h2 id="weitere">Weitere Listen</h2>
+                <h2 id="weitere">Weitere Listen, weil du noch nicht genug hast 📚</h2>
                 <ul className="quick-links">
                     {others.map(([slug, l]) => (
                         <li key={slug}>
@@ -70,7 +70,7 @@ export default function ListPage({ params }) {
                         </li>
                     ))}
                     <li>
-                        <Link href="/">Alle KI-Verzeichnisse →</Link>
+                        <Link href="/">Zurück zum Buffet: alle KI-Verzeichnisse →</Link>
                     </li>
                 </ul>
             </section>
