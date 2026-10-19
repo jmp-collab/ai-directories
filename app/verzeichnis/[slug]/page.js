@@ -13,6 +13,7 @@ import ScoreBar from '../../components/ScoreBar'
 import CopyButton from '../../components/CopyButton'
 import FreshBox from '../../components/FreshBox'
 import CheckBox from '../../components/CheckBox'
+import { getCheck } from '../../../lib/checks'
 import { absoluteUrl } from '../../../lib/site'
 import { dealLabel, formatRating, formatVisits, pricingLabel } from '../../../utils/i18n-de'
 
@@ -49,7 +50,9 @@ function buildFaq(d, rank, total) {
         },
         {
             q: `Wie trage ich mein KI-Tool bei ${d.name} ein?`,
-            a: `Über die Einreichungsseite ${d.submission_link}. Halte Name, Einzeiler, Beschreibung, Logo und Screenshots bereit. ${
+            a: getCheck(d.slug)?.status
+                ? `Im Moment gar nicht. ${getCheck(d.slug).status} Stand: Oktober 2026. Nimm solange eine der Alternativen auf dieser Seite.`
+                : `Über die Einreichungsseite ${d.submission_link}. Halte Name, Einzeiler, Beschreibung, Logo und Screenshots bereit. ${
                 d.submission_experience === 'Good'
                     ? 'Die Einreichung läuft nach bisherigen Tests reibungslos.'
                     : d.submission_experience === 'Bad'
