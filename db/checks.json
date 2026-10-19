@@ -187,5 +187,75 @@
   "quote": "Most submissions are reviewed within a few days.",
   "source": "https://altern.ai/submit",
   "status": null
+ },
+ "product-hunt": {
+  "approval": "Keine Vorab-Freigabe: Post selbst anlegen und planen, geht am Launch-Tag um 0:01 Uhr PST live; neue Konten müssen erst das Onboarding abschließen",
+  "link_type": null,
+  "quote": "Newly created accounts must complete the onboarding process before gaining access to post. ... The site operates on 24-hour periods in PST so your post will go live on the site at 12:01 AM PST.",
+  "source": "https://help.producthunt.com/en/articles/479557-how-to-post-a-product",
+  "status": null
+ },
+ "saashub": {
+  "approval": "Manuelle Freigabe ohne Zeitangabe; ohne eingetragene Wettbewerber landet die Einreichung am Ende der Warteschlange, verifizierte Produkte kommen schneller dran",
+  "link_type": null,
+  "quote": "The submission will be slowed down and put to the bottom of the queue if there are not listed competitors. ... Verifying your product will give it a higher priority.",
+  "source": "https://www.saashub.com/services/submit",
+  "status": null
+ },
+ "stackshare": {
+  "approval": "Neue Tools werden zur Freigabe eingereicht, keine Zeitangabe",
+  "link_type": null,
+  "quote": "Once approved, you can make edits to your page at any time. If your service is not listed, you can submit it for approval here.",
+  "source": "https://stackshare.io/vendors",
+  "status": null
+ },
+ "crunchbase": {
+  "approval": "Konto wird nach Verknüpfung mit einem Social-Profil geprüft und zum Bearbeiten freigeschaltet, bis zu 1 Werktag",
+  "link_type": null,
+  "quote": "Our team will then review your account and enable it for contribution (this may take up to one business day).",
+  "source": "https://support.crunchbase.com/hc/en-us/community/posts/26326151697555-To-start-contributing-link-your-social-network-profile-to-your-Crunchbase-account-Our-team-will-then-review-your-account-and-enable-it-for-contribution-this-may-take-up-to-one-business-day",
+  "status": null
+ },
+ "source-forge": {
+  "approval": "Sofort, Self-Service: Projekt selbst anlegen (Telefon-Verifizierung nötig)",
+  "link_type": null,
+  "quote": "If you are not currently an Admin on a project you will need to complete a phone-based verification ... When you create a new project, you automatically are given administrator rights for that particular project.",
+  "source": "https://sourceforge.net/p/forge/documentation/Create%20a%20New%20Project/",
+  "status": null
+ },
+ "ai-tools-neil-patel": {
+  "approval": null,
+  "link_type": null,
+  "quote": "Apps & Integrations. Browse Ubersuggest's apps, connectors and partners' services",
+  "source": "https://aitools.neilpatel.com/submit/",
+  "status": "Die Einreichungsseite leitet auf Ubersuggest „Apps & Integrations“ um, ein Formular gibt es nicht mehr."
+ },
+ "sidebar": {
+  "approval": "Kuratiert, Login nötig; aufgenommen werden nur neue Inhalte, keine Zeitangabe",
+  "link_type": null,
+  "quote": "Only new content is featured on Sidebar. This means if the link you're submitting has been around for longer than a few month or so, it probably won't be accepted",
+  "source": "https://sidebar.io/about",
+  "status": null
+ },
+ "software-world": {
+  "approval": "Manuell: Badge mit Link auf der eigenen Website einbauen und per E-Mail melden, keine Zeitangabe",
+  "link_type": null,
+  "quote": "You need to mention our badge with relevant research link on your website and contact to Andy to get listed.",
+  "source": "https://www.softwareworld.co/get-listed",
+  "status": null
+ },
+ "open-tools": {
+  "approval": "Nur mit bezahltem Listing-Abo",
+  "link_type": "„starker Backlink“ beworben, rel-Attribut nicht genannt",
+  "quote": "Tool submissions require a paid listing subscription. ... Listing on OpenTools website (Strong on-topic backlink)",
+  "source": "https://opentools.ai/friends/launch-tool",
+  "status": null
+ },
+ "alternative": {
+  "approval": "Mit Konto für alle offen, keine Zeitangabe",
+  "link_type": null,
+  "quote": "The submission of new software on our platform is generally open to everyone. However, a user account is required to create new entries.",
+  "source": "https://alternative.me/how-to/submit-software",
+  "status": null
  }
 }

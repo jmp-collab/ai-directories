@@ -118,7 +118,7 @@ export default function DirectoryPage({ params }) {
 
             <p className="cta-row">
                 <a className="button" href={d.submission_link} target="_blank" rel="nofollow noopener noreferrer">
-                    Jetzt bei {d.name} eintragen 🚀
+                    {hasStatusIssue(d.slug) ? `Einreichungsseite von ${d.name} ansehen ↗` : `Jetzt bei ${d.name} eintragen 🚀`}
                 </a>
                 <a href={d.link} target="_blank" rel="nofollow noopener noreferrer">
                     Erst mal die Website bestaunen ↗
