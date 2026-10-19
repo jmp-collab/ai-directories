@@ -36,6 +36,12 @@ export default function RatgeberIndex() {
                     </li>
                 ))}
                 <li>
+                    <Link href="/freischaltung">
+                        <strong>Wie lange dauert die Freischaltung?</strong>
+                    </Link>
+                    <span>Freischaltdauer, Link-Typ und Status, belegt mit Zitaten der Verzeichnisse selbst.</span>
+                </li>
+                <li>
                     <Link href="/glossar">
                         <strong>Glossar: DR, nofollow, UTM und Co.</strong>
                     </Link>

@@ -204,6 +204,12 @@ export default function Home() {
                         <span>Anleitung zum Eintragen, ehrliche SEO-Einordnung und Product-Hunt-Launch auf Deutsch.</span>
                     </li>
                     <li>
+                        <Link href="/freischaltung">
+                            <strong>Freischaltdauer ⏱️</strong>
+                        </Link>
+                        <span>Wie lange Verzeichnisse für die Aufnahme brauchen, mit Zitat und Quelle. Von sofort bis 80 Tage.</span>
+                    </li>
+                    <li>
                         <Link href="/glossar">
                             <strong>Glossar 🔤</strong>
                         </Link>
