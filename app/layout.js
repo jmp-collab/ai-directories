@@ -61,6 +61,9 @@ export default function RootLayout({ children }) {
                                 <li>
                                     <Link href="/liste/rabattcodes">Rabatt 🤑</Link>
                                 </li>
+                                <li>
+                                    <Link href="/ueber-jean">Über Jean 🧔</Link>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -77,6 +80,9 @@ export default function RootLayout({ children }) {
                 </main>
                 <footer className="site-footer">
                     <div className="container">
+                        <p>
+                            Gebaut von <Link href="/ueber-jean">Jean Maurice Port</Link>, SEO-Manager mit Bart und Humor.
+                        </p>
                         <p>
                             Open Source auf <a href={REPO_URL}>GitHub</a> (Pull Requests werden mit Konfetti empfangen) · Rohdaten als{' '}
                             <a href="/api/directories">JSON-API</a> · Für KI-Assistenten, die auch mal lachen wollen:{' '}
