@@ -137,6 +137,12 @@ export default function Home() {
                         <Link href="/liste/rabattcodes">Rabattcodes für Sparfüchse →</Link>
                     </li>
                     <li>
+                        <Link href="/deutsche-ki-verzeichnisse">Deutsche Verzeichnisse 🇩🇪 →</Link>
+                    </li>
+                    <li>
+                        <Link href="/launch-kit">Launch-Kit: Texte erzeugen →</Link>
+                    </li>
+                    <li>
                         <Link href="/quiz">Quiz: Was passt zu mir? →</Link>
                     </li>
                     <li>
@@ -155,6 +161,48 @@ export default function Home() {
                     gilt trotzdem: lieber 20 passende Verzeichnisse mit echtem Traffic als 200 Linkfriedhöfe, auf denen nur noch
                     der Wind weht und ein Cookie-Banner.
                 </p>
+            </section>
+
+            <section aria-labelledby="werkzeuge">
+                <h2 id="werkzeuge">Mehr als eine Liste 🧰</h2>
+                <ul className="link-cards">
+                    <li>
+                        <Link href="/deutsche-ki-verzeichnisse">
+                            <strong>Deutsche KI-Verzeichnisse 🇩🇪</strong>
+                        </Link>
+                        <span>11 deutschsprachige Portale mit Traffic, Authority Score und DSGVO-Hinweisen. Gibt es so nirgends sonst.</span>
+                    </li>
+                    <li>
+                        <Link href="/launch-kit">
+                            <strong>Launch-Kit 🧰</strong>
+                        </Link>
+                        <span>Einzeiler, Kurz- und Langbeschreibung auf Deutsch und Englisch plus UTM-Links. In 2 Minuten.</span>
+                    </li>
+                    <li>
+                        <Link href="/quiz">
+                            <strong>Quiz 🎯</strong>
+                        </Link>
+                        <span>Drei Fragen, fünf passende Verzeichnisse für dein Budget und deine Geduld.</span>
+                    </li>
+                    <li>
+                        <Link href="/vergleich">
+                            <strong>Vergleich 👑</strong>
+                        </Link>
+                        <span>Bis zu drei Verzeichnisse nebeneinander, der Sieger jeder Zeile bekommt die Krone.</span>
+                    </li>
+                    <li>
+                        <Link href="/ratgeber">
+                            <strong>Ratgeber 📖</strong>
+                        </Link>
+                        <span>Anleitung zum Eintragen, ehrliche SEO-Einordnung und Product-Hunt-Launch auf Deutsch.</span>
+                    </li>
+                    <li>
+                        <Link href="/glossar">
+                            <strong>Glossar 🔤</strong>
+                        </Link>
+                        <span>DR, nofollow, UTM, AVV und GEO in einem Satz erklärt.</span>
+                    </li>
+                </ul>
             </section>
 
             <section aria-labelledby="top-kostenlos">

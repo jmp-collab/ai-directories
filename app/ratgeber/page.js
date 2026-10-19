@@ -1,0 +1,47 @@
+import Link from 'next/link'
+import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
+import JsonLd from '../components/JsonLd'
+import Jean from '../components/Jean'
+import { ARTIKEL } from '../../lib/ratgeber'
+
+export const metadata = {
+    title: 'Ratgeber: KI-Tools richtig in Verzeichnisse eintragen',
+    description: 'Anleitungen und ehrliche Einordnungen rund um KI-Verzeichnisse, Backlinks, SEO und Product-Hunt-Launches. Auf Deutsch, mit Humor.',
+    alternates: { canonical: '/ratgeber' },
+    openGraph: { url: '/ratgeber' },
+}
+
+export default function RatgeberIndex() {
+    const crumbs = [
+        { name: 'KI-Verzeichnisse', path: '/' },
+        { name: 'Ratgeber', path: '/ratgeber' },
+    ]
+    return (
+        <>
+            <JsonLd data={breadcrumbSchema(crumbs)} />
+            <Breadcrumbs items={crumbs} />
+            <section className="hero">
+                <h1>Ratgeber: KI-Tools eintragen, ohne Zeit zu verbrennen</h1>
+                <p className="lead">Was du vor, während und nach den Einträgen wissen solltest. Ehrlich, auf Deutsch und ohne Linkverkäufer-Märchen.</p>
+                <Jean>Lesen spart Formulare. Formulare sparen Nerven. Nerven sparen Bart.</Jean>
+            </section>
+            <ul className="link-cards">
+                {ARTIKEL.map((a) => (
+                    <li key={a.slug}>
+                        <Link href={`/ratgeber/${a.slug}`}>
+                            <strong>{a.title}</strong>
+                        </Link>
+                        <span>{a.description}</span>
+                        <span>{a.minutes} Minuten Lesezeit</span>
+                    </li>
+                ))}
+                <li>
+                    <Link href="/glossar">
+                        <strong>Glossar: DR, nofollow, UTM und Co.</strong>
+                    </Link>
+                    <span>Alle Fachbegriffe rund um Verzeichnisse und SEO, kurz erklärt.</span>
+                </li>
+            </ul>
+        </>
+    )
+}

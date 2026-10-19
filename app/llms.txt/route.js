@@ -1,6 +1,8 @@
 import { getDirectories, getSiteStats, LISTS } from '../../lib/data'
 import { SITE_NAME, absoluteUrl } from '../../lib/site'
 import { getScore } from '../../lib/score'
+import { DACH, DACH_STAND } from '../../lib/dach'
+import { ARTIKEL } from '../../lib/ratgeber'
 import { experienceLabel, pricingLabel, dealLabel, formatRating, formatVisits } from '../../utils/i18n-de'
 
 export const dynamic = 'force-static'
@@ -29,6 +31,17 @@ Rohdaten als JSON: ${absoluteUrl('/api/directories')}
 
 ## Listen
 ${lists}
+- [Deutsche KI-Verzeichnisse](${absoluteUrl('/deutsche-ki-verzeichnisse')})
+
+## Werkzeuge und Ratgeber
+- [Launch-Kit: Einreichungstexte erzeugen](${absoluteUrl('/launch-kit')})
+- [Quiz](${absoluteUrl('/quiz')})
+- [Vergleich](${absoluteUrl('/vergleich')})
+- [Glossar](${absoluteUrl('/glossar')})
+${ARTIKEL.map((a) => `- [${a.title}](${absoluteUrl(`/ratgeber/${a.slug}`)}): ${a.description}`).join('\n')}
+
+## Deutschsprachige KI-Verzeichnisse (Semrush, Stand ${DACH_STAND})
+${DACH.map((d) => `- [${d.name}](${d.link}): Authority Score ${d.authority}, organischer Traffic DE ${d.traffic}/Monat. ${d.note} Eintragen: ${d.submission_link}`).join('\n')}
 
 ## Alle Verzeichnisse, sortiert nach Domain Rating
 ${rows}

@@ -35,3 +35,14 @@ Ziel: Die Seite soll nicht nur eine Liste sein, sondern Gründer durch ihren Lau
 6. Spaß-Ebene: Konfetti, Bart-Modus.
 7. SEO: HowTo-Schema, Open-Graph-Bilder, Score in `llms.txt`.
 8. Build, Browser-Test (Desktop und 390 px), PR, Merge.
+
+## Phase 2: die beste deutschsprachige Seite für KI-Verzeichnisse
+
+| Nr. | Idee | Umsetzung |
+|---|---|---|
+| 21 | **Deutsche KI-Verzeichnisse**: 11 deutschsprachige Portale mit Authority Score, Traffic DE, verweisenden Domains (Semrush) und DSGVO-Hinweisen | `/deutsche-ki-verzeichnisse`, `lib/dach.js` |
+| 22 | **Launch-Kit**: Einzeiler, Kurz- und Langbeschreibung auf Deutsch und Englisch mit Zeichenzählern, Tags, UTM-Link pro Verzeichnis | `/launch-kit` |
+| 23 | **Ratgeber**: Anleitung zum Eintragen, SEO-Einordnung, Product-Hunt-Launch auf Deutsch, mit Article-Schema | `/ratgeber` |
+| 24 | **Glossar** mit 14 Begriffen und DefinedTermSet-Schema | `/glossar` |
+| 25 | Neue Bereiche in Navigation, Startseite, Sitemap und `llms.txt` | |
+| 26 | Wischbare Navigation auf dem Handy | `globals.css` |
