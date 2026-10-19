@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import './globals.css'
-import { SITE_URL, SITE_NAME, REPO_URL } from '../lib/site'
+import { SITE_URL, SITE_NAME, REPO_URL, withBase } from '../lib/site'
 import BartModus from './components/BartModus'
 
 const TICKER = [
@@ -95,8 +95,8 @@ export default function RootLayout({ children }) {
                         </p>
                         <p>
                             Open Source auf <a href={REPO_URL}>GitHub</a> (Pull Requests werden mit Konfetti empfangen) · Rohdaten als{' '}
-                            <a href="/api/directories">JSON-API</a> · Für KI-Assistenten, die auch mal lachen wollen:{' '}
-                            <a href="/llms.txt">llms.txt</a>
+                            <a href={withBase('/api/directories')}>JSON-API</a> · Für KI-Assistenten, die auch mal lachen wollen:{' '}
+                            <a href={withBase('/llms.txt')}>llms.txt</a>
                         </p>
                         <p>
                             Basiert auf der Liste von <a href="https://aidirectori.es/">AI Directories</a> (Sergiu Chiriac). Domain

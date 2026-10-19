@@ -2,14 +2,14 @@ import Link from 'next/link'
 import JsonLd from '../components/JsonLd'
 import Jean from '../components/Jean'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
-import { SITE_NAME, absoluteUrl } from '../../lib/site'
+import { SITE_NAME, absoluteUrl, withBase } from '../../lib/site'
 
 export const metadata = {
     title: 'Über Jean Maurice Port',
     description:
         'Jean Maurice Port ist SEO-Manager bei der MotoMobilityGroup und baut diese Liste der KI-Verzeichnisse. Projekte, Profile und der Bart dahinter.',
     alternates: { canonical: '/ueber-jean' },
-    openGraph: { url: '/ueber-jean', images: ['/jean.jpg'] },
+    openGraph: { url: '/ueber-jean', images: [absoluteUrl('/jean.jpg')] },
 }
 
 const LINKS = [
@@ -59,7 +59,7 @@ export default function AboutPage() {
             <Breadcrumbs items={crumbs} />
             <section className="hero">
                 <div className="about-head">
-                    <img className="about-photo" src="/jean.jpg" alt="Jean Maurice Port" width="160" height="160" />
+                    <img className="about-photo" src={withBase('/jean.jpg')} alt="Jean Maurice Port" width="160" height="160" />
                     <div>
                         <p className="eyebrow">Der Typ hinter der Liste 🧔</p>
                         <h1>Jean Maurice Port</h1>
