@@ -4,7 +4,7 @@
     --text: #1b1b1f;
     --muted: #5a5560;
     --border: #1b1b1f;
-    --accent: #d6246e;
+    --accent: #b3164f;
     --accent-contrast: #ffffff;
     --pop: #ffe14d;
     --pop-2: #6ee7b7;
@@ -547,7 +547,6 @@ h2 {
     font-family: var(--font);
     font-size: 0.72rem;
     font-weight: 600;
-    opacity: 0.9;
 }
 
 .site-header nav a {
