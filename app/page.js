@@ -6,6 +6,7 @@ import SchicksalsWuerfel from './components/SchicksalsWuerfel'
 import Jean, { HELLO } from './components/Jean'
 import TrackerPanel from './components/TrackerPanel'
 import { effectiveRating } from '../lib/fresh'
+import { hasStatusIssue } from '../lib/checks'
 import { getDirectories, getSiteStats } from '../lib/data'
 import { SITE_NAME, SITE_URL, absoluteUrl } from '../lib/site'
 import getFaq from '../utils/faq-de'
@@ -25,7 +26,8 @@ export default function Home() {
     const directories = getDirectories()
     const stats = getSiteStats()
     // Top 10 nach belastbarem DR: fragwürdige Werte zählen mit dem frisch gemessenen Authority Score.
-    const topFree = [...stats.freeAndSmooth]
+    const topFree = stats.freeAndSmooth
+        .filter((d) => !hasStatusIssue(d.slug))
         .sort((a, b) => effectiveRating(b) - effectiveRating(a) || b.monthly_visits - a.monthly_visits)
         .slice(0, 10)
     const faq = getFaq({ ...stats, topFreeSmooth: topFree })

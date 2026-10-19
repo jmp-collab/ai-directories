@@ -12,6 +12,7 @@ import Jean from '../../components/Jean'
 import ScoreBar from '../../components/ScoreBar'
 import CopyButton from '../../components/CopyButton'
 import FreshBox from '../../components/FreshBox'
+import CheckBox from '../../components/CheckBox'
 import { absoluteUrl } from '../../../lib/site'
 import { dealLabel, formatRating, formatVisits, pricingLabel } from '../../../utils/i18n-de'
 
@@ -151,6 +152,7 @@ export default function DirectoryPage({ params }) {
                     </div>
                 </dl>
                 <FreshBox directory={d} />
+                <CheckBox slug={d.slug} />
             </section>
 
             {d.dealCode && (
