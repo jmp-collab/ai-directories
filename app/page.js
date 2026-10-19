@@ -8,7 +8,7 @@ import TrackerPanel from './components/TrackerPanel'
 import { effectiveRating } from '../lib/fresh'
 import { hasStatusIssue } from '../lib/checks'
 import { getDirectories, getSiteStats } from '../lib/data'
-import { SITE_NAME, SITE_URL, absoluteUrl } from '../lib/site'
+import { SITE_NAME, SITE_URL, absoluteUrl, withBase } from '../lib/site'
 import getFaq from '../utils/faq-de'
 import { formatNumber } from '../utils/i18n-de'
 
@@ -292,7 +292,7 @@ export default function Home() {
             <section aria-labelledby="wer">
                 <h2 id="wer">Wer steckt dahinter? 🧔</h2>
                 <div className="about-head">
-                    <img className="about-photo" src="/jean.jpg" alt="Jean Maurice Port" width="120" height="120" loading="lazy" />
+                    <img className="about-photo" src={withBase('/jean.jpg')} alt="Jean Maurice Port" width="120" height="120" loading="lazy" />
                     <p>
                         Ich bin Jean, SEO-Manager bei der MotoMobilityGroup (Racing Planet, Scooter Center und Co.). Diese Liste
                         ist mein Nebenprojekt: ehrlich bewertet, mit Humor und ohne Affiliate-Tricks.{' '}
