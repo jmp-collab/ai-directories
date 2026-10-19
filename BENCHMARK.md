@@ -22,6 +22,8 @@ Bei der Recherche (Websuche, deutsch und englisch) wurde keine andere deutschspr
 | Anzahl Verzeichnisse | 256 + 11 deutsche | 180 | 27 |
 | Domain Rating | ✅ | ✅ | ✅ |
 | Traffic pro Verzeichnis | ✅ | ❌ | ✅ |
+| Frische Zweitmessung (Semrush) | ✅ (47 Top-Verzeichnisse) | ❌ | ✅ (Ahrefs, 42) |
+| Warnung bei auffälligem DR | ✅ | ❌ | ✅ (im Text) |
 | Preis (kostenlos/bezahlt) | ✅ | ✅ | ✅ |
 | Qualität der Einreichung | ✅ (reibungslos/hakelig) | ❌ | ❌ |
 | dofollow/nofollow | ❌ | ✅ | ❌ |
@@ -40,7 +42,7 @@ Bei der Recherche (Websuche, deutsch und englisch) wurde keine andere deutschspr
 ## Offene Lücken
 
 1. **dofollow/nofollow** fehlt. IdeaProof hat das Feld. Nächster Schritt: Link-Attribut je Verzeichnis selbst prüfen und als Datenfeld ergänzen.
-2. **Aktualität**: DR und Traffic der Hauptliste stammen aus der Ursprungsliste. zPlatform zeigt, dass DR allein wenig über echten Traffic sagt. Nächster Schritt: Traffic regelmäßig neu erheben (Semrush oder Ahrefs).
+2. **Aktualität**: DR und Traffic der Hauptliste stammen aus der Ursprungsliste. **Teilweise geschlossen:** Für 47 der 50 stärksten Verzeichnisse wurden Authority Score und verweisende Domains im Oktober 2026 frisch bei Semrush gemessen und stehen auf den Detailseiten. Dabei fielen drei Einträge mit DR ab 50, aber Authority Score von 10 oder weniger auf (AI Infinity, BizRaw, Afford Hunt). Sie tragen jetzt eine Warnung. Offen: organischer Traffic (Semrush-Guthaben aufgebraucht) und die übrigen 206 Verzeichnisse.
 3. **Genehmigungsdauer** pro Verzeichnis fehlt überall, auch bei uns.
 
 Diese Lücken stehen bewusst hier, damit die Seite ehrlich besser wird statt nur lauter.
