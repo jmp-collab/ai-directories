@@ -3,6 +3,7 @@ import { SITE_NAME, absoluteUrl } from '../../lib/site'
 import { getScore } from '../../lib/score'
 import { DACH, DACH_STAND } from '../../lib/dach'
 import { ARTIKEL } from '../../lib/ratgeber'
+import { getCheck, checkCount, CHECK_STAND } from '../../lib/checks'
 import { experienceLabel, pricingLabel, dealLabel, formatRating, formatVisits } from '../../utils/i18n-de'
 
 export const dynamic = 'force-static'
@@ -10,11 +11,21 @@ export const dynamic = 'force-static'
 // llms.txt (https://llmstxt.org): kompakte Markdown-Fassung für KI-Assistenten und Answer Engines.
 export function GET() {
     const stats = getSiteStats()
+    // Angaben der Verzeichnisse selbst (Freischaltung, Link-Typ, Status), nur wo belegt.
+    const checkNote = (d) => {
+        const c = getCheck(d.slug)
+        if (!c) return ''
+        if (c.status) return ` ACHTUNG, derzeit nicht eintragbar: ${c.status}`
+        return [c.approval && ` Freischaltung laut Verzeichnis: ${c.approval}.`, c.link_type && ` Link-Typ laut Verzeichnis: ${c.link_type}.`]
+            .filter(Boolean)
+            .join('')
+    }
+
     const rows = [...getDirectories()]
         .sort((a, b) => b.domain_rating - a.domain_rating)
         .map(
             (d) =>
-                `- [${d.name}](${absoluteUrl(`/verzeichnis/${d.slug}`)}): Jean-Score ${getScore(d).total}/100, DR ${formatRating(d.domain_rating)}, ${formatVisits(d.monthly_visits)} Besuche/Monat, ${pricingLabel(d.pricing)}, Einreichung ${experienceLabel(d.submission_experience).toLowerCase()}${d.dealCode ? `, Rabattcode ${d.dealCode} (${dealLabel(d.dealText)})` : ''}. Eintragen: ${d.submission_link}`
+                `- [${d.name}](${absoluteUrl(`/verzeichnis/${d.slug}`)}): Jean-Score ${getScore(d).total}/100, DR ${formatRating(d.domain_rating)}, ${formatVisits(d.monthly_visits)} Besuche/Monat, ${pricingLabel(d.pricing)}, Einreichung ${getCheck(d.slug)?.status ? 'derzeit zu' : experienceLabel(d.submission_experience).toLowerCase()}${d.dealCode ? `, Rabattcode ${d.dealCode} (${dealLabel(d.dealText)})` : ''}. Eintragen: ${d.submission_link}${checkNote(d)}`
         )
         .join('\n')
 
@@ -34,6 +45,7 @@ ${lists}
 - [Deutsche KI-Verzeichnisse](${absoluteUrl('/deutsche-ki-verzeichnisse')})
 
 ## Werkzeuge und Ratgeber
+- [Freischaltdauer und Link-Typ, belegt für ${checkCount()} Verzeichnisse (Stand ${CHECK_STAND})](${absoluteUrl('/freischaltung')})
 - [Launch-Kit: Einreichungstexte erzeugen](${absoluteUrl('/launch-kit')})
 - [Quiz](${absoluteUrl('/quiz')})
 - [Vergleich](${absoluteUrl('/vergleich')})
