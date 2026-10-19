@@ -11,6 +11,7 @@ import { jeanLine } from '../../../lib/score'
 import Jean from '../../components/Jean'
 import ScoreBar from '../../components/ScoreBar'
 import CopyButton from '../../components/CopyButton'
+import FreshBox from '../../components/FreshBox'
 import { absoluteUrl } from '../../../lib/site'
 import { dealLabel, formatRating, formatVisits, pricingLabel } from '../../../utils/i18n-de'
 
@@ -149,6 +150,7 @@ export default function DirectoryPage({ params }) {
                         </dd>
                     </div>
                 </dl>
+                <FreshBox directory={d} />
             </section>
 
             {d.dealCode && (

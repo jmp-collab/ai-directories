@@ -1,0 +1,284 @@
+{
+ "source-forge": {
+  "domain": "sourceforge.net",
+  "authority": 78,
+  "refdomains": 276892,
+  "traffic_us": 1026017
+ },
+ "ai-tools-neil-patel": {
+  "domain": "aitools.neilpatel.com",
+  "authority": 54,
+  "refdomains": 401,
+  "traffic_us": null
+ },
+ "ai-infinity": {
+  "domain": "aiinfinity-meetpatel.notion.site",
+  "authority": 4,
+  "refdomains": 80,
+  "traffic_us": null
+ },
+ "financesonline": {
+  "domain": "financesonline.com",
+  "authority": 31,
+  "refdomains": 36152,
+  "traffic_us": null
+ },
+ "your-story": {
+  "domain": "yourstory.com",
+  "authority": 58,
+  "refdomains": 45333,
+  "traffic_us": null
+ },
+ "f6s": {
+  "domain": "f6s.com",
+  "authority": 54,
+  "refdomains": 40995,
+  "traffic_us": null
+ },
+ "devpost": {
+  "domain": "devpost.com",
+  "authority": 49,
+  "refdomains": 86858,
+  "traffic_us": null
+ },
+ "appsumo": {
+  "domain": "appsumo.com",
+  "authority": 53,
+  "refdomains": 22758,
+  "traffic_us": null
+ },
+ "crunchbase": {
+  "domain": "crunchbase.com",
+  "authority": 76,
+  "refdomains": 189091,
+  "traffic_us": null
+ },
+ "alternativeto": {
+  "domain": "alternativeto.net",
+  "authority": 60,
+  "refdomains": 41163,
+  "traffic_us": null
+ },
+ "stackshare": {
+  "domain": "stackshare.io",
+  "authority": 44,
+  "refdomains": 21540,
+  "traffic_us": null
+ },
+ "alternative": {
+  "domain": "alternative.me",
+  "authority": 54,
+  "refdomains": 13518,
+  "traffic_us": null
+ },
+ "software-suggest": {
+  "domain": "softwaresuggest.com",
+  "authority": 54,
+  "refdomains": 13419,
+  "traffic_us": null
+ },
+ "webwiki": {
+  "domain": "webwiki.com",
+  "authority": 23,
+  "refdomains": 37867,
+  "traffic_us": null
+ },
+ "digital-agency-network": {
+  "domain": "digitalagencynetwork.com",
+  "authority": 48,
+  "refdomains": 8667,
+  "traffic_us": null
+ },
+ "product-hunt": {
+  "domain": "producthunt.com",
+  "authority": 50,
+  "refdomains": 189475,
+  "traffic_us": null
+ },
+ "theres-an-ai-for-that": {
+  "domain": "theresanaiforthat.com",
+  "authority": 56,
+  "refdomains": 15022,
+  "traffic_us": null
+ },
+ "software-world": {
+  "domain": "softwareworld.co",
+  "authority": 50,
+  "refdomains": 6018,
+  "traffic_us": null
+ },
+ "crozdesk": {
+  "domain": "crozdesk.com",
+  "authority": 48,
+  "refdomains": 7833,
+  "traffic_us": null
+ },
+ "bizraw": {
+  "domain": "bizraw.com",
+  "authority": 2,
+  "refdomains": 463,
+  "traffic_us": null
+ },
+ "saasworthy": {
+  "domain": "saasworthy.com",
+  "authority": 46,
+  "refdomains": 7309,
+  "traffic_us": null
+ },
+ "sidebar": {
+  "domain": "sidebar.io",
+  "authority": 32,
+  "refdomains": 11459,
+  "traffic_us": null
+ },
+ "getlatka": {
+  "domain": "getlatka.com",
+  "authority": 43,
+  "refdomains": 8646,
+  "traffic_us": null
+ },
+ "sitelike": {
+  "domain": "sitelike.org",
+  "authority": 51,
+  "refdomains": 19149,
+  "traffic_us": null
+ },
+ "beta-list": {
+  "domain": "betalist.com",
+  "authority": 42,
+  "refdomains": 8948,
+  "traffic_us": null
+ },
+ "saashub": {
+  "domain": "saashub.com",
+  "authority": 41,
+  "refdomains": 14510,
+  "traffic_us": null
+ },
+ "launchigniter": {
+  "domain": "launchigniter.com",
+  "authority": 26,
+  "refdomains": 3686,
+  "traffic_us": null
+ },
+ "sideprojectors": {
+  "domain": "sideprojectors.com",
+  "authority": 36,
+  "refdomains": 13878,
+  "traffic_us": null
+ },
+ "startup-ranking": {
+  "domain": "startupranking.com",
+  "authority": 41,
+  "refdomains": 6652,
+  "traffic_us": null
+ },
+ "uneed-best": {
+  "domain": "uneed.best",
+  "authority": 38,
+  "refdomains": 3871,
+  "traffic_us": null
+ },
+ "startup-stash": {
+  "domain": "startupstash.com",
+  "authority": 40,
+  "refdomains": 7888,
+  "traffic_us": null
+ },
+ "twelve-tools": {
+  "domain": "twelve.tools",
+  "authority": 27,
+  "refdomains": 7244,
+  "traffic_us": null
+ },
+ "open-tools": {
+  "domain": "opentools.ai",
+  "authority": 35,
+  "refdomains": 7116,
+  "traffic_us": null
+ },
+ "all-top-startups": {
+  "domain": "alltopstartups.com",
+  "authority": 29,
+  "refdomains": 3960,
+  "traffic_us": null
+ },
+ "pitchwall": {
+  "domain": "pitchwall.co",
+  "authority": 41,
+  "refdomains": 12694,
+  "traffic_us": null
+ },
+ "woi-ai": {
+  "domain": "woy.ai",
+  "authority": 19,
+  "refdomains": 658,
+  "traffic_us": null
+ },
+ "peerpush": {
+  "domain": "peerpush.net",
+  "authority": 17,
+  "refdomains": 1453,
+  "traffic_us": null
+ },
+ "futurepedia": {
+  "domain": "futurepedia.io",
+  "authority": 39,
+  "refdomains": 6809,
+  "traffic_us": null
+ },
+ "ebool": {
+  "domain": "ebool.com",
+  "authority": 33,
+  "refdomains": 2679,
+  "traffic_us": null
+ },
+ "whatsthebigdata": {
+  "domain": "whatsthebigdata.com",
+  "authority": 47,
+  "refdomains": 5766,
+  "traffic_us": null
+ },
+ "gpts-hunter": {
+  "domain": "gptshunter.com",
+  "authority": 16,
+  "refdomains": 2170,
+  "traffic_us": null
+ },
+ "kitploit": {
+  "domain": "kitploit.com",
+  "authority": 29,
+  "refdomains": 3579,
+  "traffic_us": null
+ },
+ "aura-plus-plus": {
+  "domain": "auraplusplus.com",
+  "authority": 29,
+  "refdomains": 3476,
+  "traffic_us": null
+ },
+ "afford-hunt": {
+  "domain": "affordhunt.com",
+  "authority": 3,
+  "refdomains": 1733,
+  "traffic_us": null
+ },
+ "dev-hunt": {
+  "domain": "devhunt.org",
+  "authority": 34,
+  "refdomains": 2937,
+  "traffic_us": null
+ },
+ "aipure": {
+  "domain": "aipure.ai",
+  "authority": 34,
+  "refdomains": 1504,
+  "traffic_us": null
+ },
+ "super-tools": {
+  "domain": "supertools.therundown.ai",
+  "authority": 41,
+  "refdomains": 601,
+  "traffic_us": null
+ }
+}
