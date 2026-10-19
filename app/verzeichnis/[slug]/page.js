@@ -89,7 +89,7 @@ export default function DirectoryPage({ params }) {
 
             <header className="detail-header">
                 <div>
-                    <h1>{d.name} eintragen: lohnt sich das?</h1>
+                    <h1>{d.name} eintragen: lohnt sich das? Wir haben nachgerechnet (halbwegs)</h1>
                     <p className="badges">
                         <PriceBadge value={d.pricing} /> <ExperienceBadge value={d.submission_experience} />
                     </p>
@@ -97,7 +97,7 @@ export default function DirectoryPage({ params }) {
             </header>
 
             <div className={`verdict verdict-${verdict.tone}`}>
-                <p className="verdict-label">Einschätzung: {verdict.short}</p>
+                <p className="verdict-label">Das Urteil des Gerichts: {verdict.short}</p>
                 <p>
                     <strong>{d.name}</strong> ist ein {d.pricing ? `${pricingLabel(d.pricing).toLowerCase()}es ` : ''}Verzeichnis mit Domain Rating {formatRating(d.domain_rating)} und
                     {d.monthly_visits ? ` rund ${formatVisits(d.monthly_visits)} Besuchen im Monat.` : ' ohne belastbare Traffic-Daten.'}{' '}
@@ -107,15 +107,15 @@ export default function DirectoryPage({ params }) {
 
             <p className="cta-row">
                 <a className="button" href={d.submission_link} target="_blank" rel="nofollow noopener noreferrer">
-                    Jetzt bei {d.name} eintragen ↗
+                    Jetzt bei {d.name} eintragen 🚀
                 </a>
                 <a href={d.link} target="_blank" rel="nofollow noopener noreferrer">
-                    Website ansehen ↗
+                    Erst mal die Website bestaunen ↗
                 </a>
             </p>
 
             <section aria-labelledby="zahlen">
-                <h2 id="zahlen">{d.name} in Zahlen</h2>
+                <h2 id="zahlen">{d.name} in Zahlen 🔢</h2>
                 <dl className="facts">
                     <div>
                         <dt>Domain Rating</dt>
@@ -127,7 +127,7 @@ export default function DirectoryPage({ params }) {
                         <dt>Besuche/Monat</dt>
                         <dd>
                             {formatVisits(d.monthly_visits)}
-                            {d.monthly_visits > 0 && <small>mehr als {percentile} % der Liste</small>}
+                            {d.monthly_visits > 0 && <small>mehr als {percentile} % der Liste, Angeber</small>}
                         </dd>
                     </div>
                     <div>
@@ -145,30 +145,30 @@ export default function DirectoryPage({ params }) {
 
             {d.dealCode && (
                 <section aria-labelledby="rabatt" className="deal-box">
-                    <h2 id="rabatt">Rabattcode für {d.name}</h2>
+                    <h2 id="rabatt">Rabattcode für {d.name} 🤑</h2>
                     <p>
                         Code <code>{d.dealCode}</code> beim Checkout eingeben: {dealLabel(d.dealText)}. Ob der Code noch gilt,
-                        entscheidet der Anbieter.
+                        entscheidet der Anbieter. Wir haften nicht für gebrochene Sparherzen.
                     </p>
                 </section>
             )}
 
             <section aria-labelledby="alternativen">
-                <h2 id="alternativen">Alternativen zu {d.name}</h2>
+                <h2 id="alternativen">Alternativen zu {d.name} (falls ihr nicht zusammenfindet) 💔</h2>
                 <p>
                     {d.pricing === 'Free' ? 'Ebenfalls kostenlos' : d.pricing === 'Paid' ? 'Ebenfalls kostenpflichtig' : 'Ähnlich eingestuft'} und
-                    mit ähnlicher Domain Rating. Wenn du ohnehin am Eintragen bist, nimm die gleich mit.
+                    mit ähnlicher Domain Rating. Wenn du ohnehin am Eintragen bist, nimm die gleich mit. Wer A sagt, kann auch B tippen.
                 </p>
                 <DirectoryTable directories={alternatives} interactive={false} />
             </section>
 
             <section aria-labelledby="faq">
-                <h2 id="faq">Fragen zu {d.name}</h2>
+                <h2 id="faq">Fragen zu {d.name} 🙋</h2>
                 <Faq items={faq} />
             </section>
 
             <p>
-                <Link href="/">← Zurück zu allen {total} KI-Verzeichnissen</Link>
+                <Link href="/">← Zurück zu allen {total} KI-Verzeichnissen, das Karussell wartet</Link>
             </p>
         </article>
     )

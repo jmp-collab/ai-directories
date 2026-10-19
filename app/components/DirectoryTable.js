@@ -31,28 +31,28 @@ export default function DirectoryTable({ directories, interactive = true, defaul
             {interactive && (
                 <form className="filters" role="search" onSubmit={(e) => e.preventDefault()}>
                     <label>
-                        <span>Suche</span>
+                        <span>Suche 🔎</span>
                         <input
                             type="search"
                             value={query}
                             onChange={(e) => setQuery(e.target.value)}
-                            placeholder="z. B. Futurepedia, launch, tools"
+                            placeholder="z. B. Futurepedia, launch, tools (Tippfehler sind erlaubt)"
                         />
                     </label>
                     <label>
                         <span>Preis</span>
                         <select value={pricing} onChange={(e) => setPricing(e.target.value)}>
                             <option value="all">Alle</option>
-                            <option value="Free">Kostenlos</option>
-                            <option value="Paid">Kostenpflichtig</option>
+                            <option value="Free">Kostenlos 🎁</option>
+                            <option value="Paid">Kostenpflichtig 💸</option>
                         </select>
                     </label>
                     <label>
                         <span>Einreichung</span>
                         <select value={experience} onChange={(e) => setExperience(e.target.value)}>
                             <option value="all">Alle</option>
-                            <option value="Good">Reibungslos</option>
-                            <option value="Bad">Hakelig</option>
+                            <option value="Good">Reibungslos 🧈</option>
+                            <option value="Bad">Hakelig 🌵</option>
                         </select>
                     </label>
                     <label>
@@ -66,7 +66,7 @@ export default function DirectoryTable({ directories, interactive = true, defaul
                         </select>
                     </label>
                     <p className="filters-count" aria-live="polite">
-                        {rows.length} von {directories.length} Verzeichnissen
+                        {rows.length} von {directories.length} Verzeichnissen{rows.length === 0 ? ' (die Tabelle ist leer, das Leben auch ein bisschen)' : ''}
                     </p>
                 </form>
             )}
@@ -77,7 +77,7 @@ export default function DirectoryTable({ directories, interactive = true, defaul
                         <tr>
                             <th scope="col">Verzeichnis</th>
                             <th scope="col" className="num">
-                                <abbr title="Domain Rating (Ahrefs, 0 bis 100)">DR</abbr>
+                                <abbr title="Domain Rating (Ahrefs, 0 bis 100). Je höher, desto stolzer die Domain.">DR</abbr>
                             </th>
                             <th scope="col" className="num">Besuche/Monat</th>
                             <th scope="col">Preis</th>
@@ -110,7 +110,7 @@ export default function DirectoryTable({ directories, interactive = true, defaul
                                         rel="nofollow noopener noreferrer"
                                         aria-label={`${d.name}: Tool eintragen (externer Link)`}
                                     >
-                                        Eintragen ↗
+                                        Eintragen ↗ 🚀
                                     </a>
                                 </td>
                             </tr>
@@ -118,7 +118,7 @@ export default function DirectoryTable({ directories, interactive = true, defaul
                     </tbody>
                 </table>
             </div>
-            {rows.length === 0 && <p className="empty">Nichts gefunden. Filter lockern oder anderen Suchbegriff probieren.</p>}
+            {rows.length === 0 && <p className="empty">Nichts gefunden. Entweder gibt es das Verzeichnis nicht, oder dein Filter ist strenger als dein Steuerberater. Lockern oder anderen Suchbegriff probieren.</p>}
         </div>
     )
 }
