@@ -5,6 +5,7 @@ import Faq, { faqSchema } from './components/Faq'
 import SchicksalsWuerfel from './components/SchicksalsWuerfel'
 import Jean, { HELLO } from './components/Jean'
 import TrackerPanel from './components/TrackerPanel'
+import { effectiveRating } from '../lib/fresh'
 import { getDirectories, getSiteStats } from '../lib/data'
 import { SITE_NAME, SITE_URL, absoluteUrl } from '../lib/site'
 import getFaq from '../utils/faq-de'
@@ -23,7 +24,11 @@ export function generateMetadata() {
 export default function Home() {
     const directories = getDirectories()
     const stats = getSiteStats()
-    const faq = getFaq(stats)
+    // Top 10 nach belastbarem DR: fragwürdige Werte zählen mit dem frisch gemessenen Authority Score.
+    const topFree = [...stats.freeAndSmooth]
+        .sort((a, b) => effectiveRating(b) - effectiveRating(a) || b.monthly_visits - a.monthly_visits)
+        .slice(0, 10)
+    const faq = getFaq({ ...stats, topFreeSmooth: topFree })
     const updated = new Intl.DateTimeFormat('de-DE', { month: 'long', year: 'numeric' }).format(new Date())
 
     const schema = [
@@ -211,7 +216,7 @@ export default function Home() {
                     Mein Startpunkt, wenn das Budget bei null liegt (also bei den meisten Gründern am Montag). Sortiert nach
                     Domain Rating.
                 </p>
-                <DirectoryTable directories={stats.topFreeSmooth} interactive={false} />
+                <DirectoryTable directories={topFree} interactive={false} />
             </section>
 
             <section aria-labelledby="alle">
