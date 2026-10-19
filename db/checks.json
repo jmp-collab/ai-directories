@@ -1,0 +1,72 @@
+{
+ "alternativeto": {
+  "approval": "kostenlos: kein Termin, Warteschlange meist Monate; kostenpflichtiger Priority Review meist 1–2 Werktage (bis zu einer Woche)",
+  "link_type": null,
+  "quote": "Priority submissions are usually reviewed within 1-2 business days, and up to a week over holidays or busy periods.",
+  "source": "https://alternativeto.net/faq/",
+  "status": null
+ },
+ "getlatka": {
+  "approval": "üblicherweise innerhalb weniger Werktage",
+  "link_type": null,
+  "quote": "We publish your profile, usually within a few business days.",
+  "source": "https://getlatka.com/add",
+  "status": null
+ },
+ "sitelike": {
+  "approval": "sofort (automatische Prüfung und Freischaltung)",
+  "link_type": null,
+  "quote": "Our system will then check & validate and approve immediately.",
+  "source": "https://www.sitelike.org/add-site/",
+  "status": null
+ },
+ "beta-list": {
+  "approval": null,
+  "link_type": "dofollow",
+  "quote": "All plans include a do-follow backlink if featured",
+  "source": "https://betalist.com/faq",
+  "status": null
+ },
+ "startup-ranking": {
+  "approval": "ca. 80 Tage (FAQ: üblicherweise 60 Tage); mit kostenpflichtiger SR Faster Approval 24 Stunden",
+  "link_type": null,
+  "quote": "Wait for our team to approve it in 80 days. If you are in a hurry, you can use our SR Faster Approval for a 24-hour approval.",
+  "source": "https://www.startupranking.com/how-it-works",
+  "status": null
+ },
+ "twelve-tools": {
+  "approval": "innerhalb von 72 Stunden",
+  "link_type": "dofollow",
+  "quote": "Get 1 dofollow link to boost your SEO … Reviewed within 72 hours",
+  "source": "https://twelve.tools/submit",
+  "status": null
+ },
+ "pitchwall": {
+  "approval": "kostenlos: üblicherweise 30+ Tage; Featured Listing (kostenpflichtig): zum gewünschten Launch-Datum",
+  "link_type": null,
+  "quote": "Free listings go through our standard review queue and typically have a waiting period of 30+ days before publication.",
+  "source": "https://pitchwall.co/pages/faqs",
+  "status": null
+ },
+ "webwiki": {
+  "approval": null,
+  "link_type": null,
+  "quote": "Website submissions are temporarily disabled.",
+  "source": "https://www.webwiki.com/info/add-website.html",
+  "status": "Einreichung laut Webwiki derzeit deaktiviert."
+ },
+ "digital-agency-network": {
+  "approval": null,
+  "link_type": null,
+  "quote": null,
+  "source": "https://digitalagencynetwork.com/join-free-listing-tools/",
+  "status": "Kostenlose Tool-Einträge werden laut Einreichungsseite nicht mehr angeboten."
+ },
+ "saasworthy": {
+  "approval": null,
+  "link_type": null,
+  "quote": null,
+  "source": "https://mailchi.mp/caea48b0c7ac/saasworthy-product-listing",
+  "status": "Der hinterlegte Einreichungslink ist veraltet. Einreichung direkt auf saasworthy.com suchen."
+ }
+}
