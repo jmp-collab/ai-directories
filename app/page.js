@@ -4,6 +4,7 @@ import JsonLd from './components/JsonLd'
 import Faq, { faqSchema } from './components/Faq'
 import SchicksalsWuerfel from './components/SchicksalsWuerfel'
 import Jean, { HELLO } from './components/Jean'
+import TrackerPanel from './components/TrackerPanel'
 import { getDirectories, getSiteStats } from '../lib/data'
 import { SITE_NAME, SITE_URL, absoluteUrl } from '../lib/site'
 import getFaq from '../utils/faq-de'
@@ -63,6 +64,21 @@ export default function Home() {
                     url: absoluteUrl(`/verzeichnis/${d.slug}`),
                 })),
         },
+        {
+            '@context': 'https://schema.org',
+            '@type': 'HowTo',
+            name: 'KI-Tool in Verzeichnisse eintragen',
+            inLanguage: 'de-DE',
+            totalTime: 'PT10M',
+            step: [
+                ['Einmal sauber vorbereiten', 'Name, Einzeiler, Beschreibung mit 100 bis 300 Wörtern, Logo, 3 bis 5 Screenshots, Kategorie, Preismodell und Kontakt-Mail bereitlegen.'],
+                ['Überall gleich benennen', 'Gleicher Name, gleicher Einzeiler, gleiche URL in jedem Verzeichnis.'],
+                ['Mit den starken, kostenlosen anfangen', 'Zuerst die kostenlosen Verzeichnisse mit reibungsloser Einreichung und hohem Domain Rating eintragen.'],
+                ['UTM-Parameter setzen', 'Links mit utm_source und utm_medium versehen, um Klicks pro Verzeichnis zu messen.'],
+                ['Buch führen', 'Datum, Verzeichnis, Status und Link zur Listing-Seite notieren und nach 4 Wochen prüfen.'],
+                ['Erst dann Geld ausgeben', 'Bezahlte Einträge nur bei passendem Traffic, nach dofollow fragen und Rabattcodes nutzen.'],
+            ].map(([name, text], i) => ({ '@type': 'HowToStep', position: i + 1, name, text })),
+        },
         faqSchema(faq),
     ]
 
@@ -120,6 +136,12 @@ export default function Home() {
                     <li>
                         <Link href="/liste/rabattcodes">Rabattcodes für Sparfüchse →</Link>
                     </li>
+                    <li>
+                        <Link href="/quiz">Quiz: Was passt zu mir? →</Link>
+                    </li>
+                    <li>
+                        <Link href="/vergleich">Vergleichen →</Link>
+                    </li>
                 </ul>
             </section>
 
@@ -150,7 +172,10 @@ export default function Home() {
                     Filtern, sortieren, eintragen. Ein Klick auf den Namen zeigt Details, Einschätzung und Alternativen. Scrollen
                     ist gesund, Rücken inklusive.
                 </p>
-                <DirectoryTable directories={directories} />
+                <TrackerPanel
+                    directories={directories.map(({ name, slug, link, submission_link }) => ({ name, slug, link, submission_link }))}
+                />
+                <DirectoryTable directories={directories} defaultSort="score" />
             </section>
 
             <section aria-labelledby="checkliste">

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import './globals.css'
 import { SITE_URL, SITE_NAME, REPO_URL } from '../lib/site'
+import BartModus from './components/BartModus'
 
 const TICKER = [
     '🚨 Eilmeldung: Backlink gesichtet, Gründer weint vor Glück',
@@ -62,6 +63,12 @@ export default function RootLayout({ children }) {
                                     <Link href="/liste/rabattcodes">Rabatt 🤑</Link>
                                 </li>
                                 <li>
+                                    <Link href="/quiz">Quiz 🎯</Link>
+                                </li>
+                                <li>
+                                    <Link href="/vergleich">Vergleich 👑</Link>
+                                </li>
+                                <li>
                                     <Link href="/ueber-jean">Über Jean 🧔</Link>
                                 </li>
                             </ul>
@@ -95,6 +102,7 @@ export default function RootLayout({ children }) {
                         </p>
                     </div>
                 </footer>
+                <BartModus />
             </body>
         </html>
     )

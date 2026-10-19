@@ -5,6 +5,8 @@ export default function sitemap() {
     const lastModified = new Date()
     return [
         { url: absoluteUrl('/'), lastModified, changeFrequency: 'weekly', priority: 1 },
+        { url: absoluteUrl('/quiz'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
+        { url: absoluteUrl('/vergleich'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
         { url: absoluteUrl('/ueber-jean'), lastModified, changeFrequency: 'monthly', priority: 0.6 },
         ...Object.keys(LISTS).map((slug) => ({
             url: absoluteUrl(`/liste/${slug}`),

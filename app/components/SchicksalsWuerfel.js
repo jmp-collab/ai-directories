@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import konfetti from '../../lib/konfetti'
 
 const SPRUECHE = [
     (d) => `Ich sag: ${d.name}. Und ich lieg selten daneben, höchstens beim Tippen.`,
@@ -25,6 +26,7 @@ export default function SchicksalsWuerfel({ options }) {
         }
         setResult({ d: next, line: pick(SPRUECHE)(next) })
         setRolls((n) => n + 1)
+        konfetti(30)
     }
 
     return (

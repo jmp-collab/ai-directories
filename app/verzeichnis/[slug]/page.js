@@ -7,6 +7,10 @@ import { PriceBadge, ExperienceBadge } from '../../components/Badges'
 import DirectoryTable from '../../components/DirectoryTable'
 import { getDirectories, getDirectory, getRank, getVisitsPercentile, getAlternatives } from '../../../lib/data'
 import { getVerdict } from '../../../lib/verdict'
+import { jeanLine } from '../../../lib/score'
+import Jean from '../../components/Jean'
+import ScoreBar from '../../components/ScoreBar'
+import CopyButton from '../../components/CopyButton'
 import { absoluteUrl } from '../../../lib/site'
 import { dealLabel, formatRating, formatVisits, pricingLabel } from '../../../utils/i18n-de'
 
@@ -105,6 +109,8 @@ export default function DirectoryPage({ params }) {
                 </p>
             </div>
 
+            <Jean>{jeanLine(d)}</Jean>
+
             <p className="cta-row">
                 <a className="button" href={d.submission_link} target="_blank" rel="nofollow noopener noreferrer">
                     Jetzt bei {d.name} eintragen 🚀
@@ -112,10 +118,12 @@ export default function DirectoryPage({ params }) {
                 <a href={d.link} target="_blank" rel="nofollow noopener noreferrer">
                     Erst mal die Website bestaunen ↗
                 </a>
+                <CopyButton label="Link zu dieser Seite kopieren 🔗" done="Link kopiert ✓" />
             </p>
 
             <section aria-labelledby="zahlen">
                 <h2 id="zahlen">{d.name} in Zahlen 🔢</h2>
+                <ScoreBar directory={d} />
                 <dl className="facts">
                     <div>
                         <dt>Domain Rating</dt>
@@ -147,7 +155,7 @@ export default function DirectoryPage({ params }) {
                 <section aria-labelledby="rabatt" className="deal-box">
                     <h2 id="rabatt">Rabattcode für {d.name} 🤑</h2>
                     <p>
-                        Code <code>{d.dealCode}</code> beim Checkout eingeben: {dealLabel(d.dealText)}. Ob der Code noch gilt,
+                        Code <code>{d.dealCode}</code> <CopyButton value={d.dealCode} label="Code kopieren" /> beim Checkout eingeben: {dealLabel(d.dealText)}. Ob der Code noch gilt,
                         entscheidet der Anbieter. Wir haften nicht für gebrochene Sparherzen.
                     </p>
                 </section>
