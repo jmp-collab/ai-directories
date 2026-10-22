@@ -180,7 +180,7 @@ export default function AboutPage() {
                                 {c.time} · {c.place}
                             </p>
                             <h3>
-                                {c.role} <span>bei {c.org}</span>
+                                {c.role} <span>{c.org === 'selbstständig' ? 'selbstständig' : `bei ${c.org}`}</span>
                             </h3>
                             <p>{c.text}</p>
                         </li>
