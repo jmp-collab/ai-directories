@@ -1,6 +1,6 @@
 {
   "name": "ai-directories",
-  "author": "Sergiu Chiriac",
+  "author": "Jean Maurice Port",
   "description": "KI-Verzeichnisse: deutsche Liste der AI Directories mit Website, JSON-API und llms.txt",
   "version": "0.1.0",
   "private": true,

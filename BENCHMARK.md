@@ -20,7 +20,6 @@ Stand: Oktober 2026. Maßstab für das Ziel „beste deutschsprachige Seite für
 | [RevAvenues](https://www.revavenues.ai/10-best-ai-tool-directories-for-backlinks-in-2026) | Englisch | 15 | grobe Einschätzung; Eigenwerbung |
 | [LaunchBoosts](https://launchboosts.com/blog/top-ai-tool-directories-to-submit-your-startup) | Englisch | 10 | Preis, Freischaltdauer; Eigenwerbung |
 | [LaunchRepo](https://launchrepo.dev/) | Spanisch | 10 (70 im Katalog) | Bedingungen, Prüfdatum |
-| [aidirectori.es](https://aidirectori.es/) | Englisch | – | Ursprung unserer Daten, heute bezahlter Einreich-Service |
 | [PUNKU.AI](https://www.punku.ai/blog/ultimate-data-backed-list-304-ai-directories-launch-app) | Englisch | 304+ | nach Traffic sortiert |
 | [deutscheai.info](https://deutscheai.info) | Deutsch | – | Verzeichnis von KI-Tools, keine Liste zum Eintragen |
 
@@ -56,7 +55,7 @@ Stand: Oktober 2026. Maßstab für das Ziel „beste deutschsprachige Seite für
 ## Offene Lücken
 
 1. **dofollow/nofollow** fehlt. IdeaProof hat das Feld. Nächster Schritt: Link-Attribut je Verzeichnis selbst prüfen und als Datenfeld ergänzen.
-2. **Aktualität**: DR und Traffic der Hauptliste stammen aus der Ursprungsliste. **Teilweise geschlossen:** Für 47 der 50 stärksten Verzeichnisse wurden Authority Score und verweisende Domains im Oktober 2026 frisch bei Semrush gemessen und stehen auf den Detailseiten. Dabei fielen drei Einträge mit DR ab 50, aber Authority Score von 10 oder weniger auf (AI Infinity, BizRaw, Afford Hunt). Sie tragen jetzt eine Warnung. Offen: organischer Traffic (Semrush-Guthaben aufgebraucht) und die übrigen 206 Verzeichnisse.
+2. **Aktualität**: DR und Traffic der Hauptliste sind ältere Schätzwerte. **Teilweise geschlossen:** Für 47 der 50 stärksten Verzeichnisse wurden Authority Score und verweisende Domains im Oktober 2026 frisch bei Semrush gemessen und stehen auf den Detailseiten. Dabei fielen drei Einträge mit DR ab 50, aber Authority Score von 10 oder weniger auf (AI Infinity, BizRaw, Afford Hunt). Sie tragen jetzt eine Warnung. Offen: organischer Traffic (Semrush-Guthaben aufgebraucht) und die übrigen 206 Verzeichnisse.
 3. **Genehmigungsdauer**: **Teilweise geschlossen.** Für 71 Verzeichnisse steht die Freischaltdauer mit wörtlichem Zitat und Quelle auf `/freischaltung` und den Detailseiten. Von 148 geprüften Verzeichnissen machen die übrigen keine eigene Angabe.
 
 Diese Lücken stehen bewusst hier, damit die Seite ehrlich besser wird statt nur lauter.

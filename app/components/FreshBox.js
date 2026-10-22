@@ -37,7 +37,7 @@ export default function FreshBox({ directory }) {
             )}
             <p className="source">
                 Authority Score und organischer Google-Traffic sind andere Kennzahlen als Domain Rating und Gesamtbesuche oben. Sie
-                zeigen den aktuellen Stand unabhängig von der Ursprungsliste.
+                zeigen den aktuellen Stand unabhängig von den Listenwerten oben.
             </p>
         </div>
     )

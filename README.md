@@ -389,4 +389,4 @@ Domain Rating und Besuche sind Momentaufnahmen und ändern sich. Die Liste ist O
 
 ## Mitmachen
 
-Neues Verzeichnis gefunden oder einen Wert korrigiert? Lies den [Leitfaden fürs Mitmachen](CONTRIBUTING.md). Die Liste basiert auf dem Open-Source-Projekt [AI Directories](https://aidirectori.es/) von Sergiu Chiriac und wird hier auf Deutsch weitergeführt.
+Neues Verzeichnis gefunden oder einen Wert korrigiert? Lies den [Leitfaden fürs Mitmachen](CONTRIBUTING.md).
