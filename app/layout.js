@@ -99,8 +99,7 @@ export default function RootLayout({ children }) {
                             <a href={withBase('/llms.txt')}>llms.txt</a>
                         </p>
                         <p>
-                            Basiert auf der Liste von <a href="https://aidirectori.es/">AI Directories</a> (Sergiu Chiriac). Domain
-                            Rating und Besuche sind Schätzwerte ohne Gewähr, ungefähr so verlässlich wie ein Wetterbericht für nächsten
+                            Domain Rating und Besuche sind Schätzwerte ohne Gewähr, ungefähr so verlässlich wie ein Wetterbericht für nächsten
                             Monat. Kein Backlink wurde bei der Herstellung dieser Seite gequält.
                         </p>
                     </div>

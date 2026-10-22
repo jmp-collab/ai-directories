@@ -294,7 +294,7 @@ export default function Home() {
                 <div className="about-head">
                     <img className="about-photo" src={withBase('/jean.jpg')} alt="Jean Maurice Port" width="120" height="120" loading="lazy" />
                     <p>
-                        Ich bin Jean, SEO-Manager bei der MotoMobilityGroup (Racing Planet, Scooter Center und Co.). Diese Liste
+                        Ich bin Jean, Senior SEO/SGE Manager bei der MotoMobilityGroup (Racing Planet, Scooter Center und Co.). Diese Liste
                         ist mein Nebenprojekt: ehrlich bewertet, mit Humor und ohne Affiliate-Tricks.{' '}
                         <Link href="/ueber-jean">Meine Projekte und Profile →</Link>
                     </p>

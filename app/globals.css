@@ -212,6 +212,8 @@ main {
     font-size: 0.82rem;
     font-weight: 400;
     color: var(--muted);
+    hyphens: auto;
+    overflow-wrap: break-word;
 }
 
 .quick-links {
@@ -1479,4 +1481,49 @@ td.wrap {
     padding-left: 12px;
     border-left: 3px solid var(--pop);
     font-style: italic;
+}
+
+/* ---------- Werdegang (Über Jean) ---------- */
+
+.cv {
+    list-style: none;
+    padding: 0 0 0 18px;
+    border-left: 3px solid var(--border);
+    display: grid;
+    gap: 18px;
+}
+
+.cv li {
+    position: relative;
+}
+
+.cv li::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 6px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--border);
+}
+
+.cv h3 {
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+}
+
+.cv h3 span {
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.cv p {
+    margin: 0;
+}
+
+.cv .cv-time {
+    color: var(--muted);
+    font-size: 0.88rem;
 }
