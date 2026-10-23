@@ -6,6 +6,7 @@ import { getComparisons } from '../lib/comparisons'
 import { getPrompts } from '../lib/prompts'
 import { getTutorials } from '../lib/tutorials'
 import { getKbRubriken, getKbTools, kbIndexierbar } from '../lib/kb'
+import { ALTERNATIVEN } from '../lib/alternativen'
 import { getTestKategorien } from '../lib/kitests'
 import { RECHNER } from '../lib/rechner'
 
@@ -13,7 +14,7 @@ export default function sitemap() {
     const lastModified = new Date()
     return [
         { url: absoluteUrl('/'), lastModified, changeFrequency: 'weekly', priority: 1 },
-        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar', '/freischaltung', '/werben', '/transparenz', '/tools', '/tool-vergleiche', '/top-50', '/prompts', '/prompt-baukasten', '/prompt-check', '/tutorials', '/downloads', '/downloads/prompt-spickzettel', '/ki-tools', '/ki-tools/quellen', '/prompts/archiv', '/ki-test', '/rechner', '/beste-ki-tools', '/ki-tools/kostenlos', '/ki-tools/chatgpt-alternativen', '/ki-verzeichnis', '/tool-finder'].map((path) => ({
+        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar', '/freischaltung', '/werben', '/transparenz', '/tools', '/tool-vergleiche', '/top-50', '/prompts', '/prompt-baukasten', '/prompt-check', '/tutorials', '/downloads', '/downloads/prompt-spickzettel', '/ki-tools', '/ki-tools/quellen', '/prompts/archiv', '/ki-test', '/rechner', '/beste-ki-tools', '/ki-tools/kostenlos', '/ki-tools/chatgpt-alternativen', '/ki-tools/alternativen', '/ki-verzeichnis', '/tool-finder'].map((path) => ({
             url: absoluteUrl(path),
             lastModified,
             changeFrequency: 'monthly',
@@ -33,6 +34,7 @@ export default function sitemap() {
         ...RECHNER.map((r) => ({ url: absoluteUrl(`/rechner/${r.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.8 })),
         ...getTestKategorien().map((k) => ({ url: absoluteUrl(`/ki-test/${k.key}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
         ...getKbRubriken().map((r) => ({ url: absoluteUrl(`/ki-tools/${r.key}`), lastModified, changeFrequency: 'weekly', priority: 0.8 })),
+        ...ALTERNATIVEN.map((a) => ({ url: absoluteUrl(`/ki-tools/alternativen/${a.slug}`), lastModified, changeFrequency: 'weekly', priority: 0.7 })),
         ...getKbTools()
             .filter(kbIndexierbar)
             .map((t) => ({ url: absoluteUrl(`/ki-tools/tool/${t.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.5 })),
