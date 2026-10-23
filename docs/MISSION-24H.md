@@ -21,6 +21,13 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P6 Tool-Steckbriefe**: Konsens-Tools mit Partnerprogramm in `db/tools.json` (Preise laut Anbieter), Partnerprogramme in `db/partners.json`.
 - [x] **P7 Dynamik**: Prompt des Tages, Tool-Finder-Quiz, „Neu in der Datenbank“, Fortschritts- und Gamification-Elemente, Mikro-Animationen.
 - [x] **P8 Qualitätsrunde**: alle Seiten Desktop/Mobil per Screenshot prüfen, Barrierefreiheit (Kontrast, Fokus, reduzierte Bewegung), Lighthouse-ähnliche Checks, tote Links.
+- [x] **P10 Tool-Vergleiche für Suchbegriffe**: „ChatGPT vs. Claude vs. Gemini vs. Perplexity“ (mit Steckbriefen), „ElevenLabs vs. Murf“, „Tally vs. Typeform“, „Descript vs. Pictory“, „Gamma vs. Canva“; Empfehlungen nur aus `db/tools.json`.
+- [ ] **P11 Mehr Tutorials**: „Eigenen Custom GPT / Claude Project bauen“, „Bild-Prompts für Midjourney & Co.“, „Newsletter mit KI in einer Stunde“; je mit Vorher/Nachher, Ausprobieren und Quiz.
+- [ ] **P12 Mehr Inhalte im Prompt-Hub und KI-Test**: Prompt-Bibliothek von 12 auf 30 Vorlagen (E-Commerce, Bewerbung, Excel, Bild, Coding, Lernen), KI-Test von 17 auf 30 Aufgaben (u. a. Zusammenfassen, Übersetzen, Tabellen, Mathe).
+- [ ] **P13 Prompt-Glossar**: 40 Begriffe rund um Prompt Engineering und KI-Modelle im bestehenden Glossar, mit Querverweisen und DefinedTerm-Schema.
+- [ ] **P14 Deutsche Texte**: Kurzbeschreibungen für weitere 150 Datenbank-Tools (zuerst Bild, Video, Audio, Schreiben), nur auf Basis der Quelle.
+- [ ] **P15 Rechner II**: Automatisierungs-Kostenrechner (Make, Zapier, n8n) und Newsletter-Kostenrechner (beehiiv, Kit, Brevo, GetResponse), Preise laut Anbieter mit Datum.
+- [ ] **P16 Performance**: Seitengewichte messen, Datenmengen der Client-Komponenten senken, Vorschaubilder für Hub-Seiten.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
 ## Für Jean (am Ende präsentieren)
@@ -42,3 +49,4 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P6: 7 neue Steckbriefe mit Preisen laut Anbieter (Gamma, Otter.ai, Rytr, Runway, Notion, Perplexity, Claude; Tool-Verzeichnis jetzt 32), 4 neue Partnerprogramme geprüft und im Register (Gamma 25 % erstes Jahr, Rytr 30 % für 12 Monate, Runway 15 $ pro Abo, Notion derzeit geschlossen); Rubrikseiten zeigen passende geprüfte Tools aus mehreren Kategorien; Crawl 375 Seiten ohne kaputten Link.
 - 2026-10-23 · P7: Tool-Finder `/tool-finder` (3 Fragen mit Slide-Animation, Fortschrittsleiste, Konfetti, Top 6 aus der Datenbank), Prompt des Tages und KI-Tool-Roulette (Dreh-Animation) in der rechten Seitenleiste, Newsletter-Widget als PromptGott.
 - 2026-10-23 · P8: QA-Skript über 26 Kernseiten in zwei Modi (Handy dunkel + reduzierte Bewegung, Desktop hell): Kontrast (WCAG 4,5:1) für H2, Absätze, Links und Kennzahlen, Überlauf, versteckte Inhalte, Bilder ohne alt, JS-Fehler. Behoben: H2 im dunklen Band, Senden-Buttons im dunklen Code-Band, gedämpfter Text auf dunklen Bändern; deutsches Zahlenformat im API-Rechner; sichtbarer Tastatur-Fokus überall. Crawl 376 Seiten, 0 kaputte Links; alle Deploys seit Missionsstart grün.
+- 2026-10-23 · P10: 6 neue Tool-Vergleiche (Claude vs. Perplexity, ElevenLabs vs. Murf, Tally vs. Typeform, Descript vs. Pictory, Gamma vs. Canva, Rytr vs. Writesonic), jetzt 11; Empfehlungen nur aus Steckbrief-Daten. ChatGPT und Gemini fehlen als Steckbrief, weil die Preisseiten keine prüfbaren Preise ausgeben.
