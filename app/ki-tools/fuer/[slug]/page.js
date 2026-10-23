@@ -129,6 +129,12 @@ export default function ZielgruppePage({ params }) {
                         <span>ChatGPT, Claude und Gemini mit denselben Aufgaben selbst vergleichen.</span>
                     </li>
                     <li>
+                        <Link href="/ratgeber/ki-tools-datenschutz-dsgvo">
+                            <strong>🔒 KI und Datenschutz</strong>
+                        </Link>
+                        <span>Die DSGVO-Checkliste vor dem Einsatz von KI-Tools.</span>
+                    </li>
+                    <li>
                         <Link href="/prompts">
                             <strong>💬 Prompt-Bibliothek</strong>
                         </Link>

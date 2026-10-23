@@ -106,7 +106,9 @@ export default function RubrikPage({ params }) {
                         ))}
                     </ul>
                     <p className="box box-tipp">{rat.tipp}</p>
-                    <p className="box box-achtung">{rat.achtung}</p>
+                    <p className="box box-achtung">
+                        {rat.achtung} <Link href="/ratgeber/ki-tools-datenschutz-dsgvo">DSGVO-Checkliste für KI-Tools →</Link>
+                    </p>
                 </Band>
             )}
             {partner.length > 0 && (
