@@ -8,6 +8,7 @@ import Faq, { faqSchema } from '../../components/Faq'
 import Toc from '../../components/Toc'
 import { Band } from '../../components/Deko'
 import { RUBRIK_RATGEBER } from '../../../lib/rubrik-ratgeber'
+import { getArtikel } from '../../../lib/ratgeber'
 import { SITE_NAME } from '../../../lib/site'
 import { getKbRubrik, getKbRubriken, kbForClient, KB_STAND } from '../../../lib/kb'
 import { getPrompt } from '../../../lib/prompts'
@@ -106,6 +107,11 @@ export default function RubrikPage({ params }) {
                         ))}
                     </ul>
                     <p className="box box-tipp">{rat.tipp}</p>
+                    {rat.artikel && getArtikel(rat.artikel) && (
+                        <p className="service-hint">
+                            <strong>Ausführlicher Ratgeber:</strong> <Link href={`/ratgeber/${rat.artikel}`}>{getArtikel(rat.artikel).title} →</Link>
+                        </p>
+                    )}
                     <p className="box box-achtung">
                         {rat.achtung} <Link href="/ratgeber/ki-tools-datenschutz-dsgvo">DSGVO-Checkliste für KI-Tools →</Link>
                     </p>
