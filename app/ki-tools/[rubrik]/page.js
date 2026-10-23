@@ -4,6 +4,10 @@ import JsonLd from '../../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
 import KbExplorer from '../../components/KbExplorer'
 import LeadMagnetBox from '../../components/LeadMagnetBox'
+import Faq, { faqSchema } from '../../components/Faq'
+import Toc from '../../components/Toc'
+import { Band } from '../../components/Deko'
+import { RUBRIK_RATGEBER } from '../../../lib/rubrik-ratgeber'
 import { SITE_NAME } from '../../../lib/site'
 import { getKbRubrik, getKbRubriken, kbForClient, KB_STAND } from '../../../lib/kb'
 import { getPrompt } from '../../../lib/prompts'
@@ -34,6 +38,7 @@ export default function RubrikPage({ params }) {
     const prompts = (r.prompts || []).map(getPrompt).filter(Boolean)
     const tutorial = r.tutorial && getTutorial(r.tutorial)
     const partner = getTools().filter((t) => (KB_TOOLCAT[r.key] || []).includes(t.category))
+    const rat = RUBRIK_RATGEBER[r.key]
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'KI-Tool-Datenbank', path: '/ki-tools' },
@@ -49,6 +54,16 @@ export default function RubrikPage({ params }) {
             itemListElement: r.tools.slice(0, 30).map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.name, url: t.url })),
         },
     ]
+    if (rat) schema.push(faqSchema(rat.faq))
+    const toc = rat
+        ? [
+              favoriten.length > 0 && ['favoriten', 'Favoriten'],
+              ['auswahl', 'So wählst du'],
+              partner.length > 0 && ['gepruft', 'Mit Preisen'],
+              ['alle', `Alle ${r.tools.length}`],
+              ['faq', 'FAQ'],
+          ].filter(Boolean)
+        : null
     return (
         <>
             <JsonLd data={schema} />
@@ -58,6 +73,7 @@ export default function RubrikPage({ params }) {
                 <h1>{r.name}</h1>
                 <p className="lead">{r.intro}</p>
             </section>
+            {toc && <Toc items={toc} />}
             {favoriten.length > 0 && (
                 <section aria-labelledby="favoriten">
                     <h2 id="favoriten">🏆 Konsens-Favoriten</h2>
@@ -75,6 +91,23 @@ export default function RubrikPage({ params }) {
                         ))}
                     </ol>
                 </section>
+            )}
+            {rat && (
+                <Band farbe="mint" id="auswahl" titel={`${rat.frage} 🧭`} sticker={`${rat.kriterien.length} Kriterien`}>
+                    <ul className="kriterien-grid">
+                        {rat.kriterien.map(([icon, titel, text]) => (
+                            <li key={titel}>
+                                <span className="kriterien-icon" aria-hidden="true">
+                                    {icon}
+                                </span>
+                                <strong>{titel}</strong>
+                                <span>{text}</span>
+                            </li>
+                        ))}
+                    </ul>
+                    <p className="box box-tipp">{rat.tipp}</p>
+                    <p className="box box-achtung">{rat.achtung}</p>
+                </Band>
             )}
             {partner.length > 0 && (
                 <section aria-labelledby="gepruft">
@@ -94,7 +127,7 @@ export default function RubrikPage({ params }) {
                     </ul>
                 </section>
             )}
-            <h2>Alle {r.tools.length} Tools</h2>
+            <h2 id="alle">Alle {r.tools.length} Tools</h2>
             <KbExplorer tools={kbForClient(r.tools)} rubrik={r.key} />
             {(prompts.length > 0 || tutorial) && (
                 <section aria-labelledby="lernen">
@@ -119,9 +152,15 @@ export default function RubrikPage({ params }) {
                     </ul>
                 </section>
             )}
+            {rat && (
+                <section aria-labelledby="faq">
+                    <h2 id="faq">Häufige Fragen: {r.name} 🙋</h2>
+                    <Faq items={rat.faq} />
+                </section>
+            )}
             <LeadMagnetBox id="prompt-paket" />
             <p className="source">
-                Stand {KB_STAND}. Einträge aus drei offenen GitHub-Listen, Beschreibungen in Englisch aus der Quelle. <Link href="/ki-tools/quellen">Quellen und Lizenzen</Link> ·{' '}
+                Stand {KB_STAND}. Einträge aus drei offenen GitHub-Listen, deutsche Kurzbeschreibungen auf Basis der Quellenangaben. <Link href="/ki-tools/quellen">Quellen und Lizenzen</Link> ·{' '}
                 <Link href="/ki-tools">← alle Rubriken</Link>
             </p>
         </>

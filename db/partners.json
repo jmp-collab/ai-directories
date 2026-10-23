@@ -819,6 +819,51 @@
    "partner_link": "",
    "coupon": null,
    "notes": "Laut Anbieter nimmt das Programm derzeit keine neuen Partner an (Stand 23.10.2026)"
+  },
+  {
+   "id": "leonardo-ai",
+   "name": "Leonardo AI",
+   "kind": "tool",
+   "tool_slug": "leonardo-ai",
+   "directory_slug": null,
+   "network": "Impact",
+   "commission": null,
+   "cookie": null,
+   "signup_url": "https://leonardo.ai/ai-affiliate-program",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Programm am 7.4.2026 eingestellt, keine neuen Bewerbungen (Stand 23.10.2026)"
+  },
+  {
+   "id": "midjourney",
+   "name": "Midjourney",
+   "kind": "tool",
+   "tool_slug": "midjourney",
+   "directory_slug": null,
+   "network": null,
+   "commission": null,
+   "cookie": null,
+   "signup_url": "",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein öffentliches Partnerprogramm gefunden (Stand 23.10.2026)"
+  },
+  {
+   "id": "wordtune",
+   "name": "Wordtune",
+   "kind": "tool",
+   "tool_slug": "wordtune",
+   "directory_slug": null,
+   "network": "in-house",
+   "commission": "laut Drittquellen 25 % wiederkehrend, nicht beim Anbieter bestätigt",
+   "cookie": null,
+   "signup_url": "https://www.wordtune.com",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Konditionen vor Bewerbung auf der Anbieterseite prüfen"
   }
  ]
 }
