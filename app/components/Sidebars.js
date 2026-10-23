@@ -28,6 +28,8 @@ const KOMPASS = [
     ['/tutorials', 'Tutorials', 'pokal', true],
     ['/downloads', 'Gratis-Downloads', 'herz', true],
     ['/ki-tools', 'KI-Tool-Datenbank', 'lupe', false],
+    ['/ki-tools/fuer', 'KI-Tools nach Zielgruppe', 'werkzeug', true],
+    ['/ki-tools/alternativen', 'Tool-Alternativen', 'lupe', true],
     ['/tool-finder', 'Tool-Finder (3 Fragen)', 'rakete', true],
     ['/ki-test', 'KI-Test: Chatbots vergleichen', 'pokal', true],
     ['/rechner', 'KI-Rechner', 'deal', false],
@@ -39,6 +41,7 @@ const KOMPASS = [
     ['/freischaltung', 'Freischaltung & Sperren', 'strahlung', false],
     ['/quiz', 'Quiz', 'pokal', false],
     ['/ratgeber', 'Ratgeber', 'post', false],
+    ['/glossar', 'KI-Glossar', 'post', true],
     ['/ueber-jean', 'Über Jean', 'tattoo', true],
 ]
 

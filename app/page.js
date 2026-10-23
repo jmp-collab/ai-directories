@@ -204,6 +204,9 @@ export default function Home() {
                         ['/prompt-check', '🔍', 'Prompt-Check', 'Prompt einfügen, Score sehen, besser werden.', 'Gratis-Tool', '#ddd6fe'],
                         ['/tool-vergleiche', '🥊', 'Tool-Vergleiche', 'Make vs. Zapier, Semrush vs. Surfer und mehr, mit klarer Empfehlung.', 'Vergleiche', '#fed7aa'],
                         ['/downloads', '🎁', 'Downloads', 'Spickzettel, Prompt-Paket und Top-50-Tabelle zum Mitnehmen.', 'Gratis', '#bbf7d0'],
+                        ['/ki-tools/fuer', '🍎', 'KI nach Zielgruppe', 'Für Lehrer, Schüler, Shops, Creator, HR, Handwerk und mehr: Aufgaben, Tools, Prompts.', '10 Zielgruppen', '#fde68a'],
+                        ['/ki-tools/alternativen', '🔁', 'Tool-Alternativen', 'Alternativen zu ChatGPT, Midjourney, Perplexity, Copilot und Co.', '13 Übersichten', '#a7f3d0'],
+                        ['/glossar', '📖', 'KI-Glossar', 'Token, RAG, Halluzination, KI-Agent: Begriffe einfach erklärt.', 'Begriffe', '#c7d2fe'],
                         ['/top-50', '🏆', 'Top 50', 'Die 50 besten KI-Verzeichnisse nach Jean-Score.', 'Rangliste', '#fecaca'],
                     ].map(([href, emoji, name, text, count, tile]) => (
                         <li key={href}>
