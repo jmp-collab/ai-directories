@@ -112,9 +112,14 @@ export default function KbExplorer({ tools, rubriken, rubrik: fest }) {
                 {liste.slice(0, limit).map((t) => (
                     <li key={t.s} id={t.s} className={t.k === 3 ? 'is-gold' : t.k === 2 ? 'is-silver' : ''}>
                         <div className="kb-head">
-                            <a href={t.u} target="_blank" rel="nofollow noopener noreferrer">
-                                <strong>{t.n}</strong> ↗
-                            </a>
+                            <span className="kb-name">
+                                <Link href={`/ki-tools/tool/${t.s}`}>
+                                    <strong>{t.n}</strong>
+                                </Link>
+                                <a className="kb-extern" href={t.u} target="_blank" rel="nofollow noopener noreferrer" aria-label={`${t.n} beim Anbieter öffnen`}>
+                                    ↗
+                                </a>
+                            </span>
                             <span className="kb-badges">
                                 {t.k === 3 && <span title="In allen 3 Listen">🏆 3/3</span>}
                                 {t.k === 2 && <span title="In 2 von 3 Listen">🥈 2/3</span>}

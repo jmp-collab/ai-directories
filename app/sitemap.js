@@ -5,7 +5,7 @@ import { getTools } from '../lib/tools'
 import { getComparisons } from '../lib/comparisons'
 import { getPrompts } from '../lib/prompts'
 import { getTutorials } from '../lib/tutorials'
-import { getKbRubriken } from '../lib/kb'
+import { getKbRubriken, getKbTools, kbIndexierbar } from '../lib/kb'
 import { getTestKategorien } from '../lib/kitests'
 import { RECHNER } from '../lib/rechner'
 
@@ -33,6 +33,9 @@ export default function sitemap() {
         ...RECHNER.map((r) => ({ url: absoluteUrl(`/rechner/${r.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.8 })),
         ...getTestKategorien().map((k) => ({ url: absoluteUrl(`/ki-test/${k.key}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
         ...getKbRubriken().map((r) => ({ url: absoluteUrl(`/ki-tools/${r.key}`), lastModified, changeFrequency: 'weekly', priority: 0.8 })),
+        ...getKbTools()
+            .filter(kbIndexierbar)
+            .map((t) => ({ url: absoluteUrl(`/ki-tools/tool/${t.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.5 })),
         ...getTutorials().map((t) => ({ url: absoluteUrl(`/tutorials/${t.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.8 })),
         ...getPrompts().map((p) => ({ url: absoluteUrl(`/prompts/${p.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
         ...getTools().map((t) => ({ url: absoluteUrl(`/tools/${t.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.6 })),

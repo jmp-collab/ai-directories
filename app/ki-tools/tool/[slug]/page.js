@@ -1,0 +1,160 @@
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import JsonLd from '../../../components/JsonLd'
+import Breadcrumbs, { breadcrumbSchema } from '../../../components/Breadcrumbs'
+import { SITE_NAME } from '../../../../lib/site'
+import { getKbTools, getKbTool, kbAlternativen, kbIndexierbar, kbPreis, kbPrimary, KB_RUBRIKEN, KB_SOURCES, KB_STAND } from '../../../../lib/kb'
+import { getPrompt } from '../../../../lib/prompts'
+import { getTutorial } from '../../../../lib/tutorials'
+
+export const dynamicParams = false
+
+export function generateStaticParams() {
+    return getKbTools().map((t) => ({ slug: t.slug }))
+}
+
+export function generateMetadata({ params }) {
+    const t = getKbTool(params.slug)
+    if (!t) return {}
+    const r = KB_RUBRIKEN[t.rubrik]
+    const alt = kbAlternativen(t, 3).map((a) => a.name)
+    return {
+        title: `${t.name}: Was ist das? Alternativen & Einordnung`,
+        description: `${t.beschreibung} Rubrik: ${r.name}.${alt.length ? ` Alternativen: ${alt.join(', ')}.` : ''}`.slice(0, 300),
+        alternates: { canonical: `/ki-tools/tool/${kbPrimary(t).slug}` },
+        robots: kbIndexierbar(t) ? undefined : { index: false, follow: true },
+    }
+}
+
+const QUELLEN = Object.fromEntries(KB_SOURCES.map((q) => [q.id, q]))
+
+export default function KbToolPage({ params }) {
+    const t = getKbTool(params.slug)
+    if (!t) notFound()
+    const r = KB_RUBRIKEN[t.rubrik]
+    const alternativen = kbAlternativen(t)
+    const weitere = (t.rubriken || []).filter((k) => k !== t.rubrik && KB_RUBRIKEN[k])
+    const prompts = (r.prompts || []).map(getPrompt).filter(Boolean).slice(0, 2)
+    const tutorial = r.tutorial && getTutorial(r.tutorial)
+    const preis = kbPreis(t.preis)
+    const crumbs = [
+        { name: SITE_NAME, path: '/' },
+        { name: 'KI-Tool-Datenbank', path: '/ki-tools' },
+        { name: r.name, path: `/ki-tools/${t.rubrik}` },
+        { name: t.name, path: `/ki-tools/tool/${t.slug}` },
+    ]
+    const schema = [
+        breadcrumbSchema(crumbs),
+        {
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: t.name,
+            url: t.url,
+            applicationCategory: r.name,
+            operatingSystem: 'Web',
+            description: t.beschreibung,
+            inLanguage: 'de-DE',
+        },
+    ]
+    return (
+        <>
+            <JsonLd data={schema} />
+            <Breadcrumbs items={crumbs} />
+            <section className="hero">
+                <p className="eyebrow">
+                    {r.name} · {t.konsens === 3 ? '🏆 in allen 3 Listen' : t.konsens === 2 ? '🥈 in 2 von 3 Listen' : 'in 1 von 3 Listen'}
+                </p>
+                <h1>{t.name}</h1>
+                <p className="lead">{t.beschreibung}</p>
+                <p className="cta-row">
+                    <a className="button" href={t.url} target="_blank" rel="nofollow noopener noreferrer">
+                        {t.name} öffnen ↗
+                    </a>
+                    {t.profil && <Link href={`/tools/${t.profil.slug}`}>🧔 Steckbrief mit Preisen →</Link>}
+                </p>
+            </section>
+            <dl className="facts facts-klein">
+                <div>
+                    <dt>Rubrik</dt>
+                    <dd>
+                        <Link href={`/ki-tools/${t.rubrik}`}>{r.name}</Link>
+                        {weitere.length > 0 && <small>auch: {weitere.map((k) => KB_RUBRIKEN[k].name).join(', ')}</small>}
+                    </dd>
+                </div>
+                <div>
+                    <dt>Preis</dt>
+                    <dd>
+                        {preis || 'keine Angabe'}
+                        <small>{t.profil ? 'genaue Preise im Steckbrief' : 'laut Liste, beim Anbieter prüfen'}</small>
+                    </dd>
+                </div>
+                <div>
+                    <dt>Open Source</dt>
+                    <dd>{t.open_source ? 'Ja 🔓' : 'Nein bzw. keine Angabe'}</dd>
+                </div>
+                <div>
+                    <dt>Empfohlen von</dt>
+                    <dd>
+                        {t.konsens} von 3 Listen
+                        <small>{t.quellen.map((q) => QUELLEN[q]?.repo || q).join(', ')}</small>
+                    </dd>
+                </div>
+            </dl>
+            <p className="box box-info">
+                {t.konsens > 1
+                    ? `${t.name} steht unabhängig voneinander in ${t.konsens} der drei größten offenen KI-Tool-Listen auf GitHub. Das ist ein gutes Zeichen, ersetzt aber keinen eigenen Test.`
+                    : `${t.name} steht in einer der drei großen offenen KI-Tool-Listen. Prüfe Funktionsumfang, Preis und Datenschutz direkt beim Anbieter, bevor du es einsetzt.`}
+            </p>
+            {alternativen.length > 0 && (
+                <section aria-labelledby="alternativen">
+                    <h2 id="alternativen">Alternativen zu {t.name}</h2>
+                    <ul className="link-cards">
+                        {alternativen.map((a) => (
+                            <li key={a.slug}>
+                                <Link href={`/ki-tools/tool/${a.slug}`}>
+                                    <strong>{a.name}</strong>
+                                </Link>
+                                <span>{a.beschreibung}</span>
+                                <span>
+                                    {a.konsens === 3 ? '🏆 3/3' : a.konsens === 2 ? '🥈 2/3' : '1/3'}
+                                    {a.open_source ? ' · 🔓 Open Source' : ''}
+                                    {a.profil ? ' · 🧔 Steckbrief' : ''}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                    <p>
+                        <Link href={`/ki-tools/${t.rubrik}`}>Alle Tools in {r.name} →</Link>
+                    </p>
+                </section>
+            )}
+            {(prompts.length > 0 || tutorial) && (
+                <section aria-labelledby="lernen">
+                    <h2 id="lernen">Mehr aus {t.name} herausholen</h2>
+                    <ul className="link-cards">
+                        {tutorial && (
+                            <li>
+                                <Link href={`/tutorials/${tutorial.slug}`}>
+                                    <strong>🎓 {tutorial.title}</strong>
+                                </Link>
+                                <span>{tutorial.minuten} Minuten, interaktiv mit Quiz</span>
+                            </li>
+                        )}
+                        {prompts.map((p) => (
+                            <li key={p.slug}>
+                                <Link href={`/prompts/${p.slug}`}>
+                                    <strong>💬 {p.title}</strong>
+                                </Link>
+                                <span>{p.ziel}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            )}
+            <p className="source">
+                Stand {KB_STAND}. Fakten aus offenen GitHub-Listen, deutsche Kurzbeschreibung von AIGeddon. <Link href="/ki-tools/quellen">Quellen und Lizenzen</Link> ·{' '}
+                <Link href="/tool-finder">Tool-Finder</Link> · <Link href="/ki-tools">← KI-Tool-Datenbank</Link>
+            </p>
+        </>
+    )
+}

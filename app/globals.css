@@ -4222,3 +4222,34 @@ a.ai-button,
 @media (prefers-reduced-motion: reduce) {
     .kriterien-grid li { transition: none; }
 }
+
+/* Tool-Name intern verlinkt, Pfeil führt zum Anbieter */
+.kb-name {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    min-width: 0;
+}
+
+.kb-extern {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0 4px;
+    border-radius: 6px;
+}
+
+.kb-extern:hover,
+.kb-extern:focus-visible {
+    background: var(--accent);
+    color: var(--accent-contrast);
+}
+
+.facts dd small {
+    overflow-wrap: anywhere;
+}
+
+/* Kompakte Faktenbox für Datenbank-Tools: Werte sind Text, keine Zahlen */
+.facts-klein dd {
+    font-size: 1.05rem;
+    hyphens: auto;
+}
