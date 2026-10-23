@@ -41,6 +41,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P27 Prompts III**: 15 weitere Prompt-Vorlagen für häufige Suchanfragen (Bewerbung, Excel-Formeln, Social Media, Zusammenfassung, Übersetzung, E-Mail-Antwort u. a.).
 - [x] **P28 Glossar-Verlinkung**: Fachbegriffe in Tutorials, Ratgebern und Glossar-Seiten automatisch beim ersten Vorkommen mit der Glossar-Seite verlinkt.
 - [x] **P29 KI-Test teilen**: Ergebnis als Link teilen (Web-Share oder Zwischenablage); der Link zeigt dem Empfänger die Rangliste und lädt zum eigenen Test ein.
+- [x] **P30 Tutorial „ChatGPT richtig nutzen“**: Einsteigerkurs mit 8 Schritten, Vorher/Nachher, Prompts zum Ausprobieren, Quiz.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
 ## Für Jean (am Ende präsentieren)
@@ -82,3 +83,4 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P27: 15 neue Prompt-Vorlagen (45 gesamt): Social-Media-Redaktionsplan, LinkedIn-Post, Instagram-Caption, Text zusammenfassen, Übersetzen und lokalisieren, E-Mail-Antwort, Pressemitteilung, Landingpage-Texte, Wettbewerbsanalyse, SQL-Abfrage, Fehlermeldung debuggen, Hausarbeit-Gliederung, Arbeitszeugnis verstehen, Gehaltsverhandlung, Content-Briefing; jeweils mit Senden an ChatGPT, Claude und Co.
 - 2026-10-23 · P28: automatische Glossar-Links (lib/autolink.js, 34 Begriffe mit Plural- und Varianten) in Tutorials, Ratgebern und Glossar-Seiten, je Seite nur beim ersten Vorkommen, dezent gepunktet; ohne Hydration-Fehler.
 - 2026-10-23 · P29: KI-Test-Ergebnis teilbar: Button „Ergebnis teilen“ (Web Share API, sonst Link in die Zwischenablage), Link mit #ergebnis=… zeigt beim Empfänger eine Karte „Dir wurde ein Testergebnis geschickt“ mit Balken; Daten bleiben im Link, kein Server.
+- 2026-10-23 · P30: 6. Tutorial „ChatGPT richtig nutzen: der Einsteigerkurs“ (8 Schritte: ein Chat pro Thema, Kontext, Nachschärfen, Format, Material mitgeben, Fakten prüfen, Datenschutz, Vorlagen und KI-Test; 3 Quizfragen); Strukturdaten-Check: JSON-LD auf allen Seiten gültig, keine Seite mit doppeltem FAQPage, jede Seite mit Description.
