@@ -7,6 +7,7 @@ import { getPrompts } from '../lib/prompts'
 import { getTutorials } from '../lib/tutorials'
 import { getKbRubriken, getKbTools, kbIndexierbar } from '../lib/kb'
 import { ALTERNATIVEN } from '../lib/alternativen'
+import { KI_GLOSSAR, glossarSlug } from '../lib/ki-glossar'
 import { getTestKategorien } from '../lib/kitests'
 import { RECHNER } from '../lib/rechner'
 
@@ -34,6 +35,7 @@ export default function sitemap() {
         ...RECHNER.map((r) => ({ url: absoluteUrl(`/rechner/${r.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.8 })),
         ...getTestKategorien().map((k) => ({ url: absoluteUrl(`/ki-test/${k.key}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
         ...getKbRubriken().map((r) => ({ url: absoluteUrl(`/ki-tools/${r.key}`), lastModified, changeFrequency: 'weekly', priority: 0.8 })),
+        ...KI_GLOSSAR.map(([term]) => ({ url: absoluteUrl(`/glossar/${glossarSlug(term)}`), lastModified, changeFrequency: 'monthly', priority: 0.5 })),
         ...ALTERNATIVEN.map((a) => ({ url: absoluteUrl(`/ki-tools/alternativen/${a.slug}`), lastModified, changeFrequency: 'weekly', priority: 0.7 })),
         ...getKbTools()
             .filter(kbIndexierbar)

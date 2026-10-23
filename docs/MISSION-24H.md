@@ -36,7 +36,9 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P22 Tool-Einzelseiten**: eigene Seite je Datenbank-Tool unter /ki-tools/tool/[slug] (Was ist das, Fakten, Quellen, Alternativen, Prompts), Namen in Explorer, Karten, Podium und Tool-Finder intern verlinkt; nur Konsens- und Steckbrief-Tools im Index.
 - [x] **P23 Startseite & Navigation für „KI-Tools“**: Einstieg in Datenbank, KI-Test und Rechner prominenter, Suchfeld zur Datenbank im Kopf der Startseite, interne Links zu Tool-Seiten.
 - [x] **P24 Alternativen-Hubs**: „Midjourney-Alternativen“, „Perplexity-Alternativen“, „Notion-AI-Alternativen“ aus Datenbank und Steckbriefen, mit FAQ.
-- [ ] **P25 Qualitätsrunde**: kompletter Link-Crawl, Überlauf-Check mobil, Kontrast, Lighthouse-ähnliche Prüfung der Hub-Seiten.
+- [x] **P25 Qualitätsrunde**: kompletter Link-Crawl, Überlauf-Check mobil, Kontrast, Lighthouse-ähnliche Prüfung der Hub-Seiten.
+- [x] **P26 Glossar-Einzelseiten**: „Was ist …?“-Seite je KI-Begriff (41) mit Erklärung, Beispiel, Praxis-Tipp, verwandten Begriffen, DefinedTerm- und FAQ-Schema.
+- [ ] **P27 Prompts III**: 15 weitere Prompt-Vorlagen für häufige Suchanfragen (Bewerbung, Excel-Formeln, Social Media, Zusammenfassung, Übersetzung, E-Mail-Antwort u. a.).
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
 ## Für Jean (am Ende präsentieren)
@@ -73,3 +75,5 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P22: 705 Tool-Seiten /ki-tools/tool/[slug] mit SoftwareApplication-Schema, Faktenbox, Konsens-Hinweis, 8 Alternativen, Tutorial und Prompts der Rubrik; 143 davon indexierbar (Konsens oder Steckbrief, Namensdubletten kanonisch auf die stärkste Seite), Rest noindex,follow; Tool-Namen überall intern verlinkt, ↗ führt zum Anbieter.
 - 2026-10-23 · P23: Startseite mit Suchfeld zur KI-Tool-Datenbank (funktioniert auch ohne JavaScript per ?q=) und 12 Chips zu den beliebtesten Tool-Seiten; Titel „KI-Verzeichnisse & KI-Tools 2026“, Beschreibung nennt Datenbank, KI-Test und Rechner.
 - 2026-10-23 · P24: 12 Alternativen-Hubs unter /ki-tools/alternativen (Midjourney, Perplexity, Notion AI, Claude, Gemini, GitHub Copilot, ElevenLabs, Synthesia, Jasper, Runway, HeyGen, Cursor) mit je 15 Tools (kuratierte Kandidaten zuerst), Wechsel-Kriterien, FAQ aus Daten (Open-Source-Nennung nur für kuratierte Tools), Übersichtsseite, Links von Tool-Seiten, Footer, llms.txt und Sitemap.
+- 2026-10-23 · P25: Qualitätsrunde: 1.124 Seiten, 79.745 interne Links geprüft, 0 kaputt; 39 Seitentypen mobil ohne Überlauf; Kontrast und Konsole auf den neuen Seiten (hell/dunkel, mobil/desktop) ohne Befund.
+- 2026-10-23 · P26: 41 Glossar-Seiten /glossar/[begriff] („Was ist ein Token?“ usw.) mit Erklärung, Praxis-Beispiel, Tipp, verwandten Begriffen, Blättern, DefinedTerm- und FAQ-Schema; Glossar-Übersicht verlinkt jede Seite, Sitemap ergänzt.

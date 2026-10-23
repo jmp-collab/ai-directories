@@ -4325,3 +4325,13 @@ ul.kb-hero-chips {
     list-style: none;
     padding: 0;
 }
+
+/* Blättern zwischen Glossar-Begriffen */
+.glossar-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 32px 0 8px;
+    font-weight: 700;
+}
