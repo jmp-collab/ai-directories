@@ -137,4 +137,4 @@ PARTNERLINK semrush https://www.semrush.com/lp/sem/en/?ref=…
 CODE uneed-best AIGEDDON20 20%
 ```
 
-Ich trage alles in `lib/monetization.js` ein. Die Seite kennzeichnet Partnerlinks dann mit * und `rel="sponsored"` und geht nach dem Merge in wenigen Minuten live.
+Ich trage alles im zentralen Register `db/partners.json` ein (Übersicht: `docs/PARTNERLINKS.md`). Die `<slug>` ist dort die `id`. Die Seite kennzeichnet Partnerlinks dann mit * und `rel="sponsored"` und geht nach dem Merge in wenigen Minuten live.

@@ -29,6 +29,8 @@ jobs:
                   node-version: 22
                   cache: npm
             - run: npm ci
+            # Partner-Register prüfen: falscher Slug oder kaputter Link bricht den Build ab
+            - run: npm run partners
             # Next.js 14 kann Vorschaubilder unter [slug] nicht statisch exportieren;
             # die Detailseiten nutzen in dieser Fassung das allgemeine Vorschaubild.
             - run: rm "app/verzeichnis/[slug]/opengraph-image.js"

@@ -9,7 +9,7 @@ Diese Datei steuert die automatischen Arbeitssitzungen. Jede Sitzung liest sie, 
 3. Fakten nur von offiziellen Seiten der Anbieter, mit Quelle. Nichts erfinden; unbekannt bleibt `null` bzw. „keine Angabe“.
 4. Sperren (Status „nicht eintragbar“) und `free_dofollow: false` nur setzen, wenn die Quelle selbst geprüft wurde.
 5. Vor dem Commit: `npx next build` ohne Fehler, keine unsichtbaren Unicode-Zeichen (U+200B–U+200F, U+2060–U+2064, U+FEFF, U+00AD, U+202A–U+202E) in geänderten Dateien.
-6. Partnerlinks immer mit `rel="sponsored"` und *-Kennzeichnung (passiert automatisch über `lib/monetization.js`).
+6. Partnerlinks immer mit `rel="sponsored"` und *-Kennzeichnung (passiert automatisch über `db/partners.json` → `lib/partners.js`). Nach jeder Änderung am Register `npm run partners` laufen lassen und `docs/PARTNERLINKS.md` mit committen.
 7. PR mit Vorlage aus `PULL_REQUEST_TEMPLATE`, mergen, GitHub-Pages-Lauf abwarten, Live-Seite prüfen.
 8. Hier die Aufgabe nach „Erledigt“ verschieben (Datum, PR-Nummer, ein Satz Ergebnis) und neu entdeckte Aufgaben unten in „Offen“ ergänzen.
 9. Keine Registrierungen, Käufe, E-Mails oder Posts im Namen von Jean.
@@ -20,7 +20,7 @@ Diese Datei steuert die automatischen Arbeitssitzungen. Jede Sitzung liest sie, 
 - [ ] **Impressum und Datenschutz**: Name, ladungsfähige Anschrift, E-Mail fehlen. Danach Seiten `/impressum` und `/datenschutz` bauen und im Footer verlinken. *wartet auf Jean*
 - [ ] **Geschäfts-E-Mail** setzen (`NEXT_PUBLIC_CONTACT_EMAIL` im Pages-Workflow), dann erscheinen die Anfrage-Buttons auf `/werben`. *wartet auf Jean*
 - [ ] **Newsletter-URL** setzen (`NEXT_PUBLIC_NEWSLETTER_URL`); Empfehlung beehiiv. *wartet auf Jean*
-- [ ] **Partnerlinks und eigene Rabattcodes** eintragen (Format in `docs/REGISTRIERUNG.md`, Abschnitt 4). *wartet auf Jean*
+- [ ] **Partnerlinks und eigene Rabattcodes** eintragen in `db/partners.json` (Übersicht `docs/PARTNERLINKS.md`, Format in `docs/REGISTRIERUNG.md`, Abschnitt 4). *wartet auf Jean*
 - [ ] **Domain aigeddon.de** als Custom Domain für GitHub Pages einrichten (CNAME, `NEXT_PUBLIC_SITE_URL`, `BASE_PATH` leer). *wartet auf Jean*
 - [ ] **Netlify-Projekt löschen** (alte Kopie). *wartet auf Jean*
 
@@ -40,6 +40,8 @@ Diese Datei steuert die automatischen Arbeitssitzungen. Jede Sitzung liest sie, 
 - **Täglich (GitHub Actions, 04:17 UTC):** Neubau der Seite, damit Deal und Tool des Tages wechseln.
 
 ## Erledigt
+
+- 2026-10-23 · PR #35: zentrales Partner-Register `db/partners.json` (50 Programme), Prüf- und Übersichtsskript `npm run partners` → `docs/PARTNERLINKS.md`, Prüfung im Pages-Workflow.
 
 - 2026-10-23 · PR #29 bis #32: Rebranding AIGeddon, Monetarisierungs-Grundlage, Deals, Launch-Service-Hinweise, Tool-Verzeichnis (25 Tools), Jean-Icons, Seitenleisten, Mobile-Dock.
 - 2026-10-23 · PR #33: eigene Rabattcodes (`OWN_DEALS`, `ONLY_OWN_DEALS`), Registrierungs-Checkliste, dieses Backlog, geplante Sitzungen.

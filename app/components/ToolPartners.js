@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { TOOL_PARTNERS, TOOL_AFFILIATES } from '../../lib/monetization'
+import { TOOL_PARTNERS } from '../../lib/monetization'
+import { TOOL_AFFILIATES } from '../../lib/partners'
 
 // Werkzeug-Empfehlungen; Karten mit Partnerlink werden gekennzeichnet und als rel="sponsored" ausgegeben.
 export default function ToolPartners({ title = 'Werkzeuge für deinen Launch 🧰', limit = TOOL_PARTNERS.length }) {

@@ -22,7 +22,7 @@ Offene Punkte zur Marke:
 
 - Rebranding: Kopfzeile, Seitentitel, Breadcrumbs, Vorschaubilder und llms.txt laufen auf AIGeddon. „KI-Verzeichnisse“ bleibt als Thema in den Überschriften, weil genau danach gesucht wird.
 - Lead-Box auf jeder Seite: Newsletter, solange keiner hinterlegt ist, das Abo des YouTube-Kanals.
-- Partnerlink-Technik: Partnerlinks pro Verzeichnis und pro Werkzeug in `lib/monetization.js`. Sie werden überall automatisch genutzt, mit * gekennzeichnet und als `rel="sponsored"` ausgegeben.
+- Partnerlink-Technik: Partnerlinks pro Verzeichnis und pro Werkzeug im zentralen Register `db/partners.json`. Sie werden überall automatisch genutzt, mit * gekennzeichnet und als `rel="sponsored"` ausgegeben.
 - Werkzeug-Empfehlungen auf Startseite und Launch-Kit (10 Tools mit Partnerprogramm).
 - `/werben`: vier Angebote (Launch-Service, Featured-Platz, geprüftes Profil, Sponsoring).
 - `/transparenz`: Kennzeichnung von Partnerlinks und Anzeigen.
