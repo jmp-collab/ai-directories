@@ -446,5 +446,47 @@
   "summary_de": "KI-Assistent von Anthropic für Texte, Analyse, Code und Recherche; Gratis-Tarif mit Websuche, Pro mit Projekten, Research und Claude Code.",
   "best_for_de": "Anspruchsvolle Texte, Analyse und Programmieren",
   "source": "https://www.anthropic.com/pricing"
+ },
+ {
+  "name": "Midjourney",
+  "slug": "midjourney",
+  "category": "Design",
+  "url": "https://www.midjourney.com/",
+  "pricing_url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+  "free_plan": false,
+  "free_trial": null,
+  "price_from": "$10/Monat (Basic, monatlich) bzw. $8/Monat (jährlich)",
+  "german_ui": null,
+  "summary_de": "KI-Bild- und Videogenerator mit vier Abo-Stufen; ab Standard unbegrenzte Bilder im Relax-Modus, privater Stealth-Modus erst ab Pro. Firmen mit über 1 Mio. US-Dollar Jahresumsatz brauchen Pro oder Mega.",
+  "best_for_de": "Kreative, die stilistisch starke Bilder und Kurzvideos aus Prompts wollen",
+  "source": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+ },
+ {
+  "name": "Leonardo AI",
+  "slug": "leonardo-ai",
+  "category": "Design",
+  "url": "https://leonardo.ai/",
+  "pricing_url": "https://leonardo.ai/pricing/",
+  "free_plan": true,
+  "free_trial": null,
+  "price_from": "$12/Monat (Essential, zzgl. Steuer)",
+  "german_ui": null,
+  "summary_de": "Plattform für KI-Bilder, Videos, Design und Motion; Gratis-Tarif mit 150 Fast Tokens pro Tag und öffentlichen Ergebnissen, bezahlte Tarife mit privaten Ergebnissen und eigenen KI-Modellen.",
+  "best_for_de": "Hobby-Kreative und Content-Produzenten, die kostenlos starten wollen",
+  "source": "https://leonardo.ai/pricing/"
+ },
+ {
+  "name": "Wordtune",
+  "slug": "wordtune",
+  "category": "Schreiben",
+  "url": "https://www.wordtune.com/",
+  "pricing_url": "https://www.wordtune.com/pricing",
+  "free_plan": true,
+  "free_trial": "3 Tage",
+  "price_from": "$6,99/Monat (Advanced) bzw. $4,89/Monat (jährlich)",
+  "german_ui": null,
+  "summary_de": "KI-Schreibassistent für englische Texte: korrigiert Rechtschreibung und Grammatik und formuliert Sätze um; Gratis-Tarif mit begrenzter Nutzung, 30 % Rabatt für Studierende und Non-Profits.",
+  "best_for_de": "Alle, die auf Englisch schreiben und Texte glätten wollen",
+  "source": "https://www.wordtune.com/pricing"
  }
 ]

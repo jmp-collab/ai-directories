@@ -29,8 +29,8 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P15 Rechner II**: Automatisierungs-Kostenrechner (Make, Zapier, n8n) und Newsletter-Kostenrechner (beehiiv, Kit, Brevo, GetResponse), Preise laut Anbieter mit Datum.
 - [x] **P16 Performance**: Seitengewichte messen, Datenmengen der Client-Komponenten senken, Vorschaubilder für Hub-Seiten.
 - [x] **P17 Deutsche Texte II**: Kurzbeschreibungen für die übrigen Rubriken (Schreiben, Produktivität, Chatbots, Suche, Recherche, Marketing, Agenten, Coding, Modelle), nur auf Basis der Quelle, je Runde 150.
-- [ ] **P18 Steckbriefe II**: 8 weitere Konsens-Tools mit prüfbarer Preisseite (z. B. Midjourney, Leonardo AI, Suno, Fliki, Play.ht, Jasper, QuillBot, Wordtune), Partnerprogramme recherchieren und im Register ergänzen.
-- [ ] **P19 Pillar-Content II**: „KI-Tools für Texte“, „KI-Bildgeneratoren im Vergleich“, „KI-Video-Tools“, „KI für Marketing“ als Themenseiten mit Inhaltsverzeichnis, Boxen, Tool-Karten, passenden Prompts und FAQ.
+- [x] **P18 Steckbriefe II**: 8 weitere Konsens-Tools mit prüfbarer Preisseite (z. B. Midjourney, Leonardo AI, Suno, Fliki, Play.ht, Jasper, QuillBot, Wordtune), Partnerprogramme recherchieren und im Register ergänzen.
+- [x] **P19 Pillar-Content II**: „KI-Tools für Texte“, „KI-Bildgeneratoren im Vergleich“, „KI-Video-Tools“, „KI für Marketing“ als Themenseiten mit Inhaltsverzeichnis, Boxen, Tool-Karten, passenden Prompts und FAQ.
 - [ ] **P20 Ratgeber**: „Product-Hunt-Alternativen für deutsche Gründer“ und „Welcher Newsletter-Anbieter für Gründer?“ aus dem Backlog, mit Verweisen auf Verzeichnis-, Tool- und Rechnerseiten.
 - [ ] **P21 Vorschaubilder**: eigene Open-Graph-Bilder für Hub-Seiten (KI-Tools, KI-Test, Rechner, Prompts, Tutorials), damit geteilte Links auffallen.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
@@ -42,7 +42,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - Domain aigeddon.de registrieren (größter einzelner Hebel für Ranking und Vertrauen), danach Umstellung durch mich.
 - Google Search Console verifizieren und Sitemap einreichen.
 - Impressum/Datenschutz-Daten, PromptGott-URL, Partnerlinks.
-- Neu bewerben: Gamma (PartnerStack), Rytr, Runway (braucht Kanal-Links, YouTube AIGeddon passt); Links stehen in docs/PARTNERLINKS.md.
+- Neu bewerben: Gamma (PartnerStack), Rytr, Runway; Wordtune-Konditionen auf der Anbieterseite prüfen (nur Drittquellen) (braucht Kanal-Links, YouTube AIGeddon passt); Links stehen in docs/PARTNERLINKS.md.
 
 ## Log
 
@@ -62,3 +62,5 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P15: Automatisierungs-Rechner (Handarbeit pro Jahr, Aufbauaufwand, Amortisation in Wochen, Einstiegspreise Make/Zapier/n8n aus den Steckbriefen) und Newsletter-Umsatz-Rechner (animierter Trichter Abonnenten → Öffnung → Klick → Kauf, Ertrag pro Ausgabe/Monat/Abonnent); jetzt 5 Rechner. Statt Abonnenten-Staffelpreisen (ohne prüfbare Quelle) bewusst ein Umsatz-Rechner mit Nutzerannahmen.
 - 2026-10-23 · P16: Jean-Icons als SVG-Sprite (jede Form einmal pro Seite, Icons nur noch per <use>), Roulette-Daten erst beim ersten Dreh aus /api/roulette; Verzeichnis-Detailseite 202 → 110 KB HTML (gzip 25 → 19 KB), Glossar 234 → 143 KB, Startseite 602 → 510 KB, KI-Tools 437 → 304 KB; über 400 Seiten entlastet.
 - 2026-10-23 · P17: alle 705 Tools der Datenbank haben jetzt eine deutsche Kurzbeschreibung (429 neu: Schreiben, Produktivität, Chatbots, Suche, Recherche, Marketing, Agenten, Coding, Modelle, Finanzen, Sicherheit), ohne Vergleichs- und Versionsbehauptungen aus den Quellen; Rubrikseiten, Tool-Finder und Datenbank zeigen damit durchgehend deutsche Texte.
+- 2026-10-23 · P18: Steckbriefe Midjourney, Leonardo AI, Wordtune mit Preisen laut offizieller Preisseite (36 Tools); Play.ht verworfen (Domain laut Drittquelle seit 12.10.2026 ohne DNS), Suno, Fliki, Jasper, QuillBot zeigen keinen eindeutigen Einstiegspreis. Partner-Register: Leonardo (Programm am 7.4.2026 eingestellt), Midjourney (kein Programm), Wordtune (unbestätigt) → 57 Programme.
+- 2026-10-23 · P19: Rubrikseiten Schreiben, Bild, Video, Marketing als Pillar-Seiten: Inhaltsverzeichnis, Band „So wählst du“ mit 5 Kriterien-Karten, Tipp- und Warnbox, je 4 FAQ mit FAQPage-Schema, Tutorials für Bild und Marketing verknüpft.
