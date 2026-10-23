@@ -85,6 +85,11 @@ export default function ArtikelPage({ params }) {
             <section aria-labelledby="weiter">
                 <h2 id="weiter">Weiterlesen und loslegen</h2>
                 <ul className="quick-links">
+                    {(a.links || []).map(([href, label]) => (
+                        <li key={href}>
+                            <Link href={href}>{label} →</Link>
+                        </li>
+                    ))}
                     {others.map((o) => (
                         <li key={o.slug}>
                             <Link href={`/ratgeber/${o.slug}`}>{o.title} →</Link>
