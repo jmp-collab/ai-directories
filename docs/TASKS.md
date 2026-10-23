@@ -28,6 +28,9 @@ Diese Datei steuert die automatischen Arbeitssitzungen. Jede Sitzung liest sie, 
 
 ### Automatisch abzuarbeiten (Reihenfolge = Priorität)
 Gesamtplan mit 100 Schritten: `docs/ROADMAP-100.md`. Neue Aufgaben von dort hierher übernehmen.
+- [ ] **Steckbriefe für Konsens-Tools**: die 12 Tools in allen 3 Listen und danach die 2/3-Tools mit Partnerprogramm in `db/tools.json` aufnehmen (Preis, Gratis-Tarif, deutsche Oberfläche laut Anbieter, Quelle). Je Runde 5 Tools; Partnerprogramm in `db/partners.json` ergänzen.
+- [ ] **Deutsche Kurzbeschreibungen** für alle Konsens-Tools (137) in `db/kb-de.json` (slug -> Text, eigene Formulierung, keine Übersetzung der Quelle), Anzeige bevorzugt Deutsch.
+- [ ] **Prompt-Archiv aus f/prompts.chat** (173k Sterne, Prompts CC0): die 100 besten Rollen-Prompts als Inspirationsliste `/prompts/archiv`, Quelle nennen, Senden-Buttons.
 - [ ] **Prompt-Bibliothek auf 50 ausbauen** (`lib/prompts.js`), je Runde 6 Prompts aus neuen Kategorien (E-Commerce, Bewerbung, Excel, Bild, Coding, Lernen), jede mit passenden Tools aus `db/tools.json`.
 - [ ] **Prompt-Ketten** `/prompt-ketten`: 3 Workflows mit je 3 bis 5 Schritten und Senden-Button pro Schritt.
 - [ ] **Rechner** `/rechner`: zuerst Zeitersparnis-/ROI-Rechner, dann Automatisierungs-Kostenrechner (Make/Zapier/n8n), Preise nur mit Quelle.
@@ -44,11 +47,15 @@ Gesamtplan mit 100 Schritten: `docs/ROADMAP-100.md`. Neue Aufgaben von dort hier
 
 ## Wiederkehrend (eigene geplante Sitzungen, nicht hier abhaken)
 
+- **Monatlich:** KI-Tool-Datenbank neu einlesen: die drei Listen klonen (`git clone --depth 1`), `npm run kb:import -- <ordner>`, Sterne/Forks in `utils/kb/import.js` aktualisieren, Diff prüfen (neue/entfernte Tools), PR.
+
 - **Wöchentlich, Montag:** Sperr-Check. Alle Verzeichnisse mit Status in `db/checks.json` erneut prüfen, ob die Einreichung wieder offen ist, und die 30 Verzeichnisse mit dem höchsten Jean-Score prüfen, ob sie inzwischen gesperrt oder tot sind. Änderungen mit Quelle eintragen.
 - **Monatlich, am 1.:** Preis-Check aller Tools in `db/tools.json` gegen die offizielle Preisseite, `TOOLS_STAND` aktualisieren.
 - **Täglich (GitHub Actions, 04:17 UTC):** Neubau der Seite, damit Deal und Tool des Tages wechseln.
 
 ## Erledigt
+
+- 2026-10-23 · PR #38: KI-Tool-Datenbank `/ki-tools` mit 705 Tools aus steven2358/awesome-generative-ai (CC0), mahseema/awesome-ai-tools (MIT), ikaijua/Awesome-AITools (CC BY 4.0); 15 Rubrikseiten, Suche, Konsens-Signal, Quellen- und Lizenzseite.
 
 - 2026-10-23 · PR #37: Tutorials mit Schritt-Slider, Vorher/Nachher-Regler, Quiz und Konfetti (2 Tutorials), Prompt-Check mit Token-Schätzung, Download-Center mit Spickzettel und Prompt-Paket, eingebettete Mail-Erfassung, Slide-in-Lead-Box, `docs/LEADS.md`.
 

@@ -47,6 +47,9 @@ export default function ToolsPage() {
             <p className="service-hint">
                 <strong>Unentschlossen?</strong> <Link href="/tool-vergleiche">Tool-Vergleiche mit klarer Empfehlung je Anwendungsfall →</Link>
             </p>
+            <p className="service-hint">
+                <strong>Mehr Auswahl?</strong> <Link href="/ki-tools">KI-Tool-Datenbank mit über 700 Tools aus den größten Community-Listen →</Link>
+            </p>
             <ul className="quick-links">
                 {categories.map((c) => (
                     <li key={c}>
