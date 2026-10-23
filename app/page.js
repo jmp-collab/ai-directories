@@ -254,7 +254,7 @@ export default function Home() {
                 </p>
             </section>
 
-            <Band farbe="mint" id="werkzeuge" titel="Mehr als eine Liste 🧰">
+            <Band farbe="mint" id="mehr-als-liste" titel="Mehr als eine Liste 🧰">
                 <ul className="link-cards">
                     <li>
                         <Link href="/deutsche-ki-verzeichnisse">
