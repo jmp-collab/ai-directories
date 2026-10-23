@@ -58,7 +58,7 @@ AUSWAHL = [
     ('Personal Stylist', 'Stilberater', 'alltag'), ('Pet Behaviorist', 'Tierverhaltens-Berater', 'alltag'),
     ('Customized Gift Idea Brainstorm Assistant', 'Geschenkideen-Finder', 'alltag'), ('Florist', 'Florist', 'alltag'),
 ]
-INVIS = re.compile('[​-‏⁠-⁤﻿­‪-‮]')
+INVIS = re.compile('[' + '\u200b-\u200f\u2060-\u2064\ufeff\u00ad\u202a-\u202e' + ']')
 
 def slug(s):
     s = s.lower().replace('ä', 'ae').replace('ö', 'oe').replace('ü', 'ue').replace('ß', 'ss')
