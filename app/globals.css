@@ -4335,3 +4335,10 @@ ul.kb-hero-chips {
     margin: 32px 0 8px;
     font-weight: 700;
 }
+
+/* Automatische Glossar-Links im Fließtext: dezent gepunktet statt voll unterstrichen */
+.glossar-link {
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
