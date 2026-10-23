@@ -46,15 +46,15 @@ export default function KiToolsPage() {
             <dl className="facts">
                 <div>
                     <dt>Tools gesamt</dt>
-                    <dd>{stats.gesamt}</dd>
+                    <dd data-count={stats.gesamt}>{stats.gesamt}</dd>
                 </div>
                 <div>
                     <dt>🏆 in 2+ Listen</dt>
-                    <dd>{stats.konsens}</dd>
+                    <dd data-count={stats.konsens}>{stats.konsens}</dd>
                 </div>
                 <div>
                     <dt>🔓 Open Source</dt>
-                    <dd>{stats.openSource}</dd>
+                    <dd data-count={stats.openSource}>{stats.openSource}</dd>
                 </div>
                 <div>
                     <dt>🧔 mit Steckbrief</dt>

@@ -6,6 +6,11 @@ import SchicksalsWuerfel from './components/SchicksalsWuerfel'
 import Jean, { HELLO } from './components/Jean'
 import ToolPartners from './components/ToolPartners'
 import TrackerPanel from './components/TrackerPanel'
+import { Band, Trenner } from './components/Deko'
+import { kbStats } from '../lib/kb'
+import { getPrompts } from '../lib/prompts'
+import { getTutorials } from '../lib/tutorials'
+import archiv from '../db/prompt-archiv.json'
 import { effectiveRating } from '../lib/fresh'
 import { hasStatusIssue } from '../lib/checks'
 import { getDirectories, getSiteStats } from '../lib/data'
@@ -119,19 +124,19 @@ export default function Home() {
                 <dl className="stats">
                     <div>
                         <dt>Verzeichnisse 📚</dt>
-                        <dd>{formatNumber(stats.total)}</dd>
+                        <dd data-count={stats.total}>{formatNumber(stats.total)}</dd>
                     </div>
                     <div>
                         <dt>Kostenlos (juhu) 🎁</dt>
-                        <dd>{formatNumber(stats.free.length)}</dd>
+                        <dd data-count={stats.free.length}>{formatNumber(stats.free.length)}</dd>
                     </div>
                     <div>
                         <dt>Domain Rating 50+ 💪</dt>
-                        <dd>{formatNumber(stats.strong.length)}</dd>
+                        <dd data-count={stats.strong.length}>{formatNumber(stats.strong.length)}</dd>
                     </div>
                     <div>
                         <dt>Mit Rabattcode 🤑</dt>
-                        <dd>{formatNumber(stats.withDeal.length)}</dd>
+                        <dd data-count={stats.withDeal.length}>{formatNumber(stats.withDeal.length)}</dd>
                     </div>
                 </dl>
                 <ul className="quick-links">
@@ -159,6 +164,32 @@ export default function Home() {
                 </ul>
             </section>
 
+            <Band farbe="lila" id="einstieg" titel="Was suchst du heute? 🧭" sticker="Neu: KI-Tool-Datenbank">
+                <ul className="entry-tiles">
+                    {[
+                        ['/ki-tools', '🛠️', 'KI-Tools', 'Die große Datenbank mit Konsens-Signal aus den 3 größten Community-Listen.', `${kbStats().gesamt} Tools`, '#bfdbfe'],
+                        ['/#alle', '📚', 'KI-Verzeichnisse', 'Wo du dein KI-Tool einträgst, mit Domain Rating, Preis und Check.', `${stats.total} Verzeichnisse`, '#fde68a'],
+                        ['/prompts', '💬', 'Prompts', 'Vorlagen zum Ausfüllen und Rollen-Prompts, mit einem Klick an ChatGPT und Claude.', `${getPrompts().length + archiv.anzahl} Prompts`, '#a7f3d0'],
+                        ['/tutorials', '🎓', 'Tutorials', 'Interaktiv mit Vorher/Nachher-Regler, Quiz und Konfetti.', `${getTutorials().length} Kurse`, '#fbcfe8'],
+                        ['/prompt-check', '🔍', 'Prompt-Check', 'Prompt einfügen, Score sehen, besser werden.', 'Gratis-Tool', '#ddd6fe'],
+                        ['/tool-vergleiche', '🥊', 'Tool-Vergleiche', 'Make vs. Zapier, Semrush vs. Surfer und mehr, mit klarer Empfehlung.', 'Vergleiche', '#fed7aa'],
+                        ['/downloads', '🎁', 'Downloads', 'Spickzettel, Prompt-Paket und Top-50-Tabelle zum Mitnehmen.', 'Gratis', '#bbf7d0'],
+                        ['/top-50', '🏆', 'Top 50', 'Die 50 besten KI-Verzeichnisse nach Jean-Score.', 'Rangliste', '#fecaca'],
+                    ].map(([href, emoji, name, text, count, tile]) => (
+                        <li key={href}>
+                            <Link href={href} style={{ '--tile': tile }}>
+                                <span className="entry-emoji" aria-hidden="true">
+                                    {emoji}
+                                </span>
+                                <strong>{name}</strong>
+                                <span>{text}</span>
+                                <span className="entry-count">{count}</span>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </Band>
+
             <section aria-labelledby="warum">
                 <h2 id="warum">Warum überhaupt KI-Verzeichnisse? 🤔</h2>
                 <p>
@@ -171,8 +202,7 @@ export default function Home() {
                 </p>
             </section>
 
-            <section aria-labelledby="werkzeuge">
-                <h2 id="werkzeuge">Mehr als eine Liste 🧰</h2>
+            <Band farbe="mint" id="werkzeuge" titel="Mehr als eine Liste 🧰">
                 <ul className="link-cards">
                     <li>
                         <Link href="/deutsche-ki-verzeichnisse">
@@ -217,7 +247,7 @@ export default function Home() {
                         <span>DR, nofollow, UTM, AVV und GEO in einem Satz erklärt.</span>
                     </li>
                 </ul>
-            </section>
+            </Band>
 
             <section aria-labelledby="top-kostenlos">
                 <h2 id="top-kostenlos">Top 10: kostenlos und reibungslos 🏆</h2>
@@ -240,8 +270,7 @@ export default function Home() {
                 <DirectoryTable directories={directories} defaultSort="score" />
             </section>
 
-            <section aria-labelledby="checkliste">
-                <h2 id="checkliste">Checkliste: So trägst du dein Tool richtig ein ✅</h2>
+            <Band farbe="dunkel" id="checkliste" titel="Checkliste: So trägst du dein Tool richtig ein ✅" sticker="6 Schritte">
                 <ol className="checklist">
                     <li>
                         <strong>Einmal sauber vorbereiten.</strong> Name, Einzeiler (max. 60 Zeichen), Beschreibung mit 100 bis 300
@@ -268,11 +297,11 @@ export default function Home() {
                         nach dofollow fragen und Rabattcodes checken. Nein, „Exposure“ ist keine Währung.
                     </li>
                 </ol>
-            </section>
+            </Band>
+            <Trenner art="strahlung" farbe="orange" />
 
             <ToolPartners limit={6} />
-            <section aria-labelledby="legende">
-                <h2 id="legende">So liest du die Tabelle 🔍</h2>
+            <Band farbe="blau" id="legende" titel="So liest du die Tabelle 🔍">
                 <dl className="legend">
                     <dt>Domain Rating (DR)</dt>
                     <dd>
@@ -289,7 +318,7 @@ export default function Home() {
                     <dt>Preis</dt>
                     <dd>Kostenlos oder kostenpflichtig. Viele kostenlose Verzeichnisse verkaufen zusätzlich Featured-Plätze. Gratis ist selten ganz gratis, aber oft nah dran.</dd>
                 </dl>
-            </section>
+            </Band>
 
             <section aria-labelledby="wer">
                 <h2 id="wer">Wer steckt dahinter? 🧔</h2>
@@ -303,10 +332,9 @@ export default function Home() {
                 </div>
             </section>
 
-            <section aria-labelledby="faq">
-                <h2 id="faq">Häufige Fragen zu KI-Verzeichnissen 🙋</h2>
+            <Band farbe="pink" id="faq" titel="Häufige Fragen zu KI-Verzeichnissen 🙋">
                 <Faq items={faq} />
-            </section>
+            </Band>
         </>
     )
 }
