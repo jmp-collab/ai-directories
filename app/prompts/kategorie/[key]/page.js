@@ -5,6 +5,7 @@ import Breadcrumbs, { breadcrumbSchema } from '../../../components/Breadcrumbs'
 import Faq, { faqSchema } from '../../../components/Faq'
 import Toc from '../../../components/Toc'
 import JeanIcon from '../../../components/JeanIcon'
+import GlossarText from '../../../components/GlossarText'
 import LeadMagnetBox from '../../../components/LeadMagnetBox'
 import { Band } from '../../../components/Deko'
 import { SITE_NAME, absoluteUrl } from '../../../../lib/site'
@@ -45,6 +46,7 @@ export default function PromptKategoriePage({ params }) {
     const tutorials = k.tutorials.map(getTutorial).filter(Boolean)
     const zielgruppen = k.zielgruppen.map(getZielgruppe).filter(Boolean)
     const rubrik = k.rubrik && getKbRubrik(k.rubrik)
+    const gesehen = new Set()
     const andere = promptsByKategorie().filter((x) => x.key !== k.key && x.prompts.length && KATEGORIE_TEXTE[x.key])
     const crumbs = [
         { name: SITE_NAME, path: '/' },
@@ -72,7 +74,9 @@ export default function PromptKategoriePage({ params }) {
                 <h1 className="with-icon">
                     <JeanIcon badge={k.icon} size={40} /> {k.titel}
                 </h1>
-                <p className="lead">{k.intro}</p>
+                <p className="lead">
+                    <GlossarText text={k.intro} gesehen={gesehen} />
+                </p>
             </section>
             <Toc
                 items={[
@@ -104,7 +108,9 @@ export default function PromptKategoriePage({ params }) {
                                 {i + 1}
                             </span>
                             <strong>{titel}</strong>
-                            <span>{text}</span>
+                            <span>
+                                <GlossarText text={text} gesehen={gesehen} />
+                            </span>
                         </li>
                     ))}
                 </ul>

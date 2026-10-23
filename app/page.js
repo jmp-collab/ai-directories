@@ -8,7 +8,12 @@ import ToolPartners from './components/ToolPartners'
 import TrackerPanel from './components/TrackerPanel'
 import { Band, Trenner } from './components/Deko'
 import { kbStats, getKbTools, kbIndexierbar } from '../lib/kb'
-import { getPrompts } from '../lib/prompts'
+import { getPrompts, promptsByKategorie } from '../lib/prompts'
+import { getComparisons } from '../lib/comparisons'
+import { getAlternativenHubs } from '../lib/alternativen'
+import { ZIELGRUPPEN } from '../lib/zielgruppen'
+import { KI_GLOSSAR } from '../lib/ki-glossar'
+import { KATEGORIE_TEXTE } from '../lib/prompt-kategorien'
 import { getTutorials } from '../lib/tutorials'
 import archiv from '../db/prompt-archiv.json'
 import { TESTS } from '../lib/kitests'
@@ -202,11 +207,11 @@ export default function Home() {
                         ['/ki-test', '🧪', 'KI-Test', 'ChatGPT, Claude, Gemini & Co. selbst testen und Rangliste erhalten.', `${testCount} Aufgaben`, '#c7d2fe'],
                         ['/rechner', '🧮', 'KI-Rechner', 'KI-Abo, API-Kosten, Automatisierung, Newsletter-Umsatz und Launch-Dauer berechnen.', `${RECHNER.length} Rechner`, '#99f6e4'],
                         ['/prompt-check', '🔍', 'Prompt-Check', 'Prompt einfügen, Score sehen, besser werden.', 'Gratis-Tool', '#ddd6fe'],
-                        ['/tool-vergleiche', '🥊', 'Tool-Vergleiche', 'Make vs. Zapier, Semrush vs. Surfer und mehr, mit klarer Empfehlung.', 'Vergleiche', '#fed7aa'],
+                        ['/tool-vergleiche', '🥊', 'Tool-Vergleiche', 'Make vs. Zapier, Midjourney vs. Leonardo, Otter vs. Descript und mehr, mit klarer Empfehlung.', `${getComparisons().length} Vergleiche`, '#fed7aa'],
                         ['/downloads', '🎁', 'Downloads', 'Spickzettel, Prompt-Paket und Top-50-Tabelle zum Mitnehmen.', 'Gratis', '#bbf7d0'],
-                        ['/ki-tools/fuer', '🍎', 'KI nach Zielgruppe', 'Für Lehrer, Schüler, Shops, Creator, HR, Handwerk und mehr: Aufgaben, Tools, Prompts.', '10 Zielgruppen', '#fde68a'],
-                        ['/ki-tools/alternativen', '🔁', 'Tool-Alternativen', 'Alternativen zu ChatGPT, Midjourney, Perplexity, Copilot und Co.', '13 Übersichten', '#a7f3d0'],
-                        ['/glossar', '📖', 'KI-Glossar', 'Token, RAG, Halluzination, KI-Agent: Begriffe einfach erklärt.', 'Begriffe', '#c7d2fe'],
+                        ['/ki-tools/fuer', '🍎', 'KI nach Zielgruppe', 'Für Lehrer, Schüler, Shops, Creator, HR, Handwerk und mehr: Aufgaben, Tools, Prompts.', `${ZIELGRUPPEN.length} Zielgruppen`, '#fde68a'],
+                        ['/ki-tools/alternativen', '🔁', 'Tool-Alternativen', 'Alternativen zu ChatGPT, Midjourney, Perplexity, Copilot und Co.', `${getAlternativenHubs().length} Übersichten`, '#a7f3d0'],
+                        ['/glossar', '📖', 'KI-Glossar', 'Token, RAG, Halluzination, KI-Agent: Begriffe einfach erklärt.', `${KI_GLOSSAR.length} Begriffe`, '#c7d2fe'],
                         ['/top-50', '🏆', 'Top 50', 'Die 50 besten KI-Verzeichnisse nach Jean-Score.', 'Rangliste', '#fecaca'],
                     ].map(([href, emoji, name, text, count, tile]) => (
                         <li key={href}>
@@ -222,6 +227,20 @@ export default function Home() {
                     ))}
                 </ul>
             </Band>
+            <section aria-labelledby="prompt-themen" className="prompt-themen">
+                <h2 id="prompt-themen">Prompts nach Thema 💬</h2>
+                <ul className="kb-hero-chips">
+                    {promptsByKategorie()
+                        .filter((k) => k.prompts.length && KATEGORIE_TEXTE[k.key])
+                        .map((k) => (
+                            <li key={k.key}>
+                                <Link href={`/prompts/kategorie/${k.key}`}>
+                                    {k.name} ({k.prompts.length})
+                                </Link>
+                            </li>
+                        ))}
+                </ul>
+            </section>
 
             <section aria-labelledby="warum">
                 <h2 id="warum">Warum überhaupt KI-Verzeichnisse? 🤔</h2>
