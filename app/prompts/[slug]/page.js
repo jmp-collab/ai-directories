@@ -36,6 +36,7 @@ export default function PromptPage({ params }) {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'Prompts', path: '/prompts' },
+        { name: kat.name, path: `/prompts/kategorie/${p.kategorie}` },
         { name: p.title, path: `/prompts/${p.slug}` },
     ]
     const schema = [
@@ -56,7 +57,9 @@ export default function PromptPage({ params }) {
             <JsonLd data={schema} />
             <Breadcrumbs items={crumbs} />
             <section className="hero">
-                <p className="eyebrow">Prompt · {kat.name}</p>
+                <p className="eyebrow">
+                    Prompt · <Link href={`/prompts/kategorie/${p.kategorie}`}>{kat.name}</Link>
+                </p>
                 <h1>{p.title}</h1>
                 <p className="lead">{p.ziel}</p>
             </section>

@@ -39,7 +39,7 @@ export default function PromptsPage() {
             {kategorien.map((k) => (
                 <section key={k.key} aria-labelledby={`kat-${k.key}`}>
                     <h2 id={`kat-${k.key}`} className="with-icon">
-                        <JeanIcon badge={k.icon} size={34} /> {k.name}
+                        <JeanIcon badge={k.icon} size={34} /> <Link href={`/prompts/kategorie/${k.key}`}>{k.name}</Link>
                     </h2>
                     <ul className="link-cards">
                         {k.prompts.map((p) => (
