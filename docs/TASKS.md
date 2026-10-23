@@ -19,12 +19,20 @@ Diese Datei steuert die automatischen Arbeitssitzungen. Jede Sitzung liest sie, 
 ### Wartet auf Jean
 - [ ] **Impressum und Datenschutz**: Name, ladungsfähige Anschrift, E-Mail fehlen. Danach Seiten `/impressum` und `/datenschutz` bauen und im Footer verlinken. *wartet auf Jean*
 - [ ] **Geschäfts-E-Mail** setzen (`NEXT_PUBLIC_CONTACT_EMAIL` im Pages-Workflow), dann erscheinen die Anfrage-Buttons auf `/werben`. *wartet auf Jean*
-- [ ] **Newsletter-URL** setzen (`NEXT_PUBLIC_NEWSLETTER_URL`); Empfehlung beehiiv. *wartet auf Jean*
+- [ ] **PromptGott-Newsletter-URL** setzen (`NEXT_PUBLIC_NEWSLETTER_URL`); gefunden nur prmoptgenie.substack.com über dev.to/promptgott, nicht abrufbar. Empfehlung beehiiv. *wartet auf Jean*
+- [ ] **Videoliste AIGeddon** (Titel, URL, Thema) für `db/videos.json` und `/case-studies`. *wartet auf Jean*
+- [ ] **Domains** aigeddon.de und promptgott.de registrieren (Plan: `docs/ROADMAP-100.md`, Block 1). *wartet auf Jean*
 - [ ] **Partnerlinks und eigene Rabattcodes** eintragen in `db/partners.json` (Übersicht `docs/PARTNERLINKS.md`, Format in `docs/REGISTRIERUNG.md`, Abschnitt 4). *wartet auf Jean*
 - [ ] **Domain aigeddon.de** als Custom Domain für GitHub Pages einrichten (CNAME, `NEXT_PUBLIC_SITE_URL`, `BASE_PATH` leer). *wartet auf Jean*
 - [ ] **Netlify-Projekt löschen** (alte Kopie). *wartet auf Jean*
 
 ### Automatisch abzuarbeiten (Reihenfolge = Priorität)
+Gesamtplan mit 100 Schritten: `docs/ROADMAP-100.md`. Neue Aufgaben von dort hierher übernehmen.
+- [ ] **Prompt-Bibliothek auf 50 ausbauen** (`lib/prompts.js`), je Runde 6 Prompts aus neuen Kategorien (E-Commerce, Bewerbung, Excel, Bild, Coding, Lernen), jede mit passenden Tools aus `db/tools.json`.
+- [ ] **Prompt-Ketten** `/prompt-ketten`: 3 Workflows mit je 3 bis 5 Schritten und Senden-Button pro Schritt.
+- [ ] **Rechner** `/rechner`: zuerst Zeitersparnis-/ROI-Rechner, dann Automatisierungs-Kostenrechner (Make/Zapier/n8n), Preise nur mit Quelle.
+- [ ] **Prompt des Tages** als Widget im rechten Seitenrand.
+- [ ] **Absprung-Links prüfen** (vierteljährlich, `lib/ai-targets.js`): ChatGPT, Claude, Perplexity, Grok, Google AI Mode.
 - [ ] **Weitere Tool-Vergleiche** in `lib/comparisons.js`: „Canva vs. …“ erst, wenn Design-Alternativen im Tool-Verzeichnis stehen; „Tally vs. Typeform“; „ElevenLabs vs. Murf“; „Descript vs. Pictory“. Nur Empfehlungen, die sich aus `db/tools.json` belegen lassen.
 - [ ] **Top 50 als echter Lead-Magnet**: Sobald der Newsletter läuft, CSV-Download an das Abo koppeln (z. B. beehiiv-Lead-Magnet) und die Seite entsprechend umbauen. *wartet auf Newsletter*
 - [ ] **Tool-Verzeichnis erweitern**: 15 weitere Tools mit öffentlichem Partnerprogramm (z. B. Jasper-Alternativen, Notion-Alternativen, KI-Bild: Leonardo-Alternativen, Transkription), Fakten wie in `db/tools.json`.
@@ -40,6 +48,8 @@ Diese Datei steuert die automatischen Arbeitssitzungen. Jede Sitzung liest sie, 
 - **Täglich (GitHub Actions, 04:17 UTC):** Neubau der Seite, damit Deal und Tool des Tages wechseln.
 
 ## Erledigt
+
+- 2026-10-23 · PR #36: Prompt-Bibliothek `/prompts` (12 Vorlagen), Prompt-Baukasten mit Score, Senden-Buttons an ChatGPT/Claude/Perplexity/Grok/Google AI Mode, Newsletter-Baustein als PromptGott, Plan `docs/ROADMAP-100.md`.
 
 - 2026-10-23 · PR #35: zentrales Partner-Register `db/partners.json` (50 Programme), Prüf- und Übersichtsskript `npm run partners` → `docs/PARTNERLINKS.md`, Prüfung im Pages-Workflow.
 

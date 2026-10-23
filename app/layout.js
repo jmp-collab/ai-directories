@@ -63,6 +63,9 @@ export default function RootLayout({ children }) {
                                     <Link href="/liste/kostenlos">Gratis 🎁</Link>
                                 </li>
                                 <li>
+                                    <Link href="/prompts">Prompts 💬</Link>
+                                </li>
+                                <li>
                                     <Link href="/tools">Tools 🛠️</Link>
                                 </li>
                                 <li>
