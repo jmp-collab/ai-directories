@@ -71,6 +71,10 @@ ${getTutorials().map((t) => `- [${t.title}](${absoluteUrl(`/tutorials/${t.slug}`
 
 Prompt-Check (Score für eigene Prompts): ${absoluteUrl('/prompt-check')} · Downloads: ${absoluteUrl('/downloads')}
 
+## Prompt-Archiv
+
+103 Rollen-Prompts („act as …“) aus f/prompts.chat (CC0) mit deutschen Titeln und Senden-Buttons: ${absoluteUrl('/prompts/archiv')}
+
 ## Prompt-Bibliothek
 
 Vorlagen auf Deutsch zum Ausfüllen, mit Absprung zu ChatGPT, Claude, Perplexity und Grok. Eigener Prompt mit Score: ${absoluteUrl('/prompt-baukasten')}

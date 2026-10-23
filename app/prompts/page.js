@@ -31,6 +31,7 @@ export default function PromptsPage() {
                     <Link className="button" href="/prompt-baukasten">
                         Eigenen Prompt bauen →
                     </Link>
+                    <Link href="/prompts/archiv">103 Rollen-Prompts im Archiv</Link>
                     <Link href="/prompt-check">Prompt prüfen</Link>
                     <Link href="/tutorials/prompt-engineering-in-15-minuten">Grundkurs in 15 Minuten</Link>
                 </p>

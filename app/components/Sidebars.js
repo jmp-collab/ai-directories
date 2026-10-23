@@ -20,6 +20,7 @@ const dayIndex = () => {
 const KOMPASS = [
     ['/#alle', 'Alle Verzeichnisse', 'lupe', false],
     ['/prompts', 'Prompt-Bibliothek', 'prompt', true],
+    ['/prompts/archiv', 'Prompt-Archiv (103 Rollen)', 'prompt', false],
     ['/prompt-baukasten', 'Prompt-Baukasten', 'prompt', false],
     ['/prompt-check', 'Prompt-Check', 'lupe', true],
     ['/tutorials', 'Tutorials', 'pokal', true],

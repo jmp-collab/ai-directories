@@ -29,8 +29,7 @@ Diese Datei steuert die automatischen Arbeitssitzungen. Jede Sitzung liest sie, 
 ### Automatisch abzuarbeiten (Reihenfolge = Priorität)
 Gesamtplan mit 100 Schritten: `docs/ROADMAP-100.md`. Neue Aufgaben von dort hierher übernehmen.
 - [ ] **Steckbriefe für Konsens-Tools**: die 12 Tools in allen 3 Listen und danach die 2/3-Tools mit Partnerprogramm in `db/tools.json` aufnehmen (Preis, Gratis-Tarif, deutsche Oberfläche laut Anbieter, Quelle). Je Runde 5 Tools; Partnerprogramm in `db/partners.json` ergänzen.
-- [ ] **Deutsche Kurzbeschreibungen** für alle Konsens-Tools (137) in `db/kb-de.json` (slug -> Text, eigene Formulierung, keine Übersetzung der Quelle), Anzeige bevorzugt Deutsch.
-- [ ] **Prompt-Archiv aus f/prompts.chat** (173k Sterne, Prompts CC0): die 100 besten Rollen-Prompts als Inspirationsliste `/prompts/archiv`, Quelle nennen, Senden-Buttons.
+- [ ] **Deutsche Kurzbeschreibungen** für die nächsten 100 Einzel-Tools der Datenbank in `db/kb-de.json` (Rubriken Bild, Video, Audio, Schreiben zuerst), nur auf Basis der Quellenbeschreibung.
 - [ ] **Prompt-Bibliothek auf 50 ausbauen** (`lib/prompts.js`), je Runde 6 Prompts aus neuen Kategorien (E-Commerce, Bewerbung, Excel, Bild, Coding, Lernen), jede mit passenden Tools aus `db/tools.json`.
 - [ ] **Prompt-Ketten** `/prompt-ketten`: 3 Workflows mit je 3 bis 5 Schritten und Senden-Button pro Schritt.
 - [ ] **Rechner** `/rechner`: zuerst Zeitersparnis-/ROI-Rechner, dann Automatisierungs-Kostenrechner (Make/Zapier/n8n), Preise nur mit Quelle.
@@ -54,6 +53,8 @@ Gesamtplan mit 100 Schritten: `docs/ROADMAP-100.md`. Neue Aufgaben von dort hier
 - **Täglich (GitHub Actions, 04:17 UTC):** Neubau der Seite, damit Deal und Tool des Tages wechseln.
 
 ## Erledigt
+
+- 2026-10-23 · PR #39: Prompt-Archiv `/prompts/archiv` mit 103 Rollen-Prompts aus f/prompts.chat (CC0), deutsche Titel, 8 Kategorien, „Antworte auf Deutsch“; deutsche Kurzbeschreibungen für alle 137 Konsens-Tools (`db/kb-de.json`) samt Rubrik-Korrekturen.
 
 - 2026-10-23 · PR #38: KI-Tool-Datenbank `/ki-tools` mit 705 Tools aus steven2358/awesome-generative-ai (CC0), mahseema/awesome-ai-tools (MIT), ikaijua/Awesome-AITools (CC BY 4.0); 15 Rubrikseiten, Suche, Konsens-Signal, Quellen- und Lizenzseite.
 

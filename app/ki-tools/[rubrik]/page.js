@@ -69,6 +69,7 @@ export default function RubrikPage({ params }) {
                                     <strong>{t.name}</strong> ↗
                                 </a>
                                 <span>{t.konsens === 3 ? '🏆 in allen 3 Listen' : '🥈 in 2 von 3 Listen'}</span>
+                                {t.deutsch && <span className="podium-text">{t.beschreibung}</span>}
                                 {t.profil && <Link href={`/tools/${t.profil.slug}`}>🧔 Steckbrief mit Preisen →</Link>}
                             </li>
                         ))}

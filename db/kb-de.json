@@ -1,0 +1,423 @@
+{
+ "_hinweis": "Deutsche Kurzbeschreibungen für Konsens-Tools (in 2+ Quellen). Eigene Formulierung auf Basis der Quellenbeschreibung, keine neuen Behauptungen. rubrik korrigiert eine falsche Zuordnung aus dem Import.",
+ "chatgpt": {
+  "de": "Der bekannteste KI-Chatbot von OpenAI: Fragen stellen, Texte schreiben, programmieren, im Dialog."
+ },
+ "civitai": {
+  "de": "Community-Plattform zum Teilen von KI-Modellen."
+ },
+ "claude": {
+  "de": "KI-Assistent von Anthropic für Gespräche, Texte, Analyse und Code."
+ },
+ "clipdrop": {
+  "de": "Professionelle Bilder ohne Fotostudio, auf Basis der Modelle von Stability AI."
+ },
+ "eleven-labs": {
+  "de": "KI-Stimmengenerator für natürlich klingende Sprachausgabe."
+ },
+ "gemini": {
+  "de": "Multimodale Sprachmodell-Familie von Google DeepMind, als Chatbot und für Entwickler."
+ },
+ "github-copilot": {
+  "de": "Schlägt im Editor in Echtzeit Codezeilen und ganze Funktionen vor."
+ },
+ "midjourney": {
+  "de": "Unabhängiges Forschungslabor, das mit KI-Bildern neue Ausdrucksformen und die menschliche Vorstellungskraft erweitern will."
+ },
+ "notion-ai": {
+  "de": "KI direkt in Notion: Notizen und Dokumente schneller und besser schreiben."
+ },
+ "openai-codex": {
+  "de": "KI-System von OpenAI, das natürliche Sprache in Code übersetzt."
+ },
+ "perplexity-ai": {
+  "de": "KI-Suchmaschine, die Antworten aus dem Web zusammenfasst."
+ },
+ "runway": {
+  "de": "Kreativ-Suite für KI-Video: Generieren, präzise bearbeiten und gemeinsam in Echtzeit arbeiten."
+ },
+ "agentset": {
+  "de": "Open-Source-Plattform zum Bauen und Bewerten von RAG- und Agenten-Anwendungen."
+ },
+ "ai-poem-generator": {
+  "de": "Schreibt zu jedem Thema ein gereimtes Gedicht aus einer kurzen Vorgabe."
+ },
+ "ai2sql": {
+  "de": "Erzeugt SQL-Abfragen aus normaler Sprache, auch ohne SQL-Kenntnisse."
+ },
+ "aiva": {
+  "de": "KI-Assistent für Musikkomposition mit über 250 Stilen."
+ },
+ "alpaca": {
+  "de": "Stable-Diffusion-Plugin für Photoshop."
+ },
+ "alphaxiv": {
+  "de": "arXiv-Paper entdecken, lesen und diskutieren."
+ },
+ "amazon-q": {
+  "de": "KI-Assistent von AWS: beantwortet Fragen, schreibt Code und automatisiert Aufgaben."
+ },
+ "anyword": {
+  "de": "KI-Schreibassistent für wirkungsvolle Werbe- und Marketingtexte."
+ },
+ "arena": {
+  "de": "Offene Plattform, auf der Menschen KI-Modelle im Blindvergleich bewerten; betrieben von Forschenden der UC Berkeley."
+ },
+ "artbreeder": {
+  "de": "Kreativ-Werkzeug, um Bilder gemeinsam zu erzeugen, zu mischen und weiterzuentwickeln."
+ },
+ "artificial-analysis": {
+  "de": "Unabhängige Benchmarks zu KI-Modellen und Anbietern als Entscheidungshilfe."
+ },
+ "auto-gpt": {
+  "de": "Experimentelles Open-Source-Projekt, das GPT-4 selbstständig Aufgaben abarbeiten lässt."
+ },
+ "bark": {
+  "de": "Open-Source-Modell, das aus Text Audio und Sprache erzeugt."
+ },
+ "bing-image-creator": {
+  "de": "Bildgenerator von Microsoft auf Basis von DALL·E 3, mit Sicherheitsfiltern."
+ },
+ "bloom": {
+  "de": "Offenes Sprachmodell von Hugging Face, trainiert auf 46 Sprachen und 13 Programmiersprachen."
+ },
+ "brandmark": {
+  "de": "Logo-Design mit KI."
+ },
+ "character-ai": {
+  "de": "Eigene Figuren erstellen und mit ihnen chatten."
+ },
+ "chatbot-ui": {
+  "de": "Open-Source-Chatoberfläche im Stil von ChatGPT."
+ },
+ "chatgpt-for-jupyter": {
+  "de": "Hilfsfunktionen mit ChatGPT direkt in Jupyter Notebook und JupyterLab."
+ },
+ "chatpdf": {
+  "de": "Mit jedem PDF chatten: Fragen stellen, Antworten aus dem Dokument bekommen."
+ },
+ "chatsonic": {
+  "de": "KI-Assistent für Texte und Bilder."
+ },
+ "cogram": {
+  "de": "Schreibt in Online-Meetings automatisch mit und erkennt Aufgaben."
+ },
+ "compose-ai": {
+  "de": "Kostenlose Chrome-Erweiterung mit KI-Autovervollständigung beim Schreiben."
+ },
+ "consensus": {
+  "de": "Suchmaschine, die Antworten in wissenschaftlichen Studien findet."
+ },
+ "copy-ai": {
+  "de": "Marketingtexte und Content mit KI schreiben."
+ },
+ "copysmith": {
+  "de": "KI-Content für Unternehmen und Onlineshops, etwa Produkttexte."
+ },
+ "craiyon": {
+  "de": "Bildgenerator aus Textbeschreibungen, früher bekannt als DALL-E mini."
+ },
+ "cursor": {
+  "de": "Code-Editor mit eingebauter KI zum Programmieren im Team mit der Maschine."
+ },
+ "d-id": {
+  "de": "Sprechende Avatare per Klick erzeugen und mit ihnen interagieren."
+ },
+ "deepl-write": {
+  "de": "Schreibwerkzeug von DeepL, das Texte sprachlich verbessert."
+ },
+ "deepseek-deepseek-com": {
+  "de": "Chatbot auf Basis der offenen Sprachmodelle von DeepSeek."
+ },
+ "devin": {
+  "de": "Autonomer KI-Softwareentwickler von Cognition Labs."
+ },
+ "draggan": {
+  "de": "Forschungsprojekt: Bilder durch Ziehen von Punkten interaktiv verformen."
+ },
+ "editgpt": {
+  "de": "Texte in ChatGPT korrigieren und Änderungen nachverfolgen."
+ },
+ "elicit": {
+  "de": "Automatisiert Teile der Literaturrecherche mit Sprachmodellen."
+ },
+ "emailtriager": {
+  "de": "Entwirft im Hintergrund automatisch Antworten auf E-Mails."
+ },
+ "explainpaper": {
+  "de": "Paper hochladen, unklare Stellen markieren, Erklärung bekommen."
+ },
+ "forefront": {
+  "de": "Alternative Oberfläche für ChatGPT-ähnliche Chats."
+ },
+ "gamma": {
+  "de": "Präsentationen und Webseiten erstellen, ohne selbst zu formatieren und zu gestalten.",
+  "rubrik": "produktivitaet"
+ },
+ "genei": {
+  "de": "Fasst Fachartikel in Sekunden zusammen und beschleunigt die Recherche."
+ },
+ "genshare": {
+  "de": "Kostenloses Studio für generative Kunst und Medien zum Erstellen und Teilen."
+ },
+ "ghostwriter": {
+  "de": "KI-Programmierpartner von Replit."
+ },
+ "google-ai-studio": {
+  "de": "Web-Werkzeug von Google, um mit Gemini und experimentellen Modellen Prototypen zu bauen."
+ },
+ "gopher": {
+  "de": "Sprachmodell von DeepMind mit 280 Milliarden Parametern.",
+  "rubrik": "modelle"
+ },
+ "gpt-for-sheets-and-docs": {
+  "de": "ChatGPT als Erweiterung für Google Sheets und Google Docs."
+ },
+ "gpt-code-ui": {
+  "de": "Open-Source-Nachbau des Code Interpreters von ChatGPT."
+ },
+ "gpt4all": {
+  "de": "Chatbot, trainiert auf einer großen Sammlung von Assistenz-Dialogen, Code und Geschichten.",
+  "rubrik": "chatbots"
+ },
+ "harbor": {
+  "de": "Container-Werkzeugkasten, der lokale Sprachmodelle samt Oberflächen mit einem Befehl startet."
+ },
+ "harmonai": {
+  "de": "Community, die Open-Source-Werkzeuge für KI-Musik veröffentlicht."
+ },
+ "haystack": {
+  "de": "Framework für Anwendungen mit Sprachmodellen, etwa Agenten, semantische Suche und Frage-Antwort-Systeme."
+ },
+ "heygen": {
+  "de": "Macht aus Skripten in Minuten Videos mit anpassbaren KI-Avataren."
+ },
+ "hugging-face-diffusion-models-course": {
+  "de": "Kostenloser Online-Kurs von Hugging Face zu Diffusionsmodellen, mit Python-Material."
+ },
+ "hyperwrite": {
+  "de": "Schreibassistent von der Idee bis zur fertigen Fassung."
+ },
+ "hypotenuse-ai": {
+  "de": "Macht aus wenigen Stichworten Artikel, Produktbeschreibungen und Social Posts."
+ },
+ "ideogram": {
+  "de": "Bildgenerator aus Text, der kreatives Gestalten zugänglicher machen will."
+ },
+ "imagen": {
+  "de": "Bildmodell von Google für fotorealistische Bilder aus Text."
+ },
+ "jasper": {
+  "de": "Content schneller erstellen mit KI."
+ },
+ "jenni": {
+  "de": "Schreibassistent, der beim Ideenfinden und Formulieren Zeit spart."
+ },
+ "kimi": {
+  "de": "KI-Assistent von Moonshot AI mit Chat, Tiefenrecherche, Coding und mehreren Agenten."
+ },
+ "komo": {
+  "de": "KI-Suchmaschine."
+ },
+ "krea": {
+  "de": "Bildgenerator, der eigene Stile, Konzepte und Produkte lernt."
+ },
+ "langchain": {
+  "de": "Verbreitetes Framework für Anwendungen mit Sprachmodellen."
+ },
+ "langfuse": {
+  "de": "Open-Source-Plattform für Tracing, Bewertung, Prompt-Verwaltung und Kennzahlen von LLM-Anwendungen."
+ },
+ "lavender": {
+  "de": "E-Mail-Assistent für mehr Antworten in kürzerer Zeit."
+ },
+ "lensa": {
+  "de": "Bildbearbeitungs-App mit KI-Avataren auf Basis von Stable Diffusion."
+ },
+ "lex": {
+  "de": "Textverarbeitung mit eingebauter KI zum schnelleren Schreiben."
+ },
+ "lexica": {
+  "de": "Suchmaschine für Stable-Diffusion-Bilder und ihre Prompts."
+ },
+ "llamaindex": {
+  "de": "Daten-Framework, um Sprachmodelle mit eigenen Daten zu verbinden."
+ },
+ "llm-stats": {
+  "de": "Vergleicht KI-Modelle nach Benchmarks, Preis, Geschwindigkeit und Kontextlänge."
+ },
+ "lmql": {
+  "de": "Abfragesprache für Sprachmodelle."
+ },
+ "loopin-ai": {
+  "de": "Meeting-Arbeitsbereich: aufnehmen, transkribieren, zusammenfassen und Notizen ordnen."
+ },
+ "luma-dream-machine": {
+  "de": "Erzeugt schnell realistische Videos aus Text und Bildern."
+ },
+ "magic-eraser": {
+  "de": "Entfernt störende Objekte aus Fotos in Sekunden."
+ },
+ "make-a-scene": {
+  "de": "Forschungsmethode von Meta: Bilder aus Text und Skizze gezielt steuern."
+ },
+ "mem": {
+  "de": "Persönlicher Arbeitsbereich mit KI, der Notizen automatisch ordnet."
+ },
+ "microsoft-azure-neural-tts": {
+  "de": "Skalierbare, anpassbare Sprachausgabe von Microsoft für Unternehmensanwendungen."
+ },
+ "microsoft-designer": {
+  "de": "Grafikdesign mit KI von Microsoft."
+ },
+ "mintlify": {
+  "de": "Schreibt Dokumentation für Code mit KI."
+ },
+ "moonbeam": {
+  "de": "Blogartikel in einem Bruchteil der Zeit schreiben."
+ },
+ "mubert": {
+  "de": "Lizenzfreie KI-Musik für Creator, Marken und Entwickler."
+ },
+ "musiclm": {
+  "de": "Forschungsmodell von Google, das aus Textbeschreibungen Musik erzeugt."
+ },
+ "nekton-ai": {
+  "de": "Abläufe in normaler Sprache beschreiben und mit KI automatisieren."
+ },
+ "ollama": {
+  "de": "Sprachmodelle lokal auf dem eigenen Rechner betreiben."
+ },
+ "openai-api": {
+  "de": "Schnittstelle zu den OpenAI-Modellen für Text, Code, Bilder, Audio und Agenten.",
+  "rubrik": "modelle"
+ },
+ "openart": {
+  "de": "Prompt-Suche und KI-Bilder mit Stable Diffusion und DALL·E."
+ },
+ "opencode": {
+  "de": "Open-Source-Coding-Agent fürs Terminal.",
+  "rubrik": "coding"
+ },
+ "openrouter-llm-rankings": {
+  "de": "Rangliste der Sprachmodelle nach tatsächlicher Nutzung in Apps.",
+  "rubrik": "modelle"
+ },
+ "opt": {
+  "de": "Offene vortrainierte Sprachmodelle von Meta."
+ },
+ "otter-ai": {
+  "de": "Meeting-Assistent: nimmt auf, schreibt mit, erfasst Folien und fasst zusammen."
+ },
+ "patience-ai": {
+  "de": "App zum Erstellen von Bildern mit Stable Diffusion."
+ },
+ "phind": {
+  "de": "KI-Suchmaschine."
+ },
+ "phoenix": {
+  "de": "Open-Source-Werkzeug von Arize zum Überwachen und Verbessern von LLM- und ML-Modellen."
+ },
+ "photoroom": {
+  "de": "Produkt- und Porträtfotos mit dem Handy: Hintergrund entfernen und austauschen."
+ },
+ "plandex": {
+  "de": "Open-Source-KI-Programmierumgebung im Terminal für komplexe Aufgaben."
+ },
+ "poe": {
+  "de": "Zugang zu vielen verschiedenen Chatbots an einem Ort.",
+  "rubrik": "chatbots"
+ },
+ "portkey": {
+  "de": "LLMOps-Plattform für Überwachung, Caching und Verwaltung von Sprachmodellen."
+ },
+ "postwise": {
+  "de": "Social Posts schreiben, planen und Reichweite aufbauen mit KI.",
+  "rubrik": "marketing"
+ },
+ "publicprompts": {
+  "de": "Sammlung kostenloser Prompts für Stable Diffusion."
+ },
+ "quillbot": {
+  "de": "Umformulieren, paraphrasieren und Texte glätten mit KI."
+ },
+ "resemble-ai": {
+  "de": "KI-Stimmen und Stimmenklonen für Sprachausgabe."
+ },
+ "rundiffusion": {
+  "de": "Cloud-Arbeitsplatz für KI-Kunst."
+ },
+ "rytr": {
+  "de": "KI-Schreibassistent für hochwertige Inhalte."
+ },
+ "scispace": {
+  "de": "Recherche-Assistent, der wissenschaftliche Literatur verständlich macht."
+ },
+ "screenpipe": {
+  "de": "Open Source: zeichnet Bildschirm und Audio auf, durchsuchbar mit KI, auch mit lokalen Modellen."
+ },
+ "sharegpt": {
+  "de": "ChatGPT-Unterhaltungen teilen und die anderer entdecken."
+ },
+ "stable-diffusion": {
+  "de": "Offenes Bildmodell von Stability AI, das aus Text Bilder erzeugt."
+ },
+ "stable-diffusion-models": {
+  "de": "Umfangreiche Liste von Stable-Diffusion-Modellen."
+ },
+ "stable-horde": {
+  "de": "Verteiltes Netz von Freiwilligen, die Stable-Diffusion-Rechenleistung teilen."
+ },
+ "steel-browser": {
+  "de": "Open-Source-Browser-Sandbox für KI-Agenten mit Sitzungen, Screenshots, PDFs und Proxys."
+ },
+ "stenography": {
+  "de": "Dokumentiert Code automatisch."
+ },
+ "sybill": {
+  "de": "Fasst Verkaufsgespräche zusammen: nächste Schritte, Probleme und Interessen des Kunden."
+ },
+ "synthesia": {
+  "de": "Videos aus reinem Text in wenigen Minuten erstellen."
+ },
+ "tabnine": {
+  "de": "Code-Vervollständigung für ganze Zeilen und Funktionen."
+ },
+ "taskade": {
+  "de": "Aufgaben, Notizen, Listen und Mindmaps mit KI erstellen."
+ },
+ "together-ai": {
+  "de": "Plattform, um KI-Modelle schnell und günstig zu trainieren, feinzutunen und zu betreiben.",
+  "rubrik": "modelle"
+ },
+ "tortoise": {
+  "de": "Open-Source-Sprachausgabe mit mehreren Stimmen und Fokus auf Qualität."
+ },
+ "turbopilot": {
+  "de": "Selbst gehosteter Copilot-Nachbau, der mit 4 GB Arbeitsspeicher auskommt."
+ },
+ "udio": {
+  "de": "Musik mit KI erstellen, entdecken und teilen."
+ },
+ "vicuna-13b": {
+  "de": "Offener Chatbot, entstanden durch Feintuning von LLaMA auf geteilten Unterhaltungen."
+ },
+ "webchatgpt": {
+  "de": "Ergänzt ChatGPT-Prompts um passende Suchergebnisse aus dem Web."
+ },
+ "whisper-ctranslate2": {
+  "de": "Schnellerer Whisper-Client für die Kommandozeile, kompatibel zum Original."
+ },
+ "whisper-cpp": {
+  "de": "Whisper-Spracherkennung als schlanke C/C++-Version, läuft lokal."
+ },
+ "wordtune": {
+  "de": "Persönlicher Schreibassistent zum Umformulieren."
+ },
+ "you-com": {
+  "de": "KI-Suchmaschine mit personalisierten Ergebnissen und Fokus auf Privatsphäre."
+ },
+ "z-ai": {
+  "de": "Chatbot und Agenten-Plattform auf Basis der GLM-Modelle."
+ }
+}
