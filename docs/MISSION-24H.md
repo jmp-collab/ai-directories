@@ -50,7 +50,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P37 Rubrik-Ratgeber II**: Auswahlkriterien, Tipp/Warnung und FAQ für Audio, Musik, Agenten, Coding, Produktivität, Chatbots.
 - [x] **P38 Rubrik-Ratgeber III**: Suche, Recherche, Modelle, Sicherheit, Finanzen (Kriterien, Tipp, Warnung, FAQ).
 - [x] **P39 Ratgeber „KI und Datenschutz“**: DSGVO-Checkliste für KI-Tools (AVV, Training mit Daten, Serverstandort, Einwilligung bei Aufnahmen, EU AI Act Grundzüge), verlinkt aus Zielgruppen und Rubriken.
-- [ ] **P40 Startseite & Hubs**: Zielgruppen- und Alternativen-Einstiege auf Startseite und KI-Tools-Hub, Kompass in der Seitenleiste ergänzen.
+- [x] **P40 Startseite & Hubs**: Zielgruppen- und Alternativen-Einstiege auf Startseite und KI-Tools-Hub, Kompass in der Seitenleiste ergänzen.
 - [ ] **P35 Abschluss-QA**: Link-Crawl, Überlauf, Kontrast, Strukturdaten, Live-Stichproben.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
@@ -102,3 +102,4 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P37: Ratgeber-Blöcke (5 Kriterien, Tipp, Warnung, 3 FAQ mit Schema) für Chatbots, Produktivität, Coding, Agenten, Audio, Musik; damit haben 10 der 15 Rubriken Pillar-Inhalte. Kontrast/Konsole/Überlauf geprüft.
 - 2026-10-23 · P38: Ratgeber-Blöcke für Suche, Recherche, Modelle, Sicherheit, Finanzen; alle 15 Rubriken der KI-Tool-Datenbank haben jetzt Auswahlkriterien, Tipp, Warnung und FAQ-Schema.
 - 2026-10-23 · P39: Ratgeber „KI-Tools und Datenschutz: die DSGVO-Checkliste“ (AVV nach Art. 28, Training abschalten, Drittlandübermittlung, Aufnahmen und Mitbestimmung, EU AI Act in Grundzügen, 7-Punkte-Checkliste, ausdrücklich keine Rechtsberatung); verlinkt aus allen Rubrik-Warnboxen und allen Zielgruppen-Seiten.
+- 2026-10-23 · P40: Startseite mit Kacheln für Zielgruppen, Tool-Alternativen und KI-Glossar; Kompass in der Seitenleiste (auf jeder Seite) um Zielgruppen, Alternativen und Glossar ergänzt; KI-Tools-Hub-Link aktualisiert. Link-Crawl über alle Seiten: 0 kaputte Links.
