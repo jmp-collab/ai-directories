@@ -4126,3 +4126,28 @@ td.wrap {
         animation: none !important;
     }
 }
+
+/* Kontrast-Fixes aus der Qualitätsrunde */
+.page-main > .band-dunkel > h2,
+.band-dunkel h2 {
+    background: var(--accent) !important;
+    color: var(--accent-contrast) !important;
+}
+
+a.ai-button,
+.band-dunkel a.ai-button {
+    color: #1b1b1f;
+}
+
+.band-dunkel .send-to-ai-note,
+.band-dunkel .rechner-hinweis,
+.band-dunkel .widget-note {
+    color: #d8d2e2;
+}
+
+/* Gut sichtbarer Tastatur-Fokus überall */
+:focus-visible {
+    outline: 3px solid var(--c-blue);
+    outline-offset: 3px;
+    border-radius: 4px;
+}

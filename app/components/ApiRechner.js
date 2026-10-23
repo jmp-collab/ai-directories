@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react'
 import { API_MODELLE } from '../../lib/preise'
 
-const usd = (v) => (v < 0.01 ? `${v.toFixed(4)} $` : v < 1 ? `${v.toFixed(3)} $` : `${new Intl.NumberFormat('de-DE', { maximumFractionDigits: 2 }).format(v)} $`)
+const usd = (v) => `${new Intl.NumberFormat('de-DE', { maximumFractionDigits: v < 0.01 ? 4 : v < 1 ? 3 : 2 }).format(v)} $`
 
 // Was kostet meine KI-Anwendung über die API? Alle Modelle auf einen Blick, sortiert nach Preis.
 export default function ApiRechner() {
