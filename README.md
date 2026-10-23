@@ -1,6 +1,6 @@
-<p align="center"><img src="./assets/icon.svg" width="48" height="48" alt="KI-Verzeichnisse Logo"></p>
+<p align="center"><img src="./assets/icon.svg" width="48" height="48" alt="AIGeddon Logo"></p>
 
-# KI-Verzeichnisse: 256 AI Directories, in die du dein KI-Tool eintragen kannst
+# AIGeddon: 256 KI-Verzeichnisse (AI Directories), in die du dein KI-Tool eintragen kannst
 
 **Kurz gesagt:** Das ist eine gepflegte Liste mit 256 KI-Verzeichnissen, Startup-Plattformen und Launch-Seiten. Zu jedem Eintrag stehen Domain Rating, geschätzte Besuche pro Monat, ob der Eintrag kostenlos ist und wie reibungslos die Einreichung läuft. 164 davon kosten nichts, bei 158 ist der Eintrag kostenlos **und** unkompliziert.
 

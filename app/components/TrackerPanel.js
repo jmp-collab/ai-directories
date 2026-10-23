@@ -20,7 +20,7 @@ export default function TrackerPanel({ directories }) {
         const url = URL.createObjectURL(new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8' }))
         const a = document.createElement('a')
         a.href = url
-        a.download = 'ki-verzeichnisse-tracker.csv'
+        a.download = 'aigeddon-tracker.csv'
         a.click()
         URL.revokeObjectURL(url)
     }

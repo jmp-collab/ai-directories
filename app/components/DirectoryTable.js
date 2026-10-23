@@ -8,6 +8,7 @@ import { getScore } from '../../lib/score'
 import { hasStatusIssue } from '../../lib/checks'
 import useTracker, { RANKS } from './useTracker'
 import konfetti from '../../lib/konfetti'
+import { submitRel } from '../../lib/monetization'
 
 const SORTS = {
     score: { label: 'Jean-Score', fn: (a, b) => b.score - a.score || b.domain_rating - a.domain_rating },
@@ -175,10 +176,11 @@ export default function DirectoryTable({ directories, interactive = true, defaul
                                             className="submit-link"
                                             href={d.submission_link}
                                             target="_blank"
-                                            rel="nofollow noopener noreferrer"
+                                            rel={submitRel(d)}
                                             aria-label={`${d.name}: Tool eintragen (externer Link)`}
                                         >
                                             Eintragen ↗ 🚀
+                                            {d.affiliate && <sup title="Partnerlink: Wir erhalten ggf. eine Provision.">*</sup>}
                                         </a>
                                     )}
                                 </td>

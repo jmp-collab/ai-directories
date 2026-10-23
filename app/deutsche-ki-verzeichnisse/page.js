@@ -31,7 +31,7 @@ const FAQ = [
 
 export default function DachPage() {
     const crumbs = [
-        { name: 'KI-Verzeichnisse', path: '/' },
+        { name: 'AIGeddon', path: '/' },
         { name: 'Deutsche KI-Verzeichnisse', path: '/deutsche-ki-verzeichnisse' },
     ]
     const sorted = [...DACH].sort((a, b) => b.authority - a.authority || b.traffic - a.traffic)

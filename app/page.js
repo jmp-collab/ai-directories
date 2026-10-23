@@ -4,6 +4,7 @@ import JsonLd from './components/JsonLd'
 import Faq, { faqSchema } from './components/Faq'
 import SchicksalsWuerfel from './components/SchicksalsWuerfel'
 import Jean, { HELLO } from './components/Jean'
+import ToolPartners from './components/ToolPartners'
 import TrackerPanel from './components/TrackerPanel'
 import { effectiveRating } from '../lib/fresh'
 import { hasStatusIssue } from '../lib/checks'
@@ -15,7 +16,7 @@ import { formatNumber } from '../utils/i18n-de'
 export function generateMetadata() {
     const stats = getSiteStats()
     return {
-        title: { absolute: `${stats.total} KI-Verzeichnisse: AI Directories für deinen Tool-Launch (mit Humor)` },
+        title: { absolute: `${stats.total} KI-Verzeichnisse für deinen Tool-Launch | AIGeddon` },
         description: `Die deutsche Liste der KI-Verzeichnisse: ${stats.total} AI Directories mit Domain Rating, Traffic, Preis und Einreichungs-Check. ${stats.free.length} davon kostenlos. Tool eintragen, Backlinks holen, nebenbei lachen.`,
         alternates: { canonical: '/' },
         openGraph: { url: '/' },
@@ -269,6 +270,7 @@ export default function Home() {
                 </ol>
             </section>
 
+            <ToolPartners limit={6} />
             <section aria-labelledby="legende">
                 <h2 id="legende">So liest du die Tabelle 🔍</h2>
                 <dl className="legend">
@@ -294,7 +296,7 @@ export default function Home() {
                 <div className="about-head">
                     <img className="about-photo" src={withBase('/jean.jpg')} alt="Jean Maurice Port" width="120" height="120" loading="lazy" />
                     <p>
-                        Ich bin Jean, Senior SEO/SGE Manager bei der MotoMobilityGroup (Racing Planet, Scooter Center und Co.). Diese Liste
+                        Ich bin Jean, Senior SEO/SGE Manager bei der MotoMobilityGroup. Diese Liste
                         ist mein Nebenprojekt: ehrlich bewertet, mit Humor und ohne Affiliate-Tricks.{' '}
                         <Link href="/ueber-jean">Meine Projekte und Profile →</Link>
                     </p>

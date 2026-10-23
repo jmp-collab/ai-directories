@@ -34,7 +34,7 @@ export default function ArtikelPage({ params }) {
     const a = getArtikel(params.slug)
     if (!a) notFound()
     const crumbs = [
-        { name: 'KI-Verzeichnisse', path: '/' },
+        { name: 'AIGeddon', path: '/' },
         { name: 'Ratgeber', path: '/ratgeber' },
         { name: a.title, path: `/ratgeber/${a.slug}` },
     ]

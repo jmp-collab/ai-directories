@@ -31,7 +31,7 @@ export function ogImage({ eyebrow, title, score, footer }) {
                             border: '4px solid #1b1b1f',
                         }}
                     >
-                        KI-Verzeichnisse
+                        AIGEDDON
                     </div>
                     {score != null && (
                         <div

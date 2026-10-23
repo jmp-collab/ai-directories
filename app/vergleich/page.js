@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function VergleichPage() {
     const crumbs = [
-        { name: 'KI-Verzeichnisse', path: '/' },
+        { name: 'AIGeddon', path: '/' },
         { name: 'Vergleich', path: '/vergleich' },
     ]
     const options = [...getDirectories()]

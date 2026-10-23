@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function RatgeberIndex() {
     const crumbs = [
-        { name: 'KI-Verzeichnisse', path: '/' },
+        { name: 'AIGeddon', path: '/' },
         { name: 'Ratgeber', path: '/ratgeber' },
     ]
     return (
