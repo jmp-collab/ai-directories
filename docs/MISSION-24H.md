@@ -28,6 +28,11 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P14 Deutsche Texte**: Kurzbeschreibungen für weitere 150 Datenbank-Tools (zuerst Bild, Video, Audio, Schreiben), nur auf Basis der Quelle.
 - [x] **P15 Rechner II**: Automatisierungs-Kostenrechner (Make, Zapier, n8n) und Newsletter-Kostenrechner (beehiiv, Kit, Brevo, GetResponse), Preise laut Anbieter mit Datum.
 - [x] **P16 Performance**: Seitengewichte messen, Datenmengen der Client-Komponenten senken, Vorschaubilder für Hub-Seiten.
+- [ ] **P17 Deutsche Texte II**: Kurzbeschreibungen für die übrigen Rubriken (Schreiben, Produktivität, Chatbots, Suche, Recherche, Marketing, Agenten, Coding, Modelle), nur auf Basis der Quelle, je Runde 150.
+- [ ] **P18 Steckbriefe II**: 8 weitere Konsens-Tools mit prüfbarer Preisseite (z. B. Midjourney, Leonardo AI, Suno, Fliki, Play.ht, Jasper, QuillBot, Wordtune), Partnerprogramme recherchieren und im Register ergänzen.
+- [ ] **P19 Pillar-Content II**: „KI-Tools für Texte“, „KI-Bildgeneratoren im Vergleich“, „KI-Video-Tools“, „KI für Marketing“ als Themenseiten mit Inhaltsverzeichnis, Boxen, Tool-Karten, passenden Prompts und FAQ.
+- [ ] **P20 Ratgeber**: „Product-Hunt-Alternativen für deutsche Gründer“ und „Welcher Newsletter-Anbieter für Gründer?“ aus dem Backlog, mit Verweisen auf Verzeichnis-, Tool- und Rechnerseiten.
+- [ ] **P21 Vorschaubilder**: eigene Open-Graph-Bilder für Hub-Seiten (KI-Tools, KI-Test, Rechner, Prompts, Tutorials), damit geteilte Links auffallen.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
 ## Für Jean (am Ende präsentieren)
