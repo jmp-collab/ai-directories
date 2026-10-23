@@ -44,7 +44,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P30 Tutorial „ChatGPT richtig nutzen“**: Einsteigerkurs mit 8 Schritten, Vorher/Nachher, Prompts zum Ausprobieren, Quiz.
 - [x] **P31 KI-Tools nach Zielgruppe**: Lehrkräfte, Studierende, Selbstständige, Entwickler, Marketing mit Aufgaben, Tools, Prompts, Tutorial, Rechner, FAQ.
 - [x] **P32 Zielgruppen II**: weitere Zielgruppen-Seiten: Onlinehändler, Content Creator/YouTuber, HR & Recruiting, Handwerk, Schüler.
-- [ ] **P33 Tutorial „KI-Agenten verstehen und einsetzen“**: 7. Tutorial mit Schritten, Vorher/Nachher, Quiz.
+- [x] **P33 Tutorial „KI-Agenten verstehen und einsetzen“**: 7. Tutorial mit Schritten, Vorher/Nachher, Quiz.
 - [ ] **P34 Performance II**: größte Seiten und JS-Bundles messen, unnötige Client-Daten entfernen.
 - [ ] **P35 Abschluss-QA**: Link-Crawl, Überlauf, Kontrast, Strukturdaten, Live-Stichproben.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
@@ -91,3 +91,4 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P30: 6. Tutorial „ChatGPT richtig nutzen: der Einsteigerkurs“ (8 Schritte: ein Chat pro Thema, Kontext, Nachschärfen, Format, Material mitgeben, Fakten prüfen, Datenschutz, Vorlagen und KI-Test; 3 Quizfragen); Strukturdaten-Check: JSON-LD auf allen Seiten gültig, keine Seite mit doppeltem FAQPage, jede Seite mit Description.
 - 2026-10-23 · P31: 5 Zielgruppen-Seiten /ki-tools/fuer/[lehrer|studenten|selbststaendige|entwickler|marketing] mit je 5 Aufgaben-Karten (Tools aus der Datenbank, passender Prompt), Warnbox, Tutorial, Rechner, KI-Test, FAQ-Schema; Übersicht /ki-tools/fuer, verlinkt aus KI-Tools-Hub, Footer, llms.txt, Sitemap.
 - 2026-10-23 · P32: 5 weitere Zielgruppen-Seiten (Onlinehändler, Content Creator, HR & Recruiting mit EU-AI-Act-Hinweis, Handwerk, Schüler mit Altershinweis), jetzt 10 Zielgruppen unter /ki-tools/fuer; Tool-, Prompt-, Tutorial- und Rechner-Verweise gegen die Daten geprüft.
+- 2026-10-23 · P33: 7. Tutorial „KI-Agenten verstehen und sinnvoll einsetzen“ (7 Schritte: Chatbot vs. Agent, Ziel, Werkzeuge, Grenzen und Prompt-Injection, Plan vorab, Prüfen, klein anfangen; 3 Quizfragen), mit der Rubrik KI-Agenten verknüpft.
