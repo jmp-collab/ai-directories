@@ -16,6 +16,7 @@ import CheckBox from '../../components/CheckBox'
 import { getCheck, hasStatusIssue } from '../../../lib/checks'
 import { absoluteUrl } from '../../../lib/site'
 import { submitRel } from '../../../lib/monetization'
+import ServiceHint from '../../components/ServiceHint'
 import { dealLabel, formatRating, formatVisits, pricingLabel } from '../../../utils/i18n-de'
 
 export const dynamicParams = false
@@ -127,6 +128,7 @@ export default function DirectoryPage({ params }) {
                 </a>
                 <CopyButton label="Link zu dieser Seite kopieren 🔗" done="Link kopiert ✓" />
             </p>
+            {!hasStatusIssue(d.slug) && <ServiceHint />}
 
             <section aria-labelledby="zahlen">
                 <h2 id="zahlen">{d.name} in Zahlen 🔢</h2>
