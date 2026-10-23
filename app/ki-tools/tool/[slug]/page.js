@@ -20,7 +20,7 @@ export function generateMetadata({ params }) {
     const r = KB_RUBRIKEN[t.rubrik]
     const alt = kbAlternativen(t, 3).map((a) => a.name)
     return {
-        title: `${t.name}: Was ist das? Alternativen & Einordnung`,
+        title: t.name.length > 18 ? `${t.name}: Was ist das?` : `${t.name}: Was ist das? Alternativen & Einordnung`,
         description: `${t.beschreibung} Rubrik: ${r.name}.${alt.length ? ` Alternativen: ${alt.join(', ')}.` : ''}`.slice(0, 300),
         alternates: { canonical: `/ki-tools/tool/${kbPrimary(t).slug}` },
         robots: kbIndexierbar(t) ? undefined : { index: false, follow: true },

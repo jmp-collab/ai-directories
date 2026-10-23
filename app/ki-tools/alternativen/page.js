@@ -6,7 +6,7 @@ import { KB_RUBRIKEN } from '../../../lib/kb'
 import { getAlternativenHubs } from '../../../lib/alternativen'
 
 export const metadata = {
-    title: 'Alternativen zu bekannten KI-Tools: Midjourney, Perplexity, Copilot & Co.',
+    title: 'Alternativen zu Midjourney, Perplexity, Copilot & Co.',
     description: 'Alternativen zu Midjourney, Perplexity, Notion AI, Claude, Gemini, GitHub Copilot, ElevenLabs, Synthesia und mehr, sortiert nach Empfehlung der größten Community-Listen.',
     alternates: { canonical: '/ki-tools/alternativen' },
 }

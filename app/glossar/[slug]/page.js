@@ -41,7 +41,7 @@ export function generateMetadata({ params }) {
     const b = getBegriff(params.slug)
     if (!b) return {}
     return {
-        title: `${frage(b.term)} Einfach erklärt mit Beispiel`,
+        title: frage(b.term).length > 28 ? `${frage(b.term)} Einfach erklärt` : `${frage(b.term)} Einfach erklärt mit Beispiel`,
         description: `${b.text} Mit Beispiel, Praxis-Tipp und verwandten Begriffen.`.slice(0, 300),
         alternates: { canonical: `/glossar/${b.slug}` },
     }

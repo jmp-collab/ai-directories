@@ -18,7 +18,7 @@ export function generateMetadata({ params }) {
     const a = getArtikel(params.slug)
     if (!a) return {}
     return {
-        title: a.title,
+        title: a.seoTitle || a.title,
         description: a.description,
         alternates: { canonical: `/ratgeber/${a.slug}` },
         openGraph: { url: `/ratgeber/${a.slug}`, type: 'article' },

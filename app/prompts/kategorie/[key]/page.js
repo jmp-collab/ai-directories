@@ -32,8 +32,8 @@ export function generateMetadata({ params }) {
     const k = getKategorie(params.key)
     if (!k) return {}
     return {
-        title: `${k.titel}: ${k.prompts.length} Vorlagen auf Deutsch`,
-        description: `${k.intro} Felder ausfüllen und mit einem Klick an ChatGPT, Claude, Perplexity oder Grok senden.`.slice(0, 300),
+        title: k.titel,
+        description: `${k.prompts.length} Vorlagen auf Deutsch. ${k.intro} Felder ausfüllen und mit einem Klick an ChatGPT, Claude, Perplexity oder Grok senden.`.slice(0, 300),
         alternates: { canonical: `/prompts/kategorie/${k.key}` },
     }
 }
