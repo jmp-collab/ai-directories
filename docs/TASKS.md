@@ -49,7 +49,7 @@ Gesamtplan mit 100 Schritten: `docs/ROADMAP-100.md`. Neue Aufgaben von dort hier
 - **Monatlich:** KI-Tool-Datenbank neu einlesen: die drei Listen klonen (`git clone --depth 1`), `npm run kb:import -- <ordner>`, Sterne/Forks in `utils/kb/import.js` aktualisieren, Diff prüfen (neue/entfernte Tools), PR.
 
 - **Wöchentlich, Montag:** Sperr-Check. Alle Verzeichnisse mit Status in `db/checks.json` erneut prüfen, ob die Einreichung wieder offen ist, und die 30 Verzeichnisse mit dem höchsten Jean-Score prüfen, ob sie inzwischen gesperrt oder tot sind. Änderungen mit Quelle eintragen.
-- **Monatlich, am 1.:** Preis-Check aller Tools in `db/tools.json` gegen die offizielle Preisseite, `TOOLS_STAND` aktualisieren.
+- **Monatlich, am 1.:** Preis-Check aller Tools in `db/tools.json` und aller Rechner-Preise in `lib/preise.js` (API-Modelle, Abos) gegen die offiziellen Preisseiten, `TOOLS_STAND` und `PREISE_STAND` aktualisieren. Achtung: Gemini 4 Argon verdoppelt am 1.12.2026 den Preis.
 - **Täglich (GitHub Actions, 04:17 UTC):** Neubau der Seite, damit Deal und Tool des Tages wechseln.
 
 ## Erledigt

@@ -131,6 +131,12 @@ export default function KiTestPage() {
                         <span>Die Konsens-Favoriten aus den drei größten Community-Listen.</span>
                     </li>
                     <li>
+                        <Link href="/rechner/ki-zeitersparnis">
+                            <strong>Lohnt sich das Abo?</strong>
+                        </Link>
+                        <span>Der Zeitersparnis-Rechner zeigt den Break-even in Minuten pro Woche.</span>
+                    </li>
+                    <li>
                         <Link href="/prompt-check">
                             <strong>Prompt-Check</strong>
                         </Link>

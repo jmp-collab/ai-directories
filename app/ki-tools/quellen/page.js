@@ -27,7 +27,8 @@ export default function QuellenPage() {
                     Die Datenbank führt die drei größten frei lizenzierten KI-Tool-Listen auf GitHub zusammen, gemessen an Sternen und Forks. Stand {KB_STAND}: {s.gesamt} eindeutige Tools.
                 </p>
             </section>
-            <table>
+            <div className="table-scroll">
+                <table>
                 <thead>
                     <tr>
                         <th>Liste</th>
@@ -51,6 +52,7 @@ export default function QuellenPage() {
                     ))}
                 </tbody>
             </table>
+                </div>
             <h2>So entsteht die Datenbank</h2>
             <ul>
                 <li>Übernommen werden nur Fakten: Name, Link, Rubrik der Quelle, Kurzbeschreibung und, falls vorhanden, die Preisangabe. Die Beschreibungen bleiben im englischen Original und sind der Quelle zugeordnet.</li>
