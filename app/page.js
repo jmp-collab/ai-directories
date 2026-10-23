@@ -11,6 +11,9 @@ import { kbStats } from '../lib/kb'
 import { getPrompts } from '../lib/prompts'
 import { getTutorials } from '../lib/tutorials'
 import archiv from '../db/prompt-archiv.json'
+import { TESTS } from '../lib/kitests'
+
+const testCount = TESTS.length
 import { effectiveRating } from '../lib/fresh'
 import { hasStatusIssue } from '../lib/checks'
 import { getDirectories, getSiteStats } from '../lib/data'
@@ -171,6 +174,7 @@ export default function Home() {
                         ['/#alle', '📚', 'KI-Verzeichnisse', 'Wo du dein KI-Tool einträgst, mit Domain Rating, Preis und Check.', `${stats.total} Verzeichnisse`, '#fde68a'],
                         ['/prompts', '💬', 'Prompts', 'Vorlagen zum Ausfüllen und Rollen-Prompts, mit einem Klick an ChatGPT und Claude.', `${getPrompts().length + archiv.anzahl} Prompts`, '#a7f3d0'],
                         ['/tutorials', '🎓', 'Tutorials', 'Interaktiv mit Vorher/Nachher-Regler, Quiz und Konfetti.', `${getTutorials().length} Kurse`, '#fbcfe8'],
+                        ['/ki-test', '🧪', 'KI-Test', 'ChatGPT, Claude, Gemini & Co. selbst testen und Rangliste erhalten.', `${testCount} Aufgaben`, '#c7d2fe'],
                         ['/prompt-check', '🔍', 'Prompt-Check', 'Prompt einfügen, Score sehen, besser werden.', 'Gratis-Tool', '#ddd6fe'],
                         ['/tool-vergleiche', '🥊', 'Tool-Vergleiche', 'Make vs. Zapier, Semrush vs. Surfer und mehr, mit klarer Empfehlung.', 'Vergleiche', '#fed7aa'],
                         ['/downloads', '🎁', 'Downloads', 'Spickzettel, Prompt-Paket und Top-50-Tabelle zum Mitnehmen.', 'Gratis', '#bbf7d0'],

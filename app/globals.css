@@ -3393,3 +3393,266 @@ td.wrap {
         box-shadow: 4px 4px 0 var(--border);
     }
 }
+
+/* ---------- KI-Test ---------- */
+.steps-row {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    counter-reset: s;
+}
+
+.steps-row li {
+    counter-increment: s;
+    position: relative;
+    padding: 34px 12px 12px;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+}
+
+.steps-row li::before {
+    content: counter(s);
+    position: absolute;
+    top: -14px;
+    left: 12px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--accent-contrast);
+    font-weight: 800;
+    border: 2px solid var(--border);
+}
+
+.steps-row strong,
+.steps-row span {
+    display: block;
+}
+
+.steps-row span {
+    font-size: 0.88rem;
+    color: var(--muted);
+}
+
+.kitest-setup {
+    position: sticky;
+    top: 0;
+    z-index: 6;
+    background: var(--bg);
+    padding: 10px 0;
+}
+
+@media (min-width: 721px) {
+    .kitest-setup {
+        top: 80px;
+    }
+}
+
+.kitest-progress {
+    height: 12px;
+    border: 2px solid var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+    background: var(--surface);
+    margin-top: 8px;
+}
+
+.kitest-progress span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--c-mint), var(--c-blue), var(--c-purple));
+    transition: width 0.4s ease;
+}
+
+.kitest-progress-text {
+    font-size: 0.88rem;
+    margin: 4px 0 0;
+}
+
+.kitest-reset {
+    margin-left: 10px;
+    font: inherit;
+    font-size: 0.82rem;
+    background: none;
+    border: 0;
+    color: var(--accent);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.kitest-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 22px;
+    margin: 18px 0;
+}
+
+.kitest-card {
+    padding: 18px;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 5px 5px 0 var(--border);
+    background: var(--band-bg);
+}
+
+.kitest-card.band-dunkel {
+    color: #f4efe6;
+}
+
+.kitest-card h3 {
+    margin: 4px 0 10px;
+    font-size: 1.25rem;
+}
+
+.kitest-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.kitest-card pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    background: var(--surface);
+    color: var(--text);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.kitest-kriterien {
+    margin: 12px 0;
+    background: var(--surface);
+    color: var(--text);
+    border: 2px dashed var(--border);
+    border-radius: 10px;
+    padding: 8px 12px;
+}
+
+.kitest-kriterien summary {
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.kitest-rate {
+    display: grid;
+    gap: 8px;
+}
+
+.kitest-rate-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    background: var(--surface);
+    color: var(--text);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 6px 10px;
+}
+
+.kitest-rate-row > span {
+    font-weight: 800;
+    min-width: 90px;
+}
+
+.kitest-rate-row [role='group'] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.kitest-rate-row button {
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border: 2px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg);
+    color: var(--text);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.kitest-rate-row button:hover {
+    transform: translateY(-2px);
+}
+
+.kitest-rate-row .rate-gut.is-active { background: #86efac; color: #1b1b1f; }
+.kitest-rate-row .rate-teils.is-active { background: #fde68a; color: #1b1b1f; }
+.kitest-rate-row .rate-falsch.is-active { background: #fca5a5; color: #1b1b1f; animation: wobble 0.4s 1; }
+
+.kitest-result {
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 6px 6px 0 var(--accent);
+}
+
+
+.kitest-result h3 {
+    margin: 0 0 8px;
+}
+
+.kitest-result ol {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+    display: grid;
+    gap: 6px;
+}
+
+.kitest-result li {
+    display: grid;
+    grid-template-columns: 100px 1fr 64px;
+    gap: 8px;
+    align-items: center;
+}
+
+.kitest-result-name {
+    font-weight: 800;
+}
+
+.kitest-bar {
+    height: 14px;
+    border: 2px solid var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+.kitest-bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--c-orange), var(--accent));
+    transition: width 0.5s cubic-bezier(0.2, 1.2, 0.4, 1);
+}
+
+.kitest-result-pct {
+    text-align: right;
+    font-weight: 800;
+}
+
+.kitest-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: 8px 0 0;
+}
+
+/* In Bändern keine automatische Trennlinie innen */
+.page-main > .band::before {
+    display: none;
+}

@@ -8,6 +8,7 @@ import { getTools, TOOLS_STAND } from '../../lib/tools'
 import { getPrompts } from '../../lib/prompts'
 import { getTutorials } from '../../lib/tutorials'
 import { getKbRubriken, kbStats, KB_SOURCES } from '../../lib/kb'
+import { TESTS, getTestKategorien } from '../../lib/kitests'
 import { experienceLabel, pricingLabel, dealLabel, formatRating, formatVisits } from '../../utils/i18n-de'
 
 export const dynamic = 'force-static'
@@ -58,6 +59,10 @@ ${ARTIKEL.map((a) => `- [${a.title}](${absoluteUrl(`/ratgeber/${a.slug}`)}): ${a
 
 ## Deutschsprachige KI-Verzeichnisse (Semrush, Stand ${DACH_STAND})
 ${DACH.map((d) => `- [${d.name}](${d.link}): Authority Score ${d.authority}, organischer Traffic DE ${d.traffic}/Monat. ${d.note} Eintragen: ${d.submission_link}`).join('\n')}
+
+## KI-Test
+
+Interaktiver Selbsttest für KI-Chatbots (ChatGPT, Claude, Gemini, Perplexity, Grok, Copilot) mit ${TESTS.length} Aufgaben und Lösungen: ${absoluteUrl('/ki-test')}. Kategorien: ${getTestKategorien().map((k) => `[${k.name}](${absoluteUrl(`/ki-test/${k.key}`)})`).join(', ')}. AIGeddon veröffentlicht keine eigenen Testwerte; Nutzer bewerten selbst.
 
 ## KI-Tool-Datenbank
 
