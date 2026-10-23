@@ -23,7 +23,7 @@ export function generateMetadata({ params }) {
     const z = getZielgruppe(params.slug)
     if (!z) return {}
     return {
-        title: `${z.titel}: Die besten Werkzeuge 2026`,
+        title: `${z.titel} 2026`,
         description: `${z.intro} Mit passenden Tools, fertigen Prompts und Tutorial.`.slice(0, 300),
         alternates: { canonical: `/ki-tools/fuer/${z.slug}` },
     }

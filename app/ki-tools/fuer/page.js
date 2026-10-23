@@ -5,7 +5,7 @@ import { SITE_NAME } from '../../../lib/site'
 import { ZIELGRUPPEN } from '../../../lib/zielgruppen'
 
 export const metadata = {
-    title: 'KI-Tools nach Zielgruppe: für Lehrer, Schüler, Shops, Creator & mehr',
+    title: 'KI-Tools nach Zielgruppe: Lehrer, Schüler, Shops & mehr',
     description: 'Welche KI-Tools passen zu deinem Beruf? Übersichten für Lehrkräfte, Schüler, Studierende, Selbstständige, Onlinehändler, Content Creator, HR, Handwerk, Entwickler und Marketing, mit Aufgaben, Tools und fertigen Prompts.',
     alternates: { canonical: '/ki-tools/fuer' },
 }

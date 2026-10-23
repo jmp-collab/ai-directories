@@ -9,7 +9,7 @@ import { Band } from '../components/Deko'
 import { absoluteUrl } from '../../lib/site'
 
 export const metadata = {
-    title: 'KI-Glossar: Prompt Engineering, KI- und SEO-Begriffe erklärt',
+    title: 'KI-Glossar: KI- und SEO-Begriffe einfach erklärt',
     description: `${KI_GLOSSAR.length + GLOSSAR.length} Begriffe kurz erklärt: Prompt, Token, Kontextfenster, Halluzination, RAG, KI-Agent, MCP und mehr, dazu SEO-Begriffe wie Domain Rating, nofollow und GEO.`,
     alternates: { canonical: '/glossar' },
     openGraph: { url: '/glossar' },

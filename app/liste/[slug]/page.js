@@ -18,7 +18,7 @@ export function generateMetadata({ params }) {
     const list = getList(params.slug)
     if (!list) return {}
     return {
-        title: `${list.title}: ${list.items.length} Einträge`,
+        title: list.title.length > 45 ? list.title : `${list.title}: ${list.items.length} Einträge`,
         description: list.description(list.items.length),
         alternates: { canonical: `/liste/${list.slug}` },
         openGraph: { url: `/liste/${list.slug}` },
