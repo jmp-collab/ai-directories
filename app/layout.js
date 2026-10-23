@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import './globals.css'
 import { SITE_URL, SITE_NAME, SITE_TAGLINE, REPO_URL, withBase } from '../lib/site'
+import Reveal from './components/Reveal'
 import LeadBox from './components/LeadBox'
 import { SidebarLeft, SidebarRight, MobileDock } from './components/Sidebars'
 import BackToTop from './components/BackToTop'
@@ -107,6 +108,7 @@ export default function RootLayout({ children }) {
                     <main id="inhalt" className="page-main">
                         {children}
                         <LeadBox />
+                        <Reveal />
                     </main>
                     <aside className="sidebar sidebar-right" aria-label="Deals, Tools und Neuigkeiten">
                         <SidebarRight />
