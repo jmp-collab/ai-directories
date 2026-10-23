@@ -53,7 +53,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P40 Startseite & Hubs**: Zielgruppen- und Alternativen-Einstiege auf Startseite und KI-Tools-Hub, Kompass in der Seitenleiste ergänzen.
 - [x] **P41 Glossar II**: 20 weitere KI-Begriffe mit eigener Seite (z. B. Transformer, Reasoning-Modell, Kontext-Engineering, Vibe Coding, Inpainting, Upscaling, Deepfake, C2PA, LoRA, Quantisierung, VRAM, Latenz, Rate Limit, Bias, Alignment, Open Source, Text-to-Image, Text-to-Video, Agentischer Workflow, Model Card), Autolink ergänzen.
 - [x] **P42 KI-Test II**: 10 weitere Testaufgaben in den bestehenden Kategorien (mit Kriterien, wo möglich mit Lösung).
-- [ ] **P43 Tool-Vergleiche II**: neue Vergleiche aus vorhandenen Steckbriefen (z. B. Midjourney vs. Leonardo AI, Wordtune vs. Rytr, Runway vs. InVideo AI, Otter.ai vs. Descript; bestehende 11 Vergleiche nicht doppeln), nur mit Preisen aus db/tools.json.
+- [x] **P43 Tool-Vergleiche II**: neue Vergleiche aus vorhandenen Steckbriefen (z. B. Midjourney vs. Leonardo AI, Wordtune vs. Rytr, Runway vs. InVideo AI, Otter.ai vs. Descript; bestehende 11 Vergleiche nicht doppeln), nur mit Preisen aus db/tools.json. Erledigt: 6 neue Vergleiche (Midjourney vs. Leonardo AI, Wordtune vs. Rytr, Runway vs. InVideo AI, Otter.ai vs. Descript, Systeme.io vs. Kit, Surfer SEO vs. Writesonic), jetzt 17.
 - [ ] **P44 Prompt-Kategorien**: eigene Seite je Prompt-Kategorie (/prompts/kategorie/[key]) mit Intro, Prompts, passenden Tutorials und FAQ.
 - [ ] **P35 Abschluss-QA**: Link-Crawl, Überlauf, Kontrast, Strukturdaten, Live-Stichproben.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
