@@ -71,6 +71,7 @@ ${RECHNER.map((r) => `- [${r.titel}](${absoluteUrl(`/rechner/${r.slug}`)}): ${r.
 - [Kostenlose KI-Tools](${absoluteUrl('/ki-tools/kostenlos')})
 - [ChatGPT-Alternativen](${absoluteUrl('/ki-tools/chatgpt-alternativen')})
 - [Alternativen zu bekannten KI-Tools](${absoluteUrl('/ki-tools/alternativen')})
+- [KI-Tools nach Zielgruppe](${absoluteUrl('/ki-tools/fuer')})
 - [KI-Verzeichnis: Was es ist und welche sich lohnen](${absoluteUrl('/ki-verzeichnis')})
 
 ## KI-Test

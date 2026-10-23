@@ -4361,3 +4361,65 @@ ul.kb-hero-chips {
 @media (prefers-reduced-motion: reduce) {
     .kitest-geteilt { animation: none; }
 }
+
+/* Zielgruppen-Seiten: Aufgaben als bunte Karten */
+.zg-aufgaben {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    counter-reset: zg;
+}
+
+.zg-aufgaben li {
+    position: relative;
+    background: var(--surface);
+    border: 3px solid var(--border);
+    border-top: 10px solid var(--tile, var(--accent));
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 5px 5px 0 var(--border);
+    transition: transform 0.2s ease;
+}
+
+.zg-aufgaben li:hover {
+    transform: translateY(-3px) rotate(-0.5deg);
+}
+
+.zg-emoji {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.zg-aufgaben h3 {
+    margin: 8px 0 4px;
+}
+
+.zg-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.zg-tools a {
+    border: 2px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #1b1b1f;
+    background: var(--tile, #fde68a);
+}
+
+.zg-prompt {
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .zg-aufgaben li { transition: none; }
+}
