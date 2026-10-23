@@ -93,6 +93,12 @@ const BADGES = {
         </g>
     ),
     herz: <path d="M49 57s-7.5-4.6-7.5-9.4a3.9 3.9 0 0 1 7.5-1.6 3.9 3.9 0 0 1 7.5 1.6C56.5 52.4 49 57 49 57z" fill="#e0262c" stroke={INK} strokeWidth="1.5" />,
+    prompt: (
+        <g>
+            <path d="M40.5 43.5a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-7l-4 3.5v-3.5a3 3 0 0 1-3-3z" fill="#fff" stroke={INK} strokeWidth="1.6" strokeLinejoin="round" />
+            <path d="M44 44.5l2.5 2.3-2.5 2.3M48 49.5h5" stroke={INK} strokeWidth="1.6" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+    ),
     tattoo: (
         <g stroke={INK} strokeWidth="1.4" strokeLinejoin="round">
             <path d="M40 57c1-6 4-11 9-13l5-2c2 0 3 2 2 3.5l-3 2.5c3 1 4 4 2 6-3 3-9 3-15 3z" fill={SKIN} />
@@ -112,6 +118,7 @@ const LABELS = {
     pokal: 'Jean mit Pokal',
     rakete: 'Jean mit Rakete',
     herz: 'Jean mit Herz',
+    prompt: 'Jean mit Prompt-Sprechblase',
     tattoo: 'Jean zeigt seinen tätowierten Arm',
 }
 

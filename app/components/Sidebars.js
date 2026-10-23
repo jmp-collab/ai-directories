@@ -19,6 +19,8 @@ const dayIndex = () => {
 
 const KOMPASS = [
     ['/#alle', 'Alle Verzeichnisse', 'lupe', false],
+    ['/prompts', 'Prompt-Bibliothek', 'prompt', true],
+    ['/prompt-baukasten', 'Prompt-Baukasten', 'prompt', false],
     ['/tools', 'KI-Tools', 'werkzeug', false],
     ['/tool-vergleiche', 'Tool-Vergleiche', 'pokal', true],
     ['/top-50', 'Top 50 Verzeichnisse', 'herz', false],
@@ -146,9 +148,9 @@ export function MobileDock() {
                 <JeanIcon badge="werkzeug" size={28} />
                 <span>Tools</span>
             </Link>
-            <Link href="/liste/rabattcodes">
-                <JeanIcon badge="deal" size={28} />
-                <span>Deals</span>
+            <Link href="/prompts">
+                <JeanIcon badge="prompt" size={28} />
+                <span>Prompts</span>
             </Link>
             <a href={NEWSLETTER_URL ? `${NEWSLETTER_URL.replace(/\/$/, '')}/subscribe` : YOUTUBE_SUBSCRIBE_URL} target="_blank" rel="noopener">
                 <JeanIcon cool badge={NEWSLETTER_URL ? 'post' : 'play'} size={28} />
