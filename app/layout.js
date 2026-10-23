@@ -5,7 +5,7 @@ import Reveal from './components/Reveal'
 import LeadBox from './components/LeadBox'
 import { SidebarLeft, SidebarRight, MobileDock } from './components/Sidebars'
 import BackToTop from './components/BackToTop'
-import JeanIcon from './components/JeanIcon'
+import JeanIcon, { JeanSprite } from './components/JeanIcon'
 import BartModus from './components/BartModus'
 import JsonLd from './components/JsonLd'
 import { absoluteUrl } from '../lib/site'
@@ -135,6 +135,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="de">
             <body>
+                <JeanSprite />
                 <a className="skip-link" href="#inhalt">
                     Zum Inhalt springen
                 </a>
