@@ -65,6 +65,13 @@ ${DACH.map((d) => `- [${d.name}](${d.link}): Authority Score ${d.authority}, org
 
 ${RECHNER.map((r) => `- [${r.titel}](${absoluteUrl(`/rechner/${r.slug}`)}): ${r.kurz}`).join('\n')}
 
+## Übersichtsseiten
+
+- [Die besten KI-Tools 2026 nach Aufgabe](${absoluteUrl('/beste-ki-tools')})
+- [Kostenlose KI-Tools](${absoluteUrl('/ki-tools/kostenlos')})
+- [ChatGPT-Alternativen](${absoluteUrl('/ki-tools/chatgpt-alternativen')})
+- [KI-Verzeichnis: Was es ist und welche sich lohnen](${absoluteUrl('/ki-verzeichnis')})
+
 ## KI-Test
 
 Interaktiver Selbsttest für KI-Chatbots (ChatGPT, Claude, Gemini, Perplexity, Grok, Copilot) mit ${TESTS.length} Aufgaben und Lösungen: ${absoluteUrl('/ki-test')}. Kategorien: ${getTestKategorien().map((k) => `[${k.name}](${absoluteUrl(`/ki-test/${k.key}`)})`).join(', ')}. AIGeddon veröffentlicht keine eigenen Testwerte; Nutzer bewerten selbst.

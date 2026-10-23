@@ -149,6 +149,12 @@ export default function Home() {
                         <Link href="/deutsche-ki-verzeichnisse">Deutsche Verzeichnisse 🇩🇪 →</Link>
                     </li>
                     <li>
+                        <Link href="/ki-verzeichnis">Was ist ein KI-Verzeichnis? →</Link>
+                    </li>
+                    <li>
+                        <Link href="/beste-ki-tools">Beste KI-Tools 2026 →</Link>
+                    </li>
+                    <li>
                         <Link href="/launch-kit">Launch-Kit: Texte erzeugen →</Link>
                     </li>
                     <li>
