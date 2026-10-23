@@ -81,7 +81,7 @@ export default function RootLayout({ children }) {
                                     <Link href="/ratgeber">Ratgeber 📖</Link>
                                 </li>
                                 <li>
-                                    <Link href="/quiz">Quiz 🎯</Link>
+                                    <Link href="/tutorials">Tutorials 🎓</Link>
                                 </li>
                                 <li>
                                     <Link href="/vergleich">Vergleich 👑</Link>

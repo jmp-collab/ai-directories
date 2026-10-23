@@ -6,6 +6,7 @@ import { ARTIKEL } from '../../lib/ratgeber'
 import { getCheck, checkCount, CHECK_STAND } from '../../lib/checks'
 import { getTools, TOOLS_STAND } from '../../lib/tools'
 import { getPrompts } from '../../lib/prompts'
+import { getTutorials } from '../../lib/tutorials'
 import { experienceLabel, pricingLabel, dealLabel, formatRating, formatVisits } from '../../utils/i18n-de'
 
 export const dynamic = 'force-static'
@@ -56,6 +57,12 @@ ${ARTIKEL.map((a) => `- [${a.title}](${absoluteUrl(`/ratgeber/${a.slug}`)}): ${a
 
 ## Deutschsprachige KI-Verzeichnisse (Semrush, Stand ${DACH_STAND})
 ${DACH.map((d) => `- [${d.name}](${d.link}): Authority Score ${d.authority}, organischer Traffic DE ${d.traffic}/Monat. ${d.note} Eintragen: ${d.submission_link}`).join('\n')}
+
+## Tutorials
+
+${getTutorials().map((t) => `- [${t.title}](${absoluteUrl(`/tutorials/${t.slug}`)}): ${t.description}`).join('\n')}
+
+Prompt-Check (Score für eigene Prompts): ${absoluteUrl('/prompt-check')} · Downloads: ${absoluteUrl('/downloads')}
 
 ## Prompt-Bibliothek
 
