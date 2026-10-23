@@ -4,6 +4,7 @@ import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
 import JsonLd from '../../components/JsonLd'
 import Jean from '../../components/Jean'
 import GlossarText from '../../components/GlossarText'
+import Faq, { faqSchema } from '../../components/Faq'
 import { ARTIKEL, getArtikel } from '../../../lib/ratgeber'
 import { absoluteUrl } from '../../../lib/site'
 
@@ -52,6 +53,7 @@ export default function ArtikelPage({ params }) {
             image: absoluteUrl('/ratgeber/opengraph-image.png'),
         },
     ]
+    if (a.faq) schema.push(faqSchema(a.faq))
     const others = ARTIKEL.filter((x) => x.slug !== a.slug)
     const gesehen = new Set()
     return (
@@ -86,6 +88,12 @@ export default function ArtikelPage({ params }) {
                     </section>
                 ))}
             </div>
+            {a.faq && (
+                <section aria-labelledby="faq">
+                    <h2 id="faq">Häufige Fragen 🙋</h2>
+                    <Faq items={a.faq} />
+                </section>
+            )}
             <section aria-labelledby="weiter">
                 <h2 id="weiter">Weiterlesen und loslegen</h2>
                 <ul className="quick-links">
