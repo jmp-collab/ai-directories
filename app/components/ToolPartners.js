@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import { TOOL_PARTNERS } from '../../lib/monetization'
+import { TOOL_PARTNERS, TOOL_AFFILIATES } from '../../lib/monetization'
 
 // Werkzeug-Empfehlungen; Karten mit Partnerlink werden gekennzeichnet und als rel="sponsored" ausgegeben.
 export default function ToolPartners({ title = 'Werkzeuge für deinen Launch 🧰', limit = TOOL_PARTNERS.length }) {
-    const tools = TOOL_PARTNERS.slice(0, limit)
+    const tools = TOOL_PARTNERS.slice(0, limit).map((t) => ({ ...t, affiliate: TOOL_AFFILIATES[t.slug] || '' }))
     const anyAffiliate = tools.some((t) => t.affiliate)
     return (
         <section aria-labelledby="werkzeuge">
