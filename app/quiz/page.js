@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function QuizPage() {
     const crumbs = [
-        { name: 'KI-Verzeichnisse', path: '/' },
+        { name: 'AIGeddon', path: '/' },
         { name: 'Quiz', path: '/quiz' },
     ]
     const options = getDirectories().map(({ name, slug, link, submission_link, domain_rating, monthly_visits, pricing, submission_experience }) => ({

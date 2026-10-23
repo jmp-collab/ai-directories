@@ -15,6 +15,7 @@ import FreshBox from '../../components/FreshBox'
 import CheckBox from '../../components/CheckBox'
 import { getCheck, hasStatusIssue } from '../../../lib/checks'
 import { absoluteUrl } from '../../../lib/site'
+import { submitRel } from '../../../lib/monetization'
 import { dealLabel, formatRating, formatVisits, pricingLabel } from '../../../utils/i18n-de'
 
 export const dynamicParams = false
@@ -74,7 +75,7 @@ export default function DirectoryPage({ params }) {
     const alternatives = getAlternatives(d)
     const faq = buildFaq(d, rank, total)
     const crumbs = [
-        { name: 'KI-Verzeichnisse', path: '/' },
+        { name: 'AIGeddon', path: '/' },
         { name: d.name, path: `/verzeichnis/${d.slug}` },
     ]
 
@@ -117,8 +118,9 @@ export default function DirectoryPage({ params }) {
             <Jean>{jeanLine(d)}</Jean>
 
             <p className="cta-row">
-                <a className="button" href={hasStatusIssue(d.slug) ? d.link : d.submission_link} target="_blank" rel="nofollow noopener noreferrer">
+                <a className="button" href={hasStatusIssue(d.slug) ? d.link : d.submission_link} target="_blank" rel={hasStatusIssue(d.slug) ? 'nofollow noopener noreferrer' : submitRel(d)}>
                     {hasStatusIssue(d.slug) ? `Website von ${d.name} ansehen ↗` : `Jetzt bei ${d.name} eintragen 🚀`}
+                    {d.affiliate && !hasStatusIssue(d.slug) && <sup title="Partnerlink: Wir erhalten ggf. eine Provision.">*</sup>}
                 </a>
                 <a href={d.link} target="_blank" rel="nofollow noopener noreferrer">
                     Erst mal die Website bestaunen ↗

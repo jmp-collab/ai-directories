@@ -33,7 +33,7 @@ const FAQ = [
 
 export default function FreischaltungPage() {
     const crumbs = [
-        { name: 'KI-Verzeichnisse', path: '/' },
+        { name: 'AIGeddon', path: '/' },
         { name: 'Freischaltdauer', path: '/freischaltung' },
     ]
     const rows = allChecks()

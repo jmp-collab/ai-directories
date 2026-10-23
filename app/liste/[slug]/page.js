@@ -28,7 +28,7 @@ export default function ListPage({ params }) {
     if (!list) notFound()
 
     const crumbs = [
-        { name: 'KI-Verzeichnisse', path: '/' },
+        { name: 'AIGeddon', path: '/' },
         { name: list.title, path: `/liste/${list.slug}` },
     ]
 

@@ -25,7 +25,7 @@ const CAREER = [
         org: 'MotoMobilityGroup',
         time: 'seit Aug. 2025',
         place: 'Jena, hybrid',
-        text: 'SEO und Sichtbarkeit in KI-Suchen für racing-planet.de, scooter-center.com, pepeparts.nl, scooter-attack.com und moped-garage.net. Technisches SEO, Content, mehrsprachige Produktdaten, Produktimporte und interaktive Formate.',
+        text: 'SEO und Sichtbarkeit in KI-Suchen für mehrere internationale Onlineshops. Technisches SEO, Content, mehrsprachige Produktdaten, Produktimporte und interaktive Formate.',
     },
     {
         role: 'Head of Artificial Intelligence',
@@ -71,14 +71,6 @@ const SKILLS = [
     ['Strategie', 'Geschäftsmodellinnovation, Competitive Intelligence, SOSTAC-Planung, Data-driven Marketing, Paid Search'],
 ]
 
-const PROJECTS = [
-    ['Simson-Tuningwerkstatt als Evergreen-Hub', 'Rund 7.000 Wörter Ratgeber für Racing Planet, dazu fünf Gastbeiträge für 1000PS und eine fertige WordPress-Fassung.'],
-    ['Racing Planet Labs', 'Interaktive Helfer für Shop-Kunden: TeileFinder, Motorplattform-Finder und Supportticket-Generator.'],
-    ['Tuning- und Restaurationsspiele', 'Garage-Spiel „Street to Strip“ und das Restaurationsspiel „Scheunenfund“ mit zehn Kapiteln, 30 Entscheidungen und über 31.000 möglichen Wegen.'],
-    ['Fatbike-Launch-Matrix', '25 Kernprodukte mit Preis- und Margenprüfung, Produktseiten-Entwürfen, Bundles und einem mehrsprachigen Import.'],
-    ['Affiliate-Datenbank', '120 Partnerprogramme bewertet, mit Content-Funnels und KPI-Tracking.'],
-    ['Diese Seite', 'KI-Verzeichnisse mit Jean-Score, belegten Freischaltzeiten und Sperr-Erkennung. Gebaut mit Next.js, gepflegt mit KI-Unterstützung.'],
-]
 
 const CERTS = [
     ['Google Ads', 'Search, Display, Leistungsanalyse, KI-gestützte Performance-Anzeigen, Offline-Umsatz (Skillshop, 2025)'],
@@ -95,21 +87,9 @@ const EDUCATION = [
 
 const LINKS = [
     {
-        group: 'Shops, für die ich SEO mache',
-        items: [
-            ['racing-planet.de', 'https://www.racing-planet.de/', 'Tuningteile für Roller, Mopeds und Simson.'],
-            ['scooter-center.com', 'https://www.scooter-center.com/', 'Vespa- und Lambretta-Teile.'],
-            ['pepeparts.nl', 'https://www.pepeparts.nl/', 'Ersatzteile für die Niederlande.'],
-            ['scooter-attack.com', 'https://www.scooter-attack.com/', 'Roller-Tuning, schnell und laut.'],
-            ['moped-garage.net', 'https://www.moped-garage.net/', 'Ersatzteile für Mopeds und Mofas.'],
-        ],
-    },
-    { group: 'Eigenes', items: [['LeberCure', 'https://lebercure.com/', 'Mein eigener Shopify-Shop.']] },
-    {
         group: 'Profile',
         items: [
             ['Hugging Face: jmp1987', 'https://huggingface.co/jmp1987', 'Meine KI-Spielwiese.'],
-            ['Hugging Face: Racing Planet', 'https://huggingface.co/RacingPlanet', 'Die Racing-Planet-Organisation auf Hugging Face.'],
             ['GitHub: jmp-collab', 'https://github.com/jmp-collab', 'Code, Experimente und gelegentlich Chaos.'],
         ],
     },
@@ -151,8 +131,8 @@ export default function AboutPage() {
                         <h1>Jean Maurice Port</h1>
                         <p className="lead">
                             Senior SEO/SGE Manager bei der MotoMobilityGroup in Jena, vorher Head of AI bei Greyheart Media.
-                            Seit 2015 im Online-Marketing, seit 2023 mit generativer KI. Tagsüber Rankings für Roller- und
-                            Mopedteile, nachts Tools, Spiele und Listen wie diese.
+                            Seit 2015 im Online-Marketing, seit 2023 mit generativer KI. Tagsüber Rankings, nachts Tools, Spiele
+                            und Listen wie diese.
                         </p>
                     </div>
                 </div>
@@ -200,17 +180,6 @@ export default function AboutPage() {
                 </ul>
             </section>
 
-            <section aria-labelledby="projekte">
-                <h2 id="projekte">Ausgewählte Projekte</h2>
-                <ul className="link-cards">
-                    {PROJECTS.map(([name, text]) => (
-                        <li key={name}>
-                            <strong>{name}</strong>
-                            <span>{text}</span>
-                        </li>
-                    ))}
-                </ul>
-            </section>
 
             <section aria-labelledby="zertifikate">
                 <h2 id="zertifikate">Zertifikate</h2>

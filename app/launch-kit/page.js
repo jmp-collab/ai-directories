@@ -1,4 +1,5 @@
 import LaunchKit from './LaunchKit'
+import ToolPartners from '../components/ToolPartners'
 import Jean from '../components/Jean'
 import JsonLd from '../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
@@ -15,7 +16,7 @@ export const metadata = {
 
 export default function LaunchKitPage() {
     const crumbs = [
-        { name: 'KI-Verzeichnisse', path: '/' },
+        { name: 'AIGeddon', path: '/' },
         { name: 'Launch-Kit', path: '/launch-kit' },
     ]
     const directories = [...getDirectories()]
@@ -50,6 +51,7 @@ export default function LaunchKitPage() {
                 </Jean>
             </section>
             <LaunchKit directories={directories} />
+            <ToolPartners />
         </>
     )
 }

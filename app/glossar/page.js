@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function GlossarPage() {
     const crumbs = [
-        { name: 'KI-Verzeichnisse', path: '/' },
+        { name: 'AIGeddon', path: '/' },
         { name: 'Glossar', path: '/glossar' },
     ]
     const schema = [

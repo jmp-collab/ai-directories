@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import './globals.css'
-import { SITE_URL, SITE_NAME, REPO_URL, withBase } from '../lib/site'
+import { SITE_URL, SITE_NAME, SITE_TAGLINE, REPO_URL, withBase } from '../lib/site'
+import LeadBox from './components/LeadBox'
 import BartModus from './components/BartModus'
 
 const TICKER = [
+    '☢️ Die KI-Apokalypse kommt. Dein Tool sollte vorher gelistet sein',
     '🚨 Eilmeldung: Backlink gesichtet, Gründer weint vor Glück',
     '🤖 Kein Roboter wurde beim Pflegen dieser Liste gelangweilt',
     '📈 DR 90 klingt toll, ist aber auch nur eine Zahl mit Selbstbewusstsein',
@@ -19,7 +21,7 @@ export const metadata = {
         template: `%s | ${SITE_NAME}`,
     },
     description:
-        'Die deutsche Liste der KI-Verzeichnisse: AI Directories mit Domain Rating, Traffic, Preis und Einreichungs-Check. Ehrlich, kostenlos und mit mehr Humor, als SEO erlaubt.',
+        'AIGeddon: die deutsche Liste der KI-Verzeichnisse mit Domain Rating, Traffic, Preis, Freischaltdauer und Einreichungs-Check. Dazu Launch-Kit, Ratgeber und KI-Use-Cases. Ehrlich, kostenlos und mit mehr Humor, als SEO erlaubt.',
     applicationName: SITE_NAME,
     openGraph: {
         type: 'website',
@@ -48,8 +50,8 @@ export default function RootLayout({ children }) {
                 <header className="site-header">
                     <div className="container header-inner">
                         <Link href="/" className="brand">
-                            {SITE_NAME} 🤖
-                            <span className="brand-sub">Linkfriedhöfe zum Mitnehmen</span>
+                            AIGEDDON ☢️
+                            <span className="brand-sub">{SITE_TAGLINE}</span>
                         </Link>
                         <nav aria-label="Hauptnavigation">
                             <ul>
@@ -87,11 +89,14 @@ export default function RootLayout({ children }) {
                 </div>
                 <main id="inhalt" className="container">
                     {children}
+                    <LeadBox />
                 </main>
                 <footer className="site-footer">
                     <div className="container">
                         <p>
-                            Gebaut von <Link href="/ueber-jean">Jean Maurice Port</Link>, SEO-Manager mit Bart und Humor.
+                            Gebaut von <Link href="/ueber-jean">Jean Maurice Port</Link>, SEO-Manager mit Bart und Humor. ·{' '}
+                            <Link href="/werben">Werben</Link> · <Link href="/transparenz">Transparenz</Link> ·{' '}
+                            <a href="https://www.youtube.com/@AIGeddon">YouTube</a>
                         </p>
                         <p>
                             Open Source auf <a href={REPO_URL}>GitHub</a> (Pull Requests werden mit Konfetti empfangen) · Rohdaten als{' '}
