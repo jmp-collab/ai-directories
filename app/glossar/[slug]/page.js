@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import JsonLd from '../../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
 import Faq, { faqSchema } from '../../components/Faq'
+import GlossarText from '../../components/GlossarText'
 import { SITE_NAME, absoluteUrl } from '../../../lib/site'
 import { KI_GLOSSAR, glossarSlug } from '../../../lib/ki-glossar'
 import { GLOSSAR_DETAILS } from '../../../lib/ki-glossar-details'
@@ -50,6 +51,7 @@ export default function BegriffPage({ params }) {
     const i = BEGRIFFE.indexOf(b)
     const vor = BEGRIFFE[i - 1]
     const nach = BEGRIFFE[i + 1]
+    const gesehen = new Set()
     const verwandt = (b.verwandt || []).map((t) => BEGRIFFE.find((x) => x.term === t)).filter(Boolean)
     const faq = [
         { q: frage(b.term), a: b.text },
@@ -85,13 +87,17 @@ export default function BegriffPage({ params }) {
             {b.beispiel && (
                 <section aria-labelledby="beispiel">
                     <h2 id="beispiel">Beispiel aus der Praxis</h2>
-                    <p className="box box-info">{b.beispiel}</p>
+                    <p className="box box-info">
+                        <GlossarText text={b.beispiel} gesehen={gesehen} ausser={b.slug} />
+                    </p>
                 </section>
             )}
             {b.praxis && (
                 <section aria-labelledby="tipp">
                     <h2 id="tipp">Darauf kommt es an</h2>
-                    <p className="box box-tipp">{b.praxis}</p>
+                    <p className="box box-tipp">
+                        <GlossarText text={b.praxis} gesehen={gesehen} ausser={b.slug} />
+                    </p>
                 </section>
             )}
             {b.href && (

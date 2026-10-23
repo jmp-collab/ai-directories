@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import BeforeAfter from './BeforeAfter'
+import GlossarText from './GlossarText'
 import SendToAI from './SendToAI'
 import konfetti from '../../lib/konfetti'
 
@@ -58,6 +59,8 @@ export default function TutorialStepper({ schritte, quiz, finale }) {
         touch.current = null
     }
 
+    // Glossar-Links nur beim ersten Vorkommen im ganzen Tutorial
+    const gesehen = new Set()
     return (
         <section className="stepper" ref={root} onKeyDown={onKey} aria-roledescription="Schritt-für-Schritt-Anleitung">
             <div className="stepper-progress" aria-hidden="true">
@@ -93,7 +96,9 @@ export default function TutorialStepper({ schritte, quiz, finale }) {
                             </p>
                             <h2>{s.titel}</h2>
                             {s.text.map((p, k) => (
-                                <p key={k}>{p}</p>
+                                <p key={k}>
+                                    <GlossarText text={p} gesehen={gesehen} />
+                                </p>
                             ))}
                             {s.vergleich && <BeforeAfter {...s.vergleich} />}
                             {s.jean && (

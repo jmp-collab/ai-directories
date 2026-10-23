@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
 import JsonLd from '../../components/JsonLd'
 import Jean from '../../components/Jean'
+import GlossarText from '../../components/GlossarText'
 import { ARTIKEL, getArtikel } from '../../../lib/ratgeber'
 import { absoluteUrl } from '../../../lib/site'
 
@@ -52,6 +53,7 @@ export default function ArtikelPage({ params }) {
         },
     ]
     const others = ARTIKEL.filter((x) => x.slug !== a.slug)
+    const gesehen = new Set()
     return (
         <article>
             <JsonLd data={schema} />
@@ -77,7 +79,9 @@ export default function ArtikelPage({ params }) {
                     <section key={s.h} aria-labelledby={slugId(s.h)}>
                         <h2 id={slugId(s.h)}>{s.h}</h2>
                         {s.p.map((p) => (
-                            <p key={p.slice(0, 40)}>{p}</p>
+                            <p key={p.slice(0, 40)}>
+                                <GlossarText text={p} gesehen={gesehen} />
+                            </p>
                         ))}
                     </section>
                 ))}

@@ -39,6 +39,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P25 Qualitätsrunde**: kompletter Link-Crawl, Überlauf-Check mobil, Kontrast, Lighthouse-ähnliche Prüfung der Hub-Seiten.
 - [x] **P26 Glossar-Einzelseiten**: „Was ist …?“-Seite je KI-Begriff (41) mit Erklärung, Beispiel, Praxis-Tipp, verwandten Begriffen, DefinedTerm- und FAQ-Schema.
 - [x] **P27 Prompts III**: 15 weitere Prompt-Vorlagen für häufige Suchanfragen (Bewerbung, Excel-Formeln, Social Media, Zusammenfassung, Übersetzung, E-Mail-Antwort u. a.).
+- [x] **P28 Glossar-Verlinkung**: Fachbegriffe in Tutorials, Ratgebern und Glossar-Seiten automatisch beim ersten Vorkommen mit der Glossar-Seite verlinkt.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
 ## Für Jean (am Ende präsentieren)
@@ -78,3 +79,4 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P25: Qualitätsrunde: 1.124 Seiten, 79.745 interne Links geprüft, 0 kaputt; 39 Seitentypen mobil ohne Überlauf; Kontrast und Konsole auf den neuen Seiten (hell/dunkel, mobil/desktop) ohne Befund.
 - 2026-10-23 · P26: 41 Glossar-Seiten /glossar/[begriff] („Was ist ein Token?“ usw.) mit Erklärung, Praxis-Beispiel, Tipp, verwandten Begriffen, Blättern, DefinedTerm- und FAQ-Schema; Glossar-Übersicht verlinkt jede Seite, Sitemap ergänzt.
 - 2026-10-23 · P27: 15 neue Prompt-Vorlagen (45 gesamt): Social-Media-Redaktionsplan, LinkedIn-Post, Instagram-Caption, Text zusammenfassen, Übersetzen und lokalisieren, E-Mail-Antwort, Pressemitteilung, Landingpage-Texte, Wettbewerbsanalyse, SQL-Abfrage, Fehlermeldung debuggen, Hausarbeit-Gliederung, Arbeitszeugnis verstehen, Gehaltsverhandlung, Content-Briefing; jeweils mit Senden an ChatGPT, Claude und Co.
+- 2026-10-23 · P28: automatische Glossar-Links (lib/autolink.js, 34 Begriffe mit Plural- und Varianten) in Tutorials, Ratgebern und Glossar-Seiten, je Seite nur beim ersten Vorkommen, dezent gepunktet; ohne Hydration-Fehler.
