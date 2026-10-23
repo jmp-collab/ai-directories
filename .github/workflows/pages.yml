@@ -5,6 +5,9 @@ name: GitHub Pages
 on:
     push:
         branches: [main]
+    # Täglicher Neubau: Deal und Tool des Tages wechseln, Datumsangaben bleiben frisch.
+    schedule:
+        - cron: '17 4 * * *'
     workflow_dispatch:
 
 permissions:
