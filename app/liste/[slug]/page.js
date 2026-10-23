@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import JsonLd from '../../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
 import DirectoryTable from '../../components/DirectoryTable'
+import DealCards from '../../components/DealCards'
+import LeadBox from '../../components/LeadBox'
 import { LISTS, getList } from '../../../lib/data'
 import { absoluteUrl } from '../../../lib/site'
 
@@ -59,6 +61,16 @@ export default function ListPage({ params }) {
                 <p className="lead">{list.lead}</p>
             </section>
 
+            {list.slug === 'rabattcodes' && (
+                <>
+                    <DealCards directories={list.items} />
+                    <LeadBox
+                        title="Deal-Alarm 🚨"
+                        text="Neue Rabattcodes und Gratis-Aktionen der Verzeichnisse landen zuerst im Newsletter. Wer zu spät kommt, zahlt Listenpreis."
+                    />
+                    <h2>Alle Codes als Tabelle</h2>
+                </>
+            )}
             <DirectoryTable directories={list.items} />
 
             <section aria-labelledby="weitere">

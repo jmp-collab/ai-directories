@@ -1,5 +1,6 @@
 import LaunchKit from './LaunchKit'
 import ToolPartners from '../components/ToolPartners'
+import ServiceHint from '../components/ServiceHint'
 import Jean from '../components/Jean'
 import JsonLd from '../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
@@ -51,6 +52,7 @@ export default function LaunchKitPage() {
                 </Jean>
             </section>
             <LaunchKit directories={directories} />
+            <ServiceHint text="Texte fertig, aber keine Zeit zum Eintragen?" />
             <ToolPartners />
         </>
     )
