@@ -22,8 +22,20 @@ export default function KiTestSuite({ tests, kategorien }) {
     const [kis, setKis] = useState(['chatgpt', 'claude', 'gemini'])
     const [noten, setNoten] = useState({})
     const [geladen, setGeladen] = useState(false)
+    const [geteilt, setGeteilt] = useState(null)
+    const [kopiert, setKopiert] = useState(false)
 
     useEffect(() => {
+        // Geteiltes Ergebnis aus dem Link: #ergebnis=claude:90:10,chatgpt:83:10
+        const m = window.location.hash.match(/ergebnis=([\w:,-]+)/)
+        if (m) {
+            const liste = m[1]
+                .split(',')
+                .map((x) => x.split(':'))
+                .map(([ki, p, n]) => ({ ki, name: TEST_KIS.find((k) => k.id === ki)?.name, prozent: Math.min(100, Math.max(0, Number(p) || 0)), bewertet: Number(n) || 0 }))
+                .filter((x) => x.name)
+            if (liste.length) setGeteilt(liste)
+        }
         const s = load()
         if (s) {
             if (Array.isArray(s.kis) && s.kis.length) setKis(s.kis)
@@ -62,10 +74,54 @@ export default function KiTestSuite({ tests, kategorien }) {
         if (fertig) konfetti(70)
     }, [fertig])
 
-    const teilen = ergebnis.map((e, i) => `${i + 1}. ${e.name}: ${e.prozent} % (${e.bewertet} Aufgaben)`).join('\n')
+    const teilen = ergebnis
+        .filter((e) => e.bewertet)
+        .map((e, i) => `${i + 1}. ${e.name}: ${e.prozent} % (${e.bewertet} ${e.bewertet === 1 ? 'Aufgabe' : 'Aufgaben'})`)
+        .join('\n')
+    const teilLink = () => {
+        const code = ergebnis.filter((e) => e.bewertet).map((e) => `${e.ki}:${e.prozent}:${e.bewertet}`).join(',')
+        return `${window.location.origin}${window.location.pathname}#ergebnis=${code}`
+    }
+    const teilenKlick = async () => {
+        const text = `Mein KI-Test auf AIGeddon:\n${teilen}\n\nSelbst testen:`
+        const url = teilLink()
+        try {
+            if (navigator.share) {
+                await navigator.share({ title: 'Mein KI-Test', text, url })
+                return
+            }
+        } catch {
+            return
+        }
+        try {
+            await navigator.clipboard.writeText(`${text} ${url}`)
+            setKopiert(true)
+            setTimeout(() => setKopiert(false), 2500)
+        } catch {}
+    }
 
     return (
         <div className="kitest">
+            {geteilt && (
+                <section className="kitest-result kitest-geteilt" aria-labelledby="geteilt-titel">
+                    <h3 id="geteilt-titel">📨 Dir wurde ein Testergebnis geschickt</h3>
+                    <ol>
+                        {geteilt.map((e, i) => (
+                            <li key={e.ki}>
+                                <span className="kitest-result-name">
+                                    {i === 0 ? '👑 ' : ''}
+                                    {e.name}
+                                </span>
+                                <span className="kitest-bar">
+                                    <span style={{ width: `${e.prozent}%` }} />
+                                </span>
+                                <span className="kitest-result-pct">{e.prozent} %</span>
+                            </li>
+                        ))}
+                    </ol>
+                    <p className="kitest-note">Siehst du das genauso? Mach den Test selbst, dein Ergebnis erscheint unten.</p>
+                </section>
+            )}
             <div className="kitest-setup">
                 <p className="send-to-ai-label">Welche KIs testest du?</p>
                 <div className="kb-chips" role="group" aria-label="KIs auswählen">
@@ -157,13 +213,18 @@ export default function KiTestSuite({ tests, kategorien }) {
                     ))}
                 </ol>
                 {erledigt > 0 && (
-                    <button
-                        type="button"
-                        className="copy-button"
-                        onClick={() => navigator.clipboard?.writeText(`Mein KI-Test auf AIGeddon:\n${teilen}`).catch(() => {})}
-                    >
-                        Ergebnis kopieren
-                    </button>
+                    <div className="kitest-share">
+                        <button type="button" className="button" onClick={teilenKlick}>
+                            {kopiert ? '✅ Link kopiert' : '📤 Ergebnis teilen'}
+                        </button>
+                        <button
+                            type="button"
+                            className="copy-button"
+                            onClick={() => navigator.clipboard?.writeText(`Mein KI-Test auf AIGeddon:\n${teilen}`).catch(() => {})}
+                        >
+                            Als Text kopieren
+                        </button>
+                    </div>
                 )}
                 <p className="kitest-note">Deine Bewertungen bleiben in deinem Browser. Ergebnisse hängen von Modellversion, Tarif und Tagesform der KI ab; wiederhole den Test ruhig.</p>
             </section>
