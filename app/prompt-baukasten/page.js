@@ -2,6 +2,7 @@ import Link from 'next/link'
 import JsonLd from '../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import PromptBaukasten from '../components/PromptBaukasten'
+import LeadMagnetBox from '../components/LeadMagnetBox'
 import { SITE_NAME } from '../../lib/site'
 
 export const metadata = {
@@ -41,6 +42,7 @@ export default function PromptBaukastenPage() {
                 </p>
             </section>
             <PromptBaukasten />
+            <LeadMagnetBox id="prompt-spickzettel" />
             <p>
                 Lieber mit Vorlage starten? <Link href="/prompts">Zur Prompt-Bibliothek →</Link>
             </p>

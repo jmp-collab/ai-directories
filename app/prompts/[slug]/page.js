@@ -3,6 +3,10 @@ import { notFound } from 'next/navigation'
 import JsonLd from '../../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
 import PromptRunner from '../../components/PromptRunner'
+import LeadMagnetBox from '../../components/LeadMagnetBox'
+import SlideInLead from '../../components/SlideInLead'
+import EmailCapture from '../../components/EmailCapture'
+import { NEWSLETTER_NAME, NEWSLETTER_URL } from '../../../lib/monetization'
 import { SITE_NAME } from '../../../lib/site'
 import { getPrompts, getPrompt, PROMPT_KATEGORIEN, TECHNIKEN } from '../../../lib/prompts'
 import { getTool, toolHref, toolRel } from '../../../lib/tools'
@@ -68,6 +72,7 @@ export default function PromptPage({ params }) {
                     ))}
                 </dl>
             </section>
+            <LeadMagnetBox id="prompt-paket" />
             {tools.length > 0 && (
                 <section aria-labelledby="tools">
                     <h2 id="tools">Damit setzt du das Ergebnis um</h2>
@@ -98,6 +103,10 @@ export default function PromptPage({ params }) {
                     </ul>
                 </section>
             )}
+            <SlideInLead id="prompt" title={NEWSLETTER_URL ? `Jeden Freitag 5 neue Prompts von ${NEWSLETTER_NAME} 📬` : 'Prompt-Tricks als Video 🎬'}>
+                <p>{NEWSLETTER_URL ? 'Getestet, auf Deutsch, sofort nutzbar. Kostenlos, jederzeit kündbar.' : 'Neue Prompts, Tool-Tests und Case Studies auf dem AIGeddon-Kanal.'}</p>
+                <EmailCapture />
+            </SlideInLead>
             <p>
                 <Link href="/prompts">← Alle Prompts</Link> · <Link href="/prompt-baukasten">Eigenen Prompt bauen</Link>
             </p>

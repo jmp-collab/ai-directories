@@ -32,6 +32,7 @@ Gesamtplan mit 100 Schritten: `docs/ROADMAP-100.md`. Neue Aufgaben von dort hier
 - [ ] **Prompt-Ketten** `/prompt-ketten`: 3 Workflows mit je 3 bis 5 Schritten und Senden-Button pro Schritt.
 - [ ] **Rechner** `/rechner`: zuerst Zeitersparnis-/ROI-Rechner, dann Automatisierungs-Kostenrechner (Make/Zapier/n8n), Preise nur mit Quelle.
 - [ ] **Prompt des Tages** als Widget im rechten Seitenrand.
+- [ ] **Weitere Tutorials** (je eines pro Runde): Custom GPT/Claude Project bauen, Bild-Prompts, Newsletter mit KI in einer Stunde; Format wie `lib/tutorials.js`.
 - [ ] **Absprung-Links prüfen** (vierteljährlich, `lib/ai-targets.js`): ChatGPT, Claude, Perplexity, Grok, Google AI Mode.
 - [ ] **Weitere Tool-Vergleiche** in `lib/comparisons.js`: „Canva vs. …“ erst, wenn Design-Alternativen im Tool-Verzeichnis stehen; „Tally vs. Typeform“; „ElevenLabs vs. Murf“; „Descript vs. Pictory“. Nur Empfehlungen, die sich aus `db/tools.json` belegen lassen.
 - [ ] **Top 50 als echter Lead-Magnet**: Sobald der Newsletter läuft, CSV-Download an das Abo koppeln (z. B. beehiiv-Lead-Magnet) und die Seite entsprechend umbauen. *wartet auf Newsletter*
@@ -48,6 +49,8 @@ Gesamtplan mit 100 Schritten: `docs/ROADMAP-100.md`. Neue Aufgaben von dort hier
 - **Täglich (GitHub Actions, 04:17 UTC):** Neubau der Seite, damit Deal und Tool des Tages wechseln.
 
 ## Erledigt
+
+- 2026-10-23 · PR #37: Tutorials mit Schritt-Slider, Vorher/Nachher-Regler, Quiz und Konfetti (2 Tutorials), Prompt-Check mit Token-Schätzung, Download-Center mit Spickzettel und Prompt-Paket, eingebettete Mail-Erfassung, Slide-in-Lead-Box, `docs/LEADS.md`.
 
 - 2026-10-23 · PR #36: Prompt-Bibliothek `/prompts` (12 Vorlagen), Prompt-Baukasten mit Score, Senden-Buttons an ChatGPT/Claude/Perplexity/Grok/Google AI Mode, Newsletter-Baustein als PromptGott, Plan `docs/ROADMAP-100.md`.
 

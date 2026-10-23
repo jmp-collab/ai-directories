@@ -30,12 +30,12 @@ Leitidee: **AIGeddon wird die deutsche Zentrale für „KI wirklich benutzen“*
 17. `[ ]` **Bild-Prompts**: Midjourney-, DALL·E-, Flux-Vorlagen mit Stil-Bausteinen (Licht, Kamera, Stil) als Klick-Generator. **T A**
 18. `[ ]` **Prompt-Ketten** („Workflows“): 3–5 Prompts hintereinander, z. B. „Von der Idee zum veröffentlichten Artikel“. Jeder Schritt mit eigenem Senden-Button. **T L**
 19. `[ ]` **System-Prompt-Generator** für Custom GPTs, Claude Projects und Gems. **T**
-20. `[ ]` **Prompt-Optimierer ohne KI**: regelbasierte Prüfung eines eingefügten Prompts (fehlende Rolle, kein Format, zu vage Verben) mit Verbesserungsvorschlägen. **T**
+20. `[x]` **Prompt-Optimierer ohne KI**: regelbasierte Prüfung eines eingefügten Prompts (fehlende Rolle, kein Format, zu vage Verben) mit Verbesserungsvorschlägen. **T**
 21. `[ ]` Merkliste „Meine Prompts“ im Browser (localStorage), Export als Text. **L**
 22. `[ ]` Prompt des Tages im rechten Seitenrand (rotiert wie Deal des Tages). **L**
 23. `[ ]` Modell-Tipps pro Prompt: welches Modell sich eignet (ChatGPT, Claude, Perplexity für Recherche). Nur Aussagen mit Quelle. **A**
 24. `[ ]` Prompt-Seiten mit FAQ-Schema und „Beispiel-Ergebnis“-Abschnitt (echtes, gekennzeichnetes Ergebnis). **T**
-25. `[ ]` **PromptGott-Paket** als Lead-Magnet: 100 Prompts als PDF/Notion, nur gegen Newsletter-Anmeldung. **L**
+25. `[x]` **PromptGott-Paket** als Lead-Magnet: 100 Prompts als PDF/Notion, nur gegen Newsletter-Anmeldung. **L**
 26. `[ ]` Premium-Prompt-Pakete (z. B. „SEO-Prompt-Paket für Shops“) über Gumroad, Lemon Squeezy oder Digistore24. **P**
 27. `[ ]` Prompt-Glossar: 40 Begriffe (Few-Shot, Chain of Thought, Temperatur, Kontextfenster …) mit Verweisen. **T**
 28. `[ ]` Vierteljährlicher Test aller Absprung-Links (stehen in `lib/ai-targets.js`). **T**
@@ -45,7 +45,7 @@ Leitidee: **AIGeddon wird die deutsche Zentrale für „KI wirklich benutzen“*
 ## Block 3: Rechner und interaktive Tools (31–45)
 
 31. `[ ]` **KI-Kosten-Rechner**: Tokens → Euro für API-Modelle (Preise mit Quelle und Datum, monatlicher Preis-Check). **T A**
-32. `[ ]` **Token- und Zeichenzähler** mit Schätzung für deutsche Texte. **T**
+32. `[x]` **Token- und Zeichenzähler** mit Schätzung für deutsche Texte. **T**
 33. `[ ]` **Abo-Rechner**: Welche KI-Abos lohnen sich (ChatGPT, Claude, Perplexity, Gemini) nach Nutzung pro Woche. **A**
 34. `[ ]` **Zeitersparnis-/ROI-Rechner**: Stunden pro Woche × Stundensatz gegen Tool-Kosten. Perfekt für B2B-Leads. **L A**
 35. `[ ]` **Automatisierungs-Kostenrechner**: Make vs. Zapier vs. n8n nach Ausführungen pro Monat. **A**
@@ -62,8 +62,8 @@ Leitidee: **AIGeddon wird die deutsche Zentrale für „KI wirklich benutzen“*
 
 ## Block 4: Tutorials und Academy (46–58)
 
-46. `[ ]` Rubrik `/tutorials`: Schritt-für-Schritt-Anleitungen mit Screenshots, HowTo-Schema, Zeitangabe. **T**
-47. `[ ]` Tutorial: Prompt Engineering in 15 Minuten (Grundkurs, verlinkt auf alle Techniken). **T L**
+46. `[x]` Rubrik `/tutorials`: Schritt-für-Schritt-Anleitungen mit Screenshots, HowTo-Schema, Zeitangabe. **T**
+47. `[x]` Tutorial: Prompt Engineering in 15 Minuten (Grundkurs, verlinkt auf alle Techniken). **T L**
 48. `[ ]` Tutorial: Eigenen Custom GPT bzw. Claude Project bauen. **T**
 49. `[ ]` Tutorial: Newsletter mit KI in einer Stunde (mit Prompt-Kette und beehiiv). **A**
 50. `[ ]` Tutorial: Erste Automatisierung mit Make, n8n oder Zapier. **A**
@@ -95,9 +95,9 @@ Leitidee: **AIGeddon wird die deutsche Zentrale für „KI wirklich benutzen“*
 
 71. `[x]` Newsletter-Baustein auf PromptGott umbenannt; erscheint automatisch, sobald die URL gesetzt ist.
 72. `[J]` Newsletter-Adresse von PromptGott nennen (gefunden: dev.to/promptgott verweist auf prmoptgenie.substack.com; nicht abrufbar, bitte bestätigen). Empfehlung: beehiiv wegen Empfehlungsprogramm und Werbenetzwerk; Substack geht auch.
-73. `[ ]` Eingebettetes Anmeldeformular statt Link (Substack-Embed bzw. beehiiv-Formular). **L**
-74. `[ ]` Content-Upgrades: jede Prompt-Kategorie bekommt ein passendes Paket gegen E-Mail. **L**
-75. `[ ]` Exit-Intent bzw. Scroll-Box nur auf Prompt-Seiten, sparsam (einmal pro Besuch). **L**
+73. `[x]` Eingebettetes Anmeldeformular statt Link (Substack-Embed bzw. beehiiv-Formular). **L**
+74. `[x]` Content-Upgrades: jede Prompt-Kategorie bekommt ein passendes Paket gegen E-Mail. **L**
+75. `[x]` Exit-Intent bzw. Scroll-Box nur auf Prompt-Seiten, sparsam (einmal pro Besuch). **L**
 76. `[ ]` Newsletter-Archiv auf der Seite (`/promptgott`), jede Ausgabe als indexierbare Seite. **T L**
 77. `[ ]` Empfehlungsprogramm (beehiiv Referral): Prämien = Prompt-Pakete. **L**
 78. `[ ]` Willkommensserie: 5 Mails mit den besten Prompts, Tools und Case Studies. **L A**
