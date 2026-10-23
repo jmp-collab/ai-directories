@@ -7,9 +7,14 @@ export default function ToolCards({ tools }) {
             {tools.map((t) => (
                 <li key={t.slug} className={t.konsens === 3 ? 'is-gold' : t.konsens === 2 ? 'is-silver' : ''}>
                     <div className="kb-head">
-                        <a href={t.url} target="_blank" rel="nofollow noopener noreferrer">
-                            <strong>{t.name}</strong> ↗
-                        </a>
+                        <span className="kb-name">
+                            <Link href={`/ki-tools/tool/${t.slug}`}>
+                                <strong>{t.name}</strong>
+                            </Link>
+                            <a className="kb-extern" href={t.url} target="_blank" rel="nofollow noopener noreferrer" aria-label={`${t.name} beim Anbieter öffnen`}>
+                                ↗
+                            </a>
+                        </span>
                         <span className="kb-badges">
                             {t.konsens === 3 && <span title="In allen 3 Listen">🏆 3/3</span>}
                             {t.konsens === 2 && <span title="In 2 von 3 Listen">🥈 2/3</span>}

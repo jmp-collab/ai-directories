@@ -81,9 +81,9 @@ export default function RubrikPage({ params }) {
                     <ol className="podium">
                         {favoriten.map((t) => (
                             <li key={t.slug}>
-                                <a href={t.url} target="_blank" rel="nofollow noopener noreferrer">
-                                    <strong>{t.name}</strong> ↗
-                                </a>
+                                <Link href={`/ki-tools/tool/${t.slug}`}>
+                                    <strong>{t.name}</strong>
+                                </Link>
                                 <span>{t.konsens === 3 ? '🏆 in allen 3 Listen' : '🥈 in 2 von 3 Listen'}</span>
                                 {t.deutsch && <span className="podium-text">{t.beschreibung}</span>}
                                 {t.profil && <Link href={`/tools/${t.profil.slug}`}>🧔 Steckbrief mit Preisen →</Link>}

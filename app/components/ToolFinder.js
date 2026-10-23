@@ -88,9 +88,14 @@ export default function ToolFinder({ tools }) {
                                     <li key={t.s} style={{ '--i': i }}>
                                         <span className="finder-rank">{i + 1}</span>
                                         <div>
-                                            <a href={t.u} target="_blank" rel="nofollow noopener noreferrer">
-                                                <strong>{t.n}</strong> ↗
-                                            </a>{' '}
+                                            <span className="kb-name">
+                                                <Link href={`/ki-tools/tool/${t.s}`}>
+                                                    <strong>{t.n}</strong>
+                                                </Link>
+                                                <a className="kb-extern" href={t.u} target="_blank" rel="nofollow noopener noreferrer" aria-label={`${t.n} beim Anbieter öffnen`}>
+                                                    ↗
+                                                </a>
+                                            </span>{' '}
                                             {t.k === 3 && <span title="In allen 3 Listen">🏆</span>}
                                             {t.k === 2 && <span title="In 2 von 3 Listen">🥈</span>}
                                             {t.o === 1 && <span title="Open Source">🔓</span>}
