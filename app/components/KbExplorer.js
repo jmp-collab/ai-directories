@@ -80,7 +80,7 @@ export default function KbExplorer({ tools, rubriken, rubrik: fest }) {
                                 {t.g === 1 && <span title="Gratis laut Quelle">🆓</span>}
                             </span>
                         </div>
-                        {t.d && <p lang="en">{t.d}</p>}
+                        {t.d && <p lang={t.e ? 'en' : 'de'}>{t.d}</p>}
                         {t.p && (
                             <Link className="kb-profil" href={`/tools/${t.p}`}>
                                 🧔 Jeans Steckbrief: Preise, Gratis-Tarif, Alternativen →
