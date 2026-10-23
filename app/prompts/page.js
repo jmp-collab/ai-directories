@@ -64,6 +64,9 @@ export default function PromptsPage() {
                         </div>
                     ))}
                 </dl>
+                <p>
+                    Begriffe wie Few-Shot, Token oder Kontextfenster? <Link href="/glossar#ki">Zum KI-Glossar →</Link>
+                </p>
             </section>
         </>
     )
