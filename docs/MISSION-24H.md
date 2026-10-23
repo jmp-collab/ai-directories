@@ -48,7 +48,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P34 Performance II**: größte Seiten und JS-Bundles messen, unnötige Client-Daten entfernen.
 - [x] **P36 Prompts IV**: 10 Prompts für die neuen Zielgruppen (Stellenanzeige, Elternbrief, Produktfoto-Briefing, Shorts-Ideen, Video-Titel, Kundenanfrage Handwerk, Vokabeltrainer, Referat-Folien, Onboarding-Plan, Rückruf-Notiz).
 - [x] **P37 Rubrik-Ratgeber II**: Auswahlkriterien, Tipp/Warnung und FAQ für Audio, Musik, Agenten, Coding, Produktivität, Chatbots.
-- [ ] **P38 Rubrik-Ratgeber III**: Suche, Recherche, Modelle, Sicherheit, Finanzen (Kriterien, Tipp, Warnung, FAQ).
+- [x] **P38 Rubrik-Ratgeber III**: Suche, Recherche, Modelle, Sicherheit, Finanzen (Kriterien, Tipp, Warnung, FAQ).
 - [ ] **P39 Ratgeber „KI und Datenschutz“**: DSGVO-Checkliste für KI-Tools (AVV, Training mit Daten, Serverstandort, Einwilligung bei Aufnahmen, EU AI Act Grundzüge), verlinkt aus Zielgruppen und Rubriken.
 - [ ] **P40 Startseite & Hubs**: Zielgruppen- und Alternativen-Einstiege auf Startseite und KI-Tools-Hub, Kompass in der Seitenleiste ergänzen.
 - [ ] **P35 Abschluss-QA**: Link-Crawl, Überlauf, Kontrast, Strukturdaten, Live-Stichproben.
@@ -100,3 +100,4 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P34: Messung: kleine Seiten ~97 KB HTML bzw. 16 KB gzip, Startseite 532 KB / 74 KB gzip, KI-Tools-Hub 306 KB / 61 KB gzip, First Load JS höchstens 112 KB. Größter Pro-Seite-Anteil sind Layout-Teile (Sprite, Seitenleiste, Footer), die Next.js in HTML und RSC-Daten doppelt ausliefert; ein ausgelagerter Sprite spart nur ~1,4 KB gzip, daher bewusst nicht umgebaut. Listen bleiben im HTML, weil sie die internen Links zu den Tool-Seiten tragen.
 - 2026-10-23 · P36: 10 neue Prompts (55 gesamt): Stellenanzeige, Elternbrief, Produktfoto-Briefing, Shorts-Ideen, Video-Titel, Kundenanfrage Handwerk, Vokabeltrainer, Referat-Folien, Onboarding-Plan, Telefonnotiz; in die Zielgruppen-Karten HR, Schüler, Handwerk, Onlinehändler, Content Creator eingebunden.
 - 2026-10-23 · P37: Ratgeber-Blöcke (5 Kriterien, Tipp, Warnung, 3 FAQ mit Schema) für Chatbots, Produktivität, Coding, Agenten, Audio, Musik; damit haben 10 der 15 Rubriken Pillar-Inhalte. Kontrast/Konsole/Überlauf geprüft.
+- 2026-10-23 · P38: Ratgeber-Blöcke für Suche, Recherche, Modelle, Sicherheit, Finanzen; alle 15 Rubriken der KI-Tool-Datenbank haben jetzt Auswahlkriterien, Tipp, Warnung und FAQ-Schema.
