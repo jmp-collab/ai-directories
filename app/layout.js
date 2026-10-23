@@ -2,6 +2,9 @@ import Link from 'next/link'
 import './globals.css'
 import { SITE_URL, SITE_NAME, SITE_TAGLINE, REPO_URL, withBase } from '../lib/site'
 import LeadBox from './components/LeadBox'
+import { SidebarLeft, SidebarRight, MobileDock } from './components/Sidebars'
+import BackToTop from './components/BackToTop'
+import JeanIcon from './components/JeanIcon'
 import BartModus from './components/BartModus'
 
 const TICKER = [
@@ -50,6 +53,7 @@ export default function RootLayout({ children }) {
                 <header className="site-header">
                     <div className="container header-inner">
                         <Link href="/" className="brand">
+                            <JeanIcon cool badge="strahlung" size={44} className="brand-icon" />
                             AIGEDDON ☢️
                             <span className="brand-sub">{SITE_TAGLINE}</span>
                         </Link>
@@ -93,10 +97,18 @@ export default function RootLayout({ children }) {
                         ))}
                     </div>
                 </div>
-                <main id="inhalt" className="container">
-                    {children}
-                    <LeadBox />
-                </main>
+                <div className="page-grid">
+                    <aside className="sidebar sidebar-left" aria-label="Jeans Kompass">
+                        <SidebarLeft />
+                    </aside>
+                    <main id="inhalt" className="page-main">
+                        {children}
+                        <LeadBox />
+                    </main>
+                    <aside className="sidebar sidebar-right" aria-label="Deals, Tools und Neuigkeiten">
+                        <SidebarRight />
+                    </aside>
+                </div>
                 <footer className="site-footer">
                     <div className="container">
                         <p>
@@ -115,6 +127,8 @@ export default function RootLayout({ children }) {
                         </p>
                     </div>
                 </footer>
+                <MobileDock />
+                <BackToTop />
                 <BartModus />
             </body>
         </html>

@@ -1600,3 +1600,275 @@ td.wrap {
     background: var(--surface);
     border-radius: 0 var(--radius) var(--radius) 0;
 }
+
+/* ---------- Drei-Spalten-Layout mit mitscrollenden Seitenleisten ---------- */
+
+.page-grid {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.sidebar {
+    display: none;
+}
+
+.brand {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    column-gap: 8px;
+    align-items: center;
+}
+
+.brand-icon {
+    grid-row: span 2;
+    filter: drop-shadow(2px 2px 0 var(--border));
+}
+
+.jean-icon {
+    flex: none;
+}
+
+@media (min-width: 721px) {
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+    }
+}
+
+@media (min-width: 1180px) {
+    .page-grid {
+        max-width: 1480px;
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr) 270px;
+        gap: 28px;
+        align-items: start;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: sticky;
+        top: 96px;
+        max-height: calc(100vh - 112px);
+        overflow-y: auto;
+        padding: 24px 4px 12px;
+        scrollbar-width: thin;
+    }
+}
+
+.widget {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 12px 14px;
+    font-size: 0.92rem;
+}
+
+.widget p {
+    margin: 0 0 8px;
+}
+
+.widget p:last-child {
+    margin-bottom: 0;
+}
+
+.widget-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.widget-note {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.widget-code {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.widget-code code {
+    padding: 2px 6px;
+    border: 2px dashed var(--border);
+    border-radius: 6px;
+    overflow-wrap: anywhere;
+}
+
+.widget-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.widget-list li {
+    margin-bottom: 4px;
+}
+
+.kompass {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 2px;
+}
+
+.kompass a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.kompass a:hover,
+.kompass a:focus-visible {
+    background: var(--pop);
+}
+
+.kompass a:hover .jean-icon {
+    transform: rotate(-8deg) scale(1.1);
+}
+
+.kompass .jean-icon {
+    transition: transform 0.15s;
+}
+
+.mini-bar {
+    height: 10px;
+    border: 2px solid var(--border);
+    border-radius: 99px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.mini-bar span {
+    display: block;
+    height: 100%;
+    background: var(--pop-2);
+}
+
+.button-small {
+    font-size: 0.88rem;
+    padding: 6px 12px;
+}
+
+.widget-photo {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.widget-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.widget-photo span {
+    display: block;
+    padding: 10px 14px;
+    font-weight: 700;
+}
+
+.widget-photo:hover img {
+    transform: scale(1.03);
+}
+
+.widget-photo img {
+    transition: transform 0.2s;
+}
+
+/* ---------- Mobile: Dock unten, Jean bringt dich nach oben ---------- */
+
+.mobile-dock {
+    display: none;
+}
+
+@media (max-width: 1179px) {
+    .mobile-dock {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 40;
+        background: var(--surface);
+        border-top: 3px solid var(--border);
+        padding: 4px 4px calc(4px + env(safe-area-inset-bottom));
+    }
+
+    .mobile-dock a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--text);
+        padding: 2px 0;
+    }
+
+    body {
+        padding-bottom: 72px;
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 41;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s;
+    filter: drop-shadow(3px 3px 0 var(--border));
+}
+
+.back-to-top.is-visible {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+}
+
+@media (max-width: 1179px) {
+    .back-to-top {
+        bottom: 84px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .back-to-top,
+    .kompass .jean-icon,
+    .widget-photo img {
+        transition: none;
+    }
+}
+
+@media (min-width: 1180px) {
+    .site-header .container {
+        max-width: 1480px;
+    }
+
+    .sidebar-right {
+        max-height: calc(100vh - 184px);
+    }
+}
