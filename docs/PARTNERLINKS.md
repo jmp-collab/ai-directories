@@ -2,7 +2,7 @@
 
 Automatisch erzeugt aus `db/partners.json` (Stand 2026-10-23) mit `npm run partners`. Nicht von Hand bearbeiten; Änderungen gehören in die JSON-Datei.
 
-**Stand:** 50 Programme · aktiv 0 · beantragt 0 · nicht registriert 28 · Code anfragen 22 · Code angefragt 0 · abgelehnt 0
+**Stand:** 54 Programme · aktiv 0 · beantragt 0 · nicht registriert 32 · Code anfragen 22 · Code angefragt 0 · abgelehnt 0
 
 ## Live auf der Website
 
@@ -37,6 +37,10 @@ Noch keine. Sobald ein Eintrag `status: "aktiv"` mit `partner_link` oder einen `
 | Tally | nicht registriert | im Tally-Konto | 20 % des Abos, max. $150 | unbekannt | https://tally.so/help/referral-program | – |
 | Typeform | nicht registriert | Cello | 15 %, max. $500 | unbekannt | https://www.typeform.com/refer-a-friend | – |
 | Zapier | nicht registriert | PartnerStack | nicht öffentlich, nur auf Einladung | unbekannt | https://zapier.com/legal/ambassador-affiliate-terms | – |
+| Gamma | nicht registriert | PartnerStack | 25 % im ersten Jahr (laut PartnerStack-Verzeichnis) | 60 Tage | https://gammaapp.partnerstack.com/?group=affiliates | – |
+| Rytr | nicht registriert | eigenes Programm | 30 % wiederkehrend für 12 Monate, 15 $ Startbonus | 60 Tage | https://rytr.me/affiliates | – |
+| Runway | nicht registriert | eigenes Programm | 15 $ pro neuem Abonnenten | – | https://runway.com/affiliate-program | – |
+| Notion | nicht registriert | PartnerStack | bis 50 $ pro Anmeldung + 20 % im ersten Jahr | – | https://www.notion.com/affiliates | – |
 
 ## Verzeichnisse: Partnerprogramme und eigene Codes
 
