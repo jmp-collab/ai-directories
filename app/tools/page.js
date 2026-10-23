@@ -44,6 +44,9 @@ export default function ToolsPage() {
                 </p>
                 <Jean>Ich habe nur reingeschrieben, was die Hersteller selbst sagen. Den Rest sagt dir dein Geldbeutel.</Jean>
             </section>
+            <p className="service-hint">
+                <strong>Unentschlossen?</strong> <Link href="/tool-vergleiche">Tool-Vergleiche mit klarer Empfehlung je Anwendungsfall →</Link>
+            </p>
             <ul className="quick-links">
                 {categories.map((c) => (
                     <li key={c}>

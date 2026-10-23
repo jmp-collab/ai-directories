@@ -20,6 +20,8 @@ const dayIndex = () => {
 const KOMPASS = [
     ['/#alle', 'Alle Verzeichnisse', 'lupe', false],
     ['/tools', 'KI-Tools', 'werkzeug', false],
+    ['/tool-vergleiche', 'Tool-Vergleiche', 'pokal', true],
+    ['/top-50', 'Top 50 Verzeichnisse', 'herz', false],
     ['/liste/rabattcodes', 'Deals', 'deal', false],
     ['/launch-kit', 'Launch-Kit', 'rakete', false],
     ['/freischaltung', 'Freischaltung & Sperren', 'strahlung', false],

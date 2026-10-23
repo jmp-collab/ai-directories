@@ -25,12 +25,8 @@ Diese Datei steuert die automatischen Arbeitssitzungen. Jede Sitzung liest sie, 
 - [ ] **Netlify-Projekt löschen** (alte Kopie). *wartet auf Jean*
 
 ### Automatisch abzuarbeiten (Reihenfolge = Priorität)
-- [ ] **Vergleichsseite „Make vs. Zapier vs. n8n“** unter `/vergleiche/<slug>`, Daten aus `db/tools.json`, Tabelle, Empfehlung je Anwendungsfall, Partnerlinks über `TOOL_AFFILIATES`, ItemList-/FAQ-Schema, Sitemap.
-- [ ] **Vergleichsseite „Semrush vs. SE Ranking vs. Surfer SEO“** nach demselben Muster.
-- [ ] **Vergleichsseite „beehiiv vs. Kit vs. GetResponse vs. Brevo“** (Newsletter-Tools).
-- [ ] **Vergleichsseite „Framer vs. Webflow vs. Hostinger“** (Website-Builder).
-- [ ] **Vergleichsseite „Synthesia vs. HeyGen vs. InVideo vs. Pictory“** (KI-Video).
-- [ ] **Lead-Magnet „Top 50 KI-Verzeichnisse“**: Seite `/top-50` mit Vorschau der ersten 10 und Abo-Aufforderung für die vollständige Liste (über Lead-Box/Newsletter).
+- [ ] **Weitere Tool-Vergleiche** in `lib/comparisons.js`: „Canva vs. …“ erst, wenn Design-Alternativen im Tool-Verzeichnis stehen; „Tally vs. Typeform“; „ElevenLabs vs. Murf“; „Descript vs. Pictory“. Nur Empfehlungen, die sich aus `db/tools.json` belegen lassen.
+- [ ] **Top 50 als echter Lead-Magnet**: Sobald der Newsletter läuft, CSV-Download an das Abo koppeln (z. B. beehiiv-Lead-Magnet) und die Seite entsprechend umbauen. *wartet auf Newsletter*
 - [ ] **Tool-Verzeichnis erweitern**: 15 weitere Tools mit öffentlichem Partnerprogramm (z. B. Jasper-Alternativen, Notion-Alternativen, KI-Bild: Leonardo-Alternativen, Transkription), Fakten wie in `db/tools.json`.
 - [ ] **Prüfdaten erweitern**: nächste 15 Verzeichnisse ohne Eintrag in `db/checks.json` (Freischaltdauer, Link-Typ, Status) mit Zitat und Quelle.
 - [ ] **Use-Case-Rubrik** `/use-cases`: 5 Anwendungsfälle (z. B. „Produktvideo ohne Kamera“, „Newsletter in 1 Stunde“), je mit passenden Tools aus `db/tools.json`.
@@ -46,4 +42,5 @@ Diese Datei steuert die automatischen Arbeitssitzungen. Jede Sitzung liest sie, 
 ## Erledigt
 
 - 2026-10-23 · PR #29 bis #32: Rebranding AIGeddon, Monetarisierungs-Grundlage, Deals, Launch-Service-Hinweise, Tool-Verzeichnis (25 Tools), Jean-Icons, Seitenleisten, Mobile-Dock.
-- 2026-10-23 · dieser PR: eigene Rabattcodes (`OWN_DEALS`, `ONLY_OWN_DEALS`), Registrierungs-Checkliste, dieses Backlog, geplante Sitzungen.
+- 2026-10-23 · PR #33: eigene Rabattcodes (`OWN_DEALS`, `ONLY_OWN_DEALS`), Registrierungs-Checkliste, dieses Backlog, geplante Sitzungen.
+- 2026-10-23 · dieser PR: 5 Tool-Vergleiche unter `/tool-vergleiche` (Make/Zapier/n8n, Semrush/SE Ranking/Surfer, beehiiv/Kit/GetResponse/Brevo, Framer/Webflow/Hostinger, Synthesia/HeyGen/InVideo/Pictory) und Lead-Magnet `/top-50` mit CSV.

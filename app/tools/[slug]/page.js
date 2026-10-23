@@ -4,6 +4,7 @@ import JsonLd from '../../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
 import { SITE_NAME, absoluteUrl } from '../../../lib/site'
 import { getTools, getTool, getAlternatives, toolHref, toolRel, TOOLS_STAND } from '../../../lib/tools'
+import { comparisonsForTool } from '../../../lib/comparisons'
 
 export const dynamicParams = false
 
@@ -93,6 +94,11 @@ export default function ToolPage({ params }) {
                     {t.affiliate && <> · * Partnerlink, <Link href="/transparenz">mehr dazu</Link></>}
                 </p>
             )}
+            {comparisonsForTool(t.slug).map((c) => (
+                <p key={c.slug} className="service-hint">
+                    <strong>Im direkten Vergleich:</strong> <Link href={`/tool-vergleiche/${c.slug}`}>{c.title} →</Link>
+                </p>
+            ))}
             {alternatives.length > 0 && (
                 <section aria-labelledby="alternativen">
                     <h2 id="alternativen">Alternativen zu {t.name}</h2>
