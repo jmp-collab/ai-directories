@@ -2,19 +2,32 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { withBase } from '../../lib/site'
 
 // Dreht durch die Konsens-Tools und bleibt bei einem Zufallsfund stehen.
-export default function ToolRoulette({ tools }) {
+export default function ToolRoulette() {
     const [aktuell, setAktuell] = useState(null)
     const [dreht, setDreht] = useState(false)
+    const [tools, setTools] = useState(null)
 
-    const drehen = () => {
-        if (dreht || !tools.length) return
+    const drehen = async () => {
+        if (dreht) return
         setDreht(true)
+        let liste = tools
+        if (!liste) {
+            try {
+                liste = await (await fetch(withBase('/api/roulette'))).json()
+                setTools(liste)
+            } catch {
+                setDreht(false)
+                return
+            }
+        }
+        if (!liste.length) return setDreht(false)
         let n = 0
         const schritte = 14 + Math.floor(Math.random() * 8)
         const tick = () => {
-            setAktuell(tools[Math.floor(Math.random() * tools.length)])
+            setAktuell(liste[Math.floor(Math.random() * liste.length)])
             n += 1
             if (n < schritte) setTimeout(tick, 40 + n * 12)
             else setDreht(false)

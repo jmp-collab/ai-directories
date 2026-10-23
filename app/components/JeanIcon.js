@@ -122,6 +122,29 @@ const LABELS = {
     tattoo: 'Jean zeigt seinen tätowierten Arm',
 }
 
+// Alle Formen einmal pro Seite als SVG-Sprite (im Layout eingebunden); jedes Icon verweist nur noch per <use>.
+// Spart pro Seite rund 40 eingebettete Zeichnungen.
+export function JeanSprite() {
+    return (
+        <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true" focusable="false">
+            <defs>
+                <symbol id="jf-plain" viewBox="0 0 64 64">
+                    <Face cool={false} />
+                </symbol>
+                <symbol id="jf-cool" viewBox="0 0 64 64">
+                    <Face cool />
+                </symbol>
+                {Object.entries(BADGES).map(([key, badge]) => (
+                    <symbol key={key} id={`jb-${key}`} viewBox="0 0 64 64">
+                        <circle cx="49" cy="49" r="12" fill="#ffe14d" stroke={INK} strokeWidth="2" />
+                        {badge}
+                    </symbol>
+                ))}
+            </defs>
+        </svg>
+    )
+}
+
 export default function JeanIcon({ badge, cool = false, size = 40, title, className = '' }) {
     const label = title || (badge ? LABELS[badge] : cool ? 'Jean mit Sonnenbrille' : 'Jean')
     return (
@@ -135,13 +158,8 @@ export default function JeanIcon({ badge, cool = false, size = 40, title, classN
             aria-label={title ? label : undefined}
             focusable="false"
         >
-            <Face cool={cool} />
-            {badge && (
-                <g>
-                    <circle cx="49" cy="49" r="12" fill="#ffe14d" stroke={INK} strokeWidth="2" />
-                    {BADGES[badge]}
-                </g>
-            )}
+            <use href={cool ? '#jf-cool' : '#jf-plain'} width="64" height="64" />
+            {badge && BADGES[badge] && <use href={`#jb-${badge}`} width="64" height="64" />}
         </svg>
     )
 }

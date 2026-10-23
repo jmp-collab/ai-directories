@@ -12,7 +12,6 @@ import { NEWSLETTER_URL, YOUTUBE_SUBSCRIBE_URL, submitRel } from '../../lib/mone
 import { withBase } from '../../lib/site'
 import { getPrompts } from '../../lib/prompts'
 import ToolRoulette from './ToolRoulette'
-import { getKbTools } from '../../lib/kb'
 
 // Tageswechsel ohne Server: Die Seite wird täglich neu gebaut, der Tag des Jahres wählt Deal und Tool.
 const dayIndex = () => {
@@ -141,11 +140,7 @@ export function SidebarRight() {
                 )
             })()}
             <Widget icon="strahlung" title="KI-Tool-Roulette">
-                <ToolRoulette
-                    tools={getKbTools()
-                        .filter((t) => t.konsens > 1)
-                        .map((t) => ({ n: t.name, u: t.url, p: t.profil?.slug || '' }))}
-                />
+                <ToolRoulette />
             </Widget>
             {tool && (
                 <Widget icon="werkzeug" title="Tool des Tages">
