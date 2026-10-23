@@ -90,7 +90,7 @@ const footerSpalten = () => [
             ['/tutorials', 'Tutorials'],
             ['/downloads', 'Downloads'],
             ['/ratgeber', 'Ratgeber'],
-            ['/glossar', 'Glossar'],
+            ['/glossar', 'KI-Glossar'],
         ],
     ],
 ]

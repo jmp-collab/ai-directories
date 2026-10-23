@@ -3,11 +3,14 @@ import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import JsonLd from '../components/JsonLd'
 import Jean from '../components/Jean'
 import { GLOSSAR } from '../../lib/ratgeber'
+import { KI_GLOSSAR, glossarSlug } from '../../lib/ki-glossar'
+import Toc from '../components/Toc'
+import { Band } from '../components/Deko'
 import { absoluteUrl } from '../../lib/site'
 
 export const metadata = {
-    title: 'Glossar: Domain Rating, nofollow, UTM und mehr',
-    description: `${GLOSSAR.length} Begriffe rund um KI-Verzeichnisse, Backlinks und SEO kurz erklärt: Domain Rating, Authority Score, dofollow, nofollow, UTM, AVV, GEO und mehr.`,
+    title: 'KI-Glossar: Prompt Engineering, KI- und SEO-Begriffe erklärt',
+    description: `${KI_GLOSSAR.length + GLOSSAR.length} Begriffe kurz erklärt: Prompt, Token, Kontextfenster, Halluzination, RAG, KI-Agent, MCP und mehr, dazu SEO-Begriffe wie Domain Rating, nofollow und GEO.`,
     alternates: { canonical: '/glossar' },
     openGraph: { url: '/glossar' },
 }
@@ -22,6 +25,14 @@ export default function GlossarPage() {
         {
             '@context': 'https://schema.org',
             '@type': 'DefinedTermSet',
+            name: 'Glossar KI und Prompt Engineering',
+            url: absoluteUrl('/glossar'),
+            inLanguage: 'de-DE',
+            hasDefinedTerm: KI_GLOSSAR.map(([name, description]) => ({ '@type': 'DefinedTerm', name, description, url: absoluteUrl(`/glossar#${glossarSlug(name)}`) })),
+        },
+        {
+            '@context': 'https://schema.org',
+            '@type': 'DefinedTermSet',
             name: 'Glossar KI-Verzeichnisse und SEO',
             url: absoluteUrl('/glossar'),
             inLanguage: 'de-DE',
@@ -33,10 +44,30 @@ export default function GlossarPage() {
             <JsonLd data={schema} />
             <Breadcrumbs items={crumbs} />
             <section className="hero">
-                <h1>Glossar: {GLOSSAR.length} Begriffe, die dir beim Eintragen begegnen</h1>
-                <p className="lead">Kurz erklärt, ohne Fachchinesisch. Zum Nachschlagen, wenn ein Formular plötzlich nach „rel=sponsored“ fragt.</p>
+                <h1>KI-Glossar: {KI_GLOSSAR.length + GLOSSAR.length} Begriffe, kurz erklärt</h1>
+                <p className="lead">Prompt Engineering, KI-Modelle und SEO ohne Fachchinesisch. Zum Nachschlagen, wenn ein Tutorial von „Few-Shot“ spricht oder ein Formular nach „rel=sponsored“ fragt.</p>
                 <Jean>SEO-Sprech ist wie Simson-Schrauber-Sprech: klingt kompliziert, ist es aber selten.</Jean>
             </section>
+            <Toc items={[['ki', 'KI & Prompt Engineering'], ['seo', 'KI-Verzeichnisse & SEO']]} />
+            <Band farbe="lila" id="ki" titel={`🤖 KI & Prompt Engineering (${KI_GLOSSAR.length})`}>
+                <dl className="legend glossar">
+                    {KI_GLOSSAR.map(([term, text, href]) => (
+                        <div key={term} id={glossarSlug(term)}>
+                            <dt>{term}</dt>
+                            <dd>
+                                {text}
+                                {href && (
+                                    <>
+                                        {' '}
+                                        <Link href={href}>Mehr dazu →</Link>
+                                    </>
+                                )}
+                            </dd>
+                        </div>
+                    ))}
+                </dl>
+            </Band>
+            <h2 id="seo">🔗 KI-Verzeichnisse & SEO ({GLOSSAR.length})</h2>
             <dl className="legend glossar">
                 {GLOSSAR.map(([term, text]) => (
                     <div key={term}>
