@@ -26,7 +26,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P12 Mehr Inhalte im Prompt-Hub und KI-Test**: Prompt-Bibliothek von 12 auf 30 Vorlagen (E-Commerce, Bewerbung, Excel, Bild, Coding, Lernen), KI-Test von 17 auf 30 Aufgaben (u. a. Zusammenfassen, Übersetzen, Tabellen, Mathe).
 - [x] **P13 Prompt-Glossar**: 40 Begriffe rund um Prompt Engineering und KI-Modelle im bestehenden Glossar, mit Querverweisen und DefinedTerm-Schema.
 - [x] **P14 Deutsche Texte**: Kurzbeschreibungen für weitere 150 Datenbank-Tools (zuerst Bild, Video, Audio, Schreiben), nur auf Basis der Quelle.
-- [ ] **P15 Rechner II**: Automatisierungs-Kostenrechner (Make, Zapier, n8n) und Newsletter-Kostenrechner (beehiiv, Kit, Brevo, GetResponse), Preise laut Anbieter mit Datum.
+- [x] **P15 Rechner II**: Automatisierungs-Kostenrechner (Make, Zapier, n8n) und Newsletter-Kostenrechner (beehiiv, Kit, Brevo, GetResponse), Preise laut Anbieter mit Datum.
 - [ ] **P16 Performance**: Seitengewichte messen, Datenmengen der Client-Komponenten senken, Vorschaubilder für Hub-Seiten.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
@@ -54,3 +54,4 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P12: Prompt-Bibliothek 12 → 30 Vorlagen in 9 Kategorien (neu: Onlineshop, Bewerbung & Karriere, Lernen, Excel/Code/Technik, plus Angebot, heikle E-Mail, Bild-Prompt), KI-Test 17 → 30 Aufgaben (Ankunftszeit, Kopfrechnen, Geschwister-Rätsel, Hauptstadt, Planeten, Städte-Tabelle, erfundenes Gesetz, unwissbare Frage, Zusammenfassen, Übersetzen mit Ton, Slogan mit Regeln, Regex, Gleitkomma); Crawl 403 Seiten ohne kaputten Link.
 - 2026-10-23 · P13: KI-Glossar mit 41 Begriffen (Prompt, System-Prompt, Few-Shot, Chain of Thought, Token, Kontextfenster, Temperatur, Halluzination, RAG, Embedding, KI-Agent, MCP, Prompt-Injection, Diffusionsmodell u. a.) als lila Band auf /glossar, mit Ankern, Querverweisen auf Tutorials, Rechner und Rubriken und eigenem DefinedTermSet-Schema; Glossar jetzt 55 Begriffe.
 - 2026-10-23 · P14: 139 weitere deutsche Kurzbeschreibungen für alle Bild-, Video-, Audio- und Musik-Tools (gesamt 276 von 705), nur auf Basis der Quellenbeschreibung, Versions- und Datumsangaben der Quellen weggelassen.
+- 2026-10-23 · P15: Automatisierungs-Rechner (Handarbeit pro Jahr, Aufbauaufwand, Amortisation in Wochen, Einstiegspreise Make/Zapier/n8n aus den Steckbriefen) und Newsletter-Umsatz-Rechner (animierter Trichter Abonnenten → Öffnung → Klick → Kauf, Ertrag pro Ausgabe/Monat/Abonnent); jetzt 5 Rechner. Statt Abonnenten-Staffelpreisen (ohne prüfbare Quelle) bewusst ein Umsatz-Rechner mit Nutzerannahmen.
