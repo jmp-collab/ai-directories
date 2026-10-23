@@ -42,6 +42,20 @@ export default function KiToolsPage() {
                 <p className="lead">
                     Zusammengeführt aus den drei größten offenen KI-Tool-Listen auf GitHub ({KB_SOURCES.reduce((s, x) => s + x.stars, 0).toLocaleString('de-DE')} Sterne zusammen). Steht ein Tool in mehreren Listen, ist das ein starkes Signal: <strong>🏆 Konsens</strong>.
                 </p>
+                <ul className="quick-links">
+                    <li>
+                        <Link href="/beste-ki-tools">Die besten KI-Tools nach Aufgabe →</Link>
+                    </li>
+                    <li>
+                        <Link href="/ki-tools/kostenlos">Kostenlose KI-Tools →</Link>
+                    </li>
+                    <li>
+                        <Link href="/ki-tools/chatgpt-alternativen">ChatGPT-Alternativen →</Link>
+                    </li>
+                    <li>
+                        <Link href="/ki-test">KI-Test: selbst vergleichen →</Link>
+                    </li>
+                </ul>
             </section>
             <dl className="facts">
                 <div>

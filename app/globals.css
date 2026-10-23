@@ -3912,3 +3912,57 @@ td.wrap {
     gap: 3px;
     font-size: 0.88rem;
 }
+
+/* ---------- Pillar-Seiten ---------- */
+.toc {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    overflow-x: auto;
+    padding: 8px 2px;
+    margin: 10px 0 20px;
+    background: var(--bg);
+    scrollbar-width: thin;
+}
+
+@media (min-width: 721px) {
+    .toc {
+        top: 80px;
+    }
+}
+
+.toc-label {
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    flex: 0 0 auto;
+}
+
+.toc a {
+    flex: 0 0 auto;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 10px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.toc a:hover,
+.toc a:focus-visible {
+    background: var(--pop);
+    color: #1b1b1f;
+    transform: translateY(-2px);
+}
+
+.page-main [id] {
+    scroll-margin-top: 140px;
+}

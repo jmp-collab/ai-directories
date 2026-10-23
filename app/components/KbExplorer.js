@@ -5,6 +5,37 @@ import Link from 'next/link'
 
 const STEP = 48
 
+// Deutsche Suchbegriffe finden auch englische Beschreibungen (die meisten Quellen sind englisch).
+const SYNONYME = [
+    ['transkri', 'transcri', 'speech-to-text', 'speech to text', 'whisper'],
+    ['spracherkennung', 'speech recognition', 'speech-to-text', 'transcri'],
+    ['stimme', 'voice', 'speech', 'tts'],
+    ['vorlesen', 'text-to-speech', 'tts', 'voice'],
+    ['bild', 'image', 'picture', 'photo', 'art'],
+    ['foto', 'photo', 'image'],
+    ['video', 'video', 'film'],
+    ['musik', 'music', 'song', 'audio'],
+    ['übersetz', 'translat'],
+    ['schreib', 'writ', 'copy', 'text'],
+    ['text', 'text', 'writ', 'copy'],
+    ['zusammenfass', 'summar'],
+    ['präsentation', 'presentation', 'slides', 'deck'],
+    ['programmier', 'code', 'coding', 'developer'],
+    ['suche', 'search'],
+    ['recherche', 'research', 'search', 'paper'],
+    ['besprechung', 'meeting'],
+    ['agent', 'agent', 'autonomous'],
+    ['logo', 'logo', 'brand'],
+    ['lokal', 'local', 'self-host', 'offline'],
+    ['kostenlos', 'free'],
+    ['gratis', 'free'],
+]
+
+const varianten = (s) => {
+    const extra = SYNONYME.filter(([de]) => s.includes(de) || de.includes(s)).flatMap(([, ...en]) => en)
+    return [s, ...extra]
+}
+
 // Durchsuchbare Tool-Liste. Daten kommen schlank vom Server (kbForClient), gefiltert wird im Browser.
 export default function KbExplorer({ tools, rubriken, rubrik: fest }) {
     const [q, setQ] = useState('')
@@ -23,9 +54,14 @@ export default function KbExplorer({ tools, rubriken, rubrik: fest }) {
 
     const liste = useMemo(() => {
         const s = q.trim().toLowerCase()
+        const vs = s.length > 2 ? varianten(s) : [s]
         return tools
             .filter((t) => (!rubrik || t.r === rubrik) && (!nurKonsens || t.k > 1) && (!nurOpen || t.o) && (!nurGratis || t.g))
-            .filter((t) => !s || t.n.toLowerCase().includes(s) || t.d.toLowerCase().includes(s))
+            .filter((t) => {
+                if (!s) return true
+                const hay = `${t.n} ${t.d}`.toLowerCase()
+                return vs.some((v) => hay.includes(v))
+            })
             .sort((a, b) => (sort === 'az' ? a.n.localeCompare(b.n) : b.k - a.k || a.n.localeCompare(b.n)))
     }, [tools, q, rubrik, nurKonsens, nurOpen, nurGratis, sort])
 

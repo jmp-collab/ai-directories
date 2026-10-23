@@ -46,6 +46,9 @@ const footerSpalten = () => [
         'KI-Tools',
         [
             ['/ki-tools', 'KI-Tool-Datenbank'],
+            ['/beste-ki-tools', 'Beste KI-Tools 2026'],
+            ['/ki-tools/kostenlos', 'Kostenlose KI-Tools'],
+            ['/ki-tools/chatgpt-alternativen', 'ChatGPT-Alternativen'],
             ...getKbRubriken()
                 .slice(0, 8)
                 .map((r) => [`/ki-tools/${r.key}`, r.name]),
@@ -56,6 +59,7 @@ const footerSpalten = () => [
     [
         'KI-Verzeichnisse',
         [
+            ['/ki-verzeichnis', 'Was ist ein KI-Verzeichnis?'],
             ['/#alle', 'Alle KI-Verzeichnisse'],
             ['/liste/kostenlos', 'Kostenlose KI-Verzeichnisse'],
             ['/liste/domain-rating-50-plus', 'Domain Rating 50+'],
