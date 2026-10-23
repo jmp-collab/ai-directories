@@ -48,6 +48,9 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P34 Performance II**: größte Seiten und JS-Bundles messen, unnötige Client-Daten entfernen.
 - [x] **P36 Prompts IV**: 10 Prompts für die neuen Zielgruppen (Stellenanzeige, Elternbrief, Produktfoto-Briefing, Shorts-Ideen, Video-Titel, Kundenanfrage Handwerk, Vokabeltrainer, Referat-Folien, Onboarding-Plan, Rückruf-Notiz).
 - [x] **P37 Rubrik-Ratgeber II**: Auswahlkriterien, Tipp/Warnung und FAQ für Audio, Musik, Agenten, Coding, Produktivität, Chatbots.
+- [ ] **P38 Rubrik-Ratgeber III**: Suche, Recherche, Modelle, Sicherheit, Finanzen (Kriterien, Tipp, Warnung, FAQ).
+- [ ] **P39 Ratgeber „KI und Datenschutz“**: DSGVO-Checkliste für KI-Tools (AVV, Training mit Daten, Serverstandort, Einwilligung bei Aufnahmen, EU AI Act Grundzüge), verlinkt aus Zielgruppen und Rubriken.
+- [ ] **P40 Startseite & Hubs**: Zielgruppen- und Alternativen-Einstiege auf Startseite und KI-Tools-Hub, Kompass in der Seitenleiste ergänzen.
 - [ ] **P35 Abschluss-QA**: Link-Crawl, Überlauf, Kontrast, Strukturdaten, Live-Stichproben.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
