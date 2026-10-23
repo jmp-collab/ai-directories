@@ -5,12 +5,12 @@ import { SITE_NAME } from '../../../lib/site'
 import { ZIELGRUPPEN } from '../../../lib/zielgruppen'
 
 export const metadata = {
-    title: 'KI-Tools nach Zielgruppe: für Lehrer, Studenten, Selbstständige & mehr',
-    description: 'Welche KI-Tools passen zu deinem Beruf? Übersichten für Lehrkräfte, Studierende, Selbstständige, Entwickler und Marketing, mit Aufgaben, Tools und fertigen Prompts.',
+    title: 'KI-Tools nach Zielgruppe: für Lehrer, Schüler, Shops, Creator & mehr',
+    description: 'Welche KI-Tools passen zu deinem Beruf? Übersichten für Lehrkräfte, Schüler, Studierende, Selbstständige, Onlinehändler, Content Creator, HR, Handwerk, Entwickler und Marketing, mit Aufgaben, Tools und fertigen Prompts.',
     alternates: { canonical: '/ki-tools/fuer' },
 }
 
-const EMOJI = { lehrer: '🍎', studenten: '🎓', selbststaendige: '💼', entwickler: '💻', marketing: '📣' }
+const EMOJI = { lehrer: '🍎', studenten: '🎓', selbststaendige: '💼', entwickler: '💻', marketing: '📣', onlinehaendler: '🛒', 'content-creator': '🎥', 'hr-recruiting': '🤝', handwerk: '🔨', schueler: '🎒' }
 const FARBEN = ['#fde68a', '#a7f3d0', '#bfdbfe', '#fbcfe8', '#ddd6fe']
 
 export default function ZielgruppenIndex() {
