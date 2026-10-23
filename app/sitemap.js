@@ -7,12 +7,13 @@ import { getPrompts } from '../lib/prompts'
 import { getTutorials } from '../lib/tutorials'
 import { getKbRubriken } from '../lib/kb'
 import { getTestKategorien } from '../lib/kitests'
+import { RECHNER } from '../lib/rechner'
 
 export default function sitemap() {
     const lastModified = new Date()
     return [
         { url: absoluteUrl('/'), lastModified, changeFrequency: 'weekly', priority: 1 },
-        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar', '/freischaltung', '/werben', '/transparenz', '/tools', '/tool-vergleiche', '/top-50', '/prompts', '/prompt-baukasten', '/prompt-check', '/tutorials', '/downloads', '/downloads/prompt-spickzettel', '/ki-tools', '/ki-tools/quellen', '/prompts/archiv', '/ki-test'].map((path) => ({
+        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar', '/freischaltung', '/werben', '/transparenz', '/tools', '/tool-vergleiche', '/top-50', '/prompts', '/prompt-baukasten', '/prompt-check', '/tutorials', '/downloads', '/downloads/prompt-spickzettel', '/ki-tools', '/ki-tools/quellen', '/prompts/archiv', '/ki-test', '/rechner'].map((path) => ({
             url: absoluteUrl(path),
             lastModified,
             changeFrequency: 'monthly',
@@ -29,6 +30,7 @@ export default function sitemap() {
             priority: 0.8,
         })),
         ...getComparisons().map((c) => ({ url: absoluteUrl(`/tool-vergleiche/${c.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
+        ...RECHNER.map((r) => ({ url: absoluteUrl(`/rechner/${r.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.8 })),
         ...getTestKategorien().map((k) => ({ url: absoluteUrl(`/ki-test/${k.key}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
         ...getKbRubriken().map((r) => ({ url: absoluteUrl(`/ki-tools/${r.key}`), lastModified, changeFrequency: 'weekly', priority: 0.8 })),
         ...getTutorials().map((t) => ({ url: absoluteUrl(`/tutorials/${t.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.8 })),

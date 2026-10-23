@@ -27,6 +27,7 @@ const KOMPASS = [
     ['/downloads', 'Gratis-Downloads', 'herz', true],
     ['/ki-tools', 'KI-Tool-Datenbank', 'lupe', false],
     ['/ki-test', 'KI-Test: Chatbots vergleichen', 'pokal', true],
+    ['/rechner', 'KI-Rechner', 'deal', false],
     ['/tools', 'KI-Tools mit Preisen', 'werkzeug', false],
     ['/tool-vergleiche', 'Tool-Vergleiche', 'pokal', true],
     ['/top-50', 'Top 50 Verzeichnisse', 'herz', false],

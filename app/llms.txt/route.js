@@ -9,6 +9,7 @@ import { getPrompts } from '../../lib/prompts'
 import { getTutorials } from '../../lib/tutorials'
 import { getKbRubriken, kbStats, KB_SOURCES } from '../../lib/kb'
 import { TESTS, getTestKategorien } from '../../lib/kitests'
+import { RECHNER } from '../../lib/rechner'
 import { experienceLabel, pricingLabel, dealLabel, formatRating, formatVisits } from '../../utils/i18n-de'
 
 export const dynamic = 'force-static'
@@ -59,6 +60,10 @@ ${ARTIKEL.map((a) => `- [${a.title}](${absoluteUrl(`/ratgeber/${a.slug}`)}): ${a
 
 ## Deutschsprachige KI-Verzeichnisse (Semrush, Stand ${DACH_STAND})
 ${DACH.map((d) => `- [${d.name}](${d.link}): Authority Score ${d.authority}, organischer Traffic DE ${d.traffic}/Monat. ${d.note} Eintragen: ${d.submission_link}`).join('\n')}
+
+## Rechner
+
+${RECHNER.map((r) => `- [${r.titel}](${absoluteUrl(`/rechner/${r.slug}`)}): ${r.kurz}`).join('\n')}
 
 ## KI-Test
 
