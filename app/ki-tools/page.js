@@ -44,6 +44,9 @@ export default function KiToolsPage() {
                 </p>
                 <ul className="quick-links">
                     <li>
+                        <Link href="/tool-finder">Tool-Finder: 3 Fragen, 6 Treffer →</Link>
+                    </li>
+                    <li>
                         <Link href="/beste-ki-tools">Die besten KI-Tools nach Aufgabe →</Link>
                     </li>
                     <li>
