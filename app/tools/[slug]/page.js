@@ -5,6 +5,7 @@ import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
 import { SITE_NAME, absoluteUrl } from '../../../lib/site'
 import { getTools, getTool, getAlternatives, toolHref, toolRel, TOOLS_STAND } from '../../../lib/tools'
 import { comparisonsForTool } from '../../../lib/comparisons'
+import { getPrompts, PROMPT_KATEGORIEN } from '../../../lib/prompts'
 
 export const dynamicParams = false
 
@@ -99,6 +100,25 @@ export default function ToolPage({ params }) {
                     <strong>Im direkten Vergleich:</strong> <Link href={`/tool-vergleiche/${c.slug}`}>{c.title} →</Link>
                 </p>
             ))}
+            {(() => {
+                const passend = getPrompts().filter((p) => p.tools.includes(t.slug)).slice(0, 4)
+                return passend.length > 0 ? (
+                    <section aria-labelledby="prompts">
+                        <h2 id="prompts">Fertige Prompts für {t.name}</h2>
+                        <ul className="link-cards">
+                            {passend.map((p) => (
+                                <li key={p.slug}>
+                                    <Link href={`/prompts/${p.slug}`}>
+                                        <strong>{p.title}</strong>
+                                    </Link>
+                                    <span>{p.ziel}</span>
+                                    <Link href={`/prompts/kategorie/${p.kategorie}`}>{PROMPT_KATEGORIEN[p.kategorie].name} →</Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+                ) : null
+            })()}
             {alternatives.length > 0 && (
                 <section aria-labelledby="alternativen">
                     <h2 id="alternativen">Alternativen zu {t.name}</h2>
