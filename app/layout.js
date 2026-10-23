@@ -7,6 +7,88 @@ import { SidebarLeft, SidebarRight, MobileDock } from './components/Sidebars'
 import BackToTop from './components/BackToTop'
 import JeanIcon from './components/JeanIcon'
 import BartModus from './components/BartModus'
+import JsonLd from './components/JsonLd'
+import { absoluteUrl } from '../lib/site'
+import { getKbRubriken } from '../lib/kb'
+import { getTestKategorien } from '../lib/kitests'
+import { RECHNER } from '../lib/rechner'
+
+const SITE_SCHEMA = [
+    {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        '@id': `${SITE_URL}/#organisation`,
+        name: SITE_NAME,
+        url: SITE_URL,
+        logo: absoluteUrl('/jean-cool.jpg'),
+        founder: { '@type': 'Person', name: 'Jean Maurice Port', url: absoluteUrl('/ueber-jean') },
+        sameAs: ['https://www.youtube.com/@AIGeddon', REPO_URL],
+    },
+    {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': `${SITE_URL}/#website`,
+        name: SITE_NAME,
+        url: SITE_URL,
+        inLanguage: 'de-DE',
+        publisher: { '@id': `${SITE_URL}/#organisation` },
+        potentialAction: {
+            '@type': 'SearchAction',
+            target: { '@type': 'EntryPoint', urlTemplate: `${absoluteUrl('/ki-tools')}?q={search_term_string}` },
+            'query-input': 'required name=search_term_string',
+        },
+    },
+]
+
+// Linknetz im Footer: jede Rubrik von jeder Seite aus erreichbar (Hub and Spoke).
+const footerSpalten = () => [
+    [
+        'KI-Tools',
+        [
+            ['/ki-tools', 'KI-Tool-Datenbank'],
+            ...getKbRubriken()
+                .slice(0, 8)
+                .map((r) => [`/ki-tools/${r.key}`, r.name]),
+            ['/tools', 'KI-Tools mit Preisen'],
+            ['/tool-vergleiche', 'Tool-Vergleiche'],
+        ],
+    ],
+    [
+        'KI-Verzeichnisse',
+        [
+            ['/#alle', 'Alle KI-Verzeichnisse'],
+            ['/liste/kostenlos', 'Kostenlose KI-Verzeichnisse'],
+            ['/liste/domain-rating-50-plus', 'Domain Rating 50+'],
+            ['/deutsche-ki-verzeichnisse', 'Deutsche KI-Verzeichnisse'],
+            ['/top-50', 'Top 50'],
+            ['/liste/rabattcodes', 'Rabattcodes'],
+            ['/freischaltung', 'Freischaltdauer'],
+            ['/launch-kit', 'Launch-Kit'],
+        ],
+    ],
+    [
+        'KI-Test & Rechner',
+        [
+            ['/ki-test', 'KI-Test: Chatbots vergleichen'],
+            ...getTestKategorien().map((k) => [`/ki-test/${k.key}`, `KI-Test ${k.name}`]),
+            ['/rechner', 'KI-Rechner'],
+            ...RECHNER.map((r) => [`/rechner/${r.slug}`, r.titel]),
+        ],
+    ],
+    [
+        'Prompts & Lernen',
+        [
+            ['/prompts', 'Prompt-Bibliothek'],
+            ['/prompts/archiv', 'Prompt-Archiv'],
+            ['/prompt-baukasten', 'Prompt-Baukasten'],
+            ['/prompt-check', 'Prompt-Check'],
+            ['/tutorials', 'Tutorials'],
+            ['/downloads', 'Downloads'],
+            ['/ratgeber', 'Ratgeber'],
+            ['/glossar', 'Glossar'],
+        ],
+    ],
+]
 
 const TICKER = [
     '☢️ Die KI-Apokalypse kommt. Dein Tool sollte vorher gelistet sein',
@@ -115,6 +197,21 @@ export default function RootLayout({ children }) {
                     </aside>
                 </div>
                 <footer className="site-footer">
+                    <JsonLd data={SITE_SCHEMA} />
+                    <nav className="footer-hub container" aria-label="Alle Rubriken">
+                        {footerSpalten().map(([titel, links]) => (
+                            <div key={titel}>
+                                <p className="footer-hub-title">{titel}</p>
+                                <ul>
+                                    {links.map(([href, label]) => (
+                                        <li key={href}>
+                                            <Link href={href}>{label}</Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </nav>
                     <div className="container">
                         <p>
                             Gebaut von <Link href="/ueber-jean">Jean Maurice Port</Link>, SEO-Manager mit Bart und Humor. ·{' '}

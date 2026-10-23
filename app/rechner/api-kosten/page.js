@@ -12,7 +12,7 @@ import { API_MODELLE, PREISE_STAND } from '../../../lib/preise'
 const R = RECHNER.find((r) => r.slug === 'api-kosten')
 
 export const metadata = {
-    title: 'KI-API-Kostenrechner: GPT, Claude und Gemini Kosten pro Monat berechnen',
+    title: 'KI-API-Kostenrechner: GPT, Claude & Gemini',
     description: 'Was kostet deine KI-Anwendung? Anfragen, Input- und Output-Tokens einstellen und die Monatskosten aller aktuellen Modelle von OpenAI, Anthropic und Google vergleichen. Preise laut Anbieter.',
     alternates: { canonical: '/rechner/api-kosten' },
 }

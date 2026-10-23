@@ -19,7 +19,7 @@ const KATEGORIEN = {
 }
 
 export const metadata = {
-    title: `Prompt-Archiv: ${archiv.anzahl} „Act as“-Rollen-Prompts mit einem Klick an ChatGPT und Claude`,
+    title: `Prompt-Archiv: ${archiv.anzahl} Rollen-Prompts für ChatGPT & Claude`,
     description: `${archiv.anzahl} bewährte Rollen-Prompts aus prompts.chat, dem größten Prompt-Projekt auf GitHub: Werbetexter, SEO-Spezialist, Karriere-Coach, Koch und mehr. Mit deutscher Antwort und Senden-Button.`,
     alternates: { canonical: '/prompts/archiv' },
 }

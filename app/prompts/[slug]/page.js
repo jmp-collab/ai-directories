@@ -21,7 +21,7 @@ export function generateMetadata({ params }) {
     const p = getPrompt(params.slug)
     if (!p) return {}
     return {
-        title: `Prompt: ${p.title}`,
+        title: p.title.length > 52 ? p.title : `Prompt: ${p.title}`,
         description: `${p.ziel} Vorlage auf Deutsch zum Ausfüllen, mit einem Klick an ChatGPT, Claude, Perplexity oder Grok.`.slice(0, 300),
         alternates: { canonical: `/prompts/${p.slug}` },
     }

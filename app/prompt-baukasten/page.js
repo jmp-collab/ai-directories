@@ -6,7 +6,7 @@ import LeadMagnetBox from '../components/LeadMagnetBox'
 import { SITE_NAME } from '../../lib/site'
 
 export const metadata = {
-    title: 'Prompt-Baukasten: besseren KI-Prompt bauen, mit Score und Senden an ChatGPT & Claude',
+    title: 'Prompt-Generator: besseren KI-Prompt bauen mit Score',
     description:
         'Prompt-Generator auf Deutsch: Rolle, Aufgabe, Kontext, Format und Ton eintragen, Prompt-Score sehen und mit einem Klick an ChatGPT, Claude, Perplexity oder Grok senden. Kostenlos, ohne Anmeldung.',
     alternates: { canonical: '/prompt-baukasten' },

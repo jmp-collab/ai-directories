@@ -23,7 +23,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
     const t = getTutorial(params.slug)
     if (!t) return {}
-    return { title: `${t.title}: Tutorial mit Beispielen`, description: t.description.slice(0, 300), alternates: { canonical: `/tutorials/${t.slug}` } }
+    return { title: `${t.title}: Tutorial`, description: t.description.slice(0, 300), alternates: { canonical: `/tutorials/${t.slug}` } }
 }
 
 export default function TutorialPage({ params }) {

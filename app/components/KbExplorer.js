@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 
 const STEP = 48
@@ -14,6 +14,12 @@ export default function KbExplorer({ tools, rubriken, rubrik: fest }) {
     const [nurGratis, setNurGratis] = useState(false)
     const [sort, setSort] = useState('konsens')
     const [limit, setLimit] = useState(STEP)
+
+    // Suche aus der Adresszeile übernehmen (?q=…), z. B. aus der Google-Sitelinks-Suche
+    useEffect(() => {
+        const s = new URLSearchParams(window.location.search).get('q')
+        if (s) setQ(s)
+    }, [])
 
     const liste = useMemo(() => {
         const s = q.trim().toLowerCase()

@@ -12,7 +12,7 @@ import { ABOS, PREISE_STAND } from '../../../lib/preise'
 const R = RECHNER.find((r) => r.slug === 'ki-zeitersparnis')
 
 export const metadata = {
-    title: 'KI-Zeitersparnis-Rechner: Lohnt sich ein KI-Abo? (ChatGPT, Claude, Perplexity)',
+    title: 'KI-Zeitersparnis-Rechner: Lohnt sich ein KI-Abo?',
     description: 'Berechne in Sekunden, ob sich ein KI-Abo lohnt: gesparte Stunden, Wert deiner Zeit, Abo-Kosten, Break-even in Minuten pro Woche. Für Einzelne und Teams.',
     alternates: { canonical: '/rechner/ki-zeitersparnis' },
 }

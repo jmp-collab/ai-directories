@@ -17,7 +17,7 @@ export function generateMetadata({ params }) {
     const k = getTestKategorie(params.kategorie)
     if (!k) return {}
     return {
-        title: `KI-Test ${k.name}: ChatGPT, Claude & Gemini im Vergleich`,
+        title: `KI-Test ${k.name}: Chatbots im Vergleich`,
         description: `${k.intro} ${k.tests.length} Testaufgaben zum Selbermachen mit Lösung und Bewertung.`.slice(0, 300),
         alternates: { canonical: `/ki-test/${k.key}` },
     }

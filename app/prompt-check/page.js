@@ -6,7 +6,7 @@ import LeadMagnetBox from '../components/LeadMagnetBox'
 import { SITE_NAME } from '../../lib/site'
 
 export const metadata = {
-    title: 'Prompt-Check: Wie gut ist dein Prompt? Score, Tipps und Token-Zähler',
+    title: 'Prompt-Check: Wie gut ist dein Prompt? Score & Tipps',
     description: 'Prompt einfügen, Score sehen: Prüft Rolle, Aufgabe, Kontext, Zielgruppe, Format, Länge und vage Wörter. Mit Token-Schätzung und einem Klick zum Verbessern in ChatGPT oder Claude. Läuft im Browser.',
     alternates: { canonical: '/prompt-check' },
 }

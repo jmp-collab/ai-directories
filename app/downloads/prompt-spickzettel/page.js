@@ -4,7 +4,7 @@ import PrintButton from '../../components/PrintButton'
 import { TECHNIKEN } from '../../../lib/prompts'
 
 export const metadata = {
-    title: 'Prompt-Spickzettel zum Ausdrucken: 8 Techniken, 6 Bausteine, 10 Profi-Sätze',
+    title: 'Prompt-Spickzettel zum Ausdrucken (gratis PDF)',
     description: 'Prompt Engineering auf einer Seite: die Bausteine eines guten Prompts, 8 Techniken und 10 Sätze, die jede KI-Antwort besser machen. Kostenlos als PDF speichern.',
     alternates: { canonical: '/downloads/prompt-spickzettel' },
 }

@@ -16,7 +16,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P1 Design-System**: Trenner-Komponente (Welle, Zickzack, Strahlung), Farbbänder, Scroll-Reveal-Animationen auf allen Seiten, Zähl-Animationen für Kennzahlen, Startseite mit neuem Aufbau (Bänder, Kennzahlen, Einstiege in alle Rubriken).
 - [x] **P2 KI-Test-Hub** `/ki-test`: Selbsttest-Suite mit standardisierten Testaufgaben (Logik, Fakten, Deutsch, Kreativität, Code), Senden an mehrere KIs, Bewertungsbogen mit Ergebnisgrafik; Methodik-Seite; Rubrikseiten je Testkategorie.
 - [x] **P3 Rechner-Hub** `/rechner`: Zeitersparnis-/ROI-Rechner, KI-Abo-Rechner, Token-/API-Kosten-Rechner (Preise nur mit Quelle und Datum), Automatisierungs-Kostenrechner.
-- [ ] **P4 Keyword- und Technik-SEO**: Keyword-Recherche (Semrush, falls verfügbar), Titel/Descriptions/H1 der Hauptseiten auf Zielbegriffe, WebSite-/Organization-Schema, FAQ-Blöcke, interne Verlinkung (Hub-and-Spoke), Breadcrumbs überall, Sitemap-Prioritäten, 404-Check, Bundle-Größen.
+- [x] **P4 Keyword- und Technik-SEO**: Keyword-Recherche (Semrush, falls verfügbar), Titel/Descriptions/H1 der Hauptseiten auf Zielbegriffe, WebSite-/Organization-Schema, FAQ-Blöcke, interne Verlinkung (Hub-and-Spoke), Breadcrumbs überall, Sitemap-Prioritäten, 404-Check, Bundle-Größen.
 - [ ] **P5 Pillar-Content**: „KI-Tools: die besten nach Aufgabe“, „Kostenlose KI-Tools“, „KI-Verzeichnis: was es ist und welche sich lohnen“, „KI-Test: so vergleichst du Chatbots“; jeweils mit Inhaltsverzeichnis, Boxen, interaktiven Elementen und FAQ.
 - [ ] **P6 Tool-Steckbriefe**: Konsens-Tools mit Partnerprogramm in `db/tools.json` (Preise laut Anbieter), Partnerprogramme in `db/partners.json`.
 - [ ] **P7 Dynamik**: Prompt des Tages, Tool-Finder-Quiz, „Neu in der Datenbank“, Fortschritts- und Gamification-Elemente, Mikro-Animationen.
@@ -24,6 +24,8 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
 ## Für Jean (am Ende präsentieren)
+
+- Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.
 
 - Domain aigeddon.de registrieren (größter einzelner Hebel für Ranking und Vertrauen), danach Umstellung durch mich.
 - Google Search Console verifizieren und Sitemap einreichen.
@@ -34,3 +36,4 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P1: Design-System (automatische Trenner mit rotierenden Formen/Farben, farbige H2, Bänder gelb/mint/pink/blau/lila/dunkel, Boxen tipp/achtung/info/jean, Scroll-Reveal mit Staffelung, Zähl-Animationen, schimmernde H1, schwebender Jean, Hover-Effekte), Startseite mit Einstiegs-Kacheln und Bändern.
 - 2026-10-23 · P2: KI-Test `/ki-test` mit 17 Aufgaben in 6 Kategorien (Logik, Fakten, Halluzinationen, Deutsch, Kreativität, Code), Senden an 5 KIs, Bewertung je KI, Live-Rangliste mit Balken, Speicherung im Browser, Konfetti; 6 Kategorieseiten, Methodik, FAQ-Schema; KI-Test in Kopfnavigation, Kompass, Startseiten-Kacheln, Sitemap, llms.txt.
 - 2026-10-23 · P3: Rechner-Hub `/rechner` mit KI-Zeitersparnis-Rechner (Break-even, Nutzen/Kosten-Balken, Urteil), KI-API-Kostenrechner (8 aktuelle Modelle von OpenAI, Anthropic, Google; Preise laut Anbieter vom 23.10.2026, Token-Schätzung aus Text) und Launch-Zeit-Rechner (echte Zahlen der Liste); je Seite FAQ-Schema und WebApplication-Schema; breite Tabellen scrollen auf dem Handy.
+- 2026-10-23 · P4: sitewide Organization- und WebSite-Schema mit SearchAction (/ki-tools?q=), Footer-Linknetz zu allen Rubriken (Hub and Spoke), Titel auf Zielbegriffe und Länge optimiert (zu lange Titel 181 → 20), Crawl aller 364 internen Seiten ohne kaputten Link, alle Seiten mit genau einer H1, Canonical und Description.

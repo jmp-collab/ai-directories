@@ -7,7 +7,7 @@ import { SITE_NAME } from '../../lib/site'
 import { getTutorials } from '../../lib/tutorials'
 
 export const metadata = {
-    title: 'KI-Tutorials auf Deutsch: Prompt Engineering Schritt für Schritt',
+    title: 'KI-Tutorials auf Deutsch: Prompt Engineering lernen',
     description: 'Interaktive Tutorials mit Vorher/Nachher-Vergleich, Prompts zum direkten Ausprobieren in ChatGPT und Claude und Abschluss-Quiz.',
     alternates: { canonical: '/tutorials' },
 }

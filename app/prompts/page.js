@@ -6,7 +6,7 @@ import { SITE_NAME } from '../../lib/site'
 import { promptsByKategorie, getPrompts, TECHNIKEN } from '../../lib/prompts'
 
 export const metadata = {
-    title: 'Prompt-Bibliothek: geprüfte KI-Prompts auf Deutsch, mit einem Klick an ChatGPT und Claude',
+    title: 'KI-Prompts auf Deutsch: Vorlagen für ChatGPT & Claude',
     description: `${getPrompts().length} Prompt-Vorlagen für SEO, Content, YouTube, Launch und Business. Felder ausfüllen, Vorschau sehen, mit einem Klick an ChatGPT, Claude, Perplexity oder Grok senden.`,
     alternates: { canonical: '/prompts' },
 }
