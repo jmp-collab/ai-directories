@@ -7,8 +7,8 @@ import { SITE_NAME } from '../../lib/site'
 import { RECHNER } from '../../lib/rechner'
 
 export const metadata = {
-    title: 'KI-Rechner: Abo, API-Kosten & Launch-Dauer',
-    description: 'Kostenlose KI-Rechner: Lohnt sich ein KI-Abo? Was kostet GPT, Claude oder Gemini über die API? Wie lange dauert ein Launch in KI-Verzeichnissen? Sofort im Browser.',
+    title: 'KI-Rechner: Abo, API-Kosten, Automatisierung & mehr',
+    description: 'Kostenlose KI-Rechner: Lohnt sich ein KI-Abo? Was kostet GPT, Claude oder Gemini über die API? Lohnt sich die Automatisierung? Was bringt mein Newsletter? Sofort im Browser.',
     alternates: { canonical: '/rechner' },
 }
 

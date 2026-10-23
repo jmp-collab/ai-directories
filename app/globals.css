@@ -4151,3 +4151,33 @@ a.ai-button,
     outline-offset: 3px;
     border-radius: 4px;
 }
+
+.rechner-tools {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.88rem;
+}
+
+.trichter {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px;
+    display: grid;
+    gap: 6px;
+}
+
+.trichter li {
+    width: var(--w);
+    min-width: 120px;
+    padding: 6px 10px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--band-blau), var(--band-mint));
+    color: var(--text);
+    font-size: 0.9rem;
+    transition: width 0.4s cubic-bezier(0.2, 1.2, 0.4, 1);
+}
+
+.trichter span {
+    font-weight: 800;
+}
