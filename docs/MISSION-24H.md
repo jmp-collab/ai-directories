@@ -52,7 +52,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P39 Ratgeber „KI und Datenschutz“**: DSGVO-Checkliste für KI-Tools (AVV, Training mit Daten, Serverstandort, Einwilligung bei Aufnahmen, EU AI Act Grundzüge), verlinkt aus Zielgruppen und Rubriken.
 - [x] **P40 Startseite & Hubs**: Zielgruppen- und Alternativen-Einstiege auf Startseite und KI-Tools-Hub, Kompass in der Seitenleiste ergänzen.
 - [x] **P41 Glossar II**: 20 weitere KI-Begriffe mit eigener Seite (z. B. Transformer, Reasoning-Modell, Kontext-Engineering, Vibe Coding, Inpainting, Upscaling, Deepfake, C2PA, LoRA, Quantisierung, VRAM, Latenz, Rate Limit, Bias, Alignment, Open Source, Text-to-Image, Text-to-Video, Agentischer Workflow, Model Card), Autolink ergänzen.
-- [ ] **P42 KI-Test II**: 10 weitere Testaufgaben in den bestehenden Kategorien (mit Kriterien, wo möglich mit Lösung).
+- [x] **P42 KI-Test II**: 10 weitere Testaufgaben in den bestehenden Kategorien (mit Kriterien, wo möglich mit Lösung).
 - [ ] **P35 Abschluss-QA**: Link-Crawl, Überlauf, Kontrast, Strukturdaten, Live-Stichproben.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
@@ -106,3 +106,4 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P39: Ratgeber „KI-Tools und Datenschutz: die DSGVO-Checkliste“ (AVV nach Art. 28, Training abschalten, Drittlandübermittlung, Aufnahmen und Mitbestimmung, EU AI Act in Grundzügen, 7-Punkte-Checkliste, ausdrücklich keine Rechtsberatung); verlinkt aus allen Rubrik-Warnboxen und allen Zielgruppen-Seiten.
 - 2026-10-23 · P40: Startseite mit Kacheln für Zielgruppen, Tool-Alternativen und KI-Glossar; Kompass in der Seitenleiste (auf jeder Seite) um Zielgruppen, Alternativen und Glossar ergänzt; KI-Tools-Hub-Link aktualisiert. Link-Crawl über alle Seiten: 0 kaputte Links.
 - 2026-10-23 · P41: 20 neue Glossar-Seiten (61 Begriffe gesamt): Transformer, Reasoning-Modell, Kontext-Engineering, Vibe Coding, Inpainting, Upscaling, Deepfake, C2PA, LoRA, Quantisierung, VRAM, Latenz, Rate Limit, Bias, Alignment, Open Source, Text-to-Image, Text-to-Video, Agentischer Workflow, Model Card; Autolink um 16 Muster erweitert; Querverweise geprüft.
+- 2026-10-23 · P42: 10 neue KI-Test-Aufgaben (40 gesamt): Wochentag rechnen, Prozent-Falle, Mondlandung, Siedepunkt auf dem Berg, erfundenes Goethe-Zitat, unsichere tagesaktuelle Zahl, einfache Sprache, genau 12 Wörter, Akrostichon, SQL-Fehler; Lösungen nachgerechnet.
