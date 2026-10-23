@@ -28,7 +28,7 @@ export default function GlossarPage() {
             name: 'Glossar KI und Prompt Engineering',
             url: absoluteUrl('/glossar'),
             inLanguage: 'de-DE',
-            hasDefinedTerm: KI_GLOSSAR.map(([name, description]) => ({ '@type': 'DefinedTerm', name, description, url: absoluteUrl(`/glossar#${glossarSlug(name)}`) })),
+            hasDefinedTerm: KI_GLOSSAR.map(([name, description]) => ({ '@type': 'DefinedTerm', name, description, url: absoluteUrl(`/glossar/${glossarSlug(name)}`) })),
         },
         {
             '@context': 'https://schema.org',
@@ -53,15 +53,12 @@ export default function GlossarPage() {
                 <dl className="legend glossar">
                     {KI_GLOSSAR.map(([term, text, href]) => (
                         <div key={term} id={glossarSlug(term)}>
-                            <dt>{term}</dt>
+                            <dt>
+                                <Link href={`/glossar/${glossarSlug(term)}`}>{term}</Link>
+                            </dt>
                             <dd>
-                                {text}
-                                {href && (
-                                    <>
-                                        {' '}
-                                        <Link href={href}>Mehr dazu →</Link>
-                                    </>
-                                )}
+                                {text}{' '}
+                                <Link href={`/glossar/${glossarSlug(term)}`}>Beispiel und Praxis-Tipp →</Link>
                             </dd>
                         </div>
                     ))}
