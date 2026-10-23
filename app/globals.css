@@ -4342,3 +4342,22 @@ ul.kb-hero-chips {
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
 }
+
+/* KI-Test: Ergebnis teilen und geteiltes Ergebnis anzeigen */
+.kitest-share {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.kitest-geteilt {
+    margin-bottom: 24px;
+    border-style: dashed;
+    animation: finder-in 0.45s cubic-bezier(0.2, 1.2, 0.4, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kitest-geteilt { animation: none; }
+}
