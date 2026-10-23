@@ -12,7 +12,7 @@ import { getSiteStats } from '../../../lib/data'
 const R = RECHNER.find((r) => r.slug === 'launch-zeit')
 
 export const metadata = {
-    title: 'Launch-Zeit-Rechner: Wie lange dauert der Eintrag in KI-Verzeichnisse?',
+    title: 'Launch-Zeit-Rechner für KI-Verzeichnisse',
     description: 'Plane deinen KI-Tool-Launch: Anzahl Verzeichnisse, Minuten pro Eintrag und Einträge pro Tag einstellen, Arbeitszeit und Dauer sehen. Mit echten Zahlen aus der AIGeddon-Liste.',
     alternates: { canonical: '/rechner/launch-zeit' },
 }

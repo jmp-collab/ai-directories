@@ -5,7 +5,7 @@ import { SITE_NAME } from '../../lib/site'
 import { LEADMAGNETS } from '../../lib/leadmagnets'
 
 export const metadata = {
-    title: 'Kostenlose Downloads: Prompt-Spickzettel, Prompt-Paket, Top 50 KI-Verzeichnisse',
+    title: 'Gratis-Downloads: Prompt-Spickzettel & Prompt-Paket',
     description: 'Gratis-Downloads von AIGeddon: Prompt-Spickzettel zum Ausdrucken, alle Prompt-Vorlagen als Datei und die Top 50 KI-Verzeichnisse als Tabelle.',
     alternates: { canonical: '/downloads' },
 }

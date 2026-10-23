@@ -9,7 +9,7 @@ import { SITE_NAME } from '../../lib/site'
 import { TESTS, TEST_KATEGORIEN, getTestKategorien } from '../../lib/kitests'
 
 export const metadata = {
-    title: { absolute: `KI-Test: ChatGPT, Claude, Gemini & Co. selbst testen (${TESTS.length} Aufgaben) | AIGeddon` },
+    title: { absolute: 'KI-Test 2026: ChatGPT, Claude & Gemini selbst testen | AIGeddon' },
     description: `Der interaktive KI-Test: ${TESTS.length} standardisierte Aufgaben zu Logik, Fakten, Halluzinationen, Deutsch, Kreativität und Code. Mit einem Klick an jede KI senden, Antworten bewerten, eigene Rangliste erhalten. Kostenlos, im Browser.`,
     alternates: { canonical: '/ki-test' },
 }

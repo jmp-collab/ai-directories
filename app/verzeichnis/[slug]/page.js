@@ -30,7 +30,7 @@ export function generateMetadata({ params }) {
     if (!d) return {}
     const price = d.pricing ? pricingLabel(d.pricing).toLowerCase() : 'Preis unklar'
     return {
-        title: `${d.name} eintragen: Kosten, Domain Rating & Erfahrung`,
+        title: `${d.name} eintragen: Kosten & Domain Rating`,
         description: `${d.name} im Check: ${price}, Domain Rating ${formatRating(d.domain_rating)}, ca. ${formatVisits(d.monthly_visits)} Besuche im Monat. So trägst du dein KI-Tool ein, plus Alternativen.`,
         alternates: { canonical: `/verzeichnis/${d.slug}` },
         openGraph: { url: `/verzeichnis/${d.slug}` },

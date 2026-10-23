@@ -10,7 +10,7 @@ import { getKbTools, getKbRubriken, kbStats, kbForClient, KB_SOURCES, KB_STAND }
 const stats = kbStats()
 
 export const metadata = {
-    title: `KI-Tool-Datenbank: ${stats.gesamt} KI-Tools in ${getKbRubriken().length} Rubriken`,
+    title: { absolute: `KI-Tools 2026: ${stats.gesamt} Tools im Überblick | AIGeddon` },
     description: `${stats.gesamt} KI-Tools aus den drei größten offenen KI-Tool-Listen auf GitHub, durchsuchbar nach Rubrik, Open Source und Gratis. ${stats.konsens} Tools stehen in mindestens zwei Listen.`,
     alternates: { canonical: '/ki-tools' },
 }
@@ -38,7 +38,7 @@ export default function KiToolsPage() {
             <Breadcrumbs items={crumbs} />
             <section className="hero">
                 <p className="eyebrow">KI-Tool-Datenbank</p>
-                <h1>{stats.gesamt} KI-Tools. Gefiltert nach dem, was die Community wirklich empfiehlt.</h1>
+                <h1>KI-Tools: {stats.gesamt} Tools, gefiltert nach dem, was die Community wirklich empfiehlt</h1>
                 <p className="lead">
                     Zusammengeführt aus den drei größten offenen KI-Tool-Listen auf GitHub ({KB_SOURCES.reduce((s, x) => s + x.stars, 0).toLocaleString('de-DE')} Sterne zusammen). Steht ein Tool in mehreren Listen, ist das ein starkes Signal: <strong>🏆 Konsens</strong>.
                 </p>

@@ -6,7 +6,7 @@ import { SITE_NAME, absoluteUrl } from '../../lib/site'
 import { getTools, getCategories, TOOLS_STAND } from '../../lib/tools'
 
 export const metadata = {
-    title: 'KI-Tools für Gründer und Marketer: Preise, Gratis-Tarife, Alternativen',
+    title: 'KI-Tools mit Preisen und Gratis-Tarif im Vergleich',
     description:
         'KI- und Launch-Werkzeuge nach Anwendungsfall: SEO, Newsletter, Website, Automatisierung, Video, Audio und mehr. Mit Einstiegspreis und Gratis-Tarif laut Anbieter.',
     alternates: { canonical: '/tools' },

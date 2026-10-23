@@ -8,7 +8,7 @@ import { getDirectories } from '../../lib/data'
 import { absoluteUrl } from '../../lib/site'
 
 export const metadata = {
-    title: 'Launch-Kit: Einreichungstexte für KI-Verzeichnisse erstellen',
+    title: 'Launch-Kit: Texte für KI-Verzeichnisse erstellen',
     description:
         'Kostenloses Launch-Kit: Einmal Name, Nutzen und Funktionen deines KI-Tools eingeben, dann Einzeiler, Kurz- und Langbeschreibung auf Deutsch und Englisch sowie UTM-Links für jedes Verzeichnis kopieren.',
     alternates: { canonical: '/launch-kit' },

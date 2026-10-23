@@ -16,7 +16,7 @@ export function generateMetadata({ params }) {
     const t = getTool(params.slug)
     if (!t) return {}
     return {
-        title: `${t.name}: Preis, Gratis-Tarif und Alternativen`,
+        title: `${t.name}: Preis, Gratis-Tarif & Alternativen`,
         description: `${t.summary_de} ${t.free_plan ? 'Mit Gratis-Tarif. ' : ''}${t.price_from ? `Bezahlt ab ${t.price_from}. ` : ''}Dazu Alternativen aus ${t.category}.`.slice(0, 300),
         alternates: { canonical: `/tools/${t.slug}` },
     }

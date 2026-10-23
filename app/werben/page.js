@@ -7,7 +7,7 @@ import { mailto, YOUTUBE_URL } from '../../lib/monetization'
 import { getSiteStats } from '../../lib/data'
 
 export const metadata = {
-    title: 'Werben auf AIGeddon: Featured-Platz, Newsletter, Launch-Service',
+    title: 'Werben auf AIGeddon: Featured-Platz & Launch-Service',
     description:
         'Für Betreiber von KI-Verzeichnissen und KI-Tools: Featured-Platz, geprüftes Profil, Newsletter- und YouTube-Sponsoring oder der Launch-Service, bei dem wir dein Tool in die passenden Verzeichnisse eintragen.',
     alternates: { canonical: '/werben' },

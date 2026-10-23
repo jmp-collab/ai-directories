@@ -5,7 +5,7 @@ import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import { SITE_NAME, absoluteUrl, withBase } from '../../lib/site'
 
 export const metadata = {
-    title: 'Über Jean Maurice Port: Senior SEO/SGE Manager und KI-Praktiker',
+    title: 'Über Jean Maurice Port: SEO/SGE Manager & KI-Praktiker',
     description:
         'Jean Maurice Port ist Senior SEO/SGE Manager bei der MotoMobilityGroup, war Head of AI bei Greyheart Media und baut diese Liste der KI-Verzeichnisse. Werdegang, Schwerpunkte, Projekte, Zertifikate.',
     alternates: { canonical: '/ueber-jean' },

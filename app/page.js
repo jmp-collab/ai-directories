@@ -24,7 +24,7 @@ import { formatNumber } from '../utils/i18n-de'
 export function generateMetadata() {
     const stats = getSiteStats()
     return {
-        title: { absolute: `${stats.total} KI-Verzeichnisse für deinen Tool-Launch | AIGeddon` },
+        title: { absolute: `KI-Verzeichnisse 2026: ${stats.total} AI Directories | AIGeddon` },
         description: `Die deutsche Liste der KI-Verzeichnisse: ${stats.total} AI Directories mit Domain Rating, Traffic, Preis und Einreichungs-Check. ${stats.free.length} davon kostenlos. Tool eintragen, Backlinks holen, nebenbei lachen.`,
         alternates: { canonical: '/' },
         openGraph: { url: '/' },
@@ -43,13 +43,6 @@ export default function Home() {
     const updated = new Intl.DateTimeFormat('de-DE', { month: 'long', year: 'numeric' }).format(new Date())
 
     const schema = [
-        {
-            '@context': 'https://schema.org',
-            '@type': 'WebSite',
-            name: SITE_NAME,
-            url: SITE_URL,
-            inLanguage: 'de-DE',
-        },
         {
             '@context': 'https://schema.org',
             '@type': 'Dataset',
