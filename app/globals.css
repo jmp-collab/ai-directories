@@ -2726,3 +2726,233 @@ td.wrap {
         animation: none !important;
     }
 }
+
+/* ---------- KI-Tool-Datenbank ---------- */
+.rubrik-tiles {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+}
+
+.rubrik-tiles a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 100%;
+    padding: 12px;
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 3px 3px 0 var(--border);
+    transform: rotate(var(--tilt));
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.rubrik-tiles a:hover,
+.rubrik-tiles a:focus-visible {
+    transform: rotate(0) scale(1.04);
+    background: var(--pop);
+    color: #1b1b1f;
+}
+
+.rubrik-tiles span {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.rubrik-tiles a:hover span {
+    color: #1b1b1f;
+}
+
+.kb-filter {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--bg);
+    padding: 10px 0;
+}
+
+@media (min-width: 721px) {
+    .kb-filter {
+        top: 80px;
+    }
+}
+
+.kb-filter input[type='search'] {
+    width: 100%;
+    box-sizing: border-box;
+    font: inherit;
+    font-size: 1.05rem;
+    padding: 10px 14px;
+    color: var(--text);
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 999px;
+    box-shadow: 3px 3px 0 var(--border);
+}
+
+.kb-chips {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 10px 2px 4px;
+    scrollbar-width: thin;
+}
+
+.kb-chips button {
+    flex: 0 0 auto;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border: 2px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.kb-chips button.is-active {
+    background: var(--accent);
+    color: var(--accent-contrast);
+}
+
+.kb-chips small {
+    opacity: 0.7;
+}
+
+.kb-toggles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    font-size: 0.9rem;
+    margin-top: 6px;
+}
+
+.kb-toggles select {
+    font: inherit;
+}
+
+.kb-count {
+    margin: 6px 0 0;
+    font-weight: 800;
+}
+
+.kb-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.kb-list li {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px;
+    animation: kb-in 0.35s ease both;
+}
+
+.kb-list li.is-gold {
+    box-shadow: 4px 4px 0 var(--pop);
+    border-color: var(--border);
+}
+
+.kb-list li.is-silver {
+    box-shadow: 3px 3px 0 var(--pop-2);
+}
+
+.kb-list p {
+    margin: 6px 0 0;
+    font-size: 0.88rem;
+    color: var(--muted);
+}
+
+.kb-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: baseline;
+}
+
+.kb-badges {
+    display: flex;
+    gap: 4px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+}
+
+.kb-profil {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.kb-more {
+    text-align: center;
+}
+
+@keyframes kb-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+}
+
+.podium {
+    list-style: none;
+    padding: 0;
+    counter-reset: platz;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.podium li {
+    counter-increment: platz;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 12px 12px 48px;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.podium li::before {
+    content: counter(platz);
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--pop);
+    color: #1b1b1f;
+    border: 2px solid var(--border);
+    font-weight: 800;
+}
+
+.podium span {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kb-list li,
+    .rubrik-tiles a {
+        animation: none !important;
+        transition: none !important;
+    }
+}

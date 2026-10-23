@@ -14,7 +14,8 @@
     "lint": "next lint",
     "update-db": "ts-node utils/db/update-db.js",
     "update-readme": "ts-node utils/readme/update-readme.js",
-    "partners": "node utils/partners/render.js"
+    "partners": "node utils/partners/render.js",
+    "kb:import": "node utils/kb/import.js"
   },
   "dependencies": {
     "eslint": "^8.56.0",

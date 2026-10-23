@@ -7,6 +7,7 @@ import { getCheck, checkCount, CHECK_STAND } from '../../lib/checks'
 import { getTools, TOOLS_STAND } from '../../lib/tools'
 import { getPrompts } from '../../lib/prompts'
 import { getTutorials } from '../../lib/tutorials'
+import { getKbRubriken, kbStats, KB_SOURCES } from '../../lib/kb'
 import { experienceLabel, pricingLabel, dealLabel, formatRating, formatVisits } from '../../utils/i18n-de'
 
 export const dynamic = 'force-static'
@@ -57,6 +58,12 @@ ${ARTIKEL.map((a) => `- [${a.title}](${absoluteUrl(`/ratgeber/${a.slug}`)}): ${a
 
 ## Deutschsprachige KI-Verzeichnisse (Semrush, Stand ${DACH_STAND})
 ${DACH.map((d) => `- [${d.name}](${d.link}): Authority Score ${d.authority}, organischer Traffic DE ${d.traffic}/Monat. ${d.note} Eintragen: ${d.submission_link}`).join('\n')}
+
+## KI-Tool-Datenbank
+
+${kbStats().gesamt} KI-Tools aus ${KB_SOURCES.map((s) => s.repo).join(', ')}; Konsens = Anzahl der Listen, in denen ein Tool steht. Übersicht: ${absoluteUrl('/ki-tools')}
+
+${getKbRubriken().map((r) => `- [${r.name}](${absoluteUrl(`/ki-tools/${r.key}`)}): ${r.tools.length} Tools. Konsens-Favoriten: ${r.tools.filter((t) => t.konsens > 1).slice(0, 5).map((t) => t.name).join(', ') || 'keine'}.`).join('\n')}
 
 ## Tutorials
 

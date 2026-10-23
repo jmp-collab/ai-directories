@@ -108,7 +108,7 @@ Leitidee: **AIGeddon wird die deutsche Zentrale für „KI wirklich benutzen“*
 
 81. `[x]` Zentrales Partner-Register `db/partners.json` (50 Programme).
 82. `[J]` Anmeldung bei den Top-10-Programmen (Semrush, beehiiv, Kit, Make, ElevenLabs, Synthesia, HeyGen, Systeme.io, Framer, Surfer).
-83. `[ ]` Tool-Verzeichnis auf 75 Tools mit Partnerprogramm (KI-Chat, Bild, Schreiben, Transkription, Recherche). **A**
+83. `[~]` KI-Tool-Datenbank mit 705 Tools steht (`/ki-tools`); Tool-Verzeichnis mit Preisen auf 75 Tools mit Partnerprogramm (KI-Chat, Bild, Schreiben, Transkription, Recherche). **A**
 84. `[ ]` Prompt-Seiten zeigen die passenden Tools (erledigt für 12 Seiten), für alle neuen Seiten Pflicht. **A**
 85. `[ ]` „Bester Deal“-Box pro Tool-Kategorie. **A**
 86. `[ ]` Weitere Vergleiche (Backlog): ElevenLabs vs. Murf, Tally vs. Typeform, Descript vs. Pictory, ChatGPT vs. Claude vs. Gemini vs. Perplexity. **A**
