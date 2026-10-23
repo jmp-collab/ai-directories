@@ -60,7 +60,7 @@ export default function QuellenPage() {
                 <li>
                     <strong>Konsens</strong> zählt, in wie vielen der drei Listen ein Tool steht. Die Listen werden unabhängig gepflegt; mehrfache Nennung ist deshalb ein Qualitätssignal, kein Testergebnis.
                 </li>
-                <li>Für alle Konsens-Tools gibt es eine eigene deutsche Kurzbeschreibung (db/kb-de.json), formuliert auf Basis der Quellenangaben ohne neue Behauptungen; die übrigen Einträge zeigen die englische Originalbeschreibung.</li>
+                <li>Für alle Konsens-Tools sowie alle Bild-, Video-, Audio- und Musik-Tools gibt es eine eigene deutsche Kurzbeschreibung (db/kb-de.json), formuliert auf Basis der Quellenangaben ohne neue Behauptungen; die übrigen Einträge zeigen die englische Originalbeschreibung.</li>
                 <li>Die Rubriken und Einleitungstexte sind von AIGeddon. Lernmaterial, Linklisten und Forschungsrubriken der Quellen sind nicht enthalten.</li>
                 <li>
                     Tools mit <strong>🧔 Steckbrief</strong> hat Jean einzeln mit Preisen und Gratis-Tarif erfasst (<Link href="/tools">Tool-Verzeichnis</Link>).

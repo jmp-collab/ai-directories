@@ -1,5 +1,5 @@
 {
- "_hinweis": "Deutsche Kurzbeschreibungen für Konsens-Tools (in 2+ Quellen). Eigene Formulierung auf Basis der Quellenbeschreibung, keine neuen Behauptungen. rubrik korrigiert eine falsche Zuordnung aus dem Import.",
+ "_hinweis": "Deutsche Kurzbeschreibungen: alle Konsens-Tools (2+ Quellen) sowie Bild-, Video-, Audio- und Musik-Tools. Eigene Formulierung auf Basis der Quellenbeschreibung, keine neuen Behauptungen. rubrik korrigiert eine falsche Zuordnung aus dem Import.",
  "chatgpt": {
   "de": "Der bekannteste KI-Chatbot von OpenAI: Fragen stellen, Texte schreiben, programmieren, im Dialog."
  },
@@ -419,5 +419,422 @@
  },
  "z-ai": {
   "de": "Chatbot und Agenten-Plattform auf Basis der GLM-Modelle."
+ },
+ "affogato": {
+  "de": "Erstellt KI-Produktvideos als Werbeclips für TikTok, Reels und Shorts."
+ },
+ "ai-boost": {
+  "de": "Bilder mit KI erstellen und bearbeiten: hochskalieren, Gesichter tauschen, Avatare erzeugen, Outfits anprobieren."
+ },
+ "ai-music-generator": {
+  "de": "Songs mit KI erstellen, ohne Vorkenntnisse."
+ },
+ "ai-photo-forge": {
+  "de": "Telegram-Bot, der KI-Bilder von dir erzeugt."
+ },
+ "ainterview-space": {
+  "de": "KI-moderierte Podcast-Interviews: Thema wählen, die KI recherchiert, führt das Interview und erzeugt die Folge als Audio oder Video."
+ },
+ "anatomy": {
+  "de": "Skill für Coding-Agenten, der technische Ideen als interaktive isometrische Grafiken erklärt."
+ },
+ "audify-ai": {
+  "de": "Plattform für Sprachsynthese mit anpassbaren Optionen, für Entwickler und Kreative."
+ },
+ "audiocraft-github-com-f": {
+  "de": "Open-Source-Bibliothek von Meta für Musik- und Klangerzeugung mit MusicGen (Text zu Musik) und AudioGen (Text zu Geräusch); laut Quelle seit Anfang 2025 nicht mehr gepflegt."
+ },
+ "audiocraft": {
+  "de": "Code-Basis von Meta für generatives Audio mit MusicGen für Musik und AudioGen für Geräusche."
+ },
+ "autodesk-flow-studio": {
+  "de": "Animiert CG-Figuren per KI und fügt sie in echte Videoaufnahmen ein."
+ },
+ "avatar-ai": {
+  "de": "Eigene KI-Avatare erstellen."
+ },
+ "azure-text-to-speech": {
+  "de": "Cloud-Sprachausgabe von Microsoft als Teil von Azure AI."
+ },
+ "based-ai": {
+  "de": "Intuitive KI-Oberfläche zum Erstellen von Videos."
+ },
+ "beatoven-ai": {
+  "de": "KI-Musik, die gezielt bestimmte Stimmungen und Emotionen erzeugt."
+ },
+ "black-headshots": {
+  "de": "KI-Bewerbungsfotos für Schwarze Berufstätige."
+ },
+ "boomy": {
+  "de": "Musik schnell mit KI erzeugen und veröffentlichen, inklusive Möglichkeit zur Monetarisierung."
+ },
+ "buzz-github-com-c": {
+  "de": "Open-Source-App für Transkription und Übersetzung offline auf Windows, macOS und Linux, auch für YouTube-Links und Mikrofon."
+ },
+ "canva": {
+  "de": "Bilder mit KI erzeugen und bearbeiten, eingebettet in die Designplattform Canva."
+ },
+ "capcut": {
+  "de": "Videoschnitt mit automatischen Untertiteln und Spracherkennung."
+ },
+ "chattts": {
+  "de": "Sprachausgabe-Modell speziell für Dialoge, etwa mit KI-Assistenten; unterstützt Englisch und Chinesisch."
+ },
+ "claude-video": {
+  "de": "Open-Source-Werkzeug, mit dem KI-Agenten Videos ansehen und zusammenfassen: Einzelbilder, Untertitel und Fragen zu YouTube-, TikTok- oder lokalen Videos."
+ },
+ "clipwing": {
+  "de": "Schneidet lange Videos in Dutzende kurze Clips."
+ },
+ "colossyan": {
+  "de": "Videoerstellung für Schulung und Weiterbildung mit KI-Avataren in mehreren Sprachen."
+ },
+ "comfyui": {
+  "de": "Knotenbasierte Oberfläche zum Bauen und Ausführen von Stable-Diffusion-Workflows."
+ },
+ "coqui": {
+  "de": "Generative KI für Stimmen."
+ },
+ "custompod-io": {
+  "de": "Erzeugt täglich Nachrichten-Podcasts nur zu deinen Themen."
+ },
+ "descript-overdub": {
+  "de": "Stimm-Funktion von Descript für schnelle Voiceovers, eingebunden in Transkription und Schnitt."
+ },
+ "diffusiondb": {
+  "de": "Liste öffentlicher Apps, Entwicklerwerkzeuge, Anleitungen und Plugins rund um Stable Diffusion."
+ },
+ "dreamstudio": {
+  "de": "Einfache Oberfläche zum Erstellen von Bildern mit Stable Diffusion."
+ },
+ "dreamstudio-beta-dreamst": {
+  "de": "Einfache Oberfläche zum Erstellen von Bildern mit Stable Diffusion."
+ },
+ "ecrett-music": {
+  "de": "Lizenzfreie KI-Musik für Videocreator."
+ },
+ "ekhos-ai": {
+  "de": "Spracherkennung mit Korrekturfunktionen, Echtzeit-Aufnahme und Transkription von Audio- und Videodateien."
+ },
+ "eleven-labs-beta-elevenl": {
+  "de": "KI-Stimmengenerator."
+ },
+ "figurelabs": {
+  "de": "Erzeugt veröffentlichungsfähige wissenschaftliche Grafiken als Vektordatei aus Text oder Skizzen."
+ },
+ "firefly": {
+  "de": "Bildbearbeitung und Bildgenerierung mit KI von Adobe."
+ },
+ "fliki": {
+  "de": "Text in Videos und Sprachausgabe verwandeln, mit KI-Stimmen, in wenigen Minuten."
+ },
+ "flux-bfl-ai": {
+  "de": "Bildmodell-Familie von Black Forest Labs für fotorealistische Bilder und Bearbeitung mit mehreren Referenzbildern; teils auch als Open Source."
+ },
+ "gaugan2": {
+  "de": "Fotorealistische Bilder aus Wörtern und Skizzen kombinieren."
+ },
+ "gensbot": {
+  "de": "Gestaltet mit KI personalisierte bedruckte Produkte: ein Prompt, ein einzigartiges Stück."
+ },
+ "google-flow": {
+  "de": "KI-Filmwerkzeug von Google auf Basis von Veo."
+ },
+ "hailuo-ai": {
+  "de": "Text-zu-Video-Generator mit KI."
+ },
+ "hailuo-ai-text-to-speech": {
+  "de": "Sprachausgabe mit über 300 Stimmen in 17 Sprachen und vielen Akzenten."
+ },
+ "hailuoai": {
+  "de": "KI-Videoerstellung von MiniMax, bekannt für natürlich wirkende Bewegungen."
+ },
+ "higgsfield": {
+  "de": "KI-Videostudio, das über ein Abo mehr als 15 Video- und Bildmodelle anderer Anbieter bündelt."
+ },
+ "hour-one": {
+  "de": "Text automatisch in Videos mit virtuellen Moderatoren verwandeln."
+ },
+ "human-generator": {
+  "de": "Erzeugt realistisch wirkende Fotos von Menschen."
+ },
+ "hyperframes": {
+  "de": "Framework, mit dem KI-Agenten Videos aus HTML, CSS und JavaScript rendern."
+ },
+ "hyperframes-github-com-h": {
+  "de": "Open-Source-Framework von HeyGen, das aus HTML, CSS und Animationen MP4-Videos rendert."
+ },
+ "icoloring": {
+  "de": "Kostenloser KI-Generator für Ausmalbilder."
+ },
+ "indextts": {
+  "de": "Open-Source-Sprachausgabe von Bilibili, steuerbar und ohne Training auf neue Stimmen übertragbar; mehrere Sprachen."
+ },
+ "ispeech": {
+  "de": "Sprachlösung für Unternehmen mit vielen Sprachen und Stimmen."
+ },
+ "kling-ai": {
+  "de": "Werkzeuge zum Erstellen fantasievoller Bilder und Videos."
+ },
+ "kling-ai-klingai-com": {
+  "de": "KI-Videoerstellung von Kuaishou, bekannt für filmreife Qualität."
+ },
+ "klingai": {
+  "de": "KI-Kreativstudio für Bild- und Videogenerierung."
+ },
+ "leonardo-ai": {
+  "de": "Erstellt hochwertige Bilder und Grafiken für Projekte, mit verschiedenen Stilen."
+ },
+ "libraire": {
+  "de": "Große Bibliothek mit KI-generierten Bildern."
+ },
+ "loudly": {
+  "de": "KI-Musik mit Community-Plattform für Zusammenarbeit."
+ },
+ "lovo-ai": {
+  "de": "KI-Stimmen für Kreative, besonders für Werbung und Erklärvideos."
+ },
+ "magic-eraser-magiceraser-": {
+  "de": "Entfernt störende Objekte aus Fotos in Sekunden."
+ },
+ "magic-patterns": {
+  "de": "KI-Werkzeug für Oberflächen-Designs mit Figma-Export und React-Code."
+ },
+ "magnific": {
+  "de": "KI-Designwerkzeuge für Bildgenerierung, Hintergrundentfernung und kreative Vorlagen."
+ },
+ "maxvideoai": {
+  "de": "Arbeitsbereich, um Videos mit mehreren KI-Videomodellen zu erzeugen und zu vergleichen."
+ },
+ "minimax-h3": {
+  "de": "Open-Source-System von MiniMax für Video und Audio: Text zu Video, Bild zu Video und mehr."
+ },
+ "modyfi": {
+  "de": "Designplattform im Browser mit KI-Bildgenerierung, Animation und Echtzeit-Zusammenarbeit."
+ },
+ "modyfi-modyfi-io": {
+  "de": "Bildbearbeitung im Browser mit KI-Werkzeugen und Echtzeit-Zusammenarbeit."
+ },
+ "mureka-ai": {
+  "de": "KI-Musikwerkzeug von Kunlun Wanwei."
+ },
+ "murf-ai": {
+  "de": "Plattform für schnelle, hochwertige Voiceovers, beliebt für Werbung und Marketing."
+ },
+ "napkin": {
+  "de": "Erstellt Diagramme, Grafiken und Infografiken aus Text."
+ },
+ "nemo": {
+  "de": "Open-Source-Framework von NVIDIA für Sprach-KI, inklusive Spracherkennung und Sprachausgabe."
+ },
+ "nero-ai": {
+  "de": "Bildbearbeitung mit KI: hochskalieren, Kratzer reparieren, kolorieren, entrauschen, Hintergrund wechseln."
+ },
+ "nightcafe": {
+  "de": "KI-Kunstgenerator mit mehreren Verfahren."
+ },
+ "openmontage": {
+  "de": "Open-Source-System, das Coding-Assistenten zum Videostudio macht, mit Vorlagen für Erklärvideos, Animation und Doku-Montage."
+ },
+ "openshorts": {
+  "de": "Open-Source-App, die lange Videos in Hochformat-Clips verwandelt: Transkription, Clip-Auswahl per KI, Gesichtsverfolgung und Untertitel."
+ },
+ "optimizerai": {
+  "de": "Erzeugt Soundeffekte mit KI."
+ },
+ "palmier-pro": {
+  "de": "Videoschnitt-Programm für macOS mit KI-Funktionen; laut Quelle inzwischen nicht mehr quelloffen."
+ },
+ "parakeet": {
+  "de": "Familie offener Spracherkennungsmodelle von NVIDIA, auch für Streaming und mehrere Sprachen."
+ },
+ "pawtrait": {
+  "de": "KI-Porträts von Haustieren."
+ },
+ "photo-ai": {
+  "de": "Eigene KI-Avatare erstellen."
+ },
+ "photoguruai": {
+  "de": "Professionelle KI-Bewerbungsfotos in verschiedenen Stilen."
+ },
+ "phygital": {
+  "de": "Vorlagen zum Erzeugen und Bearbeiten von Bildern, auch eigene Designs."
+ },
+ "pictory": {
+  "de": "Erstellt und bearbeitet professionelle Videos aus Text."
+ },
+ "pika": {
+  "de": "Plattform, die Ideen in Videos verwandelt."
+ },
+ "pixelz-ai-art-generator": {
+  "de": "Kunst aus Text mit mehreren Verfahren wie Stable Diffusion."
+ },
+ "pixverse": {
+  "de": "KI-Videos aus Text und Fotos."
+ },
+ "pixvify-ai": {
+  "de": "Kostenloser Generator für realistische KI-Fotos."
+ },
+ "plantphotoai": {
+  "de": "Kostenlose KI-Bilder von Pflanzen."
+ },
+ "planttattoosai": {
+  "de": "Generator für Pflanzen- und Blumen-Tattoos, trainiert an echten Pflanzen."
+ },
+ "play-ht": {
+  "de": "KI-Stimmengenerator: realistische Sprachausgabe aus Text online erzeugen."
+ },
+ "playground": {
+  "de": "Kostenloser KI-Bildgenerator für Kunst, Social Posts, Präsentationen, Poster und Logos."
+ },
+ "playground-ai": {
+  "de": "Kostenloser KI-Bildgenerator für Kunst, Social Posts, Präsentationen, Poster und Logos."
+ },
+ "podcast-ai": {
+  "de": "Ein Podcast, der vollständig von KI erzeugt wird, mit Stimmen von Play.ht."
+ },
+ "ponzu": {
+  "de": "Kostenloser KI-Logo-Generator."
+ },
+ "promptbase": {
+  "de": "Marktplatz zum Finden und Verkaufen von Prompts."
+ },
+ "prompthero": {
+  "de": "Prompt-Suche für Stable Diffusion, ChatGPT, Midjourney und andere Modelle."
+ },
+ "recast-studio": {
+  "de": "KI-Assistent für Podcast-Marketing."
+ },
+ "recraft": {
+  "de": "Erzeugt Bilder, Vektorgrafiken, Illustrationen, Icons und 3D-Grafiken und hilft beim Weiterentwickeln."
+ },
+ "remove-bg": {
+  "de": "Entfernt den Bildhintergrund automatisch."
+ },
+ "remusic": {
+  "de": "Kostenloser KI-Musikgenerator mit Lernplattform."
+ },
+ "rephrase-ai": {
+  "de": "Personalisierte Videos in großer Zahl erstellen."
+ },
+ "republiclabs-ai": {
+  "de": "Erzeugt mit einem Prompt gleichzeitig Ergebnisse aus mehreren Modellen."
+ },
+ "respeecher": {
+  "de": "Professionelles Stimmenklonen mit Emotion, verbreitet in der Unterhaltungsbranche."
+ },
+ "reve-image": {
+  "de": "Bildmodell mit Fokus darauf, den Prompt genau umzusetzen, auf Ästhetik und Schrift im Bild."
+ },
+ "room-reinvented": {
+  "de": "Raumfoto hochladen und per KI in über 30 Einrichtungsstilen sehen."
+ },
+ "rvc-retrieval-based-voice-conversion": {
+  "de": "Open-Source-Modell zur Stimmumwandlung, beliebt für Gesang und Stimmenklonen."
+ },
+ "seedance": {
+  "de": "Videomodell-Familie von ByteDance."
+ },
+ "seedance-2-0": {
+  "de": "Video-Modell von ByteDance für Bild zu Video und Text zu Video."
+ },
+ "seede-ai": {
+  "de": "Erstellt Poster in etwa einer Minute."
+ },
+ "sfx-engine": {
+  "de": "Erzeugt Soundeffekte mit KI."
+ },
+ "shortvideogen": {
+  "de": "Kurze Videos mit Ton aus Text-Prompts."
+ },
+ "sisif": {
+  "de": "KI-Videogenerator, der Text in Videos verwandelt."
+ },
+ "skybox-ai": {
+  "de": "Erzeugt 360-Grad-Panoramabilder aus Text."
+ },
+ "soundful": {
+  "de": "Hochwertige, lizenzfreie Musik für Creator."
+ },
+ "soundraw": {
+  "de": "Musikstücke nach Stimmung und Stil anpassen."
+ },
+ "splash-pro": {
+  "de": "Musik-Plattform mit einfachen KI-Werkzeugen für alle Erfahrungsstufen."
+ },
+ "stable-audio": {
+  "de": "Musik und Soundeffekte aus Text von Stability AI, auch komplette Tracks."
+ },
+ "stable-diffusion-webui": {
+  "de": "Open-Source-Oberfläche für Stable Diffusion: Bilder aus Text oder Bildern, mit vielen Erweiterungen."
+ },
+ "stitch": {
+  "de": "Designwerkzeug von Google Labs: erzeugt aus Text mehrseitige Prototypen, Design-Systeme und Frontend-Code."
+ },
+ "stockphotoai-net": {
+  "de": "Stockfotos, mit KI für dich erstellt."
+ },
+ "suit-me-up": {
+  "de": "Bilder von dir im Anzug, mit KI erzeugt."
+ },
+ "suno-ai": {
+  "de": "Musik machen ohne Instrument: Songs aus deiner Idee."
+ },
+ "suno-ai-suno-ai": {
+  "de": "Erzeugt in Sekunden eigene Songs aus Text-Prompts."
+ },
+ "svgstud-io": {
+  "de": "SVG-Grafiken mit KI erzeugen und semantisch durchsuchen."
+ },
+ "text2infographic": {
+  "de": "Generator und Editor für Infografiken."
+ },
+ "topaz-photo-ai": {
+  "de": "Bildverbesserung für Fotografen: hochskalieren, entrauschen, schärfen und Gesichter wiederherstellen, lokal am Rechner."
+ },
+ "tts-webui": {
+  "de": "Weboberfläche für mehrere Sprachausgabe-, Musik- und Audiowerkzeuge."
+ },
+ "tts-webui-github-com-r": {
+  "de": "Open-Source-App für Stimme und Musik mit über 15 Sprachausgabe-Modellen."
+ },
+ "vall-e-x": {
+  "de": "Sprachmodell für Sprachausgabe über Sprachgrenzen hinweg."
+ },
+ "vectorart-ai": {
+  "de": "Vektorgrafiken mit KI erstellen."
+ },
+ "veritone-voice": {
+  "de": "Anpassbares Stimmenklonen für Medien und Unterhaltung mit Fokus auf Markenkonsistenz."
+ },
+ "vibe-transcribe": {
+  "de": "Transkription von Audio- und Videodateien in einer Anwendung."
+ },
+ "videolingo": {
+  "de": "Videoübersetzung und Lokalisierung: Untertitel und Synchronisation mit geklonter Stimme."
+ },
+ "wan-3-0": {
+  "de": "Videomodell von Alibaba mit Text-, Bild-, Video- und Audio-Referenzen."
+ },
+ "wellsaid": {
+  "de": "Text in Echtzeit in Sprache verwandeln."
+ },
+ "wellsaid-labs": {
+  "de": "Natürlich klingende Voiceovers, besonders für Unternehmensschulungen und E-Learning."
+ },
+ "whisper": {
+  "de": "Open-Source-Spracherkennung von OpenAI."
+ },
+ "whisperx": {
+  "de": "Spracherkennung mit Zeitstempeln pro Wort und Sprechertrennung."
+ },
+ "wispr-flow": {
+  "de": "Diktieren per Stimme in jeder Anwendung am Computer."
+ },
+ "z-image": {
+  "de": "Schnelles, hochwertiges Bildmodell aus Alibabas Tongyi Lab, als Open Source veröffentlicht."
+ },
+ "zenmic-com": {
+  "de": "App, die Podcast-Folgen mit Skript und Audio per KI erzeugt."
  }
 }
