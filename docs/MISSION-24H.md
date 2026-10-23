@@ -32,7 +32,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P18 Steckbriefe II**: 8 weitere Konsens-Tools mit prüfbarer Preisseite (z. B. Midjourney, Leonardo AI, Suno, Fliki, Play.ht, Jasper, QuillBot, Wordtune), Partnerprogramme recherchieren und im Register ergänzen.
 - [x] **P19 Pillar-Content II**: „KI-Tools für Texte“, „KI-Bildgeneratoren im Vergleich“, „KI-Video-Tools“, „KI für Marketing“ als Themenseiten mit Inhaltsverzeichnis, Boxen, Tool-Karten, passenden Prompts und FAQ.
 - [x] **P20 Ratgeber**: „Product-Hunt-Alternativen für deutsche Gründer“ und „Welcher Newsletter-Anbieter für Gründer?“ aus dem Backlog, mit Verweisen auf Verzeichnis-, Tool- und Rechnerseiten.
-- [ ] **P21 Vorschaubilder**: eigene Open-Graph-Bilder für Hub-Seiten (KI-Tools, KI-Test, Rechner, Prompts, Tutorials), damit geteilte Links auffallen.
+- [x] **P21 Vorschaubilder**: eigene Open-Graph-Bilder für Hub-Seiten (KI-Tools, KI-Test, Rechner, Prompts, Tutorials), damit geteilte Links auffallen.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
 ## Für Jean (am Ende präsentieren)
@@ -65,3 +65,4 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P18: Steckbriefe Midjourney, Leonardo AI, Wordtune mit Preisen laut offizieller Preisseite (36 Tools); Play.ht verworfen (Domain laut Drittquelle seit 12.10.2026 ohne DNS), Suno, Fliki, Jasper, QuillBot zeigen keinen eindeutigen Einstiegspreis. Partner-Register: Leonardo (Programm am 7.4.2026 eingestellt), Midjourney (kein Programm), Wordtune (unbestätigt) → 57 Programme.
 - 2026-10-23 · P19: Rubrikseiten Schreiben, Bild, Video, Marketing als Pillar-Seiten: Inhaltsverzeichnis, Band „So wählst du“ mit 5 Kriterien-Karten, Tipp- und Warnbox, je 4 FAQ mit FAQPage-Schema, Tutorials für Bild und Marketing verknüpft.
 - 2026-10-23 · P20: Ratgeber „Product-Hunt-Alternativen: 12 Launch-Plattformen“ (Werte aus der eigenen Tabelle, 4-Wochen-Plan) und „Welcher Newsletter-Anbieter für Gründer?“ (beehiiv, Kit, Brevo, GetResponse mit Preisen laut Anbieter, Datenschutz, Kostenrechner); Artikel können jetzt eigene Weiterführend-Links tragen.
+- 2026-10-23 · P21: eigene Vorschaubilder in eigener Farbe für KI-Tools, KI-Test, Rechner, Prompts, Tutorials, Ratgeber (Zahlen live aus den Daten). Dabei Fehler behoben: og:image enthielt den basePath doppelt (alle Vorschaubilder liefen ins Leere) und Bilder ohne Endung kamen nicht als PNG; Nachbearbeitung utils/export/fix-og.js im Deploy.
