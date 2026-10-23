@@ -43,6 +43,10 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P29 KI-Test teilen**: Ergebnis als Link teilen (Web-Share oder Zwischenablage); der Link zeigt dem Empfänger die Rangliste und lädt zum eigenen Test ein.
 - [x] **P30 Tutorial „ChatGPT richtig nutzen“**: Einsteigerkurs mit 8 Schritten, Vorher/Nachher, Prompts zum Ausprobieren, Quiz.
 - [x] **P31 KI-Tools nach Zielgruppe**: Lehrkräfte, Studierende, Selbstständige, Entwickler, Marketing mit Aufgaben, Tools, Prompts, Tutorial, Rechner, FAQ.
+- [ ] **P32 Zielgruppen II**: weitere Zielgruppen-Seiten: Onlinehändler, Content Creator/YouTuber, HR & Recruiting, Handwerk, Schüler.
+- [ ] **P33 Tutorial „KI-Agenten verstehen und einsetzen“**: 7. Tutorial mit Schritten, Vorher/Nachher, Quiz.
+- [ ] **P34 Performance II**: größte Seiten und JS-Bundles messen, unnötige Client-Daten entfernen.
+- [ ] **P35 Abschluss-QA**: Link-Crawl, Überlauf, Kontrast, Strukturdaten, Live-Stichproben.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
 ## Für Jean (am Ende präsentieren)
