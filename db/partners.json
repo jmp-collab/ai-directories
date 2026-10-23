@@ -759,6 +759,66 @@
    "partner_link": "",
    "coupon": null,
    "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+  },
+  {
+   "id": "gamma",
+   "name": "Gamma",
+   "kind": "tool",
+   "tool_slug": "gamma",
+   "directory_slug": null,
+   "network": "PartnerStack",
+   "commission": "25 % im ersten Jahr (laut PartnerStack-Verzeichnis)",
+   "cookie": "60 Tage",
+   "signup_url": "https://gammaapp.partnerstack.com/?group=affiliates",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Prüfung 5–10 Werktage laut Gamma-Hilfe"
+  },
+  {
+   "id": "rytr",
+   "name": "Rytr",
+   "kind": "tool",
+   "tool_slug": "rytr",
+   "directory_slug": null,
+   "network": "eigenes Programm",
+   "commission": "30 % wiederkehrend für 12 Monate, 15 $ Startbonus",
+   "cookie": "60 Tage",
+   "signup_url": "https://rytr.me/affiliates",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Auszahlung per PayPal ab 100 $; 20 % Rabatt für Empfohlene"
+  },
+  {
+   "id": "runway",
+   "name": "Runway",
+   "kind": "tool",
+   "tool_slug": "runway",
+   "directory_slug": null,
+   "network": "eigenes Programm",
+   "commission": "15 $ pro neuem Abonnenten",
+   "cookie": null,
+   "signup_url": "https://runway.com/affiliate-program",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Code gibt 25 % Rabatt; aktive Partner erhalten Max-Tarif; braucht Kanal-Links (YouTube AIGeddon)"
+  },
+  {
+   "id": "notion",
+   "name": "Notion",
+   "kind": "tool",
+   "tool_slug": "notion",
+   "directory_slug": null,
+   "network": "PartnerStack",
+   "commission": "bis 50 $ pro Anmeldung + 20 % im ersten Jahr",
+   "cookie": null,
+   "signup_url": "https://www.notion.com/affiliates",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Laut Anbieter nimmt das Programm derzeit keine neuen Partner an (Stand 23.10.2026)"
   }
  ]
 }

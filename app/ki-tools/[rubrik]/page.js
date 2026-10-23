@@ -33,7 +33,7 @@ export default function RubrikPage({ params }) {
     const favoriten = r.tools.filter((t) => t.konsens > 1).slice(0, 6)
     const prompts = (r.prompts || []).map(getPrompt).filter(Boolean)
     const tutorial = r.tutorial && getTutorial(r.tutorial)
-    const partner = getTools().filter((t) => t.category === KB_TOOLCAT[r.key])
+    const partner = getTools().filter((t) => (KB_TOOLCAT[r.key] || []).includes(t.category))
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'KI-Tool-Datenbank', path: '/ki-tools' },
@@ -130,11 +130,14 @@ export default function RubrikPage({ params }) {
 
 // Rubrik der Datenbank -> Kategorie im geprüften Tool-Verzeichnis (db/tools.json)
 const KB_TOOLCAT = {
-    schreiben: 'SEO',
-    produktivitaet: 'Automatisierung',
-    agenten: 'Automatisierung',
-    bild: 'Design',
-    video: 'Video & Avatare',
-    audio: 'Audio & Voice',
-    marketing: 'Funnel & Marketing',
+    chatbots: ['KI-Chat & Recherche'],
+    suche: ['KI-Chat & Recherche'],
+    recherche: ['KI-Chat & Recherche'],
+    schreiben: ['Schreiben', 'SEO'],
+    produktivitaet: ['Produktivität', 'Meeting & Transkription', 'Präsentation & Dokumente', 'Automatisierung'],
+    agenten: ['Automatisierung'],
+    bild: ['Design', 'Präsentation & Dokumente'],
+    video: ['Video & Avatare'],
+    audio: ['Audio & Voice', 'Meeting & Transkription'],
+    marketing: ['Funnel & Marketing', 'E-Mail & Newsletter'],
 }

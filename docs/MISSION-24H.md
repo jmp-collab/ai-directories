@@ -18,7 +18,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P3 Rechner-Hub** `/rechner`: Zeitersparnis-/ROI-Rechner, KI-Abo-Rechner, Token-/API-Kosten-Rechner (Preise nur mit Quelle und Datum), Automatisierungs-Kostenrechner.
 - [x] **P4 Keyword- und Technik-SEO**: Keyword-Recherche (Semrush, falls verfügbar), Titel/Descriptions/H1 der Hauptseiten auf Zielbegriffe, WebSite-/Organization-Schema, FAQ-Blöcke, interne Verlinkung (Hub-and-Spoke), Breadcrumbs überall, Sitemap-Prioritäten, 404-Check, Bundle-Größen.
 - [x] **P5 Pillar-Content**: „KI-Tools: die besten nach Aufgabe“, „Kostenlose KI-Tools“, „KI-Verzeichnis: was es ist und welche sich lohnen“, „KI-Test: so vergleichst du Chatbots“; jeweils mit Inhaltsverzeichnis, Boxen, interaktiven Elementen und FAQ.
-- [ ] **P6 Tool-Steckbriefe**: Konsens-Tools mit Partnerprogramm in `db/tools.json` (Preise laut Anbieter), Partnerprogramme in `db/partners.json`.
+- [x] **P6 Tool-Steckbriefe**: Konsens-Tools mit Partnerprogramm in `db/tools.json` (Preise laut Anbieter), Partnerprogramme in `db/partners.json`.
 - [ ] **P7 Dynamik**: Prompt des Tages, Tool-Finder-Quiz, „Neu in der Datenbank“, Fortschritts- und Gamification-Elemente, Mikro-Animationen.
 - [ ] **P8 Qualitätsrunde**: alle Seiten Desktop/Mobil per Screenshot prüfen, Barrierefreiheit (Kontrast, Fokus, reduzierte Bewegung), Lighthouse-ähnliche Checks, tote Links.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
@@ -30,6 +30,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - Domain aigeddon.de registrieren (größter einzelner Hebel für Ranking und Vertrauen), danach Umstellung durch mich.
 - Google Search Console verifizieren und Sitemap einreichen.
 - Impressum/Datenschutz-Daten, PromptGott-URL, Partnerlinks.
+- Neu bewerben: Gamma (PartnerStack), Rytr, Runway (braucht Kanal-Links, YouTube AIGeddon passt); Links stehen in docs/PARTNERLINKS.md.
 
 ## Log
 
@@ -38,3 +39,4 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P3: Rechner-Hub `/rechner` mit KI-Zeitersparnis-Rechner (Break-even, Nutzen/Kosten-Balken, Urteil), KI-API-Kostenrechner (8 aktuelle Modelle von OpenAI, Anthropic, Google; Preise laut Anbieter vom 23.10.2026, Token-Schätzung aus Text) und Launch-Zeit-Rechner (echte Zahlen der Liste); je Seite FAQ-Schema und WebApplication-Schema; breite Tabellen scrollen auf dem Handy.
 - 2026-10-23 · P4: sitewide Organization- und WebSite-Schema mit SearchAction (/ki-tools?q=), Footer-Linknetz zu allen Rubriken (Hub and Spoke), Titel auf Zielbegriffe und Länge optimiert (zu lange Titel 181 → 20), Crawl aller 364 internen Seiten ohne kaputten Link, alle Seiten mit genau einer H1, Canonical und Description.
 - 2026-10-23 · P5: Pillar-Seiten `/beste-ki-tools` (15 Aufgaben, Favoriten nach Konsens, Inhaltsverzeichnis), `/ki-tools/kostenlos` (Gratis-Tarife laut Anbieter + Open Source nach Aufgabe), `/ki-tools/chatgpt-alternativen` (Chatbots + KI-Suchmaschinen), `/ki-verzeichnis` (Definition, Arten, Kriterien, Top 10); alle mit FAQ-Schema; Suche versteht deutsche Begriffe (Synonyme zu englischen Beschreibungen).
+- 2026-10-23 · P6: 7 neue Steckbriefe mit Preisen laut Anbieter (Gamma, Otter.ai, Rytr, Runway, Notion, Perplexity, Claude; Tool-Verzeichnis jetzt 32), 4 neue Partnerprogramme geprüft und im Register (Gamma 25 % erstes Jahr, Rytr 30 % für 12 Monate, Runway 15 $ pro Abo, Notion derzeit geschlossen); Rubrikseiten zeigen passende geprüfte Tools aus mehreren Kategorien; Crawl 375 Seiten ohne kaputten Link.
