@@ -21,5 +21,5 @@ export function GET() {
         d.dealCode || '',
     ])
     const csv = [head, ...rows].map((r) => r.map(cell).join(';')).join('\n')
-    return new Response('﻿' + csv, { headers: { 'Content-Type': 'text/csv; charset=utf-8' } })
+    return new Response('\uFEFF' + csv, { headers: { 'Content-Type': 'text/csv; charset=utf-8' } })
 }
