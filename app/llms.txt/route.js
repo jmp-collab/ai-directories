@@ -4,6 +4,7 @@ import { getScore } from '../../lib/score'
 import { DACH, DACH_STAND } from '../../lib/dach'
 import { ARTIKEL } from '../../lib/ratgeber'
 import { getCheck, checkCount, CHECK_STAND } from '../../lib/checks'
+import { getTools, TOOLS_STAND } from '../../lib/tools'
 import { experienceLabel, pricingLabel, dealLabel, formatRating, formatVisits } from '../../utils/i18n-de'
 
 export const dynamic = 'force-static'
@@ -54,6 +55,9 @@ ${ARTIKEL.map((a) => `- [${a.title}](${absoluteUrl(`/ratgeber/${a.slug}`)}): ${a
 
 ## Deutschsprachige KI-Verzeichnisse (Semrush, Stand ${DACH_STAND})
 ${DACH.map((d) => `- [${d.name}](${d.link}): Authority Score ${d.authority}, organischer Traffic DE ${d.traffic}/Monat. ${d.note} Eintragen: ${d.submission_link}`).join('\n')}
+
+## KI-Tools (Angaben laut Anbieter, Stand ${TOOLS_STAND})
+${getTools().map((t) => `- [${t.name}](${absoluteUrl(`/tools/${t.slug}`)}): ${t.category}. ${t.summary_de} Gratis-Tarif: ${t.free_plan === true ? 'ja' : t.free_plan === false ? 'nein' : 'keine Angabe'}. Bezahlt ab: ${t.price_from || 'keine Angabe'}.`).join('\n')}
 
 ## Alle Verzeichnisse, sortiert nach Domain Rating
 ${rows}
