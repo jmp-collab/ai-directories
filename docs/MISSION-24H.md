@@ -14,7 +14,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 ## Phasen
 
 - [x] **P1 Design-System**: Trenner-Komponente (Welle, Zickzack, Strahlung), Farbbänder, Scroll-Reveal-Animationen auf allen Seiten, Zähl-Animationen für Kennzahlen, Startseite mit neuem Aufbau (Bänder, Kennzahlen, Einstiege in alle Rubriken).
-- [ ] **P2 KI-Test-Hub** `/ki-test`: Selbsttest-Suite mit standardisierten Testaufgaben (Logik, Fakten, Deutsch, Kreativität, Code), Senden an mehrere KIs, Bewertungsbogen mit Ergebnisgrafik; Methodik-Seite; Rubrikseiten je Testkategorie.
+- [x] **P2 KI-Test-Hub** `/ki-test`: Selbsttest-Suite mit standardisierten Testaufgaben (Logik, Fakten, Deutsch, Kreativität, Code), Senden an mehrere KIs, Bewertungsbogen mit Ergebnisgrafik; Methodik-Seite; Rubrikseiten je Testkategorie.
 - [ ] **P3 Rechner-Hub** `/rechner`: Zeitersparnis-/ROI-Rechner, KI-Abo-Rechner, Token-/API-Kosten-Rechner (Preise nur mit Quelle und Datum), Automatisierungs-Kostenrechner.
 - [ ] **P4 Keyword- und Technik-SEO**: Keyword-Recherche (Semrush, falls verfügbar), Titel/Descriptions/H1 der Hauptseiten auf Zielbegriffe, WebSite-/Organization-Schema, FAQ-Blöcke, interne Verlinkung (Hub-and-Spoke), Breadcrumbs überall, Sitemap-Prioritäten, 404-Check, Bundle-Größen.
 - [ ] **P5 Pillar-Content**: „KI-Tools: die besten nach Aufgabe“, „Kostenlose KI-Tools“, „KI-Verzeichnis: was es ist und welche sich lohnen“, „KI-Test: so vergleichst du Chatbots“; jeweils mit Inhaltsverzeichnis, Boxen, interaktiven Elementen und FAQ.
@@ -32,3 +32,4 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 ## Log
 
 - 2026-10-23 · P1: Design-System (automatische Trenner mit rotierenden Formen/Farben, farbige H2, Bänder gelb/mint/pink/blau/lila/dunkel, Boxen tipp/achtung/info/jean, Scroll-Reveal mit Staffelung, Zähl-Animationen, schimmernde H1, schwebender Jean, Hover-Effekte), Startseite mit Einstiegs-Kacheln und Bändern.
+- 2026-10-23 · P2: KI-Test `/ki-test` mit 17 Aufgaben in 6 Kategorien (Logik, Fakten, Halluzinationen, Deutsch, Kreativität, Code), Senden an 5 KIs, Bewertung je KI, Live-Rangliste mit Balken, Speicherung im Browser, Konfetti; 6 Kategorieseiten, Methodik, FAQ-Schema; KI-Test in Kopfnavigation, Kompass, Startseiten-Kacheln, Sitemap, llms.txt.
