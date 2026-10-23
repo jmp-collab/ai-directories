@@ -45,7 +45,9 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P31 KI-Tools nach Zielgruppe**: Lehrkräfte, Studierende, Selbstständige, Entwickler, Marketing mit Aufgaben, Tools, Prompts, Tutorial, Rechner, FAQ.
 - [x] **P32 Zielgruppen II**: weitere Zielgruppen-Seiten: Onlinehändler, Content Creator/YouTuber, HR & Recruiting, Handwerk, Schüler.
 - [x] **P33 Tutorial „KI-Agenten verstehen und einsetzen“**: 7. Tutorial mit Schritten, Vorher/Nachher, Quiz.
-- [ ] **P34 Performance II**: größte Seiten und JS-Bundles messen, unnötige Client-Daten entfernen.
+- [x] **P34 Performance II**: größte Seiten und JS-Bundles messen, unnötige Client-Daten entfernen.
+- [x] **P36 Prompts IV**: 10 Prompts für die neuen Zielgruppen (Stellenanzeige, Elternbrief, Produktfoto-Briefing, Shorts-Ideen, Video-Titel, Kundenanfrage Handwerk, Vokabeltrainer, Referat-Folien, Onboarding-Plan, Rückruf-Notiz).
+- [ ] **P37 Rubrik-Ratgeber II**: Auswahlkriterien, Tipp/Warnung und FAQ für Audio, Musik, Agenten, Coding, Produktivität, Chatbots.
 - [ ] **P35 Abschluss-QA**: Link-Crawl, Überlauf, Kontrast, Strukturdaten, Live-Stichproben.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
@@ -92,3 +94,5 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P31: 5 Zielgruppen-Seiten /ki-tools/fuer/[lehrer|studenten|selbststaendige|entwickler|marketing] mit je 5 Aufgaben-Karten (Tools aus der Datenbank, passender Prompt), Warnbox, Tutorial, Rechner, KI-Test, FAQ-Schema; Übersicht /ki-tools/fuer, verlinkt aus KI-Tools-Hub, Footer, llms.txt, Sitemap.
 - 2026-10-23 · P32: 5 weitere Zielgruppen-Seiten (Onlinehändler, Content Creator, HR & Recruiting mit EU-AI-Act-Hinweis, Handwerk, Schüler mit Altershinweis), jetzt 10 Zielgruppen unter /ki-tools/fuer; Tool-, Prompt-, Tutorial- und Rechner-Verweise gegen die Daten geprüft.
 - 2026-10-23 · P33: 7. Tutorial „KI-Agenten verstehen und sinnvoll einsetzen“ (7 Schritte: Chatbot vs. Agent, Ziel, Werkzeuge, Grenzen und Prompt-Injection, Plan vorab, Prüfen, klein anfangen; 3 Quizfragen), mit der Rubrik KI-Agenten verknüpft.
+- 2026-10-23 · P34: Messung: kleine Seiten ~97 KB HTML bzw. 16 KB gzip, Startseite 532 KB / 74 KB gzip, KI-Tools-Hub 306 KB / 61 KB gzip, First Load JS höchstens 112 KB. Größter Pro-Seite-Anteil sind Layout-Teile (Sprite, Seitenleiste, Footer), die Next.js in HTML und RSC-Daten doppelt ausliefert; ein ausgelagerter Sprite spart nur ~1,4 KB gzip, daher bewusst nicht umgebaut. Listen bleiben im HTML, weil sie die internen Links zu den Tool-Seiten tragen.
+- 2026-10-23 · P36: 10 neue Prompts (55 gesamt): Stellenanzeige, Elternbrief, Produktfoto-Briefing, Shorts-Ideen, Video-Titel, Kundenanfrage Handwerk, Vokabeltrainer, Referat-Folien, Onboarding-Plan, Telefonnotiz; in die Zielgruppen-Karten HR, Schüler, Handwerk, Onlinehändler, Content Creator eingebunden.
