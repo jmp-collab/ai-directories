@@ -13,7 +13,8 @@
     "start": "next start",
     "lint": "next lint",
     "update-db": "ts-node utils/db/update-db.js",
-    "update-readme": "ts-node utils/readme/update-readme.js"
+    "update-readme": "ts-node utils/readme/update-readme.js",
+    "partners": "node utils/partners/render.js"
   },
   "dependencies": {
     "eslint": "^8.56.0",
