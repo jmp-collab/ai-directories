@@ -55,6 +55,9 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P42 KI-Test II**: 10 weitere Testaufgaben in den bestehenden Kategorien (mit Kriterien, wo möglich mit Lösung).
 - [x] **P43 Tool-Vergleiche II**: neue Vergleiche aus vorhandenen Steckbriefen (z. B. Midjourney vs. Leonardo AI, Wordtune vs. Rytr, Runway vs. InVideo AI, Otter.ai vs. Descript; bestehende 11 Vergleiche nicht doppeln), nur mit Preisen aus db/tools.json. Erledigt: 6 neue Vergleiche (Midjourney vs. Leonardo AI, Wordtune vs. Rytr, Runway vs. InVideo AI, Otter.ai vs. Descript, Systeme.io vs. Kit, Surfer SEO vs. Writesonic), jetzt 17.
 - [x] **P44 Prompt-Kategorien**: eigene Seite je Prompt-Kategorie (/prompts/kategorie/[key]) mit Intro, Prompts, passenden Tutorials und FAQ. Erledigt: 9 Kategorieseiten mit Tipps-Band, Tutorials, Rubrik, Zielgruppen, FAQ-Schema; Hub, Prompt-Seiten (Breadcrumb) und Sitemap verlinken sie.
+- [ ] **P45 Live-Check P44 + Verlinkung II**: P44 live prüfen; Startseite und /tools/[slug]-Steckbriefe verlinken die neuen Vergleiche und passenden Prompt-Kategorien; Glossar-Autolink auf Kategorieseiten-Intros.
+- [ ] **P46 KI-Test II**: 10 weitere Testaufgaben in lib/kitests.js (nur prüfbare Lösungen, keine tagesaktuellen Fakten), Kategorien ausbalancieren (kreativ, code).
+- [ ] **P47 Ratgeber II**: zwei neue Ratgeber-Artikel aus vorhandenen Daten (z. B. kostenlose KI-Bildgeneratoren aus db/tools.json + KB, KI-Tools für Meetings & Transkription), mit FAQ und internen Links, keine erfundenen Preise.
 - [ ] **P35 Abschluss-QA**: Link-Crawl, Überlauf, Kontrast, Strukturdaten, Live-Stichproben.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
