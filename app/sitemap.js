@@ -7,6 +7,7 @@ import { getPrompts } from '../lib/prompts'
 import { getTutorials } from '../lib/tutorials'
 import { getKbRubriken, getKbTools, kbIndexierbar } from '../lib/kb'
 import { ALTERNATIVEN } from '../lib/alternativen'
+import { ZIELGRUPPEN } from '../lib/zielgruppen'
 import { KI_GLOSSAR, glossarSlug } from '../lib/ki-glossar'
 import { getTestKategorien } from '../lib/kitests'
 import { RECHNER } from '../lib/rechner'
@@ -15,7 +16,7 @@ export default function sitemap() {
     const lastModified = new Date()
     return [
         { url: absoluteUrl('/'), lastModified, changeFrequency: 'weekly', priority: 1 },
-        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar', '/freischaltung', '/werben', '/transparenz', '/tools', '/tool-vergleiche', '/top-50', '/prompts', '/prompt-baukasten', '/prompt-check', '/tutorials', '/downloads', '/downloads/prompt-spickzettel', '/ki-tools', '/ki-tools/quellen', '/prompts/archiv', '/ki-test', '/rechner', '/beste-ki-tools', '/ki-tools/kostenlos', '/ki-tools/chatgpt-alternativen', '/ki-tools/alternativen', '/ki-verzeichnis', '/tool-finder'].map((path) => ({
+        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar', '/freischaltung', '/werben', '/transparenz', '/tools', '/tool-vergleiche', '/top-50', '/prompts', '/prompt-baukasten', '/prompt-check', '/tutorials', '/downloads', '/downloads/prompt-spickzettel', '/ki-tools', '/ki-tools/quellen', '/prompts/archiv', '/ki-test', '/rechner', '/beste-ki-tools', '/ki-tools/kostenlos', '/ki-tools/chatgpt-alternativen', '/ki-tools/alternativen', '/ki-tools/fuer', '/ki-verzeichnis', '/tool-finder'].map((path) => ({
             url: absoluteUrl(path),
             lastModified,
             changeFrequency: 'monthly',
@@ -36,6 +37,7 @@ export default function sitemap() {
         ...getTestKategorien().map((k) => ({ url: absoluteUrl(`/ki-test/${k.key}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
         ...getKbRubriken().map((r) => ({ url: absoluteUrl(`/ki-tools/${r.key}`), lastModified, changeFrequency: 'weekly', priority: 0.8 })),
         ...KI_GLOSSAR.map(([term]) => ({ url: absoluteUrl(`/glossar/${glossarSlug(term)}`), lastModified, changeFrequency: 'monthly', priority: 0.5 })),
+        ...ZIELGRUPPEN.map((z) => ({ url: absoluteUrl(`/ki-tools/fuer/${z.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
         ...ALTERNATIVEN.map((a) => ({ url: absoluteUrl(`/ki-tools/alternativen/${a.slug}`), lastModified, changeFrequency: 'weekly', priority: 0.7 })),
         ...getKbTools()
             .filter(kbIndexierbar)

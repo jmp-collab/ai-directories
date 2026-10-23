@@ -42,6 +42,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **P28 Glossar-Verlinkung**: Fachbegriffe in Tutorials, Ratgebern und Glossar-Seiten automatisch beim ersten Vorkommen mit der Glossar-Seite verlinkt.
 - [x] **P29 KI-Test teilen**: Ergebnis als Link teilen (Web-Share oder Zwischenablage); der Link zeigt dem Empfänger die Rangliste und lädt zum eigenen Test ein.
 - [x] **P30 Tutorial „ChatGPT richtig nutzen“**: Einsteigerkurs mit 8 Schritten, Vorher/Nachher, Prompts zum Ausprobieren, Quiz.
+- [x] **P31 KI-Tools nach Zielgruppe**: Lehrkräfte, Studierende, Selbstständige, Entwickler, Marketing mit Aufgaben, Tools, Prompts, Tutorial, Rechner, FAQ.
 - [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
 
 ## Für Jean (am Ende präsentieren)
@@ -84,3 +85,4 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 2026-10-23 · P28: automatische Glossar-Links (lib/autolink.js, 34 Begriffe mit Plural- und Varianten) in Tutorials, Ratgebern und Glossar-Seiten, je Seite nur beim ersten Vorkommen, dezent gepunktet; ohne Hydration-Fehler.
 - 2026-10-23 · P29: KI-Test-Ergebnis teilbar: Button „Ergebnis teilen“ (Web Share API, sonst Link in die Zwischenablage), Link mit #ergebnis=… zeigt beim Empfänger eine Karte „Dir wurde ein Testergebnis geschickt“ mit Balken; Daten bleiben im Link, kein Server.
 - 2026-10-23 · P30: 6. Tutorial „ChatGPT richtig nutzen: der Einsteigerkurs“ (8 Schritte: ein Chat pro Thema, Kontext, Nachschärfen, Format, Material mitgeben, Fakten prüfen, Datenschutz, Vorlagen und KI-Test; 3 Quizfragen); Strukturdaten-Check: JSON-LD auf allen Seiten gültig, keine Seite mit doppeltem FAQPage, jede Seite mit Description.
+- 2026-10-23 · P31: 5 Zielgruppen-Seiten /ki-tools/fuer/[lehrer|studenten|selbststaendige|entwickler|marketing] mit je 5 Aufgaben-Karten (Tools aus der Datenbank, passender Prompt), Warnbox, Tutorial, Rechner, KI-Test, FAQ-Schema; Übersicht /ki-tools/fuer, verlinkt aus KI-Tools-Hub, Footer, llms.txt, Sitemap.

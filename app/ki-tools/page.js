@@ -59,6 +59,9 @@ export default function KiToolsPage() {
                         <Link href="/ki-tools/alternativen">Alternativen zu Midjourney, Perplexity & Co. →</Link>
                     </li>
                     <li>
+                        <Link href="/ki-tools/fuer">KI-Tools für Lehrer, Studenten, Selbstständige & Co. →</Link>
+                    </li>
+                    <li>
                         <Link href="/ki-test">KI-Test: selbst vergleichen →</Link>
                     </li>
                 </ul>
