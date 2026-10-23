@@ -10,6 +10,9 @@ import { getTools } from '../../lib/tools'
 import { dealLabel } from '../../utils/i18n-de'
 import { NEWSLETTER_URL, YOUTUBE_SUBSCRIBE_URL, submitRel } from '../../lib/monetization'
 import { withBase } from '../../lib/site'
+import { getPrompts } from '../../lib/prompts'
+import ToolRoulette from './ToolRoulette'
+import { getKbTools } from '../../lib/kb'
 
 // Tageswechsel ohne Server: Die Seite wird täglich neu gebaut, der Tag des Jahres wählt Deal und Tool.
 const dayIndex = () => {
@@ -26,6 +29,7 @@ const KOMPASS = [
     ['/tutorials', 'Tutorials', 'pokal', true],
     ['/downloads', 'Gratis-Downloads', 'herz', true],
     ['/ki-tools', 'KI-Tool-Datenbank', 'lupe', false],
+    ['/tool-finder', 'Tool-Finder (3 Fragen)', 'rakete', true],
     ['/ki-test', 'KI-Test: Chatbots vergleichen', 'pokal', true],
     ['/rechner', 'KI-Rechner', 'deal', false],
     ['/tools', 'KI-Tools mit Preisen', 'werkzeug', false],
@@ -97,7 +101,7 @@ export function SidebarRight() {
     const hasNewsletter = Boolean(NEWSLETTER_URL)
     return (
         <>
-            <Widget icon={hasNewsletter ? 'post' : 'play'} cool title={hasNewsletter ? 'AIGeddon Briefing' : 'AIGeddon auf YouTube'}>
+            <Widget icon={hasNewsletter ? 'post' : 'play'} cool title={hasNewsletter ? 'PromptGott-Newsletter' : 'AIGeddon auf YouTube'}>
                 <p>{hasNewsletter ? 'Neue Verzeichnisse, Sperren und Deals einmal pro Woche.' : 'KI-Use-Cases, Prompts und Tutorials als Video.'}</p>
                 <a className="button button-small" href={hasNewsletter ? `${NEWSLETTER_URL.replace(/\/$/, '')}/subscribe` : YOUTUBE_SUBSCRIBE_URL} target="_blank" rel="noopener">
                     {hasNewsletter ? 'Abonnieren →' : 'Kanal abonnieren →'}
@@ -119,6 +123,30 @@ export function SidebarRight() {
                     </p>
                 </Widget>
             )}
+            {(() => {
+                const prompts = getPrompts()
+                const pt = prompts[day % prompts.length]
+                return (
+                    <Widget icon="prompt" cool title="Prompt des Tages">
+                        <p>
+                            <Link href={`/prompts/${pt.slug}`}>
+                                <strong>{pt.title}</strong>
+                            </Link>
+                        </p>
+                        <p className="widget-note">{pt.ziel}</p>
+                        <Link className="button button-small" href={`/prompts/${pt.slug}`}>
+                            Ausprobieren →
+                        </Link>
+                    </Widget>
+                )
+            })()}
+            <Widget icon="strahlung" title="KI-Tool-Roulette">
+                <ToolRoulette
+                    tools={getKbTools()
+                        .filter((t) => t.konsens > 1)
+                        .map((t) => ({ n: t.name, u: t.url, p: t.profil?.slug || '' }))}
+                />
+            </Widget>
             {tool && (
                 <Widget icon="werkzeug" title="Tool des Tages">
                     <p>

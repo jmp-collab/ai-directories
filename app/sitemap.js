@@ -13,7 +13,7 @@ export default function sitemap() {
     const lastModified = new Date()
     return [
         { url: absoluteUrl('/'), lastModified, changeFrequency: 'weekly', priority: 1 },
-        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar', '/freischaltung', '/werben', '/transparenz', '/tools', '/tool-vergleiche', '/top-50', '/prompts', '/prompt-baukasten', '/prompt-check', '/tutorials', '/downloads', '/downloads/prompt-spickzettel', '/ki-tools', '/ki-tools/quellen', '/prompts/archiv', '/ki-test', '/rechner', '/beste-ki-tools', '/ki-tools/kostenlos', '/ki-tools/chatgpt-alternativen', '/ki-verzeichnis'].map((path) => ({
+        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar', '/freischaltung', '/werben', '/transparenz', '/tools', '/tool-vergleiche', '/top-50', '/prompts', '/prompt-baukasten', '/prompt-check', '/tutorials', '/downloads', '/downloads/prompt-spickzettel', '/ki-tools', '/ki-tools/quellen', '/prompts/archiv', '/ki-test', '/rechner', '/beste-ki-tools', '/ki-tools/kostenlos', '/ki-tools/chatgpt-alternativen', '/ki-verzeichnis', '/tool-finder'].map((path) => ({
             url: absoluteUrl(path),
             lastModified,
             changeFrequency: 'monthly',

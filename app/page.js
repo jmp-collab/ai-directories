@@ -173,6 +173,7 @@ export default function Home() {
                         ['/#alle', '📚', 'KI-Verzeichnisse', 'Wo du dein KI-Tool einträgst, mit Domain Rating, Preis und Check.', `${stats.total} Verzeichnisse`, '#fde68a'],
                         ['/prompts', '💬', 'Prompts', 'Vorlagen zum Ausfüllen und Rollen-Prompts, mit einem Klick an ChatGPT und Claude.', `${getPrompts().length + archiv.anzahl} Prompts`, '#a7f3d0'],
                         ['/tutorials', '🎓', 'Tutorials', 'Interaktiv mit Vorher/Nachher-Regler, Quiz und Konfetti.', `${getTutorials().length} Kurse`, '#fbcfe8'],
+                        ['/tool-finder', '🎯', 'Tool-Finder', 'Drei Fragen, sechs passende KI-Tools.', '3 Klicks', '#fecdd3'],
                         ['/ki-test', '🧪', 'KI-Test', 'ChatGPT, Claude, Gemini & Co. selbst testen und Rangliste erhalten.', `${testCount} Aufgaben`, '#c7d2fe'],
                         ['/rechner', '🧮', 'KI-Rechner', 'Lohnt sich ein KI-Abo? Was kostet die API? Wie lange dauert der Launch?', '3 Rechner', '#99f6e4'],
                         ['/prompt-check', '🔍', 'Prompt-Check', 'Prompt einfügen, Score sehen, besser werden.', 'Gratis-Tool', '#ddd6fe'],

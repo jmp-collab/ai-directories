@@ -3966,3 +3966,163 @@ td.wrap {
 .page-main [id] {
     scroll-margin-top: 140px;
 }
+
+/* ---------- Roulette ---------- */
+.roulette-window {
+    min-height: 2.6em;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin: 0 0 8px;
+    padding: 6px;
+    border: 2px dashed var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+}
+
+.roulette.is-spinning .roulette-window strong {
+    display: inline-block;
+    animation: roulette-blur 0.12s linear infinite;
+}
+
+@keyframes roulette-blur {
+    50% {
+        transform: translateY(-3px);
+        opacity: 0.6;
+    }
+}
+
+/* ---------- Tool-Finder ---------- */
+.finder-progress {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.finder-progress li {
+    flex: 1 1 80px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 4px 6px;
+    border: 2px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--muted);
+    transition: background 0.3s ease;
+}
+
+.finder-progress li.is-done {
+    background: var(--c-mint);
+    color: #1b1b1f;
+}
+
+.finder-progress li.is-active {
+    background: var(--accent);
+    color: var(--accent-contrast);
+}
+
+.finder-stage {
+    animation: finder-in 0.45s cubic-bezier(0.2, 1.2, 0.4, 1);
+}
+
+@keyframes finder-in {
+    from {
+        opacity: 0;
+        transform: translateX(40px) rotate(1deg);
+    }
+}
+
+.finder-q {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 0 0 12px;
+}
+
+.finder-options {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+}
+
+.finder-options button {
+    font: inherit;
+    font-weight: 800;
+    text-align: left;
+    padding: 14px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: 3px 3px 0 var(--border);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.finder-options button:hover,
+.finder-options button:focus-visible {
+    transform: translate(-2px, -3px);
+    box-shadow: 6px 6px 0 var(--border);
+    background: var(--pop);
+    color: #1b1b1f;
+}
+
+.finder-options button.is-active {
+    background: var(--accent);
+    color: var(--accent-contrast);
+}
+
+.finder-results {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.finder-results li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 12px;
+    background: var(--surface);
+    color: var(--text);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    animation: finder-in 0.5s cubic-bezier(0.2, 1.2, 0.4, 1) both;
+    animation-delay: calc(var(--i) * 90ms);
+}
+
+.finder-results p {
+    margin: 4px 0;
+    font-size: 0.9rem;
+}
+
+.finder-rank {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--pop);
+    color: #1b1b1f;
+    border: 2px solid var(--border);
+    font-weight: 800;
+}
+
+.finder-nav {
+    display: flex;
+    gap: 8px;
+    margin: 14px 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder-stage,
+    .finder-results li {
+        animation: none !important;
+    }
+}

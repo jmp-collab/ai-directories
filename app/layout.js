@@ -47,6 +47,7 @@ const footerSpalten = () => [
         [
             ['/ki-tools', 'KI-Tool-Datenbank'],
             ['/beste-ki-tools', 'Beste KI-Tools 2026'],
+            ['/tool-finder', 'KI-Tool-Finder'],
             ['/ki-tools/kostenlos', 'Kostenlose KI-Tools'],
             ['/ki-tools/chatgpt-alternativen', 'ChatGPT-Alternativen'],
             ...getKbRubriken()
