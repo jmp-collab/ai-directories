@@ -6,6 +6,7 @@ import { SITE_NAME } from '../../../../lib/site'
 import { getKbTools, getKbTool, kbAlternativen, kbIndexierbar, kbPreis, kbPrimary, KB_RUBRIKEN, KB_SOURCES, KB_STAND } from '../../../../lib/kb'
 import { getPrompt } from '../../../../lib/prompts'
 import { getTutorial } from '../../../../lib/tutorials'
+import { hatAlternativenHub } from '../../../../lib/alternativen'
 
 export const dynamicParams = false
 
@@ -102,7 +103,7 @@ export default function KbToolPage({ params }) {
             </dl>
             <p className="box box-info">
                 {t.konsens > 1
-                    ? `${t.name} steht unabhängig voneinander in ${t.konsens} der drei größten offenen KI-Tool-Listen auf GitHub. Das ist ein gutes Zeichen, ersetzt aber keinen eigenen Test.`
+                    ? `${t.name} steht unabhängig voneinander in ${t.konsens === 3 ? 'allen drei' : 'zwei der drei'} größten offenen KI-Tool-Listen auf GitHub. Das ist ein gutes Zeichen, ersetzt aber keinen eigenen Test.`
                     : `${t.name} steht in einer der drei großen offenen KI-Tool-Listen. Prüfe Funktionsumfang, Preis und Datenschutz direkt beim Anbieter, bevor du es einsetzt.`}
             </p>
             {alternativen.length > 0 && (
@@ -124,6 +125,18 @@ export default function KbToolPage({ params }) {
                         ))}
                     </ul>
                     <p>
+                        {hatAlternativenHub(t.slug) && (
+                            <>
+                                <Link href={`/ki-tools/alternativen/${t.slug}`}>Alle {t.name}-Alternativen im Überblick →</Link>
+                                {' · '}
+                            </>
+                        )}
+                        {t.slug === 'chatgpt' && (
+                            <>
+                                <Link href="/ki-tools/chatgpt-alternativen">Alle ChatGPT-Alternativen →</Link>
+                                {' · '}
+                            </>
+                        )}
                         <Link href={`/ki-tools/${t.rubrik}`}>Alle Tools in {r.name} →</Link>
                     </p>
                 </section>

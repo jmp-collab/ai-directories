@@ -50,6 +50,7 @@ const footerSpalten = () => [
             ['/tool-finder', 'KI-Tool-Finder'],
             ['/ki-tools/kostenlos', 'Kostenlose KI-Tools'],
             ['/ki-tools/chatgpt-alternativen', 'ChatGPT-Alternativen'],
+            ['/ki-tools/alternativen', 'Tool-Alternativen'],
             ...getKbRubriken()
                 .slice(0, 8)
                 .map((r) => [`/ki-tools/${r.key}`, r.name]),

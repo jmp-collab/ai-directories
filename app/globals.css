@@ -4320,3 +4320,8 @@ a.ai-button,
 @media (prefers-reduced-motion: reduce) {
     .kb-hero-chips a { transition: none; }
 }
+
+ul.kb-hero-chips {
+    list-style: none;
+    padding: 0;
+}
