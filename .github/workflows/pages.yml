@@ -39,6 +39,10 @@ jobs:
                   STATIC_EXPORT: '1'
                   BASE_PATH: /ai-directories
                   NEXT_PUBLIC_SITE_URL: https://jmp-collab.github.io/ai-directories
+            # Vorschaubilder als .png und doppelten basePath in og:image korrigieren
+            - run: node utils/export/fix-og.js
+              env:
+                  BASE_PATH: /ai-directories
             - run: touch out/.nojekyll
             - uses: actions/upload-pages-artifact@v3
               with:

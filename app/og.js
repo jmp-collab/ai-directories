@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og'
 // Gemeinsames Layout für Vorschaubilder. Ohne Emojis, weil die zur Laufzeit nachgeladen würden.
 export const ogSize = { width: 1200, height: 630 }
 
-export function ogImage({ eyebrow, title, score, footer }) {
+export function ogImage({ eyebrow, title, score, footer, bg = '#fff6d6' }) {
     return new ImageResponse(
         (
             <div
@@ -13,7 +13,7 @@ export function ogImage({ eyebrow, title, score, footer }) {
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
-                    background: '#fff6d6',
+                    background: bg,
                     padding: 60,
                     fontFamily: 'sans-serif',
                     border: '16px solid #1b1b1f',

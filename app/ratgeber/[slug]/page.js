@@ -48,7 +48,7 @@ export default function ArtikelPage({ params }) {
             inLanguage: 'de-DE',
             url: absoluteUrl(`/ratgeber/${a.slug}`),
             author: { '@type': 'Person', name: 'Jean Maurice Port', url: absoluteUrl('/ueber-jean') },
-            image: absoluteUrl('/opengraph-image'),
+            image: absoluteUrl('/ratgeber/opengraph-image.png'),
         },
     ]
     const others = ARTIKEL.filter((x) => x.slug !== a.slug)
