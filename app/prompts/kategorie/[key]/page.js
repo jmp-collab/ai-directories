@@ -87,7 +87,7 @@ export default function PromptKategoriePage({ params }) {
                 ]}
             />
             <section aria-labelledby="vorlagen">
-                <h2 id="vorlagen">Alle {k.name}-Prompts 💬</h2>
+                <h2 id="vorlagen">Alle {k.prompts.length} Vorlagen 💬</h2>
                 <ul className="link-cards">
                     {k.prompts.map((p) => (
                         <li key={p.slug}>
