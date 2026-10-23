@@ -7,7 +7,7 @@ import Jean, { HELLO } from './components/Jean'
 import ToolPartners from './components/ToolPartners'
 import TrackerPanel from './components/TrackerPanel'
 import { Band, Trenner } from './components/Deko'
-import { kbStats } from '../lib/kb'
+import { kbStats, getKbTools, kbIndexierbar } from '../lib/kb'
 import { getPrompts } from '../lib/prompts'
 import { getTutorials } from '../lib/tutorials'
 import archiv from '../db/prompt-archiv.json'
@@ -25,8 +25,8 @@ import { formatNumber } from '../utils/i18n-de'
 export function generateMetadata() {
     const stats = getSiteStats()
     return {
-        title: { absolute: `KI-Verzeichnisse 2026: ${stats.total} AI Directories | AIGeddon` },
-        description: `Die deutsche Liste der KI-Verzeichnisse: ${stats.total} AI Directories mit Domain Rating, Traffic, Preis und Einreichungs-Check. ${stats.free.length} davon kostenlos. Tool eintragen, Backlinks holen, nebenbei lachen.`,
+        title: { absolute: `KI-Verzeichnisse & KI-Tools 2026: ${stats.total} Directories | AIGeddon` },
+        description: `Die deutsche Liste der KI-Verzeichnisse: ${stats.total} AI Directories mit Domain Rating, Traffic, Preis und Einreichungs-Check. ${stats.free.length} davon kostenlos. Dazu ${kbStats().gesamt} KI-Tools, KI-Test und Rechner.`,
         alternates: { canonical: '/' },
         openGraph: { url: '/' },
     }
@@ -41,6 +41,9 @@ export default function Home() {
         .sort((a, b) => effectiveRating(b) - effectiveRating(a) || b.monthly_visits - a.monthly_visits)
         .slice(0, 10)
     const faq = getFaq({ ...stats, topFreeSmooth: topFree })
+    const beliebt = getKbTools()
+        .filter((t) => t.konsens === 3 && kbIndexierbar(t))
+        .slice(0, 12)
     const updated = new Intl.DateTimeFormat('de-DE', { month: 'long', year: 'numeric' }).format(new Date())
 
     const schema = [
@@ -165,6 +168,27 @@ export default function Home() {
                         <Link href="/vergleich">Vergleichen →</Link>
                     </li>
                 </ul>
+            </section>
+
+            <section className="kb-hero-suche" aria-labelledby="tool-suche">
+                <h2 id="tool-suche">Welches KI-Tool suchst du? 🔎</h2>
+                <form action={withBase('/ki-tools/')} method="get" role="search">
+                    <label className="sr-only" htmlFor="kb-q">
+                        KI-Tool-Datenbank durchsuchen
+                    </label>
+                    <input id="kb-q" name="q" type="search" placeholder={`z. B. Transkription, Logo, Video`} />
+                    <button type="submit" className="button">
+                        Suchen
+                    </button>
+                </form>
+                <p className="kb-hero-chips">
+                    <span>Beliebt:</span>
+                    {beliebt.map((t) => (
+                        <Link key={t.slug} href={`/ki-tools/tool/${t.slug}`}>
+                            {t.name}
+                        </Link>
+                    ))}
+                </p>
             </section>
 
             <Band farbe="lila" id="einstieg" titel="Was suchst du heute? 🧭" sticker="Neu: KI-Tool-Datenbank">

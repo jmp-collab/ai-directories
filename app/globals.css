@@ -4253,3 +4253,70 @@ a.ai-button,
     font-size: 1.05rem;
     hyphens: auto;
 }
+
+/* Suchfeld zur KI-Tool-Datenbank auf der Startseite */
+.kb-hero-suche {
+    background: linear-gradient(135deg, var(--band-blau), var(--band-lila, #ede9fe));
+    border: 3px solid var(--border);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 6px 6px 0 var(--border);
+}
+
+.kb-hero-suche h2 {
+    margin-top: 0;
+}
+
+.kb-hero-suche form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.kb-hero-suche input {
+    flex: 1 1 220px;
+    min-width: 0;
+    font: inherit;
+    font-size: 1.1rem;
+    padding: 12px 14px;
+    border: 3px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.kb-hero-suche input:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.kb-hero-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin: 14px 0 0;
+    font-size: 0.9rem;
+}
+
+.kb-hero-chips a {
+    background: var(--surface);
+    color: var(--text);
+    border: 2px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 10px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.15s ease;
+}
+
+.kb-hero-chips a:hover,
+.kb-hero-chips a:focus-visible {
+    transform: translateY(-2px) rotate(-2deg);
+    background: var(--accent);
+    color: var(--accent-contrast);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kb-hero-chips a { transition: none; }
+}
