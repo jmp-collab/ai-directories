@@ -18,6 +18,7 @@ const kurz = (term) => term.replace(/\s*\(.*?\)/, '')
 
 // Frage mit richtigem Artikel: „Was ist ein Token?“, „Was sind Trainingsdaten?“
 const ARTIKEL = {
+    'Transformer': 'ein', 'Reasoning-Modell': 'ein', 'Deepfake': 'ein', 'Quantisierung': 'die', 'Latenz': 'die', 'Rate Limit': 'ein', 'Bias': 'der', 'Agentischer Workflow': 'ein', 'Model Card': 'eine',
     Prompt: 'ein', 'System-Prompt': 'ein', 'Rollen-Prompt': 'ein', 'Prompt-Kette': 'eine', 'Meta-Prompt': 'ein',
     'Large Language Model (LLM)': 'ein', Token: 'ein', Kontextfenster: 'das', Temperatur: 'die', Halluzination: 'eine',
     Embedding: 'ein', Vektordatenbank: 'eine', 'Wissensstand (Knowledge Cutoff)': 'der', 'KI-Agent': 'ein', API: 'eine',
@@ -27,6 +28,7 @@ const ARTIKEL = {
 const MEHRZAHL = new Set(['Parameter', 'Trainingsdaten', 'Guardrails'])
 const frage = (term) => {
     if (term === 'Multimodal') return 'Was bedeutet multimodal?'
+    if (term === 'Agentischer Workflow') return 'Was ist ein agentischer Workflow?'
     if (MEHRZAHL.has(term)) return `Was sind ${term}?`
     return `Was ist ${ARTIKEL[term] ? `${ARTIKEL[term]} ` : ''}${kurz(term)}?`
 }
