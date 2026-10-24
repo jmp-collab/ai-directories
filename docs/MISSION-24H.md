@@ -68,7 +68,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 
 > Zeitregel: P9 erst ab 01:30 UTC am 24.10. starten (eigener Termin 01:45 UTC). Ein früherer Wake, der nur P9 offen findet, macht stattdessen einen Live-Check (Startseite, eine neue Seite je Phase P43 bis P52) und endet ohne Änderung, wenn alles in Ordnung ist.
 
-- [ ] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“.
+- [x] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“. Erledigt 24.10. 01:55 UTC: Ergebnisbericht als Artifact (https://claude.ai/artifact/XUqUKk6RTUBKLMyVNPLp97). Ergänzung „Für Jean“: GitHub-About-Feld Website zeigt noch auf ai-directories.vercel.app (Ursprungsprojekt), auf https://jmp-collab.github.io/ai-directories/ umstellen; Repo-Einstellungen sind für mich gesperrt.
 
 ## Für Jean (am Ende präsentieren)
 
