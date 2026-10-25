@@ -4742,3 +4742,61 @@ ul.kb-hero-chips {
 .pfade ol li::marker {
     font-weight: 800;
 }
+
+/* Neue KI-Modelle */
+.modell {
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 16px 20px;
+    margin: 16px 0;
+}
+
+.modell > ul {
+    padding-left: 20px;
+    display: grid;
+    gap: 6px;
+}
+
+.quellen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    padding-left: 20px;
+    margin: 0;
+}
+
+/* Neu entdeckte Verzeichnisse */
+.neu-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+
+.neu-tag {
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 2px solid var(--border);
+    background: #e5e7eb;
+    color: #1b1b1f;
+}
+
+.neu-Free {
+    background: #a7f3d0;
+}
+
+.neu-Paid {
+    background: #fde68a;
+}
+
+.neu-badge {
+    background: #fbcfe8;
+}
+
+.neu-host {
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+}

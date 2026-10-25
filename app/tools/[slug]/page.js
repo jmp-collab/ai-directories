@@ -48,6 +48,7 @@ const KAT_RUBRIK = {
     'E-Mail & Newsletter': 'marketing',
     Formulare: 'marketing',
     'Website & Landingpage': 'marketing',
+    Coding: 'coding',
 }
 
 // FAQ nur aus den Steckbrief-Daten (laut Anbieter), damit nichts erfunden ist.

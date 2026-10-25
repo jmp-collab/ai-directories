@@ -80,6 +80,14 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **C5 Ratgeber III**: „KI-Tool launchen in 30 Tagen“ (Plan aus Verzeichnisdaten, Launch-Kit, Rechnern), „ChatGPT, Claude, Gemini: welcher Chatbot wofür“ (ohne erfundene Preise, mit KI-Test). Erledigt: /ratgeber/ki-tool-launchen-30-tage (Wochenplan mit Zahlen aus db/directories.json: 164 kostenlos, 158 reibungslos, 55 mit DR 50+, 28 mit 500.000+ Besuchen, 25 Rabattcodes, 71 geprüfte Freischaltzeiten) und /ratgeber/chatgpt-claude-gemini-welcher-chatbot (Testmethode statt Rangliste, Preise nur für Claude laut Anbieter); je 4 FAQ mit Schema.
 - [x] **C6 Qualitätsrunde und Bericht**: Link-Crawl, Meta-Audit, Barrierefreiheit, Live-Check, Kurzbericht an Jean. Erledigt 25.10.: 1.250 Seiten alle mit Formular, 92.955 interne Links (0 kaputt), 437 Seiten mit vollständigem FAQ-Schema, Meta-Audit unverändert, Barrierefreiheit ohne neue Befunde; live geprüft: neue Ratgeber, /datenschutz, /werben.
 
+## Content-Ausbau III (Auftrag 25.10.: „so viele neue Directories, Tools, Prompts, Tutorials wie möglich, neue Keywords wie Opus 5.5 oder Gemini 4“)
+
+- [x] **D1 Prompts und Tutorials**: 14 neue Prompts (75 gesamt), 2 neue Tutorials (9 gesamt): KI-Texte menschlich überarbeiten, Mit KI recherchieren (PR #104).
+- [x] **D2 Tool-Steckbriefe**: 29 neue Steckbriefe (64 gesamt), neue Kategorie Coding (GitHub Copilot, Cursor, v0, Replit), dazu ChatGPT, Gemini, Copilot, DeepL, Suno, Kling, Manus u. a.; Preise nur von Anbieterseiten, sonst ohne Zahl.
+- [x] **D3 Neue KI-Modelle**: Hub /neue-ki-modelle mit 18 Modellseiten, Familienseiten GPT-6 und Claude 5.5, Gerüchte-Check (GPT-6 als Einzelmodell, Gemini 4, Veo 4, Grok 5, Qwen 4 …), jede Angabe mit Quelle, API-Preise nur von offiziellen Seiten.
+- [x] **D4 Neu entdeckte Verzeichnisse**: /neu-entdeckt mit 98 Verzeichnissen (72 kostenlos, 20 DACH, 16 Agenten/MCP, 26 Launch), Badge-Pflicht markiert; ohne DR/Besuche, weil keine Messwerte vorliegen.
+- Keywords (Ubersuggest, DE): „gpt 6“ 1.300/Monat (Spitze 4.400 im August), „gemini 4“ 1.000, „claude opus 5.5“ 10. Weitere Abfragen scheiterten an Semrush-API-Einheiten und dem Ubersuggest-Tageslimit.
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.
@@ -90,6 +98,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - Neu bewerben: Gamma (PartnerStack), Rytr, Runway; Wordtune-Konditionen auf der Anbieterseite prüfen (nur Drittquellen) (braucht Kanal-Links, YouTube AIGeddon passt); Links stehen in docs/PARTNERLINKS.md.
 
 - Lead-Formular: Schreibweise der Empfängeradresse jeanmaurieport@gmail.com bestätigen (fehlt das „c“ von Maurice?); danach eine Testanfrage schicken und die FormSubmit-Aktivierungsmail bestätigen, erst dann kommen Anfragen an. Den Alias aus der Aktivierung als NEXT_PUBLIC_LEAD_ALIAS hinterlegen (oder mir geben), damit die Adresse nicht im Quelltext steht.
+- Neu entdeckte Verzeichnisse: für die Übernahme in die Hauptliste fehlen DR- und Besucherwerte (Semrush-API-Einheiten aufladen), dann wandern sie mit Messwerten in /directories.
 - Datenschutzerklärung rechtlich prüfen lassen; Impressum mit ladungsfähiger Anschrift fehlt noch.
 
 ## Log
