@@ -3,6 +3,7 @@ import './globals.css'
 import { SITE_URL, SITE_NAME, SITE_TAGLINE, REPO_URL, withBase } from '../lib/site'
 import Reveal from './components/Reveal'
 import LeadBox from './components/LeadBox'
+import LeadForm from './components/LeadForm'
 import { SidebarLeft, SidebarRight, MobileDock } from './components/Sidebars'
 import BackToTop from './components/BackToTop'
 import JeanIcon, { JeanSprite } from './components/JeanIcon'
@@ -197,6 +198,7 @@ export default function RootLayout({ children }) {
                     </aside>
                     <main id="inhalt" className="page-main">
                         {children}
+                        <LeadForm />
                         <LeadBox />
                         <Reveal />
                     </main>
@@ -224,6 +226,7 @@ export default function RootLayout({ children }) {
                         <p>
                             Gebaut von <Link href="/ueber-jean">Jean Maurice Port</Link>, SEO-Manager mit Bart und Humor. ·{' '}
                             <Link href="/werben">Werben</Link> · <Link href="/transparenz">Transparenz</Link> ·{' '}
+                            <Link href="/datenschutz">Datenschutz</Link> ·{' '}
                             <a href="https://www.youtube.com/@AIGeddon">YouTube</a>
                         </p>
                         <p>

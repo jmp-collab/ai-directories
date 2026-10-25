@@ -4497,3 +4497,144 @@ ul.kb-hero-chips {
     font-size: 0.85rem;
     color: var(--muted);
 }
+
+/* ---------- Lead-Formular (jede Seite) ---------- */
+
+.leadform {
+    margin: 48px 0 8px;
+    padding: 20px;
+    background: var(--pop);
+    color: #1b1b1f;
+    border: 3px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 6px 6px 0 var(--border);
+    display: grid;
+    gap: 14px;
+}
+
+.leadform a {
+    color: #8a0f3b;
+}
+
+.leadform-kopf p {
+    margin: 0;
+}
+
+.leadform-titel {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 0 0 4px !important;
+}
+
+.leadform-form {
+    display: grid;
+    gap: 12px;
+}
+
+.leadform-form label {
+    display: grid;
+    gap: 4px;
+    font-weight: 700;
+    min-width: 0;
+}
+
+.leadform-form label > span {
+    font-size: 0.9rem;
+}
+
+.leadform-zeile {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.leadform-form input[type='text'],
+.leadform-form input[type='email'],
+.leadform-form select,
+.leadform-form textarea {
+    width: 100%;
+    font: inherit;
+    font-weight: 400;
+    padding: 10px 12px;
+    border: 2px solid #1b1b1f;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #1b1b1f;
+    min-height: 44px;
+}
+
+.leadform-form textarea {
+    resize: vertical;
+}
+
+.leadform-form input:focus-visible,
+.leadform-form select:focus-visible,
+.leadform-form textarea:focus-visible {
+    outline: 3px solid #b3164f;
+    outline-offset: 1px;
+}
+
+.leadform .leadform-check {
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 0.88rem;
+}
+
+.leadform-check input {
+    width: 22px;
+    height: 22px;
+    margin: 1px 0 0;
+    accent-color: #b3164f;
+}
+
+.leadform .button {
+    justify-self: start;
+    background: #b3164f;
+    color: #ffffff;
+    border: 2px solid #1b1b1f;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #1b1b1f;
+}
+
+.leadform-form .button[disabled] {
+    opacity: 0.7;
+    cursor: progress;
+}
+
+.leadform-form .leadform-honig {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.leadform-fehler {
+    margin: 0;
+    padding: 10px 12px;
+    background: #fbe7e4;
+    color: #8c2a1c;
+    border: 2px solid #8c2a1c;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.leadform-adresse {
+    user-select: all;
+    overflow-wrap: anywhere;
+}
+
+.leadform-danke {
+    background: var(--pop-2);
+}
+
+/* Kein automatischer Trenner innerhalb der Formular-Box */
+.page-main > section.leadform::before {
+    content: none;
+}
