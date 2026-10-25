@@ -4638,3 +4638,16 @@ ul.kb-hero-chips {
 .page-main > section.leadform::before {
     content: none;
 }
+
+/* Schritt-für-Schritt-Anleitung (Verzeichnis-Detailseiten) */
+.anleitung {
+    margin: 0;
+    padding-left: 22px;
+    display: grid;
+    gap: 10px;
+}
+
+.anleitung li::marker {
+    font-weight: 800;
+    color: var(--accent);
+}
