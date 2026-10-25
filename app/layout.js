@@ -47,6 +47,7 @@ const footerSpalten = () => [
         'KI-Tools',
         [
             ['/ki-tools', 'KI-Tool-Datenbank'],
+            ['/neue-ki-modelle', 'Neue KI-Modelle 2026'],
             ['/beste-ki-tools', 'Beste KI-Tools 2026'],
             ['/tool-finder', 'KI-Tool-Finder'],
             ['/ki-tools/kostenlos', 'Kostenlose KI-Tools'],
@@ -68,6 +69,7 @@ const footerSpalten = () => [
             ['/liste/kostenlos', 'Kostenlose KI-Verzeichnisse'],
             ['/liste/domain-rating-50-plus', 'Domain Rating 50+'],
             ['/deutsche-ki-verzeichnisse', 'Deutsche KI-Verzeichnisse'],
+            ['/neu-entdeckt', 'Neu entdeckte Verzeichnisse'],
             ['/top-50', 'Top 50'],
             ['/liste/rabattcodes', 'Rabattcodes'],
             ['/freischaltung', 'Freischaltdauer'],

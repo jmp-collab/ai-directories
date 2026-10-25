@@ -49,6 +49,8 @@ Rohdaten als JSON: ${absoluteUrl('/api/directories')}
 ## Listen
 ${lists}
 - [Deutsche KI-Verzeichnisse](${absoluteUrl('/deutsche-ki-verzeichnisse')})
+- [Neu entdeckte KI-Verzeichnisse, geprüft im Oktober 2026](${absoluteUrl('/neu-entdeckt')})
+- [Neue KI-Modelle 2026: GPT-6, Gemini 4 Argon, Claude 5.5 mit Quellen und Preisen](${absoluteUrl('/neue-ki-modelle')})
 
 ## Werkzeuge und Ratgeber
 - [Freischaltdauer und Link-Typ, belegt für ${checkCount()} Verzeichnisse (Stand ${CHECK_STAND})](${absoluteUrl('/freischaltung')})
