@@ -5,7 +5,8 @@ import Faq, { faqSchema } from '../../components/Faq'
 import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
 import { PriceBadge, ExperienceBadge } from '../../components/Badges'
 import DirectoryTable from '../../components/DirectoryTable'
-import { getDirectories, getDirectory, getRank, getVisitsPercentile, getAlternatives } from '../../../lib/data'
+import { getDirectories, getDirectory, getRank, getVisitsPercentile, getAlternatives, LISTS } from '../../../lib/data'
+import { Band } from '../../components/Deko'
 import { getVerdict } from '../../../lib/verdict'
 import { jeanLine } from '../../../lib/score'
 import Jean from '../../components/Jean'
@@ -62,7 +63,31 @@ function buildFaq(d, rank, total) {
                       : 'Zur Einreichung gibt es noch keine Erfahrungswerte.'
             }`,
         },
+        {
+            q: `Lohnt sich ${d.name} für SEO?`,
+            a: `${d.domain_rating >= 50 ? `Mit Domain Rating ${formatRating(d.domain_rating)} gehört ${d.name} zu den starken Domains dieser Liste.` : d.domain_rating >= 20 ? `Mit Domain Rating ${formatRating(d.domain_rating)} ist ${d.name} eine solide, aber keine Top-Domain.` : `Mit Domain Rating ${formatRating(d.domain_rating)} ist der SEO-Effekt eher klein.`} ${
+                getCheck(d.slug)?.link_type ? `Link-Typ laut Verzeichnis: ${getCheck(d.slug).link_type}.` : 'Ob der Link dofollow ist, steht nicht fest. Prüfe das nach der Freischaltung im Quelltext deines Eintrags.'
+            }`,
+        },
+        ...(getCheck(d.slug)?.approval
+            ? [{ q: `Wie lange dauert die Freischaltung bei ${d.name}?`, a: `Laut ${d.name}: ${getCheck(d.slug).approval}. Mehr Werte im Vergleich auf der Seite Freischaltdauer.` }]
+            : []),
+        ...(d.dealCode ? [{ q: `Gibt es einen Rabattcode für ${d.name}?`, a: `Ja: ${d.dealCode} für ${dealLabel(d.dealText)}. Ob er noch gilt, entscheidet der Anbieter.` }] : []),
     ]
+}
+
+// Einordnung aus den Daten: wofür sich der Eintrag eignet. Keine Meinung ohne Zahl dahinter.
+function staerken(d) {
+    const s = []
+    if (d.domain_rating >= 50) s.push(['🔗', 'Starker Backlink', `Domain Rating ${formatRating(d.domain_rating)}: Ein Eintrag hier zählt für Google mehr als die meisten anderen.`])
+    else if (d.domain_rating >= 30) s.push(['🔗', 'Solider Backlink', `Domain Rating ${formatRating(d.domain_rating)}: guter Durchschnitt für eine Launch-Runde.`])
+    if (d.monthly_visits >= 500000) s.push(['👀', 'Echte Besucher', `Rund ${formatVisits(d.monthly_visits)} Besuche im Monat: Hier kann der Eintrag Klicks bringen, nicht nur einen Link.`])
+    else if (d.monthly_visits >= 50000) s.push(['👀', 'Etwas Laufkundschaft', `Rund ${formatVisits(d.monthly_visits)} Besuche im Monat: kein Ansturm, aber ein paar neugierige Gründer.`])
+    if (d.pricing === 'Free' && d.submission_experience === 'Good') s.push(['⚡', 'Schneller Gratis-Eintrag', 'Kostenlos und laut bisherigen Tests reibungslos: ideal für die erste Stunde deines Launches.'])
+    if (d.pricing === 'Paid') s.push(['💸', 'Bezahlter Platz', d.dealCode ? `Kostet Geld, mit dem Code ${d.dealCode} etwas weniger. Lohnt sich nur, wenn deine Zielgruppe hier unterwegs ist.` : 'Kostet Geld. Lohnt sich nur, wenn deine Zielgruppe hier unterwegs ist.'])
+    if (d.submission_experience === 'Bad') s.push(['🐢', 'Geduld einplanen', 'Die Einreichung gilt als hakelig. Nimm dir Zeit oder erst die leichteren Verzeichnisse.'])
+    if (!s.length) s.push(['🧩', 'Ergänzung für die Liste', 'Kleinere Domain mit wenig Traffic: Nimm sie mit, wenn du ohnehin einträgst, aber erwarte keine Wunder.'])
+    return s
 }
 
 export default function DirectoryPage({ params }) {
@@ -75,6 +100,8 @@ export default function DirectoryPage({ params }) {
     const verdict = getVerdict(d)
     const alternatives = getAlternatives(d)
     const faq = buildFaq(d, rank, total)
+    const check = getCheck(d.slug)
+    const listen = Object.entries(LISTS).filter(([, l]) => l.filter(d))
     const crumbs = [
         { name: 'AIGeddon', path: '/' },
         { name: d.name, path: `/verzeichnis/${d.slug}` },
@@ -161,6 +188,76 @@ export default function DirectoryPage({ params }) {
                 <FreshBox directory={d} />
                 <CheckBox slug={d.slug} />
             </section>
+
+            <section aria-labelledby="staerken">
+                <h2 id="staerken">Wofür sich {d.name} eignet 🎯</h2>
+                <ul className="kriterien-grid">
+                    {staerken(d).map(([icon, titel, text]) => (
+                        <li key={titel}>
+                            <span className="kriterien-icon" aria-hidden="true">
+                                {icon}
+                            </span>
+                            <strong>{titel}</strong>
+                            <span>{text}</span>
+                        </li>
+                    ))}
+                </ul>
+                {listen.length > 0 && (
+                    <p>
+                        Steht auch in:{' '}
+                        {listen.map(([slug, l], i) => (
+                            <span key={slug}>
+                                {i > 0 && ' · '}
+                                <Link href={`/liste/${slug}`}>{l.title}</Link>
+                            </span>
+                        ))}
+                    </p>
+                )}
+            </section>
+
+            {!hasStatusIssue(d.slug) && (
+                <Band farbe="blau" id="anleitung" titel={`So trägst du dein KI-Tool bei ${d.name} ein 🛠️`} sticker="5 Schritte">
+                    <ol className="anleitung">
+                        <li>
+                            <strong>Unterlagen bereitlegen.</strong> Name, Einzeiler, Kurz- und Langbeschreibung, Logo, 2 bis 3 Screenshots, Kategorie und Preismodell. Die Texte
+                            erzeugt dir das <Link href="/launch-kit">Launch-Kit</Link> auf Deutsch und Englisch.
+                        </li>
+                        <li>
+                            <strong>Einreichungsseite öffnen.</strong> Bei {d.name} geht es über{' '}
+                            <a href={d.submission_link} target="_blank" rel={submitRel(d)}>
+                                {new URL(d.submission_link).hostname.replace(/^www\./, '')}
+                            </a>
+                            .{' '}
+                            {d.submission_experience === 'Good'
+                                ? 'Laut bisherigen Tests läuft das reibungslos.'
+                                : d.submission_experience === 'Bad'
+                                  ? 'Die Einreichung gilt als hakelig, nimm dir etwas mehr Zeit.'
+                                  : 'Erfahrungswerte zur Einreichung gibt es noch nicht.'}
+                        </li>
+                        <li>
+                            <strong>Formular ausfüllen.</strong> Gleicher Name und gleiche Beschreibung wie überall, damit Google und KI-Suchen dein Tool als eine Marke erkennen. Link
+                            mit UTM-Parameter, damit du später siehst, was wirkt.
+                        </li>
+                        <li>
+                            <strong>Kosten klären.</strong>{' '}
+                            {d.pricing === 'Free'
+                                ? 'Der Eintrag ist kostenlos.'
+                                : d.pricing === 'Paid'
+                                  ? `Der Eintrag kostet Geld${d.dealCode ? `, mit dem Code ${d.dealCode} gibt es ${dealLabel(d.dealText)}` : ''}. Frag vorher, ob der Link dofollow ist.`
+                                  : 'Zum Preis liegen keine gesicherten Daten vor, prüf ihn direkt im Formular.'}
+                        </li>
+                        <li>
+                            <strong>Nachhalten.</strong> {check?.approval ? `Freischaltung laut ${d.name}: ${check.approval}.` : 'Notier dir das Einreichungsdatum.'} Prüfe nach der
+                            Freischaltung, ob Link und Beschreibung stimmen. Wie lange andere Verzeichnisse brauchen, steht unter{' '}
+                            <Link href="/freischaltung">Freischaltdauer</Link>.
+                        </li>
+                    </ol>
+                    <p className="box box-tipp">
+                        Keine Zeit für 50 Formulare? Über das Formular unten nimmt Jean Anfragen für den Eintragsservice entgegen. Wie lange deine ganze Launch-Runde dauert, zeigt der{' '}
+                        <Link href="/rechner/launch-zeit">Launch-Zeit-Rechner</Link>.
+                    </p>
+                </Band>
+            )}
 
             {d.dealCode && (
                 <section aria-labelledby="rabatt" className="deal-box">

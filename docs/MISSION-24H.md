@@ -74,7 +74,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 
 - [x] **C0 Lead-Formular**: „Frag Jean direkt“ auf allen Seiten, Versand über FormSubmit an LEAD_EMAIL, Einwilligung, Honeypot, Danke-/Fehleransicht; neue Seite /datenschutz (PR #97).
 - [x] **C1 Steckbriefe**: 35 Tool-Steckbriefe mit Kosten-Box (Break-even aus dem Abo-Rechner), Prüf-Kriterien der Rubrik, Einsatz aus den Zielgruppen, FAQ mit Schema aus den Daten, Links zu Datenbank, Alternativen und Rubrik; ~200 → 330–570 Wörter.
-- [ ] **C2 Verzeichnis-Detailseiten**: 256 Seiten mit Einreichungs-Checkliste, FAQ aus den Daten (Kosten, DR, Einreichung, Linkart), ähnlichen Verzeichnissen und Launch-Kit-Verweis.
+- [x] **C2 Verzeichnis-Detailseiten**: 256 Seiten mit Einreichungs-Checkliste, FAQ aus den Daten (Kosten, DR, Einreichung, Linkart), ähnlichen Verzeichnissen und Launch-Kit-Verweis. Erledigt: „Wofür sich X eignet“ (Einordnung aus DR, Besuchen, Preis, Einreichung), Listen-Zugehörigkeit, Band „So trägst du dein KI-Tool bei X ein“ (5 Schritte mit Daten aus Prüfung, Rabattcode, Launch-Kit, Freischaltdauer), FAQ um SEO-Wert, Freischaltung und Rabattcode erweitert; 256 Seiten jetzt 458–826 Wörter (Schnitt 627).
 - [ ] **C3 Werben & Über Jean**: Angebotsseite mit Ablauf, Paketen ohne erfundene Preise, FAQ und Formular-Vorauswahl; Über-Jean mit Geschichte von AIGeddon.
 - [ ] **C4 Startseite**: „So nutzt du AIGeddon“ in 3 Schritten, ehrliche Kennzahlen, Einstiege nach Ziel, FAQ-Ausbau.
 - [ ] **C5 Ratgeber III**: „KI-Tool launchen in 30 Tagen“ (Plan aus Verzeichnisdaten, Launch-Kit, Rechnern), „ChatGPT, Claude, Gemini: welcher Chatbot wofür“ (ohne erfundene Preise, mit KI-Test).
