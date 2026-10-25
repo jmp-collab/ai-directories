@@ -497,11 +497,11 @@
   "pricing_url": "https://openai.com/chatgpt/pricing/",
   "free_plan": true,
   "free_trial": null,
-  "price_from": null,
+  "price_from": "$20/Monat (Plus, monatliche Abrechnung, kein Jahresabo laut OpenAI-Hilfe-Center)",
   "german_ui": null,
-  "summary_de": "ChatGPT ist OpenAIs KI-Assistent mit Free-, Go-, Plus-, Pro-, Business- und Enterprise-Tarifen. Die Preisseite lädt die Preise erst per Skript, deshalb nennen wir hier keine Zahl.",
+  "summary_de": "ChatGPT ist OpenAIs KI-Assistent mit Free-, Go-, Plus-, Pro-, Business- und Enterprise-Tarifen. Seit Oktober 2026 läuft im Chat GPT-6, je nach Tarif als Luna, Sol oder Astra.",
   "best_for_de": "Allround-KI-Assistent für Texte, Recherche, Bilder und Code",
-  "source": "https://openai.com/chatgpt/pricing/"
+  "source": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus"
  },
  {
   "name": "Google Gemini",
@@ -511,11 +511,11 @@
   "pricing_url": "https://gemini.google/subscriptions/",
   "free_plan": true,
   "free_trial": null,
-  "price_from": "$4.99/Monat (Google AI Plus; US-Preisanzeige)",
-  "german_ui": null,
+  "price_from": "4,99 €/Monat (Google AI Plus, Deutschland)",
+  "german_ui": true,
   "summary_de": "Gemini ist Googles persönlicher KI-Assistent; die Abos Google AI Plus, Pro und Ultra erweitern Nutzungslimits, Modelle und Cloud-Speicher.",
   "best_for_de": "Nutzer im Google-Ökosystem (Gmail, Docs, Drive)",
-  "source": "https://one.google.com/about/google-ai-plans/"
+  "source": "https://one.google.com/intl/de_de/about/google-ai-plans/"
  },
  {
   "name": "Microsoft Copilot",
@@ -847,11 +847,11 @@
   "pricing_url": "https://notebooklm.google/plans",
   "free_plan": true,
   "free_trial": null,
-  "price_from": "$4.99/Monat (über Google AI Plus; US-Preisanzeige)",
-  "german_ui": null,
+  "price_from": "4,99 €/Monat (Google AI Plus, Deutschland)",
+  "german_ui": true,
   "summary_de": "Gemini Notebook (früher NotebookLM) ist Googles KI-Recherche- und Schreibassistent, der eigene Quellen in Audio- und Video-Overviews, Berichte und Lernkarten verwandelt.",
   "best_for_de": "Lernen und Recherche mit eigenen Dokumenten",
-  "source": "https://one.google.com/about/google-ai-plans/"
+  "source": "https://one.google.com/intl/de_de/about/google-ai-plans/"
  },
  {
   "name": "OpusClip",

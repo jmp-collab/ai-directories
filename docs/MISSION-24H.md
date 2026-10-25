@@ -88,6 +88,12 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **D4 Neu entdeckte Verzeichnisse**: /neu-entdeckt mit 98 Verzeichnissen (72 kostenlos, 20 DACH, 16 Agenten/MCP, 26 Launch), Badge-Pflicht markiert; ohne DR/Besuche, weil keine Messwerte vorliegen.
 - Keywords (Ubersuggest, DE): „gpt 6“ 1.300/Monat (Spitze 4.400 im August), „gemini 4“ 1.000, „claude opus 5.5“ 10. Weitere Abfragen scheiterten an Semrush-API-Einheiten und dem Ubersuggest-Tageslimit.
 
+## Content-Ausbau IV (Auftrag 25.10.: „Artikel information value verdoppeln, Abgleich aller Informationen durch Internet-Recherche“)
+
+- [x] **E1 Faktencheck**: alle 10 Ratgeber gegen Primärquellen geprüft (Anbieter-Preisseiten und Hilfe-Center, Google Search Central, GA4-Hilfe, Product-Hunt-Hilfe, EUR-Lex, DSK, BfDI); 26 Korrekturen, darunter utm_medium=referral statt directory (GA4 ordnet sonst „Unassigned“ zu), nofollow als Hinweis statt Verbot, Beta List nicht mehr kostenlos, Dev Hunt Launch $19, Fazier nur mit Badge, Digital Omnibus (VO (EU) 2026/1744): neuer Art. 4 AI Act und Hochrisiko-Fristen 2.12.2027 / 2.8.2028, Synthesia-Preis als Monatspreis, Sora-Abschaltung mit Daten.
+- [x] **E2 Ausbau**: 40 neue Abschnitte, 48 neue FAQ, 94 Quellen; Artikel von 5.084 auf rund 13.000 Wörter (Faktor 2,6). Jede Artikelseite zeigt jetzt „geprüft am“ und einen Quellenblock (auch als citation im Article-Schema).
+- [x] **E3 Folgekorrekturen**: UTM im Launch-Kit-Generator und auf der Startseite, Beta List in der Hauptliste auf „Bezahlt“, ChatGPT Plus $20 und Google AI Plus 4,99 € in den Steckbriefen, Sora im Gerüchte-Check, AI-Act-Frist auf der HR-Zielgruppenseite.
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.
