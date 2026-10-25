@@ -45,7 +45,21 @@ export default function Home() {
         .filter((d) => !hasStatusIssue(d.slug))
         .sort((a, b) => effectiveRating(b) - effectiveRating(a) || b.monthly_visits - a.monthly_visits)
         .slice(0, 10)
-    const faq = getFaq({ ...stats, topFreeSmooth: topFree })
+    const faq = [
+        ...getFaq({ ...stats, topFreeSmooth: topFree }),
+        {
+            q: 'Wie finde ich das richtige KI-Tool?',
+            a: `Starte mit dem Tool-Finder (drei Fragen) oder such direkt in der KI-Tool-Datenbank mit ${kbStats().gesamt} Tools. Für Preise laut Anbieter gibt es Steckbriefe, für Entscheidungen zwischen zwei Tools die Tool-Vergleiche.`,
+        },
+        {
+            q: 'Welche KI ist die beste: ChatGPT, Claude oder Gemini?',
+            a: 'Das hängt von der Aufgabe ab. Im KI-Test auf AIGeddon schickst du dieselben Aufgaben an mehrere KIs, bewertest die Antworten selbst und bekommst eine Rangliste. Ohne gekaufte Testsieger.',
+        },
+        {
+            q: 'Kann ich mein KI-Tool eintragen lassen, statt es selbst zu machen?',
+            a: 'Ja. Über das Formular am Ende jeder Seite kannst du den Eintragsservice anfragen. Jean meldet sich in der Regel innerhalb von zwei Werktagen mit einem Angebot.',
+        },
+    ]
     const beliebt = getKbTools()
         .filter((t) => t.konsens === 3 && kbIndexierbar(t))
         .slice(0, 12)
@@ -194,6 +208,30 @@ export default function Home() {
                         </Link>
                     ))}
                 </p>
+            </section>
+
+            <section aria-labelledby="pfade" className="pfade-wrap">
+                <h2 id="pfade">Was willst du erreichen? 🗺️</h2>
+                <p>Vier Wege durch AIGeddon, jeweils in der Reihenfolge, die Jean selbst nehmen würde.</p>
+                <ul className="pfade">
+                    {[
+                        ['🚀', 'Mein KI-Tool launchen', '#fde68a', [['/launch-kit', 'Texte und Unterlagen mit dem Launch-Kit erstellen'], ['/liste/kostenlos', 'Mit den kostenlosen Verzeichnissen starten'], ['/rechner/launch-zeit', 'Aufwand mit dem Launch-Zeit-Rechner planen'], ['#anfrage-tool-eintragen', 'Oder: Jean trägt für dich ein']]],
+                        ['🎯', 'Das richtige KI-Tool finden', '#bfdbfe', [['/tool-finder', 'Drei Fragen im Tool-Finder beantworten'], ['/beste-ki-tools', 'Die besten Tools nach Aufgabe ansehen'], ['/tools', 'Preise laut Anbieter vergleichen'], ['/rechner/abo-monatlich-oder-jaehrlich', 'Monatlich oder jährlich zahlen?']]],
+                        ['🎓', 'KI besser nutzen', '#a7f3d0', [['/tutorials/chatgpt-richtig-nutzen', 'Einsteigerkurs: ChatGPT richtig nutzen'], ['/prompts', 'Fertige Prompts zum Ausfüllen'], ['/prompt-check', 'Eigene Prompts prüfen lassen'], ['/glossar', 'Begriffe im KI-Glossar nachschlagen']]],
+                        ['🥊', 'KIs fair vergleichen', '#fbcfe8', [['/ki-test', 'Den KI-Test mit 50 Aufgaben machen'], ['/tool-vergleiche', 'Tool-Duelle mit klarer Empfehlung'], ['/ki-tools/alternativen', 'Alternativen zu bekannten Tools'], ['/ki-tools/chatgpt-alternativen', 'ChatGPT-Alternativen im Überblick']]],
+                    ].map(([emoji, titel, farbe, schritte]) => (
+                        <li key={titel} style={{ '--tile': farbe }}>
+                            <p className="pfad-titel">
+                                <span aria-hidden="true">{emoji}</span> {titel}
+                            </p>
+                            <ol>
+                                {schritte.map(([href, text]) => (
+                                    <li key={href}>{href.startsWith('#') ? <a href={href}>{text}</a> : <Link href={href}>{text}</Link>}</li>
+                                ))}
+                            </ol>
+                        </li>
+                    ))}
+                </ul>
             </section>
 
             <Band farbe="lila" id="einstieg" titel="Was suchst du heute? 🧭" sticker="Neu: KI-Tool-Datenbank">
