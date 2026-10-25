@@ -4800,3 +4800,10 @@ ul.kb-hero-chips {
     font-size: 0.85rem;
     overflow-wrap: anywhere;
 }
+
+/* Lange URLs und Parameter im Fließtext umbrechen statt die Seite zu verbreitern */
+.prose p,
+.prose li,
+.faq p {
+    overflow-wrap: anywhere;
+}

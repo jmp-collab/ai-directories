@@ -185,7 +185,7 @@ Alphabetisch sortiert, 256 Einträge.
 | [Best AI To](https://bestaito.com/) | [Eintragen](https://bestaito.com/submit-a-ai-tool/) | 12 | 162.000 | **🟢 Reibungslos** | **🔴 Kostenpflichtig** |
 | [Best AI Tools](https://www.startupaitools.com/) | [Eintragen](https://www.startupaitools.com/) | 10 | 900 | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [BestWebDesignTools](https://bestwebdesigntools.com/) | [Eintragen](https://bestwebdesigntools.com/submit/) | 3,7 | 3.000 | **🟢 Reibungslos** | **🟢 Kostenlos** |
-| [Beta List](https://betalist.com/) | [Eintragen](https://betalist.com/submissions/new) | 70 | 180.000 | **🔴 Hakelig** | **🟢 Kostenlos** |
+| [Beta List](https://betalist.com/) | [Eintragen](https://betalist.com/submissions/new) | 70 | 180.000 | **🔴 Hakelig** | **🟡 Bezahlt** |
 | [BizRaw](https://bizraw.com/) | [Eintragen](https://bizraw.com/whats-new/posts/98/) | 73 | k. A. | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [BotsFloor](https://botsfloor.com/) | [Eintragen](https://botsfloor.com/submit) | 41 | 1.200 | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [BroUseAI](https://www.brouseai.com/) | [Eintragen](https://www.brouseai.com/) | 17 | 10.000 | **🟢 Reibungslos** | **🟢 Kostenlos** |

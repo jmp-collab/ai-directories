@@ -94,7 +94,7 @@ function utm(url, slug) {
     try {
         const u = new URL(url)
         u.searchParams.set('utm_source', slug)
-        u.searchParams.set('utm_medium', 'directory')
+        u.searchParams.set('utm_medium', 'referral')
         u.searchParams.set('utm_campaign', 'launch')
         return u.toString()
     } catch {

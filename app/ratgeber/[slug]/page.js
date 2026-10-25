@@ -51,6 +51,8 @@ export default function ArtikelPage({ params }) {
             url: absoluteUrl(`/ratgeber/${a.slug}`),
             author: { '@type': 'Person', name: 'Jean Maurice Port', url: absoluteUrl('/ueber-jean') },
             image: absoluteUrl('/ratgeber/opengraph-image.png'),
+            ...(a.geprueft ? { dateModified: a.geprueft } : {}),
+            ...(a.quellen ? { citation: a.quellen.map((q) => q.url) } : {}),
         },
     ]
     if (a.faq) schema.push(faqSchema(a.faq))
@@ -61,7 +63,9 @@ export default function ArtikelPage({ params }) {
             <JsonLd data={schema} />
             <Breadcrumbs items={crumbs} />
             <header className="hero">
-                <p className="eyebrow">{a.minutes} Minuten Lesezeit</p>
+                <p className="eyebrow">
+                    {a.minutes} Minuten Lesezeit{a.geprueft ? ` · geprüft am ${new Date(a.geprueft).toLocaleDateString('de-DE')}` : ''}
+                </p>
                 <h1>{a.title}</h1>
                 <p className="lead">{a.description}</p>
                 <Jean>{a.jean}</Jean>
@@ -88,6 +92,24 @@ export default function ArtikelPage({ params }) {
                     </section>
                 ))}
             </div>
+            {a.quellen && (
+                <section aria-labelledby="quellen" className="quellen-block">
+                    <h2 id="quellen">Quellen und Stand 🔎</h2>
+                    <p>
+                        {a.geprueft ? `Alle Angaben zu Regeln, Preisen und Funktionen wurden am ${new Date(a.geprueft).toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' })} mit diesen Quellen abgeglichen. ` : ''}
+                        Zahlen zur Verzeichnisliste stammen aus der eigenen AIGeddon-Datenbank.
+                    </p>
+                    <ul className="quellen">
+                        {a.quellen.map((q) => (
+                            <li key={q.url}>
+                                <a href={q.url} rel="noopener nofollow" target="_blank">
+                                    {q.titel}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            )}
             {a.faq && (
                 <section aria-labelledby="faq">
                     <h2 id="faq">Häufige Fragen 🙋</h2>

@@ -375,7 +375,7 @@ export default function Home() {
                         <strong>Mit den starken, kostenlosen anfangen.</strong> Die Top 10 oben bringen am meisten pro Minute. Das ist der Burger-Gutschein unter den Backlinks.
                     </li>
                     <li>
-                        <strong>UTM-Parameter setzen.</strong> Zum Beispiel <code>?utm_source=verzeichnisname&amp;utm_medium=directory</code>,
+                        <strong>UTM-Parameter setzen.</strong> Zum Beispiel <code>?utm_source=verzeichnisname&amp;utm_medium=referral&amp;utm_campaign=launch</code> (mit „referral“ landet der Besuch in GA4 im Kanal „Referral“ statt unter „Unassigned“),
                         damit du in der Analyse siehst, welches Verzeichnis wirklich Nutzer bringt und welches nur nett aussieht.
                     </li>
                     <li>
