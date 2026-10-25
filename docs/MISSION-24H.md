@@ -78,7 +78,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **C3 Werben & Über Jean**: Angebotsseite mit Ablauf, Paketen ohne erfundene Preise, FAQ und Formular-Vorauswahl; Über-Jean mit Geschichte von AIGeddon. Erledigt: /werben mit Kennzahlen, 4 Angebotskarten mit Leistungen, Ablauf in 4 Schritten, „Was es hier nicht zu kaufen gibt“, 5 FAQ mit Schema; „Anfragen“ springt per #anfrage-… zum Formular und wählt das Anliegen vor (funktioniert auf jeder Seite). Über Jean unverändert (bereits ausführlich).
 - [x] **C4 Startseite**: „So nutzt du AIGeddon“ in 3 Schritten, ehrliche Kennzahlen, Einstiege nach Ziel, FAQ-Ausbau. Erledigt: Abschnitt „Was willst du erreichen?“ mit 4 Wegen (launchen, Tool finden, KI besser nutzen, KIs vergleichen) zu je 4 Schritten inkl. Formular-Vorauswahl; FAQ um Tool-Suche, ChatGPT/Claude/Gemini und Eintragsservice erweitert.
 - [x] **C5 Ratgeber III**: „KI-Tool launchen in 30 Tagen“ (Plan aus Verzeichnisdaten, Launch-Kit, Rechnern), „ChatGPT, Claude, Gemini: welcher Chatbot wofür“ (ohne erfundene Preise, mit KI-Test). Erledigt: /ratgeber/ki-tool-launchen-30-tage (Wochenplan mit Zahlen aus db/directories.json: 164 kostenlos, 158 reibungslos, 55 mit DR 50+, 28 mit 500.000+ Besuchen, 25 Rabattcodes, 71 geprüfte Freischaltzeiten) und /ratgeber/chatgpt-claude-gemini-welcher-chatbot (Testmethode statt Rangliste, Preise nur für Claude laut Anbieter); je 4 FAQ mit Schema.
-- [ ] **C6 Qualitätsrunde und Bericht**: Link-Crawl, Meta-Audit, Barrierefreiheit, Live-Check, Kurzbericht an Jean.
+- [x] **C6 Qualitätsrunde und Bericht**: Link-Crawl, Meta-Audit, Barrierefreiheit, Live-Check, Kurzbericht an Jean. Erledigt 25.10.: 1.250 Seiten alle mit Formular, 92.955 interne Links (0 kaputt), 437 Seiten mit vollständigem FAQ-Schema, Meta-Audit unverändert, Barrierefreiheit ohne neue Befunde; live geprüft: neue Ratgeber, /datenschutz, /werben.
 
 ## Für Jean (am Ende präsentieren)
 
@@ -88,6 +88,9 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - Google Search Console verifizieren und Sitemap einreichen.
 - Impressum/Datenschutz-Daten, PromptGott-URL, Partnerlinks.
 - Neu bewerben: Gamma (PartnerStack), Rytr, Runway; Wordtune-Konditionen auf der Anbieterseite prüfen (nur Drittquellen) (braucht Kanal-Links, YouTube AIGeddon passt); Links stehen in docs/PARTNERLINKS.md.
+
+- Lead-Formular: Schreibweise der Empfängeradresse jeanmaurieport@gmail.com bestätigen (fehlt das „c“ von Maurice?); danach eine Testanfrage schicken und die FormSubmit-Aktivierungsmail bestätigen, erst dann kommen Anfragen an. Den Alias aus der Aktivierung als NEXT_PUBLIC_LEAD_ALIAS hinterlegen (oder mir geben), damit die Adresse nicht im Quelltext steht.
+- Datenschutzerklärung rechtlich prüfen lassen; Impressum mit ladungsfähiger Anschrift fehlt noch.
 
 ## Log
 
