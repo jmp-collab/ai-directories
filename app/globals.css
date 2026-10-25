@@ -4651,3 +4651,52 @@ ul.kb-hero-chips {
     font-weight: 800;
     color: var(--accent);
 }
+
+/* Angebotskarten auf /werben */
+.angebote {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.angebote > li {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+    display: grid;
+    gap: 8px;
+    align-content: start;
+    min-width: 0;
+}
+
+.angebote h3 {
+    margin: 0;
+}
+
+.angebote p {
+    margin: 0;
+}
+
+.angebote ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.92rem;
+}
+
+.angebote .button {
+    justify-self: start;
+    margin-top: 4px;
+}
+
+.angebot-fuer {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}

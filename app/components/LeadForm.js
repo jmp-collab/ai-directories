@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { LEAD_ENDPOINT, CONTACT_EMAIL } from '../../lib/monetization'
 
 // Lead-Formular für jede Seite. Ohne eigenen Server: FormSubmit leitet die Anfrage per Mail weiter (LEAD_EMAIL).
@@ -20,6 +20,23 @@ export default function LeadForm({ titel, text, vorauswahl = 'tool-eintragen', i
     const pfad = usePathname() || '/'
     const [status, setStatus] = useState('bereit')
     const [fehler, setFehler] = useState('')
+    const [anliegen, setAnliegen] = useState(vorauswahl)
+
+    // Links wie #anfrage-werbung springen zum Formular und wählen das Anliegen vor.
+    useEffect(() => {
+        const aus = () => {
+            const m = window.location.hash.match(new RegExp(`^#${id}-([a-z-]+)$`))
+            if (m && ANLIEGEN.some(([k]) => k === m[1])) {
+                setAnliegen(m[1])
+                setStatus('bereit')
+                document.getElementById(id)?.scrollIntoView({ block: 'start' })
+                document.getElementById(`${id}-email`)?.focus({ preventScroll: true })
+            }
+        }
+        aus()
+        window.addEventListener('hashchange', aus)
+        return () => window.removeEventListener('hashchange', aus)
+    }, [id])
 
     async function senden(e) {
         e.preventDefault()
@@ -50,6 +67,7 @@ export default function LeadForm({ titel, text, vorauswahl = 'tool-eintragen', i
             if (!r.ok || antwort.success === false || antwort.success === 'false') throw new Error(antwort.message || `Status ${r.status}`)
             setStatus('gesendet')
             form.reset()
+            setAnliegen(vorauswahl)
         } catch (err) {
             setStatus('fehler')
             setFehler(err.message)
@@ -78,7 +96,7 @@ export default function LeadForm({ titel, text, vorauswahl = 'tool-eintragen', i
             <form className="leadform-form" onSubmit={senden}>
                 <label>
                     <span>Worum geht es?</span>
-                    <select name="anliegen" defaultValue={vorauswahl} id={`${id}-anliegen`}>
+                    <select name="anliegen" value={anliegen} onChange={(e) => setAnliegen(e.target.value)} id={`${id}-anliegen`}>
                         {ANLIEGEN.map(([k, label]) => (
                             <option key={k} value={k}>
                                 {label}
