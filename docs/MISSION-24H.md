@@ -70,6 +70,16 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 
 - [x] **P9 Präsentation**: Ergebnisbericht mit Vorher/Nachher, Live-Links, Kennzahlen, Liste „Für Jean“. Erledigt 24.10. 01:55 UTC: Ergebnisbericht als Artifact (https://claude.ai/artifact/XUqUKk6RTUBKLMyVNPLp97). Ergänzung „Für Jean“: GitHub-About-Feld Website zeigt noch auf ai-directories.vercel.app (Ursprungsprojekt), auf https://jmp-collab.github.io/ai-directories/ umstellen; Repo-Einstellungen sind für mich gesperrt.
 
+## Content-Ausbau II (Auftrag 25.10.: „Content maximal geil und liebevoll ausbauen“, Lead-Formular auf jeder Seite)
+
+- [x] **C0 Lead-Formular**: „Frag Jean direkt“ auf allen Seiten, Versand über FormSubmit an LEAD_EMAIL, Einwilligung, Honeypot, Danke-/Fehleransicht; neue Seite /datenschutz (PR #97).
+- [x] **C1 Steckbriefe**: 35 Tool-Steckbriefe mit Kosten-Box (Break-even aus dem Abo-Rechner), Prüf-Kriterien der Rubrik, Einsatz aus den Zielgruppen, FAQ mit Schema aus den Daten, Links zu Datenbank, Alternativen und Rubrik; ~200 → 330–570 Wörter.
+- [ ] **C2 Verzeichnis-Detailseiten**: 256 Seiten mit Einreichungs-Checkliste, FAQ aus den Daten (Kosten, DR, Einreichung, Linkart), ähnlichen Verzeichnissen und Launch-Kit-Verweis.
+- [ ] **C3 Werben & Über Jean**: Angebotsseite mit Ablauf, Paketen ohne erfundene Preise, FAQ und Formular-Vorauswahl; Über-Jean mit Geschichte von AIGeddon.
+- [ ] **C4 Startseite**: „So nutzt du AIGeddon“ in 3 Schritten, ehrliche Kennzahlen, Einstiege nach Ziel, FAQ-Ausbau.
+- [ ] **C5 Ratgeber III**: „KI-Tool launchen in 30 Tagen“ (Plan aus Verzeichnisdaten, Launch-Kit, Rechnern), „ChatGPT, Claude, Gemini: welcher Chatbot wofür“ (ohne erfundene Preise, mit KI-Test).
+- [ ] **C6 Qualitätsrunde und Bericht**: Link-Crawl, Meta-Audit, Barrierefreiheit, Live-Check, Kurzbericht an Jean.
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.
