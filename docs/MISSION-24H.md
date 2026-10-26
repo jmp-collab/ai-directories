@@ -125,6 +125,11 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **I3 Tonpass** (Zahlen je Absatz automatisch gegen das Original geprüft, 0 Abweichungen): 10 Ratgeber (346 Textstellen), 17 Vergleiche (232), Modellseiten (89), Zielgruppen- und Rubrik-FAQ mit Tipps und Warnungen (136).
 - [x] **I4 Entdoppeln III**: YouTube-Hinweis pro Seite aus 24 Sprüchen statt 1.327-mal derselbe Satz, KB-Infobox und Quellenzeile gekürzt, Verzeichnis-FAQ und Ratgeber-Hinweis ohne Wiederholungssatz.
 
+## Liebevolle Details (Auftrag 26.10.: „Agenten weiter laufen lassen, Website optisch maximal liebevoll mit Details“)
+
+- [x] **J1 Agenten**: Backlog in docs/TASKS.md mit 17 neuen Aufgaben gefüllt (der tägliche Lauf hatte nichts mehr zu tun); neue Routine „AIGeddon: Wöchentliche KI-News“ (Do 07:37). Hinweis: Routinen laufen ohne Exa-Connector und mit gesperrten Anbieterseiten, siehe docs/FUER-JEAN.md.
+- [x] **J2 Details**: Lese-Fortschrittsbalken (Pink, Gelb, Mint), Tagesgruß als Aufkleber im Header, Konfetti nach dem Absenden des Lead-Formulars, Kaffee-Meter bei Ratgebern, Klebeband an Jeans Boxen, schief liegende Karten, die sich beim Drüberfahren aufrichten, Knopf-Effekt bei Buttons, Wellen-Unterstrich in Texten, Punktraster wie Notizpapier, eigene Textmarkierung und Fokus-Rahmen, Moped in der Fußzeile mit Liebeserklärung, Gruß beim Ausdrucken. Alles respektiert reduzierte Bewegung.
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.

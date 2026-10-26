@@ -4,6 +4,8 @@ import { SITE_URL, SITE_NAME, SITE_TAGLINE, REPO_URL, withBase } from '../lib/si
 import Reveal from './components/Reveal'
 import LeadBox from './components/LeadBox'
 import JeansSenf from './components/JeansSenf'
+import LeseFortschritt from './components/LeseFortschritt'
+import Gruss from './components/Gruss'
 import LeadForm from './components/LeadForm'
 import { SidebarLeft, SidebarRight, MobileDock } from './components/Sidebars'
 import BackToTop from './components/BackToTop'
@@ -143,6 +145,7 @@ export default function RootLayout({ children }) {
         <html lang="de">
             <body>
                 <JeanSprite />
+                <LeseFortschritt />
                 <a className="skip-link" href="#inhalt">
                     Zum Inhalt springen
                 </a>
@@ -153,6 +156,7 @@ export default function RootLayout({ children }) {
                             AIGEDDON ☢️
                             <span className="brand-sub">{SITE_TAGLINE}</span>
                         </Link>
+                        <Gruss />
                         <nav aria-label="Hauptnavigation">
                             <ul>
                                 <li>
@@ -212,6 +216,17 @@ export default function RootLayout({ children }) {
                     </aside>
                 </div>
                 <footer className="site-footer">
+                    <div className="moped-strecke" aria-hidden="true">
+                        <svg className="moped" viewBox="0 0 64 36" width="64" height="36">
+                            <circle cx="12" cy="28" r="7" fill="none" stroke="currentColor" strokeWidth="3" />
+                            <circle cx="52" cy="28" r="7" fill="none" stroke="currentColor" strokeWidth="3" />
+                            <path d="M12 28 L22 16 H38 L46 28" fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
+                            <path d="M22 16 C24 10 34 10 38 16" fill="#ffe14d" stroke="currentColor" strokeWidth="2.5" />
+                            <path d="M46 28 L50 12 H56" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                            <circle cx="30" cy="6" r="4" fill="#ff6fa8" stroke="currentColor" strokeWidth="2" />
+                        </svg>
+                        <span className="moped-wolke">💨</span>
+                    </div>
                     <JsonLd data={SITE_SCHEMA} />
                     <nav className="footer-hub container" aria-label="Alle Rubriken">
                         {footerSpalten().map(([titel, links]) => (
@@ -238,6 +253,9 @@ export default function RootLayout({ children }) {
                             Open Source auf <a href={REPO_URL}>GitHub</a> (Pull Requests werden mit Konfetti empfangen) · Rohdaten als{' '}
                             <a href={withBase('/api/directories')}>JSON-API</a> · Für KI-Assistenten, die auch mal lachen wollen:{' '}
                             <a href={withBase('/llms.txt')}>llms.txt</a>
+                        </p>
+                        <p className="footer-liebe">
+                            Mit ❤️, viel ☕ und einem Schuss Zweitakt-Öl von Hand geschraubt. Kein Algorithmus wurde beim Lesen dieser Zeile verletzt.
                         </p>
                         <p>
                             Domain Rating und Besuche sind Schätzwerte ohne Gewähr, ungefähr so verlässlich wie ein Wetterbericht für nächsten

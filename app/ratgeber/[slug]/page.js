@@ -64,7 +64,7 @@ export default function ArtikelPage({ params }) {
             <Breadcrumbs items={crumbs} />
             <header className="hero">
                 <p className="eyebrow">
-                    {a.minutes} Minuten Lesezeit{a.geprueft ? ` · geprüft am ${new Date(a.geprueft).toLocaleDateString('de-DE')}` : ''}
+                    <span aria-hidden="true">{'☕'.repeat(Math.max(1, Math.round(a.minutes / 4)))}</span> {a.minutes} Minuten Lesezeit{a.geprueft ? ` · geprüft am ${new Date(a.geprueft).toLocaleDateString('de-DE')}` : ''}
                 </p>
                 <h1>{a.title}</h1>
                 <p className="lead">{a.description}</p>

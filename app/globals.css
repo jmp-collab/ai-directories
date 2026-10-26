@@ -4867,3 +4867,217 @@ ul.kb-hero-chips {
     text-decoration: underline;
     text-underline-offset: 2px;
 }
+
+/* ================= Liebevolle Details ================= */
+
+::selection {
+    background: var(--pop);
+    color: #1b1b1f;
+}
+
+:focus-visible {
+    outline: 3px dashed var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+html {
+    scrollbar-color: var(--accent) var(--bg);
+}
+
+/* Ganz leises Punktraster wie auf Notizpapier */
+body {
+    background-image: radial-gradient(color-mix(in srgb, var(--border) 9%, transparent) 1px, transparent 1.2px);
+    background-size: 22px 22px;
+}
+
+/* Lese-Fortschritt oben */
+.lese-fortschritt {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 4px;
+    z-index: 200;
+    transform-origin: 0 50%;
+    background: linear-gradient(90deg, var(--accent), var(--pop), var(--pop-2));
+    pointer-events: none;
+}
+
+/* Tagesgruß im Header: ein Aufkleber an der Unterkante, ohne das Layout zu schieben */
+.header-inner {
+    position: relative;
+}
+
+.gruss {
+    position: absolute;
+    right: 16px;
+    bottom: -14px;
+    z-index: 3;
+    font-size: 0.8rem;
+    font-weight: 800;
+    background: var(--pop);
+    color: #1b1b1f;
+    border: 2px solid #1b1b1f;
+    border-radius: 999px;
+    padding: 2px 10px;
+    transform: rotate(-3deg);
+    white-space: nowrap;
+}
+
+.gruss {
+    transition: opacity 0.2s ease;
+}
+
+.gruss-weg {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 720px) {
+    .gruss {
+        display: none;
+    }
+}
+
+/* Wellen-Unterstrich beim Drüberfahren in Texten */
+.prose a:hover,
+.jean-take a:hover,
+.faq a:hover {
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+/* Klebeband an Jeans Boxen */
+.jean-take {
+    position: relative;
+    margin-top: 28px;
+}
+
+.jean-take::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    right: 28px;
+    width: 84px;
+    height: 22px;
+    background: color-mix(in srgb, var(--pop) 75%, transparent);
+    border: 1px dashed color-mix(in srgb, var(--border) 35%, transparent);
+    transform: rotate(4deg);
+    pointer-events: none;
+}
+
+.jeans-senf::before {
+    background: color-mix(in srgb, var(--pop-2) 75%, transparent);
+    transform: rotate(-5deg);
+    left: 24px;
+    right: auto;
+}
+
+/* Karten liegen leicht schief und richten sich beim Drüberfahren auf */
+.link-cards li:nth-child(3n + 1) {
+    rotate: -0.35deg;
+}
+
+.link-cards li:nth-child(3n + 2) {
+    rotate: 0.3deg;
+}
+
+.link-cards li,
+.kriterien-grid li,
+.unterschiede > div {
+    transition:
+        rotate 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.link-cards li:hover,
+.kriterien-grid li:hover,
+.unterschiede > div:hover {
+    rotate: 0deg;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--border);
+}
+
+/* Buttons geben beim Klicken nach wie ein echter Knopf */
+.button:active {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 var(--border);
+}
+
+/* Fußzeile: ein kleines Moped dreht seine Runde */
+.moped-strecke {
+    position: relative;
+    height: 40px;
+    margin-top: -24px;
+    overflow: hidden;
+    color: #1b1b1f;
+    pointer-events: none;
+}
+
+.moped,
+.moped-wolke {
+    position: absolute;
+    bottom: 0;
+    left: -80px;
+    animation: moped-fahrt 24s linear infinite;
+}
+
+.moped-wolke {
+    font-size: 18px;
+    bottom: 4px;
+    animation-delay: -0.35s;
+    opacity: 0.8;
+}
+
+@keyframes moped-fahrt {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(100vw + 160px));
+    }
+}
+
+.footer-liebe {
+    font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .moped,
+    .moped-wolke {
+        animation: none;
+        left: 16px;
+    }
+
+    .moped-wolke {
+        display: none;
+    }
+
+    .link-cards li,
+    .kriterien-grid li,
+    .unterschiede > div {
+        transition: none;
+    }
+}
+
+/* Wer ausdruckt, bekommt einen Gruß */
+@media print {
+    .lese-fortschritt,
+    .moped-strecke,
+    .gruss {
+        display: none;
+    }
+
+    body {
+        background-image: none;
+    }
+
+    body::after {
+        content: 'Ausgedruckt von AIGeddon. Jean ist gerührt, dass jemand noch Papier benutzt.';
+        display: block;
+        margin-top: 24px;
+        font-style: italic;
+    }
+}
