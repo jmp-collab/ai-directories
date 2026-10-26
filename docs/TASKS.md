@@ -27,22 +27,24 @@ Diese Datei steuert die automatischen Arbeitssitzungen. Jede Sitzung liest sie, 
 - [ ] **Netlify-Projekt löschen** (alte Kopie). *wartet auf Jean*
 
 ### Automatisch abzuarbeiten (Reihenfolge = Priorität)
-Gesamtplan mit 100 Schritten: `docs/ROADMAP-100.md`. Neue Aufgaben von dort hierher übernehmen.
-- [ ] **Steckbriefe für Konsens-Tools**: die 12 Tools in allen 3 Listen und danach die 2/3-Tools mit Partnerprogramm in `db/tools.json` aufnehmen (Preis, Gratis-Tarif, deutsche Oberfläche laut Anbieter, Quelle). Je Runde 5 Tools; Partnerprogramm in `db/partners.json` ergänzen.
-- [ ] **Deutsche Kurzbeschreibungen** für die nächsten 100 Einzel-Tools der Datenbank in `db/kb-de.json` (Rubriken Bild, Video, Audio, Schreiben zuerst), nur auf Basis der Quellenbeschreibung.
-- [ ] **Prompt-Bibliothek auf 50 ausbauen** (`lib/prompts.js`), je Runde 6 Prompts aus neuen Kategorien (E-Commerce, Bewerbung, Excel, Bild, Coding, Lernen), jede mit passenden Tools aus `db/tools.json`.
-- [ ] **Prompt-Ketten** `/prompt-ketten`: 3 Workflows mit je 3 bis 5 Schritten und Senden-Button pro Schritt.
-- [ ] **Rechner** `/rechner`: zuerst Zeitersparnis-/ROI-Rechner, dann Automatisierungs-Kostenrechner (Make/Zapier/n8n), Preise nur mit Quelle.
-- [ ] **Prompt des Tages** als Widget im rechten Seitenrand.
-- [ ] **Weitere Tutorials** (je eines pro Runde): Custom GPT/Claude Project bauen, Bild-Prompts, Newsletter mit KI in einer Stunde; Format wie `lib/tutorials.js`.
-- [ ] **Absprung-Links prüfen** (vierteljährlich, `lib/ai-targets.js`): ChatGPT, Claude, Perplexity, Grok, Google AI Mode.
-- [ ] **Weitere Tool-Vergleiche** in `lib/comparisons.js`: „Canva vs. …“ erst, wenn Design-Alternativen im Tool-Verzeichnis stehen; „Tally vs. Typeform“; „ElevenLabs vs. Murf“; „Descript vs. Pictory“. Nur Empfehlungen, die sich aus `db/tools.json` belegen lassen.
-- [ ] **Top 50 als echter Lead-Magnet**: Sobald der Newsletter läuft, CSV-Download an das Abo koppeln (z. B. beehiiv-Lead-Magnet) und die Seite entsprechend umbauen. *wartet auf Newsletter*
-- [ ] **Tool-Verzeichnis erweitern**: 15 weitere Tools mit öffentlichem Partnerprogramm (z. B. Jasper-Alternativen, Notion-Alternativen, KI-Bild: Leonardo-Alternativen, Transkription), Fakten wie in `db/tools.json`.
-- [ ] **Prüfdaten erweitern**: nächste 15 Verzeichnisse ohne Eintrag in `db/checks.json` (Freischaltdauer, Link-Typ, Status) mit Zitat und Quelle.
-- [ ] **Use-Case-Rubrik** `/use-cases`: 5 Anwendungsfälle (z. B. „Produktvideo ohne Kamera“, „Newsletter in 1 Stunde“), je mit passenden Tools aus `db/tools.json`.
-- [ ] **Ratgeber**: Artikel „Product-Hunt-Alternativen für deutsche Gründer“ mit Verweisen auf Verzeichnis- und Tool-Seiten.
-- [ ] **Ratgeber**: Artikel „Welcher Newsletter-Anbieter für Gründer?“ mit Verweis auf die Newsletter-Vergleichsseite.
+Stand 26.10.2026. Je Sitzung genau eine Aufgabe (bei „je Runde“ nur die angegebene Menge). Ton immer nach `docs/BRAND-VOICE.md`, Fakten nur mit offizieller Quelle, Unikat-Texte in `db/texte/*.json`.
+- [ ] **Vergleich Lovable vs. Bolt.new vs. v0** in `lib/comparisons.js` mit Picks, 5 Unterschieden, 3 FAQ, Quellen (Daten aus `db/tools.json`, Preise vorher auf den Preisseiten prüfen).
+- [ ] **Vergleich GitHub Copilot vs. Cursor vs. Replit** (wie oben).
+- [ ] **Vergleich Fireflies.ai vs. tl;dv vs. Otter.ai** (wie oben).
+- [ ] **Vergleich DeepL vs. Grammarly vs. QuillBot** (wie oben).
+- [ ] **Vergleich ChatGPT vs. Claude vs. Google Gemini** als Tool-Vergleich (Tarife aus `db/tools.json`, Modelle aus `lib/modelle.js`).
+- [ ] **Ratgeber „Vibe Coding: Apps bauen mit Lovable, Bolt und v0“** (8 bis 10 Abschnitte, FAQ, Quellen, `geprueft`).
+- [ ] **Ratgeber „KI-Musik und Rechte: was das GEMA-Urteil gegen Suno bedeutet“** (LG München I, 42 O 763/25, nur belegte Fakten, Hinweis keine Rechtsberatung).
+- [ ] **Tutorial „Meeting-Notizen mit KI, DSGVO-sauber“** im Format von `lib/tutorials.js` (6 Schritte, 3 Quizfragen).
+- [ ] **Tutorial „Mit KI programmieren, ohne dass es knallt“** (Vibe Coding sicher: Tests, Secrets, Code lesen).
+- [ ] **Zielgruppe Agenturen** und **Zielgruppe Vereine und Ehrenamt** in `lib/zielgruppen.js` (je 5 Aufgaben-Karten, Warnbox, FAQ mit Quellen).
+- [ ] **Steckbriefe** je Runde 5 weitere Tools aus den Konsens-Tools (3/3 und 2/3) der KI-Tool-Datenbank in `db/tools.json`, dazu Jeans Meinung in `db/texte/tools.json`.
+- [ ] **Prompts** je Runde 6 neue in `lib/prompts.js` (Coding, Bild, Recht und Verträge, Vereinsarbeit, Agenturen), dazu Intro/Tipp/Fehler in `db/texte/prompts.json`.
+- [ ] **Glossar** je Runde 5 neue Begriffe in `lib/ki-glossar.js` plus Schrauber-Erklärung in `db/texte/glossar.json`.
+- [ ] **Neu entdeckte Verzeichnisse prüfen** je Runde 15 aus `db/neu-entdeckt.json`: Einreichung noch offen? Preis und Badge-Pflicht laut eigener Seite aktualisieren, tote Einträge entfernen.
+- [ ] **Prüfdaten erweitern** je Runde 15 Verzeichnisse ohne Eintrag in `db/checks.json` (Freischaltdauer, Link-Typ, Status mit Zitat und Quelle).
+- [ ] **Ratgeber-Faktencheck** je Runde 2 Artikel aus `lib/ratgeber.js`, deren `geprueft` älter als 30 Tage ist: Quellen erneut öffnen, Abweichungen korrigieren, `geprueft` aktualisieren.
+- [ ] **Top 50 als echter Lead-Magnet**: Sobald der Newsletter läuft, CSV-Download an das Abo koppeln. *wartet auf Newsletter*
 
 ## Wiederkehrend (eigene geplante Sitzungen, nicht hier abhaken)
 
@@ -50,6 +52,7 @@ Gesamtplan mit 100 Schritten: `docs/ROADMAP-100.md`. Neue Aufgaben von dort hier
 
 - **Wöchentlich, Montag:** Sperr-Check. Alle Verzeichnisse mit Status in `db/checks.json` erneut prüfen, ob die Einreichung wieder offen ist, und die 30 Verzeichnisse mit dem höchsten Jean-Score prüfen, ob sie inzwischen gesperrt oder tot sind. Änderungen mit Quelle eintragen.
 - **Monatlich, am 1.:** Preis-Check aller Tools in `db/tools.json` und aller Rechner-Preise in `lib/preise.js` (API-Modelle, Abos) gegen die offiziellen Preisseiten, `TOOLS_STAND` und `PREISE_STAND` aktualisieren. Achtung: Gemini 4 Argon verdoppelt am 1.12.2026 den Preis.
+- **Wöchentlich, Donnerstag:** KI-News: neue Modelle und Umbenennungen prüfen, `lib/modelle.js` und Gerüchte-Check aktualisieren (eigene geplante Sitzung).
 - **Täglich (GitHub Actions, 04:17 UTC):** Neubau der Seite, damit Deal und Tool des Tages wechseln.
 
 ## Erledigt
