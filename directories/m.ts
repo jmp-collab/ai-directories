@@ -22,7 +22,7 @@ export const directories: Directory[] = [
     {
         "name": "MicroLaunch",
         "link": "https://microlaunch.net",
-        "submission_link": "https://tally.so/r/mYaR6N",
+        "submission_link": "https://microlaunch.net/hq",
         "domain_rating": 38,
         "monthly_visits": 54400,
         "submission_experience": "Good",

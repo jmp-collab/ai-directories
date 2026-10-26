@@ -127,6 +127,7 @@ export const metadata = {
     twitter: { card: 'summary' },
     robots: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
     icons: { icon: '/favicon.ico' },
+    ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION ? { verification: { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION } } : {}),
 }
 
 export const viewport = {

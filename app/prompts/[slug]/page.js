@@ -23,7 +23,7 @@ export function generateMetadata({ params }) {
     const p = getPrompt(params.slug)
     if (!p) return {}
     return {
-        title: p.title.length > 52 ? p.title : `Prompt: ${p.title}`,
+        title: p.title.length > 50 ? (p.title.length > 59 ? p.title.split(':')[0] + ': Prompt-Vorlage' : p.title) : `Prompt: ${p.title}`,
         description: `${p.ziel} Vorlage auf Deutsch zum Ausfüllen, mit einem Klick an ChatGPT, Claude, Perplexity oder Grok.`.slice(0, 300),
         alternates: { canonical: `/prompts/${p.slug}` },
     }
@@ -79,14 +79,10 @@ export default function PromptPage({ params }) {
             )}
             <section aria-labelledby="warum">
                 <h2 id="warum">Warum dieser Prompt funktioniert</h2>
-                <dl className="technik-liste">
-                    {p.techniken.map((t) => (
-                        <div key={t}>
-                            <dt>{TECHNIKEN[t][0]}</dt>
-                            <dd>{TECHNIKEN[t][1]}</dd>
-                        </div>
-                    ))}
-                </dl>
+                <p>
+                    Diese Vorlage nutzt {p.techniken.length} Techniken: {p.techniken.map((t) => TECHNIKEN[t][0]).join(', ')}. Was jede davon bewirkt, zeigt das{' '}
+                    <Link href="/tutorials/prompt-engineering-in-15-minuten">Prompt-Tutorial in 15 Minuten</Link>.
+                </p>
             </section>
             <LeadMagnetBox id="prompt-paket" />
             {tools.length > 0 && (

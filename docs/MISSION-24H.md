@@ -109,6 +109,15 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - Satz-Unikatanteil vorher/nachher: Verzeichnisse 32 % → 74 %, Steckbriefe 29 % → 45 %, Prompts 30 % → 48 %, Glossar 53 % → 65 %.
 - Datenkorrektur: Anyfp laut eigener Seite kostenlos.
 
+## Offene Punkte II (Auftrag 26.10.: „Alle offenen Punkte erledigen“)
+
+- [x] **H1 Datenkorrekturen**: Startup Spotlight bezahlt (Gebot ab $10, Stripe-Link), MicroLaunch-Einreichung über microlaunch.net/hq (altes Formular laut Anbieter „legacy“), Make $9 und Otter $8,49 (jährlich) erneut bestätigt.
+- [x] **H2 Titel**: alle sechs Titel über 70 Zeichen gekürzt (Steckbriefe, Prompts, KI-Test, Vergleiche).
+- [x] **H3 Entdoppeln II**: Prüfkriterien auf Steckbriefen als kurze Liste plus Link zur Rubrik, Technik-Erklärungen auf Prompt-Seiten als Satz plus Link zum Tutorial.
+- [x] **H4 Unikat-Texte** für die übrigen 551 Seiten der KI-Tool-Datenbank.
+- [x] **H5 Vorbereitet für Jean**: Repository-Variablen GSC_VERIFICATION, LEAD_EMAIL, LEAD_ALIAS im Deploy-Workflow; Klick-Anleitung docs/FUER-JEAN.md.
+- Keywords (Ubersuggest DE): „claude sonnet 5.5“ 1.600 im September 2026, „neue ki modelle“ 90 bis 140, „gpt 6 astra“ 0; danach Tageslimit.
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.

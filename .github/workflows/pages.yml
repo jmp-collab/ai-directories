@@ -39,6 +39,10 @@ jobs:
                   STATIC_EXPORT: '1'
                   BASE_PATH: /ai-directories
                   NEXT_PUBLIC_SITE_URL: https://jmp-collab.github.io/ai-directories
+                  # Optional als Repository-Variablen setzen (Settings > Secrets and variables > Actions > Variables)
+                  NEXT_PUBLIC_GSC_VERIFICATION: ${{ vars.GSC_VERIFICATION }}
+                  NEXT_PUBLIC_LEAD_EMAIL: ${{ vars.LEAD_EMAIL }}
+                  NEXT_PUBLIC_LEAD_ALIAS: ${{ vars.LEAD_ALIAS }}
             # Vorschaubilder als .png und doppelten basePath in og:image korrigieren
             - run: node utils/export/fix-og.js
               env:

@@ -246,7 +246,7 @@ export const directories: Directory[] = [
         "domain_rating": 25,
         "monthly_visits": 5000,
         "submission_experience": "Good",
-        "pricing": "Free",
+        "pricing": "Paid",
         "dealCode": "Buy 1 take 2",
         "dealText": "Buy 1 take 2",
         "icon": "https://cdn.prod.website-files.com/657b3d8ca1cab4015f06c850/66edda4b853c47efe45e9b42_icon.png"
