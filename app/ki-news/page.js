@@ -38,7 +38,7 @@ function KiNews() {
                 <p className="eyebrow">Stand {NEWS_STAND}</p>
                 <h1>KI-News: was diese Woche wirklich wichtig ist</h1>
                 <p className="lead">
-                    {liste.length} Meldungen zu {themen.join(', ')}. Jede mit offizieller Quelle, einem „Was du jetzt tun solltest“ und Links zu den passenden Tools, Prompts und Erklärungen hier auf der Seite.
+                    {liste.length} Meldungen, Themen: {themen.join(', ')}. Jede mit offizieller Quelle, einem „Was du jetzt tun solltest“ und Links zu den passenden Tools, Prompts und Erklärungen hier auf der Seite.
                 </p>
                 <Jean>Ich lese die Pressemitteilungen, damit du es nicht musst. Übrig bleibt, was dich betrifft, und ein Witz pro Absatz als Schmerzensgeld.</Jean>
             </section>
