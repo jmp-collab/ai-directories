@@ -1,3 +1,4 @@
+import { NEWS } from '../../lib/news'
 import { getDirectories, getSiteStats, LISTS } from '../../lib/data'
 import { SITE_NAME, absoluteUrl } from '../../lib/site'
 import { getScore } from '../../lib/score'
@@ -51,6 +52,8 @@ ${lists}
 - [Deutsche KI-Verzeichnisse](${absoluteUrl('/deutsche-ki-verzeichnisse')})
 - [Neu entdeckte KI-Verzeichnisse, geprüft im Oktober 2026](${absoluteUrl('/neu-entdeckt')})
 - [Neue KI-Modelle 2026: GPT-6, Gemini 4 Argon, Claude 5.5 mit Quellen und Preisen](${absoluteUrl('/neue-ki-modelle')})
+- [KI-News: aktuelle Meldungen mit Quellen und Handlungsempfehlung](${absoluteUrl('/ki-news')})
+${NEWS.map((n) => `- [${n.titel}](${absoluteUrl(`/ki-news/${n.slug}`)}): ${n.description}`).join('\n')}
 
 ## Werkzeuge und Ratgeber
 - [Freischaltdauer und Link-Typ, belegt für ${checkCount()} Verzeichnisse (Stand ${CHECK_STAND})](${absoluteUrl('/freischaltung')})

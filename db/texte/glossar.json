@@ -51,7 +51,7 @@
  },
  "custom-gpt": {
   "bild": "Für den Reifenwechsel liegt im vorgepackten Koffer schon alles drin: Kreuzschlüssel, Wagenheber, Drehmomentschlüssel. Genau das ist ein Custom GPT, du musst nicht jedes Mal alles zusammensuchen und erklären. Das Werkzeug darin ist aber dasselbe wie im großen Schrank, ein neues Modell bekommst du damit nicht.",
-  "beispiel": "Du baust in ChatGPT einen Custom GPT mit deinem Styleguide und Beispieltexten, der nur Produktbeschreibungen schreibt. In Gemini legst du dafür einen Gem an, in Claude ein Project mit Anweisungen und Dateien.",
+  "beispiel": "Du hast in ChatGPT einen Custom GPT mit deinem Styleguide und Beispieltexten, der nur Produktbeschreibungen schreibt. Vor der Abschaltung am 11. Dezember 2026 ziehst du ihn zum Plugin um, oder du legst dasselbe in Gemini als Gem oder in Claude als Project mit Anweisungen und Dateien an.",
   "merksatz": "Einmal einrichten, dann jedes Mal mit denselben Vorgaben loslegen."
  },
  "deepfake": {

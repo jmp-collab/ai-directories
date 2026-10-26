@@ -2,10 +2,18 @@ import Link from 'next/link'
 import NETZ from '../../db/vernetzung.json'
 import KLAPP from '../../db/texte/klapp.json'
 import { KI_GLOSSAR, glossarSlug } from '../../lib/ki-glossar'
+import { NEWS } from '../../lib/news'
 
 // Interne Verlinkung pro Seite aus db/vernetzung.json (utils/vernetzung/build.mjs):
 // ausgehend „Passt dazu“, eingehend „Wer hierher verlinkt“, dazu aufklappbare Zusatzinfos.
 const DEF = new Map(KI_GLOSSAR.map(([term, text]) => [glossarSlug(term), { term, text }]))
+// Rückverweise aus den KI-News: Seiten, die eine Meldung als passend nennt, zeigen diese Meldung an.
+const IN_DEN_NEWS = new Map()
+for (const n of NEWS)
+    for (const [href] of n.bezug) {
+        if (!IN_DEN_NEWS.has(href)) IN_DEN_NEWS.set(href, [])
+        IN_DEN_NEWS.get(href).push(n)
+    }
 
 const TYPEN = {
     tools: ['🧰', 'Steckbrief'],
@@ -24,6 +32,7 @@ const TYPEN = {
     'neue-ki-modelle': ['🆕', 'KI-Modell'],
     liste: ['📋', 'Liste'],
     'ki-test': ['🧪', 'KI-Test'],
+    'ki-news': ['📰', 'KI-News'],
 }
 const typVon = (p) => {
     const t = p.split('/').filter(Boolean)
@@ -102,6 +111,13 @@ const WISSEN = {
     'neue-ki-modelle': [
         ['Woher stammen Datum und Preis?', 'Aus den Ankündigungen und Preisseiten der Anbieter. Gerüchte stehen getrennt und klar als Gerücht markiert auf der Übersicht der neuen KI-Modelle.'],
     ],
+    'ki-news': [
+        [
+            'Wie prüft AIGeddon die News?',
+            'Jede Meldung wird an den offiziellen Seiten der Anbieter, Behörden oder Projekte abgeglichen, Presseberichte zählen nur als Ergänzung. Angaben der Hersteller stehen als „laut Anbieter“ da, Kundenzitate sind keine unabhängigen Tests.',
+            ['/transparenz/', 'Transparenz'],
+        ],
+    ],
     rechner: [
         ['Wird gespeichert, was ich eintippe?', 'Nein. Der Rechner läuft komplett in deinem Browser, nichts wird an einen Server geschickt. Ergebnisse sind Schätzungen auf Basis deiner Eingaben.'],
     ],
@@ -154,8 +170,9 @@ const LinkListe = ({ pfade }) => (
 )
 
 export default function Vernetzt({ pfad }) {
-    const s = NETZ.seiten[pfad]
-    if (!s) return null
+    const s = NETZ.seiten[pfad] || { raus: [], rein: [], reinGesamt: 0 }
+    const news = IN_DEN_NEWS.get(pfad) || []
+    if (!s.raus.length && !news.length) return null
     const h = hash(pfad)
     const begriffe = (s.glossar || []).map((g) => [g, DEF.get(g)]).filter(([, d]) => d)
     // Seiteneigene Zusatzinfos (db/texte/klapp.json) zuerst, danach die allgemeinen zum Seitentyp.
@@ -165,13 +182,29 @@ export default function Vernetzt({ pfad }) {
         <section className="vernetzt" aria-labelledby={id}>
             <h2 id={id}>Weiter geht&apos;s 🧭</h2>
             <p className="vernetzt-intro">{INTRO[h % INTRO.length]}</p>
+            {news.length > 0 && (
+                <div className="vernetzt-news">
+                    <p>
+                        <span aria-hidden="true">📰</span> <strong>Gerade in den KI-News:</strong>
+                    </p>
+                    <ul>
+                        {news.map((n) => (
+                            <li key={n.slug}>
+                                <Link href={`/ki-news/${n.slug}/`}>{n.titel}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
             <div className="vernetzt-grid">
+                {s.raus.length > 0 && (
                 <details className="klapp" open>
                     <summary>
                         Passt dazu <span className="klapp-zahl">{s.raus.length}</span>
                     </summary>
                     <LinkListe pfade={s.raus} />
                 </details>
+                )}
                 {s.rein.length > 0 && (
                     <details className="klapp">
                         <summary>

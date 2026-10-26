@@ -54,7 +54,7 @@ Stand 26.10.2026. Je Sitzung genau eine Aufgabe (bei „je Runde“ nur die ange
 
 - **Wöchentlich, Montag:** Sperr-Check. Alle Verzeichnisse mit Status in `db/checks.json` erneut prüfen, ob die Einreichung wieder offen ist, und die 30 Verzeichnisse mit dem höchsten Jean-Score prüfen, ob sie inzwischen gesperrt oder tot sind. Änderungen mit Quelle eintragen.
 - **Monatlich, am 1.:** Preis-Check aller Tools in `db/tools.json` und aller Rechner-Preise in `lib/preise.js` (API-Modelle, Abos) gegen die offiziellen Preisseiten, `TOOLS_STAND` und `PREISE_STAND` aktualisieren. Achtung: Gemini 4 Argon verdoppelt am 1.12.2026 den Preis.
-- **Wöchentlich, Donnerstag:** KI-News: neue Modelle und Umbenennungen prüfen, `lib/modelle.js` und Gerüchte-Check aktualisieren (eigene geplante Sitzung).
+- **Wöchentlich, Donnerstag:** KI-News: Trendthemen recherchieren, 3 bis 6 neue Artikel in `lib/news.js` (/ki-news) mit offiziellen Quellen und 5 bis 8 Links zu bestehenden Unterseiten, dazu `lib/modelle.js` und Gerüchte-Check aktualisieren (eigene geplante Sitzung).
 - **Täglich (GitHub Actions, 04:17 UTC):** Neubau der Seite, damit Deal und Tool des Tages wechseln. Danach berechnet `utils/vernetzung/build.mjs` die interne Verlinkung neu; hat sie sich geändert, baut der Workflow ein zweites Mal.
 
 ## Erledigt
