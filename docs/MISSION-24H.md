@@ -94,6 +94,13 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **E2 Ausbau**: 40 neue Abschnitte, 48 neue FAQ, 94 Quellen; Artikel von 5.084 auf rund 13.000 Wörter (Faktor 2,6). Jede Artikelseite zeigt jetzt „geprüft am“ und einen Quellenblock (auch als citation im Article-Schema).
 - [x] **E3 Folgekorrekturen**: UTM im Launch-Kit-Generator und auf der Startseite, Beta List in der Hauptliste auf „Bezahlt“, ChatGPT Plus $20 und Google AI Plus 4,99 € in den Steckbriefen, Sora im Gerüchte-Check, AI-Act-Frist auf der HR-Zielgruppenseite.
 
+## Content-Ausbau V (Auftrag 26.10.: „Weiter ausbauen und Fakten checken“)
+
+- [x] **F1 Steckbriefe**: alle 64 Tools gegen offizielle Preisseiten geprüft, 37 Feldänderungen. SE Ranking jetzt ab $129/Monat bzw. $103,20 (Essential abgeschafft), Synthesia Starter $19 (erster Monat $9), GetResponse in Euro, Tally $29 bzw. $290/Jahr, Gamma ohne Preis (offizielle Seite nennt keinen), Suno, CapCut, Fliki mit Anbieterpreis; Semrush gehört seit 28.4.2026 zu Adobe. Abo-Rechner von 8 auf 18 Abos.
+- [x] **F2 Tool-Vergleiche**: 17 Vergleiche mit 85 geprüften Unterschieden, 51 FAQ (im FAQ-Schema), 70 Quellen; 4 Preiskorrekturen.
+- [x] **F3 Rubrik-Ratgeber**: 9 Korrekturen (Continue von Cursor übernommen und eingestellt, Udio ohne Downloads, Wordtune nur Englisch, Midjourney-Bedingungen 27.5.2026, Flux-Lizenzen), 30 neue FAQ, 65 Quellen.
+- [x] **F4 Zielgruppen und Glossar**: 17 Korrekturen (Windsurf heißt Devin Desktop, telli heißt AIS.chat, Altersgrenzen, Art. 50 AI Act, Token- und Top-p-Definition), 20 neue FAQ mit Quellen, 10 neue Glossarbegriffe (71 gesamt).
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.
