@@ -670,7 +670,7 @@ export const directories: Directory[] = [
         "domain_rating": 33,
         "monthly_visits": 1000,
         "submission_experience": "Good",
-        "pricing": "Paid"
+        "pricing": "Free"
     },
     {
         "name": "Apps and Websites",
