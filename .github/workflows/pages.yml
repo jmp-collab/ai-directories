@@ -22,6 +22,14 @@ concurrency:
 jobs:
     build:
         runs-on: ubuntu-latest
+        env:
+            STATIC_EXPORT: '1'
+            BASE_PATH: /ai-directories
+            NEXT_PUBLIC_SITE_URL: https://jmp-collab.github.io/ai-directories
+            # Optional als Repository-Variablen setzen (Settings > Secrets and variables > Actions > Variables)
+            NEXT_PUBLIC_GSC_VERIFICATION: ${{ vars.GSC_VERIFICATION }}
+            NEXT_PUBLIC_LEAD_EMAIL: ${{ vars.LEAD_EMAIL }}
+            NEXT_PUBLIC_LEAD_ALIAS: ${{ vars.LEAD_ALIAS }}
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
@@ -35,18 +43,17 @@ jobs:
             # die Detailseiten nutzen in dieser Fassung das allgemeine Vorschaubild.
             - run: rm "app/verzeichnis/[slug]/opengraph-image.js"
             - run: npx next build
-              env:
-                  STATIC_EXPORT: '1'
-                  BASE_PATH: /ai-directories
-                  NEXT_PUBLIC_SITE_URL: https://jmp-collab.github.io/ai-directories
-                  # Optional als Repository-Variablen setzen (Settings > Secrets and variables > Actions > Variables)
-                  NEXT_PUBLIC_GSC_VERIFICATION: ${{ vars.GSC_VERIFICATION }}
-                  NEXT_PUBLIC_LEAD_EMAIL: ${{ vars.LEAD_EMAIL }}
-                  NEXT_PUBLIC_LEAD_ALIAS: ${{ vars.LEAD_ALIAS }}
+            # Interne Verlinkung aus den fertigen Seiten neu berechnen; hat sich das Netz geändert
+            # (neue Seiten, neue Inhalte), noch einmal bauen, damit „Passt dazu“ aktuell ist.
+            - id: netz
+              run: |
+                  cp db/vernetzung.json "$RUNNER_TEMP/netz-alt.json"
+                  node utils/vernetzung/build.mjs out
+                  if cmp -s db/vernetzung.json "$RUNNER_TEMP/netz-alt.json"; then echo "neu=0" >> "$GITHUB_OUTPUT"; else echo "neu=1" >> "$GITHUB_OUTPUT"; fi
+            - if: steps.netz.outputs.neu == '1'
+              run: npx next build
             # Vorschaubilder als .png und doppelten basePath in og:image korrigieren
             - run: node utils/export/fix-og.js
-              env:
-                  BASE_PATH: /ai-directories
             - run: touch out/.nojekyll
             - uses: actions/upload-pages-artifact@v3
               with:

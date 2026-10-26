@@ -4,6 +4,7 @@ import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import PromptBaukasten from '../components/PromptBaukasten'
 import LeadMagnetBox from '../components/LeadMagnetBox'
 import { SITE_NAME } from '../../lib/site'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'Prompt-Generator: besseren KI-Prompt bauen mit Score',
@@ -12,7 +13,7 @@ export const metadata = {
     alternates: { canonical: '/prompt-baukasten' },
 }
 
-export default function PromptBaukastenPage() {
+function PromptBaukastenPage() {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'Prompts', path: '/prompts' },
@@ -46,6 +47,15 @@ export default function PromptBaukastenPage() {
             <p>
                 Lieber mit Vorlage starten? <Link href="/prompts">Zur Prompt-Bibliothek →</Link>
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <PromptBaukastenPage />
+            <Vernetzt pfad={seitenPfad('/prompt-baukasten')} />
         </>
     )
 }

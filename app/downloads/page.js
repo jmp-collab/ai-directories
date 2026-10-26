@@ -3,6 +3,7 @@ import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import LeadMagnetBox from '../components/LeadMagnetBox'
 import { SITE_NAME } from '../../lib/site'
 import { LEADMAGNETS } from '../../lib/leadmagnets'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'Gratis-Downloads: Prompt-Spickzettel & Prompt-Paket',
@@ -10,7 +11,7 @@ export const metadata = {
     alternates: { canonical: '/downloads' },
 }
 
-export default function DownloadsPage() {
+function DownloadsPage() {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'Downloads', path: '/downloads' },
@@ -27,6 +28,15 @@ export default function DownloadsPage() {
             {LEADMAGNETS.map((m) => (
                 <LeadMagnetBox key={m.id} id={m.id} />
             ))}
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <DownloadsPage />
+            <Vernetzt pfad={seitenPfad('/downloads')} />
         </>
     )
 }

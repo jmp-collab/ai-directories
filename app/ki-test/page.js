@@ -7,6 +7,7 @@ import LeadMagnetBox from '../components/LeadMagnetBox'
 import { Band, Trenner } from '../components/Deko'
 import { SITE_NAME } from '../../lib/site'
 import { TESTS, TEST_KATEGORIEN, getTestKategorien } from '../../lib/kitests'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: { absolute: 'KI-Test 2026: ChatGPT, Claude & Gemini selbst testen | AIGeddon' },
@@ -37,7 +38,7 @@ const FAQ = [
     },
 ]
 
-export default function KiTestPage() {
+function KiTestPage() {
     const kategorien = getTestKategorien()
     const crumbs = [
         { name: SITE_NAME, path: '/' },
@@ -155,6 +156,15 @@ export default function KiTestPage() {
                 <Faq items={FAQ} />
             </Band>
             <LeadMagnetBox id="prompt-spickzettel" />
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <KiTestPage />
+            <Vernetzt pfad={seitenPfad('/ki-test')} />
         </>
     )
 }

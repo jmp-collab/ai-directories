@@ -130,6 +130,12 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **J1 Agenten**: Backlog in docs/TASKS.md mit 17 neuen Aufgaben gefüllt (der tägliche Lauf hatte nichts mehr zu tun); neue Routine „AIGeddon: Wöchentliche KI-News“ (Do 07:37). Hinweis: Routinen laufen ohne Exa-Connector und mit gesperrten Anbieterseiten, siehe docs/FUER-JEAN.md.
 - [x] **J2 Details**: Lese-Fortschrittsbalken (Pink, Gelb, Mint), Tagesgruß als Aufkleber im Header, Konfetti nach dem Absenden des Lead-Formulars, Kaffee-Meter bei Ratgebern, Klebeband an Jeans Boxen, schief liegende Karten, die sich beim Drüberfahren aufrichten, Knopf-Effekt bei Buttons, Wellen-Unterstrich in Texten, Punktraster wie Notizpapier, eigene Textmarkierung und Fokus-Rahmen, Moped in der Fußzeile mit Liebeserklärung, Gruß beim Ausdrucken. Alles respektiert reduzierte Bewegung.
 
+## Vernetzung und Aufklapp-Infos (Auftrag 26.10.: „viele aufklappbare Elemente für Zusatzinformationen, auf jeder Seite relevante incoming und outgoing Innerlinks“)
+
+- `utils/vernetzung/build.mjs` liest alle 773 indexierbaren Seiten aus dem Export, vergleicht die Inhalte per TF-IDF und schreibt `db/vernetzung.json`: je Seite 6 ausgehende Vorschläge (noch nicht verlinkt, höchstens 2 pro Seitentyp), die 6 passendsten eingehenden Seiten und erkannte Glossarbegriffe. Schwach verlinkte Seiten werden nachgezogen: jede Seite hat mindestens 3 eingehende Links, 0 Waisen.
+- `app/components/Vernetzt.js` auf allen 56 Seitenvorlagen: Block „Weiter geht's 🧭“ mit Aufklappern „Passt dazu“, „Wer hierher verlinkt“ (mit Linkliebe-Herzen), „Begriffe kurz erklärt“ (Glossar-Definitionen) und Gut-zu-wissen-Fragen je Seitentyp (Jean-Score, Preisquellen, Datenquellen, Datenschutz der Rechner). Seiteneigene Zusatzinfos kommen aus `db/texte/klapp.json`.
+- 9.740 neue interne Links, 0 kaputt. Workflow baut ein zweites Mal, wenn sich das Netz ändert. Kontrastfehler bei Links in Überschriften (Dunkelmodus, /prompts) behoben.
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.

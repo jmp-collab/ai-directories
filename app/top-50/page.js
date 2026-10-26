@@ -8,6 +8,7 @@ import { SITE_NAME, absoluteUrl, withBase } from '../../lib/site'
 import { getTop50 } from '../../lib/top50'
 import { formatRating, formatVisits, pricingLabel, dealLabel } from '../../utils/i18n-de'
 import { submitRel } from '../../lib/monetization'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'Top 50 KI-Verzeichnisse 2026: die besten AI Directories',
@@ -16,7 +17,7 @@ export const metadata = {
     alternates: { canonical: '/top-50' },
 }
 
-export default function Top50Page() {
+function Top50Page() {
     const top = getTop50()
     const crumbs = [
         { name: SITE_NAME, path: '/' },
@@ -80,6 +81,15 @@ export default function Top50Page() {
             </ol>
             <ServiceHint text="50 Einträge sind ein Wochenende Arbeit." />
             <LeadBox title="Neue Top-Verzeichnisse zuerst ☢️" text="Wenn ein Verzeichnis in die Top 50 aufsteigt oder rausfliegt, erfährst du es zuerst." />
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <Top50Page />
+            <Vernetzt pfad={seitenPfad('/top-50')} />
         </>
     )
 }

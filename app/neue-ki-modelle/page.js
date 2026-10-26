@@ -4,6 +4,7 @@ import JsonLd from '../components/JsonLd'
 import Jean from '../components/Jean'
 import Faq, { faqSchema } from '../components/Faq'
 import { FAMILIEN, GERUECHTE, MODELLE_STAND, ANBIETER, modelleNachDatum } from '../../lib/modelle'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'Neue KI-Modelle 2026: GPT-6, Gemini 4, Claude 5.5',
@@ -12,7 +13,7 @@ export const metadata = {
     openGraph: { url: '/neue-ki-modelle' },
 }
 
-export default function NeueModelle() {
+function NeueModelle() {
     const crumbs = [
         { name: 'AIGeddon', path: '/' },
         { name: 'Neue KI-Modelle', path: '/neue-ki-modelle' },
@@ -109,6 +110,15 @@ export default function NeueModelle() {
                     </li>
                 </ul>
             </section>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <NeueModelle />
+            <Vernetzt pfad={seitenPfad('/neue-ki-modelle')} />
         </>
     )
 }

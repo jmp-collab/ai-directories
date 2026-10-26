@@ -4,6 +4,7 @@ import Jean from '../components/Jean'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import { SITE_NAME, absoluteUrl } from '../../lib/site'
 import { getTools, getCategories, TOOLS_STAND } from '../../lib/tools'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'KI-Tools mit Preisen und Gratis-Tarif im Vergleich',
@@ -14,7 +15,7 @@ export const metadata = {
 
 const anchor = (c) => c.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 
-export default function ToolsPage() {
+function ToolsPage() {
     const tools = getTools()
     const categories = getCategories()
     const crumbs = [
@@ -82,6 +83,15 @@ export default function ToolsPage() {
                 Preise ändern sich oft. Maßgeblich ist immer die Preisseite des Anbieters. Partnerlinks sind mit * markiert,{' '}
                 <Link href="/transparenz">mehr dazu</Link>.
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <ToolsPage />
+            <Vernetzt pfad={seitenPfad('/tools')} />
         </>
     )
 }

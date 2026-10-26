@@ -6,6 +6,7 @@ import PromptArchiv from '../../components/PromptArchiv'
 import LeadMagnetBox from '../../components/LeadMagnetBox'
 import { SITE_NAME } from '../../../lib/site'
 import archiv from '../../../db/prompt-archiv.json'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 const KATEGORIEN = {
     business: 'Business',
@@ -24,7 +25,7 @@ export const metadata = {
     alternates: { canonical: '/prompts/archiv' },
 }
 
-export default function ArchivPage() {
+function ArchivPage() {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'Prompts', path: '/prompts' },
@@ -57,6 +58,15 @@ export default function ArchivPage() {
             <p className="source">
                 Prompt-Texte: <a href={archiv.quelle} rel="noopener">f/prompts.chat</a> und Mitwirkende, gemeinfrei (CC0 1.0). Auswahl, deutsche Titel und Kategorien: AIGeddon. Eigene Vorlagen mit Ausfüllfeldern: <Link href="/prompts">Prompt-Bibliothek</Link>.
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <ArchivPage />
+            <Vernetzt pfad={seitenPfad('/prompts/archiv')} />
         </>
     )
 }

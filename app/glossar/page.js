@@ -7,6 +7,7 @@ import { KI_GLOSSAR, glossarSlug } from '../../lib/ki-glossar'
 import Toc from '../components/Toc'
 import { Band } from '../components/Deko'
 import { absoluteUrl } from '../../lib/site'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'KI-Glossar: KI- und SEO-Begriffe einfach erklärt',
@@ -15,7 +16,7 @@ export const metadata = {
     openGraph: { url: '/glossar' },
 }
 
-export default function GlossarPage() {
+function GlossarPage() {
     const crumbs = [
         { name: 'AIGeddon', path: '/' },
         { name: 'Glossar', path: '/glossar' },
@@ -76,6 +77,15 @@ export default function GlossarPage() {
             <p>
                 <Link href="/ratgeber">← Zu den Ratgebern</Link>
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <GlossarPage />
+            <Vernetzt pfad={seitenPfad('/glossar')} />
         </>
     )
 }

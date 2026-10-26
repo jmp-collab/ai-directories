@@ -26,6 +26,7 @@ import { getDirectories, getSiteStats } from '../lib/data'
 import { SITE_NAME, SITE_URL, absoluteUrl, withBase } from '../lib/site'
 import getFaq from '../utils/faq-de'
 import { formatNumber } from '../utils/i18n-de'
+import Vernetzt, { seitenPfad } from './components/Vernetzt'
 
 export function generateMetadata() {
     const stats = getSiteStats()
@@ -37,7 +38,7 @@ export function generateMetadata() {
     }
 }
 
-export default function Home() {
+function Home() {
     const directories = getDirectories()
     const stats = getSiteStats()
     // Top 10 nach belastbarem DR: fragwürdige Werte zählen mit dem frisch gemessenen Authority Score.
@@ -425,6 +426,15 @@ export default function Home() {
             <Band farbe="pink" id="faq" titel="Häufige Fragen zu KI-Verzeichnissen 🙋">
                 <Faq items={faq} />
             </Band>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <Home />
+            <Vernetzt pfad={seitenPfad('/')} />
         </>
     )
 }

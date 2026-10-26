@@ -8,6 +8,7 @@ import { Band } from '../../../components/Deko'
 import { SITE_NAME } from '../../../../lib/site'
 import { KB_RUBRIKEN, KB_STAND } from '../../../../lib/kb'
 import { ALTERNATIVEN, getAlternativenHub, getAlternativenHubs, alternativenFaq } from '../../../../lib/alternativen'
+import Vernetzt, { seitenPfad } from '../../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -26,7 +27,7 @@ export function generateMetadata({ params }) {
     }
 }
 
-export default function AlternativenPage({ params }) {
+function AlternativenPage({ params }) {
     const h = getAlternativenHub(params.slug)
     if (!h) notFound()
     const n = h.tool.name
@@ -120,6 +121,15 @@ export default function AlternativenPage({ params }) {
             <p className="source">
                 Stand {KB_STAND}. Auswahl aus der KI-Tool-Datenbank, Empfehlungen aus drei offenen GitHub-Listen. <Link href="/ki-tools/quellen">Quellen und Lizenzen</Link>
             </p>
+        </>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <AlternativenPage params={params} />
+            <Vernetzt pfad={seitenPfad('/ki-tools/alternativen/[slug]', params)} />
         </>
     )
 }

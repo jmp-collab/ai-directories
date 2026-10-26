@@ -44,6 +44,8 @@ Stand 26.10.2026. Je Sitzung genau eine Aufgabe (bei „je Runde“ nur die ange
 - [ ] **Neu entdeckte Verzeichnisse prüfen** je Runde 15 aus `db/neu-entdeckt.json`: Einreichung noch offen? Preis und Badge-Pflicht laut eigener Seite aktualisieren, tote Einträge entfernen.
 - [ ] **Prüfdaten erweitern** je Runde 15 Verzeichnisse ohne Eintrag in `db/checks.json` (Freischaltdauer, Link-Typ, Status mit Zitat und Quelle).
 - [ ] **Ratgeber-Faktencheck** je Runde 2 Artikel aus `lib/ratgeber.js`, deren `geprueft` älter als 30 Tage ist: Quellen erneut öffnen, Abweichungen korrigieren, `geprueft` aktualisieren.
+- [ ] **Aufklapp-Infos** je Runde 20 Seiten eines Typs (zuerst Steckbriefe `/tools/…`, dann Ratgeber, Vergleiche, Verzeichnisse mit dem höchsten Jean-Score): in `db/texte/klapp.json` unter dem Pfad mit Schrägstrich am Ende 1 bis 2 Einträge `[frage, antwort]` oder `[frage, antwort, [link, linktext]]`. Nur Fakten aus den Daten im Repository oder mit offizieller Quelle, keine Wiederholung dessen, was schon auf der Seite steht. Ton nach BRAND-VOICE.
+- [ ] **Verlinkung prüfen** je Runde: `node utils/vernetzung/build.mjs out` nach einem Build ausführen und Seiten mit weniger als 5 eingehenden Links (`reinGesamt` in `db/vernetzung.json`) im Fließtext von 2 thematisch passenden Seiten verlinken.
 - [ ] **Top 50 als echter Lead-Magnet**: Sobald der Newsletter läuft, CSV-Download an das Abo koppeln. *wartet auf Newsletter*
 
 ## Wiederkehrend (eigene geplante Sitzungen, nicht hier abhaken)
@@ -53,7 +55,7 @@ Stand 26.10.2026. Je Sitzung genau eine Aufgabe (bei „je Runde“ nur die ange
 - **Wöchentlich, Montag:** Sperr-Check. Alle Verzeichnisse mit Status in `db/checks.json` erneut prüfen, ob die Einreichung wieder offen ist, und die 30 Verzeichnisse mit dem höchsten Jean-Score prüfen, ob sie inzwischen gesperrt oder tot sind. Änderungen mit Quelle eintragen.
 - **Monatlich, am 1.:** Preis-Check aller Tools in `db/tools.json` und aller Rechner-Preise in `lib/preise.js` (API-Modelle, Abos) gegen die offiziellen Preisseiten, `TOOLS_STAND` und `PREISE_STAND` aktualisieren. Achtung: Gemini 4 Argon verdoppelt am 1.12.2026 den Preis.
 - **Wöchentlich, Donnerstag:** KI-News: neue Modelle und Umbenennungen prüfen, `lib/modelle.js` und Gerüchte-Check aktualisieren (eigene geplante Sitzung).
-- **Täglich (GitHub Actions, 04:17 UTC):** Neubau der Seite, damit Deal und Tool des Tages wechseln.
+- **Täglich (GitHub Actions, 04:17 UTC):** Neubau der Seite, damit Deal und Tool des Tages wechseln. Danach berechnet `utils/vernetzung/build.mjs` die interne Verlinkung neu; hat sie sich geändert, baut der Workflow ein zweites Mal.
 
 ## Erledigt
 

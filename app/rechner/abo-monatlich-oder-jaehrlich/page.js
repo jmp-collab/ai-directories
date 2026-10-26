@@ -8,6 +8,7 @@ import AboRechner from '../../components/AboRechner'
 import { SITE_NAME } from '../../../lib/site'
 import { RECHNER } from '../../../lib/rechner'
 import { ABO_PREISE, breakEvenMonate } from '../../../lib/abo-preise'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 const R = RECHNER.find((r) => r.slug === 'abo-monatlich-oder-jaehrlich')
 
@@ -32,7 +33,7 @@ const FAQ = [
     },
 ]
 
-export default function Page() {
+function Page() {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'Rechner', path: '/rechner' },
@@ -115,6 +116,15 @@ export default function Page() {
                 </ul>
             </section>
             <LeadMagnetBox id="prompt-spickzettel" />
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <Page />
+            <Vernetzt pfad={seitenPfad('/rechner/abo-monatlich-oder-jaehrlich')} />
         </>
     )
 }

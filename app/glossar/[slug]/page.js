@@ -8,6 +8,7 @@ import { SITE_NAME, absoluteUrl } from '../../../lib/site'
 import { KI_GLOSSAR, glossarSlug } from '../../../lib/ki-glossar'
 import { GLOSSAR_DETAILS } from '../../../lib/ki-glossar-details'
 import TEXTE from '../../../db/texte/glossar.json'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -48,7 +49,7 @@ export function generateMetadata({ params }) {
     }
 }
 
-export default function BegriffPage({ params }) {
+function BegriffPage({ params }) {
     const b = getBegriff(params.slug)
     if (!b) notFound()
     const i = BEGRIFFE.indexOf(b)
@@ -147,6 +148,15 @@ export default function BegriffPage({ params }) {
                 <Link href="/glossar">Alle Begriffe</Link>
                 {nach ? <Link href={`/glossar/${nach.slug}`}>{nach.term} →</Link> : <span />}
             </nav>
+        </>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <BegriffPage params={params} />
+            <Vernetzt pfad={seitenPfad('/glossar/[slug]', params)} />
         </>
     )
 }

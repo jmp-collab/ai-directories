@@ -9,6 +9,7 @@ import { Band } from '../../components/Deko'
 import { SITE_NAME } from '../../../lib/site'
 import { getKbTools, KB_RUBRIKEN, KB_STAND } from '../../../lib/kb'
 import { getTools, toolHref, toolRel, TOOLS_STAND } from '../../../lib/tools'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 const FAQ = [
     {
@@ -31,7 +32,7 @@ export const metadata = {
     alternates: { canonical: '/ki-tools/kostenlos' },
 }
 
-export default function KostenlosPage() {
+function KostenlosPage() {
     const gratisTarif = getTools().filter((t) => t.free_plan === true)
     const os = getKbTools().filter((t) => t.open_source)
     const rubriken = Object.entries(KB_RUBRIKEN)
@@ -85,6 +86,15 @@ export default function KostenlosPage() {
             <p className="source">
                 Open-Source-Einträge aus der <Link href="/ki-tools">KI-Tool-Datenbank</Link>, Stand {KB_STAND}.
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <KostenlosPage />
+            <Vernetzt pfad={seitenPfad('/ki-tools/kostenlos')} />
         </>
     )
 }

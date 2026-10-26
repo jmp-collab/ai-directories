@@ -6,6 +6,7 @@ import KbExplorer from '../components/KbExplorer'
 import LeadMagnetBox from '../components/LeadMagnetBox'
 import { SITE_NAME } from '../../lib/site'
 import { getKbTools, getKbRubriken, kbStats, kbForClient, KB_SOURCES, KB_STAND } from '../../lib/kb'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 const stats = kbStats()
 
@@ -15,7 +16,7 @@ export const metadata = {
     alternates: { canonical: '/ki-tools' },
 }
 
-export default function KiToolsPage() {
+function KiToolsPage() {
     const rubriken = getKbRubriken()
     const crumbs = [
         { name: SITE_NAME, path: '/' },
@@ -111,6 +112,15 @@ export default function KiToolsPage() {
                 ))}{' '}
                 · Stand {KB_STAND} · <Link href="/ki-tools/quellen">Lizenzen und Methode</Link>. Beschreibungen in Englisch aus der jeweiligen Liste; Konsens und Rubriken von AIGeddon.
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <KiToolsPage />
+            <Vernetzt pfad={seitenPfad('/ki-tools')} />
         </>
     )
 }

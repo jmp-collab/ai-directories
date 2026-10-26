@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import JsonLd from '../components/JsonLd'
 import { SITE_NAME } from '../../lib/site'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'Transparenz: So finanziert sich AIGeddon',
@@ -9,7 +10,7 @@ export const metadata = {
     alternates: { canonical: '/transparenz' },
 }
 
-export default function TransparencyPage() {
+function TransparencyPage() {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'Transparenz', path: '/transparenz' },
@@ -45,6 +46,15 @@ export default function TransparencyPage() {
                     den belegten Angaben der Verzeichnisse. Ein Partnerlink ändert daran nichts.
                 </p>
             </section>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <TransparencyPage />
+            <Vernetzt pfad={seitenPfad('/transparenz')} />
         </>
     )
 }

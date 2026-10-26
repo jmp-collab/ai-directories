@@ -8,6 +8,7 @@ import LeadMagnetBox from '../components/LeadMagnetBox'
 import { Band, Trenner } from '../components/Deko'
 import { SITE_NAME } from '../../lib/site'
 import { getKbRubriken, kbStats, KB_STAND } from '../../lib/kb'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 const FAQ = [
     {
@@ -30,7 +31,7 @@ export const metadata = {
     alternates: { canonical: '/beste-ki-tools' },
 }
 
-export default function BesteKiTools() {
+function BesteKiTools() {
     const rubriken = getKbRubriken().map((r) => ({ ...r, top: [...r.tools].sort((a, b) => b.konsens - a.konsens || Number(b.deutsch) - Number(a.deutsch)).slice(0, 4) }))
     const crumbs = [
         { name: SITE_NAME, path: '/' },
@@ -77,6 +78,15 @@ export default function BesteKiTools() {
             <Band farbe="pink" id="faq" titel="Fragen zu den besten KI-Tools 🙋">
                 <Faq items={FAQ} />
             </Band>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <BesteKiTools />
+            <Vernetzt pfad={seitenPfad('/beste-ki-tools')} />
         </>
     )
 }

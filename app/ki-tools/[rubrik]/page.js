@@ -15,6 +15,7 @@ import { getKbRubrik, getKbRubriken, kbForClient, KB_STAND } from '../../../lib/
 import { getPrompt } from '../../../lib/prompts'
 import { getTutorial } from '../../../lib/tutorials'
 import { getTools, toolHref, toolRel } from '../../../lib/tools'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -33,7 +34,7 @@ export function generateMetadata({ params }) {
     }
 }
 
-export default function RubrikPage({ params }) {
+function RubrikPage({ params }) {
     const r = getKbRubrik(params.rubrik)
     if (!r) notFound()
     const favoriten = r.tools.filter((t) => t.konsens > 1).slice(0, 6)
@@ -189,4 +190,13 @@ const KB_TOOLCAT = {
     video: ['Video & Avatare'],
     audio: ['Audio & Voice', 'Meeting & Transkription'],
     marketing: ['Funnel & Marketing', 'E-Mail & Newsletter'],
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <RubrikPage params={params} />
+            <Vernetzt pfad={seitenPfad('/ki-tools/[rubrik]', params)} />
+        </>
+    )
 }

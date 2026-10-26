@@ -6,6 +6,7 @@ import Faq, { faqSchema } from '../../components/Faq'
 import { MODELLE, FAMILIEN, MODELLE_STAND, getModell, getFamilie, modelleDerFamilie, modelleNachDatum } from '../../../lib/modelle'
 import { getTool } from '../../../lib/tools'
 import { absoluteUrl } from '../../../lib/site'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -81,7 +82,7 @@ function ModellBlock({ m, titel }) {
     )
 }
 
-export default function ModellPage({ params }) {
+function ModellPage({ params }) {
     const fam = getFamilie(params.slug)
     const m = fam ? null : getModell(params.slug)
     if (!fam && !m) notFound()
@@ -184,5 +185,14 @@ export default function ModellPage({ params }) {
                 </ul>
             </section>
         </article>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <ModellPage params={params} />
+            <Vernetzt pfad={seitenPfad('/neue-ki-modelle/[slug]', params)} />
+        </>
     )
 }

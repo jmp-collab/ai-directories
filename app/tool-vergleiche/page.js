@@ -4,6 +4,7 @@ import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import JeanIcon from '../components/JeanIcon'
 import { SITE_NAME } from '../../lib/site'
 import { getComparisons } from '../../lib/comparisons'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'KI-Tool-Vergleiche: welches Tool für welchen Zweck?',
@@ -12,7 +13,7 @@ export const metadata = {
     alternates: { canonical: '/tool-vergleiche' },
 }
 
-export default function ComparisonsPage() {
+function ComparisonsPage() {
     const comparisons = getComparisons()
     const crumbs = [
         { name: SITE_NAME, path: '/' },
@@ -40,6 +41,15 @@ export default function ComparisonsPage() {
             <p className="source">
                 <JeanIcon badge="werkzeug" size={28} /> Alle Tools einzeln: <Link href="/tools">KI-Tool-Verzeichnis</Link>
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <ComparisonsPage />
+            <Vernetzt pfad={seitenPfad('/tool-vergleiche')} />
         </>
     )
 }

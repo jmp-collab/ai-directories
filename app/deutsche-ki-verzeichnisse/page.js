@@ -6,6 +6,7 @@ import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import { PriceBadge } from '../components/Badges'
 import { DACH, DACH_STAND } from '../../lib/dach'
 import { formatNumber } from '../../utils/i18n-de'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: `Deutsche KI-Verzeichnisse: ${DACH.length} Portale für den DACH-Raum`,
@@ -29,7 +30,7 @@ const FAQ = [
     },
 ]
 
-export default function DachPage() {
+function DachPage() {
     const crumbs = [
         { name: 'AIGeddon', path: '/' },
         { name: 'Deutsche KI-Verzeichnisse', path: '/deutsche-ki-verzeichnisse' },
@@ -154,6 +155,15 @@ export default function DachPage() {
             <p>
                 <Link href="/">← Zu allen internationalen KI-Verzeichnissen</Link>
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <DachPage />
+            <Vernetzt pfad={seitenPfad('/deutsche-ki-verzeichnisse')} />
         </>
     )
 }

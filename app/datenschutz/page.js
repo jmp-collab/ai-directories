@@ -3,6 +3,7 @@ import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import JsonLd from '../components/JsonLd'
 import { SITE_NAME } from '../../lib/site'
 import { LEAD_EMAIL } from '../../lib/monetization'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'Datenschutzerklärung',
@@ -62,7 +63,7 @@ const ABSCHNITTE = [
     ],
 ]
 
-export default function DatenschutzPage() {
+function DatenschutzPage() {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'Datenschutz', path: '/datenschutz' },
@@ -89,6 +90,15 @@ export default function DatenschutzPage() {
             <p className="box box-info">
                 Fragen zum Datenschutz? Nutze das Formular unten oder schreib an <span className="leadform-adresse">{LEAD_EMAIL}</span>. Zur <Link href="/transparenz">Transparenz-Seite</Link>.
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <DatenschutzPage />
+            <Vernetzt pfad={seitenPfad('/datenschutz')} />
         </>
     )
 }

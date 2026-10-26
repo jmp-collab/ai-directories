@@ -8,6 +8,7 @@ import TEXTE from '../../../../db/texte/kb.json'
 import { getPrompt } from '../../../../lib/prompts'
 import { getTutorial } from '../../../../lib/tutorials'
 import { hatAlternativenHub } from '../../../../lib/alternativen'
+import Vernetzt, { seitenPfad } from '../../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -30,7 +31,7 @@ export function generateMetadata({ params }) {
 
 const QUELLEN = Object.fromEntries(KB_SOURCES.map((q) => [q.id, q]))
 
-export default function KbToolPage({ params }) {
+function KbToolPage({ params }) {
     const t = getKbTool(params.slug)
     if (!t) notFound()
     const r = KB_RUBRIKEN[t.rubrik]
@@ -178,6 +179,15 @@ export default function KbToolPage({ params }) {
                 Stand {KB_STAND} · <Link href="/ki-tools/quellen">Quellen und Lizenzen</Link> ·{' '}
                 <Link href="/tool-finder">Tool-Finder</Link> · <Link href="/ki-tools">← KI-Tool-Datenbank</Link>
             </p>
+        </>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <KbToolPage params={params} />
+            <Vernetzt pfad={seitenPfad('/ki-tools/tool/[slug]', params)} />
         </>
     )
 }

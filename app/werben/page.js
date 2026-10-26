@@ -8,6 +8,7 @@ import { kbStats } from '../../lib/kb'
 import { getTools } from '../../lib/tools'
 import Faq, { faqSchema } from '../components/Faq'
 import { Band } from '../components/Deko'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'Werben auf AIGeddon: Featured-Platz & Launch-Service',
@@ -68,7 +69,7 @@ const FAQ = [
     { q: 'Gibt es eine Garantie für Backlinks oder Rankings?', a: 'Nein. Ob ein Verzeichnis einen Eintrag freischaltet und ob der Link dofollow ist, entscheidet der Betreiber. Wir dokumentieren den Stand und sagen ehrlich, was realistisch ist.' },
 ]
 
-export default function AdvertisePage() {
+function AdvertisePage() {
     const stats = getSiteStats()
     const crumbs = [
         { name: SITE_NAME, path: '/' },
@@ -162,6 +163,15 @@ export default function AdvertisePage() {
                 Wie wir Geld verdienen und was das für Bewertungen bedeutet, steht unter{' '}
                 <Link href="/transparenz">Transparenz</Link>.
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <AdvertisePage />
+            <Vernetzt pfad={seitenPfad('/werben')} />
         </>
     )
 }

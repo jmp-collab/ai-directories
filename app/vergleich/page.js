@@ -3,6 +3,7 @@ import Jean from '../components/Jean'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import JsonLd from '../components/JsonLd'
 import { getDirectories } from '../../lib/data'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'KI-Verzeichnisse vergleichen: bis zu 3 nebeneinander',
@@ -12,7 +13,7 @@ export const metadata = {
     openGraph: { url: '/vergleich' },
 }
 
-export default function VergleichPage() {
+function VergleichPage() {
     const crumbs = [
         { name: 'AIGeddon', path: '/' },
         { name: 'Vergleich', path: '/vergleich' },
@@ -39,6 +40,15 @@ export default function VergleichPage() {
                 <Jean>Wie beim Moped-Kauf: erst vergleichen, dann eintragen. Oder umgekehrt, wenn du gern bereust.</Jean>
             </section>
             <Vergleich options={options} />
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <VergleichPage />
+            <Vernetzt pfad={seitenPfad('/vergleich')} />
         </>
     )
 }

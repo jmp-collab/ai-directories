@@ -8,6 +8,7 @@ import Faq from '../../components/Faq'
 import { SITE_NAME } from '../../../lib/site'
 import { getComparisons, getComparison } from '../../../lib/comparisons'
 import { getTool, toolHref, toolRel, TOOLS_STAND } from '../../../lib/tools'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -38,7 +39,7 @@ const ROWS = [
     ['Oberfläche auf Deutsch', (t) => yesNo(t.german_ui)],
 ]
 
-export default function ComparisonPage({ params }) {
+function ComparisonPage({ params }) {
     const c = getComparison(params.slug)
     if (!c) notFound()
     const crumbs = [
@@ -165,6 +166,15 @@ export default function ComparisonPage({ params }) {
             <p>
                 <Link href="/tool-vergleiche">← Alle Tool-Vergleiche</Link> · <Link href="/tools">KI-Tool-Verzeichnis</Link>
             </p>
+        </>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <ComparisonPage params={params} />
+            <Vernetzt pfad={seitenPfad('/tool-vergleiche/[slug]', params)} />
         </>
     )
 }

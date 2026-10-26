@@ -5,6 +5,7 @@ import Faq, { faqSchema } from '../components/Faq'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import { getDirectory } from '../../lib/data'
 import { allChecks, CHECK_STAND } from '../../lib/checks'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export function generateMetadata() {
     const n = allChecks().length
@@ -31,7 +32,7 @@ const FAQ = [
     },
 ]
 
-export default function FreischaltungPage() {
+function FreischaltungPage() {
     const crumbs = [
         { name: 'AIGeddon', path: '/' },
         { name: 'Freischaltdauer', path: '/freischaltung' },
@@ -103,6 +104,15 @@ export default function FreischaltungPage() {
             <p>
                 <Link href="/">← Zu allen KI-Verzeichnissen</Link>
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <FreischaltungPage />
+            <Vernetzt pfad={seitenPfad('/freischaltung')} />
         </>
     )
 }

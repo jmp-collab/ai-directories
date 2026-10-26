@@ -6,6 +6,7 @@ import KiTestSuite from '../../components/KiTestSuite'
 import { Band } from '../../components/Deko'
 import { SITE_NAME } from '../../../lib/site'
 import { TEST_KATEGORIEN, getTestKategorie, getTestKategorien } from '../../../lib/kitests'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -23,7 +24,7 @@ export function generateMetadata({ params }) {
     }
 }
 
-export default function KategoriePage({ params }) {
+function KategoriePage({ params }) {
     const k = getTestKategorie(params.kategorie)
     if (!k) notFound()
     const andere = getTestKategorien().filter((x) => x.key !== k.key)
@@ -64,6 +65,15 @@ export default function KategoriePage({ params }) {
                     <Link href="/ki-test">← Zum kompletten KI-Test</Link>
                 </p>
             </Band>
+        </>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <KategoriePage params={params} />
+            <Vernetzt pfad={seitenPfad('/ki-test/[kategorie]', params)} />
         </>
     )
 }

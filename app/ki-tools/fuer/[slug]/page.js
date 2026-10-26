@@ -13,6 +13,7 @@ import { getPrompt } from '../../../../lib/prompts'
 import { getTutorial } from '../../../../lib/tutorials'
 import { RECHNER } from '../../../../lib/rechner'
 import { ZIELGRUPPEN, getZielgruppe } from '../../../../lib/zielgruppen'
+import Vernetzt, { seitenPfad } from '../../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -32,7 +33,7 @@ export function generateMetadata({ params }) {
 
 const FARBEN = ['#fde68a', '#a7f3d0', '#bfdbfe', '#fbcfe8', '#ddd6fe']
 
-export default function ZielgruppePage({ params }) {
+function ZielgruppePage({ params }) {
     const z = getZielgruppe(params.slug)
     if (!z) notFound()
     const tutorial = getTutorial(z.tutorial)
@@ -159,6 +160,15 @@ export default function ZielgruppePage({ params }) {
                     ))}
                 </ul>
             </section>
+        </>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <ZielgruppePage params={params} />
+            <Vernetzt pfad={seitenPfad('/ki-tools/fuer/[slug]', params)} />
         </>
     )
 }

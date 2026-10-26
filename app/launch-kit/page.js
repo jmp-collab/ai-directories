@@ -6,6 +6,7 @@ import JsonLd from '../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import { getDirectories } from '../../lib/data'
 import { absoluteUrl } from '../../lib/site'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'Launch-Kit: Texte für KI-Verzeichnisse erstellen',
@@ -15,7 +16,7 @@ export const metadata = {
     openGraph: { url: '/launch-kit' },
 }
 
-export default function LaunchKitPage() {
+function LaunchKitPage() {
     const crumbs = [
         { name: 'AIGeddon', path: '/' },
         { name: 'Launch-Kit', path: '/launch-kit' },
@@ -54,6 +55,15 @@ export default function LaunchKitPage() {
             <LaunchKit directories={directories} />
             <ServiceHint text="Texte fertig, aber keine Zeit zum Eintragen?" />
             <ToolPartners />
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <LaunchKitPage />
+            <Vernetzt pfad={seitenPfad('/launch-kit')} />
         </>
     )
 }
