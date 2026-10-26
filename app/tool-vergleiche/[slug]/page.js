@@ -19,7 +19,7 @@ export function generateMetadata({ params }) {
     const c = getComparison(params.slug)
     if (!c) return {}
     return {
-        title: c.title.length > 46 ? c.title : c.title.length > 38 ? `${c.title} im Vergleich` : `${c.title}: Vergleich & Empfehlung`,
+        title: c.title.length > 46 ? c.title : c.title.length > 30 ? `${c.title} im Vergleich` : `${c.title}: Vergleich & Empfehlung`,
         description: `${c.intro} Preise, Gratis-Tarife und welches Tool für welchen Zweck passt (Stand ${TOOLS_STAND}).`,
         alternates: { canonical: `/tool-vergleiche/${c.slug}` },
     }
