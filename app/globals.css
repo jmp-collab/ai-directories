@@ -4807,3 +4807,29 @@ ul.kb-hero-chips {
 .faq p {
     overflow-wrap: anywhere;
 }
+
+/* Tool-Vergleiche: Unterschiede */
+.unterschiede {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+    margin: 0;
+}
+
+.unterschiede > div {
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 12px 16px;
+    min-width: 0;
+}
+
+.unterschiede dt {
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.unterschiede dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}

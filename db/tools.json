@@ -9,9 +9,9 @@
   "free_trial": "7 Tage",
   "price_from": "$139/Monat (SEO-Plan, monatlich) bzw. $117,33/Monat (jährlich)",
   "german_ui": true,
-  "summary_de": "All-in-one-Plattform für SEO und KI-Sichtbarkeit mit Keyword-Recherche, Wettbewerbsanalyse, Position Tracking und Site Audit.",
+  "summary_de": "All-in-one-Plattform für SEO und KI-Sichtbarkeit mit Keyword-Recherche, Wettbewerbsanalyse, Position Tracking und Site Audit. Seit 28. April 2026 gehört Semrush zu Adobe.",
   "best_for_de": "Agenturen und Marketing-Teams mit umfassendem SEO-Bedarf",
-  "source": "https://www.semrush.com/kb/1011-subscriptions"
+  "source": "https://www.semrush.com/kb/1624-semrush-one-vs-seo-toolkit"
  },
  {
   "name": "SE Ranking",
@@ -21,7 +21,7 @@
   "pricing_url": "https://seranking.com/subscription.html",
   "free_plan": false,
   "free_trial": "14 Tage",
-  "price_from": "$52/Monat (Essential, jährlich)",
+  "price_from": "$129/Monat (Core, monatlich) bzw. $103,20/Monat (jährlich)",
   "german_ui": true,
   "summary_de": "SEO-Plattform mit Rank Tracker, Website-Audit, Backlink-Analyse, Keyword-Recherche und KI-Sichtbarkeits-Tracking.",
   "best_for_de": "Freelancer, KMU und Agenturen mit begrenztem Budget",
@@ -77,11 +77,11 @@
   "pricing_url": "https://kit.com/pricing",
   "free_plan": true,
   "free_trial": "14 Tage",
-  "price_from": "$33/Monat (Creator, jährlich, 1.000 Abonnenten)",
+  "price_from": "$33/Monat (Creator, jährlich, 1.000 Abonnenten); $39/Monat monatlich",
   "german_ui": null,
   "summary_de": "E-Mail-Marketing für Creator mit Landingpages, Formularen, Visual Automations und Verkauf digitaler Produkte.",
   "best_for_de": "Creator, Blogger und Online-Unternehmer",
-  "source": "https://kit.com/pricing"
+  "source": "https://help.kit.com/en/articles/4494683-creator-vs-pro-choose-the-right-plan"
  },
  {
   "name": "GetResponse",
@@ -91,11 +91,11 @@
   "pricing_url": "https://www.getresponse.com/pricing",
   "free_plan": true,
   "free_trial": "14 Tage (Premium-Funktionen)",
-  "price_from": "$15,58/Monat (Starter, jährlich, 1.000 Kontakte); $19/Monat monatlich",
+  "price_from": "13,12 €/Monat (Starter, jährlich, 1.000 Kontakte); 16 €/Monat monatlich",
   "german_ui": true,
   "summary_de": "E-Mail-Marketing-Plattform mit KI-Tools, Automatisierung, Landingpages, Webinaren und Onlinekursen.",
   "best_for_de": "KMU und Onlinehändler mit Automatisierungsbedarf",
-  "source": "https://www.getresponse.com/pricing/trial"
+  "source": "https://www.getresponse.com/pricing"
  },
  {
   "name": "Brevo",
@@ -134,10 +134,10 @@
   "free_plan": true,
   "free_trial": null,
   "price_from": "$15/Monat (Basic, jährlich); $25/Monat monatlich",
-  "german_ui": null,
+  "german_ui": true,
   "summary_de": "Visuelle Webentwicklungsplattform mit CMS, Hosting, Lokalisierung und KI-Funktionen für professionelle Websites.",
   "best_for_de": "Webdesigner, Agenturen und Marketing-Teams",
-  "source": "https://webflow.com/pricing"
+  "source": "https://help.webflow.com/hc/en-us/articles/51059955082387-Updated-pricing-and-simplified-plans-for-May-2026"
  },
  {
   "name": "Hostinger Website Builder",
@@ -148,7 +148,7 @@
   "free_plan": false,
   "free_trial": "14 Tage",
   "price_from": "$2,49/Monat bei 48 Monaten Vorauszahlung (Verlängerung $10,99/Monat)",
-  "german_ui": null,
+  "german_ui": true,
   "summary_de": "KI-Website-Builder mit Drag-and-Drop- und Agentic-Modus, Hosting, Domain und E-Mail-Postfächern.",
   "best_for_de": "Einsteiger und Kleinunternehmen mit kleinem Budget",
   "source": "https://www.hostinger.com/website-builder"
@@ -190,7 +190,7 @@
   "free_plan": true,
   "free_trial": "14 Tage",
   "price_from": "$19,99/Monat (Professional, jährlich)",
-  "german_ui": null,
+  "german_ui": true,
   "summary_de": "Automatisierungsplattform, die Tausende Apps über Zaps verbindet, inklusive Tables, Forms und KI-Funktionen.",
   "best_for_de": "Nicht-Techniker, die Apps schnell verbinden wollen",
   "source": "https://zapier.com/pricing"
@@ -204,8 +204,8 @@
   "free_plan": true,
   "free_trial": null,
   "price_from": "$6/Monat (Starter, monatlich) bzw. $5/Monat (jährlich)",
-  "german_ui": null,
-  "summary_de": "KI-Audioplattform für Text-to-Speech, Voice Cloning, Dubbing, Soundeffekte und Musik.",
+  "german_ui": true,
+  "summary_de": "KI-Audioplattform für Text-to-Speech, Voice Cloning, Dubbing, Soundeffekte, Musik sowie Bild und Video, dazu Voice Agents (ElevenAgents).",
   "best_for_de": "Creator und Unternehmen mit Voiceover-Bedarf",
   "source": "https://elevenlabs.io/pricing"
  },
@@ -217,9 +217,9 @@
   "pricing_url": "https://www.synthesia.io/pricing",
   "free_plan": true,
   "free_trial": null,
-  "price_from": "$29/Monat (Starter, monatlich)",
-  "german_ui": null,
-  "summary_de": "KI-Videoplattform zum Erstellen von Videos mit KI-Avataren, Dubbing und interaktiven Elementen.",
+  "price_from": "$19/Monat (Starter, monatlich; erster Monat $9)",
+  "german_ui": true,
+  "summary_de": "KI-Videoplattform zum Erstellen von Videos mit KI-Avataren, Dubbing, Umfragen und KI-Rollenspiel-Trainings, inklusive Videoagent Syren.",
   "best_for_de": "Unternehmen für Schulungs- und Erklärvideos",
   "source": "https://www.synthesia.io/pricing"
  },
@@ -231,11 +231,11 @@
   "pricing_url": "https://www.heygen.com/pricing",
   "free_plan": true,
   "free_trial": null,
-  "price_from": "$29/Monat (Creator) bzw. $24/Monat (jährlich)",
+  "price_from": "$29/Monat (Creator)",
   "german_ui": null,
   "summary_de": "KI-Videogenerator mit Avataren, Voice Cloning, Videoübersetzung und Video Agent.",
   "best_for_de": "Creator und Marketer für Avatar-Videos",
-  "source": "https://www.heygen.com/faq"
+  "source": "https://www.heygen.com/pricing"
  },
  {
   "name": "Murf",
@@ -274,7 +274,7 @@
   "free_plan": null,
   "free_trial": null,
   "price_from": "$10/Monat pro Seat (Starter, jährlich; regulär $20)",
-  "german_ui": null,
+  "german_ui": true,
   "summary_de": "KI-Videoplattform mit Agenten, generativen Video- und Bildmodellen sowie Timeline-Editor.",
   "best_for_de": "Social-Media- und YouTube-Creator",
   "source": "https://invideo.io/pricing/"
@@ -329,11 +329,11 @@
   "pricing_url": "https://tally.so/pricing",
   "free_plan": true,
   "free_trial": null,
-  "price_from": "$24/Monat (Pro, jährlich); $29/Monat monatlich",
+  "price_from": "$29/Monat (Pro, monatlich) bzw. $290/Jahr (jährlich)",
   "german_ui": null,
   "summary_de": "Formular-Builder mit unbegrenzten Formularen und Antworten kostenlos, inklusive Logik, Zahlungen und Integrationen.",
   "best_for_de": "Startups und Creator mit kleinem Budget",
-  "source": "https://tally.so/pricing"
+  "source": "https://tally.so/help/tally-pro"
  },
  {
   "name": "Typeform",
@@ -357,8 +357,8 @@
   "pricing_url": "https://gamma.app/pricing",
   "free_plan": true,
   "free_trial": null,
-  "price_from": "$9/Monat pro Nutzer (Plus, jährlich abgerechnet)",
-  "german_ui": null,
+  "price_from": null,
+  "german_ui": true,
   "summary_de": "Erstellt Präsentationen, Dokumente, Websites und Social Posts aus einem Prompt; Gratis-Tarif mit 400 Credits zum Start und Export nach PDF, PPTX und Google Slides.",
   "best_for_de": "Alle, die schnell schöne Präsentationen ohne Design-Arbeit brauchen",
   "source": "https://gamma.app/pricing"
@@ -387,7 +387,7 @@
   "free_trial": null,
   "price_from": "$9/Monat (Lite)",
   "german_ui": null,
-  "summary_de": "KI-Schreibassistent mit über 40 Anwendungsfällen und mehr als 30 Sprachen; Gratis-Tarif mit 10.000 Zeichen pro Monat.",
+  "summary_de": "KI-Schreib- und Kommunikationsassistent mit über 40 Anwendungsfällen und mehr als 30 Sprachen, inzwischen auch mit verbundenen Quellen, Kontaktpflege, Personenrecherche und täglichen Briefings; Gratis-Tarif mit 10.000 Zeichen pro Monat.",
   "best_for_de": "Einsteiger mit kleinem Budget, die regelmäßig kurze Texte brauchen",
   "source": "https://rytr.me/pricing"
  },
@@ -414,7 +414,7 @@
   "free_plan": true,
   "free_trial": null,
   "price_from": "$10/Monat pro Mitglied (Plus); Notion Agent und KI-Meeting-Notizen ab Business ($20)",
-  "german_ui": null,
+  "german_ui": true,
   "summary_de": "Arbeitsbereich für Notizen, Wikis, Datenbanken und Projekte mit eingebauter KI; im Gratis- und Plus-Tarif ist Notion AI nur als Test enthalten.",
   "best_for_de": "Teams, die Wissen, Aufgaben und Dokumente an einem Ort bündeln",
   "source": "https://www.notion.com/pricing"
@@ -428,8 +428,8 @@
   "free_plan": true,
   "free_trial": null,
   "price_from": "$17/Monat (Pro, jährlich abgerechnet)",
-  "german_ui": null,
-  "summary_de": "KI-Suchmaschine mit Antworten aus dem Web samt Quellen; Pro mit Tiefenrecherche und Auswahl zwischen Modellen verschiedener Anbieter.",
+  "german_ui": true,
+  "summary_de": "KI-Suchmaschine mit Antworten aus dem Web samt Quellen; Pro mit Tiefenrecherche, Auswahl zwischen Modellen verschiedener Anbieter und dem Agenten Computer, der Dokumente und Apps erstellt.",
   "best_for_de": "Recherche mit nachprüfbaren Quellen",
   "source": "https://www.perplexity.ai/pro"
  },
@@ -438,14 +438,14 @@
   "slug": "claude",
   "category": "KI-Chat & Recherche",
   "url": "https://claude.ai/",
-  "pricing_url": "https://www.anthropic.com/pricing",
+  "pricing_url": "https://claude.com/pricing",
   "free_plan": true,
   "free_trial": null,
   "price_from": "$17/Monat (Pro, jährlich) bzw. $20 monatlich",
-  "german_ui": null,
-  "summary_de": "KI-Assistent von Anthropic für Texte, Analyse, Code und Recherche; Gratis-Tarif mit Websuche, Pro mit Projekten, Research und Claude Code.",
+  "german_ui": true,
+  "summary_de": "KI-Assistent von Anthropic für Texte, Analyse, Code und Recherche; Gratis-Tarif mit Websuche, Dateierstellung und Claude Design, Pro mit Research, Claude Code und mehr Modellen.",
   "best_for_de": "Anspruchsvolle Texte, Analyse und Programmieren",
-  "source": "https://www.anthropic.com/pricing"
+  "source": "https://claude.com/pricing"
  },
  {
   "name": "Midjourney",
@@ -524,7 +524,7 @@
   "url": "https://copilot.microsoft.com",
   "pricing_url": "https://www.microsoft.com/de-de/microsoft-365-copilot/pricing/individuals",
   "free_plan": true,
-  "free_trial": "1 Monat kostenlos (Microsoft 365 Premium)",
+  "free_trial": "1 Monat kostenlos (Microsoft 365 Single, Family und Premium; je nach Angebot)",
   "price_from": "99,00 €/Jahr (Microsoft 365 Single, jährlich; alternativ 10,00 €/Monat)",
   "german_ui": true,
   "summary_de": "Microsoft Copilot ist ein KI-Assistent, der in Microsoft-365-Plänen direkt in Word, Excel, PowerPoint und Outlook integriert ist.",
@@ -607,7 +607,7 @@
   "category": "Coding",
   "url": "https://replit.com",
   "pricing_url": "https://replit.com/pricing",
-  "free_plan": null,
+  "free_plan": true,
   "free_trial": null,
   "price_from": "$20/Monat (Core, monatlich; $18/Monat bei jährlicher Abrechnung)",
   "german_ui": null,
@@ -623,7 +623,7 @@
   "pricing_url": "https://suno.com/pricing",
   "free_plan": true,
   "free_trial": null,
-  "price_from": null,
+  "price_from": "$8/Monat (Pro, ab-Preis laut Suno)",
   "german_ui": null,
   "summary_de": "Suno erzeugt Musik per KI; der Free-Plan bietet täglich 50 Credits, Pro und Premier sind die Bezahlpläne.",
   "best_for_de": "Songs und Musik aus Textprompts erstellen",
@@ -663,7 +663,7 @@
   "category": "Video & Avatare",
   "url": "https://pika.art",
   "pricing_url": "https://pika.art/pricing",
-  "free_plan": null,
+  "free_plan": true,
   "free_trial": null,
   "price_from": null,
   "german_ui": null,
@@ -791,7 +791,7 @@
   "pricing_url": "https://mistral.ai/pricing",
   "free_plan": true,
   "free_trial": null,
-  "price_from": "$14.99 (Pro, zzgl. Steuern; Abrechnungszeitraum auf der Seite nicht ausgewiesen)",
+  "price_from": "$14.99/Monat (Pro, zzgl. Steuern; 20 % Rabatt bei jährlicher Abrechnung)",
   "german_ui": null,
   "summary_de": "Mistral bietet mit Vibe einen persönlichen KI-Agenten für Chat, Suche, Bildgenerierung und agentisches Coding.",
   "best_for_de": "Europäische KI-Alternative für Chat und Coding",
@@ -875,8 +875,8 @@
   "pricing_url": "https://www.capcut.com/pricing",
   "free_plan": true,
   "free_trial": null,
-  "price_from": null,
-  "german_ui": null,
+  "price_from": "$19.99/Monat (Pro, monatlich; $179.99/Jahr bei jährlicher Abrechnung; Richtpreis, regional abweichend)",
+  "german_ui": true,
   "summary_de": "CapCut ist ein Videoeditor mit Vorlagen und Basis-Bearbeitungstools im Free-Plan sowie Pro- und Ultra-Abos.",
   "best_for_de": "Schneller Social-Media-Videoschnitt",
   "source": "https://www.capcut.com/pricing"
@@ -889,7 +889,7 @@
   "pricing_url": "https://fliki.ai/pricing",
   "free_plan": true,
   "free_trial": null,
-  "price_from": null,
+  "price_from": "$28/Monat (Standard, monatliche Abrechnung)",
   "german_ui": null,
   "summary_de": "Fliki erstellt KI-Videos aus Ideen, Skripten, Blogposts oder PPTs mit über 300 Stimmen in mehr als 80 Sprachen.",
   "best_for_de": "Text-zu-Video mit KI-Sprechern für Erklär- und Social-Videos",

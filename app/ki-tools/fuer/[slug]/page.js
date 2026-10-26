@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import JsonLd from '../../../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../../../components/Breadcrumbs'
 import Faq, { faqSchema } from '../../../components/Faq'
+import Quellen from '../../../components/Quellen'
 import Toc from '../../../components/Toc'
 import LeadMagnetBox from '../../../components/LeadMagnetBox'
 import { Band } from '../../../components/Deko'
@@ -146,6 +147,7 @@ export default function ZielgruppePage({ params }) {
                 <h2 id="faq">Häufige Fragen 🙋</h2>
                 <Faq items={z.faq} />
             </section>
+            <Quellen quellen={z.quellen} geprueft={z.geprueft} />
             <LeadMagnetBox id="prompt-paket" />
             <section aria-labelledby="andere">
                 <h2 id="andere">KI-Tools für andere Zielgruppen</h2>

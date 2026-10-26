@@ -8261,7 +8261,7 @@
   },
   {
    "slug": "notebooklm",
-   "name": "NotebookLM",
+   "name": "Gemini Notebook (früher NotebookLM)",
    "url": "https://notebooklm.google/",
    "domain": "notebooklm.google",
    "rubrik": "produktivitaet",
@@ -12020,7 +12020,7 @@
   },
   {
    "slug": "windsurf",
-   "name": "Windsurf",
+   "name": "Devin Desktop (früher Windsurf)",
    "url": "https://windsurf.com/",
    "domain": "windsurf.com",
    "rubrik": "coding",
