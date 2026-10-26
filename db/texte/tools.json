@@ -1,1 +1,834 @@
-{}
+{
+ "beehiiv": {
+  "meinung": "beehiiv ist gebaut wie ein kleiner Zeitungsverlag in der Hosentasche: Newsletter, Website, Podcast und Monetarisierung über Paid Subscriptions und ein Werbenetzwerk. Für Newsletter-Creator und Publisher, die mit ihrer Liste Geld verdienen wollen, ist das ein sauberer Rahmen. Du kannst gratis starten, der Lite-Tarif kostet $49/Monat bei jährlicher Abrechnung. Ob die Oberfläche Deutsch spricht, ist in unseren Daten nicht bestätigt. Für den Vereinsrundbrief an zwölf Leute ist das allerdings, als würdest du für den Einkaufszettel eine Druckerei mieten.",
+  "jean": "Ein Verlag in der Hosentasche. Für den Vereinsrundbrief ist das zu viel Druckerei.",
+  "passt_wenn": [
+   "Passt, wenn du mit deinem Newsletter Geld verdienen willst",
+   "Passt, wenn du Newsletter, Website und Podcast bündeln möchtest",
+   "Passt, wenn du erst gratis testen willst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du nur ein paar interne Infomails verschickst",
+   "Lass es, wenn du zwingend eine deutsche Oberfläche brauchst"
+  ]
+ },
+ "bolt-new": {
+  "meinung": "Mit Bolt bekommst du einen KI-Builder für Websites und Apps, der per Prompt baut und in den Bezahlplänen Hosting, Datenbanken und eigene Domain mitbringt. Damit ist es eher Fertighaus mit Grundstück als nur Bauplan. Gratis starten geht, Pro kostet $18/Monat bei jährlicher Abrechnung, also $216/Jahr am Stück. Eine deutsche Oberfläche ist nicht bestätigt. Wer schnell eine Web-App bauen und gleich hosten will, ist hier richtig, wer monatlich kündbar bleiben möchte, sollte die Jahreszahlung im Kopf haben.",
+  "jean": "Fertighaus mit Grundstück. Die Miete zahlst du aber fürs ganze Jahr.",
+  "passt_wenn": [
+   "Passt, wenn du Web-Apps per Prompt bauen willst",
+   "Passt, wenn Hosting und Datenbank gleich dabei sein sollen",
+   "Passt, wenn du eine eigene Domain anbinden möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du keine Jahreszahlung willst",
+   "Lass es, wenn du nur eine statische Visitenkarte brauchst"
+  ]
+ },
+ "brevo": {
+  "meinung": "Brevo ist für mich die Kombi aus Briefkasten und Telefonzentrale: E-Mail, SMS und Multichannel-Marketing, Automatisierung, Transaktionsmails und CRM-Funktionen. Gedacht ist es für KMU mit kleinem Budget und vielen Kontakten, und genau da passt es gut. Es gibt einen Gratis-Tarif, eine deutsche Oberfläche, und der Starter-Tarif kostet $9/Monat bzw. 7 €/Monat. Der Haken: Bei so vielen Kanälen musst du dich durch einige Menüs wühlen, bevor die erste Kampagne rausgeht. Wer nur Bestellbestätigungen braucht, nutzt einen Bruchteil davon.",
+  "jean": "Briefkasten plus Telefonzentrale für kleines Geld. Erst die Menüs sortieren.",
+  "passt_wenn": [
+   "Passt, wenn du viele Kontakte und wenig Budget hast",
+   "Passt, wenn du E-Mail und SMS kombinieren möchtest",
+   "Passt, wenn du Transaktionsmails aus dem Shop verschicken willst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du ein reines Creator-Newsletter-Tool suchst",
+   "Lass es, wenn dich viele Funktionen eher bremsen"
+  ]
+ },
+ "canva": {
+  "meinung": "Canva ist mein Bastelkoffer-Tipp für alle, die nicht Design studiert haben: Vorlagen, Stockmedien, Brand Kits und KI-Tools für Grafiken, Präsentationen und Videos, alles auf Deutsch. Für Nicht-Designer, Social-Media- und Marketing-Teams ist das oft der schnellste Weg zum Ergebnis. Der Gratis-Tarif ist großzügig, Pro testest du 30 Tage und zahlst danach US$180/Jahr für eine Person. Der Haken: Weil so viele dieselben Vorlagen nutzen, sieht dein Post schnell aus wie das Reihenhaus nebenan. Pass die Vorlagen also kräftig an.",
+  "jean": "Großer Bastelkoffer. Pass die Vorlagen an, sonst wohnst du im Reihenhaus.",
+  "passt_wenn": [
+   "Passt, wenn du ohne Designkenntnisse Grafiken brauchst",
+   "Passt, wenn dein Team ein gemeinsames Brand Kit nutzt",
+   "Passt, wenn du Präsentationen und Posts an einem Ort machst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du professionelle Druckvorstufe brauchst",
+   "Lass es, wenn dein Look absolut einzigartig sein muss"
+  ]
+ },
+ "capcut": {
+  "meinung": "Schnell schneiden fürs Handy-Format kann CapCut, ein Videoeditor für Social Media mit Vorlagen und Basis-Bearbeitungstools im Free-Plan und mit deutscher Oberfläche. Für den schnellen Reel-Schnitt nach Feierabend ist das wie ein Akkuschrauber: griffbereit und ohne Anleitung bedienbar. Mehr gibt es in Pro und Ultra, Pro kostet $19.99/Monat monatlich oder $179.99/Jahr, als Richtpreis, regional abweichend. Für aufwendige Langformate fehlt dem Akkuschrauber aber die Kraft. Prüf den Preis in deiner Region direkt in der App.",
+  "jean": "Akkuschrauber für Reels. Für den Langfilm brauchst du größeres Werkzeug.",
+  "passt_wenn": [
+   "Passt, wenn du Reels und TikToks schnell schneidest",
+   "Passt, wenn du mit Vorlagen arbeiten willst",
+   "Passt, wenn du eine deutsche Oberfläche magst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du aufwendige Langformate produzierst",
+   "Lass es, wenn du feste Preise ohne regionale Abweichung brauchst"
+  ]
+ },
+ "chatgpt": {
+  "meinung": "Fast jeder hatte ChatGPT schon mal in der Hand, wie den Allzweckreiniger im Putzschrank: Texte, Recherche, Bilder und Code. OpenAI staffelt das in Free, Go, Plus, Pro, Business und Enterprise, und seit Oktober 2026 läuft im Chat GPT-6, je nach Tarif als Luna, Sol oder Astra. Plus kostet $20/Monat mit monatlicher Abrechnung, ein Jahresabo gibt es laut OpenAI-Hilfe-Center nicht. Der Haken ist eher die Tarif-Übersicht, die mit sechs Stufen länger ist als die Getränkekarte im Vereinsheim.",
+  "jean": "Kann fast alles. Nur die Tarifliste ist länger als die Getränkekarte.",
+  "passt_wenn": [
+   "Passt, wenn du einen Allrounder für Text und Code suchst",
+   "Passt, wenn du auch Bilder im Chat erzeugen willst",
+   "Passt, wenn du monatlich flexibel bleiben möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du gezielt Quellenrecherche brauchst",
+   "Lass es, wenn du auf ein günstiges Jahresabo hoffst"
+  ]
+ },
+ "claude": {
+  "meinung": "Claude von Anthropic ist mein Kandidat für anspruchsvolle Texte, Analyse und Programmieren, und die Oberfläche gibt es auf Deutsch. Schon der Gratis-Tarif hat Websuche, Dateierstellung und Claude Design. Pro bringt Research, Claude Code und mehr Modelle, für $17/Monat jährlich oder $20 monatlich. Das ist wie ein aufgeräumter Schreibtisch mit guter Lampe: viel Platz zum Denken, wenig Spielzeug. Wer vor allem Bilder generieren will, wird hier nicht glücklich, der Schwerpunkt liegt klar auf Text und Code.",
+  "jean": "Stark bei Text und Code. Für Bildgeneratoren schau ein Regal weiter.",
+  "passt_wenn": [
+   "Passt, wenn du lange, anspruchsvolle Texte schreibst",
+   "Passt, wenn du Code mit Claude Code bauen willst",
+   "Passt, wenn du Dokumente analysieren lassen möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du hauptsächlich KI-Bilder brauchst",
+   "Lass es, wenn dir der Gratis-Tarif schon völlig reicht"
+  ]
+ },
+ "cursor": {
+  "meinung": "Programmierst du gern mit KI im Editor, schau dir Cursor an, einen KI-nativen Code-Editor mit lokalen und Cloud-Coding-Agents. Seit Oktober 2026 gehört er zu The X Subscription, zusammen mit Grok und X Premium, und die Plus-Stufe kostet $8/Monat oder $80/Jahr. Das ist ein bisschen wie ein Werkzeugkasten, der nur im Bundle mit Autoradio und Fußmatten verkauft wird. Einen Gratis-Tarif gibt es, eine deutsche Oberfläche ist nicht bestätigt. Für Entwickler, die einen Editor mit Agents suchen, ist das interessant, wenn dich das Bundle nicht stört.",
+  "jean": "Starker Editor im Bundle. Autoradio und Fußmatten kommen ungefragt mit.",
+  "passt_wenn": [
+   "Passt, wenn du einen KI-Editor mit Agents suchst",
+   "Passt, wenn du lokale und Cloud-Agents kombinieren willst",
+   "Passt, wenn dich das X-Bundle nicht stört"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du keine Lust auf ein Plattform-Bundle hast",
+   "Lass es, wenn du nicht selbst Code liest"
+  ]
+ },
+ "deepl": {
+  "meinung": "Ein Übersetzungsbüro direkt neben deinem Schreibtisch, so fühlt sich DeepL an: Texte und Dokumente übersetzen, dazu DeepL Write Pro als KI-Schreibassistent für klare, fehlerfreie Texte, mit deutscher Oberfläche. Für Übersetzungen und Textoptimierung auf Deutsch ist das meine erste Adresse. Gratis geht, Individual kostet 7,49 €/Monat bei jährlicher Abrechnung inklusive MwSt. Achtung: Write Pro ist ein Add-on für 6,99 €/Nutzer/Monat jährlich, das musst du extra einplanen. Wer nur Englisch umformulieren will, braucht den Übersetzer eigentlich nicht.",
+  "jean": "Übersetzungsbüro am Schreibtisch. Write Pro steht extra auf der Rechnung.",
+  "passt_wenn": [
+   "Passt, wenn du regelmäßig Dokumente übersetzt",
+   "Passt, wenn du deutsche Texte sprachlich glätten willst",
+   "Passt, wenn du Preise inklusive MwSt. schätzt"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du nie zwischen Sprachen wechselst",
+   "Lass es, wenn du Write Pro nicht extra zahlen willst"
+  ]
+ },
+ "deepseek": {
+  "meinung": "DeepSeek bietet kostenlosen Chat-Zugang zu seinen Modellen, aktuell DeepSeek-V4-Pro, per Web und App, dazu eine API. Für kostenlosen KI-Chat und günstige API-Nutzung ist das attraktiv, gratis ist eben ein starkes Argument. Einen Einstiegspreis für Abos haben wir nicht verifiziert, eine deutsche Oberfläche ist nicht bestätigt. Mein Rat: Behandle es wie einen Flohmarktfund, prüf genau, was du reingibst, und schick keine vertraulichen Firmendaten rein, solange du die Bedingungen nicht gelesen hast.",
+  "jean": "Gratis wie ein Flohmarktfund. Gib trotzdem keine Firmengeheimnisse ab.",
+  "passt_wenn": [
+   "Passt, wenn du kostenlos einen starken Chat willst",
+   "Passt, wenn du günstig per API entwickeln möchtest",
+   "Passt, wenn du Web und App parallel nutzt"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du vertrauliche Daten verarbeiten musst",
+   "Lass es, wenn du die Nutzungsbedingungen nicht lesen willst"
+  ]
+ },
+ "descript": {
+  "meinung": "Descript schneidet Videos und Podcasts wie ein Textdokument: Du löschst ein Wort im Transkript, und der Schnitt folgt. Dazu kommen der KI-Co-Editor Underlord, Studio Sound für saubereren Ton und die Clip-Erstellung. Für Podcaster und Video-Creator ist das eine echte Zeitersparnis. Gratis starten geht, Hobbyist kostet $16/Monat jährlich oder $24 monatlich. Eine deutsche Oberfläche ist nicht bestätigt, und wer schon jahrelang im klassischen Timeline-Schnitt sitzt, muss sich erst umgewöhnen wie Linkshänder an der Rechtshänderschere.",
+  "jean": "Schneiden wie im Word-Dokument. Für Timeline-Veteranen erst mal ungewohnt.",
+  "passt_wenn": [
+   "Passt, wenn du Podcasts regelmäßig schneidest",
+   "Passt, wenn du lieber Text bearbeitest als Spuren",
+   "Passt, wenn dein Ton eine Politur braucht"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du deinen Timeline-Editor liebst",
+   "Lass es, wenn du eine deutsche Oberfläche brauchst"
+  ]
+ },
+ "elevenlabs": {
+  "meinung": "ElevenLabs ist inzwischen mehr Tonstudio als Vorleseprogramm: Text-to-Speech, Voice Cloning, Dubbing, Soundeffekte, Musik, Bild und Video, dazu Voice Agents unter dem Namen ElevenAgents. Für Creator und Unternehmen mit Voiceover-Bedarf ist das eine starke Werkbank, und die Oberfläche gibt es auf Deutsch. Du startest gratis, der Starter-Tarif kostet $6/Monat monatlich oder $5/Monat jährlich. Der Haken bei Voice Cloning ist weniger der Preis als die Verantwortung: Klon nur Stimmen, für die du auch die Erlaubnis hast.",
+  "jean": "Ein Tonstudio für fünf Dollar. Klon aber nur Stimmen, die du darfst.",
+  "passt_wenn": [
+   "Passt, wenn du regelmäßig Voiceovers für Videos brauchst",
+   "Passt, wenn du Inhalte in andere Sprachen vertonen willst",
+   "Passt, wenn du günstig einsteigen möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du deine Texte lieber selbst einsprichst",
+   "Lass es, wenn du nur einmal im Jahr eine Ansage brauchst"
+  ]
+ },
+ "fireflies-ai": {
+  "meinung": "Fireflies zeichnet deine Meetings in Zoom, Google Meet und Teams auf, transkribiert sie und erstellt KI-Zusammenfassungen. Für Teams, die ihre Meetings automatisch protokollieren wollen, ist das ein stiller Gast mit Stenoblock, der nie zwischendurch aufs Handy schaut. Gratis starten geht, Pro kostet $18/Nutzer/Monat monatlich oder $10 bei jährlicher Abrechnung, der Jahresrabatt ist also kräftig. Eine deutsche Oberfläche ist nicht bestätigt. Sag deinen Gesprächspartnern Bescheid, dass der Gast mitschreibt, sonst wird die Stimmung schnell frostig.",
+  "jean": "Stiller Gast mit Stenoblock. Stell ihn vorher allen vor.",
+  "passt_wenn": [
+   "Passt, wenn du jede Woche viele Calls protokollieren musst",
+   "Passt, wenn du mehrere Meeting-Plattformen nutzt",
+   "Passt, wenn du jährlich zahlst und sparen willst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn deine Gespräche vertraulich ohne Aufnahme laufen",
+   "Lass es, wenn du kaum Online-Meetings hast"
+  ]
+ },
+ "fliki": {
+  "meinung": "Fliki macht aus Ideen, Skripten, Blogposts oder PPTs KI-Videos, mit über 300 Stimmen in mehr als 80 Sprachen. Für Erklär- und Social-Videos mit KI-Sprecher ist das ein Synchronstudio im Taschenformat, das auch nachts um drei noch Zeit hat. Gratis geht, Standard kostet $28/Monat bei monatlicher Abrechnung. Eine deutsche Oberfläche ist nicht bestätigt. Bei so vielen Stimmen gilt wie beim Casting: Hör dir mehrere an, bevor du dich festlegst, sonst klingt dein Erklärvideo wie eine Bahnhofsdurchsage.",
+  "jean": "Synchronstudio im Taschenformat. Caste die Stimme, bevor du produzierst.",
+  "passt_wenn": [
+   "Passt, wenn du Blogposts in Videos verwandeln willst",
+   "Passt, wenn du Videos in vielen Sprachen vertonen möchtest",
+   "Passt, wenn du ohne eigene Stimme Erklärvideos machst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du deine Videos selbst einsprechen willst",
+   "Lass es, wenn $28 im Monat nicht drin sind"
+  ]
+ },
+ "framer": {
+  "meinung": "Wer gern selbst am Layout feilt und jeden Abstand zweimal prüft, fühlt sich bei Framer zuhause: Design-Editor, CMS, Hosting, SEO-Funktionen und inzwischen KI-Agenten. Für Designer, Freelancer und Startups ist das ein schneller Weg zur schicken Website. Du startest gratis, der Basic-Tarif kostet $10/Monat bei jährlicher Zahlung. Ob die Oberfläche Deutsch kann, ist nicht bestätigt. Wer kein Gefühl für Gestaltung hat, steht hier allerdings ein bisschen wie vor einer leeren Leinwand mit sehr guten Pinseln.",
+  "jean": "Sehr gute Pinsel. Malen musst du trotzdem selbst.",
+  "passt_wenn": [
+   "Passt, wenn du Websites gern pixelgenau gestaltest",
+   "Passt, wenn du als Startup schnell eine Seite live bringen willst",
+   "Passt, wenn du erst kostenlos ausprobieren möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du fertige Vorlagen ohne Designarbeit willst",
+   "Lass es, wenn du eine deutsche Oberfläche brauchst"
+  ]
+ },
+ "gamma": {
+  "meinung": "Gamma baut aus einem Prompt Präsentationen, Dokumente, Websites und Social Posts, und zwar in einer deutschen Oberfläche. Gedacht ist das für alle, die schnell schöne Folien ohne Design-Arbeit brauchen. Zum Start gibt es im Gratis-Tarif 400 Credits, Export nach PDF, PPTX und Google Slides ist möglich. Einen Einstiegspreis für die Bezahltarife haben wir nicht verifiziert. Der Haken mit Credits ist wie beim Prepaid-Handy: Plötzlich ist das Guthaben leer, genau wenn die Präsentation morgen fällig ist.",
+  "jean": "Folien per Prompt. Behalte das Credit-Guthaben im Blick wie beim Prepaid-Handy.",
+  "passt_wenn": [
+   "Passt, wenn du schnell eine Präsentation brauchst",
+   "Passt, wenn du Folien nach PowerPoint exportieren willst",
+   "Passt, wenn Design nicht deine Lieblingsdisziplin ist"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du jede Folie pixelgenau selbst gestaltest",
+   "Lass es, wenn du ohne Credit-Grenzen arbeiten willst"
+  ]
+ },
+ "genspark": {
+  "meinung": "Ein ganzer KI-Workspace steckt in Genspark, mit Super Agent, AI Slides, Sheets, Docs sowie Chat-, Bild-, Video- und Audiomodellen. Für alle, die Folien, Dokumente und Recherche in einem Tool wollen, ist das ein Gemischtwarenladen mit erstaunlich vollen Regalen. Gratis geht, Plus kostet $24.99/Monat monatlich oder $19.99/Monat bei jährlicher Abrechnung. Eine deutsche Oberfläche ist nicht bestätigt. Den Haken bei Gemischtwaren kennt jeder vom Dorfladen: Nicht jedes Regal ist so gut sortiert wie beim Fachhändler.",
+  "jean": "Gemischtwarenladen mit vollen Regalen. Der Fachhändler ist manchmal tiefer sortiert.",
+  "passt_wenn": [
+   "Passt, wenn du Folien und Docs aus einem Tool willst",
+   "Passt, wenn du Recherche und Erstellung verbinden möchtest",
+   "Passt, wenn du ungern viele Abos jonglierst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du für jede Aufgabe das beste Spezialtool willst",
+   "Lass es, wenn du eine deutsche Oberfläche brauchst"
+  ]
+ },
+ "getresponse": {
+  "meinung": "GetResponse packt E-Mail-Marketing, KI-Tools, Automatisierung, Landingpages, Webinare und Onlinekurse unter ein Dach, und zwar mit deutscher Oberfläche. Für KMU und Onlinehändler, die automatisieren wollen, ist das eine runde Sache. Einen Gratis-Tarif gibt es, die 14 Tage Test beziehen sich auf die Premium-Funktionen. Der Starter-Tarif kostet 13,12 €/Monat jährlich für 1.000 Kontakte oder 16 €/Monat monatlich. Die Webinare sind ein netter Bonus, aber wer nur Mails schickt, bezahlt hier für ein Schweizer Taschenmesser und nutzt am Ende den Flaschenöffner.",
+  "jean": "Schweizer Taschenmesser fürs Marketing. Nutz mehr als nur den Flaschenöffner.",
+  "passt_wenn": [
+   "Passt, wenn du Mails, Landingpages und Webinare kombinieren willst",
+   "Passt, wenn du einen Onlineshop mit Automationen betreibst",
+   "Passt, wenn du Preise lieber in Euro siehst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du nur gelegentlich einen Newsletter schickst",
+   "Lass es, wenn du mehr als 1.000 Kontakte billig halten willst"
+  ]
+ },
+ "github-copilot": {
+  "meinung": "GitHub Copilot sitzt in deinem Editor, in der CLI und auf GitHub und hilft mit Agent-Modus, Code-Review und Cloud-Agent. Für Entwickler, die KI direkt im gewohnten Workflow wollen, ist das der Beifahrer, der die Karte liest, während du fährst. Es gibt einen Gratis-Tarif, Pro kostet $10/Monat. Eine deutsche Oberfläche ist nicht bestätigt, was Entwickler meist eh nicht stört. Wer allerdings gar nicht programmiert, sondern nur eine Website zusammenklicken will, sitzt hier im falschen Auto.",
+  "jean": "Der Beifahrer mit Karte. Fahren musst du trotzdem selbst können.",
+  "passt_wenn": [
+   "Passt, wenn du täglich in deiner IDE programmierst",
+   "Passt, wenn dein Team GitHub für Code-Reviews nutzt",
+   "Passt, wenn du günstig mit KI-Coding starten willst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du gar nicht programmieren willst",
+   "Lass es, wenn du keinen Code auf GitHub verwaltest"
+  ]
+ },
+ "google-gemini": {
+  "meinung": "Gemini ist Googles persönlicher KI-Assistent und fühlt sich am wohlsten, wenn du sowieso in Gmail, Docs und Drive wohnst. Die deutsche Oberfläche ist selbstverständlich, gratis starten geht auch. Das Abo Google AI Plus kostet in Deutschland 4,99 €/Monat, Pro und Ultra erweitern Nutzungslimits, Modelle und Cloud-Speicher. Das ist wie der Hausmeister im eigenen Wohnblock: kennt alle Räume, hilft schnell. Wer aber kein Google-Konto nutzen will oder alles bei Microsoft hat, zieht hier ins falsche Haus.",
+  "jean": "Der Hausmeister im Google-Wohnblock. In fremden Häusern kennt er sich weniger aus.",
+  "passt_wenn": [
+   "Passt, wenn du täglich mit Gmail, Docs und Drive arbeitest",
+   "Passt, wenn du günstig mit 4,99 € starten willst",
+   "Passt, wenn du zusätzlich Cloud-Speicher brauchst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du kein Google-Konto nutzen möchtest",
+   "Lass es, wenn dein Büro komplett auf Microsoft läuft"
+  ]
+ },
+ "grammarly": {
+  "meinung": "Streng wie ein Korrekturleser aus dem Verlag prüft Grammarly englische Texte, E-Mails und Dokumente und bietet Umformulierungen, Tonanpassung und sogar Plagiats- und KI-Erkennung. Für deutsche Texte ist es aber die falsche Brille. Gratis geht, Pro kostet $12/Nutzer/Monat bei jährlicher Abrechnung und $30 bei monatlicher Zahlung, der Unterschied ist also mehr als doppelt. Eine kostenlose Pro-Testphase gibt es, deren Dauer auf der Seite nicht angegeben ist. Wer täglich auf Englisch mit Kunden schreibt, bekommt hier ein Sicherheitsnetz.",
+  "jean": "Strenge Brille für Englisch. Monatlich zahlen kostet mehr als das Doppelte.",
+  "passt_wenn": [
+   "Passt, wenn du täglich englische E-Mails schreibst",
+   "Passt, wenn du den Ton deiner Texte prüfen willst",
+   "Passt, wenn du Plagiate checken musst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du vor allem auf Deutsch schreibst",
+   "Lass es, wenn du nur monatlich zahlen möchtest"
+  ]
+ },
+ "heygen": {
+  "meinung": "Creator und Marketer finden bei HeyGen einen ganzen Bastelkeller voller Avatar-Werkzeuge: KI-Avatare, Voice Cloning, Videoübersetzung und ein Video Agent, der Arbeit abnimmt. Besonders die Videoübersetzung ist praktisch, wenn ein einziges Video gleich mehrere Märkte und Sprachen erreichen soll. Es gibt einen Gratis-Tarif, der Creator-Tarif kostet $29/Monat. Ob die Oberfläche Deutsch kann, ist nicht bestätigt. Rechne damit, dass ein Avatar-Video wirkt wie ein Wachsfigurenkabinett mit WLAN: beeindruckend, aber nicht für jede Zielgruppe gleich sympathisch.",
+  "jean": "Wachsfigurenkabinett mit WLAN. Stark für Übersetzungen, nicht für jedes Publikum.",
+  "passt_wenn": [
+   "Passt, wenn du Videos in mehrere Sprachen übersetzen willst",
+   "Passt, wenn du Marketingvideos ohne Dreh produzieren möchtest",
+   "Passt, wenn du erst gratis Avatare testen willst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn deine Community echte Gesichter erwartet",
+   "Lass es, wenn $29 im Monat für dich Luxus sind"
+  ]
+ },
+ "hostinger-website-builder": {
+  "meinung": "Einsteiger bekommen beim Hostinger Website Builder das ganze Paket aus einer Hand: KI-Website-Builder mit Drag-and-Drop- und Agentic-Modus, Hosting, Domain und E-Mail-Postfächer, alles mit deutscher Oberfläche. Für Kleinunternehmen mit kleinem Budget klingt der Preis erst mal sehr verlockend: $2,49/Monat. Aber Achtung, das gilt bei 48 Monaten Vorauszahlung, die Verlängerung kostet $10,99/Monat. Das ist wie ein Handyvertrag mit Lockangebot, also lies das Kleingedruckte lieber zweimal, bevor du auf Kaufen klickst. Einen Gratis-Tarif gibt es nicht, nur 14 Tage Test.",
+  "jean": "Lockpreis mit vier Jahren Vorkasse. Merk dir die $10,99 danach.",
+  "passt_wenn": [
+   "Passt, wenn du Website, Domain und Mail aus einer Hand willst",
+   "Passt, wenn du als Einsteiger per KI starten möchtest",
+   "Passt, wenn du langfristig planst und vorauszahlen kannst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du nicht vier Jahre im Voraus zahlen willst",
+   "Lass es, wenn du dauerhaft gratis bauen möchtest"
+  ]
+ },
+ "ideogram": {
+  "meinung": "Buchstabensalat auf KI-Bildern kennt jeder, und genau da punktet Ideogram als KI-Bildgenerator mit gut lesbarer Typografie, also bei Logos und Postern, wo andere Generatoren gern mal Kauderwelsch auf das Schild malen. Dazu kommen Editor, Upscaling und eine Describe-Funktion. Es gibt Free-, Basic-, Plus- und Pro-Pläne, Basic kostet $7/Monat bei jährlicher Abrechnung. Eine deutsche Oberfläche ist nicht bestätigt. Für das Plakat zum Vereinsfest ist das ein gutes Werkzeug, für fotorealistische Produktbilder würde ich eher woanders suchen.",
+  "jean": "Kein Buchstabensalat auf dem Plakat. Genau dafür lohnt es sich.",
+  "passt_wenn": [
+   "Passt, wenn du Poster mit lesbarem Text brauchst",
+   "Passt, wenn du Logo-Ideen schnell skizzieren willst",
+   "Passt, wenn du günstig mit $7 starten möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du vor allem Fotorealismus suchst",
+   "Lass es, wenn du eine deutsche Oberfläche brauchst"
+  ]
+ },
+ "invideo-ai": {
+  "meinung": "Viel Output in kurzer Zeit, darauf ist InVideo AI ausgelegt: eine KI-Videoplattform mit Agenten, generativen Video- und Bildmodellen und einem Timeline-Editor, auf Deutsch bedienbar. Gedacht ist das für Social-Media- und YouTube-Creator, die jede Woche neue Videos raushauen müssen. Der Starter-Tarif kostet $10/Monat pro Seat bei jährlicher Zahlung, regulär $20. Ob es dauerhaft einen Gratis-Tarif gibt, steht in unseren Daten leider nicht, das prüfst du besser selbst. Rechne bei den Seats wie beim Kneipenabend: Jede weitere Person am Tisch kostet extra.",
+  "jean": "Jeder Seat zahlt seine Runde selbst. Alleine wird es günstiger.",
+  "passt_wenn": [
+   "Passt, wenn du regelmäßig Videos für YouTube produzierst",
+   "Passt, wenn du KI-Clips und Timeline-Schnitt kombinieren willst",
+   "Passt, wenn du eine deutsche Oberfläche schätzt"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du ein großes Team pro Seat bezahlen müsstest",
+   "Lass es, wenn du nur selten ein Video brauchst"
+  ]
+ },
+ "jasper": {
+  "meinung": "Jasper richtet sich klar an Marketing-Teams, als KI-Plattform, die mit Brand Voice, Agents und Content-Pipelines markenkonforme Inhalte erstellt. Das ist eher die Großküche mit festen Rezepten als der Kochtopf für zuhause. Einen Gratis-Tarif gibt es nicht, Pro kannst du 7 Tage testen, danach kostet es $69/Monat/Nutzer monatlich oder $59 jährlich. Eine deutsche Oberfläche ist nicht bestätigt. Für Solo-Selbstständige ist das teuer, für Teams, die viel Content in einheitlicher Stimme brauchen, kann es sich rechnen.",
+  "jean": "Großküche mit festen Rezepten. Für den Single-Haushalt zu teuer.",
+  "passt_wenn": [
+   "Passt, wenn dein Team viel Content in einer Markenstimme braucht",
+   "Passt, wenn du Content-Pipelines automatisieren willst",
+   "Passt, wenn das Marketingbudget pro Nutzer reicht"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du alleine arbeitest und sparen musst",
+   "Lass es, wenn du gratis ausprobieren möchtest"
+  ]
+ },
+ "kit": {
+  "meinung": "Kit, früher ConvertKit, ist das E-Mail-Werkzeug für Creator, Blogger und Online-Unternehmer: Landingpages, Formulare, Visual Automations und der Verkauf digitaler Produkte sind dabei. Der Gratis-Tarif reicht zum Start, für mehr gibt es 14 Tage Test. Danach zahlst du $33/Monat im Creator-Tarif bei jährlicher Zahlung für 1.000 Abonnenten oder $39/Monat monatlich. Wichtig: Der Preis hängt an deiner Abonnentenzahl, wächst also mit wie ein Kinderschuh. Ob es eine deutsche Oberfläche gibt, ist nicht bestätigt.",
+  "jean": "Wächst mit deiner Liste mit, auch beim Preis. Rechne vorher kurz nach.",
+  "passt_wenn": [
+   "Passt, wenn du als Creator digitale Produkte verkaufst",
+   "Passt, wenn du Automationen visuell zusammenklicken willst",
+   "Passt, wenn du gratis mit der ersten Liste startest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn deine Liste schnell wächst und das Budget nicht",
+   "Lass es, wenn du ein komplett deutsches Interface brauchst"
+  ]
+ },
+ "kling-ai": {
+  "meinung": "Realistische Clips mit echten Kamerabewegungen sind die Spezialität von Kling AI, einem KI-Kreativstudio für Video- und Bildgenerierung. In den Mitgliedschaften gibt es Profi-Modus, Video-Verlängerung und Upscaling. Gratis starten geht, Standard kostet $79.20/Jahr bei jährlicher Zahlung, regulär $120. Eine deutsche Oberfläche ist in unseren Daten nicht bestätigt. Für Kameraschwenks ohne Drohne ist das spannend, aber rechne beim Jahrespreis nach wie beim Dauerkartenkauf: Lohnt sich nur, wenn du auch wirklich oft ins Stadion gehst.",
+  "jean": "Kameraschwenks ohne Drohne. Die Jahreskarte lohnt nur für Stammgäste.",
+  "passt_wenn": [
+   "Passt, wenn du realistische Kamerafahrten erzeugen willst",
+   "Passt, wenn du Clips verlängern und hochskalieren möchtest",
+   "Passt, wenn du ein Jahr lang regelmäßig Videos machst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du nur zwei Clips im Jahr brauchst",
+   "Lass es, wenn du monatlich kündbar bleiben willst"
+  ]
+ },
+ "krea": {
+  "meinung": "Krea stellt wie ein gut bestücktes Gewürzregal Bild-, Video-, 3D- und Echtzeit-KI-Modelle nebeneinander, dazu Upscaling, LoRA-Training und Node-Workflows. Für Kreative, die viele Modelle an einem Ort nutzen wollen, spart das einige Logins und womöglich mehrere einzelne Abos. Gratis geht, Basic kostet $9/Monat monatlich oder $5/Monat bei jährlicher Abrechnung. Eine deutsche Oberfläche ist nicht bestätigt. Wer nur ab und zu ein Profilbild braucht, steht hier vor einem Regal mit zu vielen Gläschen.",
+  "jean": "Viele Gewürze in einem Regal. Für ein Spiegelei brauchst du kaum welche.",
+  "passt_wenn": [
+   "Passt, wenn du viele Bild- und Videomodelle vergleichst",
+   "Passt, wenn du eigene LoRAs trainieren willst",
+   "Passt, wenn du Node-Workflows magst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du nur selten ein Bild brauchst",
+   "Lass es, wenn dich viele Optionen überfordern"
+  ]
+ },
+ "leonardo-ai": {
+  "meinung": "Kostenlos starten und trotzdem jeden Tag etwas machen, das bietet Leonardo AI als Plattform für KI-Bilder, Videos, Design und Motion: Der Gratis-Tarif gibt dir 150 Fast Tokens pro Tag. Der Haken: Deine Ergebnisse sind dann öffentlich, wie Zeichnungen am Kühlschrank einer WG, die jeder Besucher sieht. Private Ergebnisse und eigene KI-Modelle gibt es erst in bezahlten Tarifen, Essential kostet $12/Monat zuzüglich Steuer. Für Hobby-Kreative und Content-Produzenten ist das ein fairer Einstieg. Eine deutsche Oberfläche ist nicht bestätigt.",
+  "jean": "Täglich gratis malen, aber am WG-Kühlschrank. Privat kostet extra.",
+  "passt_wenn": [
+   "Passt, wenn du täglich kostenlos Bilder erzeugen willst",
+   "Passt, wenn du eigene KI-Modelle trainieren möchtest",
+   "Passt, wenn du Content für Social Media produzierst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn deine Bilder nicht öffentlich sein dürfen",
+   "Lass es, wenn du eine deutsche Oberfläche brauchst"
+  ]
+ },
+ "lovable": {
+  "meinung": "Kein Code, keine Vorkenntnisse, nur Chat: Lovable ist ein KI-Softwareentwickler, mit dem du per Chat Websites und Web-Apps baust, ohne technische Vorkenntnisse. Für Nicht-Entwickler, die schnell einen Prototyp zeigen wollen, ist das wie ein Lego-Set, das sich halb selbst zusammensteckt. Gratis starten geht, Pro kostet $25/Monat mit 100 Credits oder $250/Jahr. Diese 100 Credits sind dein Tank: Jede Änderungsrunde zieht etwas ab, und Feintuning am Ende kostet oft mehr als gedacht. Eine deutsche Oberfläche ist nicht bestätigt.",
+  "jean": "Lego, das sich halb selbst baut. Das Feintuning frisst die Credits.",
+  "passt_wenn": [
+   "Passt, wenn du ohne Code einen Prototyp bauen willst",
+   "Passt, wenn du eine App-Idee schnell zeigen möchtest",
+   "Passt, wenn du per Chat lieber beschreibst als baust"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du viele Änderungsrunden ohne Limit brauchst",
+   "Lass es, wenn du jedes Detail selbst programmieren willst"
+  ]
+ },
+ "luma-dream-machine": {
+  "meinung": "Luma Dream Machine bietet eigene und fremde Bild- und Videomodelle, darunter Ray3, plus Luma Agents, alles über Credit-basierte Pläne. Für hochwertige KI-Videos mit kommerzieller Nutzung ist das ein ernsthafter Kandidat. Plus kostet $30/Monat monatlich oder $25/Monat bei jährlicher Abrechnung. Ob es einen Gratis-Tarif oder eine deutsche Oberfläche gibt, steht in unseren Daten nicht. Credits bei Video sind wie Kleingeld im Freibad: Nach drei Runden Pommes fragst du dich, wo alles geblieben ist.",
+  "jean": "Gute Videos, gieriger Credit-Zähler. Plane dein Kleingeld vorher.",
+  "passt_wenn": [
+   "Passt, wenn du KI-Videos kommerziell nutzen willst",
+   "Passt, wenn du Modelle wie Ray3 ausprobieren möchtest",
+   "Passt, wenn du mit Agents Videoabläufe planst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du nur gelegentlich ein Video brauchst",
+   "Lass es, wenn $30 im Monat zu viel sind"
+  ]
+ },
+ "make": {
+  "meinung": "Make funktioniert wie die Modelleisenbahn im Keller: Du siehst jeden Workflow als Schienennetz und baust Weichen, Abzweigungen und KI-Agenten visuell zusammen. Über 3.500 App-Integrationen sind dabei, und gedacht ist das für Teams mit komplexen, visuellen Workflows. Es gibt einen Gratis-Tarif, der Core-Tarif kostet $9/Monat ab 10.000 Credits. Der Haken: Abgerechnet wird über Credits, also musst du im Blick behalten, wie oft deine Szenarien laufen. Ob die Oberfläche Deutsch kann, ist in unseren Daten nicht bestätigt.",
+  "jean": "Modelleisenbahn für Workflows. Zähl die Credits, bevor der Zug durchrauscht.",
+  "passt_wenn": [
+   "Passt, wenn du verzweigte Workflows visuell planen willst",
+   "Passt, wenn du viele Apps miteinander verbinden musst",
+   "Passt, wenn du günstig mit Credits einsteigen möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du Abrechnung nach Verbrauch nicht magst",
+   "Lass es, wenn du nur zwei Apps simpel verknüpfen willst"
+  ]
+ },
+ "manus": {
+  "meinung": "Abgeben und Kaffee trinken, so stellt sich Manus die Arbeit vor: ein KI-Agent, der Recherchen, Websites, Folien und andere Aufgaben eigenständig erledigt, abgerechnet über ein Credit-System. Für autonome, komplexe Aufgaben ist das wie ein Praktikant, der alleine loszieht. Gratis geht, Pro startet bei $20/Monat mit 17 % Rabatt jährlich, die 7 Tage Testphase gilt aber erst für Pro ab $40/Monat. Eine deutsche Oberfläche ist nicht bestätigt. Prüf die Ergebnisse, denn auch ein fleißiger Praktikant bringt manchmal den falschen Ordner mit.",
+  "jean": "Fleißiger Praktikant mit Credit-Karte. Kontrollier, was er zurückbringt.",
+  "passt_wenn": [
+   "Passt, wenn du Recherchen komplett abgeben willst",
+   "Passt, wenn du Folien und Websites automatisch erstellen möchtest",
+   "Passt, wenn du Ergebnisse gern selbst gegenliest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du jeden Schritt selbst steuern willst",
+   "Lass es, wenn Credit-Systeme dich nervös machen"
+  ]
+ },
+ "microsoft-copilot": {
+  "meinung": "Microsoft Copilot steckt direkt in Word, Excel, PowerPoint und Outlook, sofern du einen passenden Microsoft-365-Plan hast. Für Leute, die ohnehin den ganzen Tag in Office-Apps sitzen, ist das der Kollege am Nebentisch. Microsoft 365 Single kostet 99,00 €/Jahr oder 10,00 €/Monat, je nach Angebot gibt es einen Monat kostenlos, die Oberfläche ist deutsch. Der Haken: Du kaufst im Grunde das Office-Paket mit, ob du willst oder nicht. Wer mit Google Docs arbeitet, hat hier wenig zu holen.",
+  "jean": "Der Kollege am Office-Nebentisch. Das Büro musst du aber mitmieten.",
+  "passt_wenn": [
+   "Passt, wenn du täglich in Word und Excel arbeitest",
+   "Passt, wenn du KI direkt in Outlook nutzen willst",
+   "Passt, wenn du Microsoft 365 sowieso schon zahlst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du mit Google Docs arbeitest",
+   "Lass es, wenn du kein Office-Abo willst"
+  ]
+ },
+ "midjourney": {
+  "meinung": "Ein Kunstlehrer mit Hang zum großen Auftritt, so wirkt Midjourney auf mich: Bilder und Kurzvideos mit viel Stil, aufgeteilt in vier Abo-Stufen. Einen Gratis-Tarif gibt es nicht, Basic kostet $10/Monat monatlich oder $8/Monat jährlich. Unbegrenzte Bilder im Relax-Modus gibt es ab Standard, den privaten Stealth-Modus erst ab Pro, deine Werke sind darunter also für andere sichtbar. Und Firmen mit über 1 Mio. US-Dollar Jahresumsatz brauchen Pro oder Mega. Für Kreative mit Stilanspruch lohnt es sich, für den schnellen Gratis-Test eher nicht.",
+  "jean": "Viel Stil, kein Gratis-Tarif. Privat wird es erst ab Pro.",
+  "passt_wenn": [
+   "Passt, wenn du stilistisch starke Bilder aus Prompts willst",
+   "Passt, wenn du viel generierst und Relax-Modus nutzt",
+   "Passt, wenn dich öffentliche Ergebnisse nicht stören"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du erst kostenlos ausprobieren willst",
+   "Lass es, wenn deine Entwürfe vertraulich bleiben müssen"
+  ]
+ },
+ "mistral-le-chat": {
+  "meinung": "Mistral bietet mit Vibe einen persönlichen KI-Agenten für Chat, Suche, Bildgenerierung und agentisches Coding. Für alle, die eine europäische KI-Alternative suchen, ist das der Kandidat aus der Nachbarschaft statt vom anderen Ende der Welt. Gratis geht, Pro kostet $14.99/Monat zuzüglich Steuern, mit 20 % Rabatt bei jährlicher Abrechnung. Eine deutsche Oberfläche ist in unseren Daten nicht bestätigt. Wenn dir Herkunft wichtig ist, lohnt der Test, wenn nicht, vergleich nüchtern mit den großen Chatbots.",
+  "jean": "Der KI-Nachbar aus Europa. Vergleichen schadet trotzdem nicht.",
+  "passt_wenn": [
+   "Passt, wenn du eine europäische KI-Alternative suchst",
+   "Passt, wenn du Chat und Coding in einem Agenten willst",
+   "Passt, wenn du gratis reinschnuppern möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn dir die Herkunft der KI egal ist",
+   "Lass es, wenn du eine bestätigte deutsche Oberfläche brauchst"
+  ]
+ },
+ "murf": {
+  "meinung": "Murf ist ein Sprecherstudio für Voiceovers, gedacht für E-Learning, Präsentationen und Videos: Text-to-Speech-Studio, eine API für Voice Agents und Dubbing. Beim Testen wird es knapp, denn die Probe umfasst 10 Minuten Sprachgenerierung, und zwar ohne Downloads. Das ist wie eine Probefahrt, bei der du den Wagen nicht vom Hof fahren darfst. Ob es einen dauerhaften Gratis-Tarif oder eine deutsche Oberfläche gibt, steht in unseren Daten nicht, einen Einstiegspreis haben wir ebenfalls nicht verifiziert. Prüf das also direkt beim Anbieter, bevor du planst.",
+  "jean": "Probefahrt auf dem Hof. Zehn Minuten hören, aber nichts mitnehmen.",
+  "passt_wenn": [
+   "Passt, wenn du Sprechertexte für E-Learning brauchst",
+   "Passt, wenn du Präsentationen professionell vertonen willst",
+   "Passt, wenn du per API Voice Agents bauen möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du beim Testen schon Dateien brauchst",
+   "Lass es, wenn du transparente Preise vorab sehen willst"
+  ]
+ },
+ "n8n": {
+  "meinung": "Für Leute, die ihren Motor gern selbst zerlegen, gibt es n8n: Workflow-Automatisierung mit KI-Agenten, wahlweise in der Cloud oder selbst gehostet. Gratis ist die selbst gehostete Community Edition, die Cloud kannst du 14 Tage testen und danach ab 20 €/Monat im Starter-Tarif jährlich nutzen. Für technisch versierte Teams und Entwickler ist das ein starkes Paket. Wer aber bei Begriffen wie Server oder Docker schon nervös wird, bezahlt besser für die Cloud oder schaut sich einfachere Tools an. Eine deutsche Oberfläche ist nicht bestätigt.",
+  "jean": "Für Schrauber, die ihren Server selbst warten. Sonst lieber die Cloud nehmen.",
+  "passt_wenn": [
+   "Passt, wenn du Automationen auf eigenem Server betreiben willst",
+   "Passt, wenn du KI-Agenten in Workflows einbauen möchtest",
+   "Passt, wenn dein Team technisch fit ist"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du von Hosting keine Ahnung hast",
+   "Lass es, wenn du alles nur zusammenklicken willst"
+  ]
+ },
+ "notebooklm": {
+  "meinung": "Gemini Notebook, früher NotebookLM, ist Googles Lern- und Rechercheassistent, der mit deinen eigenen Quellen arbeitet. Daraus macht es Audio- und Video-Overviews, Berichte und Lernkarten, mit deutscher Oberfläche. Das ist wie ein Lernpartner, der nur deine Mitschriften kennt und nicht ständig vom Thema abschweift. Gratis geht, mehr gibt es über Google AI Plus für 4,99 €/Monat in Deutschland. Wer keine eigenen Dokumente mitbringt, hat allerdings wenig davon, der Assistent braucht Futter.",
+  "jean": "Lernpartner, der nur deine Mitschriften kennt. Ohne Unterlagen bleibt er stumm.",
+  "passt_wenn": [
+   "Passt, wenn du aus eigenen Dokumenten lernen willst",
+   "Passt, wenn du Unterlagen als Audio hören möchtest",
+   "Passt, wenn du Lernkarten automatisch erstellen willst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du keine eigenen Quellen hast",
+   "Lass es, wenn du ohne Google-Konto arbeiten willst"
+  ]
+ },
+ "notion": {
+  "meinung": "Eine große Pinnwand, an der Notizen, Wikis, Datenbanken und Projekte nebeneinander hängen, mit eingebauter KI und deutscher Oberfläche: So ungefähr funktioniert Notion. Für Teams, die Wissen und Aufgaben an einem Ort bündeln wollen, ist das stark. Aber Achtung beim Kleingedruckten: Im Gratis- und Plus-Tarif ist Notion AI nur als Test enthalten. Plus kostet $10/Monat pro Mitglied, Notion Agent und KI-Meeting-Notizen gibt es erst ab Business für $20. Wer die KI ernsthaft nutzen will, rechnet also besser gleich mit dem größeren Tarif.",
+  "jean": "Gute Pinnwand. Die KI-Nadeln gibt es aber erst im Business-Tarif.",
+  "passt_wenn": [
+   "Passt, wenn dein Team ein gemeinsames Wiki braucht",
+   "Passt, wenn du Projekte und Notizen verknüpfen willst",
+   "Passt, wenn du auf Deutsch arbeiten möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du volle KI im günstigen Tarif erwartest",
+   "Lass es, wenn du nur eine simple Notiz-App suchst"
+  ]
+ },
+ "opusclip": {
+  "meinung": "OpusClip schneidet lange Videos per KI in kurze Clips, mit Untertiteln, Reframing und einem Virality Score. Für Podcaster und Creator, die aus einer Folge zehn Shorts, Reels und TikToks machen wollen, ist das ein Fleißautomat. Gratis geht, Starter kostet $15/Monat, eine Testphase gibt es auch, deren Dauer aber auf der Seite nicht angegeben ist. Eine deutsche Oberfläche ist nicht bestätigt. Den Virality Score würde ich behandeln wie eine Wettervorhersage: nett zu wissen, aber nimm trotzdem einen Schirm mit.",
+  "jean": "Aus einer Folge zehn Shorts. Den Virality Score lies wie den Wetterbericht.",
+  "passt_wenn": [
+   "Passt, wenn du aus Podcasts Shorts machen willst",
+   "Passt, wenn du automatische Untertitel brauchst",
+   "Passt, wenn du Hochformat ohne Handarbeit willst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du keine langen Videos produzierst",
+   "Lass es, wenn du jeden Schnitt selbst setzen willst"
+  ]
+ },
+ "otter-ai": {
+  "meinung": "Otter.ai sitzt in deinen Zoom-, Teams- und Google-Meet-Calls und schreibt mit: Live-Transkription, Sprechererkennung und KI-Zusammenfassungen. Laut Anbieter transkribiert es auch Deutsch, eine deutsche Oberfläche ist aber nicht bestätigt. Gratis starten geht, Pro kostet $8,49/Monat pro Nutzer jährlich oder $16,99 monatlich. Für Teams mit vielen Online-Meetings ist das wie ein Protokollführer, der nie zu spät kommt und nie Kaffee holen muss. Kläre aber vor jedem Call, ob wirklich alle Teilnehmenden mit der Aufzeichnung einverstanden sind.",
+  "jean": "Der Protokollführer, der nie zu spät kommt. Vorher alle fragen.",
+  "passt_wenn": [
+   "Passt, wenn du täglich in Online-Meetings sitzt",
+   "Passt, wenn du Zusammenfassungen statt eigener Notizen willst",
+   "Passt, wenn du wissen willst, wer was gesagt hat"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn deine Meetings meist offline stattfinden",
+   "Lass es, wenn deine Teilnehmenden Aufzeichnungen ablehnen"
+  ]
+ },
+ "perplexity": {
+  "meinung": "Statt dich durch zehn blaue Links zu schicken, legt dir Perplexity Antworten samt Quellen hin. Pro bringt Tiefenrecherche, die Wahl zwischen Modellen verschiedener Anbieter und den Agenten Computer, der Dokumente und Apps erstellt. Für Recherche mit nachprüfbaren Quellen ist das mein Favorit, und die Oberfläche spricht Deutsch. Gratis geht, Pro kostet $17/Monat bei jährlicher Abrechnung. Die Quellen klickst du trotzdem selbst an, denn auch ein guter Bibliothekar greift mal ins falsche Regal.",
+  "jean": "Antworten mit Quellen. Klick sie trotzdem an, auch Bibliothekare irren.",
+  "passt_wenn": [
+   "Passt, wenn du Fakten mit Quellen belegen musst",
+   "Passt, wenn du verschiedene KI-Modelle vergleichen willst",
+   "Passt, wenn du Tiefenrecherche für Projekte brauchst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du vor allem lange Texte schreiben willst",
+   "Lass es, wenn du Quellen nie prüfen möchtest"
+  ]
+ },
+ "pictory": {
+  "meinung": "Pictory macht aus Skripten, URLs oder Präsentationen Videos mit Stockmaterial, KI-Stimmen und Untertiteln. Für Marketer, die ihre Blogartikel in Videos verwandeln wollen, ist das ein bequemer Fleischwolf: Text oben rein, Clip unten raus. Einen Gratis-Tarif gibt es nicht, nur 14 Tage Test, danach zahlst du $25/Monat im Starter-Tarif bei jährlicher Abrechnung. Eine deutsche Oberfläche ist nicht bestätigt. Rechne damit, dass Stockmaterial eher solide als einzigartig aussieht, für Markenvideos mit eigenem Look wird das schnell zu generisch.",
+  "jean": "Text rein, Video raus. Einzigartig wird es mit Stockmaterial selten.",
+  "passt_wenn": [
+   "Passt, wenn du Blogartikel in Videos umwandeln willst",
+   "Passt, wenn du automatisch Untertitel brauchst",
+   "Passt, wenn du Präsentationen schnell verfilmen möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du dauerhaft gratis arbeiten willst",
+   "Lass es, wenn dein Video einen eigenen Look braucht"
+  ]
+ },
+ "pika": {
+  "meinung": "Kurze Clips für Social Media sind das Revier von Pika, einer KI-Plattform für Video- und Bilderzeugung. Die Pläne heißen Starter, Creator und Fancy und laufen über Credits. Einen Gratis-Tarif gibt es, einen konkreten Einstiegspreis für die Bezahlpläne haben wir aber nicht verifiziert, und eine deutsche Oberfläche ist nicht bestätigt. Für den schnellen Reel-Effekt ist das wie eine Wunderkerze: kurz, hübsch, schnell vorbei. Für längere Erklärvideos würde ich zu einem anderen Tool greifen.",
+  "jean": "Eine Wunderkerze für Reels. Für lange Videos brennt sie zu kurz.",
+  "passt_wenn": [
+   "Passt, wenn du kurze Clips für Social Media brauchst",
+   "Passt, wenn du erst gratis rumprobieren willst",
+   "Passt, wenn dich Credit-Pläne nicht abschrecken"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du lange Erklärvideos planst",
+   "Lass es, wenn du vorab klare Preise brauchst"
+  ]
+ },
+ "quillbot": {
+  "meinung": "Vor allem Studierende greifen zu QuillBot: ein Paraphrasierer mit über 10 Modi, dazu Plagiatsprüfung und KI-Detektor. Es gibt einen Gratis-Tarif, einen Einstiegspreis für die Bezahlversion haben wir aber nicht verifiziert, und eine deutsche Oberfläche ist nicht bestätigt. Ehrlich gesagt: Umformulieren ist kein Ersatz fürs eigene Denken, so wie ein neuer Lack keinen Rost wegzaubert. Für das Glätten eigener Sätze ist das hilfreich, für die Hausarbeit aus fremden Quellen eher ein Risiko.",
+  "jean": "Neuer Lack zaubert keinen Rost weg. Denk erst, dann umformulieren.",
+  "passt_wenn": [
+   "Passt, wenn du eigene Sätze in mehreren Stilen testen willst",
+   "Passt, wenn du Texte auf Plagiate prüfen musst",
+   "Passt, wenn du gratis starten möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du fremde Texte nur verschleiern willst",
+   "Lass es, wenn du transparente Preise vorab brauchst"
+  ]
+ },
+ "replit": {
+  "meinung": "Eine komplette Werkstatt, die nur einen Browser-Tab braucht: Bei Replit bekommst du eine Entwicklungsumgebung samt Replit Agent, der Apps erstellt und bereitstellt. Kein Setup, keine Installation, kein Gefummel mit Versionen, du öffnest den Tab und legst los. Gratis geht, Core kostet $20/Monat oder $18/Monat bei jährlicher Abrechnung. Eine deutsche Oberfläche ist nicht bestätigt. Der Haken ist die Bindung: Wer alles im Browser baut und hostet, zieht später nicht so leicht um wie mit Umzugskartons aus dem eigenen Keller.",
+  "jean": "Werkstatt im Browser. Der Umzug später braucht mehr als ein paar Kartons.",
+  "passt_wenn": [
+   "Passt, wenn du ohne lokales Setup programmieren willst",
+   "Passt, wenn du Apps direkt aus dem Browser veröffentlichst",
+   "Passt, wenn du von verschiedenen Rechnern arbeitest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du deine Entwicklungsumgebung lokal willst",
+   "Lass es, wenn du Abhängigkeit von einer Plattform vermeidest"
+  ]
+ },
+ "runway": {
+  "meinung": "Wer KI-Videos in hoher Qualität braucht, landet früher oder später bei Runway, einem KI-Videostudio mit eigenen und fremden Bild- und Videomodellen für Creator und Agenturen. Der Gratis-Tarif hat 125 einmalige Credits, das reicht zum Reinschnuppern, aber nicht für ein echtes Kundenprojekt. Bezahlt gibt es kein Wasserzeichen und 4K-Upscaling, Standard kostet $12/Monat jährlich oder $15 monatlich. Eine deutsche Oberfläche ist nicht bestätigt. KI-Video frisst Credits wie ein alter Zweitakter Sprit, also rechne lieber großzügig.",
+  "jean": "Frisst Credits wie ein Zweitakter Sprit. Tank lieber großzügig.",
+  "passt_wenn": [
+   "Passt, wenn du hochwertige KI-Videos für Kunden brauchst",
+   "Passt, wenn du ohne Wasserzeichen veröffentlichen willst",
+   "Passt, wenn du verschiedene Videomodelle testen möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du dauerhaft gratis Videos erzeugen willst",
+   "Lass es, wenn du Credit-Abrechnung nervig findest"
+  ]
+ },
+ "rytr": {
+  "meinung": "Klein, günstig und immer griffbereit wie ein Notizblock in der Jackentasche, so würde ich Rytr beschreiben: über 40 Anwendungsfälle, mehr als 30 Sprachen und inzwischen auch verbundene Quellen, Kontaktpflege, Personenrecherche und tägliche Briefings. Der Gratis-Tarif bietet 10.000 Zeichen pro Monat, Lite kostet $9/Monat. Gedacht ist das für Einsteiger mit kleinem Budget, die regelmäßig kurze Texte brauchen. Für einen langen Fachartikel sind 10.000 Zeichen allerdings schneller weg als die Chips beim Fußballabend. Eine deutsche Oberfläche ist nicht bestätigt.",
+  "jean": "Jackentaschen-Texter für kurze Sachen. Lange Artikel fressen das Kontingent.",
+  "passt_wenn": [
+   "Passt, wenn du regelmäßig kurze Texte schreibst",
+   "Passt, wenn du in mehreren Sprachen formulierst",
+   "Passt, wenn dein Budget bei $9 aufhört"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du lange Fachartikel generieren willst",
+   "Lass es, wenn du eine deutsche Oberfläche brauchst"
+  ]
+ },
+ "se-ranking": {
+  "meinung": "SE Ranking ist für mich der solide Mittelklassewagen unter den SEO-Plattformen: Rank Tracker, Website-Audit, Backlink-Analyse, Keyword-Recherche und sogar KI-Sichtbarkeits-Tracking, alles mit deutscher Oberfläche. Gebaut ist das laut Anbieter für Freelancer, KMU und Agenturen mit begrenztem Budget. Begrenzt heißt hier trotzdem $129/Monat im Core-Tarif oder $103,20/Monat bei jährlicher Zahlung. Einen Gratis-Tarif gibt es nicht, nur 14 Tage Test, also plan die zwei Wochen wie einen Probemonat im Fitnessstudio: richtig nutzen, nicht nur anmelden.",
+  "jean": "Mittelklasse mit vollem Kofferraum. Nutz die 14 Tage, als würdest du schon zahlen.",
+  "passt_wenn": [
+   "Passt, wenn du Rankings für mehrere Kunden verfolgst",
+   "Passt, wenn du Backlinks und Audits in einem Tool willst",
+   "Passt, wenn du KI-Sichtbarkeit nebenbei mittracken möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du dauerhaft gratis arbeiten willst",
+   "Lass es, wenn du nur einmal im Jahr Keywords suchst"
+  ]
+ },
+ "semrush": {
+  "meinung": "Stell dir einen Werkzeugwagen mit zwanzig Schubladen vor, von denen du als Solo-Blogger vielleicht zwei aufziehst: Das ist Semrush. Keyword-Recherche, Wettbewerbsanalyse, Position Tracking und Site Audit stecken drin, die Oberfläche gibt es auf Deutsch, und seit dem 28. April 2026 gehört der Laden zu Adobe. Für Agenturen und Marketing-Teams mit viel SEO-Arbeit rechnet sich das. Der Haken ist der Preis: $139/Monat im SEO-Plan, jährlich $117,33/Monat, das spürst du als Einzelkämpfer im Geldbeutel. Nimm erst den Gratis-Tarif oder die 7 Tage Testphase mit, bevor du unterschreibst.",
+  "jean": "Zwanzig Schubladen, ein großer Preis. Erst testen, dann den Wagen kaufen.",
+  "passt_wenn": [
+   "Passt, wenn du mehrere Kundenprojekte gleichzeitig betreust",
+   "Passt, wenn du Wettbewerber und Rankings täglich im Blick brauchst",
+   "Passt, wenn dein Team lieber auf Deutsch klickt"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du nur einen kleinen Hobbyblog pflegst",
+   "Lass es, wenn $139 im Monat dein Budget sprengen"
+  ]
+ },
+ "suno": {
+  "meinung": "Suno macht aus Textprompts Songs und Musik, und das ist ehrlich gesagt die lustigste Art, einen Geburtstagsgruß zu verschicken. Der Free-Plan bietet täglich 50 Credits, Pro und Premier sind die Bezahlpläne, Pro gibt es laut Suno ab $8/Monat. Eine deutsche Oberfläche ist nicht bestätigt. Für Hobbymusiker und Content-Creator ist das ein schneller Jingle-Automat. Wer aber selbst Gitarre spielt und eigene Songs schreibt, bekommt hier eher eine Karaokemaschine als ein Tonstudio.",
+  "jean": "Jingle-Automat für den Geburtstagsgruß. Kein Ersatz für deine Gitarre.",
+  "passt_wenn": [
+   "Passt, wenn du schnell Musik für Videos brauchst",
+   "Passt, wenn du täglich gratis ein paar Songs testen willst",
+   "Passt, wenn du Spaß an Liedern per Prompt hast"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du jedes Instrument selbst einspielen willst",
+   "Lass es, wenn du eine deutsche Oberfläche brauchst"
+  ]
+ },
+ "surfer-seo": {
+  "meinung": "Surfer SEO ist eher der Schreibtrainer als das Analyselabor: Du erstellst und optimierst Content für Google und die KI-Suche, dazu kommt ein Tracking, wie sichtbar deine Marke in KI-Modellen ist. Für Content-Teams und SEO-Texter ist das ein klarer Fokus. Der Einstieg liegt bei $49/Monat im Discovery-Tarif, allerdings nur bei jährlicher Abrechnung, und weder Gratis-Tarif noch Testphase sind in unseren Daten zu finden. Ob die Oberfläche Deutsch kann, ist nicht bestätigt. Du kaufst also ein bisschen wie Schuhe online: Größe vorher gut abschätzen.",
+  "jean": "Schreibtrainer für Texter, aber du kaufst ohne Anprobe und gleich fürs ganze Jahr.",
+  "passt_wenn": [
+   "Passt, wenn du regelmäßig Blogartikel für Google schreibst",
+   "Passt, wenn du wissen willst, wie KI-Modelle deine Marke sehen",
+   "Passt, wenn ein Jahresabo für dich kein Problem ist"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du erst gratis reinschnuppern möchtest",
+   "Lass es, wenn du Keyword-Tracking und Backlinks im Fokus hast"
+  ]
+ },
+ "synthesia": {
+  "meinung": "Schulungsvideos ohne Beamer-Ärger und ohne Kamerateam, das verspricht Synthesia: Du erstellst Videos mit KI-Avataren, Dubbing, Umfragen und KI-Rollenspiel-Trainings, dazu gibt es den Videoagenten Syren. Gedacht ist das für Unternehmen, die Schulungs- und Erklärvideos brauchen, und die deutsche Oberfläche passt dazu. Es gibt einen Gratis-Tarif, der Starter-Tarif kostet $19/Monat, der erste Monat $9. Für den YouTube-Kanal mit Persönlichkeit ist ein Avatar aber ungefähr so charmant wie die Bandansage beim Kundenservice am Montagmorgen.",
+  "jean": "Super für Schulungen. Für Persönlichkeit vor der Kamera bleibst du der Profi.",
+  "passt_wenn": [
+   "Passt, wenn du Schulungsvideos für Mitarbeitende produzierst",
+   "Passt, wenn du Erklärvideos ohne Kamera und Studio willst",
+   "Passt, wenn du Rollenspiel-Trainings digital abbilden möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn dein Gesicht deine Marke ist",
+   "Lass es, wenn du nur ein einziges Video brauchst"
+  ]
+ },
+ "systeme-io": {
+  "meinung": "Bei Systeme.io landet alles in einem Umzugskarton: Sales Funnels, E-Mail-Marketing, Onlinekurse, Websites und sogar Affiliate-Programme. Für Solo-Selbstständige und Kursanbieter ist das praktisch, weil du nicht fünf Tools zusammenkleben musst. Es gibt einen Gratis-Tarif, die deutsche Oberfläche ist an Bord, und der Startup-Tarif kostet $17/Monat. Der Haken bei solchen Alleskönnern: Jede einzelne Disziplin ist selten so tief wie beim Spezialisten. Wer nur einen ausgefeilten Newsletter will, ist bei einem reinen E-Mail-Tool vermutlich besser aufgehoben.",
+  "jean": "Ein Karton für Funnel, Kurs und Mails. Gratis anfangen tut nicht weh.",
+  "passt_wenn": [
+   "Passt, wenn du Onlinekurse verkaufen willst",
+   "Passt, wenn du Funnel und E-Mails in einem Tool brauchst",
+   "Passt, wenn du ohne Startkosten loslegen möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du nur einen Newsletter verschicken willst",
+   "Lass es, wenn du für jede Disziplin das tiefste Spezialtool suchst"
+  ]
+ },
+ "tally": {
+  "meinung": "Endlich mal ein Formular-Tool, bei dem der Gratis-Tarif nicht nach drei Antworten den Hahn zudreht, denn Tally bietet unbegrenzte Formulare und Antworten kostenlos, dazu Logik, Zahlungen und Integrationen. Für Startups und Creator mit kleinem Budget ist das ein echter Glücksgriff, gerade in der Anfangszeit. Pro kostet $29/Monat monatlich oder $290/Jahr. Eine deutsche Oberfläche ist in unseren Daten nicht bestätigt. Wer hochgestylte Umfrageerlebnisse mit viel Animation sucht, bekommt hier eher ein ordentliches Werkzeug als eine Bühnenshow.",
+  "jean": "Gratis heißt hier wirklich gratis. Für Showeffekte gibt es Bühnen.",
+  "passt_wenn": [
+   "Passt, wenn du viele Formulare ohne Kosten brauchst",
+   "Passt, wenn du Zahlungen direkt im Formular annehmen willst",
+   "Passt, wenn dein Budget gerade sehr schmal ist"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du ein deutsches Interface brauchst",
+   "Lass es, wenn dein Formular wie eine Show wirken soll"
+  ]
+ },
+ "tldv": {
+  "meinung": "Der Name tl;dv steht für einen KI-Meeting-Recorder, der Besprechungen aufzeichnet, transkribiert und zusammenfasst, gedacht für Sales- und Remote-Teams. Die Abkürzung ist Programm: zu lang, nicht gesehen, also lies einfach die Zusammenfassung statt der ganzen Aufnahme. Gratis starten geht, Pro kostet 29,00 €/Nutzer/Monat monatlich oder 18,00 € bei jährlicher Abrechnung. Eine deutsche Oberfläche ist nicht bestätigt. Für ein Team mit zehn Leuten summiert sich das wie die Rechnung bei der Weihnachtsfeier, also rechne pro Kopf.",
+  "jean": "Zu lang, nicht gesehen. Rechne den Preis aber pro Kopf.",
+  "passt_wenn": [
+   "Passt, wenn dein Sales-Team viele Kundengespräche führt",
+   "Passt, wenn du Remote-Meetings später nachlesen willst",
+   "Passt, wenn du Preise in Euro planst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn dein Team groß und das Budget klein ist",
+   "Lass es, wenn du Meetings lieber von Hand mitschreibst"
+  ]
+ },
+ "typeform": {
+  "meinung": "Typeform stellt eine Frage nach der anderen, ein bisschen wie ein höflicher Kellner, statt dir die ganze Speisekarte ins Gesicht zu halten. Dazu kommen KI-Formulare, Umfragen, Quizze, Logik, Integrationen und Analysen. Für Marketing-Teams mit Fokus auf Leadgenerierung ist das stark. Gratis starten geht, Basic kostet $28/Monat jährlich oder $39/Monat monatlich. Eine deutsche Oberfläche ist nicht bestätigt, und wer nur ein simples Kontaktformular will, zahlt hier für Servierkunst, die er nicht braucht.",
+  "jean": "Ein höflicher Kellner für deine Fragen. Fürs Kontaktformular reicht der Tresen.",
+  "passt_wenn": [
+   "Passt, wenn du Leads mit ansprechenden Formularen sammelst",
+   "Passt, wenn du Quizze für dein Marketing baust",
+   "Passt, wenn dir Antwortquoten wichtig sind"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du nur ein simples Kontaktformular brauchst",
+   "Lass es, wenn du unbegrenzt gratis arbeiten willst"
+  ]
+ },
+ "v0": {
+  "meinung": "v0 von Vercel erzeugt Apps per Prompt, mit visuellem Editing im Design Mode, GitHub-Sync und Deployment auf Vercel. Für Frontend-Prototypen im Vercel-Ökosystem ist das ein sehr kurzer Weg von der ersten Idee zur klickbaren Vorschau. Gratis starten geht, Plus kostet $30/Nutzer/Monat zuzüglich Steuern. Eine deutsche Oberfläche ist nicht bestätigt. Wer aber nicht bei Vercel hosten will, nutzt das wie eine Kaffeemaschine, die nur eine Kapselsorte schluckt: Es geht, aber du merkst die Bindung.",
+  "jean": "Kapselmaschine fürs Vercel-Ökosystem. Andere Kapseln passen schlechter.",
+  "passt_wenn": [
+   "Passt, wenn du Frontend-Prototypen schnell sehen willst",
+   "Passt, wenn du ohnehin bei Vercel deployst",
+   "Passt, wenn du Code per GitHub synchron halten willst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du woanders hosten möchtest",
+   "Lass es, wenn $30 pro Nutzer dein Team sprengen"
+  ]
+ },
+ "webflow": {
+  "meinung": "Unter den Website-Baukästen spielt Webflow in der Profiliga: visuelle Webentwicklung, CMS, Hosting, Lokalisierung und KI-Funktionen, dazu eine deutsche Oberfläche. Für Webdesigner, Agenturen und Marketing-Teams ist das ein ernsthaftes Arbeitsgerät. Gratis starten geht, der Basic-Tarif kostet $15/Monat jährlich oder $25/Monat monatlich. Der Haken ist die Lernkurve: Webflow denkt in Boxen und Klassen wie ein Entwickler, nur ohne Code. Für die schnelle Visitenkarte vom Friseur nebenan ist das wie ein Kran, um einen Bilderrahmen aufzuhängen.",
+  "jean": "Ein Kran für Profis. Für den Bilderrahmen reicht ein Hammer.",
+  "passt_wenn": [
+   "Passt, wenn du professionell Websites für Kunden baust",
+   "Passt, wenn du mehrsprachige Seiten mit CMS planst",
+   "Passt, wenn du Webdesign ohne Code ernsthaft lernen willst"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du nur eine schnelle Visitenkarte brauchst",
+   "Lass es, wenn du keine Lust auf Einarbeitung hast"
+  ]
+ },
+ "wordtune": {
+  "meinung": "Wordtune arbeitet wie ein Englischlehrer, der dir über die Schulter schaut: Er korrigiert Rechtschreibung und Grammatik und formuliert Sätze um, allerdings nur für englische Texte. Für deutsche Mails bringt es dir also genau nichts. Gratis gibt es eine begrenzte Nutzung, die Testphase dauert 3 Tage, Advanced kostet $6,99/Monat oder $4,89/Monat jährlich. Studierende und Non-Profits bekommen 30 % Rabatt. Für alle, die beruflich Englisch schreiben und Sätze glätten wollen, ist das ein günstiger Helfer.",
+  "jean": "Englischlehrer für kleines Geld. Deutsche Texte lässt er links liegen.",
+  "passt_wenn": [
+   "Passt, wenn du regelmäßig englische Mails schreibst",
+   "Passt, wenn du studierst und Rabatt mitnehmen willst",
+   "Passt, wenn du holprige Sätze umformulieren möchtest"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du hauptsächlich auf Deutsch schreibst",
+   "Lass es, wenn drei Testtage dir zu knapp sind"
+  ]
+ },
+ "writesonic": {
+  "meinung": "Writesonic hat sich vom Texter zum SEO-Kontrollturm entwickelt: SEO und KI-Sichtbarkeit (GEO) mit Tracking in ChatGPT und Gemini, dazu KI-Artikel und Site Audits. Für Marketing-Teams, die wissen wollen, ob ihre Marke in KI-Antworten auftaucht, ist das spannend. Der Starter-Tarif kostet $79/Monat bei jährlicher Abrechnung, einen Gratis-Tarif gibt es nicht, eine Testphase schon, deren Dauer aber nicht angegeben ist. Eine deutsche Oberfläche ist nicht bestätigt. Für den gelegentlichen Blogtext ist das wie ein Radarturm für ein Ruderboot.",
+  "jean": "Radarturm für die KI-Suche. Fürs Ruderboot reicht ein Kompass.",
+  "passt_wenn": [
+   "Passt, wenn du deine Sichtbarkeit in ChatGPT tracken willst",
+   "Passt, wenn dein Team SEO und GEO zusammen denkt",
+   "Passt, wenn du ein Jahresbudget fürs Marketing hast"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du nur ab und zu Texte schreibst",
+   "Lass es, wenn du einen Gratis-Tarif suchst"
+  ]
+ },
+ "zapier": {
+  "meinung": "Wie ein Verlängerungskabel verbindet Zapier fast jede App mit jeder anderen verbindet, über sogenannte Zaps, dazu kommen Tables, Forms und KI-Funktionen. Gedacht ist es für Nicht-Techniker, die Apps schnell verbinden wollen, und die deutsche Oberfläche hilft dabei. Es gibt einen Gratis-Tarif und 14 Tage Test, der Professional-Tarif kostet $19,99/Monat bei jährlicher Zahlung. Der Haken: Für einfache Wenn-dann-Abläufe ist es bequem, bei sehr verzweigten Szenarien wirkt es schnell wie ein Kabelsalat hinterm Fernseher.",
+  "jean": "Verlängerungskabel für deine Apps. Bei zu vielen Steckern wird es Kabelsalat.",
+  "passt_wenn": [
+   "Passt, wenn du ohne Technikwissen Apps verbinden willst",
+   "Passt, wenn du einfache Wenn-dann-Abläufe automatisieren möchtest",
+   "Passt, wenn dir eine deutsche Oberfläche wichtig ist"
+  ],
+  "lass_es_wenn": [
+   "Lass es, wenn du hochkomplexe, verzweigte Workflows planst",
+   "Lass es, wenn du alles selbst hosten möchtest"
+  ]
+ }
+}

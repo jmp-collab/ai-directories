@@ -165,21 +165,21 @@ export default function ToolPage({ params }) {
                     <div className="pro-contra">
                         <div>
                             <p>
-                                <strong>Passt, wenn du …</strong>
+                                <strong>Passt 👍</strong>
                             </p>
                             <ul>
                                 {TEXTE[t.slug].passt_wenn.map((x) => (
-                                    <li key={x}>{x.replace(/^Passt, wenn du\s*/i, '')}</li>
+                                    <li key={x}>{x}</li>
                                 ))}
                             </ul>
                         </div>
                         <div>
                             <p>
-                                <strong>Lass es, wenn du …</strong>
+                                <strong>Lass es 👎</strong>
                             </p>
                             <ul>
                                 {TEXTE[t.slug].lass_es_wenn.map((x) => (
-                                    <li key={x}>{x.replace(/^Lass es, wenn du\s*/i, '')}</li>
+                                    <li key={x}>{x}</li>
                                 ))}
                             </ul>
                         </div>
