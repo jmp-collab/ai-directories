@@ -3,6 +3,7 @@ import JsonLd from '../components/JsonLd'
 import Jean from '../components/Jean'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import { SITE_NAME, absoluteUrl, withBase } from '../../lib/site'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'Über Jean Maurice Port: SEO/SGE Manager & KI-Praktiker',
@@ -95,7 +96,7 @@ const LINKS = [
     },
 ]
 
-export default function AboutPage() {
+function AboutPage() {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'Über Jean', path: '/ueber-jean' },
@@ -227,6 +228,15 @@ export default function AboutPage() {
             <p>
                 <Link href="/">← Zurück zu den KI-Verzeichnissen</Link>
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <AboutPage />
+            <Vernetzt pfad={seitenPfad('/ueber-jean')} />
         </>
     )
 }

@@ -4,6 +4,7 @@ import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
 import { SITE_NAME } from '../../../lib/site'
 import { KB_RUBRIKEN } from '../../../lib/kb'
 import { getAlternativenHubs } from '../../../lib/alternativen'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const metadata = {
     title: 'Alternativen zu Midjourney, Perplexity, Copilot & Co.',
@@ -11,7 +12,7 @@ export const metadata = {
     alternates: { canonical: '/ki-tools/alternativen' },
 }
 
-export default function AlternativenIndex() {
+function AlternativenIndex() {
     const hubs = getAlternativenHubs()
     const crumbs = [
         { name: SITE_NAME, path: '/' },
@@ -50,6 +51,15 @@ export default function AlternativenIndex() {
                     </li>
                 ))}
             </ul>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <AlternativenIndex />
+            <Vernetzt pfad={seitenPfad('/ki-tools/alternativen')} />
         </>
     )
 }

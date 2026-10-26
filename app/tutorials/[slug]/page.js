@@ -13,6 +13,7 @@ import { getPrompt } from '../../../lib/prompts'
 import { getTool, toolHref, toolRel } from '../../../lib/tools'
 import { getLeadmagnet } from '../../../lib/leadmagnets'
 import { NEWSLETTER_NAME, NEWSLETTER_URL } from '../../../lib/monetization'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -26,7 +27,7 @@ export function generateMetadata({ params }) {
     return { title: t.title.length > 45 ? t.title : `${t.title}: Tutorial`, description: t.description.slice(0, 300), alternates: { canonical: `/tutorials/${t.slug}` } }
 }
 
-export default function TutorialPage({ params }) {
+function TutorialPage({ params }) {
     const t = getTutorial(params.slug)
     if (!t) notFound()
     const prompts = (t.prompts || []).map(getPrompt).filter(Boolean)
@@ -110,6 +111,15 @@ export default function TutorialPage({ params }) {
             <p>
                 <Link href="/tutorials">← Alle Tutorials</Link>
             </p>
+        </>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <TutorialPage params={params} />
+            <Vernetzt pfad={seitenPfad('/tutorials/[slug]', params)} />
         </>
     )
 }

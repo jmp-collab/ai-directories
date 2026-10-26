@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Breadcrumbs from '../../components/Breadcrumbs'
 import { SITE_NAME } from '../../../lib/site'
 import { KB_SOURCES, KB_STAND, kbStats } from '../../../lib/kb'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const metadata = {
     title: 'KI-Tool-Datenbank: Quellen, Lizenzen und Methode',
@@ -9,7 +10,7 @@ export const metadata = {
     alternates: { canonical: '/ki-tools/quellen' },
 }
 
-export default function QuellenPage() {
+function QuellenPage() {
     const s = kbStats()
     return (
         <>
@@ -85,6 +86,15 @@ export default function QuellenPage() {
             <p>
                 <Link href="/ki-tools">← Zur KI-Tool-Datenbank</Link>
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <QuellenPage />
+            <Vernetzt pfad={seitenPfad('/ki-tools/quellen')} />
         </>
     )
 }

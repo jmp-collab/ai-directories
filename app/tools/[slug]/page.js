@@ -15,6 +15,7 @@ import { ABO_PREISE, breakEvenMonate } from '../../../lib/abo-preise'
 import { hatAlternativenHub } from '../../../lib/alternativen'
 import Faq, { faqSchema } from '../../components/Faq'
 import { Band } from '../../components/Deko'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -78,7 +79,7 @@ function toolFaq(t, alternativen, abo) {
     return f
 }
 
-export default function ToolPage({ params }) {
+function ToolPage({ params }) {
     const t = getTool(params.slug)
     if (!t) notFound()
     const alternatives = getAlternatives(t)
@@ -295,6 +296,15 @@ export default function ToolPage({ params }) {
                 {kb && hatAlternativenHub(kb.slug) && <Link href={`/ki-tools/alternativen/${kb.slug}`}>Alle Alternativen zu {t.name}</Link>}
                 {rubrik && <Link href={`/ki-tools/${rubrik.key}`}>Rubrik {rubrik.name}</Link>}
             </p>
+        </>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <ToolPage params={params} />
+            <Vernetzt pfad={seitenPfad('/tools/[slug]', params)} />
         </>
     )
 }

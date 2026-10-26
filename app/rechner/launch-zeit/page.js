@@ -8,6 +8,7 @@ import LaunchRechner from '../../components/LaunchRechner'
 import { SITE_NAME } from '../../../lib/site'
 import { RECHNER } from '../../../lib/rechner'
 import { getSiteStats } from '../../../lib/data'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 const R = RECHNER.find((r) => r.slug === 'launch-zeit')
 
@@ -37,7 +38,7 @@ function LaunchRechnerMitDaten() {
     return <LaunchRechner gratis={s.free.length} reibungslos={s.freeAndSmooth.length} gesamt={s.total} />
 }
 
-export default function Page() {
+function Page() {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'Rechner', path: '/rechner' },
@@ -92,6 +93,15 @@ export default function Page() {
                 </ul>
             </section>
             <LeadMagnetBox id="prompt-spickzettel" />
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <Page />
+            <Vernetzt pfad={seitenPfad('/rechner/launch-zeit')} />
         </>
     )
 }

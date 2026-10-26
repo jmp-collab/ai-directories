@@ -19,6 +19,7 @@ import { absoluteUrl } from '../../../lib/site'
 import { submitRel } from '../../../lib/monetization'
 import { dealLabel, formatRating, formatVisits, pricingLabel } from '../../../utils/i18n-de'
 import TEXTE from '../../../db/texte/verzeichnisse.json'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -90,7 +91,7 @@ function staerken(d) {
     return s
 }
 
-export default function DirectoryPage({ params }) {
+function DirectoryPage({ params }) {
     const d = getDirectory(params.slug)
     if (!d) notFound()
 
@@ -283,5 +284,14 @@ export default function DirectoryPage({ params }) {
                 <Link href="/">← Zurück zu allen {total} KI-Verzeichnissen, das Karussell wartet</Link>
             </p>
         </article>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <DirectoryPage params={params} />
+            <Vernetzt pfad={seitenPfad('/verzeichnis/[slug]', params)} />
+        </>
     )
 }

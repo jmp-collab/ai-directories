@@ -3,6 +3,7 @@ import Jean from '../components/Jean'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import JsonLd from '../components/JsonLd'
 import { getDirectories } from '../../lib/data'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'Quiz: Welche KI-Verzeichnisse passen zu deinem Launch?',
@@ -12,7 +13,7 @@ export const metadata = {
     openGraph: { url: '/quiz' },
 }
 
-export default function QuizPage() {
+function QuizPage() {
     const crumbs = [
         { name: 'AIGeddon', path: '/' },
         { name: 'Quiz', path: '/quiz' },
@@ -37,6 +38,15 @@ export default function QuizPage() {
                 <Jean>Ich stelle die Fragen, du antwortest ehrlich. Ich merke es, wenn du beim Budget schummelst.</Jean>
             </section>
             <Quiz options={options} />
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <QuizPage />
+            <Vernetzt pfad={seitenPfad('/quiz')} />
         </>
     )
 }

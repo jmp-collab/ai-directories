@@ -5,6 +5,7 @@ import ZeitRechner from '../components/ZeitRechner'
 import { Band } from '../components/Deko'
 import { SITE_NAME } from '../../lib/site'
 import { RECHNER } from '../../lib/rechner'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'KI-Rechner: Abo, API-Kosten, Automatisierung & mehr',
@@ -12,7 +13,7 @@ export const metadata = {
     alternates: { canonical: '/rechner' },
 }
 
-export default function RechnerHub() {
+function RechnerHub() {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'Rechner', path: '/rechner' },
@@ -43,6 +44,15 @@ export default function RechnerHub() {
             <Band farbe="mint" id="schnell" titel="Schnellcheck: Lohnt sich ein KI-Abo für dich? ⏱️">
                 <ZeitRechner />
             </Band>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <RechnerHub />
+            <Vernetzt pfad={seitenPfad('/rechner')} />
         </>
     )
 }

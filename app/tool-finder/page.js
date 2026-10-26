@@ -6,6 +6,7 @@ import { Band } from '../components/Deko'
 import { SITE_NAME } from '../../lib/site'
 import { getKbTools, kbStats } from '../../lib/kb'
 import { getTools } from '../../lib/tools'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'KI-Tool-Finder: Welches KI-Tool passt zu mir?',
@@ -13,7 +14,7 @@ export const metadata = {
     alternates: { canonical: '/tool-finder' },
 }
 
-export default function ToolFinderPage() {
+function ToolFinderPage() {
     const gratisProfil = new Set(getTools().filter((t) => t.free_plan).map((t) => t.slug))
     const tools = getKbTools().map((t) => ({
         s: t.slug,
@@ -46,6 +47,15 @@ export default function ToolFinderPage() {
             <p className="box box-tipp">
                 Treffer gefunden? Teste die Chatbots im <Link href="/ki-test">KI-Test</Link> und rechne mit dem <Link href="/rechner/ki-zeitersparnis">Zeitersparnis-Rechner</Link> nach, ob sich das Abo lohnt.
             </p>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <ToolFinderPage />
+            <Vernetzt pfad={seitenPfad('/tool-finder')} />
         </>
     )
 }

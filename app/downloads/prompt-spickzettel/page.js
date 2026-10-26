@@ -2,6 +2,7 @@ import Link from 'next/link'
 import JeanIcon from '../../components/JeanIcon'
 import PrintButton from '../../components/PrintButton'
 import { TECHNIKEN } from '../../../lib/prompts'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const metadata = {
     title: 'Prompt-Spickzettel zum Ausdrucken (gratis PDF)',
@@ -31,7 +32,7 @@ const SAETZE = [
     'Kürze auf die Hälfte, ohne Inhalt zu verlieren.',
 ]
 
-export default function Spickzettel() {
+function Spickzettel() {
     return (
         <article className="cheatsheet">
             <p className="no-print cta-row">
@@ -77,5 +78,14 @@ export default function Spickzettel() {
             </section>
             <footer className="cheatsheet-foot">Mehr Prompts zum Absenden: AIGeddon → Prompt-Bibliothek und Prompt-Baukasten</footer>
         </article>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <Spickzettel />
+            <Vernetzt pfad={seitenPfad('/downloads/prompt-spickzettel')} />
+        </>
     )
 }

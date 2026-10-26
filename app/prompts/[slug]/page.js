@@ -12,6 +12,7 @@ import { NEWSLETTER_NAME, NEWSLETTER_URL } from '../../../lib/monetization'
 import { SITE_NAME } from '../../../lib/site'
 import { getPrompts, getPrompt, PROMPT_KATEGORIEN, TECHNIKEN } from '../../../lib/prompts'
 import { getTool, toolHref, toolRel } from '../../../lib/tools'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -29,7 +30,7 @@ export function generateMetadata({ params }) {
     }
 }
 
-export default function PromptPage({ params }) {
+function PromptPage({ params }) {
     const p = getPrompt(params.slug)
     if (!p) notFound()
     const kat = PROMPT_KATEGORIEN[p.kategorie]
@@ -122,6 +123,15 @@ export default function PromptPage({ params }) {
             <p>
                 <Link href="/prompts">← Alle Prompts</Link> · <Link href="/prompt-baukasten">Eigenen Prompt bauen</Link>
             </p>
+        </>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <PromptPage params={params} />
+            <Vernetzt pfad={seitenPfad('/prompts/[slug]', params)} />
         </>
     )
 }

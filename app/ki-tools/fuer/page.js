@@ -3,6 +3,7 @@ import JsonLd from '../../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
 import { SITE_NAME } from '../../../lib/site'
 import { ZIELGRUPPEN } from '../../../lib/zielgruppen'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const metadata = {
     title: 'KI-Tools nach Zielgruppe: Lehrer, Schüler, Shops & mehr',
@@ -13,7 +14,7 @@ export const metadata = {
 const EMOJI = { lehrer: '🍎', studenten: '🎓', selbststaendige: '💼', entwickler: '💻', marketing: '📣', onlinehaendler: '🛒', 'content-creator': '🎥', 'hr-recruiting': '🤝', handwerk: '🔨', schueler: '🎒' }
 const FARBEN = ['#fde68a', '#a7f3d0', '#bfdbfe', '#fbcfe8', '#ddd6fe']
 
-export default function ZielgruppenIndex() {
+function ZielgruppenIndex() {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'KI-Tool-Datenbank', path: '/ki-tools' },
@@ -42,6 +43,15 @@ export default function ZielgruppenIndex() {
                     </li>
                 ))}
             </ul>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <ZielgruppenIndex />
+            <Vernetzt pfad={seitenPfad('/ki-tools/fuer')} />
         </>
     )
 }

@@ -7,6 +7,7 @@ import DealCards from '../../components/DealCards'
 import LeadBox from '../../components/LeadBox'
 import { LISTS, getList } from '../../../lib/data'
 import { absoluteUrl } from '../../../lib/site'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -25,7 +26,7 @@ export function generateMetadata({ params }) {
     }
 }
 
-export default function ListPage({ params }) {
+function ListPage({ params }) {
     const list = getList(params.slug)
     if (!list) notFound()
 
@@ -86,6 +87,15 @@ export default function ListPage({ params }) {
                     </li>
                 </ul>
             </section>
+        </>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <ListPage params={params} />
+            <Vernetzt pfad={seitenPfad('/liste/[slug]', params)} />
         </>
     )
 }

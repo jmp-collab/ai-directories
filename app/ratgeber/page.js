@@ -3,6 +3,7 @@ import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import JsonLd from '../components/JsonLd'
 import Jean from '../components/Jean'
 import { ARTIKEL } from '../../lib/ratgeber'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'Ratgeber: KI-Tools richtig in Verzeichnisse eintragen',
@@ -11,7 +12,7 @@ export const metadata = {
     openGraph: { url: '/ratgeber' },
 }
 
-export default function RatgeberIndex() {
+function RatgeberIndex() {
     const crumbs = [
         { name: 'AIGeddon', path: '/' },
         { name: 'Ratgeber', path: '/ratgeber' },
@@ -48,6 +49,15 @@ export default function RatgeberIndex() {
                     <span>Alle Fachbegriffe rund um Verzeichnisse und SEO, kurz erklärt.</span>
                 </li>
             </ul>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <RatgeberIndex />
+            <Vernetzt pfad={seitenPfad('/ratgeber')} />
         </>
     )
 }

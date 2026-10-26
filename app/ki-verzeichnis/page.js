@@ -8,6 +8,7 @@ import { SITE_NAME } from '../../lib/site'
 import { getSiteStats } from '../../lib/data'
 import { getTop50 } from '../../lib/top50'
 import { pricingLabel } from '../../utils/i18n-de'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 const FAQ = [
     {
@@ -34,7 +35,7 @@ export const metadata = {
     alternates: { canonical: '/ki-verzeichnis' },
 }
 
-export default function KiVerzeichnis() {
+function KiVerzeichnis() {
     const stats = getSiteStats()
     const top = getTop50().slice(0, 10)
     const crumbs = [
@@ -140,6 +141,15 @@ export default function KiVerzeichnis() {
             <Band farbe="pink" id="faq" titel="Fragen zum KI-Verzeichnis 🙋">
                 <Faq items={FAQ} />
             </Band>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <KiVerzeichnis />
+            <Vernetzt pfad={seitenPfad('/ki-verzeichnis')} />
         </>
     )
 }

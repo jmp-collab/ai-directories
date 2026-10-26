@@ -5,6 +5,7 @@ import Jean from '../components/Jean'
 import Faq, { faqSchema } from '../components/Faq'
 import NEU from '../../db/neu-entdeckt.json'
 import { getDirectories } from '../../lib/data'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 const TYPEN = [
     ['dach', 'Deutsch und DACH 🇩🇪', 'Verzeichnisse auf Deutsch oder mit deutscher Version. Für deutschsprachige Tools die erste Adresse.'],
@@ -22,7 +23,7 @@ export const metadata = {
     openGraph: { url: '/neu-entdeckt' },
 }
 
-export default function NeuEntdeckt() {
+function NeuEntdeckt() {
     const crumbs = [
         { name: 'AIGeddon', path: '/' },
         { name: 'Neu entdeckte KI-Verzeichnisse', path: '/neu-entdeckt' },
@@ -110,6 +111,15 @@ export default function NeuEntdeckt() {
                     <a href="#anfrage-tool-vorschlag">Ein Verzeichnis fehlt? Schlag es vor →</a>
                 </li>
             </ul>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <NeuEntdeckt />
+            <Vernetzt pfad={seitenPfad('/neu-entdeckt')} />
         </>
     )
 }

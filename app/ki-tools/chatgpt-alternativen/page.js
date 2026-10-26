@@ -6,6 +6,7 @@ import ToolCards from '../../components/ToolCards'
 import { Band } from '../../components/Deko'
 import { SITE_NAME } from '../../../lib/site'
 import { getKbRubrik } from '../../../lib/kb'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 const FAQ = [
     {
@@ -28,7 +29,7 @@ export const metadata = {
     alternates: { canonical: '/ki-tools/chatgpt-alternativen' },
 }
 
-export default function ChatgptAlternativen() {
+function ChatgptAlternativen() {
     const sortiert = (r) => [...r.tools].filter((t) => t.slug !== 'chatgpt').sort((a, b) => b.konsens - a.konsens || Number(b.deutsch) - Number(a.deutsch))
     const chat = sortiert(getKbRubrik('chatbots'))
     const suche = sortiert(getKbRubrik('suche'))
@@ -72,6 +73,15 @@ export default function ChatgptAlternativen() {
             <Band farbe="pink" id="faq" titel="Fragen zu ChatGPT-Alternativen 🙋">
                 <Faq items={FAQ} />
             </Band>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <ChatgptAlternativen />
+            <Vernetzt pfad={seitenPfad('/ki-tools/chatgpt-alternativen')} />
         </>
     )
 }

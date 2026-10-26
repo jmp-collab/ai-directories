@@ -8,6 +8,7 @@ import AutomatisierungsRechner from '../../components/AutomatisierungsRechner'
 import { SITE_NAME } from '../../../lib/site'
 import { RECHNER } from '../../../lib/rechner'
 import { getTool, TOOLS_STAND } from '../../../lib/tools'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 const R = RECHNER.find((r) => r.slug === 'automatisierung')
 
@@ -34,7 +35,7 @@ const FAQ = [
 
 const AUTO_TOOLS = ['make', 'zapier', 'n8n'].map(getTool).filter(Boolean)
 
-export default function Page() {
+function Page() {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'Rechner', path: '/rechner' },
@@ -89,6 +90,15 @@ export default function Page() {
                 </ul>
             </section>
             <LeadMagnetBox id="prompt-spickzettel" />
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <Page />
+            <Vernetzt pfad={seitenPfad('/rechner/automatisierung')} />
         </>
     )
 }

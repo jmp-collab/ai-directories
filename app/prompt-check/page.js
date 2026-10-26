@@ -4,6 +4,7 @@ import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import PromptCheck from '../components/PromptCheck'
 import LeadMagnetBox from '../components/LeadMagnetBox'
 import { SITE_NAME } from '../../lib/site'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'Prompt-Check: Wie gut ist dein Prompt? Score & Tipps',
@@ -11,7 +12,7 @@ export const metadata = {
     alternates: { canonical: '/prompt-check' },
 }
 
-export default function PromptCheckPage() {
+function PromptCheckPage() {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'Prompts', path: '/prompts' },
@@ -45,6 +46,15 @@ export default function PromptCheckPage() {
                 Lieber von Grund auf? <Link href="/prompt-baukasten">Prompt-Baukasten →</Link> · Erst die Grundlagen? <Link href="/tutorials/prompt-engineering-in-15-minuten">Tutorial in 15 Minuten →</Link>
             </p>
             <LeadMagnetBox id="prompt-spickzettel" />
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <PromptCheckPage />
+            <Vernetzt pfad={seitenPfad('/prompt-check')} />
         </>
     )
 }

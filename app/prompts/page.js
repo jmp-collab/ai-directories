@@ -4,6 +4,7 @@ import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import JeanIcon from '../components/JeanIcon'
 import { SITE_NAME } from '../../lib/site'
 import { promptsByKategorie, getPrompts, TECHNIKEN } from '../../lib/prompts'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'KI-Prompts auf Deutsch: Vorlagen für ChatGPT & Claude',
@@ -11,7 +12,7 @@ export const metadata = {
     alternates: { canonical: '/prompts' },
 }
 
-export default function PromptsPage() {
+function PromptsPage() {
     const kategorien = promptsByKategorie().filter((k) => k.prompts.length)
     const crumbs = [
         { name: SITE_NAME, path: '/' },
@@ -68,6 +69,15 @@ export default function PromptsPage() {
                     Begriffe wie Few-Shot, Token oder Kontextfenster? <Link href="/glossar#ki">Zum KI-Glossar →</Link>
                 </p>
             </section>
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <PromptsPage />
+            <Vernetzt pfad={seitenPfad('/prompts')} />
         </>
     )
 }

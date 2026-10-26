@@ -5,6 +5,7 @@ import JeanIcon from '../components/JeanIcon'
 import LeadMagnetBox from '../components/LeadMagnetBox'
 import { SITE_NAME } from '../../lib/site'
 import { getTutorials } from '../../lib/tutorials'
+import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'KI-Tutorials auf Deutsch: Prompt Engineering lernen',
@@ -12,7 +13,7 @@ export const metadata = {
     alternates: { canonical: '/tutorials' },
 }
 
-export default function TutorialsPage() {
+function TutorialsPage() {
     const crumbs = [
         { name: SITE_NAME, path: '/' },
         { name: 'Tutorials', path: '/tutorials' },
@@ -42,6 +43,15 @@ export default function TutorialsPage() {
                 ))}
             </ul>
             <LeadMagnetBox id="prompt-spickzettel" />
+        </>
+    )
+}
+
+export default function Seite() {
+    return (
+        <>
+            <TutorialsPage />
+            <Vernetzt pfad={seitenPfad('/tutorials')} />
         </>
     )
 }

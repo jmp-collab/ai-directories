@@ -7,6 +7,7 @@ import GlossarText from '../../components/GlossarText'
 import Faq, { faqSchema } from '../../components/Faq'
 import { ARTIKEL, getArtikel } from '../../../lib/ratgeber'
 import { absoluteUrl } from '../../../lib/site'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
 
@@ -32,7 +33,7 @@ const slugId = (h) =>
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-|-$/g, '')
 
-export default function ArtikelPage({ params }) {
+function ArtikelPage({ params }) {
     const a = getArtikel(params.slug)
     if (!a) notFound()
     const crumbs = [
@@ -138,5 +139,14 @@ export default function ArtikelPage({ params }) {
                 </ul>
             </section>
         </article>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <ArtikelPage params={params} />
+            <Vernetzt pfad={seitenPfad('/ratgeber/[slug]', params)} />
+        </>
     )
 }
