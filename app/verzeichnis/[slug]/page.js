@@ -17,7 +17,6 @@ import CheckBox from '../../components/CheckBox'
 import { getCheck, hasStatusIssue } from '../../../lib/checks'
 import { absoluteUrl } from '../../../lib/site'
 import { submitRel } from '../../../lib/monetization'
-import ServiceHint from '../../components/ServiceHint'
 import { dealLabel, formatRating, formatVisits, pricingLabel } from '../../../utils/i18n-de'
 import TEXTE from '../../../db/texte/verzeichnisse.json'
 
@@ -67,7 +66,7 @@ function buildFaq(d, rank, total) {
         {
             q: `Lohnt sich ${d.name} für SEO?`,
             a: `${d.domain_rating >= 50 ? `Mit Domain Rating ${formatRating(d.domain_rating)} gehört ${d.name} zu den starken Domains dieser Liste.` : d.domain_rating >= 20 ? `Mit Domain Rating ${formatRating(d.domain_rating)} ist ${d.name} eine solide, aber keine Top-Domain.` : `Mit Domain Rating ${formatRating(d.domain_rating)} ist der SEO-Effekt eher klein.`} ${
-                getCheck(d.slug)?.link_type ? `Link-Typ laut Verzeichnis: ${getCheck(d.slug).link_type}.` : 'Ob der Link dofollow ist, steht nicht fest. Prüfe das nach der Freischaltung im Quelltext deines Eintrags.'
+                getCheck(d.slug)?.link_type ? `Link-Typ laut Verzeichnis: ${getCheck(d.slug).link_type}.` : `Den Link-Typ nennt ${d.name} nicht.`
             }`,
         },
         ...(getCheck(d.slug)?.approval
@@ -140,7 +139,7 @@ export default function DirectoryPage({ params }) {
                 <p>
                     <strong>{d.name}</strong> ist ein {d.pricing ? `${pricingLabel(d.pricing).toLowerCase()}es ` : ''}Verzeichnis mit Domain Rating {formatRating(d.domain_rating)} und
                     {d.monthly_visits ? ` rund ${formatVisits(d.monthly_visits)} Besuchen im Monat.` : ' ohne belastbare Traffic-Daten.'}{' '}
-                    {verdict.text}
+                    {!TEXTE[d.slug]?.take && verdict.text}
                 </p>
             </div>
 
@@ -163,7 +162,6 @@ export default function DirectoryPage({ params }) {
                 </a>
                 <CopyButton label="Link zu dieser Seite kopieren 🔗" done="Link kopiert ✓" />
             </p>
-            {!hasStatusIssue(d.slug) && <ServiceHint />}
 
             <section aria-labelledby="zahlen">
                 <h2 id="zahlen">{d.name} in Zahlen 🔢</h2>
@@ -206,7 +204,7 @@ export default function DirectoryPage({ params }) {
                                 {icon}
                             </span>
                             <strong>{titel}</strong>
-                            <span>{text}</span>
+                            {!TEXTE[d.slug]?.take && <span>{text}</span>}
                         </li>
                     ))}
                 </ul>
@@ -247,7 +245,7 @@ export default function DirectoryPage({ params }) {
                                   : 'nicht gesichert, schau ins Formular.'}
                         </li>
                         <li>
-                            <strong>Nachhalten:</strong> {check?.approval ? `Freischaltung laut ${d.name}: ${check.approval}.` : 'Datum notieren, nach der Freischaltung Link prüfen.'}
+                            <strong>Nachhalten:</strong> {check?.approval ? `Freischaltung laut ${d.name}: ${check.approval}.` : `Eine Freischaltdauer nennt ${d.name} nicht.`}
                             {check?.link_type ? ` Link-Typ laut ${d.name}: ${check.link_type}.` : ''}
                         </li>
                     </ol>

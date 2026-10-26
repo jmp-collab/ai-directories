@@ -4861,3 +4861,9 @@ ul.kb-hero-chips {
 .pro-contra p {
     margin-bottom: 4px;
 }
+
+.hero .eyebrow a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
