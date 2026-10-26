@@ -50,6 +50,7 @@ const footerSpalten = () => [
         'KI-Tools',
         [
             ['/ki-tools', 'KI-Tool-Datenbank'],
+            ['/ki-news', 'KI-News der Woche'],
             ['/neue-ki-modelle', 'Neue KI-Modelle 2026'],
             ['/beste-ki-tools', 'Beste KI-Tools 2026'],
             ['/tool-finder', 'KI-Tool-Finder'],
@@ -161,6 +162,9 @@ export default function RootLayout({ children }) {
                             <ul>
                                 <li>
                                     <Link href="/liste/kostenlos">Gratis 🎁</Link>
+                                </li>
+                                <li>
+                                    <Link href="/ki-news">News 📰</Link>
                                 </li>
                                 <li>
                                     <Link href="/prompts">Prompts 💬</Link>

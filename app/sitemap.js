@@ -13,17 +13,19 @@ import { KI_GLOSSAR, glossarSlug } from '../lib/ki-glossar'
 import { getTestKategorien } from '../lib/kitests'
 import { RECHNER } from '../lib/rechner'
 import { MODELLE, FAMILIEN } from '../lib/modelle'
+import { NEWS } from '../lib/news'
 
 export default function sitemap() {
     const lastModified = new Date()
     return [
         { url: absoluteUrl('/'), lastModified, changeFrequency: 'weekly', priority: 1 },
-        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar', '/freischaltung', '/werben', '/transparenz', '/tools', '/tool-vergleiche', '/top-50', '/prompts', '/prompt-baukasten', '/prompt-check', '/tutorials', '/downloads', '/downloads/prompt-spickzettel', '/ki-tools', '/ki-tools/quellen', '/prompts/archiv', '/ki-test', '/rechner', '/beste-ki-tools', '/ki-tools/kostenlos', '/ki-tools/chatgpt-alternativen', '/ki-tools/alternativen', '/ki-tools/fuer', '/ki-verzeichnis', '/tool-finder', '/neue-ki-modelle', '/neu-entdeckt'].map((path) => ({
+        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar', '/freischaltung', '/werben', '/transparenz', '/tools', '/tool-vergleiche', '/top-50', '/prompts', '/prompt-baukasten', '/prompt-check', '/tutorials', '/downloads', '/downloads/prompt-spickzettel', '/ki-tools', '/ki-tools/quellen', '/prompts/archiv', '/ki-test', '/rechner', '/beste-ki-tools', '/ki-tools/kostenlos', '/ki-tools/chatgpt-alternativen', '/ki-tools/alternativen', '/ki-tools/fuer', '/ki-verzeichnis', '/tool-finder', '/neue-ki-modelle', '/neu-entdeckt', '/ki-news'].map((path) => ({
             url: absoluteUrl(path),
             lastModified,
             changeFrequency: 'monthly',
             priority: 0.8,
         })),
+        ...NEWS.map((n) => ({ url: absoluteUrl(`/ki-news/${n.slug}`), lastModified: new Date(n.veroeffentlicht), changeFrequency: 'weekly', priority: 0.8 })),
         ...[...FAMILIEN, ...MODELLE].map((m) => ({ url: absoluteUrl(`/neue-ki-modelle/${m.slug}`), lastModified, changeFrequency: 'weekly', priority: 0.7 })),
         ...ARTIKEL.map((a) => ({ url: absoluteUrl(`/ratgeber/${a.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
         { url: absoluteUrl('/quiz'), lastModified, changeFrequency: 'monthly', priority: 0.7 },

@@ -136,6 +136,14 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - `app/components/Vernetzt.js` auf allen 56 Seitenvorlagen: Block „Weiter geht's 🧭“ mit Aufklappern „Passt dazu“, „Wer hierher verlinkt“ (mit Linkliebe-Herzen), „Begriffe kurz erklärt“ (Glossar-Definitionen) und Gut-zu-wissen-Fragen je Seitentyp (Jean-Score, Preisquellen, Datenquellen, Datenschutz der Rechner). Seiteneigene Zusatzinfos kommen aus `db/texte/klapp.json`.
 - 9.740 neue interne Links, 0 kaputt. Workflow baut ein zweites Mal, wenn sich das Netz ändert. Kontrastfehler bei Links in Überschriften (Dunkelmodus, /prompts) behoben.
 
+## KI-News (Auftrag 26.10.: „KI-News zu absoluten Trendthemen recherchieren, liebenswert lustige, hoch informative Artikel, immer mit Bezug zu Tools, Prompts oder bestehenden Unterseiten“)
+
+- Neuer Bereich /ki-news (Hub mit Karten und Aufklappern) und /ki-news/[slug] mit NewsArticle-Schema, „Das Wichtigste in 30 Sekunden“, Checkliste „Was du jetzt tun solltest“, 6 bis 8 Bezugs-Karten zu bestehenden Unterseiten, Quellen, FAQ-Schema.
+- 7 Artikel, alle an offiziellen Quellen geprüft: PHP2Shell (php.net, Wiz, OpenAI, CERT-EU), Abschaltung der Custom GPTs am 11.12.2026 (OpenAI-Hilfe-Center), Claude Duet, Gemini für kleine Firmen, OpenAI Decisions API, Agent Skills bei der Linux Foundation, GPT-6 und Claude bei Google Cloud.
+- Rückverweise: Jede in einer Meldung genannte Unterseite zeigt im Block „Weiter geht's“ den Kasten „Gerade in den KI-News“. Navigation, Footer, Startseite, Sitemap und llms.txt verlinken /ki-news.
+- Faktenkorrektur durch die News: Glossar „Custom GPT“, Tutorial „Eigenen KI-Assistenten bauen“, Prompt-Kategorie-FAQ und Glossar-Beispiel nennen jetzt die Abschaltung und die Nachfolger.
+- Wöchentliche Routine „AIGeddon: Wöchentliche KI-News“ (Do 07:37) schreibt ab jetzt 3 bis 6 neue Artikel pro Woche im selben Format.
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.

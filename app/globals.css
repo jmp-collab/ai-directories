@@ -5250,3 +5250,82 @@ h2 a {
     color: inherit;
     text-decoration-thickness: 2px;
 }
+
+/* ================= KI-News ================= */
+.news-liste {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 18px;
+}
+@media (min-width: 860px) {
+    .news-liste {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.news-karte {
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.news-karte h3 {
+    margin: 0;
+    font-size: 1.15rem;
+}
+.news-karte h3 a {
+    color: inherit;
+}
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+.news-thema {
+    display: inline-block;
+    padding: 1px 10px;
+    border: 2px solid var(--border);
+    border-radius: 999px;
+    background: var(--pop);
+    color: #1b1b1f;
+    font-weight: 800;
+    font-size: 0.8rem;
+}
+.news-karte .klapp {
+    margin-top: auto;
+    box-shadow: none;
+}
+.news-kurz {
+    margin: 18px 0 8px;
+}
+.news-kurz ul {
+    display: grid;
+    gap: 8px;
+}
+.vernetzt-news {
+    margin: 12px 0 4px;
+    padding: 10px 14px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--pop);
+    color: #1b1b1f;
+}
+.vernetzt-news p {
+    margin: 0 0 4px;
+}
+.vernetzt-news ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.vernetzt-news a {
+    color: #1b1b1f;
+    font-weight: 700;
+}
