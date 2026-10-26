@@ -4,9 +4,9 @@ Stand 26.10.2026. Alles andere ist umgesetzt. Diese Punkte brauchen deinen Login
 
 ## 1. Lead-Formular scharf schalten (FormSubmit)
 
-Die Anfragen gehen an `jeanmaurieport@gmail.com`. Bitte prüfen: Fehlt das „c“ von Maurice?
+Die Anfragen gehen an `jeanmauriceport@gmail.com` (am 26.10. von Jean bestätigt und im Code eingetragen).
 
-1. Falls die Adresse anders lautet: GitHub-Repo → Settings → Secrets and variables → Actions → Variables → `LEAD_EMAIL` mit der richtigen Adresse anlegen.
+1. Für eine andere Adresse später: GitHub-Repo → Settings → Secrets and variables → Actions → Variables → `LEAD_EMAIL` anlegen.
 2. Auf der Live-Seite einmal das Formular „Frag Jean direkt“ abschicken.
 3. FormSubmit schickt eine Aktivierungsmail an die Adresse. Link darin klicken. Ab dann kommen alle Anfragen an.
 4. Optional, damit die Adresse nicht im Seitenquelltext steht: In der Aktivierungsmail steht ein Alias (zufällige Zeichenkette). Als Variable `LEAD_ALIAS` eintragen.

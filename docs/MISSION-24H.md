@@ -127,7 +127,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - Impressum/Datenschutz-Daten, PromptGott-URL, Partnerlinks.
 - Neu bewerben: Gamma (PartnerStack), Rytr, Runway; Wordtune-Konditionen auf der Anbieterseite prüfen (nur Drittquellen) (braucht Kanal-Links, YouTube AIGeddon passt); Links stehen in docs/PARTNERLINKS.md.
 
-- Lead-Formular: Schreibweise der Empfängeradresse jeanmaurieport@gmail.com bestätigen (fehlt das „c“ von Maurice?); danach eine Testanfrage schicken und die FormSubmit-Aktivierungsmail bestätigen, erst dann kommen Anfragen an. Den Alias aus der Aktivierung als NEXT_PUBLIC_LEAD_ALIAS hinterlegen (oder mir geben), damit die Adresse nicht im Quelltext steht.
+- Lead-Formular: Empfängeradresse jeanmauriceport@gmail.com bestätigt und eingetragen (26.10.); danach eine Testanfrage schicken und die FormSubmit-Aktivierungsmail bestätigen, erst dann kommen Anfragen an. Den Alias aus der Aktivierung als NEXT_PUBLIC_LEAD_ALIAS hinterlegen (oder mir geben), damit die Adresse nicht im Quelltext steht.
 - Neu entdeckte Verzeichnisse: für die Übernahme in die Hauptliste fehlen DR- und Besucherwerte (Semrush-API-Einheiten aufladen), dann wandern sie mit Messwerten in /directories.
 - Datenschutzerklärung rechtlich prüfen lassen; Impressum mit ladungsfähiger Anschrift fehlt noch.
 
