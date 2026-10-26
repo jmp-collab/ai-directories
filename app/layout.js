@@ -3,6 +3,7 @@ import './globals.css'
 import { SITE_URL, SITE_NAME, SITE_TAGLINE, REPO_URL, withBase } from '../lib/site'
 import Reveal from './components/Reveal'
 import LeadBox from './components/LeadBox'
+import JeansSenf from './components/JeansSenf'
 import LeadForm from './components/LeadForm'
 import { SidebarLeft, SidebarRight, MobileDock } from './components/Sidebars'
 import BackToTop from './components/BackToTop'
@@ -201,6 +202,7 @@ export default function RootLayout({ children }) {
                     </aside>
                     <main id="inhalt" className="page-main">
                         {children}
+                        <JeansSenf />
                         <LeadForm />
                         <LeadBox />
                         <Reveal />

@@ -111,11 +111,11 @@ export default function KbToolPage({ params }) {
                     </p>
                 </section>
             )}
-            <p className="box box-info">
+            {!TEXTE[t.slug] && (<p className="box box-info">
                 {t.konsens > 1
                     ? `${t.name} steht unabhängig voneinander in ${t.konsens === 3 ? 'allen drei' : 'zwei der drei'} größten offenen KI-Tool-Listen auf GitHub. Das ist ein gutes Zeichen, ersetzt aber keinen eigenen Test.`
                     : `${t.name} steht in einer der drei großen offenen KI-Tool-Listen. Mehr als diese eine Empfehlung haben wir noch nicht.`}
-            </p>
+            </p>)}
             {alternativen.length > 0 && (
                 <section aria-labelledby="alternativen">
                     <h2 id="alternativen">Alternativen zu {t.name}</h2>
@@ -175,7 +175,7 @@ export default function KbToolPage({ params }) {
                 </section>
             )}
             <p className="source">
-                Stand {KB_STAND}. Fakten aus offenen GitHub-Listen, deutsche Kurzbeschreibung von AIGeddon. <Link href="/ki-tools/quellen">Quellen und Lizenzen</Link> ·{' '}
+                Stand {KB_STAND} · <Link href="/ki-tools/quellen">Quellen und Lizenzen</Link> ·{' '}
                 <Link href="/tool-finder">Tool-Finder</Link> · <Link href="/ki-tools">← KI-Tool-Datenbank</Link>
             </p>
         </>

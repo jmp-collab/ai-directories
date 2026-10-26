@@ -1,0 +1,294 @@
+{
+ "/tools/": {
+  "intro": "Das hier ist meine Werkzeugwand: 64 KI-Tools, aufgehängt nach Anwendungsfall statt nach Hersteller. Bei jedem steht der Einstiegspreis und ob es einen Gratis-Tarif gibt, alles laut Anbieter. Mein Tipp: Such zuerst deinen Anwendungsfall, nicht das bekannteste Logo. Und wenn du zwischen zwei Kandidaten hängst, hilft dir der Tool-Vergleich mit klarer Empfehlung weiter.",
+  "jean": "Erst den Job klären, dann das Werkzeug kaufen. Wie in jeder Werkstatt."
+ },
+ "/ki-tools/": {
+  "intro": "705 Tools aus drei offenen GitHub-Listen, zusammengekippt in einen Eimer und ordentlich sortiert. Der Trick an dieser Datenbank: Steht ein Tool in mehreren Listen, bekommt es das Konsens-Abzeichen. Das ist kein Kaufbefehl, aber ein ziemlich gutes Bauchgefühl von vielen Leuten gleichzeitig. Wenn dich die Menge erschlägt, nimm den Tool-Finder mit drei Fragen und lass dir sechs Treffer zeigen.",
+  "jean": "Wenn drei Listen dasselbe Tool nennen, hör ich hin."
+ },
+ "/prompts/": {
+  "intro": "Hier liegen 75 deutsche Prompt-Vorlagen, die du ausfüllst und mit einem Klick an ChatGPT, Claude, Perplexity oder Grok schickst. Jede Vorlage verrät, welche Technik drinsteckt, damit du nebenbei lernst, warum sie funktioniert. Mein Tipp: Nimm eine Vorlage, ändere nur die Platzhalter und vergleich das Ergebnis mit deinem alten Freihand-Prompt. Der Unterschied überzeugt meistens schneller als jede Erklärung.",
+  "jean": "Ein guter Prompt ist wie ein Einkaufszettel. Ohne kaufst du Quatsch."
+ },
+ "/downloads/": {
+  "intro": "Das ist die Mitnehm-Ecke: Spickzettel zum Ausdrucken, das ganze Prompt-Paket als Markdown-Datei und die Top 50 Verzeichnisse als CSV. Alles gratis, alles ohne Umweg. Mein Tipp: Leg das Prompt-Paket direkt in Notion, Obsidian oder dein Claude Project, dann hast du die Vorlagen da, wo du sowieso arbeitest. Den Spickzettel klebst du am besten neben die Tastatur.",
+  "jean": "Einmal runterladen, nie wieder suchen. Mein Lieblingsdeal."
+ },
+ "/rechner/": {
+  "intro": "Sechs Rechner für die Frage, die vor jedem Abo kommt: Lohnt sich das überhaupt? Du schiebst Regler, das Ergebnis steht sofort da, die Preise stammen von den offiziellen Preisseiten mit Datum. Fang mit dem Schnellcheck zum KI-Abo an und trag ehrliche Stunden ein, nicht die geschönten. Danach weißt du, ob du ein Werkzeug kaufst oder ein schlechtes Gewissen.",
+  "jean": "Erst rechnen, dann bezahlen. Mein Konto hat das auch lernen müssen."
+ },
+ "/beste-ki-tools/": {
+  "intro": "15 Aufgaben, pro Aufgabe die Tools, die mehrere unabhängige Community-Listen empfehlen. Kein bezahlter Platz, keine Sternchen-Deals. Spring über das Inhaltsverzeichnis direkt zu deiner Aufgabe, etwa Videotools oder Programmieren, und schau dir zuerst die Favoriten oben an. Die Alternativen darunter sind dein Plan B, falls der Favorit preislich oder beim Datenschutz nicht passt.",
+  "jean": "Ranglisten kauft man. Empfehlungen verdient man sich."
+ },
+ "/glossar/": {
+  "intro": "85 Begriffe aus KI, Prompt Engineering und SEO, übersetzt in normales Deutsch. Ideal, wenn ein Tutorial plötzlich von Few-Shot redet oder ein Formular nach rel=sponsored fragt. Mein Tipp: Lies nicht von vorne nach hinten, sondern spring gezielt zum Begriff, über den du gerade gestolpert bist. Der Teil zu Verzeichnissen und SEO ist kleiner, spart beim Eintragen aber am meisten Zeit.",
+  "jean": "Fachchinesisch ist meistens nur Deutsch mit Krawatte."
+ },
+ "/top-50/": {
+  "intro": "Die 50 Verzeichnisse mit dem höchsten Jean-Score, ohne die, die gerade keine Einreichungen annehmen. Bei 32 davon steht, wie lange die Freischaltung laut Verzeichnis dauert. Mein Tipp: Hol dir die Liste als CSV, arbeite sie von oben nach unten ab und hak in der Tabelle ab, was erledigt ist. So bist du an einem Wochenende durch, statt monatelang Tabs zu sammeln.",
+  "jean": "50 Formulare an einem Wochenende. Kaffee nicht vergessen."
+ },
+ "/tool-finder/": {
+  "intro": "Drei Fragen, sechs Treffer: Aufgabe, Budget, Technik. Mehr will der Tool-Finder nicht von dir wissen. Die Treffer sind danach sortiert, was die großen Community-Listen empfehlen, und wo es einen Steckbrief von mir gibt, ist er verlinkt. Mein Tipp: Beantworte die Budget-Frage ehrlich. Wer Gratis anklickt und dann ein Profi-Tool will, landet beim Ärger statt beim Treffer.",
+  "jean": "Drei Klicks statt drei Abende Recherche. Klingt fair, oder?"
+ },
+ "/ratgeber/": {
+  "intro": "Hier steht alles, was ich vor meinen ersten Verzeichnis-Einträgen gern gewusst hätte: die komplette Eintrags-Anleitung, eine ehrliche SEO-Einordnung, Product Hunt auf Deutsch und die DSGVO-Checkliste für KI-Tools. Jeder Artikel nennt seine Lesezeit, die meisten liegen zwischen fünf und acht Minuten. Mein Tipp: Lies die Anleitung, bevor du das erste Formular ausfüllst. Das spart dir doppelte Arbeit.",
+  "jean": "Zehn Minuten lesen spart zehn Stunden Formulare."
+ },
+ "/tutorials/": {
+  "intro": "Hier lernst du mit den Händen, nicht mit dem Kopf allein. Jeder Schritt hat einen Vorher/Nachher-Regler, jeder Prompt geht mit einem Klick in ChatGPT oder Claude, und am Ende wartet ein Quiz. Mein Tipp: Starte mit Prompt Engineering in 15 Minuten, das ist der Grundkurs. Danach sitzen die Fortgeschrittenen-Kurse wie die Prompt-Kette oder der eigene Assistent deutlich leichter.",
+  "jean": "Schrauben lernt man am Moped, nicht im Handbuch."
+ },
+ "/prompt-baukasten/": {
+  "intro": "Der Baukasten ist für alle, die vor dem leeren Chatfenster sitzen und nicht wissen, wie anfangen. Du trägst Aufgabe, Rolle, Zielgruppe, Format und Ton ein, er setzt den Prompt zusammen und zeigt dir den Prompt-Score samt nächstem Hebel. Alles bleibt in deinem Browser. Mein Tipp: Füll zuerst nur die Pflichtfelder aus und dreh dann Feld für Feld am Score.",
+  "jean": "Lego für Prompts. Nur ohne den Schmerz im Fuß."
+ },
+ "/ki-test/": {
+  "intro": "Welche KI ist die beste? Die ehrliche Antwort: die, die bei deinen Aufgaben gewinnt. Hier schickst du 50 Aufgaben aus sechs Kategorien an bis zu sechs Chatbots, bewertest die Antworten mit Kriterien und Lösung und bekommst deine eigene Rangliste. Mein Tipp: Wenn die Zeit knapp ist, nimm erst die Kategorie, die zu deinem Alltag passt, statt alles am Stück.",
+  "jean": "Benchmarks sind Theorie. Dein Test ist die Probefahrt."
+ },
+ "/vergleich/": {
+  "intro": "Bis zu drei Verzeichnisse nebeneinander, Zeile für Zeile, und die beste Zahl bekommt die Krone. Damit klärst du die Frage, bei der man sonst zwischen zehn Tabs hin und her springt. Mein Tipp: Vergleich nicht drei Riesen miteinander, sondern einen Riesen mit zwei kleineren Kandidaten. Oft sind die Unterschiede bei Freischaltung und Preis spannender als beim Domain Rating.",
+  "jean": "Drei Verzeichnisse, eine Krone. Kein Bauchgefühl nötig."
+ },
+ "/liste/kostenlos/": {
+  "intro": "163 Verzeichnisse, die dein KI-Tool ohne Rechnung aufnehmen, sortiert nach Domain Rating. Die starken Domains stehen oben, also fängst du dort an. Mit den Filtern blendest du hakelige Einreichungen aus und markierst, was schon eingetragen ist. Mein Tipp: Nimm dir pro Abend einen festen Block vor und arbeite die Liste der Reihe nach ab, statt kreuz und quer zu springen.",
+  "jean": "Null Euro Budget heißt nicht null Sichtbarkeit."
+ },
+ "/ki-tools/alternativen/github-copilot/": {
+  "intro": "Copilot ist der bekannteste Code-Assistent, aber nicht der einzige im Werkzeugkasten. Hier stehen 15 Alternativen, für andere Modelle, eigene Editoren mit Agenten, Open Source oder Betrieb ohne Cloud. Mein Tipp: Prüf zuerst, ob dein Editor und deine Sprachen unterstützt werden. Ein toller Assistent nützt dir nichts, wenn er in deiner gewohnten Umgebung nicht läuft.",
+  "jean": "Der beste Code-Assistent ist der, der in deinem Editor wohnt."
+ },
+ "/ki-tools/alternativen/synthesia/": {
+  "intro": "Synthesia baut Videos mit KI-Avataren. Wer weitersucht, will andere Gesichter, einen günstigeren Einstieg oder ganz ohne Avatar auskommen. Hier findest du 15 Alternativen. Mein Tipp: Hör dir bei jedem Kandidaten die deutsche Stimme an und schau genau auf die Lippen. Wasserzeichen und Minuten im Gratis-Tarif entscheiden dann, ob es für den ersten Test reicht.",
+  "jean": "Ein Avatar mit schiefem Mund verkauft nichts. Erst hinschauen."
+ },
+ "/ki-tools/alternativen/notion-ai/": {
+  "intro": "Notion AI hilft dir nur, solange deine Notizen in Notion liegen. Liegen sie woanders, oder brauchst du KI in Meetings, E-Mails oder im Browser, stehen hier 15 Alternativen bereit. Mein Tipp: Klär als Erstes, wo deine Dokumente heute wohnen. Ein Umzug der ganzen Wissensbasis ist teurer als jedes Abo, also such das Tool, das zu deinem Ablageort passt.",
+  "jean": "Erst schauen, wo die Kartons stehen. Dann den Helfer holen."
+ },
+ "/ki-tools/alternativen/perplexity-ai/": {
+  "intro": "Perplexity beantwortet Fragen mit Quellen. Hier stehen 14 Alternativen für alle, die andere Modelle, mehr Datenschutz, einen wissenschaftlichen Fokus oder eine selbst gehostete Suche wollen. Mein Tipp: Stell jedem Kandidaten dieselbe Recherchefrage und klick die Quellen wirklich an. Eine Suche, die hübsche Fußnoten setzt, aber auf die falschen Seiten verlinkt, hilft dir nicht.",
+  "jean": "Quellen anzeigen ist nett. Die richtigen anzeigen ist der Job."
+ },
+ "/ki-tools/alternativen/jasper/": {
+  "intro": "Jasper zielt auf Marketing-Teams. Als Gründer oder kleines Team kommst du oft günstiger weg, manchmal reicht ein Chatbot mit guten Prompts. Hier stehen 15 Alternativen. Mein Tipp: Rechne den Preis pro Nutzer einmal hoch und teste die Qualität auf Deutsch mit einem echten Text aus deinem Alltag. Englische Demo-Texte sehen immer besser aus als die Praxis.",
+  "jean": "Ein Schreibtool für zehn Leute zahlst du nicht für einen."
+ },
+ "/ki-tools/alternativen/gemini/": {
+  "intro": "Gemini hängt eng an Google. Wenn du dort nicht noch mehr Daten parken willst oder mit den Antworten nicht warm wirst, findest du hier 15 andere Chatbots. Mein Tipp: Gib zwei oder drei Kandidaten exakt die Aufgaben, die du jede Woche erledigst, und vergleich danach. Prüf außerdem, ob die Anbindung an deine Werkzeuge passt, sonst kopierst du ewig hin und her.",
+  "jean": "Nicht jeder Chatbot muss bei Google wohnen."
+ },
+ "/ki-tools/alternativen/claude/": {
+  "intro": "Claude ist stark beim Schreiben, Analysieren und Programmieren. Alternativen lohnen sich, wenn du etwas anderes brauchst, etwa Bildgenerierung, eine bestimmte Integration oder ein Modell, das lokal läuft. Hier stehen 15 davon. Mein Tipp: Schreib dir vorher auf, was dir bei Claude konkret fehlt. Wer ohne Grund wechselt, tauscht oft nur die Oberfläche und nicht das Problem.",
+  "jean": "Wechseln ohne Grund ist wie Reifenwechsel bei vollem Profil."
+ },
+ "/ki-tools/alternativen/midjourney/": {
+  "intro": "Midjourney hat keinen Gratis-Tarif, und private Bilder gibt es erst in den teureren Abos. Deshalb stehen hier 15 Alternativen, darunter kostenlose und offene Modelle oder Tools mit einfacherer Bearbeitung. Mein Tipp: Nimm einen Bild-Prompt, den du schon kennst, und schick ihn an drei Kandidaten. So siehst du in zehn Minuten, wer deinen Stil trifft.",
+  "jean": "Gleicher Prompt, drei Generatoren. Das Bild entscheidet, nicht das Logo."
+ },
+ "/ki-tools/alternativen/runway/": {
+  "intro": "Runway ist ein kreatives KI-Videostudio. Hier findest du 15 Alternativen für andere Videomodelle, längere Clips, günstigere Credits oder einfache Videos aus Text und Stockmaterial. Mein Tipp: Rechne aus, was dich eine Sekunde fertiges Video in Credits kostet. Da trennt sich schnell das Spielzeug vom Werkzeug, besonders wenn du regelmäßig Clips für Social Media brauchst.",
+  "jean": "Credits pro Sekunde zählen. Der Rest ist Showreel."
+ },
+ "/ki-tools/alternativen/eleven-labs/": {
+  "intro": "ElevenLabs ist bekannt für realistische Stimmen. Hier stehen 15 Alternativen, etwa für Open-Source-Sprachausgabe, andere Sprachen oder ein Preismodell, das besser zu deinem Volumen passt. Mein Tipp: Lass jeden Kandidaten denselben deutschen Absatz vorlesen, mit Zahlen und einem Fremdwort darin. Genau da hörst du, ob die Stimme natürlich klingt oder nach Bahnhofsdurchsage.",
+  "jean": "Deutsch mit Zahlen vorlesen lassen. Da trennt sich die Spreu."
+ },
+ "/ki-tools/alternativen/cursor/": {
+  "intro": "Cursor ist ein KI-Code-Editor. Wer weitersucht, will meist seinen gewohnten Editor behalten, einen Agenten im Terminal, Open Source oder andere Modelle. Hier stehen 15 Alternativen. Mein Tipp: Entscheide zuerst die Grundfrage Editor oder Terminal-Agent. Danach schrumpft die Liste von selbst, und du testest nur noch die zwei, drei Kandidaten, die zu deiner Arbeitsweise passen.",
+  "jean": "Erst Editor oder Terminal klären. Dann wird die Liste kurz."
+ },
+ "/ki-tools/alternativen/heygen/": {
+  "intro": "HeyGen macht Avatar-Videos und übersetzt Videos mit Lippensynchronität. Hier findest du 15 Alternativen für anderes Budget, andere Avatare oder Videos ganz ohne Sprecher. Mein Tipp: Wenn du deinen eigenen Avatar bauen willst, prüf vorher, wie der Anbieter die Einwilligung regelt. Und rechne den Preis pro Minute aus, nicht pro Monat.",
+  "jean": "Preis pro Minute zählt. Der Monatspreis ist nur die Verpackung."
+ },
+ "/liste/domain-rating-50-plus/": {
+  "intro": "55 Verzeichnisse mit Domain Rating ab 50, also die Kraftpakete unter den Einträgen. Wenn du nur Zeit für eine Handvoll hast, fang hier an, denn diese Seiten werden öfter von Google und KI-Suchen gecrawlt. Mein Tipp: Filter nach reibungsloser Einreichung und Kostenlos, dann bleibt eine kurze Liste übrig, die du an einem Abend schaffst.",
+  "jean": "Wenig Zeit? Dann nur die mit Muskeln."
+ },
+ "/liste/traffic-monster/": {
+  "intro": "28 Verzeichnisse mit mindestens einer halben Million Besuchen im Monat. Hier läuft Publikum vorbei, nicht nur Crawler. Das heißt nicht, dass alle auf deinen Eintrag klicken, aber die Chance ist deutlich besser. Mein Tipp: Bei so viel Laufkundschaft zählt der erste Satz deiner Beschreibung doppelt. Feil ihn, bevor du hier einreichst.",
+  "jean": "Viel Laufkundschaft heißt: Schaufenster vorher putzen."
+ },
+ "/liste/rabattcodes/": {
+  "intro": "25 Rabattcodes für bezahlte Einträge in KI-Verzeichnissen. Ein Code macht einen schlechten Deal nicht gut, er macht einen guten Deal nur günstiger. Ob er noch gilt, entscheidet der Anbieter. Mein Tipp: Schau dir vor dem Bezahlen Reichweite und Domain Rating des Verzeichnisses an und teste den Code im Warenkorb, bevor du deine Karte zückst.",
+  "jean": "Rabatt auf Unsinn bleibt Unsinn. Nur billiger."
+ },
+ "/liste/finger-weg/": {
+  "intro": "26 Verzeichnisse, bei denen die Einreichung hakt: kaputte Formulare, nur per Mail, wochenlang keine Antwort oder Backlink-Pflicht. Verboten ist nichts davon, aber plan Geduld ein. Mein Tipp: Heb dir diese Liste für die Zeit nach den einfachen Einträgen auf. Wenn du sie angehst, schreib dir das Datum jeder Einreichung auf, damit du weißt, wann Nachhaken fällig ist.",
+  "jean": "Manche Formulare sind wie Behördengänge. Zeit mitbringen."
+ },
+ "/liste/geheimtipps/": {
+  "intro": "18 kostenlose Verzeichnisse mit Domain Rating ab 40, über die kaum jemand redet. Genau das macht sie wertvoll: wenig Konkurrenz, ordentliche Domain. Die klappere ich zuerst ab. Mein Tipp: Erledige diese Liste gleich am Anfang deines Launches, solange deine Texte frisch sind. Dann hast du schnelle Einträge im Sack, bevor du dich an die großen Namen wagst.",
+  "jean": "Leise Verzeichnisse, starke Domains. Psst, nicht weitersagen."
+ },
+ "/prompts/kategorie/business/": {
+  "intro": "13 Vorlagen für den Büroalltag: E-Mails, Protokolle, Angebote, Entscheidungen und Aufgabenlisten. Statt erfundener Angaben stehen Platzhalter drin, die du mit deinen echten Infos füllst. Mein Tipp: Probier die Vorlage, die eine wiederkehrende Aufgabe in eine Automatisierung zerlegt. Mit dem Ergebnis kannst du direkt in Make, Zapier oder n8n weiterbauen.",
+  "jean": "Die langweiligste Aufgabe zuerst an die KI. Da spart es am meisten."
+ },
+ "/prompts/kategorie/content/": {
+  "intro": "Acht Vorlagen für Blogartikel, Social Posts, Newsletter und Umformulierungen. Jede fragt Zielgruppe, Ton und Format ab, damit der erste Entwurf nicht nach Massenware klingt. Mein Tipp: Starte mit der Gliederung für Blogartikel, die Suchintention und Zitierfähigkeit gleichzeitig abdeckt. Eine gute Gliederung rettet dir mehr Zeit als jeder schnelle Volltext.",
+  "jean": "Gute Texte fangen beim Bauplan an, nicht beim Tippen."
+ },
+ "/prompts/kategorie/lernen/": {
+  "intro": "Zehn Vorlagen für Schule, Studium und Weiterbildung: schwierige Themen erklären lassen, Lernpläne bauen, Karteikarten und Übungsfragen erzeugen. Mein Tipp: Lass dir zuerst einen Lernplan mit Etappen und Selbsttests machen und frag danach gezielt zu den Stellen, an denen du hängst. So lernst du aktiv, statt nur Zusammenfassungen zu lesen und zu nicken.",
+  "jean": "Nicken ist kein Lernen. Selbsttest schon."
+ },
+ "/prompts/kategorie/karriere/": {
+  "intro": "Acht Vorlagen für Anschreiben, Lebenslauf, Gehaltsgespräch und Interview-Vorbereitung. Die KI hilft beim Formulieren, die Fakten kommen von dir. Mein Tipp: Füttere die Vorlage für das Anschreiben mit der echten Stellenanzeige und zwei konkreten Erfolgen aus deinem Job. Ohne die klingt jedes Anschreiben nach Vorlage, mit ihnen nach dir.",
+  "jean": "Die KI poliert. Die Erfolge musst du selbst mitbringen."
+ },
+ "/prompts/kategorie/seo/": {
+  "intro": "Sieben Vorlagen für Keyword-Cluster, Meta-Daten und Content-Briefings, mein Hausrevier. Die KI baut dir die Struktur, die Zahlen wie Suchvolumen und Rankings holst du aus deinem SEO-Tool. Mein Tipp: Lass dir nie Suchvolumen von einem Chatbot schätzen. Gib ihm deine echte Keyword-Liste als Kontext, dann wird aus dem Cluster ein Plan statt einer Fantasie.",
+  "jean": "Chatbots raten Suchvolumen. Dein SEO-Tool misst es."
+ },
+ "/prompts/kategorie/shop/": {
+  "intro": "Sieben Vorlagen für Produktbeschreibungen, Kategorietexte, FAQ und Antworten an Kunden. Gebaut für Shops mit vielen Artikeln und wenig Zeit. Mein Tipp: Gib der Vorlage für Produkttexte echte Kundenfragen und häufige Retourengründe mit. Dann beantwortet der Text genau das, was sonst im Postfach landet, und nicht das, was das Datenblatt sowieso sagt.",
+  "jean": "Der beste Produkttext beantwortet die Frage vor der Retoure."
+ },
+ "/prompts/kategorie/technik/": {
+  "intro": "Acht Vorlagen für Excel-Formeln, Code-Erklärungen, Fehlersuche und Automatisierungen. Die KI schreibt den Entwurf, du testest ihn mit echten Daten. Mein Tipp: Beschreib bei der Formel-Vorlage deine Spalten genau und lass dir die Fehlerfälle gleich mitliefern. Probier die Formel dann erst in einer Kopie der Tabelle aus, nicht im Original.",
+  "jean": "Erst in der Kopie testen. Das Original dankt es dir."
+ },
+ "/prompts/kategorie/video/": {
+  "intro": "Sieben Vorlagen für Videoskripte, Hooks, Titel und Beschreibungen. Die KI liefert Text und Struktur, Bild und Ton kommen aus deinem Videotool. Mein Tipp: Nimm die Skript-Vorlage mit dem Hook in den ersten 15 Sekunden und lies das Ergebnis einmal laut vor. Was beim Sprechen holpert, fliegt raus, bevor die Kamera läuft.",
+  "jean": "Laut vorlesen. Was holpert, fliegt raus."
+ },
+ "/prompts/kategorie/launch/": {
+  "intro": "Sieben Vorlagen für Produktbeschreibungen, Launch-Texte, Pressemitteilungen und Verzeichnis-Einträge. Dazu der Product-Hunt-Prompt, der Tagline, Beschreibung und ersten Kommentar in einem Rutsch liefert. Mein Tipp: Bau deine Texte hier einmal sauber und nutz sie dann für die ganze Verzeichnisliste. Wer für jedes Formular neu formuliert, verliert Stunden.",
+  "jean": "Einmal gut texten, fünfzigmal einfügen. So geht Launch."
+ },
+ "/rechner/launch-zeit/": {
+  "intro": "Wie lange brauchst du, um dein KI-Tool in Verzeichnisse einzutragen? Hier stellst du Anzahl, Minuten pro Eintrag und Einträge pro Tag ein und siehst Arbeitszeit und Dauer. Mein Tipp: Schieb den Regler für Minuten pro Eintrag ehrlich nach oben, wenn du noch keine fertigen Texte hast. Der Rechner zeigt dir dann schwarz auf weiß, was dir die Vorbereitung spart.",
+  "jean": "Vorbereitung ist langweilig. Bis du die gesparten Stunden siehst."
+ },
+ "/rechner/automatisierung/": {
+  "intro": "Lohnt sich ein Ablauf in Make, Zapier oder n8n, oder machst du ihn weiter von Hand? Du trägst Minuten pro Durchlauf, Durchläufe pro Woche, Stundensatz und Aufbauzeit ein und siehst, wann sich die Arbeit bezahlt macht. Mein Tipp: Schätz die Aufbauzeit lieber doppelt so hoch, wie du denkst. Rechnet es sich dann immer noch, leg los.",
+  "jean": "Bauzeit doppelt schätzen. Dann gibt's keine Überraschung."
+ },
+ "/rechner/ki-zeitersparnis/": {
+  "intro": "Lohnt sich ein KI-Abo für dich? Trag ein, wie viele Stunden pro Woche du mit Texten, Recherche und E-Mails verbringst, wie viel KI davon realistisch spart, deinen Stundensatz und dein Abo. Der Rechner zeigt Ersparnis und Break-even. Mein Tipp: Lass den Spar-Anteil erstmal bei einem vorsichtigen Wert. Wenn es sich so schon lohnt, brauchst du nicht länger zu grübeln.",
+  "jean": "Vorsichtig rechnen. Wenn's trotzdem passt, ist die Sache klar."
+ },
+ "/rechner/abo-monatlich-oder-jaehrlich/": {
+  "intro": "Jahresabo oder monatlich zahlen? Hier wählst du deine Tools, etwa Claude, Midjourney, Runway oder Descript, und trägst ein, wie viele Monate du sie im nächsten Jahr wirklich nutzt. Mein Tipp: Sei bei den Monaten streng mit dir. Das Jahresabo lohnt sich nur, wenn du das Tool auch nach dem ersten Begeisterungsschub noch aufmachst.",
+  "jean": "Jahresabo für ein Tool, das du im März vergisst? Lieber nicht."
+ },
+ "/rechner/api-kosten/": {
+  "intro": "Was kostet deine KI-App pro Monat? Du stellst Anfragen pro Tag sowie Input- und Output-Tokens ein, und der Rechner vergleicht GPT, Claude und Gemini nebeneinander. Mein Tipp: Füg einen echten Beispiel-Prompt ein, dann schätzt der Rechner die Tokens für dich. Und prüf, ob ein kleineres Modell für deinen Zweck reicht, bevor du das große bezahlst.",
+  "jean": "Nicht jede App braucht den teuersten Motor."
+ },
+ "/rechner/newsletter-umsatz/": {
+  "intro": "Was bringt dein Newsletter wirklich? Der Rechner führt dich vom Abonnenten über Öffnung, Klick und Abschluss bis zum Ertrag pro Ausgabe und pro Abonnent im Jahr. Mein Tipp: Trag deine echten Raten aus dem Newsletter-Tool ein, nicht die aus Branchen-Blogs. Dann siehst du, an welcher Stufe des Trichters es bei dir am meisten tropft.",
+  "jean": "Der Trichter zeigt dir, wo es tropft. Da wird geschraubt."
+ },
+ "/ki-test/logik/": {
+  "intro": "Zehn Denkfallen, bei denen das Bauchgefühl falsch liegt, angefangen beim Klassiker mit Ball und Schläger. Sprachmodelle stolpern hier gern, weil die naheliegende Antwort sprachlich wahrscheinlicher klingt als die richtige. Mein Tipp: Achte nicht nur auf das Ergebnis, sondern auf die Begründung. Eine KI, die zufällig richtig rät, verdient keine volle Punktzahl.",
+  "jean": "Richtig geraten ist nicht richtig gerechnet."
+ },
+ "/ki-test/code/": {
+  "intro": "Acht kleine Programmieraufgaben mit klarer Lösung: Funktion schreiben, Fehler finden, Code erklären. Du schickst sie an die Chatbots deiner Wahl und bewertest, wer sauber liefert. Mein Tipp: Kopier den Code jeder Antwort einmal in die Konsole und lass ihn laufen. Code, der gut aussieht, aber nicht läuft, ist wie ein Moped ohne Zündkerze.",
+  "jean": "Code muss laufen, nicht hübsch aussehen."
+ },
+ "/ki-test/ehrlichkeit/": {
+  "intro": "Acht Fragen nach Dingen, die es gar nicht gibt, etwa ein erfundenes Buch. Eine gute KI sagt hier weiß ich nicht oder gibt es nicht, statt munter zu fabulieren. Mein Tipp: Diese Kategorie ist die wichtigste, wenn du KI für Recherche nutzt. Wer hier Märchen erzählt, dem glaubst du auch bei echten Fakten nicht mehr blind.",
+  "jean": "Ich weiß es nicht ist manchmal die beste Antwort."
+ },
+ "/ki-test/deutsch/": {
+  "intro": "Acht Aufgaben rund um Kommasetzung, Grammatik, Sie-Form und Wortlimits. Hier zeigt sich, wie gut eine KI wirklich Deutsch schreibt und nicht nur übersetztes Englisch. Mein Tipp: Zähl bei den Wortlimit-Aufgaben tatsächlich nach. Viele Antworten wirken auf den ersten Blick passend und reißen das Limit trotzdem um ein paar Wörter.",
+  "jean": "Kommas sind keine Deko. Auch nicht für KI."
+ },
+ "/ki-test/kreativ/": {
+  "intro": "Sieben Aufgaben mit Reimen, Namen und Ideen unter strengen Vorgaben, darunter ein Vierzeiler über einen roten Bart. Kreativ sein ist leicht, kreativ sein mit Regeln ist der eigentliche Test. Mein Tipp: Prüf zuerst die Regeln wie Reimschema und Wortzahl, erst dann den Witz. Eine lustige Antwort, die die Vorgaben ignoriert, ist geschummelt.",
+  "jean": "Kreativ mit Regeln. Wie Schrauben mit Drehmomentschlüssel."
+ },
+ "/ki-test/fakten/": {
+  "intro": "Neun einfache, überprüfbare Faktenfragen, etwa wie viele Bundesländer Deutschland hat. Klingt banal, ist aber ein ehrlicher Grundcheck. Mein Tipp: Wer hier danebenliegt, dem solltest du bei schwierigen Fragen nicht blind vertrauen. Bewerte deshalb streng, und schau bei Antworten mit Quellen kurz nach, ob die Quelle die Aussage wirklich stützt.",
+  "jean": "Wer beim Einmaleins patzt, kriegt die Steuer nicht."
+ },
+ "/ki-tools/modelle/": {
+  "intro": "68 Einträge zu den Motoren unter der Haube: offene und geschlossene Sprachmodelle, Ranglisten, Plattformen für lokalen Betrieb und Feintuning. Die Konsens-Favoriten oben empfehlen mindestens zwei der drei großen Listen. Mein Tipp: Lies zuerst den Abschnitt So wählst du. Wer ein Modell lokal betreiben will, braucht andere Kandidaten als jemand, der nur Ranglisten vergleichen möchte.",
+  "jean": "Wer den Motor versteht, kauft das Moped besser."
+ },
+ "/ki-tools/suche/": {
+  "intro": "14 KI-Suchmaschinen, die dir Antworten mit Quellen geben statt zehn blauer Links. Für Recherche sind sie oft besser als ein reiner Chatbot. Oben stehen die Konsens-Favoriten, darunter alle Tools, zum Teil mit Preisen. Mein Tipp: Stell zwei Suchmaschinen dieselbe Frage aus deinem Fachgebiet und vergleich die Quellen. Dort, wo du dich auskennst, merkst du sofort, wem du trauen kannst.",
+  "jean": "Quellen sind das Kassenbuch der Antwort. Immer reinschauen."
+ },
+ "/ki-tools/agenten/": {
+  "intro": "89 Agenten, die Aufgaben selbst planen, Werkzeuge nutzen und mehrere Schritte abarbeiten: recherchieren, klicken, schreiben, prüfen. Viele davon sind Open Source und selbst hostbar. Mein Tipp: Gib einem Agenten am Anfang eine kleine, klar begrenzte Aufgabe und schau ihm beim Arbeiten zu. Vertrauen gibt es bei Agenten wie beim Azubi, Schritt für Schritt.",
+  "jean": "Agenten sind wie Azubis. Erst kleine Aufgaben, dann den Schlüssel."
+ },
+ "/ki-tools/chatgpt-alternativen/": {
+  "intro": "ChatGPT ist nicht die einzige gute KI. Hier stehen 56 Alternativen, 42 Chatbots und 14 KI-Suchmaschinen, die Favoriten der großen Community-Listen ganz oben. Mein Tipp: Rate nicht, welche besser ist, sondern schick im KI-Test dieselben Aufgaben an ChatGPT, Claude, Gemini, Perplexity und Grok. Am Ende hast du deine eigene Rangliste statt einer fremden Meinung.",
+  "jean": "Nicht raten, testen. Deine Aufgaben, deine Rangliste."
+ },
+ "/ki-tools/schreiben/": {
+  "intro": "47 Schreibtools zum Entwerfen, Umschreiben, Übersetzen und Kürzen. Spezialisierte Tools bringen Vorlagen, Markenstimme und Plagiatsprüfung mit, für vieles reicht aber ein guter Prompt im Chatbot. Mein Tipp: Prüf ehrlich, ob du wirklich ein eigenes Schreibtool brauchst. Wenn du nur ab und zu Texte glättest, spart dir eine gute Prompt-Vorlage das zusätzliche Abo.",
+  "jean": "Manchmal ist das beste Schreibtool ein besserer Prompt."
+ },
+ "/ki-tools/sicherheit/": {
+  "intro": "Fünf Werkzeuge rund um KI-Erkennung und Sicherheit: KI-Texte erkennen, Modelle absichern, Schwachstellen finden. Wichtig vorweg: Kein KI-Detektor ist zuverlässig genug für harte Entscheidungen. Mein Tipp: Nutze Detektoren höchstens als Hinweis, nie als Urteil. Bei Bildern und Videos sind Herkunftsnachweise wie C2PA oder Wasserzeichen deutlich aussagekräftiger als jedes Prozent-Ergebnis.",
+  "jean": "Ein Detektor ist ein Rauchmelder, kein Richter."
+ },
+ "/ki-tools/fuer/": {
+  "intro": "Zehn Zielgruppen, von Lehrern über Handwerksbetriebe bis zu Shops und YouTubern, jeweils mit fünf typischen Aufgaben, passenden Werkzeugen und fertigen Prompts. Statt durch Hunderte Tools zu scrollen, startest du bei deinem eigenen Job. Mein Tipp: Klick deine Zielgruppe an und nimm dir die Aufgabe vor, die dich jede Woche am meisten nervt. Dort bringt KI am schnellsten etwas.",
+  "jean": "Ein Dachdecker braucht andere KI als ein YouTuber."
+ },
+ "/ki-tools/chatbots/": {
+  "intro": "43 Chatbots, von ChatGPT über Claude bis Gemini. Sie beantworten Fragen, schreiben, rechnen und programmieren, der Unterschied steckt in Kontextlänge, Datenschutz, Websuche und Preis. Mein Tipp: Überleg dir vorher, welches dieser vier Kriterien für dich zählt. Wer lange Dokumente einwirft, wählt anders als jemand, der vor allem aktuelle Websuche braucht.",
+  "jean": "Alle Chatbots reden. Entscheidend ist, worüber sie gut reden."
+ },
+ "/ki-tools/audio/": {
+  "intro": "39 Tools für Text zu Sprache, Sprache zu Text, Stimmen klonen und Podcasts übersetzen, von ElevenLabs bis Whisper als Open-Source-Transkription. Mein Tipp: Wenn du nur transkribieren willst, schau dir zuerst die Open-Source-Optionen an. Willst du dagegen eine Stimme klonen, prüf genau, wie der Anbieter mit Einwilligung und Rechten umgeht.",
+  "jean": "Erst die Rechte klären, dann die Stimme klonen."
+ },
+ "/ki-tools/produktivitaet/": {
+  "intro": "90 Tools, die im Arbeitsalltag Minuten sparen: Meetings mitschreiben, E-Mails sortieren, Notizen ordnen, Browser-Erweiterungen. Die Minuten summieren sich zu Stunden, wenn du die richtigen erwischst. Mein Tipp: Nimm nicht fünf Tools auf einmal, sondern eins für deinen größten Zeitfresser. Erst wenn das sitzt, kommt das nächste dazu.",
+  "jean": "Ein Tool, das du nutzt, schlägt fünf, die du installierst."
+ },
+ "/ki-tools/finanzen/": {
+  "intro": "Sieben Werkzeuge für Analyse, Research und Quant-Arbeit. Ganz klar vorweg: Das ist keine Anlageberatung, jedes Ergebnis prüfst du selbst. Mein Tipp: Schau bei jedem Tool zuerst, woher die Kurse und Kennzahlen kommen und wie aktuell sie sind. Ein Tool, das Rechenwege und Quellen zeigt, ist mir lieber als eines, das nur eine schicke Zahl ausspuckt.",
+  "jean": "Keine Rechenwege, kein Vertrauen. Gilt für Tools und Berater."
+ },
+ "/ki-tools/marketing/": {
+  "intro": "15 Marketing-Tools für Werbetexte, Social Posts, Anzeigen und Kampagnen. Sie bündeln Vorlagen und Markenstimme, die Prompts auf dieser Seite funktionieren aber in jedem Chatbot. Mein Tipp: Teste zuerst die Prompts in dem Chatbot, den du ohnehin nutzt. Reicht dir das Ergebnis nicht, weißt du danach genau, welche Funktion ein Spezialtool liefern muss.",
+  "jean": "Erst mit Bordwerkzeug probieren, dann das Spezialwerkzeug kaufen."
+ },
+ "/ki-tools/recherche/": {
+  "intro": "22 Tools für Studium, Forschung und gründliche Recherche: Paper finden, PDFs befragen, Texte aus Bildern lesen, mit Quellenangaben. Oben stehen die Konsens-Favoriten. Mein Tipp: Wenn du mit Papers arbeitest, lass dir Aussagen immer mit Seitenzahl oder Zitat belegen und schlag mindestens eine Stelle selbst nach. So merkst du schnell, wie sauber ein Tool arbeitet.",
+  "jean": "Ein Zitat ohne Seitenzahl ist ein Gerücht."
+ },
+ "/ki-tools/musik/": {
+  "intro": "22 Tools für Songs, Jingles und Soundeffekte aus einer Beschreibung. Oben stehen die Favoriten, die mindestens zwei der drei großen Listen empfehlen. Mein Tipp: Bevor du einen KI-Song in Werbung oder Video einbaust, lies die Lizenzbedingungen des Anbieters genau. Kommerzielle Nutzung ist der Punkt, an dem aus Spaß schnell Ärger wird.",
+  "jean": "Erst die Lizenz lesen, dann auf Play drücken."
+ },
+ "/ki-tools/quellen/": {
+  "intro": "Hier lege ich offen, woher die Datenbank kommt: drei frei lizenzierte KI-Tool-Listen auf GitHub, mit Sternen, Forks und Lizenz, zusammen 705 eindeutige Tools. Übernommen werden nur Fakten wie Name, Link und Rubrik. Mein Tipp: Wenn du wissen willst, wie das Konsens-Abzeichen zustande kommt, bist du hier richtig. Transparenz ist bei Tool-Listen leider keine Selbstverständlichkeit.",
+  "jean": "Wer seine Quellen zeigt, hat nichts zu verstecken."
+ },
+ "/ki-tools/alternativen/": {
+  "intro": "13 Übersichten mit Alternativen zu den bekanntesten KI-Tools, von Midjourney über Perplexity bis Notion AI, inklusive Gratis- und Open-Source-Optionen. Ob zu teuer, zu wenig Datenschutz oder falscher Schwerpunkt: Hier findest du den Ausweg. Mein Tipp: Schreib dir den einen Grund auf, warum du wechseln willst, und lies die passende Übersicht mit genau diesem Filter im Kopf.",
+  "jean": "Ein klarer Wechselgrund spart dir zehn Testabos."
+ },
+ "/ki-tools/video/": {
+  "intro": "39 Videotools für Videos aus Text, Avatare, automatische Untertitel und Schnitt. Damit entstehen Erklärvideos, Social Clips und Produktdemos ganz ohne Kamera. Mein Tipp: Entscheide zuerst, welche Art Video du brauchst. Für Untertitel unter vorhandenem Material brauchst du ein ganz anderes Werkzeug als für ein Avatar-Video aus einem Skript.",
+  "jean": "Keine Kamera nötig. Ein Plan aber schon."
+ },
+ "/ki-tools/bild/": {
+  "intro": "78 Tools für Bilder aus Text, Logos, Produktfotos und Präsentationen, mit Midjourney, Flux, Stable Diffusion und Design-Tools mit KI-Funktionen. Oben stehen die Konsens-Favoriten. Mein Tipp: Brauchst du Produktfotos oder Präsentationen, such gezielt nach Design-Tools statt nach reinen Bildgeneratoren. Die freien Generatoren sind toll zum Spielen, aber nicht immer für den Arbeitsalltag gebaut.",
+  "jean": "Zum Spielen ein Generator. Zum Arbeiten ein Werkzeug."
+ },
+ "/ki-tools/coding/": {
+  "intro": "127 Tools fürs Programmieren, von Copilot im Editor bis zu Coding-Agenten, die selbstständig Pull Requests schreiben. Mein Tipp: Fang mit der Autovervollständigung in deinem gewohnten Editor an, bevor du einen Agenten an dein Repository lässt. Und lies jeden generierten Pull Request so kritisch wie den eines neuen Kollegen.",
+  "jean": "Agenten-Code wird reviewt wie Kollegen-Code. Ohne Ausnahme."
+ },
+ "/ki-tools/kostenlos/": {
+  "intro": "302 Wege zu KI ohne Rechnung: 54 Gratis-Tarife bekannter Anbieter, Angaben laut Anbieter, und 248 Open-Source-Tools zum freien Nutzen oder Selbstbetreiben. Sortiert nach Rubriken von Chatbots bis Musik. Mein Tipp: Gratis-Tarife haben fast immer Limits bei Nutzung oder Funktionen. Teste sie mit deiner echten Aufgabe, dann weißt du, ob das Limit dich stört oder nicht.",
+  "jean": "Gratis ist super. Bis das Limit genau dann zuschlägt."
+ }
+}

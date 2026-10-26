@@ -57,7 +57,7 @@ function buildFaq(d, rank, total) {
                 ? `Im Moment gar nicht. ${getCheck(d.slug).status} Stand: Oktober 2026. Nimm solange eine der Alternativen auf dieser Seite.`
                 : `Über die Einreichungsseite ${d.submission_link}. ${
                 d.submission_experience === 'Good'
-                    ? 'Die Einreichung läuft nach bisherigen Tests reibungslos.'
+                    ? `Bei ${d.name} lief das Formular in unseren Tests ohne Zicken.`
                     : d.submission_experience === 'Bad'
                       ? 'Die Einreichung gilt als hakelig, plan also etwas mehr Zeit ein.'
                       : 'Zur Einreichung gibt es noch keine Erfahrungswerte.'
@@ -250,8 +250,7 @@ export default function DirectoryPage({ params }) {
                         </li>
                     </ol>
                     <p>
-                        Unterlagen, UTM-Links und die richtige Reihenfolge stehen einmal sauber im <Link href="/ratgeber/ki-tool-eintragen-anleitung">Eintrags-Ratgeber</Link>, die Texte
-                        baut dir das <Link href="/launch-kit">Launch-Kit</Link>.
+                        <Link href="/ratgeber/ki-tool-eintragen-anleitung">Eintrags-Ratgeber →</Link> · <Link href="/launch-kit">Launch-Kit →</Link>
                     </p>
                 </Band>
             )}
