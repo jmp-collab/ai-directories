@@ -8,6 +8,7 @@ import Faq, { faqSchema } from '../../components/Faq'
 import Toc from '../../components/Toc'
 import { Band } from '../../components/Deko'
 import { RUBRIK_RATGEBER } from '../../../lib/rubrik-ratgeber'
+import Quellen from '../../../components/Quellen'
 import { getArtikel } from '../../../lib/ratgeber'
 import { SITE_NAME } from '../../../lib/site'
 import { getKbRubrik, getKbRubriken, kbForClient, KB_STAND } from '../../../lib/kb'
@@ -166,6 +167,7 @@ export default function RubrikPage({ params }) {
                     <Faq items={rat.faq} />
                 </section>
             )}
+            {rat && <Quellen quellen={rat.quellen} geprueft={rat.geprueft} text="Auswahlkriterien und Antworten wurden mit diesen Quellen abgeglichen" />}
             <LeadMagnetBox id="prompt-paket" />
             <p className="source">
                 Stand {KB_STAND}. Einträge aus drei offenen GitHub-Listen, deutsche Kurzbeschreibungen auf Basis der Quellenangaben. <Link href="/ki-tools/quellen">Quellen und Lizenzen</Link> ·{' '}

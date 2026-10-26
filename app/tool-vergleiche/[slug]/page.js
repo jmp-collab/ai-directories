@@ -4,6 +4,7 @@ import JsonLd from '../../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
 import Jean from '../../components/Jean'
 import JeanIcon from '../../components/JeanIcon'
+import Faq from '../../components/Faq'
 import { SITE_NAME } from '../../../lib/site'
 import { getComparisons, getComparison } from '../../../lib/comparisons'
 import { getTool, toolHref, toolRel, TOOLS_STAND } from '../../../lib/tools'
@@ -51,6 +52,7 @@ export default function ComparisonPage({ params }) {
             acceptedAnswer: { '@type': 'Answer', text: `${getTool(slug)?.name}. ${why}` },
         })),
     }
+    for (const [q, a] of c.faq || []) faq.mainEntity.push({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })
     const anyAffiliate = c.items.some((t) => t.affiliate)
     return (
         <>
@@ -123,6 +125,40 @@ export default function ComparisonPage({ params }) {
                     )}
                 </p>
             </section>
+            {c.unterschiede?.length > 0 && (
+                <section aria-labelledby="unterschiede">
+                    <h2 id="unterschiede">Die wichtigsten Unterschiede 🔍</h2>
+                    <dl className="unterschiede">
+                        {c.unterschiede.map(([titel, text]) => (
+                            <div key={titel}>
+                                <dt>{titel}</dt>
+                                <dd>{text}</dd>
+                            </div>
+                        ))}
+                    </dl>
+                </section>
+            )}
+            {c.faq?.length > 0 && (
+                <section aria-labelledby="faq">
+                    <h2 id="faq">Häufige Fragen 🙋</h2>
+                    <Faq items={c.faq} />
+                </section>
+            )}
+            {c.quellen?.length > 0 && (
+                <section aria-labelledby="quellen" className="quellen-block">
+                    <h2 id="quellen">Quellen und Stand 🔎</h2>
+                    <p>Unterschiede und Antworten wurden {c.geprueft ? `am ${new Date(c.geprueft).toLocaleDateString('de-DE')} ` : ''}auf den Seiten der Anbieter geprüft.</p>
+                    <ul className="quellen">
+                        {c.quellen.map((q) => (
+                            <li key={q.url}>
+                                <a href={q.url} rel="noopener nofollow" target="_blank">
+                                    {q.titel}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            )}
             <p>
                 <Link href="/tool-vergleiche">← Alle Tool-Vergleiche</Link> · <Link href="/tools">KI-Tool-Verzeichnis</Link>
             </p>
