@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import TEXTE from '../../../db/texte/prompts.json'
+import Jean from '../../components/Jean'
 import { notFound } from 'next/navigation'
 import JsonLd from '../../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
@@ -62,8 +64,19 @@ export default function PromptPage({ params }) {
                 </p>
                 <h1>{p.title}</h1>
                 <p className="lead">{p.ziel}</p>
+                {TEXTE[p.slug]?.intro && <p>{TEXTE[p.slug].intro}</p>}
+                {TEXTE[p.slug]?.jean && <Jean>{TEXTE[p.slug].jean}</Jean>}
             </section>
             <PromptRunner vorlage={p.vorlage} felder={p.felder} />
+            {TEXTE[p.slug]?.tipp && (
+                <section aria-labelledby="jeans-tipp" className="jean-take">
+                    <h2 id="jeans-tipp">Jeans Tipp für bessere Ergebnisse 💡</h2>
+                    <p>{TEXTE[p.slug].tipp}</p>
+                    <p>
+                        <strong>Typischer Fehler:</strong> {TEXTE[p.slug].fehler}
+                    </p>
+                </section>
+            )}
             <section aria-labelledby="warum">
                 <h2 id="warum">Warum dieser Prompt funktioniert</h2>
                 <dl className="technik-liste">

@@ -19,6 +19,7 @@ import { absoluteUrl } from '../../../lib/site'
 import { submitRel } from '../../../lib/monetization'
 import ServiceHint from '../../components/ServiceHint'
 import { dealLabel, formatRating, formatVisits, pricingLabel } from '../../../utils/i18n-de'
+import TEXTE from '../../../db/texte/verzeichnisse.json'
 
 export const dynamicParams = false
 
@@ -55,7 +56,7 @@ function buildFaq(d, rank, total) {
             q: `Wie trage ich mein KI-Tool bei ${d.name} ein?`,
             a: getCheck(d.slug)?.status
                 ? `Im Moment gar nicht. ${getCheck(d.slug).status} Stand: Oktober 2026. Nimm solange eine der Alternativen auf dieser Seite.`
-                : `Über die Einreichungsseite ${d.submission_link}. Halte Name, Einzeiler, Beschreibung, Logo und Screenshots bereit. ${
+                : `Über die Einreichungsseite ${d.submission_link}. ${
                 d.submission_experience === 'Good'
                     ? 'Die Einreichung läuft nach bisherigen Tests reibungslos.'
                     : d.submission_experience === 'Bad'
@@ -143,7 +144,14 @@ export default function DirectoryPage({ params }) {
                 </p>
             </div>
 
-            <Jean>{jeanLine(d)}</Jean>
+            <Jean>{TEXTE[d.slug]?.jean || jeanLine(d)}</Jean>
+
+            {TEXTE[d.slug]?.take && (
+                <section aria-labelledby="take" className="jean-take">
+                    <h2 id="take">Jeans Take zu {d.name} 🧔</h2>
+                    <p>{TEXTE[d.slug].take}</p>
+                </section>
+            )}
 
             <p className="cta-row">
                 <a className="button" href={hasStatusIssue(d.slug) ? d.link : d.submission_link} target="_blank" rel={hasStatusIssue(d.slug) ? 'nofollow noopener noreferrer' : submitRel(d)}>
@@ -216,45 +224,36 @@ export default function DirectoryPage({ params }) {
             </section>
 
             {!hasStatusIssue(d.slug) && (
-                <Band farbe="blau" id="anleitung" titel={`So trägst du dein KI-Tool bei ${d.name} ein 🛠️`} sticker="5 Schritte">
+                <Band farbe="blau" id="anleitung" titel={`So kommst du bei ${d.name} rein 🛠️`} sticker="3 Schritte">
                     <ol className="anleitung">
                         <li>
-                            <strong>Unterlagen bereitlegen.</strong> Name, Einzeiler, Kurz- und Langbeschreibung, Logo, 2 bis 3 Screenshots, Kategorie und Preismodell. Die Texte
-                            erzeugt dir das <Link href="/launch-kit">Launch-Kit</Link> auf Deutsch und Englisch.
-                        </li>
-                        <li>
-                            <strong>Einreichungsseite öffnen.</strong> Bei {d.name} geht es über{' '}
+                            <strong>Formular öffnen:</strong>{' '}
                             <a href={d.submission_link} target="_blank" rel={submitRel(d)}>
                                 {new URL(d.submission_link).hostname.replace(/^www\./, '')}
                             </a>
                             .{' '}
                             {d.submission_experience === 'Good'
-                                ? 'Laut bisherigen Tests läuft das reibungslos.'
+                                ? `Bei ${d.name} lief das in unseren Tests ohne Zicken.`
                                 : d.submission_experience === 'Bad'
-                                  ? 'Die Einreichung gilt als hakelig, nimm dir etwas mehr Zeit.'
+                                  ? `${d.name} gilt als hakelig, plan einen zweiten Kaffee ein.`
                                   : 'Erfahrungswerte zur Einreichung gibt es noch nicht.'}
                         </li>
                         <li>
-                            <strong>Formular ausfüllen.</strong> Gleicher Name und gleiche Beschreibung wie überall, damit Google und KI-Suchen dein Tool als eine Marke erkennen. Link
-                            mit UTM-Parameter, damit du später siehst, was wirkt.
-                        </li>
-                        <li>
-                            <strong>Kosten klären.</strong>{' '}
+                            <strong>Kosten:</strong>{' '}
                             {d.pricing === 'Free'
-                                ? 'Der Eintrag ist kostenlos.'
+                                ? 'kostenlos.'
                                 : d.pricing === 'Paid'
-                                  ? `Der Eintrag kostet Geld${d.dealCode ? `, mit dem Code ${d.dealCode} gibt es ${dealLabel(d.dealText)}` : ''}. Frag vorher, ob der Link dofollow ist.`
-                                  : 'Zum Preis liegen keine gesicherten Daten vor, prüf ihn direkt im Formular.'}
+                                  ? `kostenpflichtig${d.dealCode ? `, mit ${d.dealCode} gibt es ${dealLabel(d.dealText)}` : ''}. Frag vorher, ob der Link dofollow ist.`
+                                  : 'nicht gesichert, schau ins Formular.'}
                         </li>
                         <li>
-                            <strong>Nachhalten.</strong> {check?.approval ? `Freischaltung laut ${d.name}: ${check.approval}.` : 'Notier dir das Einreichungsdatum.'} Prüfe nach der
-                            Freischaltung, ob Link und Beschreibung stimmen. Wie lange andere Verzeichnisse brauchen, steht unter{' '}
-                            <Link href="/freischaltung">Freischaltdauer</Link>.
+                            <strong>Nachhalten:</strong> {check?.approval ? `Freischaltung laut ${d.name}: ${check.approval}.` : 'Datum notieren, nach der Freischaltung Link prüfen.'}
+                            {check?.link_type ? ` Link-Typ laut ${d.name}: ${check.link_type}.` : ''}
                         </li>
                     </ol>
-                    <p className="box box-tipp">
-                        Keine Zeit für 50 Formulare? Über das Formular unten nimmt Jean Anfragen für den Eintragsservice entgegen. Wie lange deine ganze Launch-Runde dauert, zeigt der{' '}
-                        <Link href="/rechner/launch-zeit">Launch-Zeit-Rechner</Link>.
+                    <p>
+                        Unterlagen, UTM-Links und die richtige Reihenfolge stehen einmal sauber im <Link href="/ratgeber/ki-tool-eintragen-anleitung">Eintrags-Ratgeber</Link>, die Texte
+                        baut dir das <Link href="/launch-kit">Launch-Kit</Link>.
                     </p>
                 </Band>
             )}
@@ -273,7 +272,7 @@ export default function DirectoryPage({ params }) {
                 <h2 id="alternativen">Alternativen zu {d.name} (falls ihr nicht zusammenfindet) 💔</h2>
                 <p>
                     {d.pricing === 'Free' ? 'Ebenfalls kostenlos' : d.pricing === 'Paid' ? 'Ebenfalls kostenpflichtig' : 'Ähnlich eingestuft'} und
-                    mit ähnlicher Domain Rating. Wenn du ohnehin am Eintragen bist, nimm die gleich mit. Wer A sagt, kann auch B tippen.
+                    mit ähnlichem Domain Rating wie {d.name}.
                 </p>
                 <DirectoryTable directories={alternatives} interactive={false} />
             </section>

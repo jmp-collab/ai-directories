@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import TEXTE from '../../../db/texte/tools.json'
+import Jean from '../../components/Jean'
 import { notFound } from 'next/navigation'
 import JsonLd from '../../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
@@ -117,6 +119,7 @@ export default function ToolPage({ params }) {
                 <p>
                     <strong>Am besten für:</strong> {t.best_for_de}
                 </p>
+                {TEXTE[t.slug]?.jean && <Jean>{TEXTE[t.slug].jean}</Jean>}
                 <p className="cta-row">
                     <a className="button" href={toolHref(t)} target="_blank" rel={toolRel(t)}>
                         {t.name} ansehen ↗{t.affiliate && <sup>*</sup>}
@@ -154,6 +157,34 @@ export default function ToolPage({ params }) {
                     Quelle: <a href={t.source} target="_blank" rel="nofollow noopener noreferrer">{new URL(t.source).hostname}</a>
                     {t.affiliate && <> · * Partnerlink, <Link href="/transparenz">mehr dazu</Link></>}
                 </p>
+            )}
+            {TEXTE[t.slug] && (
+                <section aria-labelledby="meinung" className="jean-take">
+                    <h2 id="meinung">Jeans ehrliche Meinung zu {t.name} 🧔</h2>
+                    <p>{TEXTE[t.slug].meinung}</p>
+                    <div className="pro-contra">
+                        <div>
+                            <p>
+                                <strong>Passt, wenn du …</strong>
+                            </p>
+                            <ul>
+                                {TEXTE[t.slug].passt_wenn.map((x) => (
+                                    <li key={x}>{x.replace(/^Passt, wenn du\s*/i, '')}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div>
+                            <p>
+                                <strong>Lass es, wenn du …</strong>
+                            </p>
+                            <ul>
+                                {TEXTE[t.slug].lass_es_wenn.map((x) => (
+                                    <li key={x}>{x.replace(/^Lass es, wenn du\s*/i, '')}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </section>
             )}
             <section aria-labelledby="kosten" className="box box-info">
                 <h2 id="kosten">Was kostet {t.name}? 💸</h2>

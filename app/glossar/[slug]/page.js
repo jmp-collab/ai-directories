@@ -7,6 +7,7 @@ import GlossarText from '../../components/GlossarText'
 import { SITE_NAME, absoluteUrl } from '../../../lib/site'
 import { KI_GLOSSAR, glossarSlug } from '../../../lib/ki-glossar'
 import { GLOSSAR_DETAILS } from '../../../lib/ki-glossar-details'
+import TEXTE from '../../../db/texte/glossar.json'
 
 export const dynamicParams = false
 
@@ -86,6 +87,21 @@ export default function BegriffPage({ params }) {
                 <h1>{frage(b.term)}</h1>
                 <p className="lead">{b.text}</p>
             </section>
+            {TEXTE[b.slug]?.bild && (
+                <section aria-labelledby="schrauber" className="jean-take">
+                    <h2 id="schrauber">Jean erklärt's mit Schrauberhänden 🔧</h2>
+                    <p>{TEXTE[b.slug].bild}</p>
+                    <p>
+                        <strong>Merksatz:</strong> {TEXTE[b.slug].merksatz}
+                    </p>
+                </section>
+            )}
+            {!b.beispiel && TEXTE[b.slug]?.beispiel && (
+                <section aria-labelledby="beispiel">
+                    <h2 id="beispiel">Beispiel aus der Praxis</h2>
+                    <p className="box box-info">{TEXTE[b.slug].beispiel}</p>
+                </section>
+            )}
             {b.beispiel && (
                 <section aria-labelledby="beispiel">
                     <h2 id="beispiel">Beispiel aus der Praxis</h2>
