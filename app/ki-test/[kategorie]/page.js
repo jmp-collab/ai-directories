@@ -17,7 +17,7 @@ export function generateMetadata({ params }) {
     const k = getTestKategorie(params.kategorie)
     if (!k) return {}
     return {
-        title: `KI-Test ${k.name}: Chatbots im Vergleich`,
+        title: k.name.length > 24 ? `KI-Test ${k.name}` : `KI-Test ${k.name}: Chatbots im Vergleich`,
         description: `${k.intro} ${k.tests.length} Testaufgaben zum Selbermachen mit Lösung und Bewertung.`.slice(0, 300),
         alternates: { canonical: `/ki-test/${k.key}` },
     }

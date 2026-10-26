@@ -26,7 +26,7 @@ export function generateMetadata({ params }) {
     const t = getTool(params.slug)
     if (!t) return {}
     return {
-        title: `${t.name}: Preis, Gratis-Tarif & Alternativen`,
+        title: t.name.length > 18 ? `${t.name}: Preis & Alternativen` : `${t.name}: Preis, Gratis-Tarif & Alternativen`,
         description: `${t.summary_de} ${t.free_plan ? 'Mit Gratis-Tarif. ' : ''}${t.price_from ? `Bezahlt ab ${t.price_from}. ` : ''}Dazu Alternativen aus ${t.category}.`.slice(0, 300),
         alternates: { canonical: `/tools/${t.slug}` },
     }
@@ -216,11 +216,13 @@ export default function ToolPage({ params }) {
                                     {icon}
                                 </span>
                                 <strong>{titel}</strong>
-                                <span>{text}</span>
                             </li>
                         ))}
                     </ul>
-                    <p className="box box-tipp">{rat.tipp}</p>
+                    <p>
+                        Was hinter jedem Punkt steckt und worauf du bei {t.category} achten musst, steht ausführlich in der{' '}
+                        <Link href={`/ki-tools/${rubrik.key}#auswahl`}>Rubrik {rubrik.name}</Link>.
+                    </p>
                 </Band>
             )}
             {einsaetze.length > 0 && (

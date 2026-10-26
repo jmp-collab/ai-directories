@@ -261,7 +261,7 @@ Alphabetisch sortiert, 256 Einträge.
 | [Look AI Tools](https://lookaitools.com/) | [Eintragen](https://lookaitools.com/submission-service/) | 6 | 130 | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [MadGenius](https://madgenius.co/) | [Eintragen](https://madgenius.co/submit) | 10 | 5.000 |  | **🔴 Kostenpflichtig** |
 | [Mars AI directory](https://www.marsx.dev/ai-startups) | [Eintragen](https://www.marsx.dev/ai-startups) | 30 | 90.000 | **🟢 Reibungslos** | **🟢 Kostenlos** |
-| [MicroLaunch](https://microlaunch.net) | [Eintragen](https://tally.so/r/mYaR6N) | 38 | 54.400 | **🟢 Reibungslos** | **🟢 Kostenlos** |
+| [MicroLaunch](https://microlaunch.net) | [Eintragen](https://microlaunch.net/hq) | 38 | 54.400 | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [MicroStartups](https://www.microstartups.co/) | [Eintragen](https://www.microstartups.co/list-your-startup/) | 3,1 | k. A. | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [Next Gen Tools](https://nextgentools.me/) | [Eintragen](https://nextgentools.me/submit-your-tool) | 27 | 47.000 | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [NextGenTool](https://nextgentool.io/) | [Eintragen](https://nextgentool.io/submit/) | 12 | 300 | **🟢 Reibungslos** | **🟢 Kostenlos** |
@@ -310,7 +310,7 @@ Alphabetisch sortiert, 256 Einträge.
 | [Startup Pitch](https://thestartuppitch.com/) | [Eintragen](https://thestartuppitch.com/post-a-pitch/) | 40 | 5.000 | **🟢 Reibungslos** | **🔴 Kostenpflichtig** |
 | [Startup Ranking](https://www.startupranking.com/) | [Eintragen](https://www.startupranking.com/startup/create/url-validation) | 67 | 25.000 | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [Startup Roulette](https://startuproulette.com/) | [Eintragen](https://startuproulette.com/promote-my-startup/) | 21 | k. A. | **🟢 Reibungslos** | **🟢 Kostenlos** |
-| [Startup Spotlight](https://www.startupspotlight.co) | [Eintragen](https://buy.stripe.com/aEU7vOb0s2fugkUdRy) | 25 | 5.000 | **🟢 Reibungslos** | **🟢 Kostenlos** |
+| [Startup Spotlight](https://www.startupspotlight.co) | [Eintragen](https://buy.stripe.com/aEU7vOb0s2fugkUdRy) | 25 | 5.000 | **🟢 Reibungslos** | **🔴 Kostenpflichtig** |
 | [Startup Stage](https://startupstage.app/) | [Eintragen](https://startupstage.app/startups/new) | 25 | 3.000 | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [Startup Stash](https://startupstash.com/) | [Eintragen](https://startupstash.com/add-listing/) | 65 | 370.000 | **🟢 Reibungslos** | **🔴 Kostenpflichtig** |
 | [Startup88](https://startup88.com/) | [Eintragen](https://startup88.typeform.com/to/CRjWqM?typeform-source=startup88.com) | 27 | 300 | **🟢 Reibungslos** | **🟢 Kostenlos** |
