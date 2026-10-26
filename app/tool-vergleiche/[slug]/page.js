@@ -15,12 +15,15 @@ export function generateStaticParams() {
     return getComparisons().map((c) => ({ slug: c.slug }))
 }
 
+// Meta-Description höchstens 300 Zeichen, am Satzende gekürzt.
+const kuerzen = (d) => (d.length <= 300 ? d : d.slice(0, d.lastIndexOf('.', 298) + 1))
+
 export function generateMetadata({ params }) {
     const c = getComparison(params.slug)
     if (!c) return {}
     return {
         title: c.title.length > 46 ? c.title : c.title.length > 30 ? `${c.title} im Vergleich` : `${c.title}: Vergleich & Empfehlung`,
-        description: `${c.intro} Preise, Gratis-Tarife und welches Tool für welchen Zweck passt (Stand ${TOOLS_STAND}).`,
+        description: kuerzen(`${c.intro} Preise, Gratis-Tarife und welches Tool für welchen Zweck passt (Stand ${TOOLS_STAND}).`),
         alternates: { canonical: `/tool-vergleiche/${c.slug}` },
     }
 }

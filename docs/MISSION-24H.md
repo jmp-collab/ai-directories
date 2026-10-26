@@ -118,6 +118,13 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **H5 Vorbereitet für Jean**: Repository-Variablen GSC_VERIFICATION, LEAD_EMAIL, LEAD_ALIAS im Deploy-Workflow; Klick-Anleitung docs/FUER-JEAN.md.
 - Keywords (Ubersuggest DE): „claude sonnet 5.5“ 1.600 im September 2026, „neue ki modelle“ 90 bis 140, „gpt 6 astra“ 0; danach Tageslimit.
 
+## Content-Ausbau VII (Auftrag 26.10.: „jeanmauriceport@gmail.com, alle Texte unique, witzig, liebevoll, sympathisch“)
+
+- [x] **I1 Lead-Adresse**: jeanmauriceport@gmail.com als Standard für das Lead-Formular.
+- [x] **I2 Jeans Senf**: eigene Einleitung mit Tipp und Jean-Zeile für 73 Übersichts-, Listen-, Alternativen-, Rechner-, KI-Test- und Rubrikseiten (db/texte/hubs.json, Komponente JeansSenf).
+- [x] **I3 Tonpass** (Zahlen je Absatz automatisch gegen das Original geprüft, 0 Abweichungen): 10 Ratgeber (346 Textstellen), 17 Vergleiche (232), Modellseiten (89), Zielgruppen- und Rubrik-FAQ mit Tipps und Warnungen (136).
+- [x] **I4 Entdoppeln III**: YouTube-Hinweis pro Seite aus 24 Sprüchen statt 1.327-mal derselbe Satz, KB-Infobox und Quellenzeile gekürzt, Verzeichnis-FAQ und Ratgeber-Hinweis ohne Wiederholungssatz.
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.

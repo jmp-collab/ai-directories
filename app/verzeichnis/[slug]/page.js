@@ -250,8 +250,7 @@ export default function DirectoryPage({ params }) {
                         </li>
                     </ol>
                     <p>
-                        Unterlagen, UTM-Links und die richtige Reihenfolge stehen einmal sauber im <Link href="/ratgeber/ki-tool-eintragen-anleitung">Eintrags-Ratgeber</Link>, die Texte
-                        baut dir das <Link href="/launch-kit">Launch-Kit</Link>.
+                        <Link href="/ratgeber/ki-tool-eintragen-anleitung">Eintrags-Ratgeber →</Link> · <Link href="/launch-kit">Launch-Kit →</Link>
                     </p>
                 </Band>
             )}
