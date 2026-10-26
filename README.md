@@ -174,7 +174,7 @@ Alphabetisch sortiert, 256 Einträge.
 | [AlterOpen](https://alteropen.com/) | [Eintragen](https://alteropen.com/submit/pack) | 39 | 2.000 | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [Amaete AI](https://www.amaete.ai/) | [Eintragen](https://www.amaete.ai/) | 11 | 4.000 | **🔴 Hakelig** |  |
 | [Ankore](https://ankore.io) | [Eintragen](https://ankore.io/submit/) | 0,4 | 1.500 | **🟢 Reibungslos** | **🔴 Kostenpflichtig** |
-| [Anyfp](https://anyfp.com/) | [Eintragen](https://anyfp.com/contact/) | 33 | 1.000 | **🟢 Reibungslos** | **🔴 Kostenpflichtig** |
+| [Anyfp](https://anyfp.com/) | [Eintragen](https://anyfp.com/contact/) | 33 | 1.000 | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [Apps and Websites](https://appsandwebsites.com/) | [Eintragen](https://landing.mycloudmedia.co.uk/apps-and-websites-submit-ai-or-saas-tool/new-submission.html) | 21 | 5.000 | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [Appscribed](https://appscribed.com/) | [Eintragen](https://appscribed.com/product-list/) | 44 | 60.000 | **🟢 Reibungslos** | **🔴 Kostenpflichtig** |
 | [AppsHunter](https://appsthunder.com/) | [Eintragen](https://appsthunder.com/submit-your-app/) | 29 | 5.000 | **🟢 Reibungslos** | **🟢 Kostenlos** |
@@ -185,7 +185,7 @@ Alphabetisch sortiert, 256 Einträge.
 | [Best AI To](https://bestaito.com/) | [Eintragen](https://bestaito.com/submit-a-ai-tool/) | 12 | 162.000 | **🟢 Reibungslos** | **🔴 Kostenpflichtig** |
 | [Best AI Tools](https://www.startupaitools.com/) | [Eintragen](https://www.startupaitools.com/) | 10 | 900 | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [BestWebDesignTools](https://bestwebdesigntools.com/) | [Eintragen](https://bestwebdesigntools.com/submit/) | 3,7 | 3.000 | **🟢 Reibungslos** | **🟢 Kostenlos** |
-| [Beta List](https://betalist.com/) | [Eintragen](https://betalist.com/submissions/new) | 70 | 180.000 | **🔴 Hakelig** | **🟡 Bezahlt** |
+| [Beta List](https://betalist.com/) | [Eintragen](https://betalist.com/submissions/new) | 70 | 180.000 | **🔴 Hakelig** | **🔴 Kostenpflichtig** |
 | [BizRaw](https://bizraw.com/) | [Eintragen](https://bizraw.com/whats-new/posts/98/) | 73 | k. A. | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [BotsFloor](https://botsfloor.com/) | [Eintragen](https://botsfloor.com/submit) | 41 | 1.200 | **🟢 Reibungslos** | **🟢 Kostenlos** |
 | [BroUseAI](https://www.brouseai.com/) | [Eintragen](https://www.brouseai.com/) | 17 | 10.000 | **🟢 Reibungslos** | **🟢 Kostenlos** |

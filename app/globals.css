@@ -4833,3 +4833,37 @@ ul.kb-hero-chips {
     margin: 0;
     overflow-wrap: anywhere;
 }
+
+/* Jeans Take / Meinung: eigene Einschätzung je Seite */
+.jean-take {
+    border: 2px solid var(--border);
+    border-left: 8px solid var(--accent, #ff4f8b);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 12px 18px;
+    margin: 16px 0;
+}
+
+.jean-take h2 {
+    margin-top: 0;
+}
+
+.jean-take ul {
+    padding-left: 20px;
+}
+
+.pro-contra {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 8px 24px;
+}
+
+.pro-contra p {
+    margin-bottom: 4px;
+}
+
+.hero .eyebrow a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}

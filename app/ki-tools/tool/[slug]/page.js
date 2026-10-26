@@ -4,6 +4,7 @@ import JsonLd from '../../../components/JsonLd'
 import Breadcrumbs, { breadcrumbSchema } from '../../../components/Breadcrumbs'
 import { SITE_NAME } from '../../../../lib/site'
 import { getKbTools, getKbTool, kbAlternativen, kbIndexierbar, kbPreis, kbPrimary, KB_RUBRIKEN, KB_SOURCES, KB_STAND } from '../../../../lib/kb'
+import TEXTE from '../../../../db/texte/kb.json'
 import { getPrompt } from '../../../../lib/prompts'
 import { getTutorial } from '../../../../lib/tutorials'
 import { hatAlternativenHub } from '../../../../lib/alternativen'
@@ -101,10 +102,19 @@ export default function KbToolPage({ params }) {
                     </dd>
                 </div>
             </dl>
+            {TEXTE[t.slug] && (
+                <section aria-labelledby="take" className="jean-take">
+                    <h2 id="take">Jeans Take zu {t.name} 🧔</h2>
+                    <p>{TEXTE[t.slug].take}</p>
+                    <p>
+                        <em>{TEXTE[t.slug].jean}</em>
+                    </p>
+                </section>
+            )}
             <p className="box box-info">
                 {t.konsens > 1
                     ? `${t.name} steht unabhängig voneinander in ${t.konsens === 3 ? 'allen drei' : 'zwei der drei'} größten offenen KI-Tool-Listen auf GitHub. Das ist ein gutes Zeichen, ersetzt aber keinen eigenen Test.`
-                    : `${t.name} steht in einer der drei großen offenen KI-Tool-Listen. Prüfe Funktionsumfang, Preis und Datenschutz direkt beim Anbieter, bevor du es einsetzt.`}
+                    : `${t.name} steht in einer der drei großen offenen KI-Tool-Listen. Mehr als diese eine Empfehlung haben wir noch nicht.`}
             </p>
             {alternativen.length > 0 && (
                 <section aria-labelledby="alternativen">

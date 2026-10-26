@@ -1,0 +1,618 @@
+{
+ "agentset": {
+  "take": "Agentset ist eine Open-Source-Plattform, um RAG- und Agenten-Anwendungen zu bauen und zu bewerten. RAG heißt grob: Die KI antwortet auf Basis deiner eigenen Dokumente. Zwei Kuratoren haben es in ihre Listen gepackt. Eher ein Werkzeug für Entwickler, und wer selbst hostet, kümmert sich auch um Server und Updates.",
+  "jean": "Baukasten für KI, die vorher in deine Akten schaut."
+ },
+ "ai-poem-generator": {
+  "take": "Der AI Poem Generator schreibt dir aus einem Textprompt ein gereimtes Gedicht zu jedem Thema. Perfekt für Geburtstagskarten, Hochzeitsreden oder wenn dir für den Kollegen nichts mehr einfällt. Zwei Community-Listen kennen ihn. Prüf, ob er auf Deutsch sauber reimt, die Beschreibung verspricht das nur auf Englisch.",
+  "jean": "Reim dich oder ich fress dich, jetzt mit Maschine."
+ },
+ "ai2sql": {
+  "take": "AI2sql verspricht, dass auch Nicht-Entwickler effiziente SQL-Abfragen schreiben können, ohne SQL zu beherrschen. Klingt nach Rettung für Marketing und Controlling, die sonst auf die IT warten. In zwei Sammlungen hat es einen Platz. Fehlerfrei ist ein mutiges Versprechen, also teste jede Abfrage erst auf einer Kopie, nicht auf der Produktionsdatenbank.",
+  "jean": "SQL ohne SQL. Backup bitte trotzdem mit Backup."
+ },
+ "aiva": {
+  "take": "AIVA ist ein Assistent für KI-Musik mit laut Anbieter über 250 Stilen zur Auswahl. Gut für Videomacher, Spieleentwickler oder alle, die schnell einen Soundtrack brauchen. Zwei Listen haben ihn aufgenommen. Bevor du die Musik kommerziell nutzt, schau dir an, wem die Rechte an den Stücken gehören.",
+  "jean": "250 Stile und kein Proberaum mit Nachbarschaftsärger."
+ },
+ "alpaca": {
+  "take": "Alpaca ist ein Photoshop-Plugin für Stable Diffusion, bringt Bildgenerierung also direkt in dein gewohntes Programm. Interessant für Designer, die nicht ständig zwischen Tools wechseln wollen. Für zwei Kuratoren war es einen Eintrag wert. Du brauchst Photoshop als Grundlage, und wie aktuell das Plugin ist, solltest du vor der Installation prüfen.",
+  "jean": "KI direkt in Photoshop. Kein Fensterwechsel-Marathon mehr."
+ },
+ "alphaxiv": {
+  "take": "alphaXiv lässt dich arXiv-Paper lesen, entdecken und diskutieren. Spannend für Forschende und Studierende, die über Fachartikel ins Gespräch kommen wollen. Zwei Listen führen es, und es kostet nichts. Diskussionen sind nur so gut wie die Leute darin, also nimm Kommentare als Hinweis, nicht als Peer Review.",
+  "jean": "Stammtisch für Paper. Mit Fußnoten statt Bierdeckeln."
+ },
+ "amazon-q": {
+  "take": "Amazon Q ist der KI-Assistent von AWS, der Fragen beantwortet, Code schreibt und Aufgaben automatisiert. Am meisten bringt er vermutlich Teams, die ohnehin tief in der AWS-Welt stecken. Zwei von drei Community-Sammlungen nennen ihn. Zu Preisen haben wir nichts, und bei AWS lohnt es sich immer, die Abrechnung im Blick zu behalten.",
+  "jean": "Für alle, deren Kalender schon AWS-orange ist."
+ },
+ "anyword": {
+  "take": "Anyword ist ein KI-Schreibassistent, der laut Beschreibung wirksame Werbetexte für jeden erzeugt. Für Marketer und Selbstständige, die Anzeigen oder Produkttexte brauchen. Zwei Listen verweisen auf den Eintrag. Wirksam zeigt sich erst im Test mit echten Kunden, also miss die Ergebnisse, statt dem Versprechen zu glauben.",
+  "jean": "Wirksam ist, was verkauft. Nicht, was in der Beschreibung steht."
+ },
+ "arena": {
+  "take": "Arena ist eine offene Plattform für Benchmarks per Crowdsourcing, laut Beschreibung betrieben von Forschenden der UC Berkeley SkyLab. Du vergleichst Antworten von Modellen und hilfst so beim Ranking. Zwei Community-Listen nennen sie, Nutzung kostenlos. Denk dran, dass Rankings den Geschmack der Masse zeigen, nicht den Test für deinen konkreten Anwendungsfall.",
+  "jean": "Blindverkostung für Chatbots. Die Masse schmeckt nicht wie du."
+ },
+ "artbreeder": {
+  "take": "Artbreeder ist ein Kreativwerkzeug, das Zusammenarbeit und Ausprobieren erleichtern soll. Gut für Leute, die gern mit Bildideen spielen und sich überraschen lassen. Zwei Community-Listen nicken zustimmend. Die Beschreibung ist ziemlich vage, also klick dich selbst durch, bevor du ein ernstes Projekt darauf aufbaust.",
+  "jean": "Bilder züchten statt malen. Die Beschreibung bleibt im Nebel."
+ },
+ "artificial-analysis": {
+  "take": "Artificial Analysis liefert laut Anbieter objektive Benchmarks und Infos, damit du KI-Modelle und Hosting-Anbieter auswählen kannst. Gut für Entwickler und Entscheider vor einer Modellwahl. Zwei Community-Listen führen die Seite, Nutzung kostenlos. Benchmarks zeigen Tendenzen, aber teste dein Wunschmodell trotzdem mit deinen eigenen Aufgaben.",
+  "jean": "Prüfstand für Modelle. Deine Strecke fährst du trotzdem selbst."
+ },
+ "auto-gpt": {
+  "take": "Auto-GPT ist laut Beschreibung ein experimenteller Open-Source-Versuch, GPT-4 vollständig autonom arbeiten zu lassen. Spannend für Tüftler, die sehen wollen, wie weit KI-Agenten allein kommen. Den Sprung in zwei Community-Listen hat der Eintrag geschafft. Experimentell ist hier wörtlich zu nehmen: Rechne mit Einrichtungsaufwand, laufenden Kosten und einem Agenten, der sich auch mal im Kreis dreht.",
+  "jean": "Autopilot im Versuchsstadium. Hand bleibt über dem Notaus."
+ },
+ "bark": {
+  "take": "Bark ist ein Open-Source-Modell auf Transformer-Basis, das aus Text Audio erzeugt. Spannend für Entwickler und Bastler, die Sprachausgabe oder Klänge selbst generieren wollen. Zwei der Community-Listen haben den Eintrag eingesammelt. Du brauchst etwas Technik und passende Hardware, und für Stimmen echter Menschen gilt wie immer: nur mit Erlaubnis.",
+  "jean": "Heißt Bellen, will aber offenbar mehr als Wuff."
+ },
+ "bing-image-creator": {
+  "take": "Bing Image Creator erzeugt Bilder aus Text auf Basis von DALL·E 3, mit eingebauten Sicherheitsfunktionen. Ein einfacher Einstieg für alle, die Bild-KI ausprobieren wollen und ohnehin bei Microsoft unterwegs sind. Doppelte Nennung in der Community. Die Sicherheitsfilter blocken manche Prompts, und Nutzungsrechte solltest du vor kommerzieller Nutzung prüfen.",
+  "jean": "Bilder per Suchmaschine. Manche Ideen bleiben am Filter hängen."
+ },
+ "bloom": {
+  "take": "BLOOM von Hugging Face ist ein Sprachmodell ähnlich GPT-3, trainiert auf 46 Sprachen und 13 Programmiersprachen. Spannend für Entwickler und Forschende, die ein offenes Modell untersuchen oder einbauen wollen. Ein Doppelpack an Community-Empfehlungen hat es. Ein Modell ist kein fertiges Chatprogramm: Du brauchst Technikverständnis und ordentlich Rechenleistung, um damit etwas anzufangen.",
+  "jean": "46 Sprachen gelernt, aber du musst ihm erst ein Zuhause bauen."
+ },
+ "bolt-new": {
+  "take": "Bolt.new ist der browserbasierte App-Baukasten von StackBlitz: Du beschreibst eine App in normaler Sprache, und ein KI-Agent baut, startet und veröffentlicht sie direkt im Browser, ohne lokale Einrichtung. Für Gründer und Prototyp-Fans. Bisher in einer Community-Liste. Es gibt freie und bezahlte Pläne, Details checkst du auf der Seite.",
+  "jean": "App bauen ohne Werkstatt. Die Probefahrt machst du trotzdem selbst."
+ },
+ "brandmark": {
+  "take": "Brandmark ist ein KI-Werkzeug fürs Logo-Design. Interessant für Gründer und Vereine, die schnell einen ersten Entwurf brauchen. Zweimal auf der Liste, einmal nicht, die Mehrheit ist dafür. Ein Logo ist mehr als ein hübsches Bild: Prüf Markenrechte, bevor du es auf Visitenkarten druckst, und rechne die Preise selbst nach.",
+  "jean": "Logo in Minuten. Markenrecht dauert länger."
+ },
+ "canva": {
+  "take": "Canva steht bei uns für Bilder erzeugen und bearbeiten mit KI-Hilfe. Für alle, die Social-Media-Posts, Flyer oder Präsentationen ohne Designstudium hinbekommen wollen. Bisher nennt es eine der drei Community-Listen. Preise sind in unseren Daten nicht hinterlegt, also check selbst, welche KI-Funktionen in deinem Konto enthalten sind.",
+  "jean": "Der Bastelkeller fürs Marketing. Jetzt mit KI im Regal."
+ },
+ "capcut": {
+  "take": "CapCut ist ein Videoschnittprogramm mit automatisch erzeugten Untertiteln, Spracherkennung und laut Community sehr bequemer Bearbeitung. Beliebt bei allen, die schnell Clips für Social Media schneiden. Gelistet ist es in einer der drei Sammlungen. Es gibt kostenlose und bezahlte Funktionen, und die Nutzungsbedingungen solltest du lesen, bevor du Kundenmaterial hochlädst.",
+  "jean": "Untertitel ohne Tippfinger. Kundenvideos erst nach Lektüre der AGB."
+ },
+ "character-ai": {
+  "take": "Bei Character.AI erstellst du Figuren und chattest mit ihnen. Unterhaltsam für Rollenspiel-Fans, Schreibende auf Ideensuche oder einfach Neugierige. Die Hälfte des Weges zur Komplettwertung: zwei Listen. Überleg dir, was du einer erfundenen Figur Persönliches erzählst, denn auch sie läuft auf einem Server, und bei Jugendlichen lohnt ein Blick auf die Nutzungsregeln.",
+  "jean": "Plaudern mit Figuren. Geheimnisse bleiben besser im Tagebuch."
+ },
+ "chatbot-ui": {
+  "take": "Chatbot UI ist eine Open-Source-Oberfläche im Stil von ChatGPT. Gedacht für alle, die ein eigenes Chatfenster betreiben wollen, etwa für ihr Team. Zwei Community-Listen haben sie aufgenommen. Bedenke: Das ist nur die Oberfläche, das Modell dahinter brauchst du separat, und selbst hosten bedeutet auch Updates selbst einspielen.",
+  "jean": "Eine schöne Karosserie. Den Motor bringst du selbst mit."
+ },
+ "chatgpt": {
+  "take": "ChatGPT von OpenAI ist ein großes Sprachmodell, mit dem du dich im Gesprächsstil unterhältst, bei uns unter Chatbots, Agenten und Bild einsortiert. Für so ziemlich jeden, der mal eine Mail, eine Idee oder eine Erklärung braucht. Wenig überraschend steht es in allen drei Listen. Kostenlos und bezahlt nutzbar, aber Antworten klingen oft sicherer, als sie sind.",
+  "jean": "Der Allrounder im Werkzeugkoffer. Selbstbewusst, aber nicht unfehlbar."
+ },
+ "chatgpt-for-jupyter": {
+  "take": "ChatGPT for Jupyter ergänzt Jupyter Notebooks und Jupyter Lab um Hilfsfunktionen, die auf ChatGPT basieren. Für Datenleute, die Erklärungen oder Code-Hilfe direkt im Notebook wollen. Zwei Listen nennen es, Open Source auf GitHub. Denk dran: Was du markierst, kann an ChatGPT gehen, also keine sensiblen Daten in den Zellen.",
+  "jean": "ChatGPT sitzt jetzt mit im Notebook. Sensible Daten bitte vor der Tür."
+ },
+ "chatpdf": {
+  "take": "ChatPDF lässt dich mit jedem PDF chatten: Datei hochladen, Fragen stellen, Antworten bekommen. Super für lange Handbücher, Verträge oder Studien, die du nicht komplett lesen willst. Zwei Listen, zwei Empfehlungen, die dritte hält sich raus. Vertrauliche Dokumente gehören nicht ungeprüft in einen fremden Dienst, und Antworten solltest du an der Stelle im PDF gegenchecken.",
+  "jean": "Das Handbuch antwortet endlich. Ob richtig, prüfst du im Original."
+ },
+ "chatsonic": {
+  "take": "ChatSonic ist ein KI-Assistent, mit dem du Texte und Bilder erstellst, zu finden unter der Domain von Writesonic. Gedacht für Marketing und Content, wenn Text und Bild aus einer Hand kommen sollen. Auf zwei Community-Listen hat der Eintrag einen Stammplatz. Zu Preisen und Datenhaltung haben wir keine Angaben, das prüfst du direkt beim Anbieter.",
+  "jean": "Texte und Bilder aus einem Fenster. Ein Tab weniger im Browser."
+ },
+ "civitai": {
+  "take": "Civitai ist eine Plattform, auf der die Community KI-Modelle teilt, vor allem rund um Bilder. Interessant für alle, die gern an Modellen schrauben statt nur Knöpfe zu drücken. Alle drei Community-Listen führen es, das ist schon mal ein Wort. Prüf trotzdem bei jedem Modell selbst, unter welcher Lizenz es steht und was du damit darfst.",
+  "jean": "Ein Ersatzteillager für Bildmodelle, nur ohne öligen Tresen."
+ },
+ "claude": {
+  "take": "Claude ist ein KI-Assistent von Anthropic, mit dem du dich unterhältst, Texte schreibst oder Fragen klärst. Ein Allrounder für Arbeit und Alltag. Ein Dreifach-Treffer: Alle Community-Listen haben ihn drin. Es gibt eine kostenlose und eine bezahlte Nutzung, und wie bei jedem Chatbot gilt: Wichtige Fakten prüfst du gegen.",
+  "jean": "Ein Gesprächspartner mit langem Atem. Der Faktencheck bleibt deiner."
+ },
+ "clipdrop": {
+  "take": "ClipDrop erstellt professionelle Bilder ohne Fotostudio, angetrieben von stability.ai. Gut für Shops, Gründer und Social-Media-Leute mit kleinem Budget. Alle drei Community-Listen führen es. Kostenlos und gegen Geld nutzbar, prüf aber vorher, welche Rechte du an den Ergebnissen hast, bevor sie im Onlineshop landen.",
+  "jean": "Fotostudio ohne Studio. Die Leuchten bleiben im Laden."
+ },
+ "cogram": {
+  "take": "Cogram macht in virtuellen Meetings automatisch Notizen und erkennt, welche Aufgaben sich daraus ergeben. Für Teams, bei denen nach dem Call regelmäßig niemand weiß, wer was übernimmt. Zwei von drei Sammlungen haben es gelistet. Vorher bitte klären, ob alle mit der Aufzeichnung einverstanden sind, sonst wird das nächste Meeting ungemütlich.",
+  "jean": "Endlich weiß jemand, wer „mach ich“ gesagt hat."
+ },
+ "compose-ai": {
+  "take": "Compose AI ist laut Beschreibung eine kostenlose Chrome-Erweiterung, die mit KI-Autovervollständigung deine Schreibzeit um 40 Prozent kürzen soll. Interessant für alle, die viel im Browser tippen. Zwei Community-Listen empfehlen die Erweiterung. Die 40 Prozent sind eine Herstellerangabe, kein Messwert von uns. Und Browser-Erweiterungen sehen viel, also prüf die Berechtigungen genau.",
+  "jean": "Tippt mit, bevor du fertig gedacht hast. Manchmal sogar richtig."
+ },
+ "consensus": {
+  "take": "Consensus ist eine Suchmaschine, die mit KI Antworten in wissenschaftlicher Forschung findet. Gut für Studierende, Journalisten und alle, die bei Streitfragen lieber Studien als Meinungen hören. Gleich zwei Listen nennen es. Lies trotzdem die Originalquelle, bevor du zitierst, denn eine Zusammenfassung ist nur so gut wie das, was sie weglässt.",
+  "jean": "Endlich Studien statt Stammtisch. Lesen musst du sie trotzdem."
+ },
+ "copilot": {
+  "take": "Copilot ist laut Beschreibung ein KI-Begleiter für den Alltag von Microsoft. Gut für alle, die ohnehin in der Microsoft-Welt unterwegs sind und schnell Fragen klären wollen. Bisher steht er in einer Community-Liste. Preise sind bei uns nicht hinterlegt, und mit einem Microsoft-Konto solltest du die Datenschutzeinstellungen einmal bewusst durchgehen.",
+  "jean": "Der Alltagskumpel von Microsoft. Erst Einstellungen, dann Smalltalk."
+ },
+ "copy-ai": {
+  "take": "copy.ai hilft dir, mit KI bessere Werbetexte und Inhalte zu schreiben. Ein Kandidat für Marketer, Gründer und Shop-Betreiber, die schnell Varianten brauchen. Zwei Listen haben angebissen. Gute Werbetexte kennen deine Kunden, die KI kennt sie nicht, also füttere sie mit echten Infos und überarbeite das Ergebnis.",
+  "jean": "Werbetexte vom Band. Die Kundennähe lieferst du."
+ },
+ "copysmith": {
+  "take": "Copysmith ist eine KI-Lösung für Content-Erstellung, ausgerichtet auf Unternehmen und E-Commerce. Klingt nach Shops mit hunderten Produkttexten, die keiner von Hand schreiben will. Zwei Sammlungen auf GitHub führen den Eintrag. Massentexte müssen trotzdem einzigartig und korrekt sein, sonst freut sich weder Google noch dein Kunde.",
+  "jean": "Produkttexte am Fließband. Qualitätskontrolle bleibt Handarbeit."
+ },
+ "craiyon": {
+  "take": "Craiyon, früher DALL-E mini, malt dir Bilder aus beliebigen Textbeschreibungen. Ein netter Einstieg für alle, die einfach mal sehen wollen, was Bild-KI so kann. Zwei Community-Kuratoren haben es eingetragen. Zur Bildqualität und zu Kosten haben wir keine Angaben, also teste ein paar Prompts, bevor du große Erwartungen an Fotorealismus hast.",
+  "jean": "Der Name sagt Wachsmalstift. Die Erwartungen auch, und das ist okay."
+ },
+ "cursor": {
+  "take": "Cursor ist ein Code-Editor, gebaut fürs Pair Programming mit KI, laut Anbieter die IDE der Zukunft. Für Entwickler, die KI tief in den Arbeitsalltag holen wollen. Zwei Sammlungen, die wir auswerten, empfehlen einen Blick. Laut Daten kostenpflichtig mit Testphase, und kläre mit deinem Arbeitgeber, ob Firmencode durch den Dienst laufen darf.",
+  "jean": "Die Zukunft, sagt der Anbieter. Die Gegenwart heißt Code-Review."
+ },
+ "d-id": {
+  "take": "D-ID lässt dich sprechende Avatare erstellen und mit ihnen interagieren, laut Beschreibung auf Knopfdruck. Spannend für Marketing, Präsentationen oder Kundenkontakt mit digitalem Gesicht. Bei zwei Community-Listen steht es auf dem Zettel. Wenn du echte Fotos von Menschen verwendest, kläre vorher die Einwilligung, das ist kein Detail, sondern Pflicht.",
+  "jean": "Ein Foto, das plötzlich redet. Erst fragen, dann animieren."
+ },
+ "deepl-write": {
+  "take": "DeepL Write ist ein KI-Schreibwerkzeug, das deine schriftliche Kommunikation verbessert. Ideal für alle, die E-Mails und Texte glätten wollen. Zwei Kuratoren-Listen tragen den Namen. Laut Daten gibt es eine kostenlose Version mit Wortlimit und ein bezahltes Upgrade, für Firmentexte lohnt sich ein Blick in die Datenschutzbedingungen.",
+  "jean": "Der Feinschliff, bevor die Mail an den Chef geht."
+ },
+ "deepseek-deepseek-com": {
+  "take": "DeepSeek ist eine Chatbot-Oberfläche, die auf den Open-Source-Sprachmodellen von DeepSeek läuft. Spannend für alle, die Alternativen zu den bekannten Chatbots testen wollen. Zwei Listen haben es auf dem Radar. Prüf vor der Nutzung, wo deine Eingaben verarbeitet und gespeichert werden, gerade bei beruflichen Inhalten.",
+  "jean": "Offene Modelle, neugieriger Blick. Datenschutzerklärung zuerst lesen."
+ },
+ "descript-overdub": {
+  "take": "Descript Overdub ist laut Community-Review eng mit Descripts Transkription und Schnitt verbunden und ideal für schnelle Voiceovers. Ein Kandidat für Podcaster und Videomacher, die ohnehin mit Descript arbeiten. Gelistet ist es bislang nur in einer Sammlung. Stimmen nachbilden geht ethisch nur mit deiner eigenen oder mit klarer Erlaubnis.",
+  "jean": "Versprecher ausbessern, ohne neu aufzunehmen. Klingt nach Luxus."
+ },
+ "devin": {
+  "take": "Devin wird als autonomer KI-Softwareentwickler von Cognition Labs beschrieben. Gedacht für Teams, die Programmieraufgaben an einen Agenten abgeben wollen, statt nur Vorschläge zu bekommen. Auf zwei der drei Listen taucht der Name auf. Autonom klingt toll, heißt aber auch: Jemand muss prüfen, was er gebaut hat. Plane Review-Zeit ein, sonst wird der neue Kollege teuer.",
+  "jean": "Ein Azubi, der nie Kaffee holt, aber alles selbst machen will."
+ },
+ "draggan": {
+  "take": "DragGAN ist ein Forschungsprojekt, mit dem du Bilder interaktiv veränderst, indem du Punkte im Bild ziehst. Klingt nach Zauberei und ist vor allem für Technikneugierige und Forschende spannend. Zwei Listen führen es, der Code liegt offen auf GitHub. Rechne mit Einrichtung per Hand, eine Ein-Klick-App ist das nicht.",
+  "jean": "Ziehen statt zeichnen. Erst aber installieren statt klicken."
+ },
+ "editgpt": {
+  "take": "editGPT hilft dir, Texte in ChatGPT Korrektur zu lesen, zu bearbeiten und Änderungen nachzuverfolgen. Praktisch für alle, die sehen wollen, was die KI an ihrem Text eigentlich umgestellt hat. Zwei Listen haben den Eintrag auf dem Zettel. Eine nachvollziehbare Änderungsansicht ist Gold wert, aber dein Text wandert dafür trotzdem zu ChatGPT.",
+  "jean": "Korrekturen mit Rotstift-Ansicht. Wie früher in der Schule, nur netter."
+ },
+ "eleven-labs": {
+  "take": "Eleven Labs ist ein KI-Stimmengenerator, bei uns unter Audio und Musik eingeordnet. Interessant für Podcaster, Videomacher und alle, die Texte vertonen wollen. Dreimal empfohlen, also von jeder Liste, die wir auswerten. Kostenlos und gegen Geld nutzbar. Echte Stimmen anderer Menschen verwendest du nur mit deren Zustimmung.",
+  "jean": "Stimme auf Knopfdruck. Fremde Stimmen nur mit Handschlag."
+ },
+ "elicit": {
+  "take": "Elicit nutzt Sprachmodelle, um Abläufe in der Recherche zu automatisieren, etwa Teile einer Literaturübersicht. Ein Kandidat für Studierende, Forschende und Analysten. Zweimal Community-Nicken, einmal Schweigen. Automatisierte Literaturarbeit spart Zeit, entbindet dich aber nicht davon, die wichtigsten Studien selbst zu lesen.",
+  "jean": "Die Fleißarbeit wird kleiner. Das Denken bleibt bei dir."
+ },
+ "emailtriager": {
+  "take": "EmailTriager entwirft im Hintergrund automatisch Antworten auf deine E-Mails. Klingt nach Erlösung für alle mit überquellendem Postfach. Zwei Listen, zwei Vorlagen, der Abschluss liegt bei dir. Ein Tool mit Zugriff auf dein Postfach sieht alles, also prüf Anbieter und Berechtigungen, und schick nichts ab, was du nicht gelesen hast.",
+  "jean": "Antworten wie von Geisterhand. Absenden bleibt deine Hand."
+ },
+ "explainpaper": {
+  "take": "Explainpaper macht wissenschaftliche Paper leichter lesbar: Paper hochladen, verwirrende Stelle markieren, Erklärung bekommen. Ideal für Studierende und Quereinsteiger, die bei Fachjargon aussteigen. Zwei Listen bürgen für einen Blick, nicht für dein Ergebnis. Die Erklärung kann vereinfachen, wo es nicht vereinfacht werden darf, also zentrale Aussagen im Original nachprüfen.",
+  "jean": "Wie ein geduldiger Tutor, der nie auf die Uhr schaut."
+ },
+ "fireflies-ai": {
+  "take": "Fireflies.ai transkribiert, fasst zusammen, durchsucht und analysiert die Gespräche deines Teams. Für alle, die nach jedem Meeting rätseln, wer eigentlich was zugesagt hat. Es steht in einer der drei Listen. Ganz wichtig: Wenn Gespräche aufgezeichnet werden, müssen alle Beteiligten Bescheid wissen, und dein Datenschutzbeauftragter will das vorher sehen.",
+  "jean": "Das Protokoll schreibt sich selbst. Die Ausreden leider auch mit."
+ },
+ "fliki": {
+  "take": "Fliki macht in wenigen Minuten aus Text ein Video oder eine Sprachausgabe mit KI-Stimmen. Interessant für Social-Media-Leute, die regelmäßig Clips brauchen. In einer der drei Listen ist es gelistet. Prüf, ob die Stimmen auf Deutsch gut klingen, denn unsere Beschreibung ist englisch und sagt dazu nichts.",
+  "jean": "Text rein, Clip raus. Die Aussprache testest du selbst."
+ },
+ "forefront": {
+  "take": "Forefront verspricht ein besseres ChatGPT-Erlebnis. Mehr verrät die Beschreibung leider nicht, was für einen Verzeichniseintrag ehrlich gesagt dünn ist. Zwei Listen nennen es trotzdem. Wenn dich eine alternative Chatoberfläche reizt, schau auf der Seite nach, welche Modelle dahinterstecken und wie es mit Preis und Datenschutz aussieht.",
+  "jean": "Besser als ChatGPT, sagt Forefront. Das Beweisstück fehlt noch."
+ },
+ "gamma": {
+  "take": "Gamma erstellt Präsentationen und Webseiten, ohne dass du dich mit Formatierung und Design abmühen musst. Ideal für alle, die lieber Inhalte denken als Folien schubsen. Zwei Kuratoren sehen hier genug Substanz für einen Eintrag. Prüf, ob du die Ergebnisse in deinem gewohnten Format exportieren kannst, bevor die Präsentation morgen früh fällig ist.",
+  "jean": "Schluss mit Pixelschubsen an Folie 14."
+ },
+ "gemini": {
+  "take": "Gemini ist eine Familie multimodaler Sprachmodelle von Google DeepMind, die du als Chat nutzen kannst. Multimodal heißt: Text ist nicht alles, auch andere Eingabearten sind im Spiel. Jede der drei Community-Listen hat Gemini an Bord. Gratis und gegen Geld nutzbar. Wer schon tief im Google-Konto steckt, sollte sich die Datenschutzeinstellungen einmal in Ruhe anschauen.",
+  "jean": "Googles Antwort auf die Chat-Frage. Einstellungen einmal sauber durchklicken."
+ },
+ "genei": {
+  "take": "genei fasst wissenschaftliche Artikel in Sekunden zusammen und soll dir laut Anbieter 80 Prozent Recherchezeit sparen. Für Studierende und Forschende mit hohem Lesestapel. Zwei Sammlungen, gleiche Empfehlung. Die 80 Prozent sind eine Werbeangabe, und eine Zusammenfassung ersetzt nicht die Methode, die du für deine Arbeit wirklich verstehen musst.",
+  "jean": "Der Lesestapel schrumpft. Das Verstehen leider nicht automatisch."
+ },
+ "genshare": {
+  "take": "GenShare will Kunst in Sekunden kostenlos generieren, und du sollst besitzen und teilen können, was du erschaffst. Ein multimediales Studio für Gelegenheitskreative, die einfach loslegen wollen. Zwei Community-Sammlungen kennen den Namen. Besitzen ist bei KI-Kunst rechtlich ein großes Wort, lies genau nach, was der Anbieter damit meint.",
+  "jean": "Eigentum an KI-Kunst. Juristen holen schon mal Kaffee."
+ },
+ "ghostwriter": {
+  "take": "Ghostwriter ist ein KI-Pair-Programmer von Replit, also ein digitaler Kollege, der beim Programmieren mitdenkt. Spannend für alle, die ohnehin im Browser bei Replit coden. Zwei Listen kennen ihn. Unser Link führt nur auf einen Blogbeitrag, schau also auf der Replit-Seite nach dem aktuellen Stand des Angebots, bevor du planst.",
+  "jean": "Pair Programming, ohne dass dir jemand über die Schulter atmet."
+ },
+ "github-copilot": {
+  "take": "Copilot schlägt dir direkt im Editor Code vor, von einer Zeile bis zur ganzen Funktion, laut Liste auf Basis von OpenAI Codex. Gemacht für Leute, die täglich programmieren und Tipparbeit sparen wollen. Kein Wunder, dass ihn jede der drei Sammlungen aufnimmt. Lies jeden Vorschlag wie den Code eines Praktikanten, und klär vorher, ob dein Firmencode überhaupt rausdarf.",
+  "jean": "Der Beifahrer, der mitlenkt. Hände bleiben trotzdem am Steuer."
+ },
+ "google-ai-studio": {
+  "take": "Google AI Studio ist ein Webtool, mit dem du Prototypen mit Gemini und experimentellen Modellen baust. Gemacht für Entwickler und Neugierige, die Prompts testen wollen, bevor sie programmieren. Zweimal gelistet, damit ist der Eintrag kein Nobody. Kostenlos und bezahlt nutzbar, schau aber in den Bedingungen nach, wie deine Eingaben verwendet werden dürfen.",
+  "jean": "Die Werkbank vor dem eigentlichen Bauprojekt."
+ },
+ "gopher": {
+  "take": "Gopher von DeepMind ist ein Sprachmodell mit 280 Milliarden Parametern. Interessant vor allem für alle, die KI-Forschung verfolgen und Modellgrößen vergleichen. Unter den drei Listen, die wir auswerten, sind zwei Fans. Der Link führt zu DeepMind, rechne eher mit Forschungsinfos als mit einem Chatfenster, in das du sofort lostippen kannst.",
+  "jean": "Riesiges Modell, eher zum Lesen als zum Losplaudern."
+ },
+ "gpt-code-ui": {
+  "take": "GPT-Code UI ist eine Open-Source-Umsetzung des Code Interpreters von ChatGPT. Damit lässt du die KI Code schreiben und ausführen, auf deiner eigenen Installation. Die Community stimmt hier mit zwei von drei Listen ab. Code, den eine KI selbst ausführt, gehört in eine abgeschottete Umgebung, nicht auf deinen Arbeitsrechner mit allen Daten.",
+  "jean": "Lass die KI rechnen, aber bitte im Sandkasten."
+ },
+ "gpt-for-sheets-and-docs": {
+  "take": "GPT for Sheets and Docs ist eine ChatGPT-Erweiterung für Google Sheets und Google Docs. Praktisch, wenn du Tabellen oder Texte massenhaft mit KI bearbeiten willst, ohne ständig zu kopieren. Zwei Community-Listen kennen sie. Wichtig: Was du durch die Erweiterung schickst, landet bei einem externen Dienst, also keine Kundendaten ohne Freigabe.",
+  "jean": "Formeln, die plötzlich Prosa können. Kundendaten bleiben trotzdem draußen."
+ },
+ "gpt4all": {
+  "take": "gpt4all ist ein Chatbot, trainiert auf einer großen Sammlung bereinigter Assistenzdaten mit Code, Geschichten und Dialogen. Spannend für Leute, die offene Modelle ausprobieren wollen. Zwei Listen nennen ihn, der Code liegt auf GitHub. Rechne mit etwas Einrichtung, wenn du ihn selbst betreiben willst.",
+  "jean": "Chatbot aus der Bastelkiste. Schrauben mitbringen."
+ },
+ "harbor": {
+  "take": "Harbor ist ein Werkzeugkasten mit Containern, mit dem du lokale LLM-Backends, Oberflächen und Hilfsdienste mit einem einzigen Befehl startest. Für Selbsthoster, die keine Lust haben, alles einzeln zusammenzustecken. Zwei Listen führen es, kostenlos und offen. Ohne Grundwissen zu Containern wird aus dem einen Befehl schnell ein Abend voller Fragen.",
+  "jean": "Ein Hafen für lokale Modelle. Container-Wissen ist die Fahrkarte."
+ },
+ "harmonai": {
+  "take": "Harmonai ist eine Community-Organisation, die Open-Source-Werkzeuge für generatives Audio veröffentlicht, damit Musikproduktion zugänglicher wird und Spaß macht. Interessant für Musiker mit Technikinteresse. Auf zwei Listen ist es zu finden. Open Source heißt hier oft: Code und Modelle statt fertiger App, also plan Bastelzeit ein.",
+  "jean": "Musik aus der Community-Werkstatt. Schraubenschlüssel liegt bei."
+ },
+ "haystack": {
+  "take": "Haystack ist ein Framework, mit dem du NLP-Anwendungen mit Sprachmodellen baust, etwa Agenten, semantische Suche oder Frage-Antwort-Systeme. Ein Werkzeug für Entwickler. Die Hälfte plus ein bisschen: zwei von drei Listen. Plan Zeit für Doku und Architektur ein, ein Framework ist ein Bausatz, kein fertiges Möbelstück.",
+  "jean": "Die Nadel im Heuhaufen finden, aber mit Bauplan."
+ },
+ "heygen": {
+  "take": "HeyGen macht aus Skripten in Minuten sprechende Videos mit anpassbaren KI-Avataren. Gut für Schulungen, Produktvideos oder Ansprachen ohne Kamera. Zwei Stimmen aus drei Listen. Laut Daten bezahlt mit Testphase. Wenn ein Avatar wie ein echter Mensch aussieht, sag deinem Publikum ehrlich, dass er keiner ist.",
+  "jean": "Ein Avatar hält deinen Vortrag. Lampenfieber weg, Ehrlichkeit bleibt."
+ },
+ "hugging-face-diffusion-models-course": {
+  "take": "Der Hugging Face Diffusion Models Course bietet Python-Material für einen Onlinekurs über Diffusionsmodelle. Ideal für alle, die verstehen wollen, wie Bildgeneratoren unter der Haube funktionieren. Zwei Kuratoren-Listen verlinken ihn. Ohne Python-Grundlagen wird es zäh, und das Material ist komplett englisch, also eher Abendkurs als Feierabendlektüre.",
+  "jean": "Motor zerlegen statt nur fahren. Python-Werkzeugkasten mitbringen."
+ },
+ "hyperwrite": {
+  "take": "HyperWrite soll dir helfen, selbstbewusst zu schreiben und schneller von der Idee zum fertigen Entwurf zu kommen. Für alle, die am leeren Blatt verzweifeln. Zwei der drei Listen sagen Ja. Wie gut es auf Deutsch formuliert, sagt unsere englische Beschreibung nicht, also teste es mit einem echten Text.",
+  "jean": "Vom Gedankenblitz zum Entwurf. Den Feinschliff machst du."
+ },
+ "hypotenuse-ai": {
+  "take": "Hypotenuse AI macht aus ein paar Stichworten Artikel, Produktbeschreibungen und Social-Media-Texte, laut Anbieter originell und aufschlussreich. Gut für Shops und Content-Teams mit viel Textbedarf. Zwei von drei Sammlungen klopfen hier auf den Tisch. Prüf, ob die Texte wirklich mehr sagen als die Stichworte, sonst hast du nur heiße Luft in Absätzen.",
+  "jean": "Aus drei Stichworten wird ein Artikel. Die Substanz bringst du mit."
+ },
+ "ideogram": {
+  "take": "Ideogram ist eine Text-zu-Bild-Plattform, die kreatives Gestalten zugänglicher machen will. Interessant für alle, die ohne Grafikprogramm schnell Visuals brauchen. Zwei Sammlungen, ein Name: Das ist schon mal ein Indiz. Es gibt kostenlose und bezahlte Optionen, schau dir aber genau an, was mit deinen Bildern passiert und wer sie sehen kann.",
+  "jean": "Kreativ ohne Grafikstudium. Die Nutzungsrechte liest du aber selbst."
+ },
+ "imagen": {
+  "take": "Imagen von Google ist ein Text-zu-Bild-Diffusionsmodell, laut Beschreibung mit hohem Fotorealismus und starkem Sprachverständnis. Spannend für alle, die verfolgen, was in der Bildforschung passiert. Mit zwei Nennungen liegt der Eintrag im guten Mittelfeld. Der Link führt auf eine Forschungsseite, also erwarte Beispiele und Paper statt eines Knopfes zum Selbermachen.",
+  "jean": "Erst mal Schaufensterbummel in der Bildforschung."
+ },
+ "jasper": {
+  "take": "Jasper soll dir helfen, mit KI schneller Inhalte zu erstellen, und steht bei uns unter Schreiben und Marketing. Typisch für Content-Teams, die viele Texte für Kampagnen brauchen. In zwei Listen steht der Name, in der dritten fehlt er. Schnelle Texte sind schön, aber prüf Fakten und Tonalität, bevor etwas unter deinem Markennamen rausgeht.",
+  "jean": "Mehr Content in weniger Zeit. Mehr Korrekturlesen leider auch."
+ },
+ "jenni": {
+  "take": "Jenni ist ein Schreibassistent, der dir laut Beschreibung Stunden beim Ideensammeln und Schreiben spart. Passt für alle, die viel Text produzieren und oft am ersten Satz hängen. Zwei von drei Community-Listen setzen auf diesen Eintrag. Die Beschreibung ist reichlich Werbesprache, und Preise fehlen uns, also teste es mit einem echten Text, bevor du dich festlegst.",
+  "jean": "Große Worte in der Beschreibung. Ein Testlauf sagt mehr."
+ },
+ "kimi": {
+  "take": "Kimi ist ein KI-Assistent von Moonshot AI mit Chat, tiefer Recherche, Programmierhilfe und Funktionen für mehrere Agenten. Für alle, die einen weiteren Allrounder testen wollen. Zwei Listen nennen ihn, laut Daten kostenlos. Klär vor beruflicher Nutzung, wo deine Eingaben landen und welche Regeln dort gelten.",
+  "jean": "Viel Ausstattung für lau. Das Kleingedruckte liest du trotzdem."
+ },
+ "komo": {
+  "take": "Komo ist eine KI-gestützte Suchmaschine. Ein weiterer Kandidat für alle, die mal etwas anderes als die üblichen Verdächtigen ausprobieren wollen. Zwei Listen haben den Eintrag schon registriert. Mehr verrät unsere Beschreibung nicht, also schau dir Datenschutz und Quellenangaben an, bevor du sie zur Standardsuche machst.",
+  "jean": "Neue Suche, gleicher Grundsatz: Quellen vor Vertrauen."
+ },
+ "krea": {
+  "take": "KREA erzeugt hochwertige Bilder mit einer KI, die laut Anbieter deine Stile, Konzepte oder Produkte kennt. Spannend für Marken und Designer, die einen wiedererkennbaren Look wollen. Zweifach empfohlen von der Community. Wenn du eigene Produktfotos einspeist, kläre, wie damit umgegangen wird, und prüf die Preise selbst.",
+  "jean": "Bilder im eigenen Stil. Vorausgesetzt, du hast einen."
+ },
+ "langchain": {
+  "take": "LangChain ist ein Framework für Anwendungen, die auf Sprachmodellen laufen. Für Entwickler, die eigene KI-Anwendungen bauen wollen. Zwei der drei Community-Sammlungen führen den Eintrag. Ein Framework spart Arbeit, bringt aber eigene Komplexität mit, also überleg, ob dein Projekt wirklich so viel Gerüst braucht.",
+  "jean": "Viel Gerüst für dein Haus. Prüf, ob du ein Hochhaus baust."
+ },
+ "langfuse": {
+  "take": "Langfuse ist eine Open-Source-Plattform für LLM-Engineering: Tracing, Auswertung, Prompt-Verwaltung und Kennzahlen an einem Ort. Gemacht für Teams, die KI-Anwendungen bauen und wissen wollen, was darin eigentlich passiert. In zwei Community-Listen vertreten. Open Source bedeutet hier: Selbst betreiben ist möglich, kostet aber Zeit für Einrichtung und Wartung.",
+  "jean": "Der Fahrtenschreiber für deine KI-App."
+ },
+ "lavender": {
+  "take": "Lavender ist ein E-Mail-Assistent, der dir laut Beschreibung mehr Antworten in weniger Zeit bringen soll. Typischer Kandidat für Vertrieb und alle, die viele Akquise-Mails schreiben. Zwei Sammlungen haben ihn drin. Bevor du ihn an dein Postfach lässt, prüf, welche Daten er lesen darf, denn E-Mails sind kein Ort für Experimente.",
+  "jean": "Duftet nach mehr Antworten. Riech trotzdem am Datenschutz."
+ },
+ "lensa": {
+  "take": "Lensa ist eine Bildbearbeitungs-App, die unter anderem personalisierte Avatare mit Stable Diffusion erzeugt. Beliebt bei allen, die sich mal als Comicheld oder Ölgemälde sehen wollen. Zwei der GitHub-Sammlungen, die wir auswerten, listen den Eintrag. Für Avatare lädst du Fotos von dir hoch, also lies vorher, was mit diesen Bildern passiert.",
+  "jean": "Einmal als Ölgemälde, bitte. Vorher Kleingedrucktes lesen."
+ },
+ "leonardo-ai": {
+  "take": "Leonardo AI erstellt visuelle Assets für deine Projekte, laut Anbieter in Produktionsqualität, schnell und mit eigenem Stil. Interessant für Spieleentwickler, Designer und Marketing. In einer der drei Listen ist es vertreten. Beispiellose Qualität steht in der Beschreibung, beurteilen solltest du das aber an deinen eigenen Testbildern.",
+  "jean": "Große Worte, schöne Bilder. Dein Testlauf entscheidet."
+ },
+ "lex": {
+  "take": "Lex ist ein Textprogramm mit eingebauter KI, damit du schneller schreibst. Gut für Autoren, Blogger und alle, die einen aufgeräumten Schreibplatz mit Hilfe auf Abruf mögen. Doppelt gelistet ist besser als gar nicht, hier sind es zwei Sammlungen. Zu Preisen und Speicherort deiner Texte steht in unseren Daten nichts, das klärst du besser vor dem großen Romanprojekt.",
+  "jean": "Schreibmaschine mit Souffleur. Der Applaus gehört trotzdem dir."
+ },
+ "lexica": {
+  "take": "Lexica ist eine Suchmaschine für Bilder aus Stable Diffusion. Praktisch, wenn du sehen willst, welche Prompts zu welchen Ergebnissen geführt haben, und dir Ideen abschauen möchtest. Zweimal gelistet, in zwei der drei Sammlungen. Weitere Funktionen nennt unsere Beschreibung nicht, also nimm es als Inspirationsquelle und klär die Nutzungsrechte, bevor du etwas kommerziell verwendest.",
+  "jean": "Spicken erlaubt. Abschreiben ohne Nachdenken eher nicht."
+ },
+ "llamaindex": {
+  "take": "LlamaIndex ist ein Daten-Framework, mit dem du LLM-Anwendungen auf deine eigenen externen Daten aufbaust. Also klar ein Werkzeug für Entwickler, nicht für den schnellen Chat zwischendurch. Es hat es in zwei Community-Listen geschafft. Rechne mit Einarbeitung in Doku und Code, und überleg vorher genau, welche Daten du an welches Modell schickst.",
+  "jean": "Der Kabelbaum zwischen deinen Daten und dem Sprachmodell."
+ },
+ "llm-stats": {
+  "take": "LLM Stats vergleicht KI-Modelle nach Benchmarks, Preisen, Geschwindigkeit und Kontextfenster. Nützlich, wenn du vor der Wahl stehst, welches Modell in dein Projekt soll. Zwei Community-Listen nennen die Seite, und sie ist kostenlos. Zahlen ändern sich in dieser Branche schnell, also gleich wichtige Werte vor der Entscheidung mit der Anbieterseite ab.",
+  "jean": "Datenblatt-Vergleich wie beim Mopedkauf. Nur ohne Probefahrt."
+ },
+ "lmql": {
+  "take": "LMQL ist eine Abfragesprache für große Sprachmodelle, also ein strukturierter Weg, mit Modellen zu sprechen. Klar ein Werkzeug für Entwickler, die mehr Kontrolle über Prompts und Ausgaben wollen. Gleich in zwei Sammlungen steht der Eintrag drin. Neue Sprache heißt neue Lernkurve, plane die Einarbeitung ein und prüf, wie aktiv das Projekt gepflegt wird.",
+  "jean": "SQL-Gefühl für Sprachmodelle. Lernkurve inklusive."
+ },
+ "loopin-ai": {
+  "take": "Loopin ist ein gemeinsamer Arbeitsbereich für Meetings: aufnehmen, transkribieren, zusammenfassen und Notizen automatisch an deinem Kalender ausrichten. Passt für Teams, die viel in Calls sitzen. Zwei Community-Listen erwähnen es. Klär vorher, wo Aufnahmen gespeichert werden, und sag allen Teilnehmenden Bescheid, bevor die KI mitschreibt.",
+  "jean": "Meetingnotizen, die sich selbst einsortieren. Der Kalender freut sich."
+ },
+ "lovable": {
+  "take": "Lovable baut dir im Gespräch komplette Apps, vom Frontend bis zum Backend, und macht aus Ideen Code, den du veröffentlichen kannst. Spannend für Gründer mit App-Idee, aber ohne Entwicklerteam. Bisher steht es in einer Community-Liste. Fertiger Code heißt nicht fertige Sicherheit: Lass vor dem Livegang jemanden drüberschauen, der sich mit Datenbanken und Logins auskennt.",
+  "jean": "Vom Geistesblitz zur App. Den TÜV machst du trotzdem."
+ },
+ "luma-dream-machine": {
+  "take": "Luma Dream Machine ist ein KI-Modell, das aus Text und Bildern schnell realistische Videos erzeugt. Spannend für Kreative, Agenturen und alle, die Bewegtbild ohne Dreh brauchen. Zwei Stimmen aus der Community, das reicht für einen genaueren Blick. Laut unseren Daten ist es kostenpflichtig, also schau dir die Konditionen an, bevor du dich in Experimenten verlierst.",
+  "jean": "Traumvideos gibt es nicht umsonst. Erst rechnen, dann träumen."
+ },
+ "magic-eraser": {
+  "take": "Magic Eraser entfernt laut Beschreibung in Sekunden unerwünschte Dinge aus Bildern. Perfekt für Urlaubsfotos mit fremden Touristen oder Produktbilder mit Kabelsalat. Eine knappe Mehrheit von zwei Listen spricht sich dafür aus. Bei Fotos, die als Beleg dienen, solltest du natürlich nichts wegretuschieren, und zu Preisen haben wir keine Angaben.",
+  "jean": "Der Tourist im Hintergrund war nie da. Pssst."
+ },
+ "make-a-scene": {
+  "take": "Make-A-Scene ist eine Methode von Meta: Du beschreibst dein Bild per Text und skizzierst es zusätzlich frei Hand, die KI setzt beides zusammen. Interessant für Neugierige, die sehen wollen, wie mehr Kontrolle bei Bildgeneratoren aussehen kann. Zwei Sammlungen verweisen darauf. Ob und wie du es selbst nutzen kannst, verrät unsere Beschreibung nicht, also eher Lesestoff als Werkzeug.",
+  "jean": "Strichmännchen plus Text gleich Kunst. Zumindest in der Theorie."
+ },
+ "manus": {
+  "take": "Manus beschreibt sich als Action Engine, die nicht nur Fragen beantwortet, sondern Aufgaben ausführt und Abläufe automatisiert. Spannend für alle, die einem Agenten echte Arbeit übertragen wollen. Es steht in einer Community-Liste, zum Testen gibt es laut Liste eine Probephase. Gib einem Agenten, der selbst handelt, nur die Zugänge, die er wirklich braucht.",
+  "jean": "Macht statt redet. Genau deshalb kriegt er nicht gleich alle Schlüssel."
+ },
+ "mem": {
+  "take": "Mem bezeichnet sich als weltweit ersten KI-Arbeitsbereich, der sich an dich anpasst, damit du kreativer bist, Routinen automatisierst und organisiert bleibst. Für Leute mit Notizchaos. Zwei Sammlungen haben den Namen notiert. Weltweit erster ist Werbesprache, also teste lieber, ob deine Notizen danach wirklich leichter auffindbar sind.",
+  "jean": "Der Erste der Welt, sagt das Marketing. Dein Notizchaos entscheidet."
+ },
+ "microsoft-azure-neural-tts": {
+  "take": "Azure Neural TTS ist Microsofts Sprachausgabe aus der Cloud, laut Community gut skalierbar, stark anpassbar und gedacht für die Einbindung in Unternehmensanwendungen. Also eher was für Entwickler und IT-Teams als für den Hobby-Podcast. Auch die zweite Liste hat es entdeckt. Es gibt freie und bezahlte Nutzung, rechne aber vorher durch, was bei deinem Volumen tatsächlich anfällt.",
+  "jean": "Stimmen aus dem Rechenzentrum, mit Krawatte und Firmenausweis."
+ },
+ "microsoft-designer": {
+  "take": "Microsoft Designer verspricht beeindruckende Designs im Handumdrehen. Interessant für alle, die Social-Media-Grafiken oder Einladungen ohne Grafikprogramm brauchen. Zwei Community-Listen machen hier mit. Die Beschreibung ist sehr knapp, also teste selbst, wie gut deutsche Texte im Design aussehen und welche Rechte du an den Bildern hast.",
+  "jean": "Schnell schick. Ob es schick bleibt, zeigt der zweite Blick."
+ },
+ "midjourney": {
+  "take": "Midjourney beschreibt sich als unabhängiges Forschungslabor, das neue Ausdrucksformen erkundet, bei uns steht es vor allem als Bildgenerator. Für Kreative, die stimmungsvolle Bilder per Text wollen. Kein Wunder, dass es in allen drei Listen auftaucht. Laut Daten kostenpflichtig, also vorher Konditionen und Nutzungsrechte anschauen.",
+  "jean": "Bilder mit Atmosphäre. Ein Gratis-Schild hängt laut Daten nicht dran."
+ },
+ "mintlify": {
+  "take": "Mintlify schreibt mit KI Dokumentation. Gut für Entwicklerteams, bei denen Doku immer als Letztes und dann gar nicht passiert. Zwei Listen haben den Eintrag in die Auswahl gepackt. Automatisch erzeugte Doku muss trotzdem jemand lesen, der den Code kennt, sonst dokumentierst du sauber das Falsche.",
+  "jean": "Endlich Doku, bevor der Kollege kündigt."
+ },
+ "mistral": {
+  "take": "Mistral AI veröffentlicht laut Beschreibung Sprachmodelle mit offenen Gewichten. Interessant für Entwickler und Firmen, die ein Modell selbst betreiben oder anpassen möchten. In einer der drei Listen steht es bislang. Offene Gewichte heißen nicht automatisch freie Nutzung für alles, lies die Lizenz des jeweiligen Modells, bevor du es in ein Produkt einbaust.",
+  "jean": "Offene Gewichte, offene Fragen zur Lizenz. Erst lesen."
+ },
+ "moonbeam": {
+  "take": "Moonbeam verspricht bessere Blogartikel in einem Bruchteil der Zeit. Klingt nach etwas für Leute, die regelmäßig bloggen und vor dem leeren Dokument erstarren. Zwei der drei Community-Listen nennen es. Zu Preis und Datenschutz steht in unseren Daten nichts, also schau selbst nach, bevor du deine Entwürfe hochlädst.",
+  "jean": "Hilft beim Bloggen. Die eigene Meinung musst du trotzdem mitbringen."
+ },
+ "mubert": {
+  "take": "Mubert beschreibt sich als lizenzfreies Musik-Ökosystem für Content Creator, Marken und Entwickler. Wer für Videos oder Podcasts ständig Hintergrundmusik braucht, sollte reinhören. Ein Duo aus zwei Community-Listen empfiehlt es. Lizenzfrei heißt aber nicht automatisch grenzenlos: Lies die Nutzungsbedingungen, bevor du einen Track in eine bezahlte Werbung packst.",
+  "jean": "Fahrstuhlmusik war gestern. Hoffentlich."
+ },
+ "murf-ai": {
+  "take": "Murf AI ist eine Plattform für Voiceover, laut Community-Review leicht bedienbar und schnell in guter Qualität, beliebt für Werbung und Marketing. Wer Erklärvideos oder Produktclips vertonen muss, findet hier einen Kandidaten. Gelistet ist es nur in einer Sammlung, und die Beschreibung ist englisch. Kosten und Sprachauswahl solltest du dir deshalb selbst anschauen.",
+  "jean": "Sprecherkabine ohne Eierkarton an der Wand."
+ },
+ "musiclm": {
+  "take": "MusicLM ist ein Modell von Google Research, das aus Textbeschreibungen Musik in hoher Qualität erzeugt. Für Musikneugierige und alle, die verfolgen, was in der KI-Forschung passiert. Zwei der drei Listen erwähnen es. Der Link führt auf eine Forschungsseite, rechne also eher mit Hörbeispielen und Papers als mit einer fertigen App zum Losklicken.",
+  "jean": "Erst mal Ohren auf. Selbst komponieren ist hier noch Forschungsthema."
+ },
+ "n8n": {
+  "take": "n8n ist eine Plattform zur Automatisierung von Arbeitsabläufen, die KI-Funktionen mit Geschäftsprozessen verbindet. Für alle, die Werkzeuge miteinander verknüpfen und Routinen abgeben wollen. Eine Community-Liste kennt n8n bisher. Je mehr Konten du anschließt, desto wichtiger werden saubere Zugangsdaten und ein Blick darauf, wo alles läuft.",
+  "jean": "Kabelsalat zwischen Apps, endlich sortiert."
+ },
+ "nekton-ai": {
+  "take": "Nekton AI automatisiert Arbeitsabläufe mit KI, und du beschreibst die Schritte einfach in normaler Sprache. Interessant für alle, die Routineaufgaben loswerden wollen, aber keine Lust aufs Programmieren haben. Silber im Listenvergleich: zwei von drei Nennungen. Klär vorher, auf welche deiner Konten und Daten die Automatisierung Zugriff bekommt.",
+  "jean": "Abläufe erklären wie einem Kollegen. Hoffentlich hört er besser zu."
+ },
+ "notebooklm": {
+  "take": "Gemini Notebook, früher NotebookLM, ist ein Online-Werkzeug für Recherche und Notizen, mit dem du dich mit deinen Dokumenten unterhältst, angetrieben von Google Gemini. Ideal für Studierende und alle, die viel Material durcharbeiten müssen. Bisher kennt es eine Community-Liste. Lade nur hoch, was du auch einem Google-Dienst anvertrauen würdest.",
+  "jean": "Dein Stapel PDFs bekommt endlich einen Gesprächspartner."
+ },
+ "notion-ai": {
+  "take": "Notion AI hilft dir laut Beschreibung, bessere Notizen und Dokumente schneller zu schreiben, direkt in Notion. Logisch vor allem für Leute, die dort sowieso ihr halbes Leben organisieren. Volles Haus: Alle drei Community-Listen nennen es. Die KI-Funktionen kosten laut Liste extra, es gibt aber Testmöglichkeiten. Prüf den aktuellen Preis auf der offiziellen Seite.",
+  "jean": "Wer in Notion wohnt, kriegt hier einen Mitbewohner, der schreiben kann."
+ },
+ "ollama": {
+  "take": "Mit Ollama bringst du große Sprachmodelle lokal auf deinem eigenen Rechner zum Laufen. Perfekt für Bastler und alle, die ihre Daten nicht in die Cloud schicken wollen. Zwei Listen empfehlen es, und es ist kostenlos und Open Source. Der Haken: Dein Rechner muss genug Leistung haben, sonst wird aus dem Chat eine Geduldsprobe.",
+  "jean": "KI in der eigenen Garage. Die Lüfter werden es dir sagen."
+ },
+ "openai-api": {
+  "take": "Die OpenAI API gibt dir Zugriff auf GPT-Modelle für Sprache, Programmierung, Bildgenerierung, Audio und Agenten. Das ist das Werkzeug für Entwickler, die OpenAI in eigene Anwendungen einbauen. Zwei Community-Listen nennen sie. Abgerechnet wird bei APIs üblicherweise nach Verbrauch, setz dir also Limits, bevor ein Fehler in einer Schleife teuer wird.",
+  "jean": "Der Hauptwasserhahn. Ohne Limit läuft die Rechnung über."
+ },
+ "openai-codex": {
+  "take": "OpenAI Codex übersetzt natürliche Sprache in Code, du beschreibst also, was passieren soll, und bekommst Programmzeilen zurück. Interessant für Entwickler und alle, die mit der OpenAI-Plattform arbeiten. Die komplette Runde aus drei Listen hat es aufgenommen. Es gibt kostenlose und bezahlte Wege, aber Code von der KI bleibt Code, den du verstehen und testen musst.",
+  "jean": "Du redest Deutsch, es antwortet in Python. Prüfen musst du beides."
+ },
+ "openart": {
+  "take": "OpenArt lässt dich laut Beschreibung über zehn Millionen Prompts durchsuchen und KI-Bilder mit Stable Diffusion und DALL·E 2 erzeugen. Gut für Kreative, die Inspiration und Werkzeug an einem Ort wollen. Die Community-Wertung steht bei zwei von drei. Prüf, welche Rechte du an generierten Bildern hast und welche Modelle aktuell angeboten werden.",
+  "jean": "Riesiges Ideenregal plus Werkbank. Rechte nicht vergessen."
+ },
+ "opencode": {
+  "take": "OpenCode ist ein Open-Source-Coding-Agent. Gedacht für Entwickler, die einen KI-Helfer für Programmieraufgaben wollen und den Quellcode einsehen möchten. Zwei Community-Listen empfehlen ihn, kostenlos. Ein Agent, der Dateien ändert, braucht Versionskontrolle im Rücken, also vor jedem Lauf sauber committen, damit du notfalls zurückdrehen kannst.",
+  "jean": "Offener Code, offene Werkstatt. Git ist dein Sicherheitsgurt."
+ },
+ "openrouter-llm-rankings": {
+  "take": "OpenRouter LLM Rankings zeigt Sprachmodelle, sortiert und ausgewertet nach ihrer Nutzung in verschiedenen Apps. Hilfreich, wenn du wissen willst, was andere tatsächlich einsetzen, statt nur Werbeversprechen zu lesen. Zwei Community-Listen empfehlen es. Beliebt heißt aber nicht automatisch passend für deinen Fall, also nutz es als Startpunkt, nicht als Urteil.",
+  "jean": "Die Bundesliga-Tabelle der Sprachmodelle, gemessen an Einsätzen."
+ },
+ "opt": {
+  "take": "OPT von Facebook ist eine Familie vortrainierter Transformer-Sprachmodelle, die nur mit Decoder arbeiten. Interessant für Forschende und Entwickler, die mit offenen Modellen experimentieren. Zwei Listen führen es, unser Link zeigt eine kleine Variante auf Hugging Face. Ohne Python und Grundlagen im maschinellen Lernen kommst du hier nicht weit.",
+  "jean": "Ein Forschungsbaustein, kein Chatprogramm für den Feierabend."
+ },
+ "otter-ai": {
+  "take": "Otter.ai ist ein Meeting-Assistent, der Audio aufnimmt, Notizen schreibt, Folien automatisch festhält und Zusammenfassungen erstellt. Für alle, die in Meetings lieber zuhören als mitschreiben. Zwei von drei Listen haben den Eintrag aufgeschrieben. Klär vorher, ob alle der Aufnahme zustimmen, und prüf, wie gut er mit deutschen Gesprächen klarkommt.",
+  "jean": "Zuhören statt kritzeln. Zustimmung der Runde vorher einholen."
+ },
+ "patience-ai": {
+  "take": "Patience.ai ist eine App, mit der du Bilder mit Stable Diffusion erzeugst, dem Modell von Stability AI. Für alle, die das Modell ohne eigene Technik ausprobieren wollen. Bei zwei der drei Listen ist der Eintrag dabei. Unsere Beschreibung ist knapp, Preise und Funktionsumfang klärst du am besten direkt auf der Seite.",
+  "jean": "Der Name ist Programm. Etwas Geduld beim Rausfinden der Details."
+ },
+ "perplexity-ai": {
+  "take": "Perplexity AI ist eine KI-gestützte Suche, die dir Antworten statt nur Linklisten liefern will. Gut für schnelle Recherche und alle, die keine Lust auf zehn offene Tabs haben. Hier sind sich ausnahmsweise alle drei Community-Listen einig. Es gibt kostenlose und bezahlte Nutzung, und auch hier gilt: Klick die Quellen an, bevor du eine Antwort weitererzählst.",
+  "jean": "Suchen ohne Tab-Chaos. Quellen klicken bleibt Hausaufgabe."
+ },
+ "phind": {
+  "take": "Phind ist eine KI-basierte Suchmaschine, bei uns unter Suche und Chatbots einsortiert. Interessant für alle, die Antworten statt Linklisten wollen. Zwei Community-Listen reihen den Eintrag ein. Die Beschreibung ist sehr knapp, also teste selbst, ob die Ergebnisse zu deinen Fragen passen, und klick die Quellen an.",
+  "jean": "Kurze Beschreibung, große Frage: Findet es, was du suchst?"
+ },
+ "phoenix": {
+  "take": "Phoenix von Arize ist ein Open-Source-Werkzeug für ML-Observability, das direkt in deiner Notebook-Umgebung läuft. Damit überwachst und verfeinerst du LLMs, Bildmodelle und Modelle für Tabellendaten. Zwei Listen haben es im Programm. Klar ein Tool für Data Scientists, nicht für Einsteiger, und selbst hosten heißt auch selbst pflegen.",
+  "jean": "Ölstandskontrolle für Modelle, direkt im Notebook."
+ },
+ "photoroom": {
+  "take": "Mit PhotoRoom machst du Produkt- und Porträtfotos nur mit dem Handy: Hintergrund raus, neuer Hintergrund rein, Produkt hübsch präsentieren. Ideal für kleine Shops ohne Fotostudio im Keller. Zwei Sammlungen halten es für erwähnenswert. Was kostenlos geht und was nicht, verrät unsere Datenlage nicht, das prüfst du am besten direkt in der App.",
+  "jean": "Fotostudio in der Hosentasche, der Ringlicht-Kauf darf warten."
+ },
+ "pictory": {
+  "take": "Pictory hilft dir, Videos über Text zu erstellen und zu bearbeiten, und das laut Anbieter in professioneller Qualität. Gedacht für Content Creator und Marketing, die viel Video brauchen, aber wenig Schnittzeit haben. Bislang steht es in einer der drei Listen. Professionell ist ein dehnbares Wort, mach also einen Probelauf mit deinem eigenen Material.",
+  "jean": "Schneiden per Texteditor. Die Schere bleibt im Schrank."
+ },
+ "pika": {
+  "take": "Pika ist eine Plattform, die aus Ideen Videos macht und deine Kreativität in Bewegung bringen will. Spannend für Kreative, die kurze Clips ohne Kamera erzeugen wollen. Bisher steht sie in einer der drei Listen. Zu Preis und Nutzungsrechten haben wir keine Daten, also vor dem ersten Kundenprojekt bitte selbst nachsehen.",
+  "jean": "Ideen bekommen Beine. Rechte klären bekommt Vorfahrt."
+ },
+ "plandex": {
+  "take": "Plandex ist eine Open-Source-Programmierhilfe fürs Terminal, gedacht für komplexe Aufgaben. Ein Werkzeug für Entwickler, die gern auf der Kommandozeile leben. Zwei Community-Kuratoren haben den Eintrag für würdig befunden. Open Source und Terminal heißt: keine bunte Oberfläche, dafür etwas Einrichtungsaufwand und ein Blick in die Doku.",
+  "jean": "Für alle, deren Lieblingsfarbe Terminalschwarz ist."
+ },
+ "poe": {
+  "take": "Poe bündelt verschiedene Chatbots an einem Ort. Praktisch, wenn du Modelle vergleichen willst, ohne fünf Konten anzulegen und fünf Passwörter zu vergessen. Zwei Listen geben hier den Daumen hoch. Es gibt kostenlose und bezahlte Nutzung. Denk dran, dass deine Eingaben je nach Bot bei unterschiedlichen Anbietern landen können.",
+  "jean": "Ein Kiosk für Chatbots. Probier dich durchs Regal."
+ },
+ "portkey": {
+  "take": "Portkey ist eine Full-Stack-Plattform für LLMOps, also Überwachung, Caching und Verwaltung von Sprachmodellen in deinen Anwendungen. Ein Werkzeug für Entwicklerteams mit KI im Produktivbetrieb. Der Name steht auf zwei Community-Listen. Bevor du eine zusätzliche Schicht zwischen App und Modell setzt, prüf Kosten und wo deine Anfragen protokolliert werden.",
+  "jean": "Schaltzentrale für deine Modelle. Noch ein Schlüssel am Bund."
+ },
+ "postwise": {
+  "take": "Postwise schreibt Tweets, plant Beiträge und soll dir helfen, mit KI mehr Follower zu gewinnen. Gedacht für Leute, die regelmäßig posten wollen, aber keine Zeit dafür haben. Zwei Listenmacher halten den Eintrag für relevant. Wachstum per Automatik klingt verlockend, aber Follower merken schnell, wenn keiner mehr selbst schreibt.",
+  "jean": "Gute Posts brauchen eine Meinung. Die liefert keine KI."
+ },
+ "publicprompts": {
+  "take": "PublicPrompts ist eine Sammlung kostenloser Prompts für Stable Diffusion. Hilfreich, wenn du nicht weißt, wie du deinem Bildgenerator einen bestimmten Stil beibringst. Zwei Community-Listen führen die Seite. Prompts sind Rezepte, keine Garantie, und je nach Modellversion kommt am Ende etwas anderes aus dem Ofen.",
+  "jean": "Ein Kochbuch für Bild-KI. Die Zutaten wechseln manchmal."
+ },
+ "quillbot": {
+  "take": "QuillBot ist ein KI-Werkzeug zum Umformulieren von Texten. Gut für alle, die einen holprigen Satz glätten oder eine Formulierung variieren wollen. Fürs Podest reicht es: zwei Listen von drei. Umformulieren ist kein Freifahrtschein für fremde Texte: In Schule und Uni zählt Umschreiben ohne Quelle trotzdem als Plagiat.",
+  "jean": "Neue Worte, alter Inhalt. Quellenangabe bleibt Pflicht."
+ },
+ "resemble-ai": {
+  "take": "Resemble AI erzeugt Stimmen und klont sie für Text-zu-Sprache. Spannend für Videoproduktion, Spiele oder Hörbücher, wenn eine bestimmte Stimme immer verfügbar sein soll. Zwei der drei ausgewerteten Sammlungen verweisen darauf. Stimmen klonen nur mit ausdrücklicher Erlaubnis der Person, alles andere ist keine Grauzone, sondern Ärger.",
+  "jean": "Deine Stimme in Serie. Fremde Stimmen nur mit Unterschrift."
+ },
+ "rundiffusion": {
+  "take": "RunDiffusion ist ein Cloud-Arbeitsplatz zum Erstellen von KI-Kunst. Praktisch für alle, die Bildmodelle nutzen wollen, aber keine starke Grafikkarte daheim haben. Zwei Listen haben den Eintrag übernommen. Cloud-Rechenzeit kostet meist Geld, egal ob das Bild gelingt oder nicht, also schau dir die Abrechnung an, bevor du stundenlang experimentierst.",
+  "jean": "Die Grafikkarte zur Miete. Die Uhr tickt mit."
+ },
+ "runway": {
+  "take": "Runway ist eine Suite für Content-Erstellung mit KI-Werkzeugen, Zusammenarbeit in Echtzeit und präziser Bearbeitung. Gedacht für Videomacher und Kreativteams. Alle drei Listen haben es drin, ein echter Hattrick. Laut Daten bezahlt mit Testphase, also nutz die Probezeit gezielt für ein echtes Projekt statt für Spielereien.",
+  "jean": "Hattrick in den Listen. Die Probezeit nicht verbummeln."
+ },
+ "rytr": {
+  "take": "Rytr ist ein KI-Schreibassistent, der dir hilft, Inhalte in guter Qualität zu erstellen. Klassischer Kandidat für Blogger, kleine Firmen und Social-Media-Texte. Zwei Listen führen den Namen in ihren Reihen. Die Beschreibung ist sehr allgemein, also teste mit einem echten Auftrag, ob dir Stil und deutsche Texte gefallen.",
+  "jean": "Schreibhilfe für den Alltag. Ein Probetext sagt mehr als jede Beschreibung."
+ },
+ "scispace": {
+  "take": "SciSpace ist ein KI-Rechercheassistent, der dir hilft, wissenschaftliche Literatur zu verstehen. Gemacht für Studierende, Forschende und alle, die mit Fachartikeln kämpfen. Zwei von drei Listenmachern haben zugeschlagen. Prüf, ob die Antworten auf Deutsch funktionieren, und verlass dich bei Zitaten nie nur auf die Zusammenfassung.",
+  "jean": "Fachchinesisch rein, Klartext raus. Zitieren bitte aus dem Original."
+ },
+ "screenpipe": {
+  "take": "Screenpipe ist ein Open-Source-Werkzeug, das Bildschirm- und Audioaktivität aufzeichnet, mit KI durchsuchbar macht, Automatisierungen bietet und lokale Sprachmodelle unterstützt. Für Leute, die nichts mehr vergessen wollen. Zwei Listen führen es, mit eingeschränktem Gratisplan und Abos. Eine Daueraufnahme deines Bildschirms ist heikel, denk an Passwörter und an andere Menschen im Bild.",
+  "jean": "Das Gedächtnis deines Bildschirms. Passwörter wollen das nicht."
+ },
+ "sharegpt": {
+  "take": "ShareGPT lässt dich deine ChatGPT-Unterhaltungen teilen und die Gespräche anderer durchstöbern. Nett, um gute Prompts zu finden oder Kollegen einen Chatverlauf zu zeigen. In zwei Community-Verzeichnissen ist der Eintrag zu Hause. Bevor du etwas teilst, lösch alles Persönliche und Vertrauliche, denn öffentlich heißt hier wirklich öffentlich.",
+  "jean": "Dein Chatverlauf auf dem Schulhof. Erst aufräumen, dann teilen."
+ },
+ "stable-diffusion": {
+  "take": "Stable Diffusion von Stability AI erzeugt Bilder aus Text und gilt laut Beschreibung als Modell auf dem neuesten Stand. Spannend für alle, die nicht nur Bilder klicken, sondern selbst Hand anlegen wollen. Zwei Kuratoren hatten denselben Gedanken und haben den Eintrag gelistet. Der Link führt zu einer Modellversion auf Hugging Face, du brauchst also Technikgeduld oder eine Oberfläche, die das Modell für dich bedient.",
+  "jean": "Der Motorblock ohne Karosserie. Zusammenbauen gehört dazu."
+ },
+ "stable-diffusion-models": {
+  "take": "Hinter Stable Diffusion Models steckt eine umfangreiche Liste von Stable-Diffusion-Checkpoints auf rentry.org. Hilfreich für Bastler, die gezielt nach Modellvarianten suchen. Zwei Sammlungen haben hier ein Lesezeichen gesetzt. Eine Liste ist kein Gütesiegel: Prüf bei jedem Download Herkunft, Lizenz und ob die Datei wirklich das ist, was sie verspricht.",
+  "jean": "Teilekatalog für Bildmodelle. Nicht jede Schraube ist Original."
+ },
+ "stable-horde": {
+  "take": "Stable Horde ist ein Netzwerk aus vielen verteilten Stable-Diffusion-Rechnern, organisiert per Crowdsourcing. Spannend für alle, die ohne eigene Grafikkarte Bilder generieren wollen. Zwei Community-Sammlungen geben eine Empfehlung ab. Bedenke, dass deine Prompts auf fremden Rechnern laufen, also gib nichts Vertrauliches ein, und auch nichts, was du später bereuen würdest.",
+  "jean": "Eine Horde Grafikkarten. Gemeinsam rechnet es sich besser."
+ },
+ "steel-browser": {
+  "take": "Steel Browser ist eine Open-Source-Sandbox für Browser und Automatisierung, gebaut für KI-Agenten, mit Sitzungsverwaltung, Screenshots, PDFs, Proxys und Werkzeugen gegen Bot-Sperren. Für Entwickler, die Agenten im Web arbeiten lassen. Zwei Listen führen ihn, kostenlos. Bitte halte dich an die Regeln der Seiten, die du automatisiert besuchst.",
+  "jean": "Ein Browser für Agenten. Benehmen müssen sie sich trotzdem."
+ },
+ "stenography": {
+  "take": "Stenography erstellt automatisch Dokumentation für deinen Code. Für Entwickler, die Doku lieber generieren als schreiben. Zwei Listen haben hier ein Kreuzchen gemacht. Prüf, ob dein Code dafür an einen externen Dienst geschickt wird, und lies die erzeugten Erklärungen, bevor sie im Repo landen.",
+  "jean": "Kurzschrift für Code. Lesen musst du sie trotzdem."
+ },
+ "suno-ai": {
+  "take": "Suno will, dass jeder Musik machen kann, ganz ohne Instrument, nur mit Fantasie. Klingt nach Spaß für Hobbymusiker, Content Creator und alle, die schon immer einen Song über ihren Hund wollten. Es steht bisher in einer Community-Liste. Bevor du Tracks veröffentlichst oder verkaufst, lies genau nach, welche Rechte du an den Ergebnissen hast.",
+  "jean": "Endlich der Song über deinen Hund. Die Rechtefrage bellt mit."
+ },
+ "sybill": {
+  "take": "Sybill fasst Verkaufsgespräche zusammen, inklusive nächster Schritte, Schmerzpunkte und Interessen, und kombiniert dafür Transkript und emotionsbasierte Auswertungen. Gemacht für Vertriebsteams, die nach jedem Call sauber nachfassen wollen. Für zwei Community-Listen hat es zum Eintrag gereicht. Emotionen auswerten klingt spannend, ist datenschutzrechtlich aber heikel, gerade in Europa. Hol dir vorher rechtlichen Rat.",
+  "jean": "Liest zwischen den Zeilen. Frag erst, ob das erlaubt ist."
+ },
+ "synthesia": {
+  "take": "Synthesia macht aus reinem Text in wenigen Minuten ein Video. Das klingt nach Schulungsvideos, Erklärclips und allem, wofür niemand vor die Kamera will. In zwei von drei Listen taucht es auf. Zu den Kosten haben wir keine Angaben, und bei Videos mit KI-Sprechern solltest du kennzeichnen, dass da kein echter Mensch spricht.",
+  "jean": "Für alle, die lieber tippen als in die Kamera lächeln."
+ },
+ "tabnine": {
+  "take": "Tabnine ergänzt deinen Code, und zwar ganze Zeilen und komplette Funktionen, damit du schneller vorankommst. Spannend für Entwickler, die eine Alternative zu den großen Namen testen wollen. Gleich zwei Community-Listen haben es auf dem Schirm. Kläre vor dem Einsatz im Job, wohin dein Code geschickt wird, das ist bei Autocomplete-Tools die eigentliche Gretchenfrage.",
+  "jean": "Autovervollständigung mit Ehrgeiz. Sie will die ganze Funktion, nicht nur das Semikolon."
+ },
+ "taskade": {
+  "take": "Taskade strukturiert Aufgaben, Notizen, Listen und Mindmaps mit KI-Unterstützung. Passt für Teams und Einzelkämpfer, die Projektplanung lieber in einem Werkzeug bündeln. Zwei Listen sind sich einig, die dritte ist noch unentschlossen. Klingt nach viel auf einmal, teste also, ob es deinen Alltag aufräumt oder nur eine weitere App auf dem Startbildschirm wird.",
+  "jean": "Ein Umzugskarton für alle Aufgaben. Hoffentlich mit Beschriftung."
+ },
+ "together-ai": {
+  "take": "Together AI ist eine Plattform zum Trainieren, Feintunen und Ausführen von KI-Modellen, laut Anbieter schnell, günstig und für den Produktivbetrieb gedacht. Zielgruppe sind Entwickler, die eigene Modelle in Anwendungen bringen wollen. Zwei Kuratoren-Listen erwähnen es. Es gibt kostenlose und bezahlte Nutzung, aber günstig ist relativ: Rechne mit deinem eigenen Verbrauch, nicht mit dem Werbesatz.",
+  "jean": "Rechenpower zum Mieten. Der Tacho läuft mit."
+ },
+ "tortoise": {
+  "take": "TorToiSe ist ein Text-zu-Sprache-System mit mehreren Stimmen, trainiert mit Schwerpunkt auf Qualität. Ein Fall für Bastler, die eine offene Sprachsynthese selbst betreiben wollen. Zwei von drei Community-Listen nehmen den Eintrag mit. Unser Link führt zu GitHub, nicht zu einer App, also plan Einrichtungszeit ein und nutz fremde Stimmen nur mit Erlaubnis.",
+  "jean": "Heißt wie eine Schildkröte. Geduld bei der Einrichtung schadet nicht."
+ },
+ "turbopilot": {
+  "take": "TurboPilot ist ein selbst gehosteter Copilot-Klon, der mit der Bibliothek hinter llama.cpp das Salesforce-Codegen-Modell mit 6 Milliarden Parametern in 4 GB RAM laufen lässt. Für Entwickler, die Code-Hilfe ohne Cloud wollen. Zwei Listen führen ihn. Rechne mit Bastelarbeit und vergleich die Vorschläge kritisch mit dem, was du gewohnt bist.",
+  "jean": "Code-Hilfe auf Sparflamme, dafür im eigenen Keller."
+ },
+ "udio": {
+  "take": "Udio lässt dich Musik entdecken, erstellen und mit der Welt teilen. Spannend für Hobbymusiker und Content Creator, die eigene Songs ausprobieren wollen. Zwei Community-Quellen bestätigen: Das Ding ist bekannt. Kostenlos und bezahlt nutzbar, aber wenn du Songs veröffentlichst, lies genau nach, welche Rechte du daran hast.",
+  "jean": "Vom Wohnzimmer in die Welt. Die Rechte reisen mit."
+ },
+ "vicuna-13b": {
+  "take": "Vicuna-13B ist ein Open-Source-Chatbot, entstanden durch Feintuning von LLaMA mit Unterhaltungen, die Nutzer über ShareGPT geteilt haben. Eher etwas für Forschende und Modell-Bastler als für den Alltag. Zwei von drei Listen sagen: anschauen. Zum Selbstbetrieb brauchst du passende Hardware und Geduld, und die Lizenzbedingungen des Basismodells solltest du kennen.",
+  "jean": "Ein Forschungsmodell mit Schrauberherz. Keine Fertigküche."
+ },
+ "webchatgpt": {
+  "take": "WebChatGPT ergänzt deine ChatGPT-Prompts um passende Ergebnisse aus dem Web. Nützlich, wenn du aktuelle Infos in deine Anfragen holen willst. Zwei Listen haben die Erweiterung aufgenommen. Browser-Erweiterungen bekommen oft weitreichende Rechte, schau dir deshalb genau an, was sie lesen darf, bevor du installierst.",
+  "jean": "ChatGPT mit Fenster nach draußen. Lüften, aber mit Fliegengitter."
+ },
+ "whisper-cpp": {
+  "take": "whisper.cpp ist eine Portierung von OpenAIs Whisper-Modell in C und C++. Damit transkribierst du Sprache auf deinem eigenen Rechner. Für Entwickler und Datenschutzbewusste, die Audio selbst verarbeiten wollen. Zwei Listen führen es, kostenlos. Ohne Kompilieren und Kommandozeile geht es nicht, das ist eher Werkstatt als Wohnzimmer.",
+  "jean": "Whisper im Blaumann. Compiler statt Klickibunti."
+ },
+ "whisper-ctranslate2": {
+  "take": "whisper-ctranslate2 ist ein Kommandozeilen-Client für Whisper, kompatibel mit dem Original von OpenAI, nutzt aber CTranslate2 für schnellere Verarbeitung. Für Leute, die Audio selbst transkribieren wollen und das Terminal nicht scheuen. Zwei Listen empfehlen ihn, er ist kostenlos und offen. Ohne Kommandozeile geht hier allerdings gar nichts.",
+  "jean": "Whisper mit Turbolader. Gestartet wird per Tastatur, nicht per Klick."
+ },
+ "wordtune": {
+  "take": "wordtune ist ein persönlicher Schreibassistent. Mehr verrät die Beschreibung nicht, aber das Prinzip ist klar: Er soll deine Formulierungen verbessern. Gut für alle, die viel schreiben und öfter ins Grübeln kommen. Zwei Häkchen von drei möglichen in den Community-Listen. Prüf, wie gut er auf Deutsch arbeitet, denn unsere Info stammt aus einer englischen Kurzbeschreibung.",
+  "jean": "Feinschliff für Sätze. Der Rohling kommt von dir."
+ },
+ "you-com": {
+  "take": "You.com ist eine KI-Suchmaschine, die dir ein persönliches Sucherlebnis bieten und laut Anbieter deine Daten zu 100 Prozent privat halten will. Interessant für Leute, die eine Alternative zur klassischen Suche testen. Zwei Listen führen sie. Das Datenschutzversprechen ist eine Herstellerangabe, also wirf selbst einen Blick in die Datenschutzerklärung.",
+  "jean": "Hundert Prozent privat, sagt der Anbieter. Prüfen schadet nicht."
+ },
+ "z-ai": {
+  "take": "Z.ai ist eine Plattform für Chatbot und Agenten, angetrieben von der GLM-Modellfamilie. Spannend für alle, die neben den bekannten Namen weitere Modelle ausprobieren wollen. Zwei Nennungen in der Community, nicht schlecht. Es gibt freie und bezahlte Nutzung. Schau nach, wo deine Daten verarbeitet werden, bevor du Firmeninhalte reinkippst.",
+  "jean": "Am Ende des Alphabets, aber nicht automatisch am Ende der Liste."
+ }
+}

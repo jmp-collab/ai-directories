@@ -101,6 +101,14 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **F3 Rubrik-Ratgeber**: 9 Korrekturen (Continue von Cursor übernommen und eingestellt, Udio ohne Downloads, Wordtune nur Englisch, Midjourney-Bedingungen 27.5.2026, Flux-Lizenzen), 30 neue FAQ, 65 Quellen.
 - [x] **F4 Zielgruppen und Glossar**: 17 Korrekturen (Windsurf heißt Devin Desktop, telli heißt AIS.chat, Altersgrenzen, Art. 50 AI Act, Token- und Top-p-Definition), 20 neue FAQ mit Quellen, 10 neue Glossarbegriffe (71 gesamt).
 
+## Content-Ausbau VI (Auftrag 26.10.: „alle Inhalte unique, lustig-sympathische Brand Voice“)
+
+- [x] **G1 Brand Voice**: Leitfaden docs/BRAND-VOICE.md (Persona Jean, fünf Regeln, Ton, Form, wiederkehrende Elemente).
+- [x] **G2 Unikat-Texte** (db/texte/*.json, nur aus vorhandenen Daten, Zahlen automatisch gegen die Daten geprüft): Jeans Take für 256 Verzeichnisse, Jeans ehrliche Meinung mit Passt/Lass-es für 64 Steckbriefe, Intro, Tipp und typischer Fehler für 75 Prompts, Schrauber-Erklärung, Beispiel und Merksatz für 71 Glossarbegriffe, Jeans Take für 154 indexierbare Seiten der KI-Tool-Datenbank.
+- [x] **G3 Entdoppeln**: Verzeichnis-Anleitung von 5 generischen auf 3 eintragsspezifische Schritte plus Link zum Ratgeber, Service-Hinweis und generische Stärken-Texte entfernt, wo Jeans Take steht.
+- Satz-Unikatanteil vorher/nachher: Verzeichnisse 32 % → 74 %, Steckbriefe 29 % → 45 %, Prompts 30 % → 48 %, Glossar 53 % → 65 %.
+- Datenkorrektur: Anyfp laut eigener Seite kostenlos.
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.
