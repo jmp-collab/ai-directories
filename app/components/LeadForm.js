@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { LEAD_ENDPOINT, CONTACT_EMAIL } from '../../lib/monetization'
+import konfetti from '../../lib/konfetti'
 
 // Lead-Formular für jede Seite. Ohne eigenen Server: FormSubmit leitet die Anfrage per Mail weiter (LEAD_EMAIL).
 // Das Honeypot-Feld _honey fängt einfache Bots ab; die Seite, von der die Anfrage kommt, steht im Betreff.
@@ -66,6 +67,7 @@ export default function LeadForm({ titel, text, vorauswahl = 'tool-eintragen', i
             const antwort = await r.json().catch(() => ({}))
             if (!r.ok || antwort.success === false || antwort.success === 'false') throw new Error(antwort.message || `Status ${r.status}`)
             setStatus('gesendet')
+            konfetti(70)
             form.reset()
             setAnliegen(vorauswahl)
         } catch (err) {

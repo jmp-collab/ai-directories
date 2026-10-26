@@ -39,3 +39,7 @@ Der Gmail-Connector in Claude will neu angemeldet werden. Danach kann ich nach d
 
 - aigeddon.de registrieren (größter Hebel für Vertrauen und Ranking), danach stelle ich alles um.
 - Partnerprogramme: Gamma (PartnerStack), Rytr, Runway; Anmeldung mit einer Mail, die nicht von Racing Planet ist.
+
+## 8. Routinen mit Recherche ausstatten
+
+Die geplanten Sitzungen (Backlog, Sperr-Check, Preis-Check, KI-News) laufen ohne Exa-Connector, und die Netzwerkrichtlinie sperrt Anbieterseiten. Deshalb hat der Backlog-Lauf am 26.10. nichts geändert. Abhilfe: Exa unter https://claude.ai/customize/connectors verbinden und die Routinen in der Routinen-Ansicht von claude.ai mit Exa und dem Repository ausstatten, oder in der Umgebung den Netzwerkzugriff erweitern.
