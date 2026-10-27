@@ -16,6 +16,10 @@ import { hatAlternativenHub } from '../../../lib/alternativen'
 import Faq, { faqSchema } from '../../components/Faq'
 import { Band } from '../../components/Deko'
 import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
+import { autorRef } from '../../../lib/autor'
+import Pruefer from '../../components/Pruefer'
+import { dateiStand } from '../../../lib/stand'
+import Kurzantwort from '../../components/Kurzantwort'
 
 export const dynamicParams = false
 
@@ -108,6 +112,16 @@ function ToolPage({ params }) {
             description: t.summary_de,
         },
         faqSchema(faq),
+        {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: `${t.name}: Preis, Gratis-Tarif und Alternativen`,
+            url: absoluteUrl(`/tools/${t.slug}`),
+            inLanguage: 'de-DE',
+            reviewedBy: autorRef(),
+            lastReviewed: dateiStand('db/tools.json', 'db/texte/tools.json').toISOString().slice(0, 10),
+            about: { '@type': 'SoftwareApplication', name: t.name, url: t.url },
+        },
     ]
     return (
         <>
@@ -120,6 +134,11 @@ function ToolPage({ params }) {
                 <p>
                     <strong>Am besten für:</strong> {t.best_for_de}
                 </p>
+                <Kurzantwort frage={`Was kostet ${t.name}, und für wen lohnt es sich?`}>
+                    {t.free_plan === true ? `${t.name} lässt sich laut Anbieter kostenlos nutzen.` : t.free_plan === false ? `${t.name} hat laut Anbieter keinen dauerhaften Gratis-Tarif${t.free_trial ? `, aber eine Testphase (${t.free_trial})` : ''}.` : `Ob ${t.name} einen Gratis-Tarif hat, nennt die Preisseite nicht eindeutig.`}{' '}
+                    {t.price_from ? `Bezahlt geht es ab ${t.price_from} los (Stand ${TOOLS_STAND}).` : 'Einen festen Einstiegspreis nennt der Anbieter nicht.'} Am besten geeignet für: {t.best_for_de.replace(/\.$/, '')}.
+                    {alternatives.length > 0 && ` Bekannte Alternativen: ${alternatives.slice(0, 3).map((a) => a.name).join(', ')}.`}
+                </Kurzantwort>
                 {TEXTE[t.slug]?.jean && <Jean>{TEXTE[t.slug].jean}</Jean>}
                 <p className="cta-row">
                     <a className="button" href={toolHref(t)} target="_blank" rel={toolRel(t)}>
@@ -290,6 +309,7 @@ function ToolPage({ params }) {
                 <h2 id="faq">Häufige Fragen zu {t.name} 🙋</h2>
                 <Faq items={faq} />
             </section>
+            <Pruefer datum={dateiStand('db/tools.json', 'db/texte/tools.json')} />
             <p className="cta-row">
                 <Link href="/tools">← Alle KI-Tools mit Preisen</Link>
                 {kb && <Link href={`/ki-tools/tool/${kb.slug}`}>{t.name} in der KI-Tool-Datenbank</Link>}

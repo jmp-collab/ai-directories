@@ -3,6 +3,7 @@ import JsonLd from '../components/JsonLd'
 import Jean from '../components/Jean'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import { SITE_NAME, absoluteUrl, withBase } from '../../lib/site'
+import { AUTOR_ID } from '../../lib/autor'
 import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
@@ -106,6 +107,7 @@ function AboutPage() {
         {
             '@context': 'https://schema.org',
             '@type': 'Person',
+            '@id': AUTOR_ID,
             name: 'Jean Maurice Port',
             jobTitle: 'Senior SEO/SGE Manager',
             worksFor: { '@type': 'Organization', name: 'MotoMobilityGroup' },

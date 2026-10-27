@@ -8,6 +8,8 @@ import Faq, { faqSchema } from '../../components/Faq'
 import Quellen from '../../components/Quellen'
 import { NEWS, getNews, getNewsArtikel } from '../../../lib/news'
 import { absoluteUrl } from '../../../lib/site'
+import { autorRef } from '../../../lib/autor'
+import Pruefer from '../../components/Pruefer'
 import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
@@ -55,7 +57,7 @@ function NewsPage({ params }) {
             url: absoluteUrl(`/ki-news/${n.slug}`),
             datePublished: n.veroeffentlicht,
             dateModified: n.veroeffentlicht,
-            author: { '@type': 'Person', name: 'Jean Maurice Port', url: absoluteUrl('/ueber-jean') },
+            author: autorRef(),
             publisher: { '@type': 'Organization', name: 'AIGeddon', url: absoluteUrl('/') },
             image: absoluteUrl('/opengraph-image.png'),
             citation: n.quellen.map((q) => q.url),
@@ -161,6 +163,7 @@ function NewsPage({ params }) {
             </section>
 
             <Quellen quellen={n.quellen} geprueft={n.veroeffentlicht} text="Alle Angaben in dieser Meldung wurden mit diesen offiziellen Quellen abgeglichen" />
+            <Pruefer datum={n.veroeffentlicht} />
 
             <section aria-labelledby="faq">
                 <h2 id="faq">Häufige Fragen 🙋</h2>

@@ -27,6 +27,7 @@ const SITE_SCHEMA = [
         logo: absoluteUrl('/jean-cool.jpg'),
         founder: { '@type': 'Person', name: 'Jean Maurice Port', url: absoluteUrl('/ueber-jean') },
         sameAs: ['https://www.youtube.com/@AIGeddon', REPO_URL],
+        publishingPrinciples: absoluteUrl('/so-pruefen-wir'),
     },
     {
         '@context': 'https://schema.org',
@@ -249,7 +250,7 @@ export default function RootLayout({ children }) {
                     <div className="container">
                         <p>
                             Gebaut von <Link href="/ueber-jean">Jean Maurice Port</Link>, SEO-Manager mit Bart und Humor. ·{' '}
-                            <Link href="/werben">Werben</Link> · <Link href="/transparenz">Transparenz</Link> ·{' '}
+                            <Link href="/werben">Werben</Link> · <Link href="/transparenz">Transparenz</Link> · <Link href="/so-pruefen-wir">So prüfen wir</Link> ·{' '}
                             <Link href="/datenschutz">Datenschutz</Link> ·{' '}
                             <a href="https://www.youtube.com/@AIGeddon">YouTube</a>
                         </p>

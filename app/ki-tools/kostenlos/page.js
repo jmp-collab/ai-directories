@@ -27,8 +27,8 @@ const FAQ = [
 ]
 
 export const metadata = {
-    title: 'Kostenlose KI-Tools 2026: Gratis-Tarife & Open Source',
-    description: 'Kostenlose KI-Tools im Überblick: Tools mit Gratis-Tarif laut Anbieter und Open-Source-Tools nach Aufgabe, von Chatbots über Bildgeneratoren bis Spracherkennung.',
+    title: 'KI-Tools kostenlos: Gratis-Tarife & Open Source 2026',
+    description: 'KI-Tools kostenlos nutzen: Tools mit Gratis-Tarif laut Anbieter und Open-Source-Tools nach Aufgabe, von Chatbots über Bildgeneratoren bis Spracherkennung. Mit Grenzen der Gratis-Versionen.',
     alternates: { canonical: '/ki-tools/kostenlos' },
 }
 

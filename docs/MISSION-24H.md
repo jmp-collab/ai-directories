@@ -156,6 +156,14 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - 3 neue Prompts mit Jean-Texten, direkt aus den News abgeleitet: Custom-GPT-Anweisungen in einen Skill umwandeln, Testplan für den Modellwechsel, Anzeigentexte für ChatGPT Ads.
 - 3 neue Glossarbegriffe mit Schrauber-Erklärung: Auto-Modus, Abkündigung (Deprecation), Plugin (ChatGPT). Jeweils mit Link zur passenden Meldung, die Meldungen verlinken zurück.
 
+## SEO-Offensive Top 3 (Auftrag 27.10.: „fünf Prompts für Google-Top-3, dann automatisch ausführen“)
+
+1. Frische-Signale: Sitemap mit echten Änderungsdaten aus Git und Prüfdaten (lib/stand.js) statt täglich „heute“; Workflow lädt volle Git-Historie.
+2. Direktantwort-Boxen (Kurzantwort) unter der H1 auf 64 Steckbriefen, 17 Vergleichen und 18 Modellseiten, Inhalt nur aus geprüften Daten.
+3. E-E-A-T: Seite /so-pruefen-wir mit sechs Redaktionsregeln und offenem KI-Hinweis, Autorenbox „Geschrieben und geprüft von Jean“ auf News, Ratgebern, Vergleichen, Steckbriefen; Person-Schema mit @id, Organization.publishingPrinciples, Article-Schema für Vergleiche, WebPage mit reviewedBy für Steckbriefe.
+4. Keyword-Daten (Ubersuggest, Deutschland): „chatgpt alternativen“ 12.100/Monat (SD 35), „ki tools kostenlos“ 590 (SD 37), „beste ki tools“ 210 (SD 23). Title und Description von /ki-tools/kostenlos und /ki-tools/chatgpt-alternativen angepasst.
+5. Pillar /ki-tools/chatgpt-alternativen von 983 auf 1.619 Wörter: Kurzantwort, Vergleichstabelle aus db/tools.json, Auswahlhilfe nach Einsatzzweck, aktuelle News, 4 neue FAQ.
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.

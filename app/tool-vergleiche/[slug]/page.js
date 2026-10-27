@@ -5,9 +5,12 @@ import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
 import Jean from '../../components/Jean'
 import JeanIcon from '../../components/JeanIcon'
 import Faq from '../../components/Faq'
-import { SITE_NAME } from '../../../lib/site'
+import { SITE_NAME, absoluteUrl } from '../../../lib/site'
 import { getComparisons, getComparison } from '../../../lib/comparisons'
 import { getTool, toolHref, toolRel, TOOLS_STAND } from '../../../lib/tools'
+import Kurzantwort from '../../components/Kurzantwort'
+import { autorRef } from '../../../lib/autor'
+import Pruefer from '../../components/Pruefer'
 import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
@@ -60,13 +63,33 @@ function ComparisonPage({ params }) {
     const anyAffiliate = c.items.some((t) => t.affiliate)
     return (
         <>
-            <JsonLd data={[breadcrumbSchema(crumbs), faq]} />
+            <JsonLd
+                data={[
+                    breadcrumbSchema(crumbs),
+                    faq,
+                    {
+                        '@context': 'https://schema.org',
+                        '@type': 'Article',
+                        headline: c.title,
+                        description: c.intro,
+                        inLanguage: 'de-DE',
+                        url: absoluteUrl(`/tool-vergleiche/${c.slug}`),
+                        author: autorRef(),
+                        publisher: { '@id': `${absoluteUrl('/')}#organisation` },
+                        ...(c.geprueft ? { dateModified: c.geprueft } : {}),
+                        ...(c.quellen?.length ? { citation: c.quellen.map((q) => q.url) } : {}),
+                    },
+                ]}
+            />
             <Breadcrumbs items={crumbs} />
             <section className="hero">
                 <p className="eyebrow">{c.topic} im Vergleich ⚖️</p>
                 <h1>{c.title}</h1>
                 <p className="lead">{c.intro}</p>
                 <Jean>Kurzfassung: Es gibt kein bestes Tool, nur das beste für deinen Zweck. Deshalb unten pro Fall eine klare Ansage.</Jean>
+                <Kurzantwort frage={`${c.items.map((t) => t.name).join(c.items.length > 2 ? ', ' : ' oder ').replace(/, ([^,]*)$/, ' oder $1')}: was ist besser?`}>
+                    {`Kommt auf deinen Einsatz an. ${c.picks.map(([frage, slug]) => `${frage.replace(/[.!?]$/, '')}: ${getTool(slug)?.name}`).join('. ')}.`}
+                </Kurzantwort>
             </section>
 
             <section aria-labelledby="empfehlung">
@@ -163,6 +186,7 @@ function ComparisonPage({ params }) {
                     </ul>
                 </section>
             )}
+            <Pruefer datum={c.geprueft} />
             <p>
                 <Link href="/tool-vergleiche">← Alle Tool-Vergleiche</Link> · <Link href="/tools">KI-Tool-Verzeichnis</Link>
             </p>

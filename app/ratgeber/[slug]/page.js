@@ -7,6 +7,8 @@ import GlossarText from '../../components/GlossarText'
 import Faq, { faqSchema } from '../../components/Faq'
 import { ARTIKEL, getArtikel } from '../../../lib/ratgeber'
 import { absoluteUrl } from '../../../lib/site'
+import { autorRef } from '../../../lib/autor'
+import Pruefer from '../../components/Pruefer'
 import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
@@ -50,7 +52,7 @@ function ArtikelPage({ params }) {
             description: a.description,
             inLanguage: 'de-DE',
             url: absoluteUrl(`/ratgeber/${a.slug}`),
-            author: { '@type': 'Person', name: 'Jean Maurice Port', url: absoluteUrl('/ueber-jean') },
+            author: autorRef(),
             image: absoluteUrl('/ratgeber/opengraph-image.png'),
             ...(a.geprueft ? { dateModified: a.geprueft } : {}),
             ...(a.quellen ? { citation: a.quellen.map((q) => q.url) } : {}),
@@ -111,6 +113,7 @@ function ArtikelPage({ params }) {
                     </ul>
                 </section>
             )}
+            <Pruefer datum={a.geprueft} />
             {a.faq && (
                 <section aria-labelledby="faq">
                     <h2 id="faq">Häufige Fragen 🙋</h2>
