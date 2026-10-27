@@ -22,7 +22,7 @@ export function generateMetadata({ params }) {
     return {
         title: n.seoTitle || n.titel,
         description: n.description,
-        alternates: { canonical: `/ki-news/${n.slug}` },
+        alternates: { canonical: `/ki-news/${n.slug}`, types: { 'application/rss+xml': '/ki-news/feed.xml' } },
         openGraph: { url: `/ki-news/${n.slug}`, type: 'article' },
     }
 }
@@ -90,6 +90,22 @@ function NewsPage({ params }) {
                     ))}
                 </ul>
             </details>
+
+            {n.fristen?.length > 0 && (
+                <aside className="news-fristen news-fristen-klein" aria-label="Fristen">
+                    <p>
+                        <strong>⏰ Termine zum Eintragen</strong>
+                    </p>
+                    <ul className="fristen-liste">
+                        {n.fristen.map(([datum, was]) => (
+                            <li key={datum + was}>
+                                <time dateTime={datum}>{datumLang(datum)}</time>
+                                <span>{was}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </aside>
+            )}
 
             <nav aria-label="Inhalt" className="toc">
                 <strong>Inhalt</strong>
