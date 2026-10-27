@@ -26,6 +26,7 @@ const ARTIKEL = {
     Embedding: 'ein', Vektordatenbank: 'eine', 'Wissensstand (Knowledge Cutoff)': 'der', 'KI-Agent': 'ein', API: 'eine',
     'Prompt-Injection': 'eine', Jailbreak: 'ein', 'Custom GPT': 'ein', Diffusionsmodell: 'ein', 'Open-Weight-Modell': 'ein',
     Benchmark: 'ein', 'KI-Detektor': 'ein',
+    'Auto-Modus': 'der', 'Abkündigung (Deprecation)': 'eine', 'Plugin (ChatGPT)': 'ein',
 }
 const MEHRZAHL = new Set(['Parameter', 'Trainingsdaten', 'Guardrails'])
 const frage = (term) => {

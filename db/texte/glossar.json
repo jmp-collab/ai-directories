@@ -353,5 +353,20 @@
   "bild": "Der Aushilfskoch am ersten Tag bekommt nur gesagt: „Mach einen Kartoffelsalat.“ Er kriegt einen hin, vielleicht aber mit Mayo, obwohl ihr hier Essig und Brühe nehmt. Für Standardaufgaben reicht das völlig, für deinen Hausstil eher nicht.",
   "beispiel": "„Übersetze diesen Satz ins Englische“ klappt bei Gemini ohne jedes Beispiel. Soll die Übersetzung exakt euren Markenton treffen, wird es ohne Vorlage schnell Glückssache.",
   "merksatz": "Ohne Vorlage bekommst du den Durchschnitt, nicht deinen Stil."
+ },
+ "auto-modus": {
+  "bild": "Beim Lehrling in der Werkstatt stehst du nicht bei jedem Schraubendreh daneben. Du sagst ihm, was er allein darf, und bei allem mit Bremsen oder Benzinleitung ruft er dich. Genau so arbeitet der Auto-Modus: Routine läuft, Gefährliches wird gestoppt.",
+  "beispiel": "Du lässt Claude einen Ordner mit Rechnungen sortieren und eine Tabelle bauen. Das läuft ohne Rückfragen durch. Würde Claude eine Datei löschen wollen, hält die automatische Prüfung an.",
+  "merksatz": "Routine allein, Bremsen nur mit Meister."
+ },
+ "abkuendigung": {
+  "bild": "Die Werkstatt hängt einen Zettel an die alte Hebebühne: „Ab 14. Januar außer Betrieb“. Bis dahin hebt sie noch, danach bleibt dein Auto unten. Wer den Zettel übersieht, merkt es am Montagmorgen mit dem Kunden in der Tür.",
+  "beispiel": "OpenAI nimmt GPT-4o und GPT-4.1 am 14. Januar 2027 aus der API. Dein Zapier-Zap mit gpt-4o-mini liefert danach nur noch Fehler, bis du auf gpt-6-luna umstellst.",
+  "merksatz": "Abgekündigt heißt: läuft noch, aber der Abschleppwagen ist bestellt."
+ },
+ "plugin": {
+  "bild": "Statt eines fertig lackierten Sondermodells bekommst du jetzt einen Werkzeugkoffer: Anleitung, Spezialwerkzeug und Ersatzteilliste in einer Kiste. Das Plugin ist dieser Koffer, der Custom GPT war das Sondermodell.",
+  "beispiel": "Dein Custom GPT „Produkttexter“ zieht zum Plugin um. Die Anweisungen landen als Skill im Plugin, die Produktliste als Referenzdatei, die Shopify-Verbindung als App.",
+  "merksatz": "Der GPT war ein Auto, das Plugin ist der Werkzeugkoffer."
  }
 }

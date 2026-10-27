@@ -150,6 +150,12 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - KI-Fristen-Kalender auf /ki-news (Feld `fristen` je Meldung, vergangene Termine fallen beim täglichen Neubau weg) und „Termine zum Eintragen“ in den Artikeln.
 - RSS-Feed /ki-news/feed.xml (im HTML-Kopf verlinkt), Themen-Sprungleiste und aufklappbare Themenblöcke.
 
+## KI-News III (Auftrag 27.10.: „Weiter ausbauen dann merge“)
+
+- 3 neue Artikel (jetzt 15): Anthropic-Börsengang (S-1, Kürzel ANT, Stimmrechte laut Prospekt), OpenAI-Prompt-Caching mit 12 Stunden (mit Beispielrechnung ab wann es spart), gesperrte Chats in ChatGPT per PIN (was es schützt, was nicht).
+- 3 neue Prompts mit Jean-Texten, direkt aus den News abgeleitet: Custom-GPT-Anweisungen in einen Skill umwandeln, Testplan für den Modellwechsel, Anzeigentexte für ChatGPT Ads.
+- 3 neue Glossarbegriffe mit Schrauber-Erklärung: Auto-Modus, Abkündigung (Deprecation), Plugin (ChatGPT). Jeweils mit Link zur passenden Meldung, die Meldungen verlinken zurück.
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.

@@ -448,5 +448,23 @@
   "tipp": "Kopier in „infos“ echte Zitate aus Bewertungen, Support-Mails oder Gesprächen, denn daraus entstehen die „Wörter, die sie selbst benutzt“. Kläre die [ANNAHME]-Punkte in den nächsten Kundengesprächen, bevor du die Persona im Team verteilst.",
   "fehler": "Eine Persona komplett aus Annahmen bauen und sie dann wie Marktforschung behandeln.",
   "jean": "Eine Persona ohne echte Kundenstimmen ist ein Fantasiefreund."
+ },
+ "gpt-anweisungen-zu-skill": {
+  "intro": "Am 11. Dezember 2026 schaltet OpenAI die Custom GPTs ab, und in deinem steckt ein Jahr Feinschliff. Dieser Prompt nimmt die alten Anweisungen und baut daraus eine SKILL.md im offenen Agent-Skills-Format, die du in ChatGPT-Plugins, Claude oder Cursor wiederverwenden kannst. Er markiert auch, was nur in ChatGPT funktioniert hat.",
+  "tipp": "Kopier die Anweisungen aus dem GPT-Editor vollständig, auch die Sätze, die dir peinlich sind. Gerade die kleinen Korrekturen von damals machen den Unterschied. Teste den Skill danach mit drei Aufgaben, die dein GPT gut gelöst hat.",
+  "fehler": "Nur die erste Zeile der Anweisungen übernehmen und sich wundern, warum der neue Assistent den Ton nicht trifft.",
+  "jean": "Was du einmal sauber als Skill aufschreibst, nimmst du zu jedem Anbieter mit. Umzugskartons, die nie wieder ausgepackt werden müssen."
+ },
+ "ki-modell-umstellen-testplan": {
+  "intro": "Irgendwo in deinem Make-Szenario steht noch ein Modell, das bald abgeschaltet wird, etwa gpt-4o-mini am 14. Januar 2027. Dieser Prompt baut dir einen Testplan mit echten Testfällen, prüfbaren Formatkriterien und einer Checkliste samt Rückfallplan, damit nach dem Umstieg keine leeren Felder in deinem Shop landen.",
+  "tipp": "Beschreib bei „einsatz“ genau, was mit der Antwort passiert, zum Beispiel ob sie als JSON weiterverarbeitet wird. Nimm echte Eingaben der letzten Woche als Testfälle, keine ausgedachten.",
+  "fehler": "Das Modell im Live-Szenario austauschen und erst am nächsten Morgen merken, dass das JSON ein Feld anders nennt.",
+  "jean": "Ein neues Modell ist wie ein neuer Vergaser: Erst auf dem Prüfstand, dann auf die Straße."
+ },
+ "chatgpt-anzeige-texten": {
+  "intro": "Seit August 2026 zeigt ChatGPT in Deutschland Anzeigen, und die stehen direkt neben einer Antwort auf eine echte Frage. Klassische Banner-Sprüche wirken da fehl am Platz. Dieser Prompt ordnet die Fragen deiner Zielgruppe nach Kaufphase und schreibt pro Phase ehrliche Anzeigen mit Überschrift, Text und dem, was auf der Zielseite stehen muss.",
+  "tipp": "Sammle bei „fragen“ echte Formulierungen aus Kundenmails, Bewertungen oder Foren, nicht deine Marketing-Sprache. Je näher die Anzeige am Wortlaut der Frage ist, desto eher passt sie.",
+  "fehler": "Eine Anzeige für alle Phasen schreiben und Leute, die noch das Problem verstehen wollen, direkt zum Kaufbutton schicken.",
+  "jean": "Im Chat fragt jemand nach Hilfe. Antworte mit Hilfe, nicht mit Marktgeschrei."
  }
 }
