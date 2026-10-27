@@ -11,8 +11,8 @@ export default function ToolCards({ tools }) {
                             <Link href={`/ki-tools/tool/${t.slug}`}>
                                 <strong>{t.name}</strong>
                             </Link>
-                            <a className="kb-extern" href={t.url} target="_blank" rel="nofollow noopener noreferrer" aria-label={`${t.name} beim Anbieter öffnen`}>
-                                ↗
+                            <a className="kb-extern" href={t.affiliate || t.url} target="_blank" rel={t.affiliate ? 'sponsored nofollow noopener noreferrer' : 'nofollow noopener noreferrer'} aria-label={`${t.name} beim Anbieter öffnen`}>
+                                ↗{t.affiliate && <sup>*</sup>}
                             </a>
                         </span>
                         <span className="kb-badges">

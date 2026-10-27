@@ -164,6 +164,13 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 4. Keyword-Daten (Ubersuggest, Deutschland): „chatgpt alternativen“ 12.100/Monat (SD 35), „ki tools kostenlos“ 590 (SD 37), „beste ki tools“ 210 (SD 23). Title und Description von /ki-tools/kostenlos und /ki-tools/chatgpt-alternativen angepasst.
 5. Pillar /ki-tools/chatgpt-alternativen von 983 auf 1.619 Wörter: Kurzantwort, Vergleichstabelle aus db/tools.json, Auswahlhilfe nach Einsatzzweck, aktuelle News, 4 neue FAQ.
 
+## Partnerprogramme (Auftrag 27.10.: Übersicht aller verlinkten Tools mit Registrierungslinks als Excel)
+
+- `docs/partnerprogramme.xlsx` mit 6 Blättern: Anleitung, Tools (64), Verzeichnisse (256), KI-Tool-Datenbank (666), Neu entdeckt (98), Alle Domains (986 aus dem Export gezählt). Je Zeile Partnerprogramm, Netzwerk, Provision, Cookie, Registrierungslink, Quelle, Suchlink und gelbe Eintragsspalten mit Status-Auswahl.
+- 32 bisher unrecherchierte Tools an offiziellen Seiten geprüft (davon u. a. Fireflies, tl;dv, OpusClip, CapCut, Fliki, Krea, Luma, Grammarly, QuillBot, Lovable, Bolt mit Programm; Claude, ChatGPT, Cursor, v0, Perplexity ohne bzw. eingestellt). Register `db/partners.json` jetzt 98 Programme.
+- Rückweg: `utils/partners/xlsx_import.py` übernimmt eingetragene Links; neu `HOST_AFFILIATES` (Partnerlink nach Domain) für die KI-Tool-Datenbank, Tool-Karten und Tool-Seiten zeigen dann * und rel="sponsored". Roundtrip getestet.
+- `CLAUDE.md` legt fest, dass künftige Sitzungen Partnerlinks immer über das Register einbauen.
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.
