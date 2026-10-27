@@ -1,5 +1,5 @@
 {
- "stand": "2026-10-23",
+ "stand": "2026-10-27",
  "hinweis": "Zentrales Register aller Partnerprogramme, Partnerlinks und eigenen Rabattcodes. Die Website liest Partnerlinks und Codes ausschließlich hier. Ein Link wird nur genutzt, wenn status = 'aktiv'. coupon = {\"code\": \"...\", \"text\": \"20% discount\"}.",
  "status_werte": [
   "nicht registriert",
@@ -7,7 +7,8 @@
   "aktiv",
   "abgelehnt",
   "Code anfragen",
-  "Code angefragt"
+  "Code angefragt",
+  "kein Programm"
  ],
  "programme": [
   {
@@ -23,7 +24,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "semrush",
@@ -38,7 +40,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "kit",
@@ -53,7 +56,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "beehiiv",
@@ -68,7 +72,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "webflow",
@@ -83,7 +88,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "framer",
@@ -98,7 +104,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "getresponse",
@@ -113,7 +120,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "make",
@@ -128,7 +136,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "n8n",
@@ -143,7 +152,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "elevenlabs",
@@ -158,7 +168,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "se-ranking",
@@ -173,7 +184,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "surfer-seo",
@@ -188,7 +200,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "synthesia",
@@ -203,7 +216,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "heygen",
@@ -218,7 +232,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "murf",
@@ -233,7 +248,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "writesonic",
@@ -248,7 +264,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "invideo-ai",
@@ -263,7 +280,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "pictory",
@@ -278,7 +296,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "descript",
@@ -293,7 +312,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "brevo",
@@ -308,7 +328,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": "Firmen-E-Mail nötig, keine bezahlten Suchanzeigen"
+   "notes": "Firmen-E-Mail nötig, keine bezahlten Suchanzeigen",
+   "programm": "ja"
   },
   {
    "id": "hostinger",
@@ -323,7 +344,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "canva",
@@ -338,7 +360,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": "Anmeldung über Impact"
+   "notes": "Anmeldung über Impact",
+   "programm": "ja"
   },
   {
    "id": "tally",
@@ -353,7 +376,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": "Keine bezahlten Anzeigen"
+   "notes": "Keine bezahlten Anzeigen",
+   "programm": "ja"
   },
   {
    "id": "typeform",
@@ -368,7 +392,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "zapier",
@@ -383,7 +408,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": "Nur auf Einladung oder nach Freigabe"
+   "notes": "Nur auf Einladung oder nach Freigabe",
+   "programm": "nur auf Einladung"
   },
   {
    "id": "uneed",
@@ -398,7 +424,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": "Zusätzlich eigenen Rabattcode anfragen (Abschnitt 3)"
+   "notes": "Zusätzlich eigenen Rabattcode anfragen (Abschnitt 3)",
+   "programm": "ja"
   },
   {
    "id": "peerpush",
@@ -413,7 +440,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": "Zusätzlich eigenen Rabattcode anfragen (Abschnitt 3)"
+   "notes": "Zusätzlich eigenen Rabattcode anfragen (Abschnitt 3)",
+   "programm": "ja"
   },
   {
    "id": "appsumo",
@@ -428,7 +456,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": ""
+   "notes": "",
+   "programm": "ja"
   },
   {
    "id": "alteropen",
@@ -443,7 +472,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "basedtools",
@@ -458,7 +488,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "ai-tool-trek",
@@ -473,7 +504,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "ai-zones",
@@ -488,7 +520,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "aistage",
@@ -503,7 +536,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "aura-plus-plus",
@@ -518,7 +552,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "dokey-ai",
@@ -533,7 +568,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "toolio-ai",
@@ -548,7 +584,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "getbyte",
@@ -563,7 +600,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "ai-best-tools",
@@ -578,7 +616,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "launchigniter",
@@ -593,7 +632,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "ai-tools-one",
@@ -608,7 +648,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "ai-top-tools",
@@ -623,7 +664,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "open-tools",
@@ -638,7 +680,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "openalternative",
@@ -653,7 +696,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "appscribed",
@@ -668,7 +712,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "seofai",
@@ -683,7 +728,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "that-ai-collection",
@@ -698,7 +744,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "toolfolio",
@@ -713,7 +760,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "top-ai-tools",
@@ -728,7 +776,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "startup-spotlight",
@@ -743,7 +792,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "tiny-startups",
@@ -758,7 +808,8 @@
    "status": "Code anfragen",
    "partner_link": "",
    "coupon": null,
-   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)"
+   "notes": "Eigenen Code anfragen (Mail-Vorlage in docs/REGISTRIERUNG.md, Abschnitt 3)",
+   "programm": "nur Rabattcode"
   },
   {
    "id": "gamma",
@@ -773,7 +824,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": "Prüfung 5–10 Werktage laut Gamma-Hilfe"
+   "notes": "Prüfung 5–10 Werktage laut Gamma-Hilfe",
+   "programm": "ja"
   },
   {
    "id": "rytr",
@@ -788,7 +840,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": "Auszahlung per PayPal ab 100 $; 20 % Rabatt für Empfohlene"
+   "notes": "Auszahlung per PayPal ab 100 $; 20 % Rabatt für Empfohlene",
+   "programm": "ja"
   },
   {
    "id": "runway",
@@ -803,7 +856,8 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": "Code gibt 25 % Rabatt; aktive Partner erhalten Max-Tarif; braucht Kanal-Links (YouTube AIGeddon)"
+   "notes": "Code gibt 25 % Rabatt; aktive Partner erhalten Max-Tarif; braucht Kanal-Links (YouTube AIGeddon)",
+   "programm": "ja"
   },
   {
    "id": "notion",
@@ -815,10 +869,11 @@
    "commission": "bis 50 $ pro Anmeldung + 20 % im ersten Jahr",
    "cookie": null,
    "signup_url": "https://www.notion.com/affiliates",
-   "status": "nicht registriert",
+   "status": "kein Programm",
    "partner_link": "",
    "coupon": null,
-   "notes": "Laut Anbieter nimmt das Programm derzeit keine neuen Partner an (Stand 23.10.2026)"
+   "notes": "Laut Anbieter nimmt das Programm derzeit keine neuen Partner an (Stand 23.10.2026)",
+   "programm": "pausiert/geschlossen"
   },
   {
    "id": "leonardo-ai",
@@ -830,10 +885,11 @@
    "commission": null,
    "cookie": null,
    "signup_url": "https://leonardo.ai/ai-affiliate-program",
-   "status": "nicht registriert",
+   "status": "kein Programm",
    "partner_link": "",
    "coupon": null,
-   "notes": "Programm am 7.4.2026 eingestellt, keine neuen Bewerbungen (Stand 23.10.2026)"
+   "notes": "Programm am 7.4.2026 eingestellt, keine neuen Bewerbungen (Stand 23.10.2026)",
+   "programm": "pausiert/geschlossen"
   },
   {
    "id": "midjourney",
@@ -845,10 +901,11 @@
    "commission": null,
    "cookie": null,
    "signup_url": "",
-   "status": "nicht registriert",
+   "status": "kein Programm",
    "partner_link": "",
    "coupon": null,
-   "notes": "Kein öffentliches Partnerprogramm gefunden (Stand 23.10.2026)"
+   "notes": "Kein öffentliches Partnerprogramm gefunden (Stand 23.10.2026)",
+   "programm": "nein"
   },
   {
    "id": "wordtune",
@@ -863,7 +920,728 @@
    "status": "nicht registriert",
    "partner_link": "",
    "coupon": null,
-   "notes": "Konditionen vor Bewerbung auf der Anbieterseite prüfen"
+   "notes": "Konditionen vor Bewerbung auf der Anbieterseite prüfen",
+   "programm": "unklar"
+  },
+  {
+   "id": "fireflies-ai",
+   "name": "Fireflies.ai",
+   "kind": "tool",
+   "tool_slug": "fireflies-ai",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Affiliate",
+   "network": "Rewardful (fireflies.getrewardful.com), zusätzlich PartnerStack",
+   "commission": "„up to 30% recurring commissions per sale for 12 months“, Einstieg mit 10 %",
+   "cookie": "90 Tage",
+   "signup_url": "https://fireflies.getrewardful.com/",
+   "quelle": "https://fireflies.ai/affiliate",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Gestaffelt 10 bis 30 %. Auszahlung per PayPal quartalsweise ab 50 $. Separates Reseller-Programm, Kontakt partners@fireflies.ai."
+  },
+  {
+   "id": "tldv",
+   "name": "tl;dv",
+   "kind": "tool",
+   "tool_slug": "tldv",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Affiliate",
+   "network": "eigenes Programm",
+   "commission": "„earn 25% of all referred payments with no limit“, Geworbene erhalten 30 % Rabatt auf Pro",
+   "cookie": "unbekannt",
+   "signup_url": "https://tldv.io/partner-programs/",
+   "quelle": "https://tldv.io/partner-programs/",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Link wird in der tl;dv-App über das Geschenk-Symbol erzeugt. Cap widersprüchlich (ohne Limit bzw. bis 10.000 $). Zusätzlich Ambassador- und Reseller-Programm."
+  },
+  {
+   "id": "mistral-le-chat",
+   "name": "Mistral Le Chat",
+   "kind": "tool",
+   "tool_slug": "mistral-le-chat",
+   "directory_slug": null,
+   "programm": "nur auf Einladung",
+   "art": "Partner/Reseller",
+   "network": "",
+   "commission": "",
+   "cookie": "unbekannt",
+   "signup_url": "https://mistral.ai/partners/",
+   "quelle": "https://mistral.ai/partners/",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein Affiliate mit Provision. Partner nur ausgewählte Cloud-, Technologie- und Beratungsfirmen. Ambassador-Programm nur mit API-Credits."
+  },
+  {
+   "id": "deepseek",
+   "name": "DeepSeek",
+   "kind": "tool",
+   "tool_slug": "deepseek",
+   "directory_slug": null,
+   "programm": "nein",
+   "art": null,
+   "network": "",
+   "commission": "",
+   "cookie": "unbekannt",
+   "signup_url": "",
+   "quelle": "https://www.deepseek.com/en/",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein offizielles Affiliate- oder Referral-Programm gefunden; Angebote im Netz stammen von Drittanbietern."
+  },
+  {
+   "id": "manus",
+   "name": "Manus",
+   "kind": "tool",
+   "tool_slug": "manus",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Affiliate",
+   "network": "Tapfiliate",
+   "commission": "",
+   "cookie": "unbekannt",
+   "signup_url": "https://manus.im/affiliate",
+   "quelle": "https://manus.im/affiliate",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Programm bestätigt, Auszahlung per PayPal. Provision auf offiziellen Seiten nicht genannt (Drittseiten: 10 % für 365 Tage, unbestätigt)."
+  },
+  {
+   "id": "genspark",
+   "name": "Genspark",
+   "kind": "tool",
+   "tool_slug": "genspark",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Affiliate",
+   "network": "Impact",
+   "commission": "",
+   "cookie": "unbekannt",
+   "signup_url": "https://app.impact.com/campaign-promo-signup/Genspark.brand",
+   "quelle": "https://gensparkus.endorsely.com/",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Seit 2026 über Impact (Endorsely eingestellt). Alte Seite nannte 20 %, aktuelle Provision nicht offiziell bestätigt."
+  },
+  {
+   "id": "notebooklm",
+   "name": "Gemini Notebook",
+   "kind": "tool",
+   "tool_slug": "notebooklm",
+   "directory_slug": null,
+   "programm": "nein",
+   "art": null,
+   "network": "",
+   "commission": "",
+   "cookie": "unbekannt",
+   "signup_url": "",
+   "quelle": "https://workspace.google.com/refer/",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein eigenes Programm für NotebookLM/Gemini Notebook. Nur Google-Workspace-Referral/Affiliate (bewirbt Workspace)."
+  },
+  {
+   "id": "opusclip",
+   "name": "OpusClip",
+   "kind": "tool",
+   "tool_slug": "opusclip",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Affiliate",
+   "network": "Rewardful",
+   "commission": "„Earn 25% recurring commission through the first year of each new subscriber“",
+   "cookie": "unbekannt",
+   "signup_url": "https://www.opus.pro/affiliate",
+   "quelle": "https://www.opus.pro/affiliate",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Manuelle Prüfung ca. 1 Woche. Auszahlung am 15. per PayPal ab 20 $. Keine Paid Ads. Deaktivierung nach 6 Monaten ohne Traffic."
+  },
+  {
+   "id": "capcut",
+   "name": "CapCut",
+   "kind": "tool",
+   "tool_slug": "capcut",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Affiliate",
+   "network": "Impact",
+   "commission": "„earn up to $15,000 commissions by referring qualified CapCut Pro subscribers“, gestaffelt",
+   "cookie": "unbekannt",
+   "signup_url": "https://app.impact.com/",
+   "quelle": "https://www.capcut.com/partners/affiliate-program",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Nur für geworbene Pro-Abonnenten aus USA, UK, Deutschland und Frankreich. Bei Impact unter „Find Brands“ nach CapCut suchen. Auszahlung ab 10 $."
+  },
+  {
+   "id": "fliki",
+   "name": "Fliki",
+   "kind": "tool",
+   "tool_slug": "fliki",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Affiliate",
+   "network": "Rewardful",
+   "commission": "„30% lifetime commission on every sale“",
+   "cookie": "30 Tage",
+   "signup_url": "https://affiliates.fliki.ai/signup",
+   "quelle": "https://fliki.ai/affiliate-program",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kostenlos, automatische Freigabe. Auszahlung monatlich per Wise oder PayPal ab 50 $. Keine Paid Ads, keine Gutscheinseiten."
+  },
+  {
+   "id": "replit",
+   "name": "Replit",
+   "kind": "tool",
+   "tool_slug": "replit",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Referral (Kunde wirbt Kunde)",
+   "network": "eigenes Programm",
+   "commission": "Guthaben statt Geld: „you both get $20 in Replit credits“",
+   "cookie": "unbekannt",
+   "signup_url": "https://replit.com/refer",
+   "quelle": "https://replit.com/refer",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein Cash-Affiliate. Partnerprogramm für Reseller (replit.com/partners) und Creators Program per Bewerbung (replit.com/creators)."
+  },
+  {
+   "id": "suno",
+   "name": "Suno",
+   "kind": "tool",
+   "tool_slug": "suno",
+   "directory_slug": null,
+   "programm": "unklar",
+   "art": null,
+   "network": "",
+   "commission": "",
+   "cookie": "unbekannt",
+   "signup_url": "",
+   "quelle": "https://suno.com/spark",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Keine offizielle Affiliate-Seite gefunden; Drittseiten nennen Impact, unbestätigt."
+  },
+  {
+   "id": "ideogram",
+   "name": "Ideogram",
+   "kind": "tool",
+   "tool_slug": "ideogram",
+   "directory_slug": null,
+   "programm": "nur auf Einladung",
+   "art": "Affiliate",
+   "network": "eigenes Programm",
+   "commission": "Höhe nicht veröffentlicht, Belohnung für die erste bezahlte Abo-Buchung",
+   "cookie": "unbekannt",
+   "signup_url": "https://ideogram.ai/features/creators-club/",
+   "quelle": "https://ideogram.ai/legal/tos/",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Nur für Content-Creator ab 18 mit Bewerbung. Gutscheinseiten und bezahlte Werbung verboten."
+  },
+  {
+   "id": "krea",
+   "name": "Krea",
+   "kind": "tool",
+   "tool_slug": "krea",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Affiliate",
+   "network": "Dub",
+   "commission": "„Earn 20% per sale for 1 year“",
+   "cookie": "unbekannt",
+   "signup_url": "https://partners.dub.co/krea-ai/register",
+   "quelle": "https://partners.dub.co/krea-ai",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Daneben privates Creator Program per Bewerbung."
+  },
+  {
+   "id": "pika",
+   "name": "Pika",
+   "kind": "tool",
+   "tool_slug": "pika",
+   "directory_slug": null,
+   "programm": "unklar",
+   "art": null,
+   "network": "",
+   "commission": "",
+   "cookie": "unbekannt",
+   "signup_url": "",
+   "quelle": "https://pika.art/careers/referral",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Keine offizielle Kunden-Affiliate-Seite; Creative Partner Program nur auf Einladung."
+  },
+  {
+   "id": "luma-dream-machine",
+   "name": "Luma Dream Machine",
+   "kind": "tool",
+   "tool_slug": "luma-dream-machine",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Affiliate",
+   "network": "PartnerStack",
+   "commission": "„Unless otherwise stated, commissions last for the lifetime of the account“, Satz nicht veröffentlicht",
+   "cookie": "90 Tage",
+   "signup_url": "https://lumalabs.ai/affiliate",
+   "quelle": "https://lumalabs.ai/affiliate",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Auszahlung monatlich über PayPal oder Stripe. Daneben Creative Partner Program (Credits)."
+  },
+  {
+   "id": "kling-ai",
+   "name": "Kling AI",
+   "kind": "tool",
+   "tool_slug": "kling-ai",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Affiliate",
+   "network": "",
+   "commission": "",
+   "cookie": "unbekannt",
+   "signup_url": "https://kling.ai/app/commission-share",
+   "quelle": "https://kling.ai/app/commission-share",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Offizielle Programmseite vorhanden, Konditionen nicht lesbar (per JavaScript). Drittseiten nennen Impact und 8 bis 25 %, unbestätigt."
+  },
+  {
+   "id": "deepl",
+   "name": "DeepL",
+   "kind": "tool",
+   "tool_slug": "deepl",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Partner/Reseller",
+   "network": "eigenes Programm",
+   "commission": "keine Sätze veröffentlicht",
+   "cookie": "unbekannt",
+   "signup_url": "https://www.deepl.com/en/partners/contact-us",
+   "quelle": "https://www.deepl.com/en/partners/contact-us",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Nur für Unternehmen (Reseller, Integration). Kein Affiliate für Publisher gefunden."
+  },
+  {
+   "id": "grammarly",
+   "name": "Grammarly",
+   "kind": "tool",
+   "tool_slug": "grammarly",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Affiliate",
+   "network": "PartnerStack",
+   "commission": "„$0.20 per free account sign-up and $20 per upgrade“",
+   "cookie": "90 Tage",
+   "signup_url": "https://www.grammarly.com/affiliates",
+   "quelle": "https://support.grammarly.com/hc/en-us/articles/360037054452-Commissions-and-remittance-options",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Freigabe meist in 2 Werktagen. Außerhalb der USA nur Banküberweisung in USD. Brand-Bidding verboten."
+  },
+  {
+   "id": "jasper",
+   "name": "Jasper",
+   "kind": "tool",
+   "tool_slug": "jasper",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Partner/Reseller",
+   "network": "eigenes Programm",
+   "commission": "keine Sätze veröffentlicht",
+   "cookie": "unbekannt",
+   "signup_url": "https://www.jasper.ai/partners/solutions",
+   "quelle": "https://www.jasper.ai/partners/solutions",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Nur Agenturen und Berater: „Independent affiliates and individual promoters are not eligible.“"
+  },
+  {
+   "id": "quillbot",
+   "name": "QuillBot",
+   "kind": "tool",
+   "tool_slug": "quillbot",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Affiliate",
+   "network": "PartnerStack",
+   "commission": "„10% for monthly plans, 15% for semi-annual plans, and 20% for annual plans“, bis 20 $ je Abo",
+   "cookie": "30 Tage",
+   "signup_url": "https://quillbot.com/affiliates",
+   "quelle": "https://quillbot.com/affiliates",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Offen für alle Bewerber."
+  },
+  {
+   "id": "otter-ai",
+   "name": "Otter.ai",
+   "kind": "tool",
+   "tool_slug": "otter-ai",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Partner/Reseller",
+   "network": "eigenes Programm",
+   "commission": "keine Sätze veröffentlicht",
+   "cookie": "unbekannt",
+   "signup_url": "https://otter.ai/partner-program",
+   "quelle": "https://otter.ai/partner-program",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Ein Partnerprogramm mit Spur „Referral & Affiliate“, Bewerbungsformular, Konditionen nach Prüfung."
+  },
+  {
+   "id": "perplexity",
+   "name": "Perplexity",
+   "kind": "tool",
+   "tool_slug": "perplexity",
+   "directory_slug": null,
+   "programm": "pausiert/geschlossen",
+   "art": "Referral (Kunde wirbt Kunde)",
+   "network": "Dub",
+   "commission": "früher 15 $ je Comet-Empfehlung (nur USA), beendet am 6.11.2025",
+   "cookie": "unbekannt",
+   "signup_url": "",
+   "quelle": "https://www.perplexity.ai/help-center/en/articles/11385821-partner-promotions-and-referral-programs",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Keine neuen Provisionen. Nur Campus Partners Program für Studierende."
+  },
+  {
+   "id": "claude",
+   "name": "Claude",
+   "kind": "tool",
+   "tool_slug": "claude",
+   "directory_slug": null,
+   "programm": "nein",
+   "art": "Referral (Kunde wirbt Kunde)",
+   "network": "eigenes Programm",
+   "commission": "kein Geld, Guest Passes für 7 Tage Zugang",
+   "cookie": "unbekannt",
+   "signup_url": "",
+   "quelle": "https://support.claude.com/en/articles/12875061-claude-code-guest-passes",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Nur für berechtigte Max-Abonnenten, ohne Geldwert. Kein Affiliate-Programm belegt."
+  },
+  {
+   "id": "chatgpt",
+   "name": "ChatGPT",
+   "kind": "tool",
+   "tool_slug": "chatgpt",
+   "directory_slug": null,
+   "programm": "nein",
+   "art": "Referral (Kunde wirbt Kunde)",
+   "network": "eigenes Programm",
+   "commission": "kein Geld, kampagnenbezogene Einladungen",
+   "cookie": "unbekannt",
+   "signup_url": "",
+   "quelle": "https://help.openai.com/en/articles/8381046",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Teilnahme bestimmt OpenAI je Kampagne. Kein Affiliate-Programm belegt."
+  },
+  {
+   "id": "google-gemini",
+   "name": "Google Gemini",
+   "kind": "tool",
+   "tool_slug": "google-gemini",
+   "directory_slug": null,
+   "programm": "nein",
+   "art": null,
+   "network": "",
+   "commission": "",
+   "cookie": "unbekannt",
+   "signup_url": "https://workspace.google.com/affiliate-program/",
+   "quelle": "https://workspace.google.com/affiliate-program/",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein Programm speziell für Gemini. Alternative: Google Workspace Affiliate Program (CJ), Prämie pro neuem Workspace-Nutzer."
+  },
+  {
+   "id": "microsoft-copilot",
+   "name": "Microsoft Copilot",
+   "kind": "tool",
+   "tool_slug": "microsoft-copilot",
+   "directory_slug": null,
+   "programm": "unklar",
+   "art": null,
+   "network": "",
+   "commission": "",
+   "cookie": "unbekannt",
+   "signup_url": "",
+   "quelle": "https://www.microsoft.com/ja-jp/area/biz/smb/affiliate-get-started",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Belegt nur ein Microsoft-365-Affiliate in Japan (Rakuten). Für Copilot keine Provision auf offiziellen Seiten."
+  },
+  {
+   "id": "github-copilot",
+   "name": "GitHub Copilot",
+   "kind": "tool",
+   "tool_slug": "github-copilot",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Partner/Reseller",
+   "network": "eigenes Programm",
+   "commission": "",
+   "cookie": "unbekannt",
+   "signup_url": "https://github.com/partners",
+   "quelle": "https://github.com/partners",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Nur GitHub Partner Program (Technology, Services, Channel). Kein Affiliate für Copilot."
+  },
+  {
+   "id": "cursor",
+   "name": "Cursor",
+   "kind": "tool",
+   "tool_slug": "cursor",
+   "directory_slug": null,
+   "programm": "pausiert/geschlossen",
+   "art": "Referral (Kunde wirbt Kunde)",
+   "network": "eigenes Programm",
+   "commission": "früher 25 $ Credit je Kunde, eingestellt",
+   "cookie": "unbekannt",
+   "signup_url": "",
+   "quelle": "https://cursor.com/help/account-and-billing/referral-program",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "„Cursor discontinued the referral program.“ Ein Affiliate-Programm gibt es nicht."
+  },
+  {
+   "id": "lovable",
+   "name": "Lovable",
+   "kind": "tool",
+   "tool_slug": "lovable",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Affiliate",
+   "network": "",
+   "commission": "„Earn up to $100 for each first-time subscriber you refer.“",
+   "cookie": "unbekannt",
+   "signup_url": "https://lovable.dev/partners/affiliates",
+   "quelle": "https://lovable.dev/affiliates",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Bewerbung nötig, monatliche Auszahlung. Zusätzlich Experts (10 % auf Business) und Solution Partners (bis 20 %)."
+  },
+  {
+   "id": "bolt-new",
+   "name": "Bolt.new",
+   "kind": "tool",
+   "tool_slug": "bolt-new",
+   "directory_slug": null,
+   "programm": "ja",
+   "art": "Referral (Kunde wirbt Kunde)",
+   "network": "Cello",
+   "commission": "„you earn 15% of what they pay Bolt, up to $50 per referral“",
+   "cookie": "unbekannt",
+   "signup_url": "https://bolt.new/platform/referral",
+   "quelle": "https://support.bolt.new/account/referral-program",
+   "status": "nicht registriert",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Bargeld per PayPal oder Venmo, 30 Tage Haltefrist, nur persönlicher Account. Bezahlte Werbung nur mit Genehmigung."
+  },
+  {
+   "id": "v0",
+   "name": "v0",
+   "kind": "tool",
+   "tool_slug": "v0",
+   "directory_slug": null,
+   "programm": "pausiert/geschlossen",
+   "art": "Referral (Kunde wirbt Kunde)",
+   "network": "Dub",
+   "commission": "früher Credits, eingestellt am 15.7.2026",
+   "cookie": "unbekannt",
+   "signup_url": "",
+   "quelle": "https://community.vercel.com/t/where-is-the-share-your-link-and-earn-credits-referral-feature-on-v0-app-vercel/42015",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein aktives Programm belegt; Vercel verweist auf Vercel Insiders."
+  },
+  {
+   "id": "product-hunt",
+   "name": "Product Hunt",
+   "kind": "directory",
+   "tool_slug": null,
+   "directory_slug": "product-hunt",
+   "programm": "nein",
+   "network": "",
+   "commission": "",
+   "cookie": "",
+   "signup_url": "",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein eigenes Partnerprogramm gefunden (Recherche 23.10.2026, docs/AFFILIATE-PROGRAMME.md)"
+  },
+  {
+   "id": "saashub",
+   "name": "SaaSHub",
+   "kind": "directory",
+   "tool_slug": null,
+   "directory_slug": "saashub",
+   "programm": "nein",
+   "network": "",
+   "commission": "",
+   "cookie": "",
+   "signup_url": "",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein eigenes Partnerprogramm gefunden (Recherche 23.10.2026, docs/AFFILIATE-PROGRAMME.md)"
+  },
+  {
+   "id": "alternativeto",
+   "name": "AlternativeTo",
+   "kind": "directory",
+   "tool_slug": null,
+   "directory_slug": "alternativeto",
+   "programm": "nein",
+   "network": "",
+   "commission": "",
+   "cookie": "",
+   "signup_url": "",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein eigenes Partnerprogramm gefunden (Recherche 23.10.2026, docs/AFFILIATE-PROGRAMME.md)"
+  },
+  {
+   "id": "f6s",
+   "name": "F6S",
+   "kind": "directory",
+   "tool_slug": null,
+   "directory_slug": "f6s",
+   "programm": "nein",
+   "network": "",
+   "commission": "",
+   "cookie": "",
+   "signup_url": "",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein eigenes Partnerprogramm gefunden (Recherche 23.10.2026, docs/AFFILIATE-PROGRAMME.md)"
+  },
+  {
+   "id": "crunchbase",
+   "name": "Crunchbase",
+   "kind": "directory",
+   "tool_slug": null,
+   "directory_slug": "crunchbase",
+   "programm": "nein",
+   "network": "",
+   "commission": "",
+   "cookie": "",
+   "signup_url": "",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein eigenes Partnerprogramm gefunden (Recherche 23.10.2026, docs/AFFILIATE-PROGRAMME.md)"
+  },
+  {
+   "id": "futurepedia",
+   "name": "Futurepedia",
+   "kind": "directory",
+   "tool_slug": null,
+   "directory_slug": "futurepedia",
+   "programm": "nein",
+   "network": "",
+   "commission": "",
+   "cookie": "",
+   "signup_url": "",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein eigenes Partnerprogramm gefunden (Recherche 23.10.2026, docs/AFFILIATE-PROGRAMME.md)"
+  },
+  {
+   "id": "theres-an-ai-for-that",
+   "name": "There's An AI For That",
+   "kind": "directory",
+   "tool_slug": null,
+   "directory_slug": "theres-an-ai-for-that",
+   "programm": "nein",
+   "network": "",
+   "commission": "",
+   "cookie": "",
+   "signup_url": "",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein eigenes Partnerprogramm gefunden (Recherche 23.10.2026, docs/AFFILIATE-PROGRAMME.md)"
+  },
+  {
+   "id": "dang-ai",
+   "name": "Dang.ai",
+   "kind": "directory",
+   "tool_slug": null,
+   "directory_slug": "dang-ai",
+   "programm": "nein",
+   "network": "",
+   "commission": "",
+   "cookie": "",
+   "signup_url": "",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein eigenes Partnerprogramm gefunden (Recherche 23.10.2026, docs/AFFILIATE-PROGRAMME.md)"
+  },
+  {
+   "id": "microlaunch",
+   "name": "Microlaunch",
+   "kind": "directory",
+   "tool_slug": null,
+   "directory_slug": "microlaunch",
+   "programm": "nein",
+   "network": "",
+   "commission": "",
+   "cookie": "",
+   "signup_url": "",
+   "status": "kein Programm",
+   "partner_link": "",
+   "coupon": null,
+   "notes": "Kein eigenes Partnerprogramm gefunden (Recherche 23.10.2026, docs/AFFILIATE-PROGRAMME.md)"
   }
  ]
 }

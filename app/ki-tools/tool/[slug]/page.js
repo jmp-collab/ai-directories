@@ -70,8 +70,8 @@ function KbToolPage({ params }) {
                 <h1>{t.name}</h1>
                 <p className="lead">{t.beschreibung}</p>
                 <p className="cta-row">
-                    <a className="button" href={t.url} target="_blank" rel="nofollow noopener noreferrer">
-                        {t.name} öffnen ↗
+                    <a className="button" href={t.affiliate || t.url} target="_blank" rel={t.affiliate ? 'sponsored nofollow noopener noreferrer' : 'nofollow noopener noreferrer'}>
+                        {t.name} öffnen ↗{t.affiliate && <sup>*</sup>}
                     </a>
                     {t.profil && <Link href={`/tools/${t.profil.slug}`}>🧔 Steckbrief mit Preisen →</Link>}
                 </p>
