@@ -31,7 +31,10 @@ jobs:
             NEXT_PUBLIC_LEAD_EMAIL: ${{ vars.LEAD_EMAIL }}
             NEXT_PUBLIC_LEAD_ALIAS: ${{ vars.LEAD_ALIAS }}
         steps:
+            # Volle Historie, damit die Sitemap echte Änderungsdaten aus Git lesen kann (lib/stand.js)
             - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
             - uses: actions/setup-node@v4
               with:
                   node-version: 22

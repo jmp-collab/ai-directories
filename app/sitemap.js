@@ -14,50 +14,74 @@ import { getTestKategorien } from '../lib/kitests'
 import { RECHNER } from '../lib/rechner'
 import { MODELLE, FAMILIEN } from '../lib/modelle'
 import { NEWS } from '../lib/news'
+import { RUBRIK_RATGEBER } from '../lib/rubrik-ratgeber'
+import { dateiStand, seitenStand, spaetestes } from '../lib/stand'
+
+// lastModified ist das echte Änderungsdatum: Prüfdatum des Inhalts oder letzter Git-Commit der Quelldateien.
+// Ein Datum, das sich täglich ändert, obwohl nichts passiert ist, ignoriert Google; ein ehrliches nutzt es.
+const STATISCH = {
+    '/deutsche-ki-verzeichnisse': ['lib/dach.js'],
+    '/launch-kit': [],
+    '/ratgeber': ['lib/ratgeber.js'],
+    '/glossar': ['lib/ki-glossar.js'],
+    '/freischaltung': ['db/checks.json'],
+    '/werben': [],
+    '/transparenz': [],
+    '/tools': ['db/tools.json'],
+    '/tool-vergleiche': ['lib/comparisons.js'],
+    '/top-50': ['db/directories.json'],
+    '/prompts': ['lib/prompts.js'],
+    '/prompt-baukasten': [],
+    '/prompt-check': [],
+    '/tutorials': ['lib/tutorials.js'],
+    '/downloads': [],
+    '/downloads/prompt-spickzettel': ['lib/prompts.js'],
+    '/ki-tools': ['db/kb-tools.json'],
+    '/ki-tools/quellen': ['db/kb-sources.json'],
+    '/prompts/archiv': ['db/prompt-archiv.json'],
+    '/ki-test': ['lib/kitests.js'],
+    '/rechner': ['lib/rechner.js'],
+    '/beste-ki-tools': ['db/tools.json'],
+    '/ki-tools/kostenlos': ['db/kb-tools.json', 'db/tools.json'],
+    '/ki-tools/chatgpt-alternativen': ['db/tools.json', 'db/kb-tools.json'],
+    '/ki-tools/alternativen': ['lib/alternativen.js'],
+    '/ki-tools/fuer': ['lib/zielgruppen.js'],
+    '/ki-verzeichnis': [],
+    '/tool-finder': ['db/tools.json'],
+    '/neue-ki-modelle': ['lib/modelle.js'],
+    '/neu-entdeckt': ['db/neu-entdeckt.json'],
+    '/ki-news': ['lib/news.js'],
+    '/quiz': [],
+    '/vergleich': ['db/directories.json'],
+    '/ueber-jean': [],
+    '/so-pruefen-wir': [],
+}
 
 export default function sitemap() {
-    const lastModified = new Date()
+    const eintrag = (path, lastModified, changeFrequency, priority) => ({ url: absoluteUrl(path), lastModified, changeFrequency, priority })
     return [
-        { url: absoluteUrl('/'), lastModified, changeFrequency: 'weekly', priority: 1 },
-        ...['/deutsche-ki-verzeichnisse', '/launch-kit', '/ratgeber', '/glossar', '/freischaltung', '/werben', '/transparenz', '/tools', '/tool-vergleiche', '/top-50', '/prompts', '/prompt-baukasten', '/prompt-check', '/tutorials', '/downloads', '/downloads/prompt-spickzettel', '/ki-tools', '/ki-tools/quellen', '/prompts/archiv', '/ki-test', '/rechner', '/beste-ki-tools', '/ki-tools/kostenlos', '/ki-tools/chatgpt-alternativen', '/ki-tools/alternativen', '/ki-tools/fuer', '/ki-verzeichnis', '/tool-finder', '/neue-ki-modelle', '/neu-entdeckt', '/ki-news'].map((path) => ({
-            url: absoluteUrl(path),
-            lastModified,
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        })),
-        ...NEWS.map((n) => ({ url: absoluteUrl(`/ki-news/${n.slug}`), lastModified: new Date(n.veroeffentlicht), changeFrequency: 'weekly', priority: 0.8 })),
-        ...[...FAMILIEN, ...MODELLE].map((m) => ({ url: absoluteUrl(`/neue-ki-modelle/${m.slug}`), lastModified, changeFrequency: 'weekly', priority: 0.7 })),
-        ...ARTIKEL.map((a) => ({ url: absoluteUrl(`/ratgeber/${a.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
-        { url: absoluteUrl('/quiz'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
-        { url: absoluteUrl('/vergleich'), lastModified, changeFrequency: 'monthly', priority: 0.7 },
-        { url: absoluteUrl('/ueber-jean'), lastModified, changeFrequency: 'monthly', priority: 0.6 },
-        ...Object.keys(LISTS).map((slug) => ({
-            url: absoluteUrl(`/liste/${slug}`),
-            lastModified,
-            changeFrequency: 'weekly',
-            priority: 0.8,
-        })),
-        ...getComparisons().map((c) => ({ url: absoluteUrl(`/tool-vergleiche/${c.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
-        ...RECHNER.map((r) => ({ url: absoluteUrl(`/rechner/${r.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.8 })),
-        ...getTestKategorien().map((k) => ({ url: absoluteUrl(`/ki-test/${k.key}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
-        ...getKbRubriken().map((r) => ({ url: absoluteUrl(`/ki-tools/${r.key}`), lastModified, changeFrequency: 'weekly', priority: 0.8 })),
-        ...KI_GLOSSAR.map(([term]) => ({ url: absoluteUrl(`/glossar/${glossarSlug(term)}`), lastModified, changeFrequency: 'monthly', priority: 0.5 })),
-        ...ZIELGRUPPEN.map((z) => ({ url: absoluteUrl(`/ki-tools/fuer/${z.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
-        ...ALTERNATIVEN.map((a) => ({ url: absoluteUrl(`/ki-tools/alternativen/${a.slug}`), lastModified, changeFrequency: 'weekly', priority: 0.7 })),
+        eintrag('/', seitenStand('/', 'db/directories.json', 'lib/news.js'), 'weekly', 1),
+        ...Object.entries(STATISCH).map(([path, daten]) => eintrag(path, seitenStand(path, ...daten), 'monthly', ['/quiz', '/vergleich', '/ueber-jean', '/so-pruefen-wir'].includes(path) ? 0.6 : 0.8)),
+        ...NEWS.map((n) => eintrag(`/ki-news/${n.slug}`, new Date(n.veroeffentlicht), 'weekly', 0.8)),
+        ...[...FAMILIEN, ...MODELLE].map((m) => eintrag(`/neue-ki-modelle/${m.slug}`, dateiStand('lib/modelle.js'), 'weekly', 0.7)),
+        ...ARTIKEL.map((a) => eintrag(`/ratgeber/${a.slug}`, spaetestes(a.geprueft, dateiStand('lib/ratgeber.js')), 'monthly', 0.7)),
+        ...Object.keys(LISTS).map((slug) => eintrag(`/liste/${slug}`, dateiStand('db/directories.json', 'lib/data.js'), 'weekly', 0.8)),
+        ...getComparisons().map((c) => eintrag(`/tool-vergleiche/${c.slug}`, spaetestes(c.geprueft, dateiStand('lib/comparisons.js')), 'monthly', 0.7)),
+        ...RECHNER.map((r) => eintrag(`/rechner/${r.slug}`, seitenStand(`/rechner/${r.slug}`, 'lib/preise.js', 'lib/abo-preise.js'), 'monthly', 0.8)),
+        ...getTestKategorien().map((k) => eintrag(`/ki-test/${k.key}`, dateiStand('lib/kitests.js'), 'monthly', 0.7)),
+        ...getKbRubriken().map((r) => eintrag(`/ki-tools/${r.key}`, spaetestes(RUBRIK_RATGEBER[r.key]?.geprueft, dateiStand('db/kb-tools.json', 'lib/rubrik-ratgeber.js')), 'weekly', 0.8)),
+        ...KI_GLOSSAR.map(([term]) => eintrag(`/glossar/${glossarSlug(term)}`, dateiStand('lib/ki-glossar.js', 'lib/ki-glossar-details.js', 'db/texte/glossar.json'), 'monthly', 0.5)),
+        ...ZIELGRUPPEN.map((z) => eintrag(`/ki-tools/fuer/${z.slug}`, spaetestes(z.geprueft, dateiStand('lib/zielgruppen.js')), 'monthly', 0.7)),
+        ...ALTERNATIVEN.map((a) => eintrag(`/ki-tools/alternativen/${a.slug}`, dateiStand('lib/alternativen.js', 'db/kb-tools.json'), 'weekly', 0.7)),
         ...getKbTools()
             .filter(kbIndexierbar)
-            .map((t) => ({ url: absoluteUrl(`/ki-tools/tool/${t.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.5 })),
-        ...getTutorials().map((t) => ({ url: absoluteUrl(`/tutorials/${t.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.8 })),
-        ...getPrompts().map((p) => ({ url: absoluteUrl(`/prompts/${p.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
+            .map((t) => eintrag(`/ki-tools/tool/${t.slug}`, dateiStand('db/kb-tools.json', 'db/texte/kb.json'), 'monthly', 0.5)),
+        ...getTutorials().map((t) => eintrag(`/tutorials/${t.slug}`, dateiStand('lib/tutorials.js'), 'monthly', 0.8)),
+        ...getPrompts().map((p) => eintrag(`/prompts/${p.slug}`, dateiStand('lib/prompts.js', 'db/texte/prompts.json'), 'monthly', 0.7)),
         ...promptsByKategorie()
             .filter((k) => k.prompts.length && KATEGORIE_TEXTE[k.key])
-            .map((k) => ({ url: absoluteUrl(`/prompts/kategorie/${k.key}`), lastModified, changeFrequency: 'monthly', priority: 0.7 })),
-        ...getTools().map((t) => ({ url: absoluteUrl(`/tools/${t.slug}`), lastModified, changeFrequency: 'monthly', priority: 0.6 })),
-        ...getDirectories().map((d) => ({
-            url: absoluteUrl(`/verzeichnis/${d.slug}`),
-            lastModified,
-            changeFrequency: 'monthly',
-            priority: 0.5,
-        })),
+            .map((k) => eintrag(`/prompts/kategorie/${k.key}`, dateiStand('lib/prompts.js', 'lib/prompt-kategorien.js'), 'monthly', 0.7)),
+        ...getTools().map((t) => eintrag(`/tools/${t.slug}`, dateiStand('db/tools.json', 'db/texte/tools.json'), 'monthly', 0.6)),
+        ...getDirectories().map((d) => eintrag(`/verzeichnis/${d.slug}`, dateiStand('db/directories.json', 'db/texte/verzeichnisse.json', 'db/checks.json'), 'monthly', 0.5)),
     ]
 }

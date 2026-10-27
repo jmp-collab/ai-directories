@@ -5410,3 +5410,45 @@ h2 a {
 .news-thema-block {
     margin-bottom: 10px;
 }
+
+/* ================= Direktantwort (Snippet-Box) ================= */
+.kurzantwort {
+    margin: 22px 0 8px;
+    padding: 14px 18px 12px;
+    border: 2px solid var(--border);
+    border-left-width: 8px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+.kurzantwort h2 {
+    margin: 0 0 8px;
+    font-size: 1.15rem;
+}
+.kurzantwort p {
+    margin: 0;
+}
+
+/* ================= Autorenbox ================= */
+.pruefer {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin: 28px 0;
+    padding: 12px 16px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+.pruefer img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    object-fit: cover;
+    flex: none;
+}
+.pruefer p {
+    margin: 0;
+    font-size: 0.95rem;
+}

@@ -6,6 +6,7 @@ import Faq, { faqSchema } from '../../components/Faq'
 import { MODELLE, FAMILIEN, MODELLE_STAND, getModell, getFamilie, modelleDerFamilie, modelleNachDatum } from '../../../lib/modelle'
 import { getTool } from '../../../lib/tools'
 import { absoluteUrl } from '../../../lib/site'
+import Kurzantwort from '../../components/Kurzantwort'
 import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
 
 export const dynamicParams = false
@@ -122,6 +123,12 @@ function ModellPage({ params }) {
                 </p>
                 <h1>{fam ? fam.titel : `${m.name}: Start, Preis und was es kann`}</h1>
                 <p className="lead">{fam ? fam.description : m.kurz}</p>
+                {!fam && (
+                    <Kurzantwort frage={`Was ist ${m.name}, und was kostet es?`}>
+                        {m.art === 'Produkt-Update' ? `${m.name} ist ein Update von ${m.anbieter}` : `${m.name} ist ein ${m.art} von ${m.anbieter}`}, erschienen am {m.datumText}.{' '}
+                        {m.preis ? `API-Preis laut Anbieter: ${m.preis.replace(/\.$/, '')}.` : 'Einen eigenen API-Preis nennt der Anbieter dafür nicht.'} {m.nutzen}
+                    </Kurzantwort>
+                )}
             </header>
             {fam ? (
                 <>
