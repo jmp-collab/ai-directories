@@ -52,7 +52,7 @@ ${lists}
 - [Deutsche KI-Verzeichnisse](${absoluteUrl('/deutsche-ki-verzeichnisse')})
 - [Neu entdeckte KI-Verzeichnisse, geprüft im Oktober 2026](${absoluteUrl('/neu-entdeckt')})
 - [Neue KI-Modelle 2026: GPT-6, Gemini 4 Argon, Claude 5.5 mit Quellen und Preisen](${absoluteUrl('/neue-ki-modelle')})
-- [KI-News: aktuelle Meldungen mit Quellen und Handlungsempfehlung](${absoluteUrl('/ki-news')})
+- [KI-News: aktuelle Meldungen mit Quellen, Handlungsempfehlung und Fristen-Kalender](${absoluteUrl('/ki-news')}) · RSS: ${absoluteUrl('/ki-news/feed.xml')}
 ${NEWS.map((n) => `- [${n.titel}](${absoluteUrl(`/ki-news/${n.slug}`)}): ${n.description}`).join('\n')}
 
 ## Werkzeuge und Ratgeber

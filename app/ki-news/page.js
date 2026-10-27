@@ -2,18 +2,24 @@ import Link from 'next/link'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import JsonLd from '../components/JsonLd'
 import Jean from '../components/Jean'
-import { getNews, NEWS_STAND } from '../../lib/news'
+import { getNews, getFristen, NEWS_STAND } from '../../lib/news'
 import { absoluteUrl } from '../../lib/site'
 import Vernetzt, { seitenPfad } from '../components/Vernetzt'
 
 export const metadata = {
     title: 'KI-News: aktuelle KI-Nachrichten verständlich erklärt',
     description: `Aktuelle KI-News auf Deutsch: neue Funktionen, Abschaltungen, Sicherheitslücken und Preise von OpenAI, Anthropic, Google und Co. Jede Meldung geprüft, mit Quellen und dem, was du jetzt tun solltest. Stand ${NEWS_STAND}.`,
-    alternates: { canonical: '/ki-news' },
+    alternates: { canonical: '/ki-news', types: { 'application/rss+xml': '/ki-news/feed.xml' } },
     openGraph: { url: '/ki-news' },
 }
 
 const datumKurz = (d) => new Date(d).toLocaleDateString('de-DE', { day: 'numeric', month: 'short' })
+const datumLang = (d) => new Date(d).toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' })
+const themaId = (t) =>
+    `thema-${t
+        .toLowerCase()
+        .replace(/[äöüß]/g, (c) => ({ ä: 'ae', ö: 'oe', ü: 'ue', ß: 'ss' })[c])
+        .replace(/[^a-z0-9]+/g, '-')}`
 
 function KiNews() {
     const crumbs = [
@@ -22,6 +28,8 @@ function KiNews() {
     ]
     const liste = getNews()
     const themen = [...new Set(liste.map((n) => n.thema))]
+    const heute = new Date().toISOString().slice(0, 10)
+    const fristen = getFristen().filter((f) => f.datum >= heute)
     const schema = [
         breadcrumbSchema(crumbs),
         {
@@ -41,7 +49,40 @@ function KiNews() {
                     {liste.length} Meldungen, Themen: {themen.join(', ')}. Jede mit offizieller Quelle, einem „Was du jetzt tun solltest“ und Links zu den passenden Tools, Prompts und Erklärungen hier auf der Seite.
                 </p>
                 <Jean>Ich lese die Pressemitteilungen, damit du es nicht musst. Übrig bleibt, was dich betrifft, und ein Witz pro Absatz als Schmerzensgeld.</Jean>
+                <p className="news-feed">
+                    <a href="feed.xml">📡 KI-News als RSS-Feed abonnieren</a>
+                </p>
             </section>
+
+            {fristen.length > 0 && (
+                <section aria-labelledby="fristen" className="news-fristen">
+                    <h2 id="fristen">KI-Fristen-Kalender ⏰</h2>
+                    <p>Abschaltungen, Lebensenden und Umzugstermine aus den Meldungen. Trag dir ein, was dich betrifft, bevor es dein Fehlerprotokoll für dich tut.</p>
+                    <ol className="fristen-liste">
+                        {fristen.map((f) => (
+                            <li key={`${f.datum}-${f.was}`}>
+                                <time dateTime={f.datum}>{datumLang(f.datum)}</time>
+                                <span>
+                                    {f.was}. <Link href={`/ki-news/${f.slug}`}>Zur Meldung</Link>
+                                </span>
+                            </li>
+                        ))}
+                    </ol>
+                </section>
+            )}
+
+            <nav aria-label="Themen" className="news-themen">
+                <strong>Nach Thema:</strong>
+                <ul>
+                    {themen.map((t) => (
+                        <li key={t}>
+                            <a href={`#${themaId(t)}`}>
+                                {t} <span className="klapp-zahl">{liste.filter((n) => n.thema === t).length}</span>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
 
             <section aria-labelledby="meldungen">
                 <h2 id="meldungen">Alle Meldungen, neueste zuerst</h2>
@@ -69,6 +110,28 @@ function KiNews() {
                         </li>
                     ))}
                 </ul>
+            </section>
+
+            <section aria-labelledby="nach-thema">
+                <h2 id="nach-thema">Alle Meldungen nach Thema</h2>
+                {themen.map((t) => (
+                    <details key={t} id={themaId(t)} className="klapp news-thema-block">
+                        <summary>
+                            {t} <span className="klapp-zahl">{liste.filter((n) => n.thema === t).length}</span>
+                        </summary>
+                        <ul>
+                            {liste
+                                .filter((n) => n.thema === t)
+                                .map((n) => (
+                                    <li key={n.slug}>
+                                        <Link href={`/ki-news/${n.slug}`}>
+                                            {n.emoji} {n.titel}
+                                        </Link>
+                                    </li>
+                                ))}
+                        </ul>
+                    </details>
+                ))}
             </section>
 
             <section aria-labelledby="mehr">

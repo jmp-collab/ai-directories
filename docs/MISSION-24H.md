@@ -144,6 +144,12 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - Faktenkorrektur durch die News: Glossar „Custom GPT“, Tutorial „Eigenen KI-Assistenten bauen“, Prompt-Kategorie-FAQ und Glossar-Beispiel nennen jetzt die Abschaltung und die Nachfolger.
 - Wöchentliche Routine „AIGeddon: Wöchentliche KI-News“ (Do 07:37) schreibt ab jetzt 3 bis 6 neue Artikel pro Woche im selben Format.
 
+## KI-News II (Auftrag 27.10.: „Weitermachen und ausbauen“)
+
+- 5 neue Artikel, an offiziellen Quellen geprüft: GPT-4o/GPT-4.1-Abschaltung in der API am 14.1.2027 (OpenAI Deprecations), Werbung in ChatGPT (89 Länder, Deutschland seit August), Auto-Modus als Standard in den Claude-Apps, Gemini gratis nur noch mit Auto-Modellwahl, Claude Docs/Slides/Design im Gratis-Tarif plus Dashboards und Motion. Jetzt 12 Meldungen.
+- KI-Fristen-Kalender auf /ki-news (Feld `fristen` je Meldung, vergangene Termine fallen beim täglichen Neubau weg) und „Termine zum Eintragen“ in den Artikeln.
+- RSS-Feed /ki-news/feed.xml (im HTML-Kopf verlinkt), Themen-Sprungleiste und aufklappbare Themenblöcke.
+
 ## Für Jean (am Ende präsentieren)
 
 - Keyword-Daten: Semrush meldet fehlende API-Einheiten (https://www.semrush.com/mcp-access); das Ubersuggest-Tageslimit war ebenfalls erreicht. Optimierung erfolgte daher nach etablierten Keyword-Varianten.
