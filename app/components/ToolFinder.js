@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import konfetti from '../../lib/konfetti'
+import { verleihe } from '../../lib/herz'
 
 const AUFGABEN = [
     ['schreiben', '✍️', 'Texte schreiben', ['schreiben', 'marketing']],
@@ -48,7 +49,10 @@ export default function ToolFinder({ tools }) {
     const waehle = (setter, wert, naechster) => {
         setter(wert)
         setSchritt(naechster)
-        if (naechster === 3) setTimeout(() => konfetti(35), 250)
+        if (naechster === 3) {
+            setTimeout(() => konfetti(35), 250)
+            verleihe('Detektiv-Abzeichen')
+        }
     }
 
     const frage = (titel, optionen, setter, aktuell, naechster) => (

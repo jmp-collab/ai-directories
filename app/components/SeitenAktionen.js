@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { lies, schreib, toast, ruhig } from '../../lib/herz'
+import { lies, schreib, toast, ruhig, verleihe } from '../../lib/herz'
+import { StrahlenHerz } from './HerzIcons'
 
 // Herz, Merken und Teilen unter jeder Seite. Gespeichert wird nur im eigenen Browser, gezählt wird nichts.
 const sauber = (t) => (t || '').replace(/\s*\|\s*AIGeddon\s*$/, '').trim()
@@ -47,7 +48,8 @@ export default function SeitenAktionen() {
             alle.add(pfad)
             setHerz(true)
             herzRegen(e.currentTarget)
-            toast(alle.size === 1 ? 'Dein erstes Herz! Danke, das freut uns wirklich.' : 'Danke für dein Herz!', '❤️')
+            if (alle.size === 5) verleihe('Herzensmensch-Abzeichen')
+            else toast(alle.size === 1 ? 'Dein erstes Herz! Danke, das freut uns wirklich.' : 'Danke für dein Herz!', '❤️')
         }
         schreib('aigeddon-herzen', [...alle])
     }
@@ -70,15 +72,17 @@ export default function SeitenAktionen() {
         try {
             if (navigator.share) {
                 await navigator.share({ title: sauber(document.title), url })
+                verleihe('Botschafter-Abzeichen')
                 return
             }
             await navigator.clipboard.writeText(url)
-            toast('Link kopiert. Danke fürs Weitersagen!', '🔗')
+            if (!verleihe('Botschafter-Abzeichen')) toast('Link kopiert. Danke fürs Weitersagen!', '🔗')
         } catch {}
     }
 
     return (
         <div className="seiten-aktionen" aria-label="Seite bewerten, merken oder teilen" role="group">
+            <StrahlenHerz size={36} className="seiten-aktionen-icon" />
             <span className="seiten-aktionen-frage">Hat dir die Seite geholfen?</span>
             <button type="button" className={`aktion-knopf${herz ? ' an' : ''}`} aria-pressed={bereit ? herz : undefined} onClick={herzKlick}>
                 <span aria-hidden="true">{herz ? '❤️' : '🤍'}</span> {herz ? 'Danke!' : 'Gefällt mir'}

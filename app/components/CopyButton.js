@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { verleihe } from '../../lib/herz'
 
 // Kopiert einen Text, oder ohne value die aktuelle Seiten-URL.
 export default function CopyButton({ value, label, done = 'Kopiert ✓' }) {
@@ -14,6 +15,7 @@ export default function CopyButton({ value, label, done = 'Kopiert ✓' }) {
             window.prompt('Zum Kopieren markieren:', text)
         }
         setCopied(true)
+        verleihe('Kopier-Abzeichen')
         setTimeout(() => setCopied(false), 1800)
     }
 

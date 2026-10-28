@@ -48,6 +48,29 @@ Stand 26.10.2026. Je Sitzung genau eine Aufgabe (bei „je Runde“ nur die ange
 - [ ] **Verlinkung prüfen** je Runde: `node utils/vernetzung/build.mjs out` nach einem Build ausführen und Seiten mit weniger als 5 eingehenden Links (`reinGesamt` in `db/vernetzung.json`) im Fließtext von 2 thematisch passenden Seiten verlinken.
 - [ ] **Top 50 als echter Lead-Magnet**: Sobald der Newsletter läuft, CSV-Download an das Abo koppeln. *wartet auf Newsletter*
 
+## Herzstücke-Backlog (verworfene Ideen aus Runde 2, bei Bedarf umsetzen)
+
+- [ ] Persönliche Startseite: zuletzt angesehene Rubrik oben anzeigen
+- [ ] Glossar-Begriffe beim Überfahren mit kleinem Wackeln hervorheben
+- [ ] „Frag Jean“-Formular: freundlichere Fehlermeldungen mit Beispiel statt Browser-Standard
+- [ ] Prompt-Bibliothek: Lieblingsprompts mit Stern direkt an der Karte merken
+- [ ] Wochenrückblick in der Merkliste: was du diese Woche gelesen hast
+- [ ] Mini-Spiel „Fang das Backlink-Herz“ auf der 404-Seite
+- [ ] Seitenalter im Footer („AIGeddon ist seit X Tagen online“), sobald das Startdatum fest steht
+- [ ] Danke-Wand für Open-Source-Beitragende aus öffentlichen GitHub-Daten zur Build-Zeit
+- [ ] Eigene Cursor-Spur aus kleinen Sternen im Ruhe-Modus-aus
+- [ ] Geräusch beim Hupen (nur nach Klick, standardmäßig stumm)
+- [ ] Abzeichen „Stammgast“ für 7 Besuchstage am Stück
+- [ ] Abzeichen für 10 gemerkte Seiten
+- [ ] Teilbare Abzeichen-Karte als Bild (Canvas, lokal erzeugt)
+- [ ] Jahreszeiten-Variante des Jean-Icons (Mütze im Winter, Sonnenbrille im Sommer)
+- [ ] Geburtstagsgruß der Seite am Jahrestag des ersten Deploys
+- [ ] Lesemodus mit größerer Schrift und ruhigem Hintergrund
+- [ ] „Heute gelernt“-Kärtchen am Ende jedes Ratgebers zum Abhaken
+- [ ] Animierter Daumen nach abgeschicktem Formular
+- [ ] Tastenkürzel g für Glossar und k für KI-Test
+- [ ] Merkliste als Datei exportieren und auf anderem Gerät importieren
+
 ## Wiederkehrend (eigene geplante Sitzungen, nicht hier abhaken)
 
 - **Monatlich:** KI-Tool-Datenbank neu einlesen: die drei Listen klonen (`git clone --depth 1`), `npm run kb:import -- <ordner>`, Sterne/Forks in `utils/kb/import.js` aktualisieren, Diff prüfen (neue/entfernte Tools), PR.
@@ -59,6 +82,9 @@ Stand 26.10.2026. Je Sitzung genau eine Aufgabe (bei „je Runde“ nur die ange
 - **Täglich (GitHub Actions, 04:17 UTC):** Neubau der Seite, damit Deal und Tool des Tages wechseln. Danach berechnet `utils/vernetzung/build.mjs` die interne Verlinkung neu; hat sie sich geändert, baut der Workflow ein zweites Mal.
 
 ## Erledigt
+
+- 2026-10-28 · Herzstücke Runde 2: 20 weitere liebevolle Elemente (Sammelalbum mit 14 Abzeichen, Easter Eggs, Weiterlesen, Restlesezeit, Neu seit letztem Besuch, Verlauf, eigene SVG-Illustrationen, Feiertags- und Nachtgruß, Weitersagen, Idee an Jean).
+- 2026-10-28 · PR #126: Herzstücke Runde 1 (21 Elemente, Merkliste, Farbwahl, Ruhe-Modus).
 
 - 2026-10-23 · PR #39: Prompt-Archiv `/prompts/archiv` mit 103 Rollen-Prompts aus f/prompts.chat (CC0), deutsche Titel, 8 Kategorien, „Antworte auf Deutsch“; deutsche Kurzbeschreibungen für alle 137 Konsens-Tools (`db/kb-de.json`) samt Rubrik-Korrekturen.
 

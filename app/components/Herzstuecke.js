@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
 import konfetti from '../../lib/konfetti'
-import { lies, schreib, sitzung, toast } from '../../lib/herz'
+import { lies, schreib, sitzung, toast, verleihe, feiertag, nachts, ruhig } from '../../lib/herz'
 
 // Kleine Aufmerksamkeiten für Besucher. Alles läuft lokal im Browser, nichts wird gezählt oder gesendet.
 const KUERZEL = [
@@ -15,10 +15,29 @@ const KUERZEL = [
     ['m', '/merkliste', 'Deine Merkliste'],
 ]
 const ABZEICHEN = [
-    [3, 'Neugier-Abzeichen', '🔍'],
-    [6, 'Entdecker-Abzeichen', '🧭'],
-    [10, 'Weltreise-Abzeichen', '🌍'],
+    [3, 'Neugier-Abzeichen'],
+    [6, 'Entdecker-Abzeichen'],
+    [10, 'Weltreise-Abzeichen'],
 ]
+const KONAMI = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a']
+const heute = () => new Date().toISOString().slice(0, 10)
+
+// Kleiner Herzregen an einer Stelle des Bildschirms.
+export function herzRegen(x, y, anzahl = 9) {
+    if (ruhig()) return
+    for (let i = 0; i < anzahl; i++) {
+        const h = document.createElement('span')
+        h.className = 'herz-flug'
+        h.setAttribute('aria-hidden', 'true')
+        h.textContent = ['❤️', '💖', '💛', '💜'][i % 4]
+        h.style.left = `${x}px`
+        h.style.top = `${y}px`
+        h.style.setProperty('--dx', `${(Math.random() - 0.5) * 160}px`)
+        h.style.animationDelay = `${i * 40}ms`
+        document.body.appendChild(h)
+        setTimeout(() => h.remove(), 1500)
+    }
+}
 const LESESEITEN = /^\/(ratgeber|ki-news|tutorials)\/[^/]+\/?$/
 
 // Saison nach Datum: Monat (1-12), Tag. Rückgabe [Name, Emoji].
@@ -51,13 +70,34 @@ export default function Herzstuecke() {
             setDeko(s)
         }
 
+        const jetzt = new Date()
+        if (nachts(jetzt)) html.dataset.nacht = 'an'
+
+        // Feiertagsgruß: einmal pro Tag, hat Vorrang vor allen anderen automatischen Meldungen.
+        const fest = feiertag(jetzt)
+        if (fest && lies('aigeddon-feiertag') !== heute()) {
+            schreib('aigeddon-feiertag', heute())
+            setTimeout(() => toast(fest[2], fest[1], true), 800)
+        }
+
         if (!sitzung('aigeddon-besuch')) {
             const anzahl = (lies('aigeddon-besuche', 0) || 0) + 1
             schreib('aigeddon-besuche', anzahl)
-            if (anzahl === 2) setTimeout(() => toast('Schön, dass du wieder da bist!', '👋'), 1500)
+            // Für „Neu seit deinem letzten Besuch“: den vorigen Besuch für diese Sitzung festhalten.
+            try {
+                sessionStorage.setItem('aigeddon-vorher', lies('aigeddon-zuletzt', '') || '')
+            } catch {}
+            schreib('aigeddon-zuletzt', jetzt.toISOString())
+            if (nachts(jetzt)) {
+                setTimeout(() => {
+                    toast('Nachteule! Schön, dass du da bist. Denk dran: Schlaf ist auch ein Produktivitäts-Tool.', '🌙', true)
+                    verleihe('Nachteulen-Abzeichen')
+                }, 1200)
+            }
+            if (anzahl === 2) setTimeout(() => toast('Schön, dass du wieder da bist!', '👋', true), 1500)
             else if ([5, 10, 25, 50, 100].includes(anzahl)) {
                 setTimeout(() => {
-                    toast(`Das ist dein ${anzahl}. Besuch. Danke für deine Treue!`, '🎉')
+                    toast(`Das ist dein ${anzahl}. Besuch. Danke für deine Treue!`, '🎉', true)
                     konfetti(80)
                 }, 1500)
             }
@@ -67,7 +107,7 @@ export default function Herzstuecke() {
                 'font:bold 20px sans-serif;color:#b3164f',
                 'font:13px sans-serif'
             )
-            const pause = setTimeout(() => toast('Du bist seit 25 Minuten hier. Zeit für einen Schluck Wasser und einmal Strecken.', '💧'), 25 * 60 * 1000)
+            const pause = setTimeout(() => toast('Du bist seit 25 Minuten hier. Zeit für einen Schluck Wasser und einmal Strecken.', '💧', true), 25 * 60 * 1000)
             return () => clearTimeout(pause)
         }
     }, [])
@@ -105,37 +145,95 @@ export default function Herzstuecke() {
             besucht.add(bereich)
             schreib('aigeddon-bereiche', [...besucht])
             const neu = ABZEICHEN.find(([n]) => n === besucht.size)
-            if (neu) {
-                const alle = lies('aigeddon-abzeichen', []) || []
-                if (!alle.includes(neu[1])) {
-                    schreib('aigeddon-abzeichen', [...alle, neu[1]])
-                    setTimeout(() => toast(`${neu[1]} verdient: Du hast ${neu[0]} Bereiche von AIGeddon entdeckt!`, neu[2]), 1200)
-                }
-            }
+            if (neu) setTimeout(() => verleihe(neu[1]), 1200)
         }
-        if (!LESESEITEN.test(pfad)) return
+        // Verlauf für die Merkliste: die letzten 8 Seiten. Titel erst nach dem Seitenwechsel lesen.
+        const verlaufTimer = setTimeout(() => {
+            if (pfad.startsWith('/merkliste')) return
+            const titel = document.title.replace(/\s*\|\s*AIGeddon\s*$/, '')
+            const alt = (lies('aigeddon-verlauf', []) || []).filter((v) => v.pfad !== pfad)
+            schreib('aigeddon-verlauf', [{ pfad, titel, zeit: Date.now() }, ...alt].slice(0, 8))
+        }, 600)
+        if (!LESESEITEN.test(pfad)) return () => clearTimeout(verlaufTimer)
         const gelesen = new Set(lies('aigeddon-gelesen', []) || [])
-        if (gelesen.has(pfad)) return
+        if (gelesen.has(pfad)) return () => clearTimeout(verlaufTimer)
         const start = Date.now()
         const scroll = () => {
             const ende = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight * 0.92
             if (ende && Date.now() - start > 30000) {
                 gelesen.add(pfad)
                 schreib('aigeddon-gelesen', [...gelesen])
-                toast(`Respekt, ganz durchgelesen! Das war Artikel Nr. ${gelesen.size} für dich. Kaffee verdient.`, '🏅')
+                if (!verleihe('Leseratten-Abzeichen')) toast(`Respekt, ganz durchgelesen! Das war Artikel Nr. ${gelesen.size} für dich. Kaffee verdient.`, '🏅')
                 window.removeEventListener('scroll', scroll)
             }
         }
         window.addEventListener('scroll', scroll, { passive: true })
-        return () => window.removeEventListener('scroll', scroll)
+        return () => {
+            window.removeEventListener('scroll', scroll)
+            clearTimeout(verlaufTimer)
+        }
     }, [pfad])
+
+    // Klick-Geheimnisse: Logo fünfmal, Moped hupen lassen, Skill-Download feiern.
+    const logoKlicks = useRef([])
+    useEffect(() => {
+        let hupen = 0
+        const klick = (e) => {
+            const ziel = e.target.closest ? e.target : e.target.parentElement
+            if (!ziel) return
+            if (ziel.closest('.brand')) {
+                const jetzt = Date.now()
+                logoKlicks.current = [...logoKlicks.current.filter((t) => jetzt - t < 4000), jetzt]
+                if (logoKlicks.current.length >= 5) {
+                    logoKlicks.current = []
+                    const icon = document.querySelector('.brand-icon')
+                    if (icon && !ruhig()) {
+                        icon.classList.add('logo-wirbel')
+                        setTimeout(() => icon.classList.remove('logo-wirbel'), 1300)
+                    }
+                    if (!verleihe('Atomkern-Abzeichen')) toast('Wusch! Der Atomkern dreht sich für dich.', '☢️')
+                }
+            }
+            if (ziel.closest('.moped-strecke')) {
+                hupen++
+                const strecke = document.querySelector('.moped-strecke')
+                if (strecke && !ruhig()) {
+                    strecke.classList.remove('moped-hupt')
+                    void strecke.offsetWidth
+                    strecke.classList.add('moped-hupt')
+                }
+                toast(['Möp möp!', 'Möööp!', 'Platz da, hier kommt die Liebe!'][(hupen - 1) % 3], '🛵')
+                if (hupen >= 3) verleihe('Hupkonzert-Abzeichen')
+            }
+            const link = ziel.closest('a[href$=".zip"]')
+            if (link && link.getAttribute('href').includes('/skills-dl/')) {
+                if (!verleihe('Skill-Sammler-Abzeichen')) toast('Viel Spaß mit deinem neuen Skill!', '🧩')
+            }
+        }
+        document.addEventListener('click', klick)
+        return () => document.removeEventListener('click', klick)
+    }, [])
 
     // Tastenkürzel: ? zeigt die Hilfe, Buchstaben springen in Bereiche, t nach oben.
     useEffect(() => {
+        let folge = []
+        let wort = ''
         const taste = (e) => {
             if (e.ctrlKey || e.metaKey || e.altKey) return
             const ziel = e.target
             if (ziel.closest && ziel.closest('input, textarea, select, [contenteditable="true"]')) return
+            folge = [...folge, e.key].slice(-KONAMI.length)
+            if (folge.join() === KONAMI.join()) {
+                folge = []
+                konfetti(120)
+                if (!verleihe('Geheimagenten-Abzeichen')) toast('Code erkannt. Du hast es immer noch drauf!', '🎮')
+            }
+            wort = (wort + (e.key.length === 1 ? e.key.toLowerCase() : ' ')).slice(-5)
+            if (wort === 'liebe') {
+                wort = ''
+                herzRegen(window.innerWidth / 2, window.innerHeight / 2, 16)
+                if (!verleihe('Liebesbrief-Abzeichen')) toast('Liebe zurück! Mit Zinsen.', '💘')
+            }
             if (e.key === '?') {
                 e.preventDefault()
                 setHilfe((h) => !h)
@@ -179,6 +277,9 @@ export default function Herzstuecke() {
                                 <kbd>?</kbd> Diese Hilfe ein- und ausblenden
                             </li>
                         </ul>
+                        <p className="kuerzel-geheim">
+                            🤫 Psst: Hier sind ein paar Geheimnisse versteckt. Hinweise stehen im Sammelalbum deiner Merkliste.
+                        </p>
                         <button type="button" className="button button-small" onClick={() => setHilfe(false)}>
                             Alles klar 👍
                         </button>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { feiertag } from '../../lib/herz'
 
 // Kleiner Tagesgruß im Header, je nach Uhrzeit beim Besucher. Erst nach dem Laden, damit nichts flackert.
 const GRUESSE = [
@@ -17,7 +18,8 @@ export default function Gruss() {
     useEffect(() => {
         const h = new Date().getHours()
         const treffer = [...GRUESSE].reverse().find(([ab]) => h >= ab)
-        setText(treffer ? treffer[1] : GRUESSE[GRUESSE.length - 1][1])
+        const fest = feiertag(new Date())
+        setText(fest ? `${fest[0]} ${fest[1]}` : treffer ? treffer[1] : GRUESSE[GRUESSE.length - 1][1])
         const onScroll = () => setOben(window.scrollY < 80)
         onScroll()
         window.addEventListener('scroll', onScroll, { passive: true })

@@ -1,13 +1,26 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
-// Zeigt kleine, freundliche Meldungen unten links. Bleibt fünf Sekunden, lässt sich schließen.
+// Zeigt kleine, freundliche Meldungen. Bleibt sechs Sekunden, lässt sich schließen.
+// Automatische Meldungen (ohne Klick) höchstens eine pro Seitenaufruf, damit es liebevoll bleibt und nicht laut wird.
 export default function ToastHost() {
+    const pfad = usePathname()
     const [liste, setListe] = useState([])
+    const autoZahl = useRef(0)
+
+    useEffect(() => {
+        autoZahl.current = 0
+    }, [pfad])
+
     useEffect(() => {
         let n = 0
         const neu = (e) => {
+            if (e.detail.auto) {
+                if (autoZahl.current >= 1) return
+                autoZahl.current++
+            }
             const id = ++n
             setListe((l) => [...l.slice(-2), { id, ...e.detail }])
             setTimeout(() => setListe((l) => l.filter((t) => t.id !== id)), 6000)
