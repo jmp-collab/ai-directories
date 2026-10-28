@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { getScore, jeanLine } from '../../lib/score'
 import { formatRating, formatVisits, pricingLabel } from '../../utils/i18n-de'
 import konfetti from '../../lib/konfetti'
+import { verleihe } from '../../lib/herz'
 
 const QUESTIONS = [
     {
@@ -58,7 +59,10 @@ export default function Quiz({ options }) {
     const choose = (id, value) => {
         const next = { ...answers, [id]: value }
         setAnswers(next)
-        if (QUESTIONS.every((q) => next[q.id]) && !finished) konfetti()
+        if (QUESTIONS.every((q) => next[q.id]) && !finished) {
+            konfetti()
+            verleihe('Detektiv-Abzeichen')
+        }
     }
 
     return (

@@ -16,6 +16,7 @@ import ToastHost from './components/ToastHost'
 import Herzstuecke from './components/Herzstuecke'
 import SeitenAktionen from './components/SeitenAktionen'
 import FooterExtras from './components/FooterExtras'
+import LeseHelfer from './components/LeseHelfer'
 import JsonLd from './components/JsonLd'
 import { absoluteUrl } from '../lib/site'
 import { getKbRubriken } from '../lib/kb'
@@ -285,6 +286,7 @@ export default function RootLayout({ children }) {
                 <BartModus />
                 <Herzstuecke />
                 <ToastHost />
+                <LeseHelfer />
             </body>
         </html>
     )

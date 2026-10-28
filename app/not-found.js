@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Jean from './components/Jean'
 import { Glueckskeks } from './components/HerzWidgets'
+import { WinkeRoboter } from './components/HerzIcons'
+import { IdeeBox } from './components/HerzBoxen'
 
 const TIPPS = [
     ['/', '🏠 Zur Startseite', 'Alle KI-Verzeichnisse auf einen Blick'],
@@ -15,6 +17,7 @@ export default function NotFound() {
     return (
         <>
             <section className="hero">
+                <WinkeRoboter size={110} className="nf-roboter" />
                 <p className="error-code">
                     4<span className="nf-geist" aria-hidden="true">👻</span>4
                 </p>
@@ -41,6 +44,7 @@ export default function NotFound() {
             <h2>Trostpflaster</h2>
             <p>Wenn schon die Seite fehlt, dann wenigstens ein Glückskeks:</p>
             <Glueckskeks />
+            <IdeeBox />
         </>
     )
 }

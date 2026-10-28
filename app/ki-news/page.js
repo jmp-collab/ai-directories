@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Breadcrumbs, { breadcrumbSchema } from '../components/Breadcrumbs'
 import JsonLd from '../components/JsonLd'
 import Jean from '../components/Jean'
+import NeuSeit from '../components/NeuSeit'
 import { getNews, getFristen, NEWS_STAND } from '../../lib/news'
 import { absoluteUrl } from '../../lib/site'
 import Vernetzt, { seitenPfad } from '../components/Vernetzt'
@@ -52,6 +53,7 @@ function KiNews() {
                 <p className="news-feed">
                     <a href="feed.xml">📡 KI-News als RSS-Feed abonnieren</a>
                 </p>
+                <NeuSeit daten={liste.map((n) => n.veroeffentlicht || n.datum)} />
             </section>
 
             {fristen.length > 0 && (

@@ -45,7 +45,7 @@ const ABSCHNITTE = [
     [
         'Speicherung in deinem Browser',
         [
-            'Einige Werkzeuge merken sich Eingaben nur in deinem eigenen Browser (localStorage oder sessionStorage), zum Beispiel deine Bewertungen im KI-Test, den Fortschritt im Launch-Kit ob ein Hinweis schon angezeigt wurde, deine Merkliste, verschenkte Herzen, Abzeichen, die gewählte Farbe und den Ruhe-Modus. Diese Daten verlassen deinen Browser nicht und lassen sich über die Browser-Einstellungen löschen.',
+            'Einige Werkzeuge merken sich Eingaben nur in deinem eigenen Browser (localStorage oder sessionStorage), zum Beispiel deine Bewertungen im KI-Test, den Fortschritt im Launch-Kit ob ein Hinweis schon angezeigt wurde, deine Merkliste, die zuletzt angesehenen Seiten, wie weit du einen Artikel gelesen hast, den Zeitpunkt deines letzten Besuchs (für den Hinweis auf neue KI-News), verschenkte Herzen, Abzeichen, die gewählte Farbe und den Ruhe-Modus. Diese Daten verlassen deinen Browser nicht und lassen sich über die Browser-Einstellungen löschen.',
         ],
     ],
     [
