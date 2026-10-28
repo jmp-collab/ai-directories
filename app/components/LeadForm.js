@@ -1,0 +1,151 @@
+'use client'
+
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { LEAD_ENDPOINT, CONTACT_EMAIL } from '../../lib/monetization'
+import konfetti from '../../lib/konfetti'
+
+// Lead-Formular für jede Seite. Ohne eigenen Server: FormSubmit leitet die Anfrage per Mail weiter (LEAD_EMAIL).
+// Das Honeypot-Feld _honey fängt einfache Bots ab; die Seite, von der die Anfrage kommt, steht im Betreff.
+export const ANLIEGEN = [
+    ['tool-eintragen', 'Mein KI-Tool in Verzeichnisse eintragen lassen'],
+    ['werbung', 'Werbung oder Featured-Platz auf AIGeddon'],
+    ['beratung', 'Beratung: welche KI-Tools passen zu uns?'],
+    ['tool-vorschlag', 'Tool oder Verzeichnis vorschlagen'],
+    ['fehler', 'Fehler auf der Seite melden'],
+    ['sonstiges', 'Etwas anderes'],
+]
+
+export default function LeadForm({ titel, text, vorauswahl = 'tool-eintragen', id = 'anfrage' }) {
+    const pfad = usePathname() || '/'
+    const [status, setStatus] = useState('bereit')
+    const [fehler, setFehler] = useState('')
+    const [anliegen, setAnliegen] = useState(vorauswahl)
+
+    // Links wie #anfrage-werbung springen zum Formular und wählen das Anliegen vor.
+    useEffect(() => {
+        const aus = () => {
+            const m = window.location.hash.match(new RegExp(`^#${id}-([a-z-]+)$`))
+            if (m && ANLIEGEN.some(([k]) => k === m[1])) {
+                setAnliegen(m[1])
+                setStatus('bereit')
+                document.getElementById(id)?.scrollIntoView({ block: 'start' })
+                document.getElementById(`${id}-email`)?.focus({ preventScroll: true })
+            }
+        }
+        aus()
+        window.addEventListener('hashchange', aus)
+        return () => window.removeEventListener('hashchange', aus)
+    }, [id])
+
+    async function senden(e) {
+        e.preventDefault()
+        const form = e.currentTarget
+        const daten = Object.fromEntries(new FormData(form).entries())
+        if (daten._honey) return
+        const anliegen = ANLIEGEN.find(([k]) => k === daten.anliegen)?.[1] || daten.anliegen
+        setStatus('sendet')
+        setFehler('')
+        try {
+            const r = await fetch(LEAD_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                body: JSON.stringify({
+                    name: daten.name || '(ohne Namen)',
+                    email: daten.email,
+                    anliegen,
+                    website: daten.website || '',
+                    nachricht: daten.nachricht || '',
+                    seite: window.location.href,
+                    _subject: `AIGeddon-Anfrage: ${anliegen} (${pfad})`,
+                    _replyto: daten.email,
+                    _template: 'table',
+                    _captcha: 'false',
+                }),
+            })
+            const antwort = await r.json().catch(() => ({}))
+            if (!r.ok || antwort.success === false || antwort.success === 'false') throw new Error(antwort.message || `Status ${r.status}`)
+            setStatus('gesendet')
+            konfetti(70)
+            form.reset()
+            setAnliegen(vorauswahl)
+        } catch (err) {
+            setStatus('fehler')
+            setFehler(err.message)
+        }
+    }
+
+    if (status === 'gesendet')
+        return (
+            <section className="leadform leadform-danke" id={id} aria-live="polite">
+                <p className="leadform-titel">Danke, ist angekommen! 🎉</p>
+                <p>Jean meldet sich in der Regel innerhalb von zwei Werktagen per Mail bei dir. Bis dahin: Kaffee trinken, Tool weiterbauen.</p>
+                <button type="button" className="button button-small" onClick={() => setStatus('bereit')}>
+                    Noch eine Anfrage schicken
+                </button>
+            </section>
+        )
+
+    return (
+        <section className="leadform" id={id} aria-labelledby={`${id}-titel`}>
+            <div className="leadform-kopf">
+                <p className="leadform-titel" id={`${id}-titel`}>
+                    {titel || 'Frag Jean direkt ✉️'}
+                </p>
+                <p>{text || 'Tool eintragen lassen, Werbung buchen, KI-Beratung oder einfach eine Frage: Schreib kurz, worum es geht. Antwort kommt persönlich, nicht vom Bot.'}</p>
+            </div>
+            <form className="leadform-form" onSubmit={senden}>
+                <label>
+                    <span>Worum geht es?</span>
+                    <select name="anliegen" value={anliegen} onChange={(e) => setAnliegen(e.target.value)} id={`${id}-anliegen`}>
+                        {ANLIEGEN.map(([k, label]) => (
+                            <option key={k} value={k}>
+                                {label}
+                            </option>
+                        ))}
+                    </select>
+                </label>
+                <div className="leadform-zeile">
+                    <label>
+                        <span>Dein Name</span>
+                        <input name="name" type="text" autoComplete="name" id={`${id}-name`} placeholder="Ada Lovelace" />
+                    </label>
+                    <label>
+                        <span>
+                            E-Mail <b aria-hidden="true">*</b>
+                        </span>
+                        <input name="email" type="email" required autoComplete="email" id={`${id}-email`} placeholder="du@firma.de" />
+                    </label>
+                </div>
+                <label>
+                    <span>Website oder Tool (optional)</span>
+                    <input name="website" type="text" inputMode="url" id={`${id}-website`} placeholder="https://dein-tool.de" />
+                </label>
+                <label>
+                    <span>Nachricht</span>
+                    <textarea name="nachricht" rows="3" id={`${id}-nachricht`} placeholder="Kurz und knackig reicht völlig." />
+                </label>
+                <label className="leadform-honig" aria-hidden="true">
+                    Bitte leer lassen
+                    <input type="text" name="_honey" tabIndex={-1} autoComplete="off" id={`${id}-honig`} />
+                </label>
+                <label className="leadform-check">
+                    <input type="checkbox" name="einwilligung" required id={`${id}-einwilligung`} />
+                    <span>
+                        Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage per Mail an Jean übermittelt werden (Details in der{' '}
+                        <Link href="/datenschutz">Datenschutzerklärung</Link>).
+                    </span>
+                </label>
+                <button type="submit" className="button" disabled={status === 'sendet'}>
+                    {status === 'sendet' ? 'Wird gesendet …' : 'Anfrage abschicken →'}
+                </button>
+                {status === 'fehler' && (
+                    <p className="leadform-fehler" role="alert">
+                        Das hat nicht geklappt ({fehler}). Bitte versuch es gleich noch einmal oder schreib direkt an <span className="leadform-adresse">{CONTACT_EMAIL}</span>.
+                    </p>
+                )}
+            </form>
+        </section>
+    )
+}

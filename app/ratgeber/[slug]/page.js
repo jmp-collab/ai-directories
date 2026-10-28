@@ -1,0 +1,155 @@
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import Breadcrumbs, { breadcrumbSchema } from '../../components/Breadcrumbs'
+import JsonLd from '../../components/JsonLd'
+import Jean from '../../components/Jean'
+import GlossarText from '../../components/GlossarText'
+import Faq, { faqSchema } from '../../components/Faq'
+import { ARTIKEL, getArtikel } from '../../../lib/ratgeber'
+import { absoluteUrl } from '../../../lib/site'
+import { autorRef } from '../../../lib/autor'
+import Pruefer from '../../components/Pruefer'
+import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
+
+export const dynamicParams = false
+
+export function generateStaticParams() {
+    return ARTIKEL.map((a) => ({ slug: a.slug }))
+}
+
+export function generateMetadata({ params }) {
+    const a = getArtikel(params.slug)
+    if (!a) return {}
+    return {
+        title: a.seoTitle || a.title,
+        description: a.description,
+        alternates: { canonical: `/ratgeber/${a.slug}` },
+        openGraph: { url: `/ratgeber/${a.slug}`, type: 'article' },
+    }
+}
+
+const slugId = (h) =>
+    h
+        .toLowerCase()
+        .replace(/[äöüß]/g, (c) => ({ ä: 'ae', ö: 'oe', ü: 'ue', ß: 'ss' })[c])
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '')
+
+function ArtikelPage({ params }) {
+    const a = getArtikel(params.slug)
+    if (!a) notFound()
+    const crumbs = [
+        { name: 'AIGeddon', path: '/' },
+        { name: 'Ratgeber', path: '/ratgeber' },
+        { name: a.title, path: `/ratgeber/${a.slug}` },
+    ]
+    const schema = [
+        breadcrumbSchema(crumbs),
+        {
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: a.title,
+            description: a.description,
+            inLanguage: 'de-DE',
+            url: absoluteUrl(`/ratgeber/${a.slug}`),
+            author: autorRef(),
+            image: absoluteUrl('/ratgeber/opengraph-image.png'),
+            ...(a.geprueft ? { dateModified: a.geprueft } : {}),
+            ...(a.quellen ? { citation: a.quellen.map((q) => q.url) } : {}),
+        },
+    ]
+    if (a.faq) schema.push(faqSchema(a.faq))
+    const others = ARTIKEL.filter((x) => x.slug !== a.slug)
+    const gesehen = new Set()
+    return (
+        <article>
+            <JsonLd data={schema} />
+            <Breadcrumbs items={crumbs} />
+            <header className="hero">
+                <p className="eyebrow">
+                    <span aria-hidden="true">{'☕'.repeat(Math.max(1, Math.round(a.minutes / 4)))}</span> {a.minutes} Minuten Lesezeit{a.geprueft ? ` · geprüft am ${new Date(a.geprueft).toLocaleDateString('de-DE')}` : ''}
+                </p>
+                <h1>{a.title}</h1>
+                <p className="lead">{a.description}</p>
+                <Jean>{a.jean}</Jean>
+            </header>
+            <nav aria-label="Inhalt" className="toc">
+                <strong>Inhalt</strong>
+                <ol>
+                    {a.sections.map((s) => (
+                        <li key={s.h}>
+                            <a href={`#${slugId(s.h)}`}>{s.h}</a>
+                        </li>
+                    ))}
+                </ol>
+            </nav>
+            <div className="prose">
+                {a.sections.map((s) => (
+                    <section key={s.h} aria-labelledby={slugId(s.h)}>
+                        <h2 id={slugId(s.h)}>{s.h}</h2>
+                        {s.p.map((p) => (
+                            <p key={p.slice(0, 40)}>
+                                <GlossarText text={p} gesehen={gesehen} />
+                            </p>
+                        ))}
+                    </section>
+                ))}
+            </div>
+            {a.quellen && (
+                <section aria-labelledby="quellen" className="quellen-block">
+                    <h2 id="quellen">Quellen und Stand 🔎</h2>
+                    <p>
+                        {a.geprueft ? `Alle Angaben zu Regeln, Preisen und Funktionen wurden am ${new Date(a.geprueft).toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' })} mit diesen Quellen abgeglichen. ` : ''}
+                        Zahlen zur Verzeichnisliste stammen aus der eigenen AIGeddon-Datenbank.
+                    </p>
+                    <ul className="quellen">
+                        {a.quellen.map((q) => (
+                            <li key={q.url}>
+                                <a href={q.url} rel="noopener nofollow" target="_blank">
+                                    {q.titel}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            )}
+            <Pruefer datum={a.geprueft} />
+            {a.faq && (
+                <section aria-labelledby="faq">
+                    <h2 id="faq">Häufige Fragen 🙋</h2>
+                    <Faq items={a.faq} />
+                </section>
+            )}
+            <section aria-labelledby="weiter">
+                <h2 id="weiter">Weiterlesen und loslegen</h2>
+                <ul className="quick-links">
+                    {(a.links || []).map(([href, label]) => (
+                        <li key={href}>
+                            <Link href={href}>{label} →</Link>
+                        </li>
+                    ))}
+                    {others.map((o) => (
+                        <li key={o.slug}>
+                            <Link href={`/ratgeber/${o.slug}`}>{o.title} →</Link>
+                        </li>
+                    ))}
+                    <li>
+                        <Link href="/launch-kit">Launch-Kit öffnen →</Link>
+                    </li>
+                    <li>
+                        <Link href="/">Zu allen KI-Verzeichnissen →</Link>
+                    </li>
+                </ul>
+            </section>
+        </article>
+    )
+}
+
+export default function Seite({ params }) {
+    return (
+        <>
+            <ArtikelPage params={params} />
+            <Vernetzt pfad={seitenPfad('/ratgeber/[slug]', params)} />
+        </>
+    )
+}

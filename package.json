@@ -1,0 +1,30 @@
+{
+  "name": "ai-directories",
+  "author": "Jean Maurice Port",
+  "description": "KI-Verzeichnisse: deutsche Liste der AI Directories mit Website, JSON-API und llms.txt",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "update-db": "ts-node utils/db/update-db.js",
+    "update-readme": "ts-node utils/readme/update-readme.js",
+    "partners": "node utils/partners/render.js",
+    "kb:import": "node utils/kb/import.js"
+  },
+  "dependencies": {
+    "eslint": "^8.56.0",
+    "next": "^14.2.4",
+    "prettier": "^3.2.2",
+    "react": "^18",
+    "react-dom": "^18",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  }
+}

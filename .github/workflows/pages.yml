@@ -1,0 +1,73 @@
+# Statische Fassung der Seite auf GitHub Pages: https://jmp-collab.github.io/ai-directories/
+# Einmalig nötig: Settings → Pages → Source „GitHub Actions“.
+name: GitHub Pages
+
+on:
+    push:
+        branches: [main]
+    # Täglicher Neubau: Deal und Tool des Tages wechseln, Datumsangaben bleiben frisch.
+    schedule:
+        - cron: '17 4 * * *'
+    workflow_dispatch:
+
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+concurrency:
+    group: pages
+    cancel-in-progress: true
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        env:
+            STATIC_EXPORT: '1'
+            BASE_PATH: /ai-directories
+            NEXT_PUBLIC_SITE_URL: https://jmp-collab.github.io/ai-directories
+            # Optional als Repository-Variablen setzen (Settings > Secrets and variables > Actions > Variables)
+            NEXT_PUBLIC_GSC_VERIFICATION: ${{ vars.GSC_VERIFICATION }}
+            NEXT_PUBLIC_LEAD_EMAIL: ${{ vars.LEAD_EMAIL }}
+            NEXT_PUBLIC_LEAD_ALIAS: ${{ vars.LEAD_ALIAS }}
+        steps:
+            # Volle Historie, damit die Sitemap echte Änderungsdaten aus Git lesen kann (lib/stand.js)
+            - uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+                  cache: npm
+            - run: npm ci
+            # Partner-Register prüfen: falscher Slug oder kaputter Link bricht den Build ab
+            - run: npm run partners
+            # Next.js 14 kann Vorschaubilder unter [slug] nicht statisch exportieren;
+            # die Detailseiten nutzen in dieser Fassung das allgemeine Vorschaubild.
+            - run: rm "app/verzeichnis/[slug]/opengraph-image.js"
+            - run: npx next build
+            # Interne Verlinkung aus den fertigen Seiten neu berechnen; hat sich das Netz geändert
+            # (neue Seiten, neue Inhalte), noch einmal bauen, damit „Passt dazu“ aktuell ist.
+            - id: netz
+              run: |
+                  cp db/vernetzung.json "$RUNNER_TEMP/netz-alt.json"
+                  node utils/vernetzung/build.mjs out
+                  if cmp -s db/vernetzung.json "$RUNNER_TEMP/netz-alt.json"; then echo "neu=0" >> "$GITHUB_OUTPUT"; else echo "neu=1" >> "$GITHUB_OUTPUT"; fi
+            - if: steps.netz.outputs.neu == '1'
+              run: npx next build
+            # Vorschaubilder als .png und doppelten basePath in og:image korrigieren
+            - run: node utils/export/fix-og.js
+            - run: touch out/.nojekyll
+            - uses: actions/upload-pages-artifact@v3
+              with:
+                  path: out
+
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        steps:
+            - id: deployment
+              uses: actions/deploy-pages@v4

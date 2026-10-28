@@ -1,0 +1,470 @@
+{
+ "alt-texte": {
+  "intro": "Auf deiner Seite sind 30 Bilder, und bei allen steht als Alt-Text „IMG_4711“ oder gar nichts. Dieser Prompt schreibt kurze, beschreibende Alt-Texte, die sagen, was zu sehen ist, und markiert rein dekorative Bilder. Das hilft Menschen mit Screenreader und der Bildersuche, ohne dass du Keywords reinstopfen musst.",
+  "tipp": "Beschreib bei „bilder“ jedes Bild kurz selbst, mit Farbe, Gegenstand und Situation, denn die KI sieht deine Bilder nur, wenn du sie hochlädst. Prüf, ob der Alt-Text auch ohne Bild Sinn ergibt, wenn du ihn laut vorliest.",
+  "fehler": "Das Keyword in jeden Alt-Text pressen, auch wenn es mit dem Bild nichts zu tun hat.",
+  "jean": "Alt-Text ist für Menschen, die das Bild nicht sehen. Schreib für sie."
+ },
+ "angebot-schreiben": {
+  "intro": "Der Kunde wartet auf dein Angebot, und du bastelst seit einer Stunde an einem Word-Dokument, das irgendwie unprofessionell aussieht. Dieser Prompt baut ein klares Angebot mit Ausgangslage in Kundenworten, Leistungsumfang, Ausschlüssen, Preis und nächstem Schritt. Nur deine Preise und Leistungen landen drin.",
+  "tipp": "Schreib bei „kunde“ die Sätze auf, die der Kunde im Gespräch selbst gesagt hat, denn die Ausgangslage in seinen Worten überzeugt am meisten. Nimm den Abschnitt „was nicht enthalten ist“ ernst, er erspart dir später Diskussionen.",
+  "fehler": "Nicht festhalten, was nicht im Preis enthalten ist, und dann über Zusatzwünsche streiten.",
+  "jean": "Was nicht im Angebot steht, wird später kostenlos erwartet."
+ },
+ "anschreiben-bewerbung": {
+  "intro": "Die Traumstelle ist gefunden, nur dein Anschreiben beginnt mit „hiermit bewerbe ich mich“, wie bei allen anderen 80 Bewerbern. Dieser Prompt fragt nach, verknüpft je eine Anforderung mit einem echten Ergebnis aus deiner Erfahrung und streicht am Ende die Floskeln. Raus kommt ein Text, der nach dir klingt.",
+  "tipp": "Füg bei „stelle“ die komplette Anzeige ein und bei „erfahrung“ konkrete Ergebnisse mit Zahlen, die du belegen kannst. Lies das Ergebnis laut: Wenn du einen Satz im Gespräch nicht so sagen würdest, schreib ihn um.",
+  "fehler": "Ein Anschreiben für zehn Stellen verwenden und nur den Firmennamen austauschen.",
+  "jean": "Personaler riechen Serienbriefe. Schreib für genau diese eine Stelle."
+ },
+ "arbeitszeugnis-entschluesseln": {
+  "intro": "Im Zeugnis steht „Er bemühte sich stets“ und du fragst dich, ob das ein Lob oder eine versteckte Ohrfeige ist. Dieser Prompt ordnet jede Formulierung in einer Tabelle ein und achtet auf fehlende Standardsätze und die Schlussformel. Am Ende gibt es eine Gesamteinschätzung, ausdrücklich ohne Rechtsberatung.",
+  "tipp": "Füg das komplette Zeugnis ein, inklusive Schlusssatz, denn gerade fehlende Dank- und Wünsche-Formeln sagen viel. Wenn die Einschätzung kritisch ausfällt, lass die Stellen von einer Fachanwältin oder Gewerkschaft prüfen.",
+  "fehler": "Nur einzelne Sätze prüfen und dabei übersehen, was im Zeugnis fehlt.",
+  "jean": "Im Zeugnis zählt auch, was nicht drinsteht."
+ },
+ "automatisierung-planen": {
+  "intro": "Du kopierst jeden Montag Bestellungen aus Mails in eine Tabelle und denkst dir jedes Mal: Das muss doch automatisch gehen. Dieser Prompt zerlegt den Ablauf in Auslöser, Schritte und Bedingungen, so wie er in Make, Zapier oder n8n aussehen würde. Fehlerfälle und eine grobe Kostenschätzung bekommst du gleich mit.",
+  "tipp": "Beschreib bei „aufgabe“ den Ablauf so, wie du ihn heute wirklich klickst, Schritt für Schritt, inklusive der Ausnahmen. Prüf die Kostenschätzung danach selbst auf der Preisseite des Tools, denn sie ist ausdrücklich nur eine Annahme.",
+  "fehler": "Den chaotischen Ablauf eins zu eins automatisieren, statt ihn vorher zu vereinfachen.",
+  "jean": "Automatisier keinen Murks. Sonst hast du schnelleren Murks."
+ },
+ "avatar-video-skript": {
+  "intro": "Ein KI-Avatar soll dein Erklärvideo sprechen, aber dein Text klingt vorgelesen wie eine Behördenmitteilung. Dieser Prompt schreibt kurze, gesprochene Sätze und schreibt Zahlen so, wie man sie sagt. Du bekommst eine Szenentabelle mit Bildideen und eine Liste von Wörtern, deren Aussprache du im Tool prüfen solltest.",
+  "tipp": "Gib bei „zielgruppe“ an, wie viel Vorwissen die Zuschauer haben, dann passt der Wortschatz. Hör dir die Vorschau im Avatar-Tool zuerst bei den markierten Wörtern an und schreib sie notfalls lautmalerisch um.",
+  "fehler": "Einen Lesetext mit Schachtelsätzen einsprechen lassen und sich über die Roboterstimme wundern.",
+  "jean": "Schreib, wie du sprichst. Der Avatar kann es nicht besser."
+ },
+ "bild-prompt-generator": {
+  "intro": "Im Kopf ist das Bild glasklar, du tippst es in den Generator und bekommst etwas, das aussieht wie ein Albtraum aus einem Möbelkatalog. Dieser Prompt übersetzt deine Idee in drei präzise Varianten mit Motiv, Stil, Licht, Perspektive und Seitenverhältnis. Du siehst sofort, welche Richtung zu deinem Zweck passt.",
+  "tipp": "Schreib bei „verwendung“ das Ziel samt Format, etwa „Blog-Header 16:9 mit Platz für Text links“. Ändere danach immer nur ein Detail pro Durchgang, sonst weißt du nicht, was das Bild verbessert hat.",
+  "fehler": "Fünf Stile in einen Prompt packen und sich über ein unentschlossenes Bild wundern.",
+  "jean": "Sag dem Generator, wo das Licht herkommt. Er rät sonst."
+ },
+ "blogartikel-gliederung": {
+  "intro": "Du willst über ein Thema schreiben, das schon 200 andere Seiten abdecken, und fragst dich, wie deiner überhaupt auffallen soll. Dieser Prompt stellt erst Rückfragen, baut dann eine Gliederung mit H2 und H3 und zeigt dir, an welcher Stelle deine eigene Erfahrung hingehört. Das ist der Teil, den die Konkurrenz nicht kopieren kann.",
+  "tipp": "Steck die meiste Mühe ins Feld „erfahrung“: ein konkreter Fall, ein Fehler, eine Zahl aus deinem Alltag. Beantworte die Rückfragen ausführlich, statt sie abzunicken, denn genau daraus entsteht die Gliederung.",
+  "fehler": "Eine Gliederung abschreiben, die einfach die Top-3-Ergebnisse zusammenmischt und nichts Eigenes enthält.",
+  "jean": "Ohne deine Erfahrung ist es nur der 201. Artikel zum Thema."
+ },
+ "code-erklaeren": {
+  "intro": "Du erbst ein Skript vom Kollegen, der inzwischen woanders arbeitet, und keiner traut sich, es anzufassen. Dieser Prompt erklärt Zweck und Ablauf auf deinem Niveau, nennt Risiken wie leere Eingaben oder Sicherheitslücken und schlägt eine kommentierte Fassung vor. Danach weißt du wenigstens, was du da anfasst.",
+  "tipp": "Gib bei „niveau“ ehrlich an, was du kannst, etwa „kann HTML, kein JavaScript“, dann bleibt die Erklärung verständlich. Entferne Passwörter und API-Schlüssel aus dem Code, bevor du ihn einfügst.",
+  "fehler": "Die verbesserte Fassung ungetestet in die Produktion kopieren.",
+  "jean": "Erst verstehen, dann umbauen. Wie beim Motor."
+ },
+ "content-briefing": {
+  "intro": "Du lässt einen Artikel von einer Autorin schreiben und bekommst etwas, das am Thema vorbeigeht, weil dein Briefing aus einem Keyword bestand. Dieser Prompt baut ein Briefing mit Suchintention, Gliederung, Pflichtfragen, verwandten Begriffen und internen Links. Dazu steht drin, was den Artikel besser als die Konkurrenz machen soll.",
+  "tipp": "Füll „seiten“ mit echten URLs deiner Website, sonst bekommst du Linkvorschläge ins Leere. Ergänze vor dem Versand einen Satz zu eigenen Daten oder Beispielen, die nur ihr habt.",
+  "fehler": "Ein Briefing ohne Suchintention verschicken und dann den falschen Artikeltyp zurückbekommen.",
+  "jean": "Ein schlechtes Briefing kostet dich zwei Korrekturschleifen."
+ },
+ "content-refresh": {
+  "intro": "Dein alter Artikel hat früher gut gerankt und rutscht jetzt langsam nach unten, weil Jahreszahlen und Produktnamen nicht mehr stimmen. Dieser Prompt markiert veraltete Aussagen, findet unbeantwortete Fragen und schlägt eine neue Gliederung mit behalten, kürzen und neu schreiben vor. Dazu gibt es neuen Title und Description.",
+  "tipp": "Gib den kompletten Artikeltext ein, nicht nur die Überschriften, damit wirklich jede veraltete Stelle gefunden wird. Prüf jede [PRÜFEN]-Markierung mit einer aktuellen Quelle, bevor du das neue Datum drüberschreibst.",
+  "fehler": "Nur das Datum aktualisieren, ohne am Inhalt etwas zu ändern.",
+  "jean": "Ein neues Datum auf altem Inhalt ist wie Politur auf Rost."
+ },
+ "daten-bereinigen": {
+  "intro": "In deiner Kundenliste stehen „Müller“, „mueller“ und „MÜLLER“, Datumsangaben in drei Formaten und Dubletten ohne Ende. Dieser Prompt erkennt die Probleme an Beispielzeilen, gibt dir pro Problem eine Formel oder einen Menüweg und schlägt eine sinnvolle Reihenfolge vor. So bearbeitest du nichts doppelt.",
+  "tipp": "Kopier bei „beispiel“ gezielt die schlimmsten Zeilen rein, nicht nur die ordentlichen ersten zehn. Arbeite immer in einer Kopie der Tabelle, bevor du Dubletten löschst.",
+  "fehler": "Dubletten löschen, bevor die Schreibweisen vereinheitlicht sind, sodass die Hälfte übrig bleibt.",
+  "jean": "Erst sortieren, dann wegwerfen. Wie beim Umzug."
+ },
+ "einfach-erklaeren": {
+  "intro": "Jemand sagt „Inflation“, „Blockchain“ oder „Zinseszins“ und du nickst, obwohl du es nicht wirklich erklären könntest. Dieser Prompt erklärt dir das Thema in fünf kurzen Sätzen, mit Alltagsvergleich und drei Fachbegriffen. Danach stellt er dir eine Frage, damit du merkst, ob es wirklich angekommen ist.",
+  "tipp": "Formuliere „thema“ so eng wie möglich, etwa „Wie funktioniert ein Zinseszins beim Sparen“ statt nur „Finanzen“. Beantworte die Prüffrage ehrlich in eigenen Worten, auch wenn es holpert, denn genau da zeigt sich die Lücke.",
+  "fehler": "Die Erklärung lesen, nicken und die Kontrollfrage überspringen.",
+  "jean": "Wenn du es deiner Nichte erklären kannst, hast du es verstanden."
+ },
+ "elternbrief": {
+  "intro": "Der Wandertag steht an, und du musst zwanzig Familien erklären, wann, wo, was mitbringen und wer abholt. Dieser Prompt schreibt einen freundlichen, kurzen Elternbrief mit Termin- und Mitbringliste, einmal normal und einmal in einfacher Sprache. Platzhalter für Namen und Unterschrift sind schon drin.",
+  "tipp": "Pack in „infos“ alle Uhrzeiten, Orte und Kosten als Stichpunkte, denn genau danach fragen Eltern später nach. Gib die Fassung in einfacher Sprache auch Familien, die gut Deutsch können, oft ist sie einfach schneller gelesen.",
+  "fehler": "Die wichtigste Info, etwa die Abholzeit, mitten in einem langen Absatz verstecken.",
+  "jean": "Wenn keiner nachfragen muss, war der Brief gut."
+ },
+ "email-antwort": {
+  "intro": "In deinem Postfach liegen 40 Mails und auf jede willst du nur kurz, freundlich und klar antworten. Dieser Prompt nimmt die Mail und deine Stichpunkte und liefert eine sehr kurze und eine etwas ausführlichere Variante, mit Betreff, Anrede und Gruß. Floskeln wie „Ich hoffe, es geht Ihnen gut“ bleiben draußen.",
+  "tipp": "Schreib bei „antwort“ nur die Kerninfo in Stichpunkten, etwa „Termin Dienstag passt, Unterlagen bis Freitag“. Nimm bei Kollegen meist die kurze Variante, bei neuen Kunden die längere.",
+  "fehler": "Die eigentliche Antwort hinter Höflichkeitsfloskeln verstecken, bis der Empfänger sie suchen muss.",
+  "jean": "Drei klare Sätze schlagen drei höfliche Absätze."
+ },
+ "excel-formel": {
+  "intro": "Du sitzt vor einer Tabelle, weißt genau, was rauskommen soll, aber die Formel dafür versteckt sich hinter SVERWEIS, WENN und drei Klammern zu viel. Dieser Prompt baut dir die Formel passend zu Programm und Sprache, erklärt jeden Teil und zeigt, was bei leeren Zellen passiert.",
+  "tipp": "Beschreib bei „aufbau“ die Spalten mit Buchstaben und einem Beispielwert, etwa „A: Datum 01.03.2025, B: Umsatz 120“. Gib bei „programm“ auch die Sprache an, denn deutsches Excel will Semikolon und WENN statt IF.",
+  "fehler": "Englische Funktionsnamen in ein deutsches Excel kopieren und dann stundenlang den Fehler suchen.",
+  "jean": "Klammern zählen ist keine Kernkompetenz. Lass das die KI machen."
+ },
+ "faktencheck": {
+  "intro": "Der Text ist fertig und soll morgen raus, aber irgendwo stecken bestimmt eine falsche Zahl und ein verdrehter Name. Dieser Prompt listet jede überprüfbare Aussage auf, bewertet sie als plausibel, fraglich oder vermutlich falsch und sagt dir, wo du sie prüfen kannst. Du bekommst eine Checkliste statt eines Bauchgefühls.",
+  "tipp": "Fang bei der Tabelle mit den Zeilen „vermutlich falsch“ und „fraglich“ an und prüf danach Zahlen, die besonders überraschend klingen. Lass den Prompt nach deinen Korrekturen ein zweites Mal laufen.",
+  "fehler": "Die Einschätzung „plausibel“ für bestätigt halten und nicht mehr selbst nachschauen.",
+  "jean": "Plausibel ist nicht wahr. Es ist nur nicht offensichtlich falsch."
+ },
+ "faq-aus-suchfragen": {
+  "intro": "Vor dir liegt eine Liste mit Fragen aus der Suche, aus Foren oder dem Kundenservice, und daraus soll ein FAQ-Abschnitt werden. Dieser Prompt fasst Doppeltes zusammen, ordnet logisch und beantwortet jede Frage direkt im ersten Satz. Fachliche Aussagen, die du prüfen solltest, sind markiert.",
+  "tipp": "Sammel die Fragen in „fragen“ aus echten Quellen, etwa „Ähnliche Fragen“ in Google, deinem Postfach oder Foren, und lass die Original-Formulierung stehen. Prüf jede [PRÜFEN]-Stelle, bevor der Block online geht.",
+  "fehler": "Antworten mit Einleitung beginnen, statt die Frage im ersten Satz direkt zu beantworten.",
+  "jean": "Die Antwort gehört in den ersten Satz. Nicht in den dritten."
+ },
+ "feedback-formulieren": {
+  "intro": "Ein Kollege liefert immer wieder zu spät, und du willst es ansprechen, ohne dass das Gespräch in Vorwürfen endet. Dieser Prompt formuliert Feedback nach Beobachtung, Wirkung, Wunsch und Frage, einmal für das Gespräch und einmal als kurze Nachricht. Dazu kommen zwei Fragen, mit denen du die andere Sicht erfährst.",
+  "tipp": "Beschreib bei „situation“ ein konkretes Ereignis mit Datum statt eines allgemeinen Musters, etwa „Bericht kam Freitag statt Mittwoch“. Stell die beiden Fragen am Ende wirklich und hör zu, bevor du Lösungen vorschlägst.",
+  "fehler": "Mit „Du machst immer“ anfangen und damit sofort eine Verteidigung auslösen.",
+  "jean": "„Immer“ und „nie“ sind die Lieblingswörter jedes Streits."
+ },
+ "fehlermeldung-debuggen": {
+  "intro": "Rote Fehlermeldung im Terminal, du kopierst sie in die Suche und findest fünf Foren-Threads von 2014. Dieser Prompt erklärt die Meldung in einfachen Worten, nennt die drei wahrscheinlichsten Ursachen und gibt dir zu jeder einen Prüfschritt und eine Lösung. Fehlen Infos, sagt er dir genau, welche.",
+  "tipp": "Kopier die komplette Fehlermeldung samt Stacktrace, nicht nur die letzte Zeile, und gib bei „umgebung“ Version und Betriebssystem an. Arbeite die Ursachen in der genannten Reihenfolge ab und meld zurück, was der Prüfschritt ergeben hat.",
+  "fehler": "Fünf Lösungen gleichzeitig ausprobieren und am Ende nicht wissen, welche den Fehler behoben hat.",
+  "jean": "Eine Fehlermeldung ist ein Hinweis, kein Urteil. Lies sie ganz."
+ },
+ "gehaltsverhandlung": {
+  "intro": "Das Gespräch mit der Chefin steht im Kalender, und dein bestes Argument ist bisher „alles wird teurer“. Dieser Prompt macht aus deinen Erfolgen drei Argumente mit Nutzen für das Unternehmen, liefert einen Einstieg und Antworten auf typische Einwände. Plan B mit Alternativen zum Geld bekommst du gleich dazu.",
+  "tipp": "Schreib in „erfolge“ Ergebnisse mit Zahlen oder Beispielen, die deine Chefin kennt, etwa ein gerettetes Projekt. Hol dir die Gehaltsdaten aus den genannten Quellen, bevor du „wunsch“ festlegst, und übe den Einstieg laut.",
+  "fehler": "Mit privaten Gründen argumentieren statt mit dem Wert der eigenen Arbeit.",
+  "jean": "Deine Miete ist kein Argument. Dein Ergebnis schon."
+ },
+ "hausarbeit-gliederung": {
+  "intro": "Abgabe in sechs Wochen, Thema steht, aber die Gliederung ist noch ein leeres Word-Dokument mit „1. Einleitung“. Dieser Prompt schlägt drei Forschungsfragen vor, die zum Umfang passen, baut zur besten eine Gliederung mit Seitenanteilen und Leitfragen. Dazu sagt er dir, welche Arten von Quellen du suchen solltest.",
+  "tipp": "Gib bei „umfang“ Seitenzahl und Art der Arbeit an, etwa „Hausarbeit, 15 Seiten, Bachelor“, dann wird die Forschungsfrage nicht zu groß. Zeig die Gliederung deinem Dozenten in der Sprechstunde, bevor du losschreibst.",
+  "fehler": "Eine Forschungsfrage wählen, für die man eine Doktorarbeit bräuchte.",
+  "jean": "Eine enge Frage ist kein Mangel. Sie ist dein Rettungsring."
+ },
+ "heikle-email": {
+  "intro": "Du musst einem Kunden eine Absage schreiben, einen Kollegen kritisieren oder zum dritten Mal eine Rechnung anmahnen, und jeder Entwurf klingt entweder zu weich oder zu bissig. Dieser Prompt liefert zwei Varianten mit klarem Anliegen, Verständnis und Frist. Danach prüft er selbst, welche Sätze vorwurfsvoll wirken.",
+  "tipp": "Füg deinen eigenen, ruhig wütenden Entwurf bei „entwurf“ ein, denn daraus erkennt die KI, worum es dir wirklich geht. Schick die Mail nicht sofort, sondern lies sie nach einer Pause noch einmal.",
+  "fehler": "Das eigentliche Anliegen im dritten Absatz verstecken, damit es freundlicher wirkt.",
+  "jean": "Freundlich im Ton, klar in der Sache. Beides geht."
+ },
+ "instagram-caption": {
+  "intro": "Das Foto ist im Kasten, aber die Caption besteht bisher aus drei Emojis und „Neue Woche, neues Glück“. Dieser Prompt schreibt dir drei Varianten in unterschiedlichen Tonlagen, jeweils mit Hook für die abgeschnittene erste Zeile, Handlungsaufforderung und einem Mix aus großen und kleinen Hashtags.",
+  "tipp": "Beschreib bei „motiv“ auch, was man nicht sieht, etwa die Geschichte hinter dem Foto, denn daraus entsteht die erzählende Variante. Prüf die vorgeschlagenen Nischen-Hashtags kurz in der App, ob dort wirklich deine Zielgruppe unterwegs ist.",
+  "fehler": "Die wichtigste Info in Zeile drei verstecken, wo sie hinter „mehr“ verschwindet.",
+  "jean": "Die erste Zeile entscheidet, ob jemand auf „mehr“ tippt."
+ },
+ "interne-verlinkung": {
+  "intro": "Deine Website hat 40 Seiten, aber die wichtigste bekommt kaum interne Links, weil jeder Link nach Gefühl gesetzt wurde. Dieser Prompt ordnet die Seiten in Pillar und unterstützende Seiten, schlägt Links mit natürlichen Ankertexten vor und nennt Themen, die noch fehlen. Alles landet in einer Tabelle, die du abarbeiten kannst.",
+  "tipp": "Gib bei „seiten“ zu jeder URL einen Satz zum Inhalt an, sonst rät die KI anhand des Slugs. Setz die Links in der Reihenfolge der Tabelle und hake ab, was erledigt ist.",
+  "fehler": "Überall denselben exakten Ankertext nutzen, bis es nach Absicht statt nach Hilfe aussieht.",
+  "jean": "Interne Links sind Wegweiser. Stell sie dahin, wo Leute abbiegen."
+ },
+ "kapitelmarken": {
+  "intro": "Dein Podcast oder Video dauert eine Stunde, und niemand findet die Stelle, um die es in der Beschreibung geht. Dieser Prompt macht aus dem Transkript Kapitelmarken, eine kurze Zusammenfassung und drei Clip-Ideen mit Start- und Endzeit. Er nutzt nur Zeitstempel, die wirklich im Transkript vorkommen.",
+  "tipp": "Exportier das Transkript mit Zeitstempeln aus deinem Schnitt- oder Transkriptionstool, sonst kann der Prompt keine Kapitel setzen. Prüf die erste Kapitelmarke, denn auf manchen Plattformen muss das erste Kapitel bei 00:00 beginnen.",
+  "fehler": "Kapitelmarken nach Gefühl setzen, die dann mitten im Satz landen.",
+  "jean": "Kapitelmarken sind das Inhaltsverzeichnis für Ungeduldige."
+ },
+ "karteikarten": {
+  "intro": "Die Prüfung ist in zwei Wochen, du hast 40 Seiten Skript und null Karteikarten. Dieser Prompt macht aus deinem Lernstoff Karten mit Begriffs-, Verständnis- und Anwendungsfragen und liefert sie zusätzlich als CSV zum Importieren. Du sparst dir das Abtippen und kannst sofort mit dem Abfragen loslegen.",
+  "tipp": "Gib den Stoff kapitelweise ein statt alles auf einmal, dann werden die Karten genauer und nichts fällt unter den Tisch. Prüf beim Import, ob deine Lern-App Semikolon als Trennzeichen erwartet.",
+  "fehler": "Hundert Karten erzeugen lassen und nie prüfen, ob die Antworten zum eigenen Skript passen.",
+  "jean": "Karten schreiben ist schon halb gelernt. Hier ist der Rest."
+ },
+ "kategorietext-shop": {
+  "intro": "Deine Kategorieseite zeigt 60 Produkte und darüber steht ein Absatz, der fünfmal das Keyword wiederholt und sonst nichts sagt. Dieser Prompt schreibt einen kurzen Einstieg über den Produkten und eine echte Kaufberatung darunter, mit Zwischenüberschriften und FAQ. Ohne erfundene Testergebnisse und ohne Keyword-Stopferei.",
+  "tipp": "Gib bei „kriterien“ die Fragen an, die Kunden im Laden oder per Mail wirklich stellen, etwa Größe, Material oder Einsatzzweck. Verlink in der Kaufberatung später auf passende Filter oder Unterkategorien.",
+  "fehler": "Einen Text nur für Suchmaschinen schreiben, den kein Kunde lesen will.",
+  "jean": "Kaufberatung verkauft. Keyword-Wiederholung nicht."
+ },
+ "keyword-cluster": {
+  "intro": "Du hast ein Hauptkeyword und sieben Ideen im Kopf, aber keine Ahnung, welche davon eine eigene Seite verdient. Genau da hilft dieser Prompt: Er sortiert die Begriffe nach Suchintention, bündelt sie zu Clustern und schlägt H1, Slug und Verlinkung vor. Danach weißt du, welche Seite du zuerst baust und welche nur ein Absatz wird.",
+  "tipp": "Trag bei „land“ und „website“ wirklich deinen Markt und deine Domain ein, sonst bekommst du ein Cluster für eine Fantasie-Website. Gleich die vorgeschlagenen Begriffe danach mit deinem Keyword-Tool ab und wirf alles raus, wofür es kaum Nachfrage gibt.",
+  "fehler": "Für jedes Long-Tail-Keyword eine eigene Seite bauen, bis sich deine Seiten gegenseitig die Rankings klauen.",
+  "jean": "Erst sortieren, dann schreiben. Wie Schrauben im Sortierkasten."
+ },
+ "ki-agent-auftrag": {
+  "intro": "Du gibst einem KI-Agenten eine Aufgabe, gehst Kaffee holen und kommst zurück zu etwas, das du nie wolltest. Dieser Prompt zwingt den Agenten zu Rückfragen, einem Plan mit deiner Freigabe und einer Dokumentation jedes Schritts. Abnahmekriterien und klare Grenzen sorgen dafür, dass er weiß, wann er fertig ist.",
+  "tipp": "Formuliere „grenzen“ als konkrete Verbote, etwa „keine Dateien löschen, nichts versenden, keine Käufe“. Lies den Plan in Schritt 2 wirklich, bevor du OK sagst, denn dort erkennst du Missverständnisse am billigsten.",
+  "fehler": "Keine Abnahmekriterien festlegen und dann endlos nachbessern lassen.",
+  "jean": "Ein Agent ohne Grenzen ist ein Azubi mit Firmenkreditkarte."
+ },
+ "kuendigung-schreiben": {
+  "intro": "Fitnessstudio, Handyvertrag oder Job sollen endlich weg, und du hast Angst, eine Formalie zu vergessen. Dieser Prompt schreibt eine sachliche Kündigung mit Betreff, Termin und Bitte um Bestätigung, bei Jobs inklusive Zeugniswunsch. Fehlende Angaben werden als Platzhalter markiert oder erfragt.",
+  "tipp": "Gib bei „angaben“ Vertrags- oder Kundennummer, Vertragsbeginn und gewünschten Kündigungstermin an. Prüf Frist und Form selbst im Vertrag und hol dir einen Nachweis, dass die Kündigung angekommen ist.",
+  "fehler": "Die Kündigungsfrist nicht im Vertrag prüfen und dann einen Monat länger zahlen.",
+  "jean": "Kündigen ist leicht. Die Frist zu verpassen auch."
+ },
+ "kundenanfrage-handwerk": {
+  "intro": "Eine Anfrage kommt rein: „Was kostet ein neues Bad?“, ohne Maße, ohne Fotos, ohne Adresse. Dieser Prompt schreibt eine freundliche Antwort, die keine Preise rät, die fünf wichtigsten Angaben für ein Angebot abfragt und einen Besichtigungstermin vorschlägt. So wirkst du professionell, auch wenn du gerade auf der Baustelle stehst.",
+  "tipp": "Beschreib bei „betrieb“ kurz, was ihr macht und was ihr für ein Angebot immer braucht, etwa Fotos, Maße oder Baujahr. Speicher die fertige Antwort als Vorlage für ähnliche Anfragen und pass nur die Fragen an.",
+  "fehler": "Per Mail einen Pauschalpreis nennen, der dann vor Ort nicht zu halten ist.",
+  "jean": "Gute Fragen sparen dir eine Anfahrt umsonst."
+ },
+ "kundenbewertung-antworten": {
+  "intro": "Da steht sie, die Zwei-Sterne-Bewertung, und dein erster Impuls ist eine Antwort, die du morgen bereust. Dieser Prompt schreibt dir drei Varianten, sachlich, herzlich und kurz, die konkret auf den Kritikpunkt eingehen und einen nächsten Schritt nennen. Mitlesende Interessenten sehen dann, wie du mit Problemen umgehst.",
+  "tipp": "Ergänze bei „firma“ einen Satz, was du wirklich anbieten kannst, etwa Ersatz oder Rückruf, sonst bleibt der nächste Schritt vage. Lass die Antwort bei einer ärgerlichen Bewertung eine Nacht liegen, bevor du sie postest.",
+  "fehler": "Sich öffentlich rechtfertigen und dem Kunden indirekt die Schuld geben.",
+  "jean": "Die Antwort liest nicht nur der Kunde. Sie liest jeder nach ihm."
+ },
+ "landingpage-texte": {
+  "intro": "Deine Landingpage steht technisch, aber die Texte bestehen aus Platzhaltern und dem Satz „Wir bieten innovative Lösungen“. Dieser Prompt textet alle Abschnitte in einem Durchgang: Hero, Problem, Vorteile, Ablauf, Einwände und Abschluss. Kundenstimmen, Zahlen oder Garantien erfindet er nicht dazu.",
+  "tipp": "Beschreib bei „zielgruppe“ das Problem in den Worten deiner Kunden, am besten mit Zitaten aus Mails oder Gesprächen. Teste die drei Hero-Überschriften an zwei echten Menschen aus der Zielgruppe, bevor du dich festlegst.",
+  "fehler": "Mit Features einsteigen, bevor die Besucher überhaupt wissen, welches Problem gelöst wird.",
+  "jean": "Erst das Problem, dann die Lösung. Sonst verkaufst du Werkzeug ohne Schraube."
+ },
+ "lebenslauf-optimieren": {
+  "intro": "Dein Lebenslauf listet Aufgaben wie eine Stellenbeschreibung, aber nirgends steht, was dabei herauskam. Dieser Prompt formuliert jeden Stichpunkt mit starkem Verb und Ergebnis neu und zeigt in einer Tabelle, warum die neue Version besser ist. Dazu bekommst du drei Begriffe aus der Zielstelle, die bei dir noch fehlen.",
+  "tipp": "Füll jeden Platzhalter „[ZAHL/ERGEBNIS ERGÄNZEN]“ nur mit Zahlen, die du im Gespräch erklären kannst. Lass den Prompt für jede Bewerbung neu laufen, denn die fehlenden Schlüsselbegriffe ändern sich mit der Anzeige.",
+  "fehler": "Verantwortlichkeiten aufzählen statt Ergebnisse, also „zuständig für“ statt „erreicht“.",
+  "jean": "„Zuständig für“ ist kein Ergebnis. Zeig, was danach besser lief."
+ },
+ "lernplan": {
+  "intro": "Python, Spanisch oder Buchhaltung stehen seit Jahren auf deiner Liste, und du hast schon drei Kurse halb angefangen. Dieser Prompt baut dir einen Plan mit Wochenzielen, konkreten Übungen, Mini-Projekten und Selbsttests. Dazu kommen die typischen Anfängerfehler, damit du nicht in dieselben Löcher fällst wie alle anderen.",
+  "tipp": "Sei bei „zeit“ ehrlich, also „3 Stunden pro Woche“ statt „so viel wie möglich“, sonst plant der Prompt für einen Menschen, der du nicht bist. Mach den Selbsttest am Wochenende wirklich und lass den Plan anpassen, wenn du hinterherhinkst.",
+  "fehler": "Wochenlang nur lesen und Videos schauen, ohne einmal selbst etwas zu bauen oder anzuwenden.",
+  "jean": "Lernen ist wie Schrauben: Zuschauen macht keine Hände dreckig."
+ },
+ "linkedin-post": {
+  "intro": "Im Job ist dir etwas passiert, das andere weiterbringen könnte, aber der Entwurf klingt nach „Ich freue mich, euch mitzuteilen“. Dieser Prompt baut aus deinem Erlebnis einen Post mit Hook, kurzen Absätzen, einer klaren Erkenntnis und einer Frage an die Leser. Du bekommst drei Hooks zur Auswahl.",
+  "tipp": "Beschreib bei „erlebnis“ einen konkreten Moment mit Ort, Uhrzeit oder Zitat statt einer allgemeinen Erkenntnis. Wähle den Hook, der am ehesten wie ein Satz klingt, den du in der Kaffeeküche sagen würdest.",
+  "fehler": "Die Erkenntnis an den Anfang stellen und so die Geschichte vorwegnehmen.",
+  "jean": "Erzähl die Panne. Die Erfolgsmeldung liest eh keiner zu Ende."
+ },
+ "linkedin-profil": {
+  "intro": "Recruiter schauen ein paar Sekunden auf dein Profil, und deine Überschrift sagt nur den Jobtitel. Dieser Prompt schreibt dir fünf Varianten für die Überschrift mit Suchbegriffen und einen Info-Text mit Haltung und belegten Ergebnissen. Buzzwords wie „passioniert“ fliegen raus, bevor sie überhaupt reinkommen.",
+  "tipp": "Schreib in „staerken“ zwei Ergebnisse mit Zahlen und eine Sache, die dich nervt und die du anders machst, daraus entsteht der Einstieg mit Haltung. Teste die Überschrift, indem du dich fragst: Würde ein Recruiter genau diese Wörter suchen?",
+  "fehler": "Die Überschrift nur mit dem Jobtitel füllen und so in der Suche untergehen.",
+  "jean": "Deine Überschrift ist kein Türschild. Sie ist deine Bewerbung im Kurzformat."
+ },
+ "meeting-zusammenfassung": {
+  "intro": "Das Meeting war eine Stunde lang, deine Notizen sind eine halbe Seite Gekritzel, und keiner weiß mehr, wer was bis wann macht. Dieser Prompt holt Entscheidungen, Aufgaben mit Verantwortlichen und Fristen sowie offene Fragen heraus und formuliert gleich die Mail an alle. Wo etwas fehlt, steht „offen“ statt einer Vermutung.",
+  "tipp": "Kipp die Notizen ungeschönt rein, auch halbe Sätze, aber ergänze Kürzel für Namen einmal am Anfang, etwa „MK = Maria“. Jedes „offen“ in der Tabelle ist deine Liste für Rückfragen, bevor die Mail rausgeht.",
+  "fehler": "Die Zusammenfassung erst drei Tage später verschicken, wenn sich keiner mehr an Details erinnert.",
+  "jean": "Ein Meeting ohne Aufgabenliste war nur ein Kaffeekränzchen."
+ },
+ "meta-title-description": {
+  "intro": "Deine Seite rankt auf Platz 5, aber keiner klickt, weil das Snippet so spannend ist wie ein Beipackzettel. Dieser Prompt liefert dir zehn Varianten aus Title und Description mit Zeichenzählung, prüft die Limits gleich mit und empfiehlt seine zwei Favoriten. Du suchst dir aus, was zu deiner Marke passt.",
+  "tipp": "Das Feld „usp“ entscheidet über die Qualität: Schreib dort einen echten Unterschied rein, etwa „Lieferung in 24 Stunden“ statt „hohe Qualität“. Zähl die Zeichen der Top 2 trotzdem selbst nach, denn KI verzählt sich gern.",
+  "fehler": "Den Title mit Keywords vollstopfen und dann wundern, warum Google ihn einfach umschreibt.",
+  "jean": "Ein Snippet ist dein Schaufenster. Putz es."
+ },
+ "newsletter-ausgabe": {
+  "intro": "Donnerstagabend, der Newsletter muss morgen raus, und du hast drei Links und ein paar Stichpunkte im Notizbuch. Dieser Prompt macht daraus eine fertige Ausgabe: pro Thema Ereignis, Bedeutung und deine Einschätzung, dazu ein Prompt der Woche, Betreffzeilen und Vorschautexte. Du musst nur noch deine Meinung schärfen.",
+  "tipp": "Schreib zu jedem Link in „inhalte“ einen eigenen Satz mit deiner Meinung, sonst bleibt die Einschätzung blass. Wähl am Ende die Betreffzeile, die du selbst öffnen würdest, nicht die cleverste.",
+  "fehler": "Nur Links weiterreichen ohne Einordnung, sodass Leser keinen Grund haben, gerade deinen Newsletter zu lesen.",
+  "jean": "Links sammeln kann jeder. Deine Meinung ist der Grund zum Abo."
+ },
+ "newsletter-betreffzeilen": {
+  "intro": "Dein Newsletter ist fertig, nur die Betreffzeile heißt noch „Newsletter KW 12“ und klingt nach Behördenpost. Dieser Prompt schreibt 15 Betreffzeilen in fünf Stilen, wählt die zwei besten für einen A/B-Test und liefert passende Vorschautexte. Versprechen, die die Ausgabe nicht hält, bleiben draußen.",
+  "tipp": "Schreib bei „leser“ etwas Konkretes über deine Abonnenten, etwa „Selbstständige, lesen morgens am Handy“, dann passt der Ton. Notier dir nach dem A/B-Test, welcher Stil gewonnen hat, und nutz das für die nächsten Ausgaben.",
+  "fehler": "Eine Betreffzeile wählen, die etwas verspricht, was erst im fünften Absatz und nur halb kommt.",
+  "jean": "Die Betreffzeile ist der Türsteher. Ist er unfreundlich, kommt keiner rein."
+ },
+ "onboarding-plan": {
+  "intro": "Am Montag fängt jemand Neues an, und dein Plan besteht aus „Laptop hinstellen und mal schauen“. Dieser Prompt erstellt einen Plan für vier Wochen mit Zielen, Aufgaben, Ansprechrollen und Feedbackterminen. Dazu kommen eine Checkliste für den ersten Tag und Fragen für das Gespräch nach vier Wochen.",
+  "tipp": "Schreib bei „rahmen“ rein, was am ersten Tag wirklich bereitstehen muss, etwa Zugänge, Schlüssel oder Arbeitskleidung. Verteil den fertigen Plan vorher an alle genannten Rollen, damit keiner überrascht wird.",
+  "fehler": "Neue Leute in der ersten Woche mit Infos überfluten und dann allein lassen.",
+  "jean": "Der erste Tag bleibt hängen. Mach ihn nicht zum Wartezimmer."
+ },
+ "podcast-folge-planen": {
+  "intro": "Der Gast ist gebucht, die Aufnahme ist Donnerstag, und dein Plan besteht aus „wir quatschen mal“. Dieser Prompt liefert Einstiegsvarianten, einen Ablauf mit Minutenangaben, zehn Fragen von leicht bis tief, einen Schluss und Titelideen. Wo er etwas über den Gast wissen müsste, setzt er einen Platzhalter.",
+  "tipp": "Füll alle [FRAGEN]-Platzhalter vor der Aufnahme, am besten in einem kurzen Vorgespräch mit dem Gast. Halt die zehn Fragen als Gerüst, nicht als Skript, und hak nach, wenn eine Antwort spannend wird.",
+  "fehler": "Fragen stur abarbeiten und die spannendste Antwort nicht vertiefen.",
+  "jean": "Die beste Frage steht nicht auf deinem Zettel. Sie kommt beim Zuhören."
+ },
+ "preisseite-texte": {
+  "intro": "Deine Preisseite zeigt drei Tarife mit Häkchen-Listen, und die Besucher verlassen sie, ohne zu wissen, welcher für sie passt. Dieser Prompt schreibt pro Tarif einen „Für wen“-Satz und Nutzen-Punkte, empfiehlt einen Tarif zum Hervorheben und liefert FAQ zu typischen Einwänden. Preise und Leistungen bleiben unverändert.",
+  "tipp": "Kopier bei „tarife“ Preise und Leistungen exakt aus deinem System, inklusive Laufzeit und Mehrwertsteuer-Hinweis. Ergänze in den FAQ deine echte Kündigungsregel, statt sie allgemein zu lassen.",
+  "fehler": "Tarife nach Funktionen beschreiben statt danach, für wen sie gedacht sind.",
+  "jean": "Die Preisseite soll nicht beeindrucken. Sie soll die Entscheidung leicht machen."
+ },
+ "pressemitteilung": {
+  "intro": "Endlich eine echte Neuigkeit, etwa ein Launch, eine Eröffnung oder eine Kooperation, und du willst, dass die Lokalzeitung sie bringt. Dieser Prompt baut eine Pressemitteilung im klassischen Aufbau mit Lead, Details, Zitat-Platzhalter und Boilerplate. Fehlt etwas Wichtiges, fragt er nach, statt sich etwas auszudenken.",
+  "tipp": "Pack in „fakten“ alle W-Fragen schon als Stichpunkte, inklusive Datum und Ort, dann steht der Lead sofort. Formuliere das Zitat wirklich selbst und mit Meinung, denn Redaktionen streichen leere Zitate zuerst.",
+  "fehler": "Eine Werbebroschüre schreiben und sie Pressemitteilung nennen.",
+  "jean": "Redaktionen wollen Nachrichten, keine Lobeshymnen."
+ },
+ "product-hunt-launch": {
+  "intro": "Der Launch-Tag steht im Kalender und du sitzt um Mitternacht vor dem leeren Feld für die Tagline. Dieser Prompt liefert dir Taglines, Beschreibung und den ersten Maker-Kommentar auf Englisch, alles in den Zeichenlimits. Dazu kommen fertige Antworten auf die typischen kritischen Kommentare zu Preis, Datenschutz und „gibt es schon“.",
+  "tipp": "Sei bei „besonders“ brutal ehrlich und konkret, denn daraus entstehen Taglines und Antworten auf „gibt es schon“. Lass die ehrliche Einschränkung im Maker-Kommentar unbedingt drin, sie macht dich glaubwürdiger als jedes Adjektiv.",
+  "fehler": "Den Maker-Kommentar wie eine Pressemitteilung schreiben, obwohl die Community einen Menschen hören will.",
+  "jean": "Hype verpufft. Eine ehrliche Einschränkung bleibt hängen."
+ },
+ "produkt-faq": {
+  "intro": "Kunden schreiben dir immer wieder dieselben Fragen zu Größe, Versand und Pflege, und jede Mail kostet dich zehn Minuten. Dieser Prompt baut aus deinen bekannten Infos einen FAQ-Block mit acht kaufentscheidenden Fragen in Suchsprache. Wo dir Angaben fehlen, steht ein deutlicher Platzhalter, damit nichts geraten wird.",
+  "tipp": "Kopier echte Kundenfragen aus deinem Postfach in „infos“, mit Original-Formulierung, dann klingen die Fragen wie Suchanfragen. Füll jeden „[ERGÄNZEN]“-Platzhalter, bevor der Block live geht.",
+  "fehler": "Fragen beantworten, die keiner stellt, nur weil sie gut klingen.",
+  "jean": "Jede FAQ-Antwort ist eine Mail, die du nicht mehr schreiben musst."
+ },
+ "produktbeschreibung-shop": {
+  "intro": "Fünfzig Produkte im Shop, und bei der Hälfte steht nur die Herstellerbeschreibung, die auch bei zwanzig anderen Händlern steht. Dieser Prompt schreibt aus deinen Fakten eine Beschreibung mit Nutzen-Überschrift, Stichpunkten und einem „Passt das zu mir?“-Block. Fehlende Infos werden markiert, statt erfunden.",
+  "tipp": "Pack in „fakten“ auch die Fragen, die Kunden dir per Mail oder im Laden stellen, denn daraus wird der beste Teil des Textes. Die markierten Lücken am Ende sind oft genau die Gründe für Retouren.",
+  "fehler": "Technische Daten aufzählen, ohne zu sagen, was der Kunde davon hat.",
+  "jean": "Herstellertext kopieren heißt: dasselbe Schaufenster wie die Konkurrenz."
+ },
+ "produktfoto-briefing": {
+  "intro": "Der Fotograf kommt nächste Woche, oder du willst Szenenbilder mit KI erzeugen, aber dein Briefing lautet bisher „schöne Bilder vom Produkt“. Dieser Prompt erstellt eine Tabelle mit acht Motiven, Hintergrund, Licht, Perspektive und Format je Kanal. Für drei Anwendungsszenen bekommst du zusätzlich englische Bild-Prompts.",
+  "tipp": "Gib bei „kanaele“ alle Plätze an, wo die Bilder landen, etwa Shop, Marktplatz und Instagram, denn jedes Format braucht ein anderes Seitenverhältnis. Gleich KI-Szenenbilder immer mit dem echten Produkt ab, damit Farbe und Größe stimmen.",
+  "fehler": "KI-Bilder nutzen, auf denen das Produkt anders aussieht als das, was beim Kunden ankommt.",
+  "jean": "Ein Bild, das lügt, kommt als Retoure zurück."
+ },
+ "prompt-verbessern": {
+  "intro": "Dein Prompt liefert Mittelmaß und du weißt nicht genau, woran es liegt. Dieser Meta-Prompt bewertet ihn, stellt dir gezielte Rückfragen zu Ziel, Zielgruppe und Format und schreibt dann eine bessere Fassung in einen Codeblock. Dazu bekommst du drei Gründe, warum die neue Version mehr taugt, und lernst nebenbei mit.",
+  "tipp": "Gib nicht nur den Prompt ein, sondern auch ein Beispiel für ein Ergebnis, das dich enttäuscht hat. Speicher den verbesserten Prompt und teste ihn direkt gegen den alten mit derselben Aufgabe.",
+  "fehler": "Die Rückfragen überspringen und dann eine generisch aufgeblähte Fassung bekommen, die genauso rät wie vorher.",
+  "jean": "Ein guter Prompt ist ein Werkstattauftrag, kein Zuruf über den Hof."
+ },
+ "quiz-erstellen": {
+  "intro": "Du brauchst ein Quiz für die Teamschulung, den Unterricht oder einen Instagram-Post und hast keine Lust, dir falsche Antworten auszudenken. Dieser Prompt liefert zehn Fragen mit plausiblen Ablenkern und kurzen Erklärungen. Unsichere Fakten markiert er selbst, damit du gezielt nachprüfen kannst.",
+  "tipp": "Gib bei „niveau“ eine konkrete Gruppe an, etwa „Azubis im ersten Lehrjahr“, dann passt die Schwierigkeit. Prüf jede markierte Frage und auch zwei zufällige unmarkierte, bevor das Quiz rausgeht.",
+  "fehler": "Falsche Antworten so offensichtlich machen, dass man das Quiz durch Ausschluss löst.",
+  "jean": "Gute falsche Antworten sind die halbe Miete."
+ },
+ "recherche-mit-quellen": {
+  "intro": "Eine belastbare Antwort muss her, etwa zu Förderungen, Fristen oder Regeln, und die KI klingt überzeugt, aber woher weiß sie das? Dieser Prompt verlangt zu jeder Aussage eine Quelle mit Datum, bevorzugt offizielle Stellen und markiert alles, was sich oft ändert. So kannst du jede Angabe selbst anklicken und prüfen.",
+  "tipp": "Schreib bei „zweck“ rein, wofür du die Antwort brauchst, etwa „Entscheidung über einen Förderantrag“, dann wird sorgfältiger gewichtet. Öffne jeden Link selbst, denn KI-Modelle erfinden auch manchmal Quellen, die es nicht gibt.",
+  "fehler": "Die genannten Quellen nicht anklicken und eine erfundene oder veraltete Fundstelle weitergeben.",
+  "jean": "Eine Quelle, die du nicht geöffnet hast, ist keine Quelle."
+ },
+ "referat-folien": {
+  "intro": "Morgen ist das Referat, und deine Folien bestehen aus Textwüsten, die du ablesen willst. Dieser Prompt baut höchstens acht Folien mit je drei Stichpunkten, Bildidee und Sprechnotiz, inklusive Einstieg und Zusammenfassung. Am Ende steht, welche Fakten du noch im Schulbuch oder einer anderen Quelle nachprüfen solltest.",
+  "tipp": "Gib bei „rahmen“ Dauer und Publikum an, etwa „10 Minuten, Klasse 9“, dann passen Umfang und Sprache. Üb mit den Sprechnotizen, nicht mit den Stichpunkten, denn die Folien sind für das Publikum.",
+  "fehler": "Ganze Sätze auf die Folie schreiben und sie dann der Klasse vorlesen.",
+  "jean": "Die Folie ist für die Zuhörer. Der Spickzettel ist für dich."
+ },
+ "regex-bauen": {
+  "intro": "Postleitzahlen aus einer Liste fischen, E-Mail-Adressen prüfen: klingt einfach, nur Regex sieht für dich aus wie eine Katze, die über die Tastatur gelaufen ist. Dieser Prompt baut den Ausdruck, erklärt jeden Teil und testet ihn mit Beispielen, die passen und nicht passen sollen.",
+  "tipp": "Gib bei „muster“ eigene Grenzfälle mit, etwa Postleitzahlen mit führender Null oder Mails mit Pluszeichen. Teste den fertigen Ausdruck zusätzlich in einem Online-Regex-Tester mit deinen echten Daten.",
+  "fehler": "Den Ausdruck nur mit passenden Beispielen testen und nie mit denen, die nicht passen dürfen.",
+  "jean": "Regex ohne Testfälle ist Raten mit Sonderzeichen."
+ },
+ "retoure-antwort": {
+  "intro": "Ein Kunde schreibt sauer, dass die Jacke kaputt angekommen ist, und will sein Geld zurück, am besten gestern. Dieser Prompt schreibt zwei Antwort-Varianten mit Verständnis, Lösung nach deinen Regeln und nächstem Schritt. Rechtliche Fragen wie Gewährleistung oder Widerruf werden markiert, damit du sie gesondert prüfst.",
+  "tipp": "Schreib bei „regeln“ deine echten Abläufe hin, etwa Fristen, wer das Rücksendeetikett zahlt und wie schnell erstattet wird. Prüf jede [RECHTLICH PRÜFEN]-Markierung, bevor du antwortest, und frag im Zweifel nach.",
+  "fehler": "Dem Kunden mehr versprechen, als die eigenen Rückgaberegeln erlauben.",
+  "jean": "Eine gute Reklamationsantwort macht aus Ärger manchmal Stammkunden."
+ },
+ "rueckruf-notiz": {
+  "intro": "Auf dem Zettel steht „Hr. Meier, Rückruf wg. Termin, dringend?“, und zwei Tage später weiß keiner mehr, worum es ging. Dieser Prompt macht aus der hastigen Notiz eine saubere Aufgabe mit Betreff, Anliegen, Frist und nächsten Schritten. Er listet, was fehlt, und schreibt gleich einen Rückruf- oder Mail-Text.",
+  "tipp": "Tipp die Notiz genau so ab, wie sie auf dem Zettel steht, Abkürzungen inklusive, und ergänze nur, wer angerufen hat. Klär die offenen Fragen beim Rückruf zuerst, bevor du irgendetwas zusagst.",
+  "fehler": "Notizen ohne Datum und Telefonnummer schreiben und den Kunden dann nicht mehr erreichen.",
+  "jean": "Ein Zettel ohne Frist ist ein Zettel für den Papierkorb."
+ },
+ "shorts-ideen": {
+  "intro": "Alle sagen, du sollst Shorts machen, aber nach drei Videos ist dir der Stoff ausgegangen. Dieser Prompt sammelt 20 Ideen mit Hook für die ersten zwei Sekunden, kurzem Ablauf und Handlungsaufforderung, gemischt aus Tipps, Fehlern, Mythen und Vorher-Nachher. Die fünf Ideen mit dem geringsten Drehaufwand sind markiert.",
+  "tipp": "Fang mit den fünf markierten Ideen an und dreh sie an einem Nachmittag hintereinander weg. Schreib bei „ziel“ konkret hin, was nach dem Video passieren soll, etwa Profilbesuch oder Kommentar.",
+  "fehler": "Den Hook erst nach drei Sekunden bringen, wenn der Daumen schon weitergewischt hat.",
+  "jean": "Zwei Sekunden. Mehr Geduld hat dein Publikum nicht."
+ },
+ "social-media-redaktionsplan": {
+  "intro": "Montagmorgen, du sollst heute posten und hast keine Ahnung, was. Dieser Prompt plant dir vier Wochen mit Tag, Kanal, Format, Hook und Handlungsaufforderung, gemischt aus Tipps, Einblicken und Angebot. Drei Posts schreibt er gleich komplett aus, damit du nicht schon in Woche eins hängen bleibst.",
+  "tipp": "Sei bei „frequenz“ realistisch: Lieber zwei Posts pro Woche, die du durchziehst, als fünf, die nach zehn Tagen einschlafen. Ergänze bei „ziel“ eine messbare Sache, etwa Anfragen per DM, statt nur „Reichweite“.",
+  "fehler": "Einen Plan machen, der nur aus Angebotsposts besteht, und sich über sinkende Reichweite wundern.",
+  "jean": "Ein Plan, den du nicht durchhältst, ist nur ein schönes Excel."
+ },
+ "sql-abfrage": {
+  "intro": "Dein Chef fragt, wie viele Kunden im letzten Quartal zweimal bestellt haben, und du kennst die Datenbank, aber nicht die passende Abfrage. Dieser Prompt übersetzt die Frage in SQL, erklärt jede Zeile in normalen Worten und nennt Sonderfälle wie fehlende Werte oder Zeitzonen. Nur lesend, nichts wird verändert.",
+  "tipp": "Füg bei „tabellen“ die echten Spaltennamen und Datentypen ein, etwa aus einem DESCRIBE oder dem Schema. Teste die Abfrage zuerst mit LIMIT 10 und prüf die Ergebnisse an einem Fall, den du kennst.",
+  "fehler": "Eine Abfrage auf die Produktivdatenbank loslassen, ohne sie vorher mit wenigen Zeilen zu testen.",
+  "jean": "Keine Spalte erfinden. Die Datenbank lacht dich sonst aus."
+ },
+ "stellenanzeige": {
+  "intro": "Du suchst dringend eine Fachkraft, und deine Anzeige klingt wie alle anderen mit „dynamischem Team“ und „flachen Hierarchien“. Dieser Prompt schreibt aus deinen Stichpunkten eine klare Anzeige mit echten Aufgaben, nur echten Muss-Kriterien und einem einfachen Bewerbungsweg. Am Ende prüft er, ob Anforderungen unnötig ausschließen.",
+  "tipp": "Schreib bei „details“ rein, was die Stelle wirklich bietet, etwa Arbeitszeiten, Werkzeug oder Firmenwagen, nicht was gut klingt. Streich nach der Prüfung jede Anforderung, ohne die die Person den Job trotzdem machen könnte.",
+  "fehler": "Zehn Muss-Kriterien auflisten und sich dann wundern, warum sich niemand bewirbt.",
+  "jean": "Schreib, wie es bei euch wirklich ist. Dann bewerben sich die Richtigen."
+ },
+ "text-entkitschen": {
+  "intro": "Die KI hat dir einen Text geliefert, und er klingt wie ein Motivationsposter im Wartezimmer. Dieser Prompt schickt ihn durch einen strengen Lektor: Floskeln raus, leere Superlative raus, Fakten bleiben. Am Ende bekommst du die neue Fassung plus eine Liste, was geändert wurde, damit du daraus lernst.",
+  "tipp": "Gib bei „ton“ ein greifbares Vorbild an, etwa „wie ein Handwerksmeister, der einem Kunden etwas erklärt“, statt nur „locker“. Lass den Prompt bei langen Texten abschnittsweise laufen, dann rutscht weniger Kitsch durch.",
+  "fehler": "Den entkitschten Text nicht mehr gegenlesen und so übersehen, dass auch ein Fakt mit rausgeflogen ist.",
+  "jean": "Weniger Weihrauch, mehr Werkstattgeruch."
+ },
+ "text-zusammenfassen": {
+  "intro": "Der Bericht hat 30 Seiten, das Meeting dazu ist in einer Stunde, und du hast nur die Einleitung gelesen. Dieser Prompt fasst in drei Stufen zusammen: ein Satz, fünf Stichpunkte, ein Absatz mit Kontext. Unklare oder widersprüchliche Stellen werden markiert statt glattgebügelt, damit du sie im Meeting ansprechen kannst.",
+  "tipp": "Gib bei „leser“ an, wer die Zusammenfassung liest und was die Person damit tun soll, etwa „Geschäftsführung, entscheidet über Budget“. Prüf die Zahlen in den fünf Stichpunkten stichprobenartig am Original.",
+  "fehler": "Sich blind auf die Zusammenfassung verlassen, obwohl die entscheidende Einschränkung im Kleingedruckten stand.",
+  "jean": "Ein Satz, fünf Punkte, ein Absatz. Mehr braucht dein Chef selten."
+ },
+ "tool-vergleich-entscheidung": {
+  "intro": "Du schwankst zwischen zwei Tools, hast zehn Tabs mit Vergleichsartikeln offen und bist nach einer Stunde verwirrter als vorher. Dieser Prompt stellt Rückfragen zu deinem Bedarf, baut eine passende Vergleichstabelle und markiert unsichere Preise zum Prüfen. Am Ende steht eine Empfehlung mit Gründen und dem größten Risiko.",
+  "tipp": "Beschreib bei „bedarf“ deinen echten Arbeitsalltag, etwa Teamgröße, Datenmenge und Tools, mit denen es zusammenarbeiten muss. Teste den Favoriten danach in der Gratisphase mit einer echten Aufgabe, bevor du bezahlst.",
+  "fehler": "Nach der längsten Funktionsliste entscheiden statt nach dem, was man wirklich jeden Tag braucht.",
+  "jean": "Das beste Tool ist das, das du am Montag wirklich benutzt."
+ },
+ "uebersetzen-lokalisieren": {
+  "intro": "Dein Shop soll nach Österreich, in die Schweiz oder nach Frankreich, und die Wort-für-Wort-Übersetzung klingt wie ein Bastelanleitungs-Beipackzettel. Dieser Prompt übersetzt so, wie ein Muttersprachler schreiben würde, passt Formate an und listet Stellen auf, die du prüfen solltest. Gerade Fachbegriffe und rechtliche Formulierungen.",
+  "tipp": "Gib bei „sprache“ das Zielland mit an, also „Französisch für die Schweiz“ statt nur „Französisch“. Lass die Liste der geprüften Begriffe von einem Muttersprachler gegenlesen, bevor rechtliche Texte live gehen.",
+  "fehler": "Markennamen und Produktbezeichnungen mitübersetzen, die eigentlich gleich bleiben sollten.",
+  "jean": "Übersetzen heißt nicht, Wörter tauschen. Es heißt, Leute erreichen."
+ },
+ "verzeichnis-beschreibungen": {
+  "intro": "Zwanzig KI-Verzeichnisse warten auf dein Tool, und jedes Formular will eine andere Textlänge. Dieser Prompt schreibt dir einmal sauber Einzeiler, Kurz- und Langbeschreibung auf Deutsch und Englisch, plus Tags. Danach kopierst du nur noch, statt bei jedem Eintrag wieder bei null anzufangen.",
+  "tipp": "Trag im Feld „preis“ den exakten Preis von deiner eigenen Preisseite ein, inklusive Gratis-Tarif, denn falsche Preise in Verzeichnissen ärgern Nutzer. Speicher das Ergebnis als Textbaustein-Datei, damit alle Einträge gleich klingen.",
+  "fehler": "Den Produktnamen in jedem Verzeichnis anders schreiben und sich dann über verstreute Markensignale wundern.",
+  "jean": "Einmal sauber schreiben, zwanzigmal einfügen."
+ },
+ "video-titel": {
+  "intro": "Das Video ist geschnitten, gerendert und hochgeladen, aber im Titelfeld steht noch „final_v3_wirklich“. Dieser Prompt liefert zehn Titel mit dem Suchbegriff weit vorn, eine Beschreibung mit Zusammenfassung oben und Vorschläge für Kapitelmarken. Am Ende bewertet er seine Favoriten nach Klickanreiz und Ehrlichkeit.",
+  "tipp": "Beschreib bei „inhalt“ nicht nur das Thema, sondern das Ergebnis des Videos, etwa „Test zeigt, welcher Akku länger hält“. Nimm den Titel, der Klickanreiz und Ehrlichkeit am besten verbindet, nicht den reißerischsten.",
+  "fehler": "Einen Titel versprechen, den das Video erst in Minute neun oder gar nicht einlöst.",
+  "jean": "Clickbait holt Klicks und verspielt Vertrauen."
+ },
+ "video-zu-blogartikel": {
+  "intro": "Dein Video steckt voller guter Inhalte, aber Google kann es kaum lesen und die Hälfte deiner Zielgruppe schaut keine Videos. Dieser Prompt macht aus dem Transkript einen eigenständigen Artikel mit Zwischenüberschriften, Zitaten und FAQ. Er zeigt dir außerdem, welche Aussagen du nachprüfen solltest, bevor du veröffentlichst.",
+  "tipp": "Räum das Transkript vorher grob auf: automatische Untertitel verhören sich bei Produktnamen und Zahlen gern. Nimm die Liste der Prüfstellen am Ende ernst und hake sie einzeln ab.",
+  "fehler": "Das Transkript fast wörtlich als Artikel ausgeben, inklusive „Wie ihr hier seht“ ohne Bild.",
+  "jean": "Einmal drehen, zweimal ernten."
+ },
+ "vokabeltrainer": {
+  "intro": "Der Spanischkurs hat 30 neue Vokabeln dagelassen, und Karteikarten hast du seit der Schulzeit nicht mehr angefasst. Dieser Prompt macht die KI zum geduldigen Trainer, der abwechselnd in beide Richtungen abfragt, Fehler mit Merksatz erklärt und schwierige Wörter später wiederholt. Am Ende weißt du, was du noch üben musst.",
+  "tipp": "Gib die Vokabeln in Paaren ein, eine pro Zeile, und schreib bei Nomen den Artikel dazu. Bei Fehlern kannst du nach einem eigenen Beispielsatz zu deinem Alltag fragen, so bleibt das Wort besser hängen.",
+  "fehler": "Bei falschen Antworten nur die Lösung lesen, ohne die Vokabel später noch einmal abfragen zu lassen.",
+  "jean": "Wiederholung ist langweilig. Vergessen ist schlimmer."
+ },
+ "vorstellungsgespraech-training": {
+  "intro": "Übermorgen ist das Gespräch, und bei „Erzählen Sie mal etwas über sich“ fängst du schon im Kopf an zu stottern. Dieser Prompt spielt den Interviewer, stellt eine Frage nach der anderen und gibt dir nach jeder Antwort kurzes Feedback. Nach sechs Fragen bekommst du eine Auswertung mit Stärken und konkreten Baustellen.",
+  "tipp": "Wähle bei „level“ beim ersten Durchgang „mittel“ und beim zweiten „schwer“, damit die Stressfrage wirklich zwickt. Antworte per Sprache, wenn dein Chat das kann, denn gesprochen klingst du anders als getippt.",
+  "fehler": "Antworten auswendig lernen, die dann im echten Gespräch wie abgelesen klingen.",
+  "jean": "Lieber vor der KI stottern als vor der Chefin."
+ },
+ "werbe-email-aktion": {
+  "intro": "Der Sale startet Freitag, und du willst eine Mail, die geöffnet wird, ohne wie ein Teleshopping-Kanal zu klingen. Dieser Prompt liefert Betreffzeilen, Vorschautexte und eine kurze Mail mit klarer Frist und Button-Text. Die Regeln gegen Großbuchstaben und Ausrufezeichen-Gewitter sind gleich eingebaut.",
+  "tipp": "Schreib bei „aktion“ Rabatt, Zeitraum und Bedingungen exakt hin, etwa „15 Prozent auf Zubehör bis Sonntag 23:59“. Teste zwei der Betreffzeilen gegeneinander an einem Teil deiner Liste, wenn dein Tool das kann.",
+  "fehler": "Die Frist im Fließtext verstecken, sodass niemand merkt, warum er jetzt klicken sollte.",
+  "jean": "Ein Ausrufezeichen reicht. Der Rabatt soll schreien, nicht der Text."
+ },
+ "wettbewerbsanalyse": {
+  "intro": "Du weißt, dass es Konkurrenz gibt, aber deine Analyse besteht aus einem Bauchgefühl und zwei Bookmarks. Dieser Prompt legt eine Tabelle mit Zielgruppe, Versprechen, Preismodell, Stärken und Schwächen an, leitet Lücken ab und schlägt eine Positionierung vor. Unsicheres steht als „prüfen“ drin.",
+  "tipp": "Füg bei „wettbewerber“ zu jedem Namen die URL und deine eigenen Notizen hinzu, sonst arbeitet die KI nur mit veraltetem Wissen. Arbeite die Prüfliste am Ende auf den echten Websites ab, bevor du Entscheidungen triffst.",
+  "fehler": "Die Tabelle der KI als Tatsache nehmen, obwohl Preise und Funktionen längst veraltet sein können.",
+  "jean": "Kenn deinen Gegner. Aber prüf, ob er noch so spielt."
+ },
+ "wochenplan-priorisieren": {
+  "intro": "Montagmorgen, deine To-do-Liste hat 23 Punkte, und alles fühlt sich gleich dringend an. Dieser Prompt fragt nach Fristen und Dauer, sortiert nach dringend und wichtig und baut einen Wochenplan mit Zeitblöcken und Puffer. Er sagt dir auch, was du verschieben, abgeben oder streichen solltest.",
+  "tipp": "Gib bei „zeit“ nur die Stunden an, die wirklich frei sind, also ohne Meetings und Mails. Nimm die Streich-Vorschläge ernst und sag mindestens eine Sache diese Woche ab.",
+  "fehler": "Den Plan ohne Puffer machen und am Dienstag schon hinterherlaufen.",
+  "jean": "Ein Plan ohne Puffer ist ein Plan zum Scheitern."
+ },
+ "youtube-skript": {
+  "intro": "Du stehst vor der Kamera, das Licht passt, und nach dem dritten „Ähm, hallo zusammen“ merkst du, dass dir der Einstieg fehlt. Dieser Prompt baut dir ein sprechbares Skript mit Hook in den ersten Sekunden, Kapiteln mit Zeitmarken und markierten Stellen für B-Roll. Du drehst dann nach Plan statt nach Gefühl.",
+  "tipp": "Pack in „thema“ schon den Titel, den du später nutzen willst, denn der Hook soll genau dieses Versprechen einlösen. Lies das Skript einmal laut vor und lass die Sätze kürzen, an denen du hängen bleibst.",
+  "fehler": "Den Hook mit Begrüßung und Kanalvorstellung verschwenden, während die Zuschauer schon wegwischen.",
+  "jean": "Die ersten 15 Sekunden sind dein Anlasser. Springt er nicht, fährt nichts."
+ },
+ "zielgruppen-persona": {
+  "intro": "Du schreibst Texte für „unsere Kunden“, aber jeder im Team stellt sich jemand anderen vor. Dieser Prompt baut aus Kundenstimmen und Notizen eine Persona mit Alltag, Zielen, Problemen und Wörtern, die sie selbst benutzt. Annahmen sind klar markiert, und am Ende stehen Fragen für echte Kundengespräche.",
+  "tipp": "Kopier in „infos“ echte Zitate aus Bewertungen, Support-Mails oder Gesprächen, denn daraus entstehen die „Wörter, die sie selbst benutzt“. Kläre die [ANNAHME]-Punkte in den nächsten Kundengesprächen, bevor du die Persona im Team verteilst.",
+  "fehler": "Eine Persona komplett aus Annahmen bauen und sie dann wie Marktforschung behandeln.",
+  "jean": "Eine Persona ohne echte Kundenstimmen ist ein Fantasiefreund."
+ },
+ "gpt-anweisungen-zu-skill": {
+  "intro": "Am 11. Dezember 2026 schaltet OpenAI die Custom GPTs ab, und in deinem steckt ein Jahr Feinschliff. Dieser Prompt nimmt die alten Anweisungen und baut daraus eine SKILL.md im offenen Agent-Skills-Format, die du in ChatGPT-Plugins, Claude oder Cursor wiederverwenden kannst. Er markiert auch, was nur in ChatGPT funktioniert hat.",
+  "tipp": "Kopier die Anweisungen aus dem GPT-Editor vollständig, auch die Sätze, die dir peinlich sind. Gerade die kleinen Korrekturen von damals machen den Unterschied. Teste den Skill danach mit drei Aufgaben, die dein GPT gut gelöst hat.",
+  "fehler": "Nur die erste Zeile der Anweisungen übernehmen und sich wundern, warum der neue Assistent den Ton nicht trifft.",
+  "jean": "Was du einmal sauber als Skill aufschreibst, nimmst du zu jedem Anbieter mit. Umzugskartons, die nie wieder ausgepackt werden müssen."
+ },
+ "ki-modell-umstellen-testplan": {
+  "intro": "Irgendwo in deinem Make-Szenario steht noch ein Modell, das bald abgeschaltet wird, etwa gpt-4o-mini am 14. Januar 2027. Dieser Prompt baut dir einen Testplan mit echten Testfällen, prüfbaren Formatkriterien und einer Checkliste samt Rückfallplan, damit nach dem Umstieg keine leeren Felder in deinem Shop landen.",
+  "tipp": "Beschreib bei „einsatz“ genau, was mit der Antwort passiert, zum Beispiel ob sie als JSON weiterverarbeitet wird. Nimm echte Eingaben der letzten Woche als Testfälle, keine ausgedachten.",
+  "fehler": "Das Modell im Live-Szenario austauschen und erst am nächsten Morgen merken, dass das JSON ein Feld anders nennt.",
+  "jean": "Ein neues Modell ist wie ein neuer Vergaser: Erst auf dem Prüfstand, dann auf die Straße."
+ },
+ "chatgpt-anzeige-texten": {
+  "intro": "Seit August 2026 zeigt ChatGPT in Deutschland Anzeigen, und die stehen direkt neben einer Antwort auf eine echte Frage. Klassische Banner-Sprüche wirken da fehl am Platz. Dieser Prompt ordnet die Fragen deiner Zielgruppe nach Kaufphase und schreibt pro Phase ehrliche Anzeigen mit Überschrift, Text und dem, was auf der Zielseite stehen muss.",
+  "tipp": "Sammle bei „fragen“ echte Formulierungen aus Kundenmails, Bewertungen oder Foren, nicht deine Marketing-Sprache. Je näher die Anzeige am Wortlaut der Frage ist, desto eher passt sie.",
+  "fehler": "Eine Anzeige für alle Phasen schreiben und Leute, die noch das Problem verstehen wollen, direkt zum Kaufbutton schicken.",
+  "jean": "Im Chat fragt jemand nach Hilfe. Antworte mit Hilfe, nicht mit Marktgeschrei."
+ }
+}

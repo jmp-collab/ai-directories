@@ -1,0 +1,616 @@
+{
+ "alternativeto": {
+  "approval": "kostenlos: kein Termin, Warteschlange meist Monate; kostenpflichtiger Priority Review meist 1–2 Werktage (bis zu einer Woche)",
+  "link_type": null,
+  "quote": "Priority submissions are usually reviewed within 1-2 business days, and up to a week over holidays or busy periods.",
+  "source": "https://alternativeto.net/faq/",
+  "status": null
+ },
+ "getlatka": {
+  "approval": "üblicherweise innerhalb weniger Werktage",
+  "link_type": null,
+  "quote": "We publish your profile, usually within a few business days.",
+  "source": "https://getlatka.com/add",
+  "status": null
+ },
+ "sitelike": {
+  "approval": "sofort (automatische Prüfung und Freischaltung)",
+  "link_type": null,
+  "quote": "Our system will then check & validate and approve immediately.",
+  "source": "https://www.sitelike.org/add-site/",
+  "status": null
+ },
+ "beta-list": {
+  "approval": null,
+  "link_type": "dofollow",
+  "quote": "All plans include a do-follow backlink if featured",
+  "source": "https://betalist.com/faq",
+  "status": null
+ },
+ "startup-ranking": {
+  "approval": "ca. 80 Tage (FAQ: üblicherweise 60 Tage); mit kostenpflichtiger SR Faster Approval 24 Stunden",
+  "link_type": null,
+  "quote": "Wait for our team to approve it in 80 days. If you are in a hurry, you can use our SR Faster Approval for a 24-hour approval.",
+  "source": "https://www.startupranking.com/how-it-works",
+  "status": null
+ },
+ "twelve-tools": {
+  "approval": "innerhalb von 72 Stunden",
+  "link_type": "dofollow",
+  "quote": "Get 1 dofollow link to boost your SEO … Reviewed within 72 hours",
+  "source": "https://twelve.tools/submit",
+  "status": null
+ },
+ "pitchwall": {
+  "approval": "kostenlos: üblicherweise 30+ Tage; Featured Listing (kostenpflichtig): zum gewünschten Launch-Datum",
+  "link_type": null,
+  "quote": "Free listings go through our standard review queue and typically have a waiting period of 30+ days before publication.",
+  "source": "https://pitchwall.co/pages/faqs",
+  "status": null
+ },
+ "webwiki": {
+  "approval": null,
+  "link_type": null,
+  "quote": "Website submissions are temporarily disabled.",
+  "source": "https://www.webwiki.com/info/add-website.html",
+  "status": "Einreichung laut Webwiki derzeit deaktiviert."
+ },
+ "digital-agency-network": {
+  "approval": null,
+  "link_type": null,
+  "quote": null,
+  "source": "https://digitalagencynetwork.com/join-free-listing-tools/",
+  "status": "Kostenlose Tool-Einträge werden laut Einreichungsseite nicht mehr angeboten."
+ },
+ "saasworthy": {
+  "approval": null,
+  "link_type": null,
+  "quote": null,
+  "source": "https://mailchi.mp/caea48b0c7ac/saasworthy-product-listing",
+  "status": "Der hinterlegte Einreichungslink ist veraltet. Einreichung direkt auf saasworthy.com suchen."
+ },
+ "theres-an-ai-for-that": {
+  "approval": "Durchschnittlich 1-2 Tage Bearbeitungszeit",
+  "link_type": null,
+  "quote": "The average processing time for submissions is 1-2 days.",
+  "source": "https://theresanaiforthat.com/get-featured/",
+  "status": null
+ },
+ "futurepedia": {
+  "approval": "Verified Listing: Veröffentlichung innerhalb von 2 Werktagen (Basic Listing mit 7 Tagen ausverkauft)",
+  "link_type": null,
+  "quote": "Basic Listing $247(Sold Out) ... Published within 7 days | Verified Listing $497 ... Published within 2 business days",
+  "source": "https://www.futurepedia.io/submit-tool",
+  "status": null
+ },
+ "future-tools": {
+  "approval": "Keine Garantie und keine Rückmeldung; ist ein Tool nach einer Woche nicht gelistet, darf es erneut eingereicht werden",
+  "link_type": null,
+  "quote": "If you submitted a tool and it was not listed within a week of submission, you can resubmit it and we will review it again.",
+  "source": "https://www.futuretools.io/faq",
+  "status": null
+ },
+ "whatsthebigdata": {
+  "approval": "Prüfung in der Regel innerhalb von 2-3 Werktagen",
+  "link_type": null,
+  "quote": "Our team typically reviews submissions within 2-3 business days.",
+  "source": "https://whatsthebigdata.com/submit-new-ai-tool/",
+  "status": null
+ },
+ "top-ai-tools": {
+  "approval": "Fast Track: live innerhalb von 24-48 Stunden",
+  "link_type": null,
+  "quote": "Fast Track listings go live within 24-48 hours after submission.",
+  "source": "https://topai.tools/submit",
+  "status": null
+ },
+ "kitploit": {
+  "approval": null,
+  "link_type": null,
+  "quote": "We're Under Maintenance. Our website is currently undergoing scheduled maintenance.",
+  "source": "https://www.kitploit.com/p/submit-tool.html",
+  "status": "Website laut eigener Angabe im Wartungsmodus; Einreichungsseite derzeit nicht nutzbar."
+ },
+ "easy-with-ai": {
+  "approval": "Prüfung und Listung meist innerhalb von 24 Stunden",
+  "link_type": "dofollow",
+  "quote": "Tool submissions are usually reviewed and listed within 24 hours of being submitted. | The link to your tool will be dofollow",
+  "source": "https://easywithai.com/submit-tool/",
+  "status": null
+ },
+ "that-ai-collection": {
+  "approval": null,
+  "link_type": "dofollow",
+  "quote": "a do-follow link to your website",
+  "source": "https://thataicollection.com/submit",
+  "status": null
+ },
+ "aipure": {
+  "approval": "Listung innerhalb von 2 Werktagen",
+  "link_type": null,
+  "quote": "It takes 2 business days for your product to be listed.",
+  "source": "https://aipure.ai/submit",
+  "status": null
+ },
+ "toolify-ai": {
+  "approval": "Innerhalb von 48 Stunden gelistet, ohne Warteschlange",
+  "link_type": "dofollow",
+  "quote": "Appeared in Listing and Just Launched within 48 hours, no queue. | Your website will get no less than 6 quality dofollow links from Toolify.",
+  "source": "https://www.toolify.ai/submit",
+  "status": null
+ },
+ "lachief": {
+  "approval": "Kostenloser Eintrag: nach Freigabe bis zu 7 Tage bis zur Veröffentlichung",
+  "link_type": null,
+  "quote": "If your free listing is approved, it can take up to 7-days to go live on our platform.",
+  "source": "https://tally.so/r/w4Jb4b",
+  "status": null
+ },
+ "ai-finder": {
+  "approval": null,
+  "link_type": null,
+  "quote": null,
+  "source": "https://ai-finder.net/add",
+  "status": "Einreichungsseite ai-finder.net/add nicht abrufbar (nicht gefunden), Startseite zeigt nur eine Weiterleitung; Link vermutlich tot."
+ },
+ "ai-top-tools": {
+  "approval": "Standard-Einreichungen meist in 2-5 Werktagen geprüft, bezahlte Featured-Einträge innerhalb von 24 Stunden",
+  "link_type": "dofollow",
+  "quote": "Standard submissions are typically reviewed within 2–5 business days. Paid featured listings are reviewed within 24 hours. | with do-follow backlinks from DR 55+ sites",
+  "source": "https://aitoptools.com/help/",
+  "status": null
+ },
+ "super-tools": {
+  "approval": null,
+  "link_type": null,
+  "quote": "Email support@therundown.ai with your tool's name, URL, category, and a one-sentence description, and our team will review it for inclusion in Supertools.",
+  "source": "https://supertools.therundown.ai/submit",
+  "status": "Kein Formular mehr; Empfehlungen nur noch per E-Mail an support@therundown.ai."
+ },
+ "uneed-best": {
+  "approval": "Kostenlose Warteschlange: Launch-Termin wird zugewiesen, höchstens 5 Monate im Voraus",
+  "link_type": "dofollow ab 20 Upvotes",
+  "quote": "We assign your launch date, at most 5 months out. An upvote score of 10 to stay published, 20 for the do-follow backlink.",
+  "source": "https://www.uneed.best/pricing",
+  "status": null
+ },
+ "toolfolio": {
+  "approval": "Freigabe meist innerhalb von 24-48 Stunden",
+  "link_type": "dofollow (laut Boost-Seite)",
+  "quote": "Approval usually takes 24–48 hours | Get Listed within 24 hours - Do-follow link",
+  "source": "https://toolfolio.io/boosts",
+  "status": null
+ },
+ "altern-ai": {
+  "approval": "Prüfung meist innerhalb weniger Tage",
+  "link_type": null,
+  "quote": "Most submissions are reviewed within a few days.",
+  "source": "https://altern.ai/submit",
+  "status": null
+ },
+ "product-hunt": {
+  "approval": "Keine Vorab-Freigabe: Post selbst anlegen und planen, geht am Launch-Tag um 0:01 Uhr PST live; neue Konten müssen erst das Onboarding abschließen",
+  "link_type": null,
+  "quote": "Newly created accounts must complete the onboarding process before gaining access to post. ... The site operates on 24-hour periods in PST so your post will go live on the site at 12:01 AM PST.",
+  "source": "https://help.producthunt.com/en/articles/479557-how-to-post-a-product",
+  "status": null
+ },
+ "saashub": {
+  "approval": "Manuelle Freigabe ohne Zeitangabe; ohne eingetragene Wettbewerber landet die Einreichung am Ende der Warteschlange, verifizierte Produkte kommen schneller dran",
+  "link_type": null,
+  "quote": "The submission will be slowed down and put to the bottom of the queue if there are not listed competitors. ... Verifying your product will give it a higher priority.",
+  "source": "https://www.saashub.com/services/submit",
+  "status": null
+ },
+ "stackshare": {
+  "approval": "Neue Tools werden zur Freigabe eingereicht, keine Zeitangabe",
+  "link_type": null,
+  "quote": "Once approved, you can make edits to your page at any time. If your service is not listed, you can submit it for approval here.",
+  "source": "https://stackshare.io/vendors",
+  "status": null
+ },
+ "crunchbase": {
+  "approval": "Konto wird nach Verknüpfung mit einem Social-Profil geprüft und zum Bearbeiten freigeschaltet, bis zu 1 Werktag",
+  "link_type": null,
+  "quote": "Our team will then review your account and enable it for contribution (this may take up to one business day).",
+  "source": "https://support.crunchbase.com/hc/en-us/community/posts/26326151697555-To-start-contributing-link-your-social-network-profile-to-your-Crunchbase-account-Our-team-will-then-review-your-account-and-enable-it-for-contribution-this-may-take-up-to-one-business-day",
+  "status": null
+ },
+ "source-forge": {
+  "approval": "Sofort, Self-Service: Projekt selbst anlegen (Telefon-Verifizierung nötig)",
+  "link_type": null,
+  "quote": "If you are not currently an Admin on a project you will need to complete a phone-based verification ... When you create a new project, you automatically are given administrator rights for that particular project.",
+  "source": "https://sourceforge.net/p/forge/documentation/Create%20a%20New%20Project/",
+  "status": null
+ },
+ "ai-tools-neil-patel": {
+  "approval": null,
+  "link_type": null,
+  "quote": "Apps & Integrations. Browse Ubersuggest's apps, connectors and partners' services",
+  "source": "https://aitools.neilpatel.com/submit/",
+  "status": "Die Einreichungsseite leitet auf Ubersuggest „Apps & Integrations“ um, ein Formular gibt es nicht mehr."
+ },
+ "sidebar": {
+  "approval": "Kuratiert, Login nötig; aufgenommen werden nur neue Inhalte, keine Zeitangabe",
+  "link_type": null,
+  "quote": "Only new content is featured on Sidebar. This means if the link you're submitting has been around for longer than a few month or so, it probably won't be accepted",
+  "source": "https://sidebar.io/about",
+  "status": null
+ },
+ "software-world": {
+  "approval": "Manuell: Badge mit Link auf der eigenen Website einbauen und per E-Mail melden, keine Zeitangabe",
+  "link_type": null,
+  "quote": "You need to mention our badge with relevant research link on your website and contact to Andy to get listed.",
+  "source": "https://www.softwareworld.co/get-listed",
+  "status": null
+ },
+ "open-tools": {
+  "approval": "Nur mit bezahltem Listing-Abo",
+  "link_type": "„starker Backlink“ beworben, rel-Attribut nicht genannt",
+  "quote": "Tool submissions require a paid listing subscription. ... Listing on OpenTools website (Strong on-topic backlink)",
+  "source": "https://opentools.ai/friends/launch-tool",
+  "status": null
+ },
+ "alternative": {
+  "approval": "Mit Konto für alle offen, keine Zeitangabe",
+  "link_type": null,
+  "quote": "The submission of new software on our platform is generally open to everyone. However, a user account is required to create new entries.",
+  "source": "https://alternative.me/how-to/submit-software",
+  "status": null
+ },
+ "launchigniter": {
+  "approval": "Kostenlos: manuelle Prüfung vor Livegang, Termin nicht garantiert; bezahlt: ohne Prüf-Warteschlange, fester Termin",
+  "link_type": "kostenlos dofollow nur für die Top 3, bezahlt immer",
+  "quote": "Free launches require badge verification, go through manual review before they go live, and only top 3 products get backlinks. Basic gives you 1 guaranteed backlink launch with no review and no waiting.",
+  "source": "https://launchigniter.com/pricing",
+  "status": null,
+  "free_dofollow": false
+ },
+ "all-top-startups": {
+  "approval": "Bezahlt: Eintrag in unter 48 Stunden; kostenlose Einträge derzeit ausgesetzt (Rückstau von Hunderten)",
+  "link_type": null,
+  "quote": "Getting featured is free but we have currently suspended free listings. We are reviewing backlog of hundreds of startup submissions. You can skip the waiting queue.",
+  "source": "https://alltopstartups.com/submit-startup/",
+  "status": null
+ },
+ "ebool": {
+  "approval": "Kostenlos: rund 6 Monate; Premium, Pro und Super: 2–3 Werktage",
+  "link_type": null,
+  "quote": "Free submissions enter a standard review queue with a waiting time of around 6 months. Premium, Pro, and Super listings are reviewed and approved within 2–3 business days",
+  "source": "https://www.ebool.com/submit",
+  "status": null
+ },
+ "peerpush": {
+  "approval": "Kostenlos: Warteschlange hinter zahlenden Nutzern, kann lang sein; bezahlt sofort live",
+  "link_type": null,
+  "quote": "There is a free option, but free submissions wait in the launch queue, which can be long, and the product is not visible until its slot. Paid plans go live instantly or on the date you pick",
+  "source": "https://peerpush.com/",
+  "status": null
+ },
+ "aura-plus-plus": {
+  "approval": "Meist 24–48 Stunden, Premium wird bevorzugt geprüft",
+  "link_type": "dofollow garantiert nur bei Premium",
+  "quote": "Most projects are reviewed and approved within 24-48 hours. Premium and Premium Plus projects receive priority review.",
+  "source": "https://auraplusplus.com/faq",
+  "status": null,
+  "free_dofollow": false
+ },
+ "dev-hunt": {
+  "approval": "Eintrag kostenlos sofort als eigene Seite; Launch-Woche gegen Gebühr frei wählbar",
+  "link_type": "kostenlos nofollow, bezahlter Launch dofollow",
+  "quote": "Listing a tool is free: every tool gets a permanent page with a nofollow link. Launching costs $19 once: you choose the launch week, get a spot in the newsletter, and your link becomes dofollow.",
+  "source": "https://devhunt.org/faq",
+  "status": null,
+  "free_dofollow": false
+ },
+ "software-suggest": {
+  "approval": "8 bis 48 Arbeitsstunden, Prüfung in Eingangsreihenfolge (Support-Artikel von 2020)",
+  "link_type": null,
+  "quote": "All products submitted are reviewed in the order in which they are received. It can take over 8 to 48 working hours to approve your software.",
+  "source": "https://softwaresuggestsupport.freshdesk.com/support/solutions/articles/33000204427-when-will-my-listing-go-live-",
+  "status": null
+ },
+ "dokey-ai": {
+  "approval": "Kostenloses Paket: Prüfung in 48 Stunden (Partner-Link im Footer nötig); bezahltes Paket: 24 Stunden",
+  "link_type": "dofollow beim bezahlten Paket genannt",
+  "quote": "Review in 24 hours - Launched on Featured - Get dofollow links, ~20 backlinks - Listing in open-sourced data - Listing on website forever",
+  "source": "https://dokeyai.com/pricing",
+  "status": null
+ },
+ "launching-next": {
+  "approval": "Kostenlos: tägliche Sichtung ohne Garantie; Prüfung innerhalb 1 Werktag nur mit 99-$-Upgrade",
+  "link_type": null,
+  "quote": "We review submissions every day, and you'll receive an email if we publish your startup. Submitting to Launching Next is free, but if you want your startup to be considered for publication within 1-business day, we offer a $99 upgrade on the next page.",
+  "source": "https://www.launchingnext.com/submit/",
+  "status": null
+ },
+ "tool-directory": {
+  "approval": "Median 5 Werktage, jede Einreichung von Hand geprüft",
+  "link_type": null,
+  "quote": "An editor compares the submission against our criteria. Median time: 5 working days. We may write back with questions.",
+  "source": "https://tooldirectory.ai/submit-tool",
+  "status": null
+ },
+ "basedtools": {
+  "approval": "Kostenlos: Prüfung in 24 Stunden (Backlink und DR über 15 nötig); Premium sofort live",
+  "link_type": "dofollow beim Premium-Weg genannt",
+  "quote": "Free Track $0 Add below code to your home page, your submission will be reviewed within 24 hours. Make sure your tool has >15DR to be listed.",
+  "source": "https://www.basedtools.ai/submit",
+  "status": null
+ },
+ "tiny-startups": {
+  "approval": "Jeder Eintrag wird von Hand freigegeben, keine Zeitangabe",
+  "link_type": "dofollow",
+  "quote": "Earn a powerful DR 71+ do-follow backlink to boost your SEO & AI visibility",
+  "source": "https://www.tinystartups.com/submit",
+  "status": null
+ },
+ "dang-ai": {
+  "approval": "Kostenlos: bis zu 4 Wochen (Backlink nötig); Basic 49 $: rund 4 Tage",
+  "link_type": null,
+  "quote": "Basic $49 Skip the backlink and get reviewed in about 4 days with a Featured badge. - No backlink required - 4 day review time",
+  "source": "https://dang.ai/pricing",
+  "status": null
+ },
+ "ai-best-tools": {
+  "approval": "Nur bezahlt (6,90 $), dann sofort gelistet",
+  "link_type": null,
+  "quote": "Regular Listing $6.9 9.9 Listed to our website immediately Update product information anytime",
+  "source": "https://aibest.tools/submit",
+  "status": null
+ },
+ "launched-site": {
+  "approval": null,
+  "link_type": null,
+  "quote": "What Is LAUNCHED? The Fastest AI Website Builder for Real Businesses",
+  "source": "https://launched.site/submit",
+  "status": "Kein Verzeichnis mehr: Die Einreichungsseite zeigt nur noch einen KI-Website-Baukasten, kein Formular."
+ },
+ "aitools-fyi": {
+  "approval": null,
+  "link_type": null,
+  "quote": "Includes submission to 1 established AI tools directory with DR 40+ at the time of submission. Boost My Tool covers any applicable directory submission fee.",
+  "source": "https://aitools.fyi/submit",
+  "status": "Kein eigener Eintrag mehr: /submit verkauft nur noch Einreichungen bei anderen Verzeichnissen."
+ },
+ "appscribed": {
+  "approval": "Nur bezahlt: 24–48 Stunden nach redaktioneller Prüfung, bei Ablehnung Erstattung",
+  "link_type": null,
+  "quote": "When will my tool get listed? Within 24-48 hours. If the tool doesn’t fit our needs, we will issue a refund within 48 hours.",
+  "source": "https://appscribed.com/product-list/",
+  "status": null
+ },
+ "ai-tool-trek": {
+  "approval": "Kostenlos (mit Backlink auf der eigenen Startseite): Prüfung in 72 Stunden, Veröffentlichung binnen 15 Tagen",
+  "link_type": "dofollow",
+  "quote": "Reviewed within 72 hours and listed within 15 days Build a dofollow backlink foundation Your submission will be removed once the backlink is removed",
+  "source": "https://aitooltrek.com/submit",
+  "status": null
+ },
+ "botsfloor": {
+  "approval": "Bezahlt: meist 24–48 Stunden (die Seite heißt inzwischen BotStash)",
+  "link_type": null,
+  "quote": "How quickly will my product be listed? Most paid submissions are reviewed and published within 24-48 hours.",
+  "source": "https://botsfloor.com/submit",
+  "status": null
+ },
+ "startup-pitch": {
+  "approval": "Bezahlte Stufen in 24 Stunden, günstigste Stufe in der Warteschlange ohne Zeitangabe",
+  "link_type": null,
+  "quote": "Pitches are processed within 24 hours and Jump The Queue.",
+  "source": "https://thestartuppitch.com/post-a-pitch/",
+  "status": null
+ },
+ "bens-bites-news": {
+  "approval": null,
+  "link_type": null,
+  "quote": "Ben's Bites | Substack. What I'm learning building with agents (plus tools worth trying)",
+  "source": "https://news.bensbites.com/submit",
+  "status": "Kein News-Board mehr: Die Einreichungsseite leitet auf den Ben's-Bites-Newsletter bei Substack um."
+ },
+ "alteropen": {
+  "approval": "Bezahltes Paket: Prüfung in 24 Stunden, kein Backlink nötig",
+  "link_type": null,
+  "quote": "Submit without backlink! ... No backlink required - Review in 24 hours - Free update in 7 days - Listing on website forever",
+  "source": "https://alteropen.com/submit/pack",
+  "status": null
+ },
+ "yaatd": {
+  "approval": "Kostenlos: Veröffentlichung nach 90 Tagen Warteschlange; bezahlt sofort live",
+  "link_type": "kostenlos nofollow, bezahlt dofollow",
+  "free_dofollow": false,
+  "quote": "Published after a 90-day editorial queue - Standard placement, English only - nofollow backlink",
+  "source": "https://yaatd.com/submit",
+  "status": null
+ },
+ "microlaunch": {
+  "approval": null,
+  "link_type": "dofollow als Leistung des bezahlten Pakets beworben",
+  "quote": "Lifetime SEO DR64+ Do-follow Backlinks.",
+  "source": "https://microlaunch.net/premium",
+  "status": null
+ },
+ "toolsfine": {
+  "approval": "Bezahlt: Prüfung in 3 Werktagen",
+  "link_type": null,
+  "quote": "Review SLA is 3 business days, weekends excluded.",
+  "source": "https://toolsfine.com/submit",
+  "status": null
+ },
+ "launched": {
+  "approval": "In der Regel bis zu 24 Stunden bis zur Veröffentlichung",
+  "link_type": null,
+  "quote": "Typically it takes up to 24 hours from submission to publication (given the review was positive).",
+  "source": "https://launched.io/newsubmission",
+  "status": null
+ },
+ "startup-heroes": {
+  "approval": "Nach Zahlung (10 $) meist in 30 Minuten oder weniger live",
+  "link_type": null,
+  "quote": "For new startups, after payment and submission you can typically be listed in 30 mins or less.",
+  "source": "https://startupheroes.io/submit/",
+  "status": null
+ },
+ "aistage": {
+  "approval": "Nur bezahlt: Prüfung in 48 Stunden",
+  "link_type": "dofollow",
+  "quote": "Review in 48 hours - Listing & Traffic Forever - Get DR 70+ dofollow backlinks",
+  "source": "https://aistage.net/pricing",
+  "status": null
+ },
+ "find-my-ai-tool": {
+  "approval": "Nur bezahlt; jede Einreichung wird vom Team geprüft, keine Zeitangabe",
+  "link_type": null,
+  "quote": "Every submission is reviewed by our team before it is published. You will be notified by email once your AI tool is live.",
+  "source": "https://findmyaitool.com/submit-tool/",
+  "status": null
+ },
+ "startup-buffer": {
+  "approval": "Kostenlos: 1–2 Monate wegen hoher Nachfrage",
+  "link_type": null,
+  "quote": "How long does review take? Reviews can take 1-2 months due to high demand. We'll email you when it's processed.",
+  "source": "https://startupbuffer.com/site/contact",
+  "status": null
+ },
+ "ai-tool-net": {
+  "approval": "Kostenlos: Veröffentlichung binnen 30 Tagen; bezahlte Schnellspur in 24 Stunden",
+  "link_type": "dofollow",
+  "quote": "Free - Published within 30 days - Basic tool submission - Do-Follow SEO backlink",
+  "source": "https://www.aitoolnet.com/submit",
+  "status": null
+ },
+ "digitalsamaritan": {
+  "approval": null,
+  "link_type": null,
+  "quote": "BADAK178 | Orchard – Smartphone Refurbished Berkualitas | Hemat Hingga 70%",
+  "source": "https://www.digitalsamaritan.co/add-your-product",
+  "status": "Die Einreichungsseite zeigt einen fremden Smartphone-Shop (vermutlich gekapert), kein Formular."
+ },
+ "paggu": {
+  "approval": "Kostenlos, Besprechung nur wenn die Kriterien passen, keine Zeitangabe; gegen Gebühr sofort",
+  "link_type": null,
+  "quote": "Submitting your startup is absolutely free. In case you want to jump the line and get your startup reviewed immediately, we might charge a small fee.",
+  "source": "https://www.paggu.com/submit-your-startup/",
+  "status": null
+ },
+ "rankyourai": {
+  "approval": "Nur bezahlt (29 $): in 48 Stunden oder weniger veröffentlicht",
+  "link_type": "dofollow",
+  "quote": "Featured Listing ✅ | SEO DoFollow Backlink ✅ | Listing Indexed on Google ✅ | Published in 48h or less ✅ | Price (one-time payment) $29 USD",
+  "source": "https://rankyourai.com/p/submit/",
+  "status": null
+ },
+ "trustmrr": {
+  "approval": "Basis-Eintrag kostenlos, setzt verifizierten Umsatz über einen Zahlungsanbieter voraus; keine Zeitangabe",
+  "link_type": "dofollow nur als bezahltes Zusatzpaket (19 $)",
+  "quote": "The current one-time add-ons for regular startup listings are Dofollow authority link ($19), AI visibility boost ($79), and Side-panel sponsor spot, which starts at $399 for 7 days",
+  "source": "https://trustmrr.com/faq",
+  "status": null
+ },
+ "saas-ai-tools": {
+  "approval": "Kostenlos in der normalen Warteschlange ohne Zeitangabe; Featured in 3 Werktagen",
+  "link_type": null,
+  "quote": "Can I still submit my tool for free? Yes. Free submissions are still open. They join the normal review queue and do not include a featured spot.",
+  "source": "https://saasaitools.com/get-featured/",
+  "status": null
+ },
+ "mars-ai-directory": {
+  "approval": "Kostenlos: rund 3 Monate; gegen 49 $ sofort",
+  "link_type": "kostenlos nofollow, bezahlt dofollow",
+  "free_dofollow": false,
+  "quote": "Approximately, we add new tools within three months. We will publish it with a no-follow link. However, you can publish your tool immediately and get a forever do-follow link.",
+  "source": "https://www.marsx.dev/ai-startups",
+  "status": null
+ },
+ "ai-tools-one": {
+  "approval": "Nur bezahlt: nach Prüfung binnen 2 Werktagen live",
+  "link_type": null,
+  "quote": "After you submit, we review your tool to ensure it meets our guidelines. If all looks good, your tool will be live within 2 business days.",
+  "source": "https://aitoolsone.com/submit-ai-tool/",
+  "status": null
+ },
+ "post-make": {
+  "approval": "Kostenlos mit Postmake-Badge oder bezahlt ohne Badge; jede Einreichung von Hand geprüft, keine Zeitangabe",
+  "link_type": null,
+  "quote": "Get listed for free with a Postmake badge, or choose a paid plan for a permanent listing with no badge requirement. We manually review all submissions to make sure they're a good fit for the directory.",
+  "source": "https://postmake.io/submit",
+  "status": null
+ },
+ "saas-po": {
+  "approval": "Prüfung „so schnell wie möglich“, Aufnahme nicht garantiert",
+  "link_type": null,
+  "quote": "Know a great design you think we should feature? Fill out the form below and we'll review it ASAP!",
+  "source": "https://www.saaspo.com/submit",
+  "status": null
+ },
+ "anyfp": {
+  "approval": "Kostenlos, von einem Menschen geprüft, keine Zeitangabe",
+  "link_type": null,
+  "quote": "Want your AI tool in the catalog? Use the submission form. It's free and reviewed by a human.",
+  "source": "https://anyfp.com/contact/",
+  "status": null
+ },
+ "crazy-about-startups": {
+  "approval": null,
+  "link_type": null,
+  "quote": "A new era of Crazy about Startups is coming. We are rebuilding Crazy About Startups from the ground up with powerful tools, curated resources, and a stronger founder community.",
+  "source": "https://crazyaboutstartups.com/",
+  "status": "Die Seite wird komplett neu aufgebaut, Einreichen ist derzeit nicht möglich."
+ },
+ "domore": {
+  "approval": "Keine Zeitangabe; bezahlter Eintrag kann abgelehnt werden, dann sofortige Erstattung",
+  "link_type": "dofollow nur beim bezahlten Eintrag",
+  "quote": "Pro Listing (lifetime) - Highlighted background for your project in the catalog. - Do-follow links leading to your portal",
+  "source": "https://domore.ai/contact-us",
+  "status": null
+ },
+ "next-gen-tools": {
+  "approval": "Jedes Tool wird von Hand geprüft, keine Zeitangabe; Affiliate-Links werden abgelehnt",
+  "link_type": null,
+  "quote": "We do review every tool manually before publishing it on the site. Do not submit your affiliate link to a tool. It will not be approved.",
+  "source": "https://nextgentools.me/submit-your-tool",
+  "status": null
+ },
+ "tipseason": {
+  "approval": "Kostenlos: Warteschlange über 90 Tage; bezahlt (ab 49 $) in 24–48 Stunden",
+  "link_type": "dofollow beim bezahlten Eintrag beworben",
+  "quote": "Get maximum visibility for your AI tool, reach thousands of potential customers, and rank better on Google with a sponsored post and do-follow backlink.",
+  "source": "https://tipseason.com/ai-tools/submit",
+  "status": null
+ },
+ "simple-lister": {
+  "approval": "Kostenlose Plätze für die nächsten 9 Monate ausgebucht; bezahlt (15 €) mit Wunschtermin",
+  "link_type": null,
+  "quote": "All slots for the next 9 months are full! Only paid submissions are being accepted.",
+  "source": "https://simplelister.com/submit",
+  "status": null
+ },
+ "free-ai-tool": {
+  "approval": null,
+  "link_type": null,
+  "quote": "Submissions Paused. We are not currently accepting new paid submissions.",
+  "source": "https://freeaitool.ai/submit",
+  "status": "Einreichungen laut FreeAITool derzeit pausiert."
+ },
+ "educator-tools": {
+  "approval": "Kostenlos, redaktionelle Prüfung vor Freischaltung, keine Zeitangabe",
+  "link_type": null,
+  "quote": "Our editorial team checks the listing against our standards. Once approved, your listing goes live with a public profile and review section.",
+  "source": "https://aieducator.tools/for-companies",
+  "status": null
+ },
+ "startups-fyi": {
+  "approval": "Jede Einreichung wird geprüft, bei Ablehnung sofortige Erstattung; keine Zeitangabe",
+  "link_type": null,
+  "quote": "All submissions are vetted and any startup not meeting our quality standards will be rejected and refunded immediately.",
+  "source": "https://www.startups.fyi/boost",
+  "status": null
+ },
+ "startup-spotlight": {
+  "approval": "Nur per bezahltem Gebot (ab 10 $), danach sofort live",
+  "link_type": null,
+  "quote": "Bids start at $10. Bidding keeps the bar high — it filters out spam and low-effort submissions",
+  "source": "https://www.startupspotlight.co/submit",
+  "status": null
+ }
+}
