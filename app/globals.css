@@ -5484,3 +5484,50 @@ h2 a {
     border-radius: 8px;
     padding: 0.9rem;
 }
+
+/* Gratis-Guides: Karte mit Titelbild und Formular */
+.guide-karte {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 1.4rem;
+    align-items: start;
+    margin: 2.4rem 0;
+    padding: 1.2rem;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.guide-karte h2 {
+    margin-top: 0.2em;
+}
+
+.guide-cover {
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background: var(--neutral-bg);
+}
+
+.guide-formular {
+    margin: 1rem 0;
+}
+
+.guide-frei {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+@media (max-width: 640px) {
+    .guide-karte {
+        grid-template-columns: 1fr;
+    }
+
+    .guide-cover {
+        max-width: 220px;
+    }
+}

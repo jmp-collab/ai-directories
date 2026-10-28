@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { getGuides } from '../lib/guides'
 import './globals.css'
 import { SITE_URL, SITE_NAME, SITE_TAGLINE, REPO_URL, withBase } from '../lib/site'
 import Reveal from './components/Reveal'
@@ -99,6 +100,7 @@ const footerSpalten = () => [
             ['/prompt-check', 'Prompt-Check'],
             ['/skills', 'KI-Skills'],
             ['/tutorials', 'Tutorials'],
+            ...(getGuides().length ? [['/guides', 'Gratis-Guides']] : []),
             ['/downloads', 'Downloads'],
             ['/ratgeber', 'Ratgeber'],
             ['/glossar', 'KI-Glossar'],

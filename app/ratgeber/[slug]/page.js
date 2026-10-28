@@ -10,6 +10,8 @@ import { absoluteUrl } from '../../../lib/site'
 import { autorRef } from '../../../lib/autor'
 import Pruefer from '../../components/Pruefer'
 import Vernetzt, { seitenPfad } from '../../components/Vernetzt'
+import GuideGate from '../../components/GuideGate'
+import { guideFuerRatgeber } from '../../../lib/guides'
 
 export const dynamicParams = false
 
@@ -114,6 +116,15 @@ function ArtikelPage({ params }) {
                 </section>
             )}
             <Pruefer datum={a.geprueft} />
+            {guideFuerRatgeber(a.slug) && (
+                <aside className="leadform guide-formular" aria-label="Gratis-Guide als PDF">
+                    <p className="leadform-titel">📥 Diesen Ratgeber als PDF-Guide mitnehmen</p>
+                    <p>
+                        <strong>{guideFuerRatgeber(a.slug).titel}</strong>: kompakt zum Ausdrucken und Abhaken. E-Mail eintragen, sofort herunterladen. <Link href="/guides">Alle Guides</Link>
+                    </p>
+                    <GuideGate guide={guideFuerRatgeber(a.slug)} kompakt />
+                </aside>
+            )}
             {a.faq && (
                 <section aria-labelledby="faq">
                     <h2 id="faq">Häufige Fragen 🙋</h2>
