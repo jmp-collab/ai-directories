@@ -7,6 +7,7 @@ import { ARTIKEL } from '../../lib/ratgeber'
 import { getCheck, checkCount, CHECK_STAND } from '../../lib/checks'
 import { getTools, TOOLS_STAND } from '../../lib/tools'
 import { getPrompts } from '../../lib/prompts'
+import { getSkills, ALLE_BEFEHL } from '../../lib/skills'
 import { getTutorials } from '../../lib/tutorials'
 import { getKbRubriken, kbStats, KB_SOURCES } from '../../lib/kb'
 import { TESTS, getTestKategorien } from '../../lib/kitests'
@@ -104,6 +105,12 @@ Prompt-Check (Score für eigene Prompts): ${absoluteUrl('/prompt-check')} · Dow
 Vorlagen auf Deutsch zum Ausfüllen, mit Absprung zu ChatGPT, Claude, Perplexity und Grok. Eigener Prompt mit Score: ${absoluteUrl('/prompt-baukasten')}
 
 ${getPrompts().map((p) => `- [${p.title}](${absoluteUrl(`/prompts/${p.slug}`)}): ${p.ziel}`).join('\n')}
+
+## KI-Skills für alle LLMs
+
+Deutsche Agent Skills (SKILL.md, MIT-Lizenz) als ZIP für ChatGPT, Claude und Gemini oder per Befehl für Coding-Agenten: \`${ALLE_BEFEHL}\`. Übersicht: ${absoluteUrl('/skills')}
+
+${getSkills().map((s) => `- [${s.titel}](${absoluteUrl(`/skills/${s.name}`)}): ${s.nutzen}`).join('\n')}
 
 ## KI-Tools (Angaben laut Anbieter, Stand ${TOOLS_STAND})
 ${getTools().map((t) => `- [${t.name}](${absoluteUrl(`/tools/${t.slug}`)}): ${t.category}. ${t.summary_de} Gratis-Tarif: ${t.free_plan === true ? 'ja' : t.free_plan === false ? 'nein' : 'keine Angabe'}. Bezahlt ab: ${t.price_from || 'keine Angabe'}.`).join('\n')}

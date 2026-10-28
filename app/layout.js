@@ -97,6 +97,7 @@ const footerSpalten = () => [
             ['/prompts/archiv', 'Prompt-Archiv'],
             ['/prompt-baukasten', 'Prompt-Baukasten'],
             ['/prompt-check', 'Prompt-Check'],
+            ['/skills', 'KI-Skills'],
             ['/tutorials', 'Tutorials'],
             ['/downloads', 'Downloads'],
             ['/ratgeber', 'Ratgeber'],
@@ -169,6 +170,9 @@ export default function RootLayout({ children }) {
                                 </li>
                                 <li>
                                     <Link href="/prompts">Prompts 💬</Link>
+                                </li>
+                                <li>
+                                    <Link href="/skills">Skills 🧩</Link>
                                 </li>
                                 <li>
                                     <Link href="/tools">Tools 🛠️</Link>

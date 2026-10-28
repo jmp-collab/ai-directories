@@ -24,6 +24,7 @@ const KOMPASS = [
     ['/prompts/archiv', 'Prompt-Archiv (103 Rollen)', 'prompt', false],
     ['/prompt-baukasten', 'Prompt-Baukasten', 'prompt', false],
     ['/prompt-check', 'Prompt-Check', 'lupe', true],
+    ['/skills', 'KI-Skills für alle LLMs', 'werkzeug', true],
     ['/tutorials', 'Tutorials', 'pokal', true],
     ['/downloads', 'Gratis-Downloads', 'herz', true],
     ['/ki-tools', 'KI-Tool-Datenbank', 'lupe', false],

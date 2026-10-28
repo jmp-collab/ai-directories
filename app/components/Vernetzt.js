@@ -33,6 +33,7 @@ const TYPEN = {
     liste: ['📋', 'Liste'],
     'ki-test': ['🧪', 'KI-Test'],
     'ki-news': ['📰', 'KI-News'],
+    skills: ['🧩', 'Skill'],
 }
 const typVon = (p) => {
     const t = p.split('/').filter(Boolean)
@@ -116,6 +117,13 @@ const WISSEN = {
             'Wie prüft AIGeddon die News?',
             'Jede Meldung wird an den offiziellen Seiten der Anbieter, Behörden oder Projekte abgeglichen, Presseberichte zählen nur als Ergänzung. Angaben der Hersteller stehen als „laut Anbieter“ da, Kundenzitate sind keine unabhängigen Tests.',
             ['/transparenz/', 'Transparenz'],
+        ],
+    ],
+    skills: [
+        [
+            'Woher stammen die Skills?',
+            'Grundlage ist die Sammlung marketingskills von Corey Haines unter MIT-Lizenz. AIGeddon hat sie übersetzt, gekürzt und an den deutschsprachigen Markt angepasst. Die Skills enthalten nur Text, keine Skripte.',
+            ['/skills/', 'Alle Skills'],
         ],
     ],
     rechner: [

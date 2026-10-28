@@ -14,6 +14,7 @@ import { getTestKategorien } from '../lib/kitests'
 import { RECHNER } from '../lib/rechner'
 import { MODELLE, FAMILIEN } from '../lib/modelle'
 import { NEWS } from '../lib/news'
+import { getSkills } from '../lib/skills'
 import { RUBRIK_RATGEBER } from '../lib/rubrik-ratgeber'
 import { dateiStand, seitenStand, spaetestes } from '../lib/stand'
 
@@ -31,6 +32,7 @@ const STATISCH = {
     '/tool-vergleiche': ['lib/comparisons.js'],
     '/top-50': ['db/directories.json'],
     '/prompts': ['lib/prompts.js'],
+    '/skills': ['lib/skills.js', 'db/skills.json'],
     '/prompt-baukasten': [],
     '/prompt-check': [],
     '/tutorials': ['lib/tutorials.js'],
@@ -78,6 +80,7 @@ export default function sitemap() {
             .map((t) => eintrag(`/ki-tools/tool/${t.slug}`, dateiStand('db/kb-tools.json', 'db/texte/kb.json'), 'monthly', 0.5)),
         ...getTutorials().map((t) => eintrag(`/tutorials/${t.slug}`, dateiStand('lib/tutorials.js'), 'monthly', 0.8)),
         ...getPrompts().map((p) => eintrag(`/prompts/${p.slug}`, dateiStand('lib/prompts.js', 'db/texte/prompts.json'), 'monthly', 0.7)),
+        ...getSkills().map((s) => eintrag(`/skills/${s.name}`, dateiStand(`skills/${s.name}/SKILL.md`, 'lib/skills.js'), 'monthly', 0.7)),
         ...promptsByKategorie()
             .filter((k) => k.prompts.length && KATEGORIE_TEXTE[k.key])
             .map((k) => eintrag(`/prompts/kategorie/${k.key}`, dateiStand('lib/prompts.js', 'lib/prompt-kategorien.js'), 'monthly', 0.7)),

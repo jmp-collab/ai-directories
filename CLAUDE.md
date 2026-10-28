@@ -16,6 +16,10 @@
 - Neue Seiten oder neue Tool-Erwähnungen (News, Ratgeber, Vergleiche, Prompts): vorhandene aktive Partnerlinks einbauen, wo das Tool genannt und verlinkt wird. Für andere Webprojekte von Jean gilt dasselbe Register als Quelle: https://github.com/jmp-collab/ai-directories/blob/main/db/partners.json
 - Bei Programmen ohne Anmeldung (`programm: "nein"`, `"pausiert/geschlossen"`) keinen Link erfinden. Neue Programme nur mit offizieller Quelle eintragen.
 
+## Skills
+
+- Rubrik /skills: Inhalte liegen als `skills/<name>/SKILL.md` (Agent-Skills-Standard, Ordnername = name, keine Skripte). Nach jeder Änderung `npm run skills` (prüft Frontmatter, schreibt `db/skills.json` und `public/skills-dl/*.zip`), dann bauen. Anzeige-Daten und Verknüpfungen in `lib/skills.js` (SKILL_META). Grundlage marketingskills (MIT), Herkunft im metadata.source jedes Skills angeben.
+
 ## Allgemein
 
 - Datenschutz Jean: Auf der Website und im Repo stehen über Jean nur Name, Master of Arts Wirtschaftswissenschaften (Universität Trier) und die Stelle als Senior SEO/SGE Manager bei der MotoMobilityGroup. Keine Fotos, kein Wohnort, keine Familie, kein Aussehen, keine Hobbys, keine früheren Stationen, auch nicht in Witzen oder Beispielen.

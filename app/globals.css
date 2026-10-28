@@ -5452,3 +5452,35 @@ h2 a {
     margin: 0;
     font-size: 0.95rem;
 }
+
+/* Skills: Installationskasten und Quelltext-Ansicht */
+.skill-install {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 0.4rem 1.1rem 0.8rem;
+    margin: 1.6rem 0;
+}
+
+.skill-install h2 {
+    margin-top: 0.8em;
+}
+
+.skill-install code {
+    display: inline-block;
+    margin: 0.15rem 0.4rem 0.15rem 0;
+}
+
+.skill-quelltext {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    max-height: 32rem;
+    overflow: auto;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    background: var(--neutral-bg);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 0.9rem;
+}
