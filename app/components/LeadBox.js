@@ -8,7 +8,7 @@ import { NEWSLETTER_NAME, NEWSLETTER_URL, YOUTUBE_SUBSCRIBE_URL } from '../../li
 const SPRUECHE = [
     'KI-Tools, Launches und der ganz normale KI-Wahnsinn als Video. Abonnieren, bevor die Maschinen es tun.',
     'Jean testet, flucht, lacht und erklärt. Auf Video, damit du es nicht selbst tun musst.',
-    'Neue Tools, ehrliche Urteile, gelegentlich ein Bart im Bild. Der Kanal für KI ohne Glitzer.',
+    'Neue Tools, ehrliche Urteile, kein Hochglanz. Der Kanal für KI ohne Glitzer.',
     'Hier zerlegt Jean KI-Tools wie andere Leute Vergaser. Mit Schraubenzieher und Humor.',
     'Prompts live ausprobiert, Fehler inklusive. Lernen durch Zuschauen war nie entspannter.',
     'Weniger Hype, mehr Handgriffe: KI-Videos für Leute, die Ergebnisse wollen.',
@@ -21,7 +21,7 @@ const SPRUECHE = [
     'Zwischen zwei Launches erklärt Jean, was sich wirklich lohnt. Abonnieren tut nicht weh.',
     'KI-Wissen in kleinen Portionen. Wie Tapas, nur mit mehr Prompts.',
     'Für Gründer, Neugierige und Skeptiker: KI-Videos mit Haltung und Herz.',
-    'Jede Woche ein Stück KI-Alltag, ehrlich eingeordnet. Der Bart ist echt, die Tests auch.',
+    'Jede Woche ein Stück KI-Alltag, ehrlich eingeordnet. Die Tests sind echt, die Witze auch.',
     'Videos über KI, die man nicht dreimal anschauen muss, um sie zu verstehen.',
     'Hier geht es um Werkzeuge, nicht um Wunder. KI-Videos mit Bodenhaftung.',
     'Wenn du lieber zuschaust als liest: Jeans Kanal hat die bewegten Bilder dazu.',

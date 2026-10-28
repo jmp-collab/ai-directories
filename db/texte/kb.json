@@ -1653,7 +1653,7 @@
  },
  "muse-spark-open": {
   "take": "Muse Spark Open ist Metas offenes Modell für Coding und lange Agentenaufgaben, mit einer Million Token Kontext, der Eintrag nennt als Beispiel zwei Mac Studios mit je 512 GB. Gewichte gratis, API kostenpflichtig, Lizenz mit eingeschränkten kommerziellen Rechten. Für die meisten von uns eher ein Schaufenster als ein Werkzeug.",
-  "jean": "Zwei Mac Studios als Mindestausstattung. Mein Moped ist billiger."
+  "jean": "Zwei Mac Studios als Mindestausstattung. Ein gebrauchter Kleinwagen ist billiger."
  },
  "musiclm": {
   "take": "MusicLM ist ein Modell von Google Research, das aus Textbeschreibungen Musik in hoher Qualität erzeugt. Für Musikneugierige und alle, die verfolgen, was in der KI-Forschung passiert. Zwei der drei Listen erwähnen es. Der Link führt auf eine Forschungsseite, rechne also eher mit Hörbeispielen und Papers als mit einer fertigen App zum Losklicken.",
@@ -2437,7 +2437,7 @@
  },
  "splash-pro": {
   "take": "Intuitive Werkzeuge zur Musikerstellung für alle Könnensstufen, so beschreibt die Quelle Splash Pro. Klingt nach Einstieg für Anfänger und Spielwiese für Fortgeschrittene. Die Info stammt aus einer einzelnen Liste und bleibt vage, also lieber selbst reinhören, bevor du dich festlegst.",
-  "jean": "Musik machen ohne Notenlesen. Mein Nachbar hofft auf Kopfhörer."
+  "jean": "Musik machen ohne Notenlesen. Die Nachbarn hoffen auf Kopfhörer."
  },
  "stable-audio": {
   "take": "Stable Audio von Stability AI erzeugt Musik und Soundeffekte aus Textprompts, laut Liste auch komplette Tracks; aktuell ist Version 3.0. Spannend für Creator, die eigene Klangbetten brauchen. Es gibt Gratis und Bezahlt, und gerade bei kommerzieller Nutzung entscheidet die Stufe, was du darfst.",

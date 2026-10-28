@@ -50,7 +50,7 @@ export const RANKS = [
     [5, 'Backlink-Lehrling', 'Fünf Einträge. Die Formulare kennen deinen Namen.'],
     [15, 'Verzeichnis-Veteran', 'Fünfzehn! Deine Zwischenablage braucht Urlaub.'],
     [30, 'Backlink-Baron', 'Dreißig Einträge. Du bist jetzt offiziell schwer zu ignorieren.'],
-    [60, 'Jean-Level', 'Sechzig. Bart wächst automatisch. Willkommen im Club.'],
+    [60, 'Jean-Level', 'Sechzig. Ab jetzt grüßt dich das Maskottchen persönlich.'],
 ]
 
 export const rankFor = (n) => [...RANKS].reverse().find(([min]) => n >= min)

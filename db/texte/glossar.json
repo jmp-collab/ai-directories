@@ -255,7 +255,7 @@
   "merksatz": "Erst nachdenken, dann antworten: stark beim Knobeln, langsamer im Alltag."
  },
  "rollen-prompt": {
-  "bild": "Sag deinem Kumpel: „Stell dir vor, du bist TÜV-Prüfer und schaust dir meine Simson an.“ Plötzlich achtet er auf Bremsen und Licht statt auf die Lackfarbe. Ein echter Prüfer wird er dadurch aber nicht: Die KI klingt nach Fachmann, weiß aber nicht mehr als vorher.",
+  "bild": "Sag deinem Kumpel: „Stell dir vor, du bist TÜV-Prüfer und schaust dir diese Simson an.“ Plötzlich achtet er auf Bremsen und Licht statt auf die Lackfarbe. Ein echter Prüfer wird er dadurch aber nicht: Die KI klingt nach Fachmann, weiß aber nicht mehr als vorher.",
   "beispiel": "„Du bist erfahrene Lektorin, prüfe diesen Text auf Füllwörter und schiefe Bilder“ bringt in ChatGPT eine strengere, fachlichere Korrektur als ein schlichtes „Korrigier das mal“.",
   "merksatz": "Die Rolle ändert den Blickwinkel, nicht das Wissen."
  },

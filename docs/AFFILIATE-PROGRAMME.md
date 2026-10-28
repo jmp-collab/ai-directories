@@ -2,7 +2,7 @@
 
 Stand: 23. Oktober 2026. Jede Zeile ist auf der Seite des Anbieters selbst oder seiner Seite bei PartnerStack, Rewardful oder Dub geprüft. Provisionen wörtlich übernommen, wo möglich.
 
-**Anmelden mit einer privaten oder AIGeddon-Adresse, nicht mit der Racing-Planet-Mail.** Nach der Freischaltung den Partnerlink im zentralen Register `db/partners.json` eintragen (`status: "aktiv"`, `partner_link`), Übersicht in `docs/PARTNERLINKS.md`. Die Seite kennzeichnet den Link dann automatisch mit * und `rel="sponsored"`.
+**Anmelden mit einer privaten oder AIGeddon-Adresse, nicht mit der Arbeitsadresse.** Nach der Freischaltung den Partnerlink im zentralen Register `db/partners.json` eintragen (`status: "aktiv"`, `partner_link`), Übersicht in `docs/PARTNERLINKS.md`. Die Seite kennzeichnet den Link dann automatisch mit * und `rel="sponsored"`.
 
 ## Priorität 1: sofort anmelden (wiederkehrend oder hoher Betrag, passt genau zur Zielgruppe)
 

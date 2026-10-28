@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import { withBase } from '../../lib/site'
+import JeanIcon from './JeanIcon'
 
 // Autorenbox unter redaktionellen Inhalten: wer geschrieben und geprüft hat, wann, und nach welchen Regeln.
 export default function Pruefer({ datum }) {
     return (
         <aside className="pruefer" aria-label="Autor und Prüfung">
-            <img src={withBase('/jean.jpg')} alt="" width="56" height="56" loading="lazy" />
+            <JeanIcon size={56} />
             <p>
                 <strong>Geschrieben und geprüft von </strong>
                 <Link href="/ueber-jean">Jean Maurice Port</Link>, SEO-Manager.

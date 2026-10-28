@@ -5,7 +5,7 @@ const JEAN_SVG =
 export const HELLO = [
     'Moin! Ich bin Jean, SEO-Manager und hauptberuflicher Backlink-Sammler. Ich habe diese Liste durchgeklickt, damit du es nicht musst.',
     'Servus! Jean hier. Ich habe mehr Einreichungsformulare ausgefüllt als ein Bürgeramt an einem Montag.',
-    'Hi, ich bin Jean. Glatze glänzt, Bart brennt, Domain Rating steigt. Willkommen!',
+    'Hi, ich bin Jean. Kaffee steht, Domain Rating steigt. Willkommen!',
     'Jean hier. Kein Tool wurde beim Testen verletzt, nur mein Kaffeevorrat.',
 ]
 

@@ -4,7 +4,7 @@ Stand 26.10.2026. Alles andere ist umgesetzt. Diese Punkte brauchen deinen Login
 
 ## 1. Lead-Formular scharf schalten (FormSubmit)
 
-Die Anfragen gehen an `jeanmauriceport@gmail.com` (am 26.10. von Jean bestätigt und im Code eingetragen).
+Die Anfragen gehen an die in `lib/monetization.js` hinterlegte Adresse (am 26.10. von Jean bestätigt). Damit die Adresse nicht im Seitenquelltext steht, den Alias aus Schritt 4 setzen.
 
 1. Für eine andere Adresse später: GitHub-Repo → Settings → Secrets and variables → Actions → Variables → `LEAD_EMAIL` anlegen.
 2. Auf der Live-Seite einmal das Formular „Frag Jean direkt“ abschicken.

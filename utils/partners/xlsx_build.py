@@ -102,7 +102,7 @@ anleitung = [
     ['Status-Werte', ', '.join(STATUS)],
     ['Wann wird ein Link genutzt?', 'Nur bei Status „aktiv“ und eingetragenem Partner-Link. Ein Partner-Link ohne Status setzt den Status automatisch auf „aktiv“.'],
     ['Wo greift der Link?', 'Tools: Steckbrief, Vergleiche, Prompts, Rubriken. Verzeichnisse: Liste, Verzeichnis-Seite, Rabattcodes. KI-Tool-Datenbank und Domains: über die Domain auf allen Tool-Karten und Tool-Seiten.'],
-    ['Regeln', 'Keine bezahlten Suchanzeigen auf Markennamen, wenn das Programm es verbietet. Anmeldung mit der Firma (USt-IdNr. bereithalten), nicht mit der Racing-Planet-Adresse. Provisionen und Cookie-Laufzeiten sind Angaben der Anbieter, Stand siehe Spalte „Quelle“.'],
+    ['Regeln', 'Keine bezahlten Suchanzeigen auf Markennamen, wenn das Programm es verbietet. Anmeldung mit der Firma (USt-IdNr. bereithalten), nicht mit der Arbeitsadresse. Provisionen und Cookie-Laufzeiten sind Angaben der Anbieter, Stand siehe Spalte „Quelle“.'],
 ]
 for r in anleitung:
     ws.append(r)

@@ -9,7 +9,6 @@ import { isDrSuspect } from '../../lib/fresh'
 import { getTools } from '../../lib/tools'
 import { dealLabel } from '../../utils/i18n-de'
 import { NEWSLETTER_URL, YOUTUBE_SUBSCRIBE_URL, submitRel } from '../../lib/monetization'
-import { withBase } from '../../lib/site'
 import { getPrompts } from '../../lib/prompts'
 import ToolRoulette from './ToolRoulette'
 
@@ -162,10 +161,6 @@ export function SidebarRight() {
                     Ansehen →
                 </Link>
             </Widget>
-            <Link href="/ueber-jean" className="widget widget-photo">
-                <img src={withBase('/jean-cool.jpg')} alt="Jean Maurice Port mit Sonnenbrille im Lager" width="240" height="240" loading="lazy" />
-                <span>„Mal sehen, ob das hält.“ Jean in echt →</span>
-            </Link>
         </>
     )
 }

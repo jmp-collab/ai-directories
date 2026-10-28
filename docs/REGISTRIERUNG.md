@@ -6,7 +6,7 @@ Selbst registrieren kann ich dich nicht. Die Arbeitsumgebung erreicht nur GitHub
 
 ## 0. Einmal vorbereiten (ca. 20 Minuten)
 
-- [ ] **E-Mail-Adresse nur für AIGeddon.** Nicht die Racing-Planet-Adresse. Am besten hallo@aigeddon.de, sonst vorerst eine eigene Gmail-Adresse.
+- [ ] **E-Mail-Adresse nur für AIGeddon.** Nicht die Arbeitsadresse. Am besten hallo@aigeddon.de, sonst vorerst eine eigene Gmail-Adresse.
 - [ ] **Impressum und Datenschutz online.** Viele Programme prüfen die Website und lehnen ohne Impressum ab. Dafür brauche ich Name, ladungsfähige Anschrift und E-Mail (siehe `docs/AIGEDDON-PLAN.md`).
 - [ ] **Auszahlung:** PayPal-Konto mit der AIGeddon-Mail, dazu IBAN.
 - [ ] **Steuer:**

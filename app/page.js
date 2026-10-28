@@ -414,11 +414,10 @@ function Home() {
             <section aria-labelledby="wer">
                 <h2 id="wer">Wer steckt dahinter? 🧔</h2>
                 <div className="about-head">
-                    <img className="about-photo" src={withBase('/jean.jpg')} alt="Jean Maurice Port" width="120" height="120" loading="lazy" />
                     <p>
                         Ich bin Jean, Senior SEO/SGE Manager bei der MotoMobilityGroup. Diese Liste
                         ist mein Nebenprojekt: ehrlich bewertet, mit Humor und ohne Affiliate-Tricks.{' '}
-                        <Link href="/ueber-jean">Meine Projekte und Profile →</Link>
+                        <Link href="/ueber-jean">Über den Autor →</Link>
                     </p>
                 </div>
             </section>

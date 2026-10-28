@@ -32,7 +32,7 @@ Offene Punkte zur Marke:
 
 1. **Impressum und Datenschutzerklärung.** Mit Partnerlinks und Angeboten ist die Seite geschäftsmäßig; ohne Impressum (§ 5 DDG) drohen Abmahnungen, und fast alle Partnerprogramme lehnen ab. Dafür brauche ich Name, ladungsfähige Anschrift und E-Mail. Für die Anschrift reicht notfalls ein Impressums-Service.
 2. **Geschäfts-E-Mail** für Anfragen und Partnerkonten, z. B. hallo@aigeddon.de. Danach `NEXT_PUBLIC_CONTACT_EMAIL` setzen, dann erscheinen die Anfrage-Buttons auf `/werben`.
-3. **Newsletter.** Gefunden habe ich nur jeanmauriceport.substack.com („Jean's Newsletter“, ein Platzhalter von 2022). Entweder umbenennen in „AIGeddon Briefing“ oder (meine Empfehlung) gleich auf beehiiv starten: beehiiv zahlt über Boosts und sein Werbenetzwerk Geld pro Abonnent und hat selbst ein Partnerprogramm mit bis zu 60 %. Substack zahlt für Empfehlungen nichts. Danach `NEXT_PUBLIC_NEWSLETTER_URL` setzen.
+3. **Newsletter.** Gefunden habe ich nur einen alten Substack-Platzhalter von 2022. Entweder umbenennen in „AIGeddon Briefing“ oder (meine Empfehlung) gleich auf beehiiv starten: beehiiv zahlt über Boosts und sein Werbenetzwerk Geld pro Abonnent und hat selbst ein Partnerprogramm mit bis zu 60 %. Substack zahlt für Empfehlungen nichts. Danach `NEXT_PUBLIC_NEWSLETTER_URL` setzen.
 4. **Domain** aigeddon.de registrieren und bei GitHub Pages als Custom Domain eintragen.
 5. **Partnerkonten** anlegen (Liste in `docs/AFFILIATE-PROGRAMME.md`) und mir die Links geben.
 

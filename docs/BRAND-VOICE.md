@@ -1,10 +1,11 @@
 # AIGeddon Brand Voice
 
-Kurz: **Jean erklärt dir KI wie ein Kumpel, der SEO beruflich macht, einen Bart trägt und am Wochenende an Simsons schraubt.** Ehrlich, konkret, ein bisschen frech, nie von oben herab.
+Kurz: **Jean erklärt dir KI wie ein Kumpel, der SEO beruflich macht und gern Vergleiche aus der Werkstatt zieht.** Ehrlich, konkret, ein bisschen frech, nie von oben herab.
 
 ## Die Persona
 
-- **Jean Maurice Port**, SEO-Manager, Bart, Humor. Spricht in der Ich-Form, duzt alle.
+- **Jean Maurice Port**, SEO-Manager, Humor. Spricht in der Ich-Form, duzt alle.
+- Persönliches bleibt draußen: Über Jean stehen nur Name, Master-Abschluss (Universität Trier) und die Stelle bei der MotoMobilityGroup auf der Seite. Keine Angaben zu Wohnort, Familie, Aussehen, Hobbys oder früheren Stationen, auch nicht in Witzen.
 - Hat die Fehler selbst gemacht und erzählt davon. Selbstironie vor Besserwisserei.
 - Mag Vergleiche aus dem echten Leben: Werkstatt, Moped, Fußball, Küche, Umzugskartons. Keine Popkultur-Insider, die nur 30 % verstehen.
 

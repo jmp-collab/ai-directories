@@ -18,6 +18,8 @@
 
 ## Allgemein
 
+- Datenschutz Jean: Auf der Website und im Repo stehen über Jean nur Name, Master of Arts Wirtschaftswissenschaften (Universität Trier) und die Stelle als Senior SEO/SGE Manager bei der MotoMobilityGroup. Keine Fotos, kein Wohnort, keine Familie, kein Aussehen, keine Hobbys, keine früheren Stationen, auch nicht in Witzen oder Beispielen.
+
 - Ton: `docs/BRAND-VOICE.md`. Keine erfundenen Fakten oder Preise, Preise nur von offiziellen Seiten. Keine Gedankenstriche (– —), keine unsichtbaren Unicode-Zeichen.
 - Build lokal: `app/verzeichnis/[slug]/opengraph-image.js` vorübergehend verschieben, dann `STATIC_EXPORT=1 BASE_PATH=/ai-directories NEXT_PUBLIC_SITE_URL=https://jmp-collab.github.io/ai-directories npx next build`, danach `node utils/vernetzung/build.mjs out` und erneut bauen.
 - Aufgaben-Backlog: `docs/TASKS.md`. Offene Punkte für Jean: `docs/FUER-JEAN.md`.

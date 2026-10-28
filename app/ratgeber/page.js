@@ -24,7 +24,7 @@ function RatgeberIndex() {
             <section className="hero">
                 <h1>Ratgeber: KI-Tools eintragen, ohne Zeit zu verbrennen</h1>
                 <p className="lead">Was du vor, während und nach den Einträgen wissen solltest. Ehrlich, auf Deutsch und ohne Linkverkäufer-Märchen.</p>
-                <Jean>Lesen spart Formulare. Formulare sparen Nerven. Nerven sparen Bart.</Jean>
+                <Jean>Lesen spart Formulare. Formulare sparen Nerven. Nerven sparen Kaffee.</Jean>
             </section>
             <ul className="link-cards">
                 {ARTIKEL.map((a) => (

@@ -1,4 +1,4 @@
-// Jean als Icon-Familie: derselbe Kopf (Glatze, roter Bart), wahlweise mit Sonnenbrille wie auf dem Foto,
+// Jean als Icon-Familie: dieselbe gezeichnete Comicfigur (Maskottchen), wahlweise mit Sonnenbrille,
 // dazu ein Abzeichen unten rechts, das zeigt, worum es geht. Reines SVG, keine Bilddateien.
 
 const SKIN = '#f4c8ac'

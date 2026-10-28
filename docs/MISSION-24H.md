@@ -118,9 +118,9 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - [x] **H5 Vorbereitet für Jean**: Repository-Variablen GSC_VERIFICATION, LEAD_EMAIL, LEAD_ALIAS im Deploy-Workflow; Klick-Anleitung docs/FUER-JEAN.md.
 - Keywords (Ubersuggest DE): „claude sonnet 5.5“ 1.600 im September 2026, „neue ki modelle“ 90 bis 140, „gpt 6 astra“ 0; danach Tageslimit.
 
-## Content-Ausbau VII (Auftrag 26.10.: „jeanmauriceport@gmail.com, alle Texte unique, witzig, liebevoll, sympathisch“)
+## Content-Ausbau VII (Auftrag 26.10.: „Lead-Adresse, alle Texte unique, witzig, liebevoll, sympathisch“)
 
-- [x] **I1 Lead-Adresse**: jeanmauriceport@gmail.com als Standard für das Lead-Formular.
+- [x] **I1 Lead-Adresse**: neue private Adresse als Standard für das Lead-Formular.
 - [x] **I2 Jeans Senf**: eigene Einleitung mit Tipp und Jean-Zeile für 73 Übersichts-, Listen-, Alternativen-, Rechner-, KI-Test- und Rubrikseiten (db/texte/hubs.json, Komponente JeansSenf).
 - [x] **I3 Tonpass** (Zahlen je Absatz automatisch gegen das Original geprüft, 0 Abweichungen): 10 Ratgeber (346 Textstellen), 17 Vergleiche (232), Modellseiten (89), Zielgruppen- und Rubrik-FAQ mit Tipps und Warnungen (136).
 - [x] **I4 Entdoppeln III**: YouTube-Hinweis pro Seite aus 24 Sprüchen statt 1.327-mal derselbe Satz, KB-Infobox und Quellenzeile gekürzt, Verzeichnis-FAQ und Ratgeber-Hinweis ohne Wiederholungssatz.
@@ -180,7 +180,7 @@ Jede Phase endet mit Build, Layer-A-Prüfung, PR, Merge, Live-Check. Die Phasen 
 - Impressum/Datenschutz-Daten, PromptGott-URL, Partnerlinks.
 - Neu bewerben: Gamma (PartnerStack), Rytr, Runway; Wordtune-Konditionen auf der Anbieterseite prüfen (nur Drittquellen) (braucht Kanal-Links, YouTube AIGeddon passt); Links stehen in docs/PARTNERLINKS.md.
 
-- Lead-Formular: Empfängeradresse jeanmauriceport@gmail.com bestätigt und eingetragen (26.10.); danach eine Testanfrage schicken und die FormSubmit-Aktivierungsmail bestätigen, erst dann kommen Anfragen an. Den Alias aus der Aktivierung als NEXT_PUBLIC_LEAD_ALIAS hinterlegen (oder mir geben), damit die Adresse nicht im Quelltext steht.
+- Lead-Formular: Empfängeradresse bestätigt und eingetragen (26.10.); danach eine Testanfrage schicken und die FormSubmit-Aktivierungsmail bestätigen, erst dann kommen Anfragen an. Den Alias aus der Aktivierung als NEXT_PUBLIC_LEAD_ALIAS hinterlegen (oder mir geben), damit die Adresse nicht im Quelltext steht.
 - Neu entdeckte Verzeichnisse: für die Übernahme in die Hauptliste fehlen DR- und Besucherwerte (Semrush-API-Einheiten aufladen), dann wandern sie mit Messwerten in /directories.
 - Datenschutzerklärung rechtlich prüfen lassen; Impressum mit ladungsfähiger Anschrift fehlt noch.
 
