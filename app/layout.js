@@ -12,6 +12,10 @@ import { SidebarLeft, SidebarRight, MobileDock } from './components/Sidebars'
 import BackToTop from './components/BackToTop'
 import JeanIcon, { JeanSprite } from './components/JeanIcon'
 import BartModus from './components/BartModus'
+import ToastHost from './components/ToastHost'
+import Herzstuecke from './components/Herzstuecke'
+import SeitenAktionen from './components/SeitenAktionen'
+import FooterExtras from './components/FooterExtras'
 import JsonLd from './components/JsonLd'
 import { absoluteUrl } from '../lib/site'
 import { getKbRubriken } from '../lib/kb'
@@ -217,6 +221,7 @@ export default function RootLayout({ children }) {
                     </aside>
                     <main id="inhalt" className="page-main">
                         {children}
+                        <SeitenAktionen />
                         <JeansSenf />
                         <LeadForm />
                         <LeadBox />
@@ -254,10 +259,11 @@ export default function RootLayout({ children }) {
                         ))}
                     </nav>
                     <div className="container">
+                        <FooterExtras />
                         <p>
                             Gebaut von <Link href="/ueber-jean">Jean Maurice Port</Link>, SEO-Manager mit Humor. ·{' '}
                             <Link href="/werben">Werben</Link> · <Link href="/transparenz">Transparenz</Link> · <Link href="/so-pruefen-wir">So prüfen wir</Link> ·{' '}
-                            <Link href="/datenschutz">Datenschutz</Link> ·{' '}
+                            <Link href="/datenschutz">Datenschutz</Link> · <Link href="/merkliste">Merkliste ⭐</Link> ·{' '}
                             <a href="https://www.youtube.com/@AIGeddon">YouTube</a>
                         </p>
                         <p>
@@ -277,6 +283,8 @@ export default function RootLayout({ children }) {
                 <MobileDock />
                 <BackToTop />
                 <BartModus />
+                <Herzstuecke />
+                <ToastHost />
             </body>
         </html>
     )

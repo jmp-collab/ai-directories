@@ -5531,3 +5531,294 @@ h2 a {
         max-width: 220px;
     }
 }
+
+/* ===== Herzstücke: kleine Aufmerksamkeiten für Besucher ===== */
+:root[data-akzent='blau'] { --accent: #1d4ed8; --accent-contrast: #ffffff; }
+:root[data-akzent='gruen'] { --accent: #0f7a4a; --accent-contrast: #ffffff; }
+:root[data-akzent='lila'] { --accent: #6d28d9; --accent-contrast: #ffffff; }
+@media (prefers-color-scheme: dark) {
+    :root[data-akzent='blau'] { --accent: #7fb2ff; --accent-contrast: #0b1626; }
+    :root[data-akzent='gruen'] { --accent: #4ade80; --accent-contrast: #072414; }
+    :root[data-akzent='lila'] { --accent: #c4a1ff; --accent-contrast: #1b0d33; }
+}
+
+.toast-host {
+    position: fixed;
+    right: 16px;
+    bottom: 88px;
+    z-index: 60;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: min(360px, calc(100vw - 32px));
+    pointer-events: none;
+}
+.toast {
+    pointer-events: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0;
+    padding: 12px 14px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--shadow);
+    font-size: 0.95rem;
+    animation: toast-rein 0.35s ease-out;
+}
+.toast-emoji { font-size: 1.4rem; line-height: 1; }
+.toast-text { flex: 1; }
+.toast-zu {
+    border: 0;
+    background: none;
+    color: var(--muted);
+    font-size: 1rem;
+    cursor: pointer;
+    min-width: 32px;
+    min-height: 32px;
+}
+@keyframes toast-rein {
+    from { transform: translateY(16px); opacity: 0; }
+    to { transform: none; opacity: 1; }
+}
+
+.seiten-aktionen {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: 36px 0 12px;
+    padding: 14px 16px;
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+.seiten-aktionen-frage { font-weight: 700; margin-right: 4px; }
+.seiten-aktionen-hinweis { flex-basis: 100%; font-size: 0.85rem; color: var(--muted); }
+.aktion-knopf {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 40px;
+    padding: 6px 14px;
+    border: 2px solid var(--border);
+    border-radius: 999px;
+    background: var(--bg);
+    color: var(--text);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+.aktion-knopf:hover { transform: translateY(-2px) rotate(-1deg); }
+.aktion-knopf.an { background: var(--accent); color: var(--accent-contrast); }
+.herz-flug {
+    position: fixed;
+    z-index: 70;
+    pointer-events: none;
+    font-size: 1.3rem;
+    animation: herz-flug 1.2s ease-out forwards;
+}
+@keyframes herz-flug {
+    from { transform: translate(-50%, 0) scale(0.6); opacity: 1; }
+    to { transform: translate(calc(-50% + var(--dx)), -120px) scale(1.2); opacity: 0; }
+}
+
+.saison-deko {
+    position: fixed;
+    left: 12px;
+    bottom: 12px;
+    z-index: 5;
+    font-size: 2rem;
+    pointer-events: none;
+    animation: saison-wippen 3s ease-in-out infinite;
+    filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.15));
+}
+@keyframes saison-wippen {
+    0%, 100% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg) translateY(-4px); }
+}
+@media (max-width: 900px) {
+    .saison-deko { bottom: 76px; font-size: 1.6rem; }
+}
+
+.kuerzel-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.45);
+}
+.kuerzel-karte {
+    width: min(420px, 100%);
+    padding: 20px 22px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--shadow);
+}
+.kuerzel-titel { margin: 0 0 10px; font-weight: 800; font-size: 1.2rem; }
+.kuerzel-karte ul { list-style: none; padding: 0; margin: 0 0 16px; display: grid; gap: 8px; }
+.kuerzel-karte kbd {
+    display: inline-block;
+    min-width: 28px;
+    padding: 2px 8px;
+    margin-right: 8px;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    background: var(--pop);
+    color: #1b1b1f;
+    font-weight: 800;
+    text-align: center;
+}
+
+.mutmacher { font-style: italic; margin: 0; }
+.glueckskeks { display: flex; align-items: center; gap: 12px; }
+.keks-knopf {
+    flex: none;
+    width: 52px;
+    height: 52px;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    background: var(--pop);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.keks-knopf.knack { animation: wobble 0.5s; }
+.keks-text { margin: 0; font-size: 0.92rem; }
+
+.footer-extras {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 8px 0 16px;
+    padding: 0 0 12px;
+    border-bottom: 2px dashed currentColor;
+}
+.footer-woche { margin: 0; font-weight: 700; }
+.footer-regler { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.farbwahl { display: flex; gap: 8px; }
+.farb-punkt {
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--surface);
+    border-radius: 50%;
+    outline: 2px solid currentColor;
+    cursor: pointer;
+}
+.farb-punkt.an { outline-width: 4px; transform: scale(1.12); }
+.ruhe-knopf {
+    min-height: 34px;
+    padding: 4px 12px;
+    border: 2px solid currentColor;
+    border-radius: 999px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.merk-leer { padding: 16px; border: 2px dashed var(--border); border-radius: var(--radius); }
+.merk-liste { list-style: none; padding: 0; display: grid; gap: 10px; }
+.merk-liste li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+.merk-liste a { font-weight: 700; flex: 1 1 200px; }
+.merk-weg {
+    min-width: 36px;
+    min-height: 36px;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    background: var(--bg);
+    color: var(--text);
+    cursor: pointer;
+}
+.merk-stats,
+.merk-abzeichen {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+}
+.merk-stats li,
+.merk-abzeichen li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 14px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    text-align: center;
+}
+.merk-stats strong { font-size: 1.8rem; color: var(--accent); }
+.merk-abzeichen li:not(.hat) { opacity: 0.7; }
+.merk-abzeichen-icon { font-size: 2rem; }
+
+.nf-tipps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; list-style: none; padding: 0; }
+.nf-tipps a {
+    display: block;
+    height: 100%;
+    padding: 14px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    font-weight: 700;
+    text-decoration: none;
+}
+.nf-geist { font-size: 3rem; display: inline-block; animation: bob 3s ease-in-out infinite; }
+
+/* Ruhe-Modus: alles still, auf Wunsch des Besuchers */
+:root[data-ruhig='an'] *,
+:root[data-ruhig='an'] *::before,
+:root[data-ruhig='an'] *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+}
+:root[data-ruhig='an'] .hero h1 { color: var(--text); background: none; }
+:root[data-ruhig='an'] .ticker-track { transform: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+    .toast,
+    .herz-flug,
+    .saison-deko,
+    .nf-geist,
+    .keks-knopf.knack { animation: none !important; }
+    .aktion-knopf:hover { transform: none; }
+}
+
+@media print {
+    .seiten-aktionen,
+    .toast-host,
+    .saison-deko,
+    .kuerzel-overlay { display: none !important; }
+    .page-main::after {
+        content: 'Gedruckt mit Liebe von AIGeddon. Danke, dass du uns mit aufs Papier nimmst. 🖨️💛';
+        display: block;
+        margin-top: 24px;
+        padding-top: 12px;
+        border-top: 1px dashed #000;
+        font-size: 10pt;
+        font-style: italic;
+    }
+}
