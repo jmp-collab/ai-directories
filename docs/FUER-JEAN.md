@@ -57,3 +57,7 @@ So gehst du vor:
 ## 9. Routinen mit Recherche ausstatten
 
 Die geplanten Sitzungen (Backlog, Sperr-Check, Preis-Check, KI-News) laufen ohne Exa-Connector, und die Netzwerkrichtlinie sperrt Anbieterseiten. Deshalb hat der Backlog-Lauf am 26.10. nichts geändert. Abhilfe: Exa unter https://claude.ai/customize/connectors verbinden und die Routinen in der Routinen-Ansicht von claude.ai mit Exa und dem Repository ausstatten, oder in der Umgebung den Netzwerkzugriff erweitern.
+
+## Gratis-Guides (PDF) freischalten
+
+Die drei Guides sind in Gamma fertig (KI-Agenten-Fahrplan, Sichtbar in KI-Antworten, KI-Skills-Starterkit). Die Cloud-Umgebung durfte die PDFs nicht herunterladen (Host assets.api.gamma.app gesperrt). Entweder den Host in den Netzwerkeinstellungen der Umgebung erlauben oder die drei PDFs aus Gamma exportieren und hochladen. Danach: `python3 utils/guides/import.py ki-agenten-fahrplan <pdf> sichtbar-in-ki-antworten <pdf> ki-skills-starterkit <pdf>`, bauen, PR, mergen.

@@ -10,6 +10,7 @@ import { getTools } from '../../lib/tools'
 import { dealLabel } from '../../utils/i18n-de'
 import { NEWSLETTER_URL, YOUTUBE_SUBSCRIBE_URL, submitRel } from '../../lib/monetization'
 import { getPrompts } from '../../lib/prompts'
+import { getGuides } from '../../lib/guides'
 import ToolRoulette from './ToolRoulette'
 
 // Tageswechsel ohne Server: Die Seite wird täglich neu gebaut, der Tag des Jahres wählt Deal und Tool.
@@ -26,6 +27,7 @@ const KOMPASS = [
     ['/prompt-check', 'Prompt-Check', 'lupe', true],
     ['/skills', 'KI-Skills für alle LLMs', 'werkzeug', true],
     ['/tutorials', 'Tutorials', 'pokal', true],
+    ...(getGuides().length ? [['/guides', 'Gratis-Guides (PDF)', 'herz', true]] : []),
     ['/downloads', 'Gratis-Downloads', 'herz', true],
     ['/ki-tools', 'KI-Tool-Datenbank', 'lupe', false],
     ['/ki-tools/fuer', 'KI-Tools nach Zielgruppe', 'werkzeug', true],

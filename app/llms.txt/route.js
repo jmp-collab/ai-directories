@@ -8,6 +8,7 @@ import { getCheck, checkCount, CHECK_STAND } from '../../lib/checks'
 import { getTools, TOOLS_STAND } from '../../lib/tools'
 import { getPrompts } from '../../lib/prompts'
 import { getSkills, ALLE_BEFEHL } from '../../lib/skills'
+import { getGuides } from '../../lib/guides'
 import { getTutorials } from '../../lib/tutorials'
 import { getKbRubriken, kbStats, KB_SOURCES } from '../../lib/kb'
 import { TESTS, getTestKategorien } from '../../lib/kitests'
@@ -106,7 +107,7 @@ Vorlagen auf Deutsch zum Ausfüllen, mit Absprung zu ChatGPT, Claude, Perplexity
 
 ${getPrompts().map((p) => `- [${p.title}](${absoluteUrl(`/prompts/${p.slug}`)}): ${p.ziel}`).join('\n')}
 
-## KI-Skills für alle LLMs
+${getGuides().length ? `## Gratis-Guides (PDF)\n\n${absoluteUrl('/guides')}: ${getGuides().map((g) => g.titel).join(', ')}. Download nach Eintrag der E-Mail.\n\n` : ''}## KI-Skills für alle LLMs
 
 Deutsche Agent Skills (SKILL.md, MIT-Lizenz) als ZIP für ChatGPT, Claude und Gemini oder per Befehl für Coding-Agenten: \`${ALLE_BEFEHL}\`. Übersicht: ${absoluteUrl('/skills')}
 

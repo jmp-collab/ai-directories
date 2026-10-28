@@ -4,6 +4,8 @@ import LeadMagnetBox from '../components/LeadMagnetBox'
 import { SITE_NAME } from '../../lib/site'
 import { LEADMAGNETS } from '../../lib/leadmagnets'
 import Vernetzt, { seitenPfad } from '../components/Vernetzt'
+import Link from 'next/link'
+import { getGuides } from '../../lib/guides'
 
 export const metadata = {
     title: 'Gratis-Downloads: Prompt-Spickzettel & Prompt-Paket',
@@ -25,6 +27,23 @@ function DownloadsPage() {
                 <h1>Gratis zum Mitnehmen</h1>
                 <p className="lead">Spickzettel, Prompt-Paket und Tabellen. Einmal holen, immer griffbereit.</p>
             </section>
+            {getGuides().length > 0 && (
+            <section aria-labelledby="guides">
+                <h2 id="guides">Neu: Gratis-Guides als PDF 📥</h2>
+                <ul className="link-cards">
+                    {getGuides().map((g) => (
+                        <li key={g.id}>
+                            <Link href={`/guides#${g.id}`}>
+                                <strong>
+                                    {g.emoji} {g.titel}
+                                </strong>
+                            </Link>
+                            <span>{g.teaser}</span>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+            )}
             {LEADMAGNETS.map((m) => (
                 <LeadMagnetBox key={m.id} id={m.id} />
             ))}
