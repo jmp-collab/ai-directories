@@ -12,6 +12,7 @@ import { NEWSLETTER_URL, YOUTUBE_SUBSCRIBE_URL, submitRel } from '../../lib/mone
 import { getPrompts } from '../../lib/prompts'
 import { getGuides } from '../../lib/guides'
 import ToolRoulette from './ToolRoulette'
+import { Mutmacher, Glueckskeks } from './HerzWidgets'
 
 // Tageswechsel ohne Server: Die Seite wird täglich neu gebaut, der Tag des Jahres wählt Deal und Tool.
 const dayIndex = () => {
@@ -44,6 +45,7 @@ const KOMPASS = [
     ['/quiz', 'Quiz', 'pokal', false],
     ['/ratgeber', 'Ratgeber', 'post', false],
     ['/glossar', 'KI-Glossar', 'post', true],
+    ['/merkliste', 'Deine Merkliste', 'herz', true],
     ['/ueber-jean', 'Über Jean', 'tattoo', true],
 ]
 
@@ -144,6 +146,9 @@ export function SidebarRight() {
                     </Widget>
                 )
             })()}
+            <Widget icon="herz" cool title="Mutmacher des Tages">
+                <Mutmacher />
+            </Widget>
             <Widget icon="strahlung" title="KI-Tool-Roulette">
                 <ToolRoulette />
             </Widget>
@@ -158,6 +163,9 @@ export function SidebarRight() {
                     <p className="widget-note">{tool.free_plan ? 'Mit Gratis-Tarif. ' : ''}{tool.price_from ? `Bezahlt ab ${tool.price_from}.` : ''}</p>
                 </Widget>
             )}
+            <Widget icon="pokal" title="Dein Glückskeks">
+                <Glueckskeks />
+            </Widget>
             <Widget icon="rakete" title="Launch-Service">
                 <p>Keine Zeit für 50 Formulare? Wir tragen dein Tool ein.</p>
                 <Link className="button button-small" href="/werben">
