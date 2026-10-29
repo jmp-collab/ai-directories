@@ -67,6 +67,7 @@ export default function Konto() {
             ['einwilligungs_log', 'user_id'],
             ['saved_items', 'user_id'],
             ['badges', 'user_id'],
+            ['launch_eintraege', 'user_id'],
             ['comments', 'user_id'],
             ['forum_themen', 'user_id'],
             ['forum_beitraege', 'user_id'],
@@ -161,6 +162,9 @@ export default function Konto() {
                 </Link>{' '}
                 <Link className="button" href="/konto/profil">
                     🎨 Profil bearbeiten
+                </Link>{' '}
+                <Link className="button" href="/launch-tracker">
+                    🚀 Launch-Tracker
                 </Link>
             </p>
 
