@@ -56,6 +56,13 @@ export default function Konto() {
             ['einwilligungs_log', 'user_id'],
             ['saved_items', 'user_id'],
             ['badges', 'user_id'],
+            ['comments', 'user_id'],
+            ['forum_themen', 'user_id'],
+            ['forum_beitraege', 'user_id'],
+            ['reaktionen', 'user_id'],
+            ['thema_abos', 'user_id'],
+            ['meldungen', 'melder'],
+            ['benachrichtigungen', 'user_id'],
         ]) {
             const { data } = await sb.from(name).select('*').eq(spalte, user.id)
             tabellen[name] = data || []

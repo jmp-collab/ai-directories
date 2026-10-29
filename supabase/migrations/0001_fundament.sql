@@ -103,7 +103,7 @@ revoke execute on function public.protokolliere_einwilligung() from public, anon
 create or replace function public.handle_new_user()
 returns trigger language plpgsql security definer set search_path = '' as $$
 begin
-    insert into public.profiles (id, handle) values (new.id, 'mitglied_' || substr(replace(new.id::text, '-', ''), 1, 10));
+    insert into public.profiles (id, handle) values (new.id, 'mitglied_' || substr(md5(new.id::text), 1, 15));
     insert into public.profil_details (id) values (new.id);
     insert into public.konten (id) values (new.id);
     insert into public.einwilligungs_log (user_id, art, erteilt) values (new.id, 'konto', true);

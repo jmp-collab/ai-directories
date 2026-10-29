@@ -23,12 +23,14 @@ export default function Profil() {
                     .eq('handle', handle)
                     .maybeSingle()
                 if (!profil) return setDaten(null)
-                const [{ data: details }, { data: abzeichen }] = await Promise.all([
+                const [{ data: details }, { data: abzeichen }, { data: themen }, { data: kommentare }] = await Promise.all([
                     sb.from('profil_details').select('bio, beruf, pronomen, links').eq('id', profil.id).maybeSingle(),
                     sb.from('badges').select('name, zeit').eq('user_id', profil.id),
+                    sb.from('forum_themen').select('id, titel, erstellt').eq('user_id', profil.id).eq('status', 'sichtbar').order('erstellt', { ascending: false }).limit(5),
+                    sb.from('comments').select('id, pfad, text, erstellt').eq('user_id', profil.id).eq('status', 'sichtbar').order('erstellt', { ascending: false }).limit(5),
                 ])
                 document.title = `${profil.anzeigename} (@${profil.handle}) | AIGeddon`
-                setDaten({ profil, details, abzeichen: abzeichen || [] })
+                setDaten({ profil, details, abzeichen: abzeichen || [], themen: themen || [], kommentare: kommentare || [] })
             })
             .catch(() => setDaten(null))
     }, [])
@@ -44,7 +46,7 @@ export default function Profil() {
             </div>
         )
 
-    const { profil, details, abzeichen } = daten
+    const { profil, details, abzeichen, themen, kommentare } = daten
     const avatar = bildUrl('avatare', profil.avatar_pfad)
     const banner = bildUrl('banner', profil.banner_pfad)
     const eigenes = user && user.id === profil.id
@@ -125,6 +127,30 @@ export default function Profil() {
                             </ul>
                         </>
                     )}
+                </>
+            )}
+            {themen.length > 0 && (
+                <>
+                    <h2>🧵 Themen im Forum</h2>
+                    <ul className="merk-verlauf">
+                        {themen.map((t) => (
+                            <li key={t.id}>
+                                <Link href={`/forum/thema?id=${t.id}`}>{t.titel}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </>
+            )}
+            {kommentare.length > 0 && (
+                <>
+                    <h2>💬 Letzte Kommentare</h2>
+                    <ul className="c-liste">
+                        {kommentare.map((k) => (
+                            <li key={k.id} className="c-kommentar">
+                                <Link href={`${k.pfad}#kommentar-${k.id}`}>{k.text.slice(0, 140)}{k.text.length > 140 ? ' …' : ''}</Link>
+                            </li>
+                        ))}
+                    </ul>
                 </>
             )}
         </article>

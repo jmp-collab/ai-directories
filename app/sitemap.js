@@ -18,6 +18,7 @@ import { getSkills } from '../lib/skills'
 import { getGuides } from '../lib/guides'
 import { RUBRIK_RATGEBER } from '../lib/rubrik-ratgeber'
 import { dateiStand, seitenStand, spaetestes } from '../lib/stand'
+import { KONTO_AKTIV } from '../lib/konto'
 
 // lastModified ist das echte Änderungsdatum: Prüfdatum des Inhalts oder letzter Git-Commit der Quelldateien.
 // Ein Datum, das sich täglich ändert, obwohl nichts passiert ist, ignoriert Google; ein ehrliches nutzt es.
@@ -34,6 +35,7 @@ const STATISCH = {
     '/top-50': ['db/directories.json'],
     '/prompts': ['lib/prompts.js'],
     '/skills': ['lib/skills.js', 'db/skills.json'],
+    ...(KONTO_AKTIV ? { '/forum': ['app/forum/page.js'], '/community-regeln': ['app/community-regeln/page.js'] } : {}),
     '/prompt-baukasten': [],
     '/prompt-check': [],
     '/tutorials': ['lib/tutorials.js'],

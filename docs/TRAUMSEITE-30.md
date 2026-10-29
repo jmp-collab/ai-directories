@@ -28,13 +28,13 @@ Jeder Schritt ist ein eigenständiger Prompt. Er lässt sich einzeln in einer ne
 
 ## Phase C: Community
 
-- [ ] **10 Kommentar-Schema.** Tabelle `comments` (Seitenpfad, Elternkommentar, Text, Status), Reaktionen, Ratenbegrenzung per Trigger (höchstens 5 Kommentare in 10 Minuten), Längenlimit, RLS: lesen alle, schreiben nur angemeldete, ändern nur eigene innerhalb von 15 Minuten.
-- [ ] **11 Kommentare überall.** Komponente unter allen Inhalten (Ratgeber, News, Tutorials, Tools, Prompts, Skills, Verzeichnisse, Vergleiche) mit Antworten in einer Ebene, einfachem Textformat ohne HTML, Reaktionen und „Melden“.
-- [ ] **12 Forum-Schema.** Kategorien, Themen, Beiträge, Abos, Lösungs-Markierung, angepinnte Themen, Zähler per Trigger.
-- [ ] **13 Forum.** `/forum` mit Kategorien, `/forum/kategorie/?k=`, `/forum/thema/?id=`, neues Thema, Antworten, Suche, Sortierung (neu, aktiv, ungelöst).
-- [ ] **14 Moderation.** Meldungen, Moderatoren-Rolle, Ausblenden und Wiederherstellen, Wortfilter, Sperren mit Frist, Moderationsprotokoll, Seite `/moderation`. Meldeweg nach DSA und Nutzungsregeln `/community-regeln`.
-- [ ] **15 Benachrichtigungen.** Antworten, Erwähnungen per @handle, Lösungen; Glocke im Header mit Zähler, gelesen markieren.
-- [ ] **16 Reputation.** Punkte für hilfreiche Beiträge und Lösungen, Ränge, Community-Abzeichen im Sammelalbum, Bestenliste.
+- [x] **10 Kommentar-Schema.** Tabelle `comments` (Seitenpfad, Elternkommentar, Text, Status), Reaktionen, Ratenbegrenzung per Trigger (höchstens 5 Kommentare in 10 Minuten), Längenlimit, RLS: lesen alle, schreiben nur angemeldete, ändern nur eigene innerhalb von 15 Minuten.
+- [x] **11 Kommentare überall.** Komponente unter allen Inhalten (Ratgeber, News, Tutorials, Tools, Prompts, Skills, Verzeichnisse, Vergleiche) mit Antworten in einer Ebene, einfachem Textformat ohne HTML, Reaktionen und „Melden“.
+- [x] **12 Forum-Schema.** Kategorien, Themen, Beiträge, Abos, Lösungs-Markierung, angepinnte Themen, Zähler per Trigger.
+- [x] **13 Forum.** `/forum` mit Kategorien, `/forum/kategorie/?k=`, `/forum/thema/?id=`, neues Thema, Antworten, Suche, Sortierung (neu, aktiv, ungelöst).
+- [x] **14 Moderation.** Meldungen, Moderatoren-Rolle, Ausblenden und Wiederherstellen, Wortfilter, Sperren mit Frist, Moderationsprotokoll, Seite `/moderation`. Meldeweg nach DSA und Nutzungsregeln `/community-regeln`.
+- [x] **15 Benachrichtigungen.** Antworten, Erwähnungen per @handle, Lösungen; Glocke im Header mit Zähler, gelesen markieren.
+- [x] **16 Reputation.** Punkte für hilfreiche Beiträge und Lösungen, Ränge, Community-Abzeichen im Sammelalbum, Bestenliste.
 
 ## Phase D: Werkzeuge mit Konto
 
@@ -61,7 +61,8 @@ Jeder Schritt ist ein eigenständiger Prompt. Er lässt sich einzeln in einer ne
 
 ## Stand
 
-- Schritte 1 bis 9 sind gebaut und getestet (Code hinter dem Schalter `NEXT_PUBLIC_KONTO`). Die Migrationen `0001_fundament` und `0002_bilder` sind lokal mit `sh supabase/tests/run.sh` geprüft und warten aufs Einspielen ins Supabase-Projekt.
+- Schritte 1 bis 16 sind gebaut und getestet (Code hinter dem Schalter `NEXT_PUBLIC_KONTO`). Die Migrationen `0001_fundament`, `0002_bilder` und `0003_community` sind lokal mit `sh supabase/tests/run.sh` geprüft und warten aufs Einspielen ins Supabase-Projekt. Die Oberfläche ist mit simulierten Supabase-Antworten im Browser getestet.
+- Moderation: Die erste Admin-Rolle setzt Jean einmalig im Supabase SQL Editor: `update public.profiles set rolle = 'admin' where handle = 'DEIN_HANDLE';`
 
 ## Was nur Jean erledigen kann
 
