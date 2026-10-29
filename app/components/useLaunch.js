@@ -12,7 +12,7 @@ export default function useLaunch(frisch = false) {
     useEffect(() => beobachteLaunch(setStand), [])
     useEffect(() => {
         if (KONTO_AKTIV && user) ladeLaunch(user.id, frisch)?.catch(() => {})
-    }, [user, frisch])
+    }, [user?.id, frisch])
     const aktiv = Boolean(KONTO_AKTIV && user && stand.uid === user.id)
     return { ...stand, aktiv, uid: user?.id || null }
 }

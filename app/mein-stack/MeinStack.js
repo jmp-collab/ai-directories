@@ -88,6 +88,7 @@ export default function MeinStack({ tools, abo, stand }) {
     const [lokal, setLokal] = useState(null)
     const [neu, setNeu] = useState(LEER)
     const [importLaeuft, setImportLaeuft] = useState(false)
+    const [sendet, setSendet] = useState(false)
     const toolBySlug = useMemo(() => new Map(tools.map((t) => [t.slug, t])), [tools])
     const toolByName = useMemo(() => new Map(tools.map((t) => [t.name.toLowerCase(), t])), [tools])
 
@@ -95,7 +96,7 @@ export default function MeinStack({ tools, abo, stand }) {
     useEffect(() => setLokal(lokalLesen()), [])
     useEffect(() => {
         if (KONTO_AKTIV && user) ladeStack(user.id, true)?.catch(() => {})
-    }, [user])
+    }, [user?.id])
 
     const imKonto = Boolean(KONTO_AKTIV && user && wolke.uid === user.id)
     const eintraege = imKonto ? wolke.eintraege : lokal || []
@@ -119,8 +120,11 @@ export default function MeinStack({ tools, abo, stand }) {
         const eintrag = bereinige(neu)
         if (!eintrag.name) return toast('Bitte gib einen Namen ein.', '✍️')
         if (eintraege.length >= 100) return toast('Mehr als 100 Tools passen nicht in den Stack.', '🧰')
+        if (sendet) return
         if (imKonto) {
-            if (!(await stackHinzu(user.id, eintrag))) return fehler()
+            setSendet(true)
+            const ok = await stackHinzu(user.id, eintrag).finally(() => setSendet(false))
+            if (!ok) return fehler()
         } else lokalAendern((l) => [...l, { ...eintrag, id: `l${Date.now()}${Math.random().toString(36).slice(2, 6)}` }])
         setNeu(LEER)
         toast(`${eintrag.name} ist im Stack.`, '🧰')
@@ -199,8 +203,8 @@ export default function MeinStack({ tools, abo, stand }) {
                             <option value="jahr">pro Jahr</option>
                         </select>
                     </label>
-                    <button type="submit" className="button">
-                        Hinzufügen
+                    <button type="submit" className="button" disabled={sendet}>
+                        {sendet ? 'Speichere …' : 'Hinzufügen'}
                     </button>
                 </div>
                 {gewaehlt?.price_from && (
