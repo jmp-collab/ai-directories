@@ -64,7 +64,7 @@ function Zeile({ v, e, uid }) {
 
 export default function LaunchTracker({ verzeichnisse }) {
     const { bereit: kontoBereit, user } = useKonto()
-    const launch = useLaunch()
+    const launch = useLaunch(true)
     const [filter, setFilter] = useState('alle')
     const [suche, setSuche] = useState('')
     const erlaubt = useMemo(() => new Set(verzeichnisse.map((v) => v.slug)), [verzeichnisse])

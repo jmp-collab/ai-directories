@@ -31,6 +31,7 @@ const STATISCH = {
     '/werben': [],
     '/transparenz': [],
     '/tools': ['db/tools.json'],
+    '/mein-stack': ['app/mein-stack/MeinStack.js', 'lib/stack.js', 'lib/abo-preise.js'],
     '/tool-vergleiche': ['lib/comparisons.js'],
     '/top-50': ['db/directories.json'],
     '/prompts': ['lib/prompts.js'],
