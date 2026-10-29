@@ -1,9 +1,12 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import useLaunch from './useLaunch'
+import { LOKAL_KEY, ZAEHLT, setzeLaunch } from '../../lib/launch'
 
-// Eingetragene Verzeichnisse liegen nur im Browser. Ein Event hält mehrere Tabellen auf derselben Seite synchron.
-const KEY = 'kiv-eingetragen'
+// Ohne Anmeldung liegen eingetragene Verzeichnisse nur im Browser; ein Event hält mehrere Tabellen auf derselben Seite synchron.
+// Mit Konto ist der Launch-Tracker im Konto die Quelle (Status eingereicht oder live zählt als eingetragen).
+const KEY = LOKAL_KEY
 const EVENT = 'kiv-tracker'
 
 function read() {
@@ -15,7 +18,10 @@ function read() {
 }
 
 export default function useTracker() {
-    const [done, setDone] = useState(() => new Set())
+    const [lokal, setDone] = useState(() => new Set())
+    const launch = useLaunch()
+    const wolke = useMemo(() => new Set([...launch.eintraege.values()].filter((e) => ZAEHLT.has(e.status)).map((e) => e.slug)), [launch.eintraege])
+    const done = launch.aktiv ? wolke : lokal
 
     useEffect(() => {
         const sync = () => setDone(read())
@@ -29,6 +35,15 @@ export default function useTracker() {
     }, [])
 
     const toggle = useCallback((slug) => {
+        if (launch.aktiv) {
+            // Erst nach dem Laden aus dem Konto ändern, sonst überschreibt die Serverantwort das Häkchen.
+            if (!launch.bereit || launch.fehler) return wolke
+            const next = new Set(wolke)
+            const an = !next.has(slug)
+            an ? next.add(slug) : next.delete(slug)
+            setzeLaunch(launch.uid, slug, { status: an ? 'eingereicht' : 'geplant' })
+            return next
+        }
         const next = read()
         next.has(slug) ? next.delete(slug) : next.add(slug)
         try {
@@ -39,9 +54,9 @@ export default function useTracker() {
         setDone(next)
         window.dispatchEvent(new Event(EVENT))
         return next
-    }, [])
+    }, [launch.aktiv, launch.bereit, launch.fehler, launch.uid, wolke])
 
-    return { done, toggle }
+    return { done, toggle, imKonto: launch.aktiv, bereit: !launch.aktiv || launch.bereit }
 }
 
 export const RANKS = [

@@ -1,10 +1,12 @@
 'use client'
 
+import Link from 'next/link'
 import useTracker, { RANKS, rankFor } from './useTracker'
+import { KONTO_AKTIV } from '../../lib/konto'
 
 // Fortschritt, Rang und CSV-Export der eigenen Einträge.
 export default function TrackerPanel({ directories }) {
-    const { done } = useTracker()
+    const { done, imKonto } = useTracker()
     const total = directories.length
     const count = directories.filter((d) => done.has(d.slug)).length
     const [, rank, text] = rankFor(count)
@@ -46,7 +48,20 @@ export default function TrackerPanel({ directories }) {
                 <button type="button" className="button button-small" onClick={exportCsv}>
                     Meine Liste als CSV
                 </button>
-                <span className="tracker-hint">Häkchen setzt du in der Tabelle. Gespeichert wird nur in deinem Browser.</span>
+                <span className="tracker-hint">
+                    {imKonto ? (
+                        <>
+                            Häkchen setzt du in der Tabelle, gespeichert wird in deinem Konto. Status, Notizen und Erinnerungen: <Link href="/launch-tracker">Launch-Tracker</Link>.
+                        </>
+                    ) : KONTO_AKTIV ? (
+                        <>
+                            Häkchen setzt du in der Tabelle, gespeichert wird nur in deinem Browser. Mit Konto bekommst du Status, Notizen und Erinnerungen im{' '}
+                            <Link href="/launch-tracker">Launch-Tracker</Link>.
+                        </>
+                    ) : (
+                        'Häkchen setzt du in der Tabelle. Gespeichert wird nur in deinem Browser.'
+                    )}
+                </span>
             </p>
         </div>
     )

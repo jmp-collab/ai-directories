@@ -57,11 +57,11 @@ const ABSCHNITTE = [
               [
                   'Benutzerkonto, Profil und Community',
                   [
-                      'Für ein Konto brauchen wir nur deine E-Mail-Adresse. Die Anmeldung läuft ohne Passwort über einen Link per E-Mail. Gespeichert werden außerdem, was du selbst anlegst: Profil (Anzeigename, Handle, Bio, Beruf, Pronomen, Links, Profilbild und Banner), deine Sammlung (Merkliste, Herzen, gelesene Artikel, Verlauf, Abzeichen), Kommentare und Forumsbeiträge sowie deine Einwilligungen mit Datum.',
+                      'Für ein Konto brauchen wir nur deine E-Mail-Adresse. Die Anmeldung läuft ohne Passwort über einen Link per E-Mail. Gespeichert werden außerdem, was du selbst anlegst: Profil (Anzeigename, Handle, Bio, Beruf, Pronomen, Links, Profilbild und Banner), deine Sammlung (Merkliste, Herzen, gelesene Artikel, Verlauf, Abzeichen), dein Launch-Tracker (Status, Notizen und Erinnerungsdaten je Verzeichnis), Kommentare und Forumsbeiträge sowie deine Einwilligungen mit Datum.',
                       'Die Daten liegen bei Supabase Inc. auf Servern in Frankfurt am Main (EU). Mit Supabase besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO. Bilder werden vor dem Hochladen in deinem Browser neu gespeichert, dabei gehen Standort- und Kameradaten (EXIF) verloren.',
                       'Rechtsgrundlage für Konto, Profil und Community ist der Nutzungsvertrag (Art. 6 Abs. 1 lit. b DSGVO). Newsletter und persönliche Empfehlungen schicken wir nur mit deiner gesonderten Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit in deinem Konto widerrufen kannst.',
                       'Öffentlich sichtbar sind Handle, Anzeigename, Profilbild und deine Beiträge. Bio, Beruf, Pronomen, Links und Abzeichen siehst nur du, wenn du dein Profil auf privat stellst. Deine E-Mail-Adresse zeigen wir nie öffentlich.',
-                      'Im Konto kannst du alle Daten jederzeit als Datei herunterladen und dein Konto selbst löschen. Dann löschen wir Profil, Bilder und Sammlung sofort; Forumsbeiträge bleiben ohne Namen stehen, damit Diskussionen verständlich bleiben.',
+                      'Im Konto kannst du alle Daten jederzeit als Datei herunterladen und dein Konto selbst löschen. Dann löschen wir Profil, Bilder, Sammlung und Launch-Tracker sofort; Forumsbeiträge bleiben ohne Namen stehen, damit Diskussionen verständlich bleiben.',
                   ],
               ],
           ]

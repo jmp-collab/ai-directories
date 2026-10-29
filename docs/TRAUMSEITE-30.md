@@ -38,7 +38,7 @@ Jeder Schritt ist ein eigenständiger Prompt. Er lässt sich einzeln in einer ne
 
 ## Phase D: Werkzeuge mit Konto
 
-- [ ] **17 Launch-Tracker in der Cloud.** Einreichungs-Status je Verzeichnis, Notizen, Erinnerungsdatum, Export als CSV.
+- [x] **17 Launch-Tracker in der Cloud.** Einreichungs-Status je Verzeichnis, Notizen, Erinnerungsdatum, Export als CSV.
 - [ ] **18 Mein KI-Stack.** Eigene Tools mit Tarif und Monatskosten, Summe, Spar-Hinweise aus vorhandenen Daten.
 - [ ] **19 Prompt-Sammlung.** Prompts aus Bibliothek, Baukasten und Prompt-Check speichern, Ordner, Teilen als öffentlicher Link.
 - [ ] **20 Alarme.** Preisalarm (Tools im Stack) und Fristen-Alarm (KI-Fristen-Kalender) als Edge Function mit täglichem Zeitplan und Mailversand.
@@ -61,7 +61,7 @@ Jeder Schritt ist ein eigenständiger Prompt. Er lässt sich einzeln in einer ne
 
 ## Stand
 
-- Schritte 1 bis 16 sind gebaut und getestet (Code hinter dem Schalter `NEXT_PUBLIC_KONTO`). Die Migrationen `0001_fundament`, `0002_bilder` und `0003_community` sind lokal mit `sh supabase/tests/run.sh` geprüft und warten aufs Einspielen ins Supabase-Projekt. Die Oberfläche ist mit simulierten Supabase-Antworten im Browser getestet.
+- Schritte 1 bis 17 sind gebaut und getestet (Code hinter dem Schalter `NEXT_PUBLIC_KONTO`). Die Migrationen `0001_fundament`, `0002_bilder`, `0003_community` und `0004_launch` sind lokal mit `sh supabase/tests/run.sh` geprüft und warten aufs Einspielen ins Supabase-Projekt. Die Oberfläche ist mit simulierten Supabase-Antworten im Browser getestet.
 - Moderation: Die erste Admin-Rolle setzt Jean einmalig im Supabase SQL Editor: `update public.profiles set rolle = 'admin' where handle = 'DEIN_HANDLE';`
 
 ## Was nur Jean erledigen kann
