@@ -163,5 +163,6 @@ create policy "Eigene Einträge ändern" on public.saved_items for update to aut
     using ((select auth.uid()) = user_id) with check ((select auth.uid()) = user_id);
 create policy "Eigene Einträge löschen" on public.saved_items for delete to authenticated using ((select auth.uid()) = user_id);
 
-create policy "Abzeichen sind öffentlich" on public.badges for select using (true);
+create policy "Abzeichen lesen, wenn Profil öffentlich oder eigene" on public.badges for select
+    using ((select auth.uid()) = user_id or exists (select 1 from public.profiles p where p.id = badges.user_id and p.oeffentlich));
 create policy "Eigene Abzeichen eintragen" on public.badges for insert to authenticated with check ((select auth.uid()) = user_id);

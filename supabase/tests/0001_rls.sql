@@ -4,6 +4,7 @@
 insert into auth.users (id, email) values ('aaaaaaaa-0000-0000-0000-000000000001','a@x.de'), ('bbbbbbbb-0000-0000-0000-000000000002','b@x.de');
 update public.profiles set oeffentlich = false where id = 'bbbbbbbb-0000-0000-0000-000000000002';
 update public.profil_details set bio = 'geheim' where id = 'bbbbbbbb-0000-0000-0000-000000000002';
+insert into public.badges (user_id, name) values ('bbbbbbbb-0000-0000-0000-000000000002', 'Neugier-Abzeichen'), ('aaaaaaaa-0000-0000-0000-000000000001', 'Neugier-Abzeichen');
 select 'trigger: profile=' || count(*) from public.profiles;
 select 'log konto=' || count(*) from public.einwilligungs_log;
 
@@ -11,6 +12,7 @@ set role anon;
 select 'anon profiles=' || count(*) from public.profiles;
 select 'anon details privat sichtbar=' || count(*) from public.profil_details where id = 'bbbbbbbb-0000-0000-0000-000000000002';
 select 'anon konten=' || count(*) from public.konten;
+select 'anon badges (nur A öffentlich)=' || count(*) from public.badges;
 reset role;
 
 set role authenticated;
