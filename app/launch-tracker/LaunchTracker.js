@@ -140,7 +140,7 @@ export default function LaunchTracker({ verzeichnisse }) {
             zeilen.push([v.name, v.link, v.submission_link, e ? STATUS.find(([k]) => k === e.status)?.[1] : 'Offen', e?.erinnerung || '', e?.notiz || '', e?.aktualisiert ? e.aktualisiert.slice(0, 10) : ''])
         })
         const csv = zeilen.map((r) => r.map((x) => `"${String(x).replace(/"/g, '""')}"`).join(';')).join('\n')
-        const url = URL.createObjectURL(new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8' }))
+        const url = URL.createObjectURL(new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8' }))
         const a = document.createElement('a')
         a.href = url
         a.download = 'aigeddon-launch-tracker.csv'
