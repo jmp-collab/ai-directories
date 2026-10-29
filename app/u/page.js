@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import Profil from './Profil'
 
 export const metadata = {
@@ -7,5 +8,9 @@ export const metadata = {
 }
 
 export default function ProfilSeite() {
-    return <Profil />
+    return (
+        <Suspense fallback={<p className="widget-note">Lade Profil …</p>}>
+            <Profil />
+        </Suspense>
+    )
 }

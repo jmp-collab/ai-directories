@@ -1,4 +1,5 @@
 import Breadcrumbs from '../../components/Breadcrumbs'
+import { Suspense } from 'react'
 import Thema from './Thema'
 
 export const metadata = {
@@ -11,7 +12,9 @@ export default function ThemaPage() {
     return (
         <>
             <Breadcrumbs items={[{ name: 'Startseite', path: '/' }, { name: 'Forum', path: '/forum' }, { name: 'Thema' }]} />
-            <Thema />
+            <Suspense fallback={<p className="widget-note">Lade Thema …</p>}>
+                <Thema />
+            </Suspense>
         </>
     )
 }

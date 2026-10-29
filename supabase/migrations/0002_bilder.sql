@@ -9,10 +9,13 @@ on conflict (id) do nothing;
 
 -- Höchstens 3 Dateien pro Bucket und Konto (der Editor lädt neu hoch und löscht danach das alte Bild).
 -- Gezählt wird über eine eigene Funktion, weil eine Regel auf storage.objects die Tabelle nicht selbst abfragen darf.
+-- Die Sperre pro Konto und Bucket sorgt dafür, dass gleichzeitige Uploads nacheinander gezählt werden.
 create or replace function public.eigene_bilder(bucket text)
-returns integer language sql stable security definer set search_path = '' as $$
-    select count(*)::integer from storage.objects o where o.bucket_id = bucket and (storage.foldername(o.name))[1] = (select auth.uid())::text
-$$;
+returns integer language plpgsql volatile security definer set search_path = '' as $$
+begin
+    perform pg_advisory_xact_lock(hashtext('aigeddon-bilder-' || coalesce((select auth.uid())::text, '') || '-' || bucket));
+    return (select count(*)::integer from storage.objects o where o.bucket_id = bucket and (storage.foldername(o.name))[1] = (select auth.uid())::text);
+end $$;
 revoke execute on function public.eigene_bilder(text) from public, anon;
 
 create policy "Eigene Profilbilder hochladen" on storage.objects for insert to authenticated

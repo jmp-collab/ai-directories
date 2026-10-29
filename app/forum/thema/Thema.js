@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import useKonto from '../../components/useKonto'
 import { KONTO_AKTIV, supabase } from '../../../lib/konto'
 import { AUTOR_FELDER, fehlerText, nochBearbeitbar } from '../../../lib/community'
@@ -93,11 +94,15 @@ export default function Thema() {
     const [folgt, setFolgt] = useState(false)
     const mod = profil && ['moderator', 'admin'].includes(profil.rolle)
 
+    // Die ID kommt aus der URL; wechselt sie (etwa über eine Benachrichtigung), wird neu geladen.
+    const idParam = useSearchParams().get('id')
     useEffect(() => {
-        const i = Number(new URLSearchParams(window.location.search).get('id'))
+        const i = Number(idParam)
         if (!KONTO_AKTIV || !Number.isInteger(i) || i < 1) return setThema(null)
+        setThema(undefined)
+        setBeitraege([])
         setId(i)
-    }, [])
+    }, [idParam])
 
     const laden = useCallback(async () => {
         if (!id) return
@@ -105,11 +110,12 @@ export default function Thema() {
         const { data: t } = await sb.from('forum_themen').select(`*, ${AUTOR_FELDER}`).eq('id', id).maybeSingle()
         if (!t) return setThema(null)
         const [{ data: b }, { data: k }] = await Promise.all([
-            sb.from('forum_beitraege').select(`id, thema_id, user_id, text, status, erstellt, bearbeitet, ${AUTOR_FELDER}`).eq('thema_id', id).order('erstellt').limit(500),
+            sb.from('forum_beitraege').select(`id, thema_id, user_id, text, status, erstellt, bearbeitet, ${AUTOR_FELDER}`).eq('thema_id', id).order('erstellt', { ascending: false }).limit(500),
             sb.from('forum_kategorien').select('id, name, emoji').eq('id', t.kategorie_id).maybeSingle(),
         ])
         setThema(t)
-        setBeitraege(b || [])
+        // Die neuesten 500 Antworten, für die Anzeige chronologisch.
+        setBeitraege((b || []).reverse())
         setKat(k)
         document.title = `${t.titel} | KI-Forum | AIGeddon`
     }, [id])

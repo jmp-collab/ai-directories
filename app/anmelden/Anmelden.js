@@ -41,10 +41,12 @@ export default function Anmelden() {
         if (wunsch) {
             const passt = wunsch.email && user.email && wunsch.email === user.email.toLowerCase() && Date.now() - (wunsch.zeit || 0) < 3600000
             schreib('aigeddon-einwilligung-wunsch', null)
-            if (passt && (wunsch.newsletter || wunsch.angebote)) {
-                supabase().then((sb) =>
-                    sb.from('konten').update({ newsletter: Boolean(wunsch.newsletter), angebote: Boolean(wunsch.angebote) }).eq('id', user.id)
-                )
+            if (passt) {
+                supabase().then(async (sb) => {
+                    if (wunsch.regeln) await sb.rpc('regeln_akzeptieren')
+                    if (wunsch.newsletter || wunsch.angebote)
+                        await sb.from('konten').update({ newsletter: Boolean(wunsch.newsletter), angebote: Boolean(wunsch.angebote) }).eq('id', user.id)
+                })
             }
         }
         const t = setTimeout(() => router.replace(zurueck), 900)
@@ -68,6 +70,7 @@ export default function Anmelden() {
         schreib('aigeddon-einwilligung-wunsch', {
             email: email.trim().toLowerCase(),
             zeit: Date.now(),
+            regeln: form.get('regeln') === 'on',
             newsletter: form.get('newsletter') === 'on',
             angebote: form.get('angebote') === 'on',
         })

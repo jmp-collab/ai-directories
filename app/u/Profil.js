@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { KONTO_AKTIV, supabase, bildUrl } from '../../lib/konto'
 import { ABZEICHEN_KATALOG } from '../../lib/herz'
 import { Medaille, WinkeRoboter } from '../components/HerzIcons'
@@ -12,9 +13,10 @@ export default function Profil() {
     const { user } = useKonto()
     const [daten, setDaten] = useState(undefined)
 
+    const handle = (useSearchParams().get('h') || '').toLowerCase()
     useEffect(() => {
-        const handle = (new URLSearchParams(window.location.search).get('h') || '').toLowerCase()
         if (!KONTO_AKTIV || !/^[a-z0-9_]{3,24}$/.test(handle)) return setDaten(null)
+        setDaten(undefined)
         supabase()
             .then(async (sb) => {
                 const { data: profil } = await sb
@@ -33,7 +35,7 @@ export default function Profil() {
                 setDaten({ profil, details, abzeichen: abzeichen || [], themen: themen || [], kommentare: kommentare || [] })
             })
             .catch(() => setDaten(null))
-    }, [])
+    }, [handle])
 
     if (daten === undefined) return <p className="widget-note">Lade Profil …</p>
     if (daten === null)

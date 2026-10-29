@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { KONTO_AKTIV, supabase } from '../../../lib/konto'
 import { AUTOR_FELDER } from '../../../lib/community'
 import { ThemenListe } from '../ForumStart'
@@ -19,9 +20,11 @@ export default function Kategorie() {
     const [themen, setThemen] = useState(null)
     const [sort, setSort] = useState('aktiv')
 
+    const k = useSearchParams().get('k') || ''
     useEffect(() => {
-        const k = new URLSearchParams(window.location.search).get('k') || ''
+        setThemen(null)
         if (!KONTO_AKTIV || !/^[a-z0-9-]{2,40}$/.test(k)) return setKat(null)
+        setKat(undefined)
         supabase()
             .then(async (sb) => {
                 const { data } = await sb.from('forum_kategorien').select('*').eq('id', k).maybeSingle()
@@ -29,7 +32,7 @@ export default function Kategorie() {
                 if (data) document.title = `${data.name} | KI-Forum | AIGeddon`
             })
             .catch(() => setKat(null))
-    }, [])
+    }, [k])
 
     useEffect(() => {
         if (!kat) return

@@ -5,7 +5,7 @@ update public.profiles set oeffentlich = false where id = 'bbbbbbbb-0000-0000-00
 update public.profil_details set bio = 'geheim' where id = 'bbbbbbbb-0000-0000-0000-000000000002';
 insert into public.badges (user_id, name) values ('bbbbbbbb-0000-0000-0000-000000000002', 'Neugier-Abzeichen'), ('aaaaaaaa-0000-0000-0000-000000000001', 'Neugier-Abzeichen');
 select test.gleich((select count(*) from public.profiles)::text, '2', 'Trigger legt Profile an');
-select test.gleich((select count(*) from public.einwilligungs_log)::text, '2', 'Konto-Einwilligung protokolliert');
+select test.gleich((select count(*) from public.einwilligungs_log)::text, '0', 'Kein Einwilligungsnachweis nur durch Kontoanlage');
 
 set role anon;
 select test.gleich((select count(*) from public.profiles)::text, '2', 'Gast sieht Profilkarten');
@@ -23,6 +23,10 @@ update public.profiles set anzeigename = 'Hack' where id = 'bbbbbbbb-0000-0000-0
 select test.gleich((select anzeigename from public.profiles where id = 'bbbbbbbb-0000-0000-0000-000000000002'), 'Neues Mitglied', 'A kann B nicht umbenennen');
 select test.scheitert($$update public.profiles set rolle = 'admin' where id = 'aaaaaaaa-0000-0000-0000-000000000001'$$, '%permission denied%');
 select test.scheitert($$update public.konten set plan = 'pro' where id = 'aaaaaaaa-0000-0000-0000-000000000001'$$, '%permission denied%');
+select public.regeln_akzeptieren();
+select public.regeln_akzeptieren();
+select test.gleich((select count(*) from public.einwilligungs_log where art = 'konto')::text, '1', 'Regeln bestätigt und einmal protokolliert');
+select test.scheitert($$update public.konten set regeln_akzeptiert = null where id = 'aaaaaaaa-0000-0000-0000-000000000001'$$, '%permission denied%');
 update public.konten set newsletter = true where id = 'aaaaaaaa-0000-0000-0000-000000000001';
 select test.gleich((select string_agg(art || ':' || erteilt, ',' order by id) from public.einwilligungs_log), 'konto:true,newsletter:true', 'Einwilligung per Trigger protokolliert');
 select test.scheitert($$insert into public.einwilligungs_log (user_id, art, erteilt) values ('aaaaaaaa-0000-0000-0000-000000000001', 'angebote', true)$$, '%row-level security%');

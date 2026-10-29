@@ -19,7 +19,7 @@ export default function Konto() {
     useEffect(() => {
         if (!user) return
         supabase().then(async (sb) => {
-            const { data } = await sb.from('konten').select('newsletter, angebote, plan').eq('id', user.id).maybeSingle()
+            const { data } = await sb.from('konten').select('newsletter, angebote, plan, regeln_akzeptiert').eq('id', user.id).maybeSingle()
             setKonto(data)
             const { data: items } = await sb.from('saved_items').select('art').eq('user_id', user.id)
             const { count } = await sb.from('badges').select('name', { count: 'exact', head: true }).eq('user_id', user.id)
@@ -146,6 +146,28 @@ export default function Konto() {
                     🎨 Profil bearbeiten
                 </Link>
             </p>
+
+            {konto && !konto.regeln_akzeptiert && (
+                <div className="konto-karte konto-regeln">
+                    <p>
+                        <strong>Fast geschafft!</strong> Bevor du kommentieren und im Forum schreiben kannst, bestätige bitte einmal die{' '}
+                        <Link href="/community-regeln">Community-Regeln</Link> und die <Link href="/datenschutz">Datenschutzerklärung</Link>.
+                    </p>
+                    <button
+                        type="button"
+                        className="button"
+                        onClick={async () => {
+                            const sb = await supabase()
+                            const { error } = await sb.rpc('regeln_akzeptieren')
+                            if (error) return toast('Das hat nicht geklappt. Bitte versuch es noch einmal.', '⚠️')
+                            setKonto({ ...konto, regeln_akzeptiert: new Date().toISOString() })
+                            toast('Danke! Jetzt kannst du überall mitreden.', '🎉')
+                        }}
+                    >
+                        Regeln gelesen, ich bin dabei
+                    </button>
+                </div>
+            )}
 
             <h2>💌 Deine Einwilligungen</h2>
             {konto ? (

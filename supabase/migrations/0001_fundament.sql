@@ -32,6 +32,8 @@ create table public.konten (
     segment jsonb not null default '{}'::jsonb,
     plan text not null default 'gratis' check (plan in ('gratis', 'pro', 'team')),
     gesperrt_bis timestamptz,
+    -- Zeitpunkt, zu dem die angemeldete Person Community-Regeln und Datenschutz selbst bestätigt hat.
+    regeln_akzeptiert timestamptz,
     geaendert timestamptz not null default now()
 );
 
@@ -106,13 +108,27 @@ begin
     insert into public.profiles (id, handle) values (new.id, 'mitglied_' || substr(md5(new.id::text), 1, 15));
     insert into public.profil_details (id) values (new.id);
     insert into public.konten (id) values (new.id);
-    insert into public.einwilligungs_log (user_id, art, erteilt) values (new.id, 'konto', true);
     return new;
 end $$;
 
 create trigger on_auth_user_created after insert on auth.users for each row execute function public.handle_new_user();
 
 -- Eigenes Konto löschen (entfernt alle verknüpften Daten per Kaskade).
+-- Die angemeldete Person bestätigt Regeln und Datenschutz selbst. Erst danach darf sie schreiben.
+create or replace function public.regeln_akzeptieren()
+returns void language plpgsql security definer set search_path = '' as $$
+begin
+    if (select auth.uid()) is null then
+        raise exception 'nicht angemeldet';
+    end if;
+    update public.konten set regeln_akzeptiert = now() where id = (select auth.uid()) and regeln_akzeptiert is null;
+    if found then
+        insert into public.einwilligungs_log (user_id, art, erteilt) values ((select auth.uid()), 'konto', true);
+    end if;
+end $$;
+revoke execute on function public.regeln_akzeptieren() from public, anon;
+grant execute on function public.regeln_akzeptieren() to authenticated;
+
 create or replace function public.konto_loeschen()
 returns void language plpgsql security definer set search_path = '' as $$
 begin

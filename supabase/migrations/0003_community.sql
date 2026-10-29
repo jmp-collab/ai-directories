@@ -9,7 +9,7 @@ create or replace function public.darf_schreiben()
 returns boolean language sql stable security definer set search_path = '' as $$
     select exists (
         select 1 from public.konten k
-        where k.id = (select auth.uid()) and (k.gesperrt_bis is null or k.gesperrt_bis < now())
+        where k.id = (select auth.uid()) and k.regeln_akzeptiert is not null and (k.gesperrt_bis is null or k.gesperrt_bis < now())
     )
 $$;
 
@@ -136,6 +136,8 @@ create table public.meldungen (
     erstellt timestamptz not null default now()
 );
 create index meldungen_status_idx on public.meldungen (status, erstellt);
+-- Pro Person höchstens eine offene Meldung je Inhalt.
+create unique index meldungen_einmal_idx on public.meldungen (melder, ziel_art, ziel_id) where status = 'offen';
 create index meldungen_melder_idx on public.meldungen (melder);
 create index meldungen_erledigt_von_idx on public.meldungen (erledigt_von);
 
@@ -176,6 +178,9 @@ begin
         -- Gleichzeitige Anfragen desselben Kontos nacheinander prüfen, damit das Ratenlimit nicht umgangen wird.
         perform pg_advisory_xact_lock(hashtext('aigeddon-inhalt-' || coalesce(new.user_id::text, '')));
         new.erstellt := now();
+        if not exists (select 1 from public.konten k where k.id = new.user_id and k.regeln_akzeptiert is not null) then
+            raise exception 'regeln_fehlen' using errcode = 'P0001';
+        end if;
         if not public.darf_schreiben() then
             raise exception 'schreiben_gesperrt' using errcode = 'P0001';
         end if;
@@ -189,6 +194,9 @@ begin
         new.status := 'sichtbar';
     else
         -- Nutzer dürfen nur den Text ändern, und nur 15 Minuten lang. Status ändert nur die Moderation (RPC).
+        if not public.darf_schreiben() then
+            raise exception 'schreiben_gesperrt' using errcode = 'P0001';
+        end if;
         if new.erstellt < now() - interval '15 minutes' then
             raise exception 'bearbeiten_abgelaufen' using errcode = 'P0001';
         end if;
@@ -208,6 +216,20 @@ create trigger comments_vor before insert or update of text on public.comments f
 create trigger themen_vor before insert or update of titel, text on public.forum_themen for each row execute function public.vor_inhalt();
 create trigger beitraege_vor before insert or update of text on public.forum_beitraege for each row execute function public.vor_inhalt();
 
+-- Meldungen: höchstens 10 pro Stunde und Konto, gleichzeitige Anfragen nacheinander.
+create or replace function public.meldung_vor()
+returns trigger language plpgsql security definer set search_path = '' as $$
+begin
+    new.melder := (select auth.uid());
+    perform pg_advisory_xact_lock(hashtext('aigeddon-meldung-' || coalesce(new.melder::text, '')));
+    if (select count(*) from public.meldungen where melder = new.melder and erstellt > now() - interval '1 hour') >= 10 then
+        raise exception 'zu_schnell' using errcode = 'P0001';
+    end if;
+    new.status := 'offen';
+    new.erstellt := now();
+    return new;
+end $$;
+
 -- Antworten nur eine Ebene tief und nur auf derselben Seite.
 create or replace function public.kommentar_ebene()
 returns trigger language plpgsql set search_path = '' as $$
@@ -223,6 +245,7 @@ begin
     return new;
 end $$;
 create trigger comments_ebene before insert on public.comments for each row execute function public.kommentar_ebene();
+create trigger meldungen_vor before insert on public.meldungen for each row execute function public.meldung_vor();
 
 -- In geschlossenen Themen und in Team-Kategorien darf nicht jeder schreiben.
 create or replace function public.beitrag_erlaubt()
@@ -304,20 +327,41 @@ declare
     ist_sichtbar boolean := new.status = 'sichtbar';
     erstmals boolean := ist_sichtbar and (tg_op = 'INSERT' or old.status = 'pruefen');
 begin
-    if tg_op = 'INSERT' then
+    if tg_op = 'INSERT' and new.user_id is not null then
         if tg_table_name = 'forum_beitraege' then
-            update public.forum_themen set antworten = antworten + 1, letzte_aktivitaet = now() where id = new.thema_id;
             insert into public.thema_abos (user_id, thema_id) values (new.user_id, new.thema_id) on conflict do nothing;
         elsif tg_table_name = 'forum_themen' then
             insert into public.thema_abos (user_id, thema_id) values (new.user_id, new.id) on conflict do nothing;
         end if;
     end if;
-    if ist_sichtbar and not war_sichtbar then
-        perform public.punkte_plus(new.user_id, wert);
-    elsif war_sichtbar and not ist_sichtbar then
-        perform public.punkte_plus(new.user_id, -wert);
+    -- Antwortzähler und Aktivität zählen nur sichtbare Antworten.
+    if tg_table_name = 'forum_beitraege' then
+        if ist_sichtbar and not war_sichtbar then
+            update public.forum_themen set antworten = antworten + 1, letzte_aktivitaet = now() where id = new.thema_id;
+        elsif war_sichtbar and not ist_sichtbar then
+            update public.forum_themen set antworten = greatest(0, antworten - 1) where id = new.thema_id;
+            -- War die Antwort als Lösung markiert, wird die Markierung samt Bonus zurückgenommen.
+            update public.forum_themen t set geloest_beitrag_id = null where t.id = new.thema_id and t.geloest_beitrag_id = new.id;
+            if found and new.user_id is not null and new.user_id is distinct from (select user_id from public.forum_themen where id = new.thema_id) then
+                perform public.punkte_plus(new.user_id, -15);
+            end if;
+        end if;
     end if;
-    if erstmals then
+    -- Gelöschte Konten (user_id null) bekommen keine Punkte und Abzeichen mehr, Benachrichtigungen gehen trotzdem raus.
+    if new.user_id is not null then
+        if ist_sichtbar and not war_sichtbar then
+            perform public.punkte_plus(new.user_id, wert);
+        elsif war_sichtbar and not ist_sichtbar then
+            perform public.punkte_plus(new.user_id, -wert);
+        end if;
+    end if;
+    if erstmals and new.user_id is null then
+        if tg_table_name = 'comments' then
+            perform public.melde_kommentar(new::public.comments);
+        elsif tg_table_name = 'forum_beitraege' then
+            perform public.melde_beitrag(new::public.forum_beitraege);
+        end if;
+    elsif erstmals then
         if tg_table_name = 'comments' then
             perform public.vergib_abzeichen(new.user_id, 'Erster-Kommentar-Abzeichen');
             perform public.melde_kommentar(new::public.comments);
@@ -421,7 +465,9 @@ begin
         raise exception 'beitrag_fehlt' using errcode = 'P0001';
     end if;
     if t.geloest_beitrag_id is not null then
-        perform public.punkte_plus((select user_id from public.forum_beitraege where id = t.geloest_beitrag_id), -15);
+        if (select user_id from public.forum_beitraege where id = t.geloest_beitrag_id) is distinct from t.user_id then
+            perform public.punkte_plus((select user_id from public.forum_beitraege where id = t.geloest_beitrag_id), -15);
+        end if;
     end if;
     update public.forum_themen set geloest_beitrag_id = beitrag where id = thema;
     if autor is not null and autor is distinct from t.user_id then
@@ -532,6 +578,7 @@ revoke execute on function public.melde_kommentar(public.comments) from public, 
 revoke execute on function public.melde_beitrag(public.forum_beitraege) from public, anon, authenticated;
 revoke execute on function public.nach_reaktion() from public, anon, authenticated;
 revoke execute on function public.reaktion_gueltig() from public, anon, authenticated;
+revoke execute on function public.meldung_vor() from public, anon, authenticated;
 revoke execute on function public.eigenes_loeschen(text, bigint) from public, anon;
 revoke execute on function public.loesung_markieren(bigint, bigint) from public, anon;
 revoke execute on function public.alles_gelesen() from public, anon;
