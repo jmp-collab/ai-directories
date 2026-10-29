@@ -12,6 +12,7 @@ const ICON = { antwort: '💬', erwaehnung: '📣', loesung: '✅', moderation: 
 export default function Glocke() {
     const { user } = useKonto()
     const [liste, setListe] = useState([])
+    const [ungelesen, setUngelesen] = useState(0)
     const [offen, setOffen] = useState(false)
     const box = useRef(null)
 
@@ -20,6 +21,8 @@ export default function Glocke() {
         const sb = await supabase()
         const { data } = await sb.from('benachrichtigungen').select('id, art, link, text, gelesen, erstellt, von:profiles!benachrichtigungen_von_fkey(anzeigename)').order('erstellt', { ascending: false }).limit(15)
         setListe(data || [])
+        const { count } = await sb.from('benachrichtigungen').select('id', { count: 'exact', head: true }).eq('gelesen', false)
+        setUngelesen(count || 0)
     }, [user])
 
     useEffect(() => {
@@ -48,25 +51,28 @@ export default function Glocke() {
     }, [offen])
 
     if (!KONTO_AKTIV || !user) return null
-    const ungelesen = liste.filter((b) => !b.gelesen).length
+    // Nur die angezeigten Meldungen als gelesen markieren, ältere bleiben ungelesen und rücken nach.
     const allesGelesen = async () => {
+        const ids = liste.filter((b) => !b.gelesen).map((b) => b.id)
+        if (!ids.length) return
         const sb = await supabase()
-        await sb.rpc('alles_gelesen')
-        setListe(liste.map((b) => ({ ...b, gelesen: true })))
+        const { error } = await sb.from('benachrichtigungen').update({ gelesen: true }).in('id', ids)
+        if (!error) laden()
     }
+    const sichtbarUngelesen = liste.some((b) => !b.gelesen)
     return (
         <div className="glocke" ref={box}>
             <button type="button" className="konto-knopf glocke-knopf" aria-expanded={offen} aria-label={`Benachrichtigungen, ${ungelesen} ungelesen`} onClick={() => setOffen(!offen)}>
                 <span aria-hidden="true">🔔</span>
-                {ungelesen > 0 && <span className="glocke-zahl">{ungelesen}</span>}
+                {ungelesen > 0 && <span className="glocke-zahl">{ungelesen > 99 ? '99+' : ungelesen}</span>}
             </button>
             {offen && (
                 <div className="glocke-liste" role="region" aria-label="Benachrichtigungen">
                     <p className="glocke-kopf">
                         <strong>Benachrichtigungen</strong>
-                        {ungelesen > 0 && (
+                        {sichtbarUngelesen && (
                             <button type="button" className="c-link" onClick={allesGelesen}>
-                                Alle gelesen
+                                Diese als gelesen markieren
                             </button>
                         )}
                     </p>

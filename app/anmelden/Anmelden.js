@@ -36,12 +36,16 @@ export default function Anmelden() {
     // Nach dem Klick auf den Link: angemeldet, gewünschte Einwilligungen übernehmen, weiter.
     useEffect(() => {
         if (!user) return
+        // Gewünschte Einwilligungen gelten nur für genau die Adresse, an die der Link ging, und nur 1 Stunde.
         const wunsch = lies('aigeddon-einwilligung-wunsch')
         if (wunsch) {
-            supabase().then(async (sb) => {
-                await sb.from('konten').update({ newsletter: Boolean(wunsch.newsletter), angebote: Boolean(wunsch.angebote) }).eq('id', user.id)
-                schreib('aigeddon-einwilligung-wunsch', null)
-            })
+            const passt = wunsch.email && user.email && wunsch.email === user.email.toLowerCase() && Date.now() - (wunsch.zeit || 0) < 3600000
+            schreib('aigeddon-einwilligung-wunsch', null)
+            if (passt && (wunsch.newsletter || wunsch.angebote)) {
+                supabase().then((sb) =>
+                    sb.from('konten').update({ newsletter: Boolean(wunsch.newsletter), angebote: Boolean(wunsch.angebote) }).eq('id', user.id)
+                )
+            }
         }
         const t = setTimeout(() => router.replace(zurueck), 900)
         return () => clearTimeout(t)
@@ -61,10 +65,16 @@ export default function Anmelden() {
         const form = new FormData(e.currentTarget)
         setFehler('')
         setStatus('sendet')
-        schreib('aigeddon-einwilligung-wunsch', { newsletter: form.get('newsletter') === 'on', angebote: form.get('angebote') === 'on' })
+        schreib('aigeddon-einwilligung-wunsch', {
+            email: email.trim().toLowerCase(),
+            zeit: Date.now(),
+            newsletter: form.get('newsletter') === 'on',
+            angebote: form.get('angebote') === 'on',
+        })
         const sb = await supabase()
         const { error } = await sb.auth.signInWithOtp({ email: email.trim(), options: { emailRedirectTo: anmeldeZiel(zurueck), shouldCreateUser: true } })
         if (error) {
+            schreib('aigeddon-einwilligung-wunsch', null)
             setStatus('bereit')
             setFehler(
                 error.status === 429

@@ -43,6 +43,15 @@ select public.loesung_markieren((select id from public.forum_themen limit 1), (s
 select test.gleich((select (geloest_beitrag_id is not null) || ':' || antworten from public.forum_themen), 'true:1', 'Lösung markiert, Zähler stimmt');
 select public.alles_gelesen();
 select test.gleich((select count(*) from public.benachrichtigungen where not gelesen)::text, '0', 'Alles gelesen');
+-- Ratenlimit-Fenster für den Test zurücksetzen.
+reset role;
+update public.comments set erstellt = now() - interval '1 hour' where user_id = 'd0000000-0000-0000-0000-000000000001';
+update public.forum_themen set erstellt = now() - interval '1 hour' where user_id = 'd0000000-0000-0000-0000-000000000001';
+set role authenticated;
+insert into public.comments (pfad, text) values ('/b', 'gleich wieder weg');
+select test.gleich((select punkte from public.profiles where handle = 'dora')::text, '7', 'Punkt für neuen Kommentar');
+select public.eigenes_loeschen('kommentar', (select id from public.comments where text = 'gleich wieder weg'));
+select test.gleich((select punkte from public.profiles where handle = 'dora')::text, '6', 'Punkt beim Zurückziehen wieder abgezogen');
 select test.scheitert($$update public.benachrichtigungen set text = 'x'$$, '%permission denied%');
 
 select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000003', false);
@@ -52,19 +61,35 @@ select public.moderieren('kommentar', (select id from public.comments where text
 select public.meldung_entscheiden((select id from public.meldungen limit 1), 'erledigt', 'Ausgeblendet, danke!');
 select public.sperren('d0000000-0000-0000-0000-000000000002', 7, 'Test-Sperre');
 select test.gleich((select string_agg(aktion, ',' order by id) from public.moderations_log), 'ausgeblendet,meldung_erledigt,gesperrt_7_tage', 'Protokoll vollständig');
+-- Zurückgehaltene Antwort freigeben: Punkte und Benachrichtigungen kommen erst jetzt.
+insert into public.forum_beitraege (thema_id, text) select id, 'Mein Tipp: Casino-Werbung (Test)' from public.forum_themen limit 1;
+select test.gleich((select status from public.forum_beitraege where text like 'Mein Tipp%'), 'pruefen', 'Moderation-Antwort mit Filterwort wartet');
+select test.gleich((select punkte from public.profiles where handle = 'moni')::text, '0', 'Keine Punkte für zurückgehaltene Antwort');
+select public.moderieren('beitrag', (select id from public.forum_beitraege where text like 'Mein Tipp%'), 'sichtbar', 'ok');
+select test.gleich((select punkte from public.profiles where handle = 'moni')::text, '1', 'Punkte nach Freigabe');
 
 select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000002', false);
 select test.scheitert($$insert into public.comments (pfad, text) values ('/x', 'darf ich?')$$, '%schreiben_gesperrt%');
-select test.gleich((select string_agg(art, ',' order by id) from public.benachrichtigungen), 'loesung,moderation,moderation', 'Emil über Lösung, Meldung und Sperre informiert');
+select test.gleich((select string_agg(art, ',' order by id) from public.benachrichtigungen), 'loesung,moderation,moderation,antwort', 'Emil über Lösung, Meldung, Sperre und freigegebene Antwort informiert');
 reset role;
 
+select set_config('request.jwt.claim.sub', '', false);
 set role anon;
 select test.gleich((select count(*) from public.comments)::text, '4', 'Gäste sehen nur sichtbare Kommentare');
+select test.gleich((select count(*) from public.forum_beitraege)::text, '2', 'Gäste sehen Antworten sichtbarer Themen');
+reset role;
+set role authenticated;
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000003', false);
+select public.moderieren('thema', (select id from public.forum_themen limit 1), 'ausgeblendet', 'Test');
+reset role;
+select set_config('request.jwt.claim.sub', '', false);
+set role anon;
+select test.gleich((select count(*) from public.forum_beitraege)::text, '0', 'Antworten ausgeblendeter Themen sind verborgen');
 select test.scheitert($$insert into public.comments (pfad, text) values ('/x', 'anonym')$$, '%permission denied%');
 reset role;
 
-select test.gleich((select string_agg(handle || ':' || punkte, ' ' order by handle) from public.profiles where handle in ('dora', 'emil', 'moni')), 'dora:7 emil:17 moni:0', 'Punkte');
+select test.gleich((select string_agg(handle || ':' || punkte, ' ' order by handle) from public.profiles where handle in ('dora', 'emil', 'moni')), 'dora:4 emil:17 moni:1', 'Punkte nur für sichtbare Inhalte (Thema ausgeblendet: -2)');
 select test.gleich((select string_agg(p.handle || ':' || b.name, ' ' order by p.handle, b.name) from public.badges b join public.profiles p on p.id = b.user_id where p.handle in ('dora', 'emil')),
     'dora:Erster-Kommentar-Abzeichen dora:Forums-Starter-Abzeichen emil:Erster-Kommentar-Abzeichen emil:Problemlöser-Abzeichen', 'Community-Abzeichen');
 delete from auth.users where id = 'd0000000-0000-0000-0000-000000000001';
-select test.gleich((select count(*) from public.comments where user_id is null)::text, '4', 'Beiträge gelöschter Konten bleiben anonym');
+select test.gleich((select count(*) from public.comments where user_id is null)::text, '5', 'Beiträge gelöschter Konten bleiben anonym');

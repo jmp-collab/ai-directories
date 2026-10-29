@@ -173,6 +173,8 @@ declare
 begin
     if tg_op = 'INSERT' then
         new.user_id := (select auth.uid());
+        -- Gleichzeitige Anfragen desselben Kontos nacheinander prüfen, damit das Ratenlimit nicht umgangen wird.
+        perform pg_advisory_xact_lock(hashtext('aigeddon-inhalt-' || coalesce(new.user_id::text, '')));
         new.erstellt := now();
         if not public.darf_schreiben() then
             raise exception 'schreiben_gesperrt' using errcode = 'P0001';
@@ -250,73 +252,87 @@ create trigger themen_erlaubt before insert on public.forum_themen for each row 
 
 -- ---------- Trigger: Zähler, Punkte, Abzeichen, Benachrichtigungen ----------
 
-create or replace function public.nach_kommentar()
-returns trigger language plpgsql security definer set search_path = '' as $$
+-- Belohnungen und Benachrichtigungen hängen an der Sichtbarkeit: Punkte gibt es, sobald ein Inhalt sichtbar wird,
+-- und sie werden wieder abgezogen, wenn er ausgeblendet oder zurückgezogen wird. Benachrichtigungen gehen raus,
+-- sobald ein Inhalt erstmals sichtbar ist (direkt oder nach Freigabe durch die Moderation).
+
+create or replace function public.melde_kommentar(k public.comments)
+returns void language plpgsql security definer set search_path = '' as $$
 declare
     eltern_autor uuid;
     erwaehnt record;
 begin
-    perform public.punkte_plus(new.user_id, 1);
-    if not exists (select 1 from public.comments where user_id = new.user_id and id <> new.id) then
-        perform public.vergib_abzeichen(new.user_id, 'Erster-Kommentar-Abzeichen');
-    end if;
-    if new.status <> 'sichtbar' then
-        return new;
-    end if;
-    if new.parent_id is not null then
-        select user_id into eltern_autor from public.comments where id = new.parent_id;
-        perform public.benachrichtige(eltern_autor, new.user_id, 'antwort', new.pfad || '#kommentar-' || new.id, 'hat auf deinen Kommentar geantwortet');
+    if k.parent_id is not null then
+        select user_id into eltern_autor from public.comments where id = k.parent_id;
+        perform public.benachrichtige(eltern_autor, k.user_id, 'antwort', k.pfad || '#kommentar-' || k.id, 'hat auf deinen Kommentar geantwortet');
     end if;
     for erwaehnt in
         select distinct p.id from public.profiles p
-        where p.handle in (select lower(m[1]) from regexp_matches(new.text, '@([a-zA-Z0-9_]{3,24})', 'g') as m)
+        where p.handle in (select lower(m[1]) from regexp_matches(k.text, '@([a-zA-Z0-9_]{3,24})', 'g') as m)
         limit 5
     loop
-        perform public.benachrichtige(erwaehnt.id, new.user_id, 'erwaehnung', new.pfad || '#kommentar-' || new.id, 'hat dich in einem Kommentar erwähnt');
+        perform public.benachrichtige(erwaehnt.id, k.user_id, 'erwaehnung', k.pfad || '#kommentar-' || k.id, 'hat dich in einem Kommentar erwähnt');
     end loop;
-    return new;
 end $$;
-create trigger comments_nach after insert on public.comments for each row execute function public.nach_kommentar();
 
-create or replace function public.nach_thema()
-returns trigger language plpgsql security definer set search_path = '' as $$
-begin
-    perform public.punkte_plus(new.user_id, 2);
-    insert into public.thema_abos (user_id, thema_id) values (new.user_id, new.id) on conflict do nothing;
-    if not exists (select 1 from public.forum_themen where user_id = new.user_id and id <> new.id) then
-        perform public.vergib_abzeichen(new.user_id, 'Forums-Starter-Abzeichen');
-    end if;
-    return new;
-end $$;
-create trigger themen_nach after insert on public.forum_themen for each row execute function public.nach_thema();
-
-create or replace function public.nach_beitrag()
-returns trigger language plpgsql security definer set search_path = '' as $$
+create or replace function public.melde_beitrag(b public.forum_beitraege)
+returns void language plpgsql security definer set search_path = '' as $$
 declare
     abo record;
     erwaehnt record;
     link_ text;
 begin
-    update public.forum_themen set antworten = antworten + 1, letzte_aktivitaet = now() where id = new.thema_id;
-    perform public.punkte_plus(new.user_id, 1);
-    insert into public.thema_abos (user_id, thema_id) values (new.user_id, new.thema_id) on conflict do nothing;
-    if new.status <> 'sichtbar' then
-        return new;
-    end if;
-    link_ := '/forum/thema?id=' || new.thema_id || '#beitrag-' || new.id;
-    for abo in select user_id from public.thema_abos where thema_id = new.thema_id loop
-        perform public.benachrichtige(abo.user_id, new.user_id, 'antwort', link_, 'hat in einem Thema geantwortet, dem du folgst');
+    link_ := '/forum/thema?id=' || b.thema_id || '#beitrag-' || b.id;
+    for abo in select user_id from public.thema_abos where thema_id = b.thema_id loop
+        perform public.benachrichtige(abo.user_id, b.user_id, 'antwort', link_, 'hat in einem Thema geantwortet, dem du folgst');
     end loop;
     for erwaehnt in
         select distinct p.id from public.profiles p
-        where p.handle in (select lower(m[1]) from regexp_matches(new.text, '@([a-zA-Z0-9_]{3,24})', 'g') as m)
+        where p.handle in (select lower(m[1]) from regexp_matches(b.text, '@([a-zA-Z0-9_]{3,24})', 'g') as m)
         limit 5
     loop
-        perform public.benachrichtige(erwaehnt.id, new.user_id, 'erwaehnung', link_, 'hat dich im Forum erwähnt');
+        perform public.benachrichtige(erwaehnt.id, b.user_id, 'erwaehnung', link_, 'hat dich im Forum erwähnt');
     end loop;
-    return new;
 end $$;
-create trigger beitraege_nach after insert on public.forum_beitraege for each row execute function public.nach_beitrag();
+
+-- Gemeinsamer Trigger nach Insert und Statuswechsel für alle drei Inhaltstabellen.
+create or replace function public.nach_inhalt()
+returns trigger language plpgsql security definer set search_path = '' as $$
+declare
+    wert integer := case when tg_table_name = 'forum_themen' then 2 else 1 end;
+    war_sichtbar boolean := tg_op = 'UPDATE' and old.status = 'sichtbar';
+    ist_sichtbar boolean := new.status = 'sichtbar';
+    erstmals boolean := ist_sichtbar and (tg_op = 'INSERT' or old.status = 'pruefen');
+begin
+    if tg_op = 'INSERT' then
+        if tg_table_name = 'forum_beitraege' then
+            update public.forum_themen set antworten = antworten + 1, letzte_aktivitaet = now() where id = new.thema_id;
+            insert into public.thema_abos (user_id, thema_id) values (new.user_id, new.thema_id) on conflict do nothing;
+        elsif tg_table_name = 'forum_themen' then
+            insert into public.thema_abos (user_id, thema_id) values (new.user_id, new.id) on conflict do nothing;
+        end if;
+    end if;
+    if ist_sichtbar and not war_sichtbar then
+        perform public.punkte_plus(new.user_id, wert);
+    elsif war_sichtbar and not ist_sichtbar then
+        perform public.punkte_plus(new.user_id, -wert);
+    end if;
+    if erstmals then
+        if tg_table_name = 'comments' then
+            perform public.vergib_abzeichen(new.user_id, 'Erster-Kommentar-Abzeichen');
+            perform public.melde_kommentar(new::public.comments);
+        elsif tg_table_name = 'forum_themen' then
+            perform public.vergib_abzeichen(new.user_id, 'Forums-Starter-Abzeichen');
+        else
+            perform public.melde_beitrag(new::public.forum_beitraege);
+        end if;
+    end if;
+    return null;
+end $$;
+
+create trigger comments_nach after insert or update of status on public.comments for each row execute function public.nach_inhalt();
+create trigger themen_nach after insert or update of status on public.forum_themen for each row execute function public.nach_inhalt();
+create trigger beitraege_nach after insert or update of status on public.forum_beitraege for each row execute function public.nach_inhalt();
 
 -- Reaktionen: Punkte für die Autorin oder den Autor, Abzeichen ab 10 erhaltenen Reaktionen.
 create or replace function public.nach_reaktion()
@@ -511,9 +527,9 @@ revoke execute on function public.vor_inhalt() from public, anon, authenticated;
 revoke execute on function public.kommentar_ebene() from public, anon, authenticated;
 revoke execute on function public.beitrag_erlaubt() from public, anon, authenticated;
 revoke execute on function public.thema_erlaubt() from public, anon, authenticated;
-revoke execute on function public.nach_kommentar() from public, anon, authenticated;
-revoke execute on function public.nach_thema() from public, anon, authenticated;
-revoke execute on function public.nach_beitrag() from public, anon, authenticated;
+revoke execute on function public.nach_inhalt() from public, anon, authenticated;
+revoke execute on function public.melde_kommentar(public.comments) from public, anon, authenticated;
+revoke execute on function public.melde_beitrag(public.forum_beitraege) from public, anon, authenticated;
 revoke execute on function public.nach_reaktion() from public, anon, authenticated;
 revoke execute on function public.reaktion_gueltig() from public, anon, authenticated;
 revoke execute on function public.eigenes_loeschen(text, bigint) from public, anon;
@@ -562,7 +578,11 @@ create policy "Eigenes Thema bearbeiten" on public.forum_themen for update to au
     using (user_id = (select auth.uid()) and status in ('sichtbar', 'pruefen')) with check (user_id = (select auth.uid()));
 
 create policy "Beiträge lesen" on public.forum_beitraege for select
-    using (status = 'sichtbar' or user_id = (select auth.uid()) or (select public.ist_moderator()));
+    using (
+        (status = 'sichtbar' and exists (select 1 from public.forum_themen t where t.id = forum_beitraege.thema_id and t.status = 'sichtbar'))
+        or user_id = (select auth.uid())
+        or (select public.ist_moderator())
+    );
 create policy "Beitrag schreiben" on public.forum_beitraege for insert to authenticated
     with check (user_id = (select auth.uid()));
 create policy "Eigenen Beitrag bearbeiten" on public.forum_beitraege for update to authenticated

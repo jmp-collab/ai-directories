@@ -114,8 +114,9 @@ export default function Kommentare() {
     const laden = useCallback(async () => {
         const sb = await supabase()
         if (!sb) return
-        const { data, error } = await sb.from('comments').select(`id, parent_id, user_id, text, status, erstellt, bearbeitet, ${AUTOR_FELDER}`).eq('pfad', pfad).order('erstellt').limit(300)
-        setListe(error ? [] : data || [])
+        const { data, error } = await sb.from('comments').select(`id, parent_id, user_id, text, status, erstellt, bearbeitet, ${AUTOR_FELDER}`).eq('pfad', pfad).order('erstellt', { ascending: false }).limit(300)
+        // Die neuesten 300 laden und für die Anzeige wieder chronologisch sortieren.
+        setListe(error ? [] : (data || []).reverse())
     }, [pfad])
 
     useEffect(() => {
