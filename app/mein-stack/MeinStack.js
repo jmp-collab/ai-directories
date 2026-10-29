@@ -21,7 +21,8 @@ import {
 } from '../../lib/stack'
 
 const geld = (betrag, waehrung) => new Intl.NumberFormat('de-DE', { style: 'currency', currency: waehrung, maximumFractionDigits: 2 }).format(betrag)
-const LEER = { name: '', tool_slug: null, tarif: '', betrag: '', waehrung: 'EUR', intervall: 'monat', notiz: '' }
+// auto: Tarif und Preis wurden aus ABO_PREISE vorbelegt und werden beim Wechsel des Tools ersetzt.
+const LEER = { name: '', tool_slug: null, tarif: '', betrag: '', waehrung: 'EUR', intervall: 'monat', notiz: '', auto: false }
 
 function Zeile({ e, tool, aendern, entfernen }) {
     const [betrag, setBetrag] = useState(String(e.betrag).replace('.', ','))
@@ -148,9 +149,18 @@ export default function MeinStack({ tools, abo, stand }) {
     }
     const toolWaehlen = (name) => {
         const t = toolByName.get(name.trim().toLowerCase())
-        if (!t) return setNeu({ ...neu, name, tool_slug: null })
+        // Automatisch vorbelegte Werte gehören zum vorher gewählten Tool und werden zurückgesetzt.
+        const basis = neu.auto ? { tarif: '', betrag: '', waehrung: 'EUR', intervall: 'monat', auto: false } : {}
+        if (!t) return setNeu({ ...neu, ...basis, name, tool_slug: null })
         const a = abo.find((x) => x.slug === t.slug)
-        setNeu({ ...neu, name: t.name, tool_slug: t.slug, ...(a && !neu.betrag ? { tarif: a.plan, betrag: String(a.monatlich).replace('.', ','), waehrung: 'USD', intervall: 'monat' } : {}) })
+        const frei = neu.auto || !neu.betrag
+        setNeu({
+            ...neu,
+            ...basis,
+            name: t.name,
+            tool_slug: t.slug,
+            ...(a && frei ? { tarif: a.plan, betrag: String(a.monatlich).replace('.', ','), waehrung: 'USD', intervall: 'monat', auto: true } : {}),
+        })
     }
 
     return (
@@ -183,22 +193,22 @@ export default function MeinStack({ tools, abo, stand }) {
                     </label>
                     <label>
                         Tarif
-                        <input value={neu.tarif} maxLength={60} placeholder="z. B. Pro" onChange={(e) => setNeu({ ...neu, tarif: e.target.value })} />
+                        <input value={neu.tarif} maxLength={60} placeholder="z. B. Pro" onChange={(e) => setNeu({ ...neu, tarif: e.target.value, auto: false })} />
                     </label>
                     <label>
                         Betrag
-                        <input inputMode="decimal" value={neu.betrag} placeholder="0,00" onChange={(e) => setNeu({ ...neu, betrag: e.target.value })} />
+                        <input inputMode="decimal" value={neu.betrag} placeholder="0,00" onChange={(e) => setNeu({ ...neu, betrag: e.target.value, auto: false })} />
                     </label>
                     <label>
                         Währung
-                        <select value={neu.waehrung} onChange={(e) => setNeu({ ...neu, waehrung: e.target.value })}>
+                        <select value={neu.waehrung} onChange={(e) => setNeu({ ...neu, waehrung: e.target.value, auto: false })}>
                             <option value="EUR">Euro</option>
                             <option value="USD">US-Dollar</option>
                         </select>
                     </label>
                     <label>
                         Abrechnung
-                        <select value={neu.intervall} onChange={(e) => setNeu({ ...neu, intervall: e.target.value })}>
+                        <select value={neu.intervall} onChange={(e) => setNeu({ ...neu, intervall: e.target.value, auto: false })}>
                             <option value="monat">pro Monat</option>
                             <option value="jahr">pro Jahr</option>
                         </select>
