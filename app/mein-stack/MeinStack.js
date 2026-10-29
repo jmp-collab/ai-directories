@@ -26,6 +26,9 @@ const LEER = { name: '', tool_slug: null, tarif: '', betrag: '', waehrung: 'EUR'
 function Zeile({ e, tool, aendern, entfernen }) {
     const [betrag, setBetrag] = useState(String(e.betrag).replace('.', ','))
     const [tarif, setTarif] = useState(e.tarif)
+    // Gespeicherter Stand gewinnt, etwa wenn ein Speichern scheitert und zurückgerollt wird.
+    useEffect(() => setBetrag(String(e.betrag).replace('.', ',')), [e.betrag])
+    useEffect(() => setTarif(e.tarif), [e.tarif])
     return (
         <li className="st-zeile">
             <div className="st-kopf">
@@ -84,13 +87,14 @@ export default function MeinStack({ tools, abo, stand }) {
     const [wolke, setWolke] = useState({ uid: null, bereit: false, fehler: false, eintraege: [] })
     const [lokal, setLokal] = useState(null)
     const [neu, setNeu] = useState(LEER)
+    const [importLaeuft, setImportLaeuft] = useState(false)
     const toolBySlug = useMemo(() => new Map(tools.map((t) => [t.slug, t])), [tools])
     const toolByName = useMemo(() => new Map(tools.map((t) => [t.name.toLowerCase(), t])), [tools])
 
     useEffect(() => beobachteStack(setWolke), [])
     useEffect(() => setLokal(lokalLesen()), [])
     useEffect(() => {
-        if (KONTO_AKTIV && user) ladeStack(user.id)?.catch(() => {})
+        if (KONTO_AKTIV && user) ladeStack(user.id, true)?.catch(() => {})
     }, [user])
 
     const imKonto = Boolean(KONTO_AKTIV && user && wolke.uid === user.id)
@@ -130,7 +134,9 @@ export default function MeinStack({ tools, abo, stand }) {
         lokalAendern((l) => l.filter((x) => x.id !== id))
     }
     const uebernehmen = async () => {
-        const n = await stackUebernehmen(user.id)
+        if (importLaeuft) return
+        setImportLaeuft(true)
+        const n = await stackUebernehmen(user.id).finally(() => setImportLaeuft(false))
         if (n > 0) {
             setLokal(lokalLesen())
             toast(`${n} ${n === 1 ? 'Tool' : 'Tools'} aus dem Browser übernommen.`, '☁️')
@@ -153,8 +159,8 @@ export default function MeinStack({ tools, abo, stand }) {
             {imKonto && lokal.length > 0 && (
                 <p className="konto-karte">
                     {lokal.length === 1 ? 'In diesem Browser liegt noch 1 Tool' : `In diesem Browser liegen noch ${lokal.length} Tools`} aus deinem Stack ohne Konto.{' '}
-                    <button type="button" className="button button-small" onClick={uebernehmen}>
-                        Ins Konto übernehmen
+                    <button type="button" className="button button-small" onClick={uebernehmen} disabled={importLaeuft}>
+                        {importLaeuft ? 'Übernehme …' : 'Ins Konto übernehmen'}
                     </button>
                 </p>
             )}
@@ -249,8 +255,11 @@ export default function MeinStack({ tools, abo, stand }) {
                                     )}
                                     {t.art === 'jaehrlich' && (
                                         <>
-                                            📅 <strong>{t.name}</strong>: Laut Anbieter kostet {t.plan} bei jährlicher Zahlung {geld(t.jaehrlich, 'USD')} statt {geld(t.monatlich, 'USD')} im Monat
-                                            {t.ersparnis ? `, also ${geld(t.ersparnis, 'USD')} weniger im Jahr` : ''}. Lohnt sich, wenn du das Tool das ganze Jahr nutzt.
+                                            📅 <strong>{t.name}</strong>: Laut Anbieter kostet {t.plan} bei jährlicher Zahlung {geld(t.jaehrlich, 'USD')} im Monat
+                                            {t.ersparnis
+                                                ? `, du zahlst gerade ${geld(t.betrag, 'USD')}. Das wären ${geld(t.ersparnis, 'USD')} weniger im Jahr`
+                                                : ` statt ${geld(t.monatlich, 'USD')} bei monatlicher Zahlung`}
+                                            . Lohnt sich, wenn du das Tool das ganze Jahr nutzt.
                                         </>
                                     )}
                                     {t.art === 'gratis' && (
