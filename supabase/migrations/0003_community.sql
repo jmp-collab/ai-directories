@@ -183,6 +183,10 @@ declare
     anzahl integer;
     pruef_text text;
 begin
+    -- Zurückziehen über eigenes_loeschen: Text wird ersetzt, dafür gelten Bearbeitungsfrist und Filter nicht.
+    if tg_op = 'UPDATE' and new.status = 'geloescht' and current_setting('aigeddon.zurueckziehen', true) = '1' then
+        return new;
+    end if;
     if tg_op = 'INSERT' then
         new.user_id := (select auth.uid());
         -- Gleichzeitige Anfragen desselben Kontos nacheinander prüfen, damit das Ratenlimit nicht umgangen wird.
@@ -231,6 +235,16 @@ create or replace function public.meldung_vor()
 returns trigger language plpgsql security definer set search_path = '' as $$
 begin
     new.melder := (select auth.uid());
+    -- Gemeldet werden kann nur, was es gibt und was sichtbar ist (oder ein Profil).
+    if not (
+        (new.ziel_art in ('kommentar', 'thema', 'beitrag') and new.ziel_id ~ '^[0-9]{1,18}$' and (
+            (new.ziel_art = 'kommentar' and exists (select 1 from public.comments where id = new.ziel_id::bigint and status = 'sichtbar'))
+            or (new.ziel_art = 'thema' and exists (select 1 from public.forum_themen where id = new.ziel_id::bigint and status = 'sichtbar'))
+            or (new.ziel_art = 'beitrag' and exists (select 1 from public.forum_beitraege b join public.forum_themen t on t.id = b.thema_id
+                where b.id = new.ziel_id::bigint and b.status = 'sichtbar' and t.status = 'sichtbar'))))
+        or (new.ziel_art = 'profil' and new.ziel_id ~ '^[0-9a-f-]{36}$' and exists (select 1 from public.profiles where id = new.ziel_id::uuid))) then
+        raise exception 'ziel_fehlt' using errcode = 'P0001';
+    end if;
     perform pg_advisory_xact_lock(hashtext('aigeddon-meldung-' || coalesce(new.melder::text, '')));
     if (select count(*) from public.meldungen where melder = new.melder and erstellt > now() - interval '1 hour') >= 10 then
         raise exception 'zu_schnell' using errcode = 'P0001';
@@ -247,8 +261,8 @@ declare
     eltern record;
 begin
     if new.parent_id is not null then
-        select pfad, parent_id into eltern from public.comments where id = new.parent_id;
-        if eltern is null or eltern.parent_id is not null or eltern.pfad <> new.pfad then
+        select pfad, parent_id, status into eltern from public.comments where id = new.parent_id;
+        if eltern is null or eltern.parent_id is not null or eltern.pfad <> new.pfad or eltern.status <> 'sichtbar' then
             raise exception 'antwort_ungueltig' using errcode = 'P0001';
         end if;
     end if;
@@ -468,13 +482,16 @@ create trigger reaktionen_vor before insert on public.reaktionen for each row ex
 create or replace function public.eigenes_loeschen(art_ text, id_ bigint)
 returns void language plpgsql security definer set search_path = '' as $$
 begin
+    -- Der Inhalt wird wirklich entfernt (auch für Autor und Moderation), nur ein Platzhalter bleibt.
+    perform set_config('aigeddon.zurueckziehen', '1', true);
     if art_ = 'kommentar' then
-        update public.comments set status = 'geloescht' where id = id_ and user_id = (select auth.uid());
+        update public.comments set status = 'geloescht', text = '[zurückgezogen]' where id = id_ and user_id = (select auth.uid());
     elsif art_ = 'beitrag' then
-        update public.forum_beitraege set status = 'geloescht' where id = id_ and user_id = (select auth.uid());
+        update public.forum_beitraege set status = 'geloescht', text = '[zurückgezogen]' where id = id_ and user_id = (select auth.uid());
     elsif art_ = 'thema' then
-        update public.forum_themen set status = 'geloescht' where id = id_ and user_id = (select auth.uid());
+        update public.forum_themen set status = 'geloescht', titel = '[zurückgezogen]', text = '[zurückgezogen]' where id = id_ and user_id = (select auth.uid());
     end if;
+    perform set_config('aigeddon.zurueckziehen', '', true);
 end $$;
 
 -- Lösung markieren: durch die Person, die das Thema gestartet hat, oder die Moderation.
@@ -487,6 +504,9 @@ begin
     select * into t from public.forum_themen where id = thema for update;
     if t is null or (t.user_id is distinct from (select auth.uid()) and not public.ist_moderator()) then
         raise exception 'nicht_erlaubt' using errcode = 'P0001';
+    end if;
+    if t.status <> 'sichtbar' then
+        raise exception 'thema_verborgen' using errcode = 'P0001';
     end if;
     select user_id into autor from public.forum_beitraege where id = beitrag and thema_id = thema and status = 'sichtbar';
     if not found then
@@ -531,11 +551,11 @@ begin
         raise exception 'eltern_verborgen' using errcode = 'P0001';
     end if;
     if art_ = 'kommentar' then
-        update public.comments set status = neuer_status where id = id_ returning user_id into autor;
+        update public.comments set status = neuer_status where id = id_ and status <> 'geloescht' returning user_id into autor;
     elsif art_ = 'beitrag' then
-        update public.forum_beitraege set status = neuer_status where id = id_ returning user_id into autor;
+        update public.forum_beitraege set status = neuer_status where id = id_ and status <> 'geloescht' returning user_id into autor;
     elsif art_ = 'thema' then
-        update public.forum_themen set status = neuer_status where id = id_ returning user_id into autor;
+        update public.forum_themen set status = neuer_status where id = id_ and status <> 'geloescht' returning user_id into autor;
     else
         raise exception 'art_ungueltig' using errcode = 'P0001';
     end if;
@@ -589,7 +609,9 @@ begin
         raise exception 'meldung_ungueltig' using errcode = 'P0001';
     end if;
     perform public.moderieren(m.ziel_art, m.ziel_id::bigint, 'ausgeblendet', m.grund);
-    perform public.meldung_entscheiden(id_, 'erledigt', entscheidung_);
+    -- Alle offenen Meldungen zum selben Inhalt gelten damit als erledigt.
+    perform public.meldung_entscheiden(o.id, 'erledigt', entscheidung_)
+    from public.meldungen o where o.ziel_art = m.ziel_art and o.ziel_id = m.ziel_id and o.status = 'offen';
 end $$;
 revoke execute on function public.meldung_ausblenden(bigint, text) from public, anon;
 

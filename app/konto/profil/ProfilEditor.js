@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import useKonto from '../../components/useKonto'
 import { KONTO_AKTIV, supabase, bildUrl, ladeProfil } from '../../../lib/konto'
@@ -29,16 +29,23 @@ export default function ProfilEditor() {
     const [d, setD] = useState(null)
     const [status, setStatus] = useState('')
     const [vorschau, setVorschau] = useState({})
+    const [ladeFehler, setLadeFehler] = useState(false)
+    // Das Formular wird pro Konto genau einmal aus der Datenbank befüllt. Spätere Profil-Updates
+    // (etwa nach einem Bild-Upload) überschreiben so keine ungespeicherten Eingaben.
+    const befuellt = useRef(null)
 
     // Kontowechsel: Formular sofort leeren, damit nie Angaben eines anderen Kontos angezeigt oder gespeichert werden.
     useEffect(() => {
+        befuellt.current = null
         setP(null)
         setD(null)
         setVorschau({})
+        setLadeFehler(false)
     }, [user?.id])
 
     useEffect(() => {
-        if (!user || !profil || profil.id !== user.id) return
+        if (!user || !profil || profil.id !== user.id || befuellt.current === user.id) return
+        befuellt.current = user.id
         let gilt = true
         setP({
             handle: profil.handle,
@@ -50,8 +57,13 @@ export default function ProfilEditor() {
             banner_pfad: profil.banner_pfad,
         })
         supabase().then(async (sb) => {
-            const { data } = await sb.from('profil_details').select('bio, beruf, pronomen, links').eq('id', user.id).maybeSingle()
+            const { data, error } = await sb.from('profil_details').select('bio, beruf, pronomen, links').eq('id', user.id).maybeSingle()
             if (!gilt) return
+            // Bei einem Fehler nie leere Felder anzeigen, sonst würde Speichern die echten Angaben überschreiben.
+            if (error || !data) {
+                befuellt.current = null
+                return setLadeFehler(true)
+            }
             setD({ bio: data?.bio || '', beruf: data?.beruf || '', pronomen: data?.pronomen || '', links: [...(data?.links || []), '', '', ''].slice(0, 3) })
         })
         return () => {
@@ -67,6 +79,7 @@ export default function ProfilEditor() {
                 Bitte zuerst <Link href="/anmelden?zurueck=/konto/profil">anmelden</Link>.
             </p>
         )
+    if (ladeFehler) return <p className="konto-karte">Dein Profil konnte gerade nicht geladen werden. Bitte lade die Seite neu.</p>
     if (!p || !d) return <p className="widget-note">Lade dein Profil …</p>
 
     const hochladen = async (bucket, datei) => {
@@ -90,8 +103,9 @@ export default function ProfilEditor() {
             const { data: liste } = await sb.storage.from(bucket).list(user.id, { limit: 20 })
             const reste = (liste || []).map((o) => `${user.id}/${o.name}`).filter((x) => x !== pfad)
             if (reste.length) await sb.storage.from(bucket).remove(reste)
-            setP({ ...p, [feld]: pfad })
-            setVorschau({ ...vorschau, [bucket]: URL.createObjectURL(blob) })
+            // Nur die Bildfelder ändern, alle anderen (ggf. ungespeicherten) Eingaben bleiben.
+            setP((x) => ({ ...x, [feld]: pfad }))
+            setVorschau((v) => ({ ...v, [bucket]: URL.createObjectURL(blob) }))
             await ladeProfil()
             setStatus('')
             toast(bucket === 'avatare' ? 'Neues Profilbild gespeichert. Steht dir!' : 'Neues Banner gespeichert.', '📸')
@@ -117,8 +131,8 @@ export default function ProfilEditor() {
         }
         const { error } = await sb.from('profiles').update({ [feld]: null }).eq('id', user.id)
         if (error) return setStatus('Entfernen hat nicht geklappt. Bitte versuch es noch einmal.')
-        setP({ ...p, [feld]: null })
-        setVorschau({ ...vorschau, [bucket]: null })
+        setP((x) => ({ ...x, [feld]: null }))
+        setVorschau((v) => ({ ...v, [bucket]: null }))
         await ladeProfil()
     }
 

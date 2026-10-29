@@ -142,6 +142,15 @@ export default function Moderation() {
                                         Ausblenden und erledigen
                                     </button>
                                 )}
+                                {m.inhalt && m.inhalt.status !== 'sichtbar' && (
+                                    <button
+                                        type="button"
+                                        className="button button-small konto-rot"
+                                        onClick={() => rpc('meldung_entscheiden', { id_: m.id, status_: 'erledigt', entscheidung_: 'Der Inhalt ist ausgeblendet. Danke für deine Meldung!' }, 'Erledigt.')}
+                                    >
+                                        Bestätigen (schon ausgeblendet)
+                                    </button>
+                                )}
                                 <button
                                     type="button"
                                     className="button button-small"

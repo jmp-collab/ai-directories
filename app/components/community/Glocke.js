@@ -23,10 +23,11 @@ export default function Glocke() {
         setOffen(false)
     }, [user?.id])
 
+    // Ungelesene zuerst: So rücken ältere ungelesene nach, sobald die angezeigten gelesen sind.
     const laden = useCallback(async () => {
         if (!user) return
         const sb = await supabase()
-        const { data } = await sb.from('benachrichtigungen').select('id, art, link, text, gelesen, erstellt, von:profiles!benachrichtigungen_von_fkey(anzeigename)').order('erstellt', { ascending: false }).limit(15)
+        const { data } = await sb.from('benachrichtigungen').select('id, art, link, text, gelesen, erstellt, von:profiles!benachrichtigungen_von_fkey(anzeigename)').order('gelesen', { ascending: true }).order('erstellt', { ascending: false }).limit(15)
         setListe(data || [])
         const { count } = await sb.from('benachrichtigungen').select('id', { count: 'exact', head: true }).eq('gelesen', false)
         setUngelesen(count || 0)

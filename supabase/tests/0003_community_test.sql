@@ -38,8 +38,8 @@ insert into public.forum_beitraege (thema_id, text) select id, 'Probier Tool X, 
 insert into public.reaktionen (ziel_art, ziel_id, emoji) select 'kommentar', id, '👍' from public.comments where text like 'Toller%';
 select test.scheitert($$select public.loesung_markieren((select id from public.forum_themen limit 1), (select id from public.forum_beitraege limit 1))$$, '%nicht_erlaubt%');
 select test.scheitert($$select public.moderieren('kommentar', (select id from public.comments where text like 'Toller%'), 'ausgeblendet', 'test')$$, '%nicht_erlaubt%');
-insert into public.meldungen (ziel_art, ziel_id, grund, text) values ('kommentar', '1', 'spam', 'Werbung');
-select test.scheitert($$insert into public.meldungen (ziel_art, ziel_id, grund) values ('kommentar', '1', 'spam')$$, '%meldungen_einmal_idx%');
+insert into public.meldungen (ziel_art, ziel_id, grund, text) select 'kommentar', id::text, 'spam', 'Werbung' from public.comments where text like 'Toller%';
+select test.scheitert($$insert into public.meldungen (ziel_art, ziel_id, grund) select 'kommentar', id::text, 'spam' from public.comments where text like 'Toller%'$$, '%meldungen_einmal_idx%');
 select test.scheitert($$insert into public.badges (user_id, name) values ('d0000000-0000-0000-0000-000000000002', 'Problemlöser-Abzeichen')$$, '%row-level security%');
 select test.scheitert($$select public.punkte_plus('d0000000-0000-0000-0000-000000000002', 1000)$$, '%permission denied%');
 
@@ -189,3 +189,50 @@ select public.moderieren('kommentar', (select id from public.comments where text
 update public.comments set text = 'Antwort Y casino 2' where text = 'Antwort Y casino';
 select test.scheitert($$select public.moderieren('kommentar', (select id from public.comments where text = 'Antwort Y casino 2'), 'sichtbar', 'ok')$$, '%eltern_verborgen%');
 reset role;
+
+-- Runde 7: Meldeziele, Antworten unter verborgenen Kommentaren, Zurückziehen löscht den Text, Lösung nur im sichtbaren Thema.
+insert into auth.users (id, email) values ('d0000000-0000-0000-0000-000000000006', 'sechs@x.de');
+update public.konten set regeln_akzeptiert = now() where id = 'd0000000-0000-0000-0000-000000000006';
+set role authenticated;
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000006', false);
+select test.scheitert($$insert into public.meldungen (ziel_art, ziel_id, grund) values ('kommentar', '999999', 'spam')$$, '%ziel_fehlt%');
+select test.scheitert($$insert into public.meldungen (ziel_art, ziel_id, grund) values ('profil', 'kein-uuid', 'spam')$$, '%ziel_fehlt%');
+insert into public.comments (pfad, text) values ('/ratgeber/eigen', 'Eigener Kommentar mit casino');
+select test.scheitert($$insert into public.comments (pfad, parent_id, text) select '/ratgeber/eigen', id, 'Antwort unter eigenem Prüffall' from public.comments where pfad = '/ratgeber/eigen'$$, '%antwort_ungueltig%');
+insert into public.comments (pfad, text) values ('/ratgeber/privat', 'Meine Telefonnummer ist 0123');
+select public.eigenes_loeschen('kommentar', (select id from public.comments where pfad = '/ratgeber/privat'));
+reset role;
+select test.gleich((select text || '|' || status from public.comments where pfad = '/ratgeber/privat'), '[zurückgezogen]|geloescht', 'Zurückgezogener Text ist wirklich entfernt');
+update public.comments set erstellt = now() - interval '1 day' where user_id = 'd0000000-0000-0000-0000-000000000006';
+set role authenticated;
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000006', false);
+insert into public.forum_themen (kategorie_id, titel, text) values ('ki-tools', 'Frage von sechs', 'Hilfe?');
+reset role;
+update public.forum_themen set erstellt = now() - interval '1 day' where titel = 'Frage von sechs';
+set role authenticated;
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000003', false);
+insert into public.forum_beitraege (thema_id, text) select id, 'Antwort der Moderation' from public.forum_themen where titel = 'Frage von sechs';
+select public.moderieren('thema', (select id from public.forum_themen where titel = 'Frage von sechs'), 'ausgeblendet', 'Test');
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000006', false);
+select test.scheitert($$select public.loesung_markieren((select id from public.forum_themen where titel = 'Frage von sechs'), (select id from public.forum_beitraege where text = 'Antwort der Moderation'))$$, '%thema_verborgen%');
+select public.eigenes_loeschen('thema', (select id from public.forum_themen where titel = 'Frage von sechs'));
+reset role;
+select test.gleich((select titel from public.forum_themen where user_id = 'd0000000-0000-0000-0000-000000000006'), '[zurückgezogen]', 'Zurückziehen nach Ablauf der Frist entfernt auch den Titel');
+set role authenticated;
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000003', false);
+select public.moderieren('thema', (select id from public.forum_themen where user_id = 'd0000000-0000-0000-0000-000000000006'), 'sichtbar', 'zurück');
+reset role;
+select test.gleich((select status from public.forum_themen where user_id = 'd0000000-0000-0000-0000-000000000006'), 'geloescht', 'Moderation holt Zurückgezogenes nicht zurück');
+
+-- Ausblenden über eine Meldung erledigt alle offenen Meldungen zum selben Inhalt.
+set role authenticated;
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000006', false);
+insert into public.comments (pfad, text) values ('/ratgeber/doppelt', 'Spam hier');
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000004', false);
+insert into public.meldungen (ziel_art, ziel_id, grund) select 'kommentar', id::text, 'spam' from public.comments where text = 'Spam hier';
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000005', false);
+insert into public.meldungen (ziel_art, ziel_id, grund) select 'kommentar', id::text, 'spam' from public.comments where text = 'Spam hier';
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000003', false);
+select public.meldung_ausblenden((select min(id) from public.meldungen where status = 'offen' and ziel_id = (select id::text from public.comments where text = 'Spam hier')), 'Ausgeblendet.');
+reset role;
+select test.gleich((select count(*) from public.meldungen where status = 'offen' and ziel_id = (select id::text from public.comments where text = 'Spam hier'))::text, '0', 'Doppelte Meldungen gemeinsam erledigt');

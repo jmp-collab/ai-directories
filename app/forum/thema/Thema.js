@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import useKonto from '../../components/useKonto'
@@ -85,6 +85,9 @@ function Beitrag({ art, b, user, mod, reaktionen, setReaktionen, neuLaden, loesu
     )
 }
 
+const SEITE = 500
+const BEITRAG_FELDER = `id, thema_id, user_id, text, status, erstellt, bearbeitet, ${AUTOR_FELDER}`
+
 export default function Thema() {
     const { user, profil } = useKonto()
     const [id, setId] = useState(null)
@@ -92,6 +95,10 @@ export default function Thema() {
     const [beitraege, setBeitraege] = useState([])
     const [kat, setKat] = useState(null)
     const [folgt, setFolgt] = useState(false)
+    const [mehr, setMehr] = useState(false)
+    // Welches Thema gerade angezeigt werden soll. Antworten zu einem vorher geöffneten Thema werden verworfen.
+    const aktuell = useRef(null)
+    const seitenZeilen = useRef(0)
     const mod = profil && ['moderator', 'admin'].includes(profil.rolle)
 
     // Die ID kommt aus der URL; wechselt sie (etwa über eine Benachrichtigung), wird neu geladen.
@@ -99,8 +106,10 @@ export default function Thema() {
     useEffect(() => {
         const i = Number(idParam)
         if (!KONTO_AKTIV || !Number.isInteger(i) || i < 1) return setThema(null)
+        aktuell.current = i
         setThema(undefined)
         setBeitraege([])
+        setMehr(false)
         setId(i)
     }, [idParam])
 
@@ -108,21 +117,40 @@ export default function Thema() {
         if (!id) return
         const sb = await supabase()
         const { data: t } = await sb.from('forum_themen').select(`*, ${AUTOR_FELDER}`).eq('id', id).maybeSingle()
+        if (aktuell.current !== id) return
         if (!t) return setThema(null)
-        const [{ data: b }, { data: k }] = await Promise.all([
-            sb.from('forum_beitraege').select(`id, thema_id, user_id, text, status, erstellt, bearbeitet, ${AUTOR_FELDER}`).eq('thema_id', id).order('erstellt', { ascending: false }).limit(500),
+        const [{ data: b }, { data: k }, { data: l }] = await Promise.all([
+            sb.from('forum_beitraege').select(BEITRAG_FELDER).eq('thema_id', id).order('erstellt', { ascending: false }).range(0, SEITE - 1),
             sb.from('forum_kategorien').select('id, name, emoji').eq('id', t.kategorie_id).maybeSingle(),
+            // Die Lösung immer laden, auch wenn sie älter ist als die geladene Seite.
+            t.geloest_beitrag_id ? sb.from('forum_beitraege').select(BEITRAG_FELDER).eq('id', t.geloest_beitrag_id).maybeSingle() : Promise.resolve({ data: null }),
         ])
+        if (aktuell.current !== id) return
+        const liste = (b || []).reverse()
+        if (l && !liste.some((x) => x.id === l.id)) liste.unshift(l)
         setThema(t)
-        // Die neuesten 500 Antworten, für die Anzeige chronologisch.
-        setBeitraege((b || []).reverse())
+        // Die neuesten Antworten, für die Anzeige chronologisch; ältere lassen sich nachladen.
+        setBeitraege(liste)
+        seitenZeilen.current = (b || []).length
+        setMehr((b || []).length === SEITE)
         setKat(k)
         document.title = `${t.titel} | KI-Forum | AIGeddon`
     }, [id])
 
     useEffect(() => {
-        laden().catch(() => setThema(null))
-    }, [laden])
+        laden().catch(() => aktuell.current === id && setThema(null))
+    }, [laden, id])
+
+    const aeltereLaden = async () => {
+        const sb = await supabase()
+        const fuer = id
+        const von = seitenZeilen.current
+        const { data } = await sb.from('forum_beitraege').select(BEITRAG_FELDER).eq('thema_id', fuer).order('erstellt', { ascending: false }).range(von, von + SEITE - 1)
+        if (aktuell.current !== fuer || !data) return
+        seitenZeilen.current = von + data.length
+        setBeitraege((alt) => [...data.reverse().filter((x) => !alt.some((a) => a.id === x.id)), ...alt].sort((a, b) => (a.erstellt < b.erstellt ? -1 : 1)))
+        setMehr(data.length === SEITE)
+    }
 
     useEffect(() => {
         if (!user || !id) return
@@ -148,7 +176,8 @@ export default function Thema() {
 
     const antworten = async (text) => {
         const sb = await supabase()
-        const { error } = await sb.from('forum_beitraege').insert({ thema_id: id, text })
+        // Immer an das Thema, das gerade angezeigt wird.
+        const { error } = await sb.from('forum_beitraege').insert({ thema_id: thema.id, text })
         if (error) {
             toast(fehlerText(error), '⚠️')
             return false
@@ -222,8 +251,15 @@ export default function Thema() {
             </div>
             <Beitrag art="thema" b={thema} user={user} mod={mod} reaktionen={reaktionenT} setReaktionen={setReaktionenT} neuLaden={laden} />
             <h2>
-                {beitraege.length} {beitraege.length === 1 ? 'Antwort' : 'Antworten'}
+                {Math.max(thema.antworten, beitraege.length)} {Math.max(thema.antworten, beitraege.length) === 1 ? 'Antwort' : 'Antworten'}
             </h2>
+            {mehr && (
+                <p>
+                    <button type="button" className="button button-small" onClick={aeltereLaden}>
+                        Ältere Antworten laden
+                    </button>
+                </p>
+            )}
             {sortiert.map((b) => (
                 <Beitrag
                     key={b.id}
