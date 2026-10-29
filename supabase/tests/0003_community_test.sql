@@ -13,19 +13,20 @@ update public.konten set regeln_akzeptiert = now() where id <> 'd0000000-0000-00
 
 set role authenticated;
 select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000004', false);
-select test.scheitert($$insert into public.comments (pfad, text) values ('/x', 'ohne Regeln')$$, '%regeln_fehlen%');
+select test.scheitert($$insert into public.comments (pfad, text) values ('/ratgeber/x', 'ohne Regeln')$$, '%regeln_fehlen%');
 select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000001', false);
 insert into public.comments (pfad, text) values ('/ratgeber/test', 'Toller Artikel, danke!');
 select test.gleich((select status from public.comments where text like 'Toller%'), 'sichtbar', 'Kommentar sichtbar');
 select test.scheitert($$insert into public.comments (pfad, text, status) values ('/ratgeber/test', 'x', 'ausgeblendet')$$, '%permission denied%');
 select test.scheitert($$insert into public.comments (pfad, text) values ('/Böse Seite', 'x')$$, '%check constraint%');
+select test.scheitert($$insert into public.comments (pfad, text) values ('/gibts-nicht/x', 'Spam')$$, '%check constraint%');
 insert into public.comments (pfad, text) values ('/ratgeber/test', 'Hier gibts Casino-Boni!');
 select test.gleich((select status from public.comments where text like '%Casino%'), 'pruefen', 'Wortfilter schickt in die Prüfung');
 insert into public.forum_themen (kategorie_id, titel, text) values ('ki-tools', 'Welches Tool für Podcasts?', 'Suche ein KI-Tool für Schnitt.');
 select test.scheitert($$insert into public.forum_themen (kategorie_id, titel, text) values ('ankuendigungen', 'Ich kündige was an', 'Hallo')$$, '%nur_team%');
-insert into public.comments (pfad, text) values ('/a', '3');
-insert into public.comments (pfad, text) values ('/a', '4');
-select test.scheitert($$insert into public.comments (pfad, text) values ('/a', '5')$$, '%zu_schnell%');
+insert into public.comments (pfad, text) values ('/ratgeber/a', '3');
+insert into public.comments (pfad, text) values ('/ratgeber/a', '4');
+select test.scheitert($$insert into public.comments (pfad, text) values ('/ratgeber/a', '5')$$, '%zu_schnell%');
 
 select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000002', false);
 select test.gleich((select count(*) from public.comments where text like '%Casino%')::text, '0', 'Andere sehen Inhalte in Prüfung nicht');
@@ -53,7 +54,7 @@ reset role;
 update public.comments set erstellt = now() - interval '1 hour' where user_id = 'd0000000-0000-0000-0000-000000000001';
 update public.forum_themen set erstellt = now() - interval '1 hour' where user_id = 'd0000000-0000-0000-0000-000000000001';
 set role authenticated;
-insert into public.comments (pfad, text) values ('/b', 'gleich wieder weg');
+insert into public.comments (pfad, text) values ('/ratgeber/b', 'gleich wieder weg');
 select test.gleich((select punkte from public.profiles where handle = 'dora')::text, '7', 'Punkt für neuen Kommentar');
 select public.eigenes_loeschen('kommentar', (select id from public.comments where text = 'gleich wieder weg'));
 select test.gleich((select punkte from public.profiles where handle = 'dora')::text, '6', 'Punkt beim Zurückziehen wieder abgezogen');
@@ -74,7 +75,7 @@ select public.moderieren('beitrag', (select id from public.forum_beitraege where
 select test.gleich((select punkte from public.profiles where handle = 'moni')::text, '1', 'Punkte nach Freigabe');
 
 select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000002', false);
-select test.scheitert($$insert into public.comments (pfad, text) values ('/x', 'darf ich?')$$, '%schreiben_gesperrt%');
+select test.scheitert($$insert into public.comments (pfad, text) values ('/ratgeber/x', 'darf ich?')$$, '%schreiben_gesperrt%');
 select test.scheitert($$update public.comments set text = 'noch schnell geändert' where text like 'Finde%'$$, '%schreiben_gesperrt%');
 select test.gleich((select string_agg(art, ',' order by id) from public.benachrichtigungen), 'loesung,moderation,moderation,antwort', 'Emil über Lösung, Meldung, Sperre und freigegebene Antwort informiert');
 reset role;
@@ -91,7 +92,7 @@ reset role;
 select set_config('request.jwt.claim.sub', '', false);
 set role anon;
 select test.gleich((select count(*) from public.forum_beitraege)::text, '0', 'Antworten ausgeblendeter Themen sind verborgen');
-select test.scheitert($$insert into public.comments (pfad, text) values ('/x', 'anonym')$$, '%permission denied%');
+select test.scheitert($$insert into public.comments (pfad, text) values ('/ratgeber/x', 'anonym')$$, '%permission denied%');
 reset role;
 
 select test.gleich((select string_agg(handle || ':' || punkte, ' ' order by handle) from public.profiles where handle in ('dora', 'emil', 'moni')), 'dora:4 emil:17 moni:1', 'Punkte nur für sichtbare Inhalte (Thema ausgeblendet: -2)');
@@ -111,11 +112,36 @@ reset role;
 select test.gleich((select (geloest_beitrag_id is null) || ':' || antworten from public.forum_themen), 'true:1', 'Lösung zurückgenommen, nur sichtbare Antworten gezählt');
 select test.gleich((select punkte from public.profiles where handle = 'emil')::text, '1', 'Lösungsbonus und Antwortpunkt abgezogen');
 -- Freigabe eines Kommentars, dessen Konto inzwischen gelöscht ist, funktioniert.
-insert into public.comments (pfad, text) values ('/y', 'alt mit casino');
-select test.gleich((select status from public.comments where pfad = '/y'), 'pruefen', 'Kommentar wartet auf Prüfung');
-update public.comments set user_id = null where pfad = '/y';
+insert into public.comments (pfad, text) values ('/ratgeber/y', 'alt mit casino');
+select test.gleich((select status from public.comments where pfad = '/ratgeber/y'), 'pruefen', 'Kommentar wartet auf Prüfung');
+update public.comments set user_id = null where pfad = '/ratgeber/y';
 select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000003', false);
 set role authenticated;
-select public.moderieren('kommentar', (select id from public.comments where pfad = '/y'), 'sichtbar', 'ok');
+select public.moderieren('kommentar', (select id from public.comments where pfad = '/ratgeber/y'), 'sichtbar', 'ok');
 reset role;
-select test.gleich((select status from public.comments where pfad = '/y'), 'sichtbar', 'Anonymer Kommentar freigegeben');
+select test.gleich((select status from public.comments where pfad = '/ratgeber/y'), 'sichtbar', 'Anonymer Kommentar freigegeben');
+
+-- Tageslimit für Kommentarpunkte: höchstens 10 pro Tag.
+insert into auth.users (id, email) values ('d0000000-0000-0000-0000-000000000005', 'viel@x.de');
+update public.konten set regeln_akzeptiert = now() where id = 'd0000000-0000-0000-0000-000000000005';
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000005', false);
+do $$ begin
+    for i in 1..12 loop
+        insert into public.comments (pfad, text) values ('/ratgeber/viel', 'Kommentar ' || i);
+        update public.comments set erstellt = now() - interval '2 hours' where user_id = 'd0000000-0000-0000-0000-000000000005' and erstellt > now() - interval '1 hour';
+    end loop;
+end $$;
+select test.gleich((select punkte from public.profiles where id = 'd0000000-0000-0000-0000-000000000005')::text, '10', 'Kommentarpunkte auf 10 pro Tag begrenzt');
+set role authenticated;
+select public.eigenes_loeschen('kommentar', (select id from public.comments where text = 'Kommentar 12'));
+reset role;
+select test.gleich((select punkte from public.profiles where id = 'd0000000-0000-0000-0000-000000000005')::text, '10', 'Kein Abzug für einen nicht belohnten Kommentar');
+-- Meldung ausblenden und erledigen in einem Schritt.
+set role authenticated;
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000002', false);
+insert into public.meldungen (ziel_art, ziel_id, grund) select 'kommentar', id::text, 'spam' from public.comments where text = 'Kommentar 1';
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000003', false);
+select public.meldung_ausblenden((select id from public.meldungen where status = 'offen' order by id desc limit 1), 'Ausgeblendet.');
+reset role;
+select test.gleich((select status from public.comments where text = 'Kommentar 1'), 'ausgeblendet', 'Gemeldeter Inhalt ausgeblendet');
+select test.gleich((select status from public.meldungen order by id desc limit 1), 'erledigt', 'Meldung im selben Schritt erledigt');

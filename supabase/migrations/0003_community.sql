@@ -49,13 +49,15 @@ end $$;
 
 create table public.comments (
     id bigint generated always as identity primary key,
-    pfad text not null check (char_length(pfad) <= 300 and pfad ~ '^/[a-z0-9/_.-]*$'),
+    -- Nur Inhaltsbereiche der Seite, höchstens drei Ebenen tief (oder die Startseite).
+    pfad text not null check (char_length(pfad) <= 300 and (pfad = '/' or pfad ~ '^/(ratgeber|ki-news|tutorials|tools|prompts|skills|verzeichnis|tool-vergleiche|ki-tools|glossar|rechner|ki-test|neue-ki-modelle|beste-ki-tools|deutsche-ki-verzeichnisse|liste|launch-kit|ki-verzeichnis|top-50|freischaltung|vergleich|tool-finder|prompt-baukasten|prompt-check|quiz|downloads|guides|neu-entdeckt|ueber-jean|so-pruefen-wir|werben|transparenz)(/[a-z0-9_.-]+){0,3}$')),
     parent_id bigint references public.comments (id) on delete cascade,
     user_id uuid references public.profiles (id) on delete set null default auth.uid(),
     text text not null check (char_length(text) between 1 and 2000),
     status text not null default 'sichtbar' check (status in ('sichtbar', 'pruefen', 'ausgeblendet', 'geloescht')),
     erstellt timestamptz not null default now(),
-    bearbeitet timestamptz
+    bearbeitet timestamptz,
+    belohnt boolean not null default false
 );
 create index comments_pfad_idx on public.comments (pfad, erstellt);
 create index comments_user_idx on public.comments (user_id);
@@ -85,6 +87,7 @@ create table public.forum_themen (
     letzte_aktivitaet timestamptz not null default now(),
     erstellt timestamptz not null default now(),
     bearbeitet timestamptz,
+    belohnt boolean not null default false,
     suche tsvector generated always as (to_tsvector('german', titel || ' ' || text)) stored
 );
 create index forum_themen_kat_idx on public.forum_themen (kategorie_id, angepinnt desc, letzte_aktivitaet desc);
@@ -98,7 +101,8 @@ create table public.forum_beitraege (
     text text not null check (char_length(text) between 1 and 10000),
     status text not null default 'sichtbar' check (status in ('sichtbar', 'pruefen', 'ausgeblendet', 'geloescht')),
     erstellt timestamptz not null default now(),
-    bearbeitet timestamptz
+    bearbeitet timestamptz,
+    belohnt boolean not null default false
 );
 create index forum_beitraege_thema_idx on public.forum_beitraege (thema_id, erstellt);
 create index forum_beitraege_user_idx on public.forum_beitraege (user_id);
@@ -318,7 +322,7 @@ begin
     end loop;
 end $$;
 
--- Gemeinsamer Trigger nach Insert und Statuswechsel für alle drei Inhaltstabellen.
+-- Gemeinsamer Trigger nach Insert und jedem Update für alle drei Inhaltstabellen (auch wenn ein Bearbeiten den Status ändert).
 create or replace function public.nach_inhalt()
 returns trigger language plpgsql security definer set search_path = '' as $$
 declare
@@ -339,7 +343,9 @@ begin
         if ist_sichtbar and not war_sichtbar then
             update public.forum_themen set antworten = antworten + 1, letzte_aktivitaet = now() where id = new.thema_id;
         elsif war_sichtbar and not ist_sichtbar then
-            update public.forum_themen set antworten = greatest(0, antworten - 1) where id = new.thema_id;
+            update public.forum_themen t set antworten = greatest(0, t.antworten - 1),
+                letzte_aktivitaet = coalesce((select max(b.erstellt) from public.forum_beitraege b where b.thema_id = new.thema_id and b.status = 'sichtbar' and b.id <> new.id), t.erstellt)
+            where t.id = new.thema_id;
             -- War die Antwort als Lösung markiert, wird die Markierung samt Bonus zurückgenommen.
             update public.forum_themen t set geloest_beitrag_id = null where t.id = new.thema_id and t.geloest_beitrag_id = new.id;
             if found and new.user_id is not null and new.user_id is distinct from (select user_id from public.forum_themen where id = new.thema_id) then
@@ -347,12 +353,19 @@ begin
             end if;
         end if;
     end if;
+    -- Punkte: vergeben beim Sichtbarwerden, zurück nur, wenn sie für diesen Inhalt auch vergeben wurden (Spalte belohnt).
+    -- Kommentare bringen höchstens 10 Punkte pro Tag, damit sich die Bestenliste nicht mit Masse füllen lässt.
     -- Gelöschte Konten (user_id null) bekommen keine Punkte und Abzeichen mehr, Benachrichtigungen gehen trotzdem raus.
     if new.user_id is not null then
-        if ist_sichtbar and not war_sichtbar then
-            perform public.punkte_plus(new.user_id, wert);
-        elsif war_sichtbar and not ist_sichtbar then
+        if ist_sichtbar and not war_sichtbar and not new.belohnt then
+            if tg_table_name <> 'comments'
+                or (select count(*) from public.comments c where c.user_id = new.user_id and c.belohnt and c.erstellt > now() - interval '1 day') < 10 then
+                perform public.punkte_plus(new.user_id, wert);
+                execute format('update public.%I set belohnt = true where id = $1', tg_table_name) using new.id;
+            end if;
+        elsif war_sichtbar and not ist_sichtbar and new.belohnt then
             perform public.punkte_plus(new.user_id, -wert);
+            execute format('update public.%I set belohnt = false where id = $1', tg_table_name) using new.id;
         end if;
     end if;
     if erstmals and new.user_id is null then
@@ -374,9 +387,9 @@ begin
     return null;
 end $$;
 
-create trigger comments_nach after insert or update of status on public.comments for each row execute function public.nach_inhalt();
-create trigger themen_nach after insert or update of status on public.forum_themen for each row execute function public.nach_inhalt();
-create trigger beitraege_nach after insert or update of status on public.forum_beitraege for each row execute function public.nach_inhalt();
+create trigger comments_nach after insert or update on public.comments for each row execute function public.nach_inhalt();
+create trigger themen_nach after insert or update on public.forum_themen for each row execute function public.nach_inhalt();
+create trigger beitraege_nach after insert or update on public.forum_beitraege for each row execute function public.nach_inhalt();
 
 -- Reaktionen: Punkte für die Autorin oder den Autor, Abzeichen ab 10 erhaltenen Reaktionen.
 create or replace function public.nach_reaktion()
@@ -456,7 +469,7 @@ declare
     t record;
     autor uuid;
 begin
-    select * into t from public.forum_themen where id = thema;
+    select * into t from public.forum_themen where id = thema for update;
     if t is null or (t.user_id is distinct from (select auth.uid()) and not public.ist_moderator()) then
         raise exception 'nicht_erlaubt' using errcode = 'P0001';
     end if;
@@ -537,6 +550,24 @@ begin
     insert into public.moderations_log (moderator, aktion, ziel_art, ziel_id, grund) values ((select auth.uid()), 'meldung_' || status_, 'meldung', id_::text, left(entscheidung_, 500));
     perform public.benachrichtige(m.melder, null, 'moderation', '/community-regeln', left('Deine Meldung wurde geprüft: ' || entscheidung_, 200));
 end $$;
+
+-- Gemeldeten Inhalt ausblenden und die Meldung im selben Schritt erledigen. Schlägt eins fehl, passiert keins.
+create or replace function public.meldung_ausblenden(id_ bigint, entscheidung_ text)
+returns void language plpgsql security definer set search_path = '' as $$
+declare
+    m record;
+begin
+    if not public.ist_moderator() then
+        raise exception 'nicht_erlaubt' using errcode = 'P0001';
+    end if;
+    select * into m from public.meldungen where id = id_ and status = 'offen' for update;
+    if m is null or m.ziel_art not in ('kommentar', 'beitrag', 'thema') then
+        raise exception 'meldung_ungueltig' using errcode = 'P0001';
+    end if;
+    perform public.moderieren(m.ziel_art, m.ziel_id::bigint, 'ausgeblendet', m.grund);
+    perform public.meldung_entscheiden(id_, 'erledigt', entscheidung_);
+end $$;
+revoke execute on function public.meldung_ausblenden(bigint, text) from public, anon;
 
 create or replace function public.sperren(uid uuid, tage integer, grund_ text)
 returns void language plpgsql security definer set search_path = '' as $$

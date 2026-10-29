@@ -6,7 +6,7 @@ Jeder Schritt ist ein eigenständiger Prompt. Er lässt sich einzeln in einer ne
 
 - Backend: Supabase-Projekt `aigeddon` (Ref `yfxashcmtazjkpklicky`, Region Frankfurt). Die Seite bleibt ein statischer Export auf GitHub Pages; alles Dynamische läuft im Browser über `@supabase/supabase-js` mit dem öffentlichen Schlüssel. Sicherheit liegt vollständig in Row Level Security (RLS). Jede Tabelle bekommt RLS, bevor Daten hineinkommen.
 - Migrationen liegen als SQL in `supabase/migrations/NNNN_name.sql` und werden mit `apply_migration` eingespielt. Nach jeder Migration `get_advisors` (security und performance) prüfen und Funde beheben.
-- Schalter: Konto-Funktionen sind nur sichtbar, wenn `NEXT_PUBLIC_KONTO=1` gesetzt ist (`lib/konto.js` → `KONTO_AKTIV`). Ohne Schalter bleibt die Seite exakt wie vorher.
+- Schalter: Konto-Funktionen sind nur sichtbar, wenn `NEXT_PUBLIC_KONTO=1` und `NEXT_PUBLIC_KONTO_AVV=1` (AV-Vertrag unterschrieben) gesetzt sind (`lib/konto.js` → `KONTO_AKTIV`). Ohne Schalter bleibt die Seite exakt wie vorher.
 - Datenschutz: Datensparsamkeit, getrennte Einwilligungen, Export und Löschung für Nutzer, Bilder werden im Browser neu kodiert (entfernt EXIF, GPS und andere Metadaten). Über Jean nur die drei erlaubten Angaben aus `CLAUDE.md`.
 - Texte nach `docs/BRAND-VOICE.md`, keine Gedankenstriche, keine unsichtbaren Zeichen, keine erfundenen Fakten. Eigene Preise für Mitgliedschaften sind Vorschläge in `lib/mitglied.js` und für Jean klar als änderbar markiert.
 - Jeder Schritt endet mit: Build nach `CLAUDE.md`, Browser-Test, Layer-A-Prüfung, PR, Merge, Live-Check, Haken in dieser Datei.
@@ -71,4 +71,4 @@ Jeder Schritt ist ein eigenständiger Prompt. Er lässt sich einzeln in einer ne
 3. Für Schritt 23: Stripe-Konto und Schlüssel als Edge-Function-Secrets.
 4. Für den Start: AGB und Widerrufsbelehrung juristisch prüfen lassen.
 5. Supabase, Authentication, URL Configuration: Site URL `https://jmp-collab.github.io/ai-directories` und Redirect URL `https://jmp-collab.github.io/ai-directories/**` eintragen.
-6. Zum Einschalten: GitHub, Settings, Secrets and variables, Actions, Variables: `KONTO` = `1`. Zum Ausschalten die Variable löschen.
+6. Zum Einschalten: GitHub, Settings, Secrets and variables, Actions, Variables: `KONTO` = `1` und nach unterschriebenem AV-Vertrag `KONTO_AVV` = `1`. Erst mit beiden Variablen sind Konten sichtbar. Zum Ausschalten eine der beiden löschen.

@@ -70,4 +70,4 @@ Plan und Stand: `docs/TRAUMSEITE-30.md`. Alles ist gebaut, aber unsichtbar, bis 
 1. Supabase-Dashboard, Projekt **aigeddon**: Organization Settings, Legal Documents, AV-Vertrag (DPA) abschließen.
 2. Authentication, URL Configuration: Site URL `https://jmp-collab.github.io/ai-directories`, Redirect URL `https://jmp-collab.github.io/ai-directories/**`.
 3. Authentication, SMTP: eigenen Mailversand eintragen (z. B. Brevo, 300 Mails pro Tag gratis). Ohne eigenen Versand schickt Supabase nur sehr wenige Login-Mails pro Stunde.
-4. Einschalten: GitHub, Settings, Secrets and variables, Actions, Variables, neue Variable `KONTO` mit Wert `1`, danach den Pages-Workflow neu starten.
+4. Einschalten: GitHub, Settings, Secrets and variables, Actions, Variables: `KONTO` mit Wert `1` und, erst nachdem der AV-Vertrag unterschrieben ist, `KONTO_AVV` mit Wert `1`. Konten werden nur sichtbar, wenn beide gesetzt sind. Danach den Pages-Workflow neu starten.

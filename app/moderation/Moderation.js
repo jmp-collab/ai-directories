@@ -34,7 +34,8 @@ export default function Moderation() {
             const mitInhalt = await Promise.all(
                 (data || []).map(async (m) => {
                     if (!ZIEL[m.ziel_art]) return m
-                    const { data: inhalt } = await sb.from(ZIEL[m.ziel_art]).select(`id, text, status, ${AUTOR_FELDER}`).eq('id', m.ziel_id).maybeSingle()
+                    const felder = m.ziel_art === 'thema' ? `id, titel, text, status, ${AUTOR_FELDER}` : `id, text, status, ${AUTOR_FELDER}`
+                    const { data: inhalt } = await sb.from(ZIEL[m.ziel_art]).select(felder).eq('id', m.ziel_id).maybeSingle()
                     return { ...m, inhalt }
                 })
             )
@@ -42,7 +43,8 @@ export default function Moderation() {
         } else if (tab === 'pruefen') {
             const teile = await Promise.all(
                 Object.entries(ZIEL).map(async ([art, tabelle]) => {
-                    const { data } = await sb.from(tabelle).select(`id, text, status, erstellt, ${AUTOR_FELDER}`).eq('status', 'pruefen').order('erstellt').limit(50)
+                    const felder = art === 'thema' ? `id, titel, text, status, erstellt, ${AUTOR_FELDER}` : `id, text, status, erstellt, ${AUTOR_FELDER}`
+                    const { data } = await sb.from(tabelle).select(felder).eq('status', 'pruefen').order('erstellt').limit(50)
                     return (data || []).map((d) => ({ ...d, art }))
                 })
             )
@@ -121,6 +123,7 @@ export default function Moderation() {
                             {m.inhalt ? (
                                 <div className="mod-inhalt">
                                     <Autor autor={m.inhalt.autor} />
+                                    {m.inhalt.titel && <p className="f-thema-titel">Titel: {m.inhalt.titel}</p>}
                                     <Text text={m.inhalt.text} />
                                     <p className="widget-note">Status: {m.inhalt.status}</p>
                                 </div>
@@ -132,10 +135,9 @@ export default function Moderation() {
                                     <button
                                         type="button"
                                         className="button button-small konto-rot"
-                                        onClick={async () => {
-                                            await rpc('moderieren', { art_: m.ziel_art, id_: Number(m.ziel_id), neuer_status: 'ausgeblendet', grund_: m.grund }, 'Ausgeblendet.')
-                                            rpc('meldung_entscheiden', { id_: m.id, status_: 'erledigt', entscheidung_: 'Der Inhalt wurde ausgeblendet. Danke für deine Meldung!' }, 'Meldung erledigt.')
-                                        }}
+                                        onClick={() =>
+                                            rpc('meldung_ausblenden', { id_: m.id, entscheidung_: 'Der Inhalt wurde ausgeblendet. Danke für deine Meldung!' }, 'Ausgeblendet und erledigt.')
+                                        }
                                     >
                                         Ausblenden und erledigen
                                     </button>
@@ -162,6 +164,7 @@ export default function Moderation() {
                                 {d.art} #{d.id} · {zeitText(d.erstellt)}
                             </p>
                             <Autor autor={d.autor} />
+                            {d.titel && <p className="f-thema-titel">Titel: {d.titel}</p>}
                             <Text text={d.text} />
                             <p className="konto-links">
                                 <button type="button" className="button button-small" onClick={() => rpc('moderieren', { art_: d.art, id_: d.id, neuer_status: 'sichtbar', grund_: 'Geprüft' }, 'Freigegeben.')}>

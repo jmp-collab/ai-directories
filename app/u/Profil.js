@@ -28,14 +28,19 @@ export default function Profil() {
                 const [{ data: details }, { data: abzeichen }, { data: themen }, { data: kommentare }] = await Promise.all([
                     sb.from('profil_details').select('bio, beruf, pronomen, links').eq('id', profil.id).maybeSingle(),
                     sb.from('badges').select('name, zeit').eq('user_id', profil.id),
-                    sb.from('forum_themen').select('id, titel, erstellt').eq('user_id', profil.id).eq('status', 'sichtbar').order('erstellt', { ascending: false }).limit(5),
-                    sb.from('comments').select('id, pfad, text, erstellt').eq('user_id', profil.id).eq('status', 'sichtbar').order('erstellt', { ascending: false }).limit(5),
+                    // Aktivität nur bei öffentlichen Profilen (oder dem eigenen) abfragen.
+                    profil.oeffentlich || (user && user.id === profil.id)
+                        ? sb.from('forum_themen').select('id, titel, erstellt').eq('user_id', profil.id).eq('status', 'sichtbar').order('erstellt', { ascending: false }).limit(5)
+                        : Promise.resolve({ data: [] }),
+                    profil.oeffentlich || (user && user.id === profil.id)
+                        ? sb.from('comments').select('id, pfad, text, erstellt').eq('user_id', profil.id).eq('status', 'sichtbar').order('erstellt', { ascending: false }).limit(5)
+                        : Promise.resolve({ data: [] }),
                 ])
                 document.title = `${profil.anzeigename} (@${profil.handle}) | AIGeddon`
                 setDaten({ profil, details, abzeichen: abzeichen || [], themen: themen || [], kommentare: kommentare || [] })
             })
             .catch(() => setDaten(null))
-    }, [handle])
+    }, [handle, user])
 
     if (daten === undefined) return <p className="widget-note">Lade Profil …</p>
     if (daten === null)
@@ -131,7 +136,7 @@ export default function Profil() {
                     )}
                 </>
             )}
-            {themen.length > 0 && (
+            {details && themen.length > 0 && (
                 <>
                     <h2>🧵 Themen im Forum</h2>
                     <ul className="merk-verlauf">
@@ -143,7 +148,7 @@ export default function Profil() {
                     </ul>
                 </>
             )}
-            {kommentare.length > 0 && (
+            {details && kommentare.length > 0 && (
                 <>
                     <h2>💬 Letzte Kommentare</h2>
                     <ul className="c-liste">

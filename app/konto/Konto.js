@@ -65,8 +65,15 @@ export default function Konto() {
             ['meldungen', 'melder'],
             ['benachrichtigungen', 'user_id'],
         ]) {
-            const { data } = await sb.from(name).select('*').eq(spalte, user.id)
-            tabellen[name] = data || []
+            // Seitenweise laden, damit auch große Sammlungen vollständig im Export landen.
+            const zeilen = []
+            for (let von = 0; ; von += 1000) {
+                const { data, error } = await sb.from(name).select('*').eq(spalte, user.id).range(von, von + 999)
+                if (error) return toast('Der Export ist unvollständig fehlgeschlagen. Bitte versuch es noch einmal.', '⚠️')
+                zeilen.push(...(data || []))
+                if (!data || data.length < 1000) break
+            }
+            tabellen[name] = zeilen
         }
         const datei = new Blob([JSON.stringify({ exportiert: new Date().toISOString(), email: user.email, ...tabellen }, null, 2)], { type: 'application/json' })
         const a = document.createElement('a')

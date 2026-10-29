@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import useKonto from '../useKonto'
 import { KONTO_AKTIV, supabase } from '../../../lib/konto'
-import { AUTOR_FELDER, fehlerText, nochBearbeitbar } from '../../../lib/community'
+import { AUTOR_FELDER, KOMMENTAR_PFAD, fehlerText, nochBearbeitbar } from '../../../lib/community'
 import { toast } from '../../../lib/herz'
 import Autor from './Autor'
 import Text from './Text'
@@ -115,12 +115,21 @@ export default function Kommentare() {
         const sb = await supabase()
         if (!sb) return
         const { data, error } = await sb.from('comments').select(`id, parent_id, user_id, text, status, erstellt, bearbeitet, ${AUTOR_FELDER}`).eq('pfad', pfad).order('erstellt', { ascending: false }).limit(300)
-        // Die neuesten 300 laden und für die Anzeige wieder chronologisch sortieren.
-        setListe(error ? [] : (data || []).reverse())
+        if (error) return setListe([])
+        // Die neuesten 300 laden; Antworten, deren Eltern-Kommentar älter ist, bekommen ihn nachgeladen.
+        const liste = data || []
+        const da = new Set(liste.map((k) => k.id))
+        const fehlend = [...new Set(liste.filter((k) => k.parent_id && !da.has(k.parent_id)).map((k) => k.parent_id))]
+        let eltern = []
+        if (fehlend.length) {
+            const { data: e } = await sb.from('comments').select(`id, parent_id, user_id, text, status, erstellt, bearbeitet, ${AUTOR_FELDER}`).in('id', fehlend)
+            eltern = e || []
+        }
+        setListe([...liste, ...eltern].sort((a, b) => (a.erstellt < b.erstellt ? -1 : 1)))
     }, [pfad])
 
     useEffect(() => {
-        if (!KONTO_AKTIV || OHNE.test(pfad) || !/^\/[a-z0-9/_.-]*$/.test(pfad)) return
+        if (!KONTO_AKTIV || OHNE.test(pfad) || !KOMMENTAR_PFAD.test(pfad)) return
         setListe(null)
         laden().catch(() => setListe([]))
     }, [pfad, laden, user])
@@ -128,7 +137,7 @@ export default function Kommentare() {
     const ids = (liste || []).map((k) => k.id)
     const [reaktionen, setReaktionen] = useReaktionen('kommentar', ids)
 
-    if (!KONTO_AKTIV || OHNE.test(pfad) || !bereit) return null
+    if (!KONTO_AKTIV || OHNE.test(pfad) || !KOMMENTAR_PFAD.test(pfad) || !bereit) return null
 
     const senden = async (text) => {
         const sb = await supabase()
