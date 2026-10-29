@@ -74,6 +74,10 @@ export default function ProfilEditor() {
                 throw fehlerProfil
             }
             if (alt) await sb.storage.from(bucket).remove([alt])
+            // Aufräumen: alles im eigenen Ordner außer dem neuen Bild entfernen (Reste abgebrochener Uploads)
+            const { data: liste } = await sb.storage.from(bucket).list(user.id, { limit: 20 })
+            const reste = (liste || []).map((o) => `${user.id}/${o.name}`).filter((x) => x !== pfad)
+            if (reste.length) await sb.storage.from(bucket).remove(reste)
             setP({ ...p, [feld]: pfad })
             setVorschau({ ...vorschau, [bucket]: URL.createObjectURL(blob) })
             await ladeProfil()
@@ -94,9 +98,13 @@ export default function ProfilEditor() {
     const bildWeg = async (bucket) => {
         const sb = await supabase()
         const feld = bucket === 'avatare' ? 'avatar_pfad' : 'banner_pfad'
+        // Erst die Datei löschen: Scheitert das, bleibt der Pfad stehen und nichts verwaist unbemerkt.
+        if (p[feld]) {
+            const { error: fehlerDatei } = await sb.storage.from(bucket).remove([p[feld]])
+            if (fehlerDatei) return setStatus('Entfernen hat nicht geklappt. Bitte versuch es noch einmal.')
+        }
         const { error } = await sb.from('profiles').update({ [feld]: null }).eq('id', user.id)
         if (error) return setStatus('Entfernen hat nicht geklappt. Bitte versuch es noch einmal.')
-        if (p[feld]) await sb.storage.from(bucket).remove([p[feld]])
         setP({ ...p, [feld]: null })
         setVorschau({ ...vorschau, [bucket]: null })
         await ladeProfil()

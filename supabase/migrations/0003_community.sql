@@ -440,7 +440,9 @@ begin
     end if;
     if (new.ziel_art = 'kommentar' and not exists (select 1 from public.comments where id = new.ziel_id and status = 'sichtbar'))
         or (new.ziel_art = 'thema' and not exists (select 1 from public.forum_themen where id = new.ziel_id and status = 'sichtbar'))
-        or (new.ziel_art = 'beitrag' and not exists (select 1 from public.forum_beitraege where id = new.ziel_id and status = 'sichtbar')) then
+        or (new.ziel_art = 'beitrag' and not exists (
+            select 1 from public.forum_beitraege b join public.forum_themen t on t.id = b.thema_id
+            where b.id = new.ziel_id and b.status = 'sichtbar' and t.status = 'sichtbar')) then
         raise exception 'ziel_fehlt' using errcode = 'P0001';
     end if;
     return new;
@@ -546,7 +548,10 @@ begin
         raise exception 'status_ungueltig' using errcode = 'P0001';
     end if;
     update public.meldungen set status = status_, entscheidung = left(entscheidung_, 500), erledigt_von = (select auth.uid()), erledigt_am = now()
-    where id = id_ returning * into m;
+    where id = id_ and status = 'offen' returning * into m;
+    if not found then
+        raise exception 'meldung_schon_erledigt' using errcode = 'P0001';
+    end if;
     insert into public.moderations_log (moderator, aktion, ziel_art, ziel_id, grund) values ((select auth.uid()), 'meldung_' || status_, 'meldung', id_::text, left(entscheidung_, 500));
     perform public.benachrichtige(m.melder, null, 'moderation', '/community-regeln', left('Deine Meldung wurde geprüft: ' || entscheidung_, 200));
 end $$;

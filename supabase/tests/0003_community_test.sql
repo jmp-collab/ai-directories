@@ -145,3 +145,15 @@ select public.meldung_ausblenden((select id from public.meldungen where status =
 reset role;
 select test.gleich((select status from public.comments where text = 'Kommentar 1'), 'ausgeblendet', 'Gemeldeter Inhalt ausgeblendet');
 select test.gleich((select status from public.meldungen order by id desc limit 1), 'erledigt', 'Meldung im selben Schritt erledigt');
+
+-- Meldung lässt sich nur einmal entscheiden; Reaktionen auf Antworten in ausgeblendeten Themen sind gesperrt.
+set role authenticated;
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000003', false);
+select test.scheitert($$select public.meldung_entscheiden((select id from public.meldungen order by id desc limit 1), 'abgelehnt', 'doch nicht')$$, '%meldung_schon_erledigt%');
+select public.moderieren('thema', (select id from public.forum_themen order by id limit 1), 'ausgeblendet', 'Test');
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000005', false);
+reset role;
+select id as beitrag_versteckt from public.forum_beitraege where status = 'sichtbar' and thema_id = (select id from public.forum_themen order by id limit 1) limit 1 \gset
+set role authenticated;
+select test.scheitert(format($$insert into public.reaktionen (ziel_art, ziel_id, emoji) values ('beitrag', %s, '👍')$$, :beitrag_versteckt), '%ziel_fehlt%');
+reset role;

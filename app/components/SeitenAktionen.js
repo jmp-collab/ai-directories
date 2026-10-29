@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { lies, schreib, toast, ruhig, verleihe } from '../../lib/herz'
 import { StrahlenHerz } from './HerzIcons'
 import KontoEinladung from './KontoEinladung'
+import useKonto from './useKonto'
 
 // Herz, Merken und Teilen unter jeder Seite. Gespeichert wird nur im eigenen Browser, gezählt wird nichts.
 const sauber = (t) => (t || '').replace(/\s*\|\s*AIGeddon\s*$/, '').trim()
@@ -32,11 +33,17 @@ export default function SeitenAktionen() {
     const [gemerkt, setGemerkt] = useState(false)
     const [bereit, setBereit] = useState(false)
     const [einladen, setEinladen] = useState(false)
+    const { user } = useKonto()
 
     useEffect(() => {
-        setHerz((lies('aigeddon-herzen', []) || []).includes(pfad))
-        setGemerkt((lies('aigeddon-merkliste', []) || []).some((m) => m.pfad === pfad))
+        const lesen = () => {
+            setHerz((lies('aigeddon-herzen', []) || []).includes(pfad))
+            setGemerkt((lies('aigeddon-merkliste', []) || []).some((m) => m.pfad === pfad))
+        }
+        lesen()
         setBereit(true)
+        window.addEventListener('aigeddon-sync', lesen)
+        return () => window.removeEventListener('aigeddon-sync', lesen)
     }, [pfad])
 
     if (pfad === '/merkliste' || pfad === '/merkliste/') return null
@@ -96,7 +103,9 @@ export default function SeitenAktionen() {
             <button type="button" className="aktion-knopf" onClick={teilen}>
                 <span aria-hidden="true">💌</span> Teilen
             </button>
-            <span className="seiten-aktionen-hinweis">Bleibt nur in deinem Browser, wir zählen nichts.</span>
+            <span className="seiten-aktionen-hinweis">
+                {user ? 'Wird in deinem Konto gespeichert, damit du es auf allen Geräten hast.' : 'Bleibt nur in deinem Browser, wir zählen nichts.'}
+            </span>
             {einladen && <KontoEinladung klein text="Schon 3 Seiten gemerkt! Willst du sie auf allen Geräten haben?" />}
         </div>
     )

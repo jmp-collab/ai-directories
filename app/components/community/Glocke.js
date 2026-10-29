@@ -16,6 +16,13 @@ export default function Glocke() {
     const [offen, setOffen] = useState(false)
     const box = useRef(null)
 
+    // Kontowechsel: nichts vom vorigen Konto stehen lassen
+    useEffect(() => {
+        setListe([])
+        setUngelesen(0)
+        setOffen(false)
+    }, [user?.id])
+
     const laden = useCallback(async () => {
         if (!user) return
         const sb = await supabase()
