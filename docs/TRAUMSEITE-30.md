@@ -14,7 +14,7 @@ Jeder Schritt ist ein eigenständiger Prompt. Er lässt sich einzeln in einer ne
 ## Phase A: Fundament
 
 - [ ] **1 Projekt und Client.** Lege das Supabase-Projekt an, füge `@supabase/supabase-js` hinzu, baue `lib/supabase.js` (ein Client, Session im localStorage, PKCE) und `lib/konto.js` mit `KONTO_AKTIV`. Hinterlege URL und öffentlichen Schlüssel im Pages-Workflow.
-- [ ] **2 Schema v1.** Tabellen `profiles` (Handle, Anzeigename, Bio, Rolle, Links, Farben, Avatar- und Banner-Pfad, Rolle `nutzer/moderator/admin`, Plan), `saved_items`, `badges`, `consents`; Trigger `handle_new_user`, RLS je Tabelle, Funktion `ist_admin()`.
+- [ ] **2 Schema v1.** Tabellen `profiles` (öffentliche Karte: Handle, Anzeigename, Farben, Avatar- und Banner-Pfad, Rolle, Punkte), `profil_details` (Bio, Beruf, Pronomen, Links; bei privaten Profilen verborgen), `konten` (nur für den Nutzer: Einwilligungen, Segment, Plan, Sperre), `einwilligungs_log` (nur per Trigger), `saved_items`, `badges`; Trigger `handle_new_user`, RLS je Tabelle, Funktion `ist_admin()`.
 - [ ] **3 Login.** Seite `/anmelden` mit Magic Link (E-Mail-Code ohne Passwort), Rückkehr auf die Ausgangsseite, Konto-Knopf im Header mit Avatar, Abmelden. Weiterleitungs-URLs in Supabase für die GitHub-Pages-Domain setzen.
 - [ ] **4 Kontoseite.** `/konto` mit Übersicht, Einwilligungen (Newsletter, persönliche Angebote) zum Umschalten, Datenexport als JSON und Konto löschen über eine abgesicherte Datenbankfunktion.
 - [ ] **5 Sync.** Merkliste, Herzen, Abzeichen und Verlauf aus dem Browser beim Login ins Konto übernehmen (zusammenführen, nicht überschreiben) und danach in beide Richtungen aktuell halten.
@@ -24,7 +24,7 @@ Jeder Schritt ist ein eigenständiger Prompt. Er lässt sich einzeln in einer ne
 
 - [ ] **7 Profil-Editor.** Anzeigename, eindeutiger Handle, Bio (300 Zeichen), Rolle, bis zu 3 Links, Lieblings-Akzentfarbe, Banner-Farbverlauf, Pronomen optional, Sichtbarkeit öffentlich oder privat.
 - [ ] **8 Eigene Bilder.** Storage-Buckets `avatare` und `banner`: Upload nur in den eigenen Ordner, nur Bildtypen, Größenlimit. Im Browser zuschneiden, verkleinern und als WebP neu kodieren (entfernt Metadaten). Vorschau vor dem Speichern.
-- [ ] **9 Öffentliches Profil.** `/u/?h=handle` mit Banner, Avatar, Bio, Links (rel="nofollow ugc"), Abzeichen-Vitrine, letzte Beiträge und Kommentare. Private Profile zeigen nur den Handle.
+- [ ] **9 Öffentliches Profil.** `/u/?h=handle` mit Banner, Avatar, Bio, Links (rel="nofollow ugc"), Abzeichen-Vitrine, letzte Beiträge und Kommentare. Private Profile zeigen nur Handle, Anzeigename und Bild; Bio, Beruf, Pronomen und Links bleiben verborgen.
 
 ## Phase C: Community
 

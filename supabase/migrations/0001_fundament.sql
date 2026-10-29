@@ -10,9 +10,7 @@ create table public.profiles (
     akzent text not null default '' check (akzent in ('', 'blau', 'gruen', 'lila')),
     oeffentlich boolean not null default true,
     rolle text not null default 'nutzer' check (rolle in ('nutzer', 'moderator', 'admin')),
-    plan text not null default 'gratis' check (plan in ('gratis', 'pro', 'team')),
     punkte integer not null default 0,
-    gesperrt_bis timestamptz,
     erstellt timestamptz not null default now(),
     geaendert timestamptz not null default now()
 );
@@ -26,16 +24,18 @@ create table public.profil_details (
     links jsonb not null default '[]'::jsonb check (jsonb_typeof(links) = 'array' and jsonb_array_length(links) <= 3)
 );
 
--- Nur für den Nutzer selbst: Einwilligungen, Segment aus den Startfragen.
+-- Nur für den Nutzer selbst: Einwilligungen, Segment, Plan und Sperre. Plan und Sperre setzt nur der Server.
 create table public.konten (
     id uuid primary key references auth.users (id) on delete cascade,
     newsletter boolean not null default false,
     angebote boolean not null default false,
     segment jsonb not null default '{}'::jsonb,
+    plan text not null default 'gratis' check (plan in ('gratis', 'pro', 'team')),
+    gesperrt_bis timestamptz,
     geaendert timestamptz not null default now()
 );
 
--- Nachweis jeder Einwilligung (nur anhängen).
+-- Nachweis jeder Einwilligung. Wird ausschließlich per Trigger geschrieben, nie direkt vom Browser.
 create table public.einwilligungs_log (
     id bigint generated always as identity primary key,
     user_id uuid not null references auth.users (id) on delete cascade,
@@ -83,6 +83,22 @@ end $$;
 create trigger profiles_geaendert before update on public.profiles for each row execute function public.setze_geaendert();
 create trigger konten_geaendert before update on public.konten for each row execute function public.setze_geaendert();
 
+-- Jede Änderung einer Einwilligung wird im selben Schritt protokolliert, damit Stand und Nachweis nie auseinanderlaufen.
+create or replace function public.protokolliere_einwilligung()
+returns trigger language plpgsql security definer set search_path = '' as $$
+begin
+    if new.newsletter is distinct from old.newsletter then
+        insert into public.einwilligungs_log (user_id, art, erteilt) values (new.id, 'newsletter', new.newsletter);
+    end if;
+    if new.angebote is distinct from old.angebote then
+        insert into public.einwilligungs_log (user_id, art, erteilt) values (new.id, 'angebote', new.angebote);
+    end if;
+    return new;
+end $$;
+
+create trigger konten_einwilligung after update on public.konten for each row execute function public.protokolliere_einwilligung();
+revoke execute on function public.protokolliere_einwilligung() from public, anon, authenticated;
+
 -- Neues Konto: Profil mit zufälligem Handle, Details, Kontodaten, Einwilligung zum Konto protokollieren.
 create or replace function public.handle_new_user()
 returns trigger language plpgsql security definer set search_path = '' as $$
@@ -118,11 +134,13 @@ alter table public.einwilligungs_log enable row level security;
 alter table public.saved_items enable row level security;
 alter table public.badges enable row level security;
 
-create policy "Profile sind öffentlich lesbar" on public.profiles for select using (true);
+-- Profile: nur die Karte (Handle, Name, Bild, Rolle, Punkte) ist öffentlich. Name und Bild erscheinen auch bei privaten
+-- Profilen an eigenen Beiträgen; Bio, Beruf, Pronomen und Links bleiben dann verborgen (profil_details).
+create policy "Profilkarten sind öffentlich lesbar" on public.profiles for select using (true);
 create policy "Eigenes Profil ändern" on public.profiles for update to authenticated
     using ((select auth.uid()) = id) with check ((select auth.uid()) = id);
 
--- Rolle, Plan, Punkte und Sperre setzt nur der Server.
+-- Rolle und Punkte setzt nur der Server.
 revoke update on public.profiles from anon, authenticated;
 grant update (handle, anzeigename, avatar_pfad, banner_pfad, banner_verlauf, akzent, oeffentlich) on public.profiles to authenticated;
 
@@ -134,9 +152,10 @@ create policy "Eigene Details ändern" on public.profil_details for update to au
 create policy "Eigenes Konto lesen" on public.konten for select to authenticated using ((select auth.uid()) = id);
 create policy "Eigenes Konto ändern" on public.konten for update to authenticated
     using ((select auth.uid()) = id) with check ((select auth.uid()) = id);
+revoke update on public.konten from anon, authenticated;
+grant update (newsletter, angebote, segment) on public.konten to authenticated;
 
 create policy "Eigene Einwilligungen lesen" on public.einwilligungs_log for select to authenticated using ((select auth.uid()) = user_id);
-create policy "Eigene Einwilligung eintragen" on public.einwilligungs_log for insert to authenticated with check ((select auth.uid()) = user_id);
 
 create policy "Eigene Einträge lesen" on public.saved_items for select to authenticated using ((select auth.uid()) = user_id);
 create policy "Eigene Einträge anlegen" on public.saved_items for insert to authenticated with check ((select auth.uid()) = user_id);
