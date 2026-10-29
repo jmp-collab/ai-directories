@@ -8,7 +8,15 @@ import { KONTO_AKTIV, supabase, anmeldeZiel } from '../../lib/konto'
 import { lies, schreib } from '../../lib/herz'
 
 // Anmelden und Registrieren in einem: Wer noch kein Konto hat, bekommt mit dem ersten Link eins.
-const sichererPfad = (p) => (p && p.startsWith('/') && !p.startsWith('//') ? p : '/konto')
+// Nur Pfade auf dieser Seite: kein Protokoll, keine fremde Domain, keine Backslashes (Browser lesen einen Backslash wie /).
+const sichererPfad = (p) => {
+    if (!p || !/^\/[a-zA-Z0-9/_.?=&%#-]*$/.test(p) || p.startsWith('//') || /%5c|%2f%2f/i.test(p)) return '/konto'
+    try {
+        return new URL(p, window.location.origin).origin === window.location.origin ? p : '/konto'
+    } catch {
+        return '/konto'
+    }
+}
 
 export default function Anmelden() {
     const router = useRouter()

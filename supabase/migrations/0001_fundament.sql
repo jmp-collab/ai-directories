@@ -165,4 +165,11 @@ create policy "Eigene Einträge löschen" on public.saved_items for delete to au
 
 create policy "Abzeichen lesen, wenn Profil öffentlich oder eigene" on public.badges for select
     using ((select auth.uid()) = user_id or exists (select 1 from public.profiles p where p.id = badges.user_id and p.oeffentlich));
-create policy "Eigene Abzeichen eintragen" on public.badges for insert to authenticated with check ((select auth.uid()) = user_id);
+-- Selbst eintragen dürfen Nutzer nur die Entdecker-Abzeichen, die der Browser vergibt (wie bisher im localStorage).
+-- Alle anderen, etwa für die Community, vergibt ausschließlich der Server.
+create policy "Eigene Abzeichen eintragen" on public.badges for insert to authenticated
+    with check ((select auth.uid()) = user_id and name in (
+        'Neugier-Abzeichen', 'Entdecker-Abzeichen', 'Weltreise-Abzeichen', 'Leseratten-Abzeichen', 'Herzensmensch-Abzeichen',
+        'Kopier-Abzeichen', 'Detektiv-Abzeichen', 'Skill-Sammler-Abzeichen', 'Botschafter-Abzeichen', 'Nachteulen-Abzeichen',
+        'Geheimagenten-Abzeichen', 'Atomkern-Abzeichen', 'Hupkonzert-Abzeichen', 'Liebesbrief-Abzeichen',
+        'Mitglieds-Abzeichen', 'Gesicht-zeigen-Abzeichen'));

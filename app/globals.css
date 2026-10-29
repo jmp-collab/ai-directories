@@ -6085,7 +6085,8 @@ h2 a {
 }
 .profil-editor legend { padding: 0 6px; font-weight: 800; font-size: 1.1rem; }
 .profil-editor label:not(.konto-check) { display: grid; gap: 6px; font-weight: 700; }
-.profil-datei input { font: inherit; max-width: 100%; }
+.profil-datei input { font: inherit; width: 100%; max-width: 100%; }
+.profil-editor label, .profil-editor p { min-width: 0; overflow-wrap: anywhere; }
 .profil-editor, .profil-editor fieldset, .profil-vorschau { min-width: 0; }
 .profil-vorschau-text { min-width: 0; overflow-wrap: anywhere; }
 .profil-verlaeufe { display: flex; flex-wrap: wrap; gap: 8px; }

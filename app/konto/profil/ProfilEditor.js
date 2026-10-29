@@ -68,7 +68,11 @@ export default function ProfilEditor() {
             if (error) throw error
             const alt = bucket === 'avatare' ? p.avatar_pfad : p.banner_pfad
             const feld = bucket === 'avatare' ? 'avatar_pfad' : 'banner_pfad'
-            await sb.from('profiles').update({ [feld]: pfad }).eq('id', user.id)
+            const { error: fehlerProfil } = await sb.from('profiles').update({ [feld]: pfad }).eq('id', user.id)
+            if (fehlerProfil) {
+                await sb.storage.from(bucket).remove([pfad])
+                throw fehlerProfil
+            }
             if (alt) await sb.storage.from(bucket).remove([alt])
             setP({ ...p, [feld]: pfad })
             setVorschau({ ...vorschau, [bucket]: URL.createObjectURL(blob) })
@@ -90,8 +94,9 @@ export default function ProfilEditor() {
     const bildWeg = async (bucket) => {
         const sb = await supabase()
         const feld = bucket === 'avatare' ? 'avatar_pfad' : 'banner_pfad'
+        const { error } = await sb.from('profiles').update({ [feld]: null }).eq('id', user.id)
+        if (error) return setStatus('Entfernen hat nicht geklappt. Bitte versuch es noch einmal.')
         if (p[feld]) await sb.storage.from(bucket).remove([p[feld]])
-        await sb.from('profiles').update({ [feld]: null }).eq('id', user.id)
         setP({ ...p, [feld]: null })
         setVorschau({ ...vorschau, [bucket]: null })
         await ladeProfil()
@@ -104,13 +109,26 @@ export default function ProfilEditor() {
         const handle = p.handle.trim().toLowerCase()
         const links = d.links.map((l) => l.trim()).filter(Boolean)
         if (links.some((l) => !/^https:\/\/\S{3,190}$/.test(l))) return setStatus('Links müssen mit https:// beginnen.')
-        const r1 = await sb
-            .from('profiles')
-            .update({ handle, anzeigename: p.anzeigename.trim() || 'Neues Mitglied', banner_verlauf: p.banner_verlauf, akzent: p.akzent, oeffentlich: p.oeffentlich })
-            .eq('id', user.id)
-        if (r1.error) return setStatus(r1.error.code === '23505' ? `Der Handle @${handle} ist schon vergeben.` : 'Bitte prüf Handle und Anzeigenamen.')
-        const r2 = await sb.from('profil_details').update({ bio: d.bio.trim(), beruf: d.beruf.trim(), pronomen: d.pronomen.trim(), links }).eq('id', user.id)
-        if (r2.error) return setStatus('Bitte prüf Bio und Links.')
+        // Reihenfolge schützt private Angaben: wer auf privat stellt, wird zuerst privat; wer öffentlich wird,
+        // wird es erst, nachdem die Details erfolgreich gespeichert sind.
+        const karte = () =>
+            sb
+                .from('profiles')
+                .update({ handle, anzeigename: p.anzeigename.trim() || 'Neues Mitglied', banner_verlauf: p.banner_verlauf, akzent: p.akzent, oeffentlich: p.oeffentlich })
+                .eq('id', user.id)
+        const details = () => sb.from('profil_details').update({ bio: d.bio.trim(), beruf: d.beruf.trim(), pronomen: d.pronomen.trim(), links }).eq('id', user.id)
+        const kartenFehler = (e) => setStatus(e.code === '23505' ? `Der Handle @${handle} ist schon vergeben.` : 'Bitte prüf Handle und Anzeigenamen.')
+        if (!p.oeffentlich) {
+            const r1 = await karte()
+            if (r1.error) return kartenFehler(r1.error)
+            const r2 = await details()
+            if (r2.error) return setStatus('Bitte prüf Bio und Links.')
+        } else {
+            const r2 = await details()
+            if (r2.error) return setStatus('Bitte prüf Bio und Links. Dein Profil bleibt bis dahin unverändert.')
+            const r1 = await karte()
+            if (r1.error) return kartenFehler(r1.error)
+        }
         await ladeProfil()
         setStatus('')
         toast('Profil gespeichert. Sieht großartig aus!', '✨')

@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import useKonto from '../components/useKonto'
 import { KONTO_AKTIV, supabase, bildUrl } from '../../lib/konto'
 import { toast } from '../../lib/herz'
+import { lokalLeeren } from '../../lib/sync'
 
 // Kontoseite: Überblick, Einwilligungen, Datenexport, Abmelden und Konto löschen.
 export default function Konto() {
@@ -78,6 +79,7 @@ export default function Konto() {
     const abmelden = async () => {
         const sb = await supabase()
         await sb.auth.signOut()
+        lokalLeeren()
         toast('Bis bald! Deine Sammlung bleibt im Konto gespeichert.', '👋')
         router.push('/')
     }
@@ -86,12 +88,17 @@ export default function Konto() {
         const sb = await supabase()
         // Eigene Bilder zuerst entfernen, danach das Konto mit allen Daten.
         for (const bucket of ['avatare', 'banner']) {
-            const { data } = await sb.storage.from(bucket).list(user.id)
-            if (data?.length) await sb.storage.from(bucket).remove(data.map((f) => `${user.id}/${f.name}`))
+            const { data, error } = await sb.storage.from(bucket).list(user.id)
+            if (error) return toast('Deine Bilder konnten nicht gelöscht werden. Dein Konto bleibt bestehen, bitte versuch es gleich noch einmal.', '⚠️')
+            if (data?.length) {
+                const { error: weg } = await sb.storage.from(bucket).remove(data.map((f) => `${user.id}/${f.name}`))
+                if (weg) return toast('Deine Bilder konnten nicht gelöscht werden. Dein Konto bleibt bestehen, bitte versuch es gleich noch einmal.', '⚠️')
+            }
         }
         const { error } = await sb.rpc('konto_loeschen')
         if (error) return toast('Löschen hat nicht geklappt. Schreib uns bitte über das Kontaktformular.', '⚠️')
         await sb.auth.signOut()
+        lokalLeeren()
         toast('Dein Konto und alle Daten sind gelöscht. Danke, dass du da warst.', '🕊️')
         router.push('/')
     }

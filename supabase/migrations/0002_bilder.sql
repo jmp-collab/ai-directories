@@ -7,8 +7,20 @@ values
     ('banner', 'banner', true, 1048576, array['image/webp', 'image/png', 'image/jpeg'])
 on conflict (id) do nothing;
 
+-- Höchstens 3 Dateien pro Bucket und Konto (der Editor lädt neu hoch und löscht danach das alte Bild).
+-- Gezählt wird über eine eigene Funktion, weil eine Regel auf storage.objects die Tabelle nicht selbst abfragen darf.
+create or replace function public.eigene_bilder(bucket text)
+returns integer language sql stable security definer set search_path = '' as $$
+    select count(*)::integer from storage.objects o where o.bucket_id = bucket and (storage.foldername(o.name))[1] = (select auth.uid())::text
+$$;
+revoke execute on function public.eigene_bilder(text) from public, anon;
+
 create policy "Eigene Profilbilder hochladen" on storage.objects for insert to authenticated
-    with check (bucket_id in ('avatare', 'banner') and (storage.foldername(name))[1] = (select auth.uid())::text);
+    with check (
+        bucket_id in ('avatare', 'banner')
+        and (storage.foldername(name))[1] = (select auth.uid())::text
+        and public.eigene_bilder(bucket_id) < 3
+    );
 create policy "Eigene Profilbilder ersetzen" on storage.objects for update to authenticated
     using (bucket_id in ('avatare', 'banner') and (storage.foldername(name))[1] = (select auth.uid())::text)
     with check (bucket_id in ('avatare', 'banner') and (storage.foldername(name))[1] = (select auth.uid())::text);

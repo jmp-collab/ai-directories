@@ -604,10 +604,7 @@ create policy "Eigene Benachrichtigungen als gelesen markieren" on public.benach
 revoke insert, update, delete on public.benachrichtigungen from anon, authenticated;
 grant update (gelesen) on public.benachrichtigungen to authenticated;
 
--- Community-Abzeichen kann sich niemand selbst eintragen.
-drop policy "Eigene Abzeichen eintragen" on public.badges;
-create policy "Eigene Abzeichen eintragen" on public.badges for insert to authenticated
-    with check ((select auth.uid()) = user_id and name not in ('Erster-Kommentar-Abzeichen', 'Forums-Starter-Abzeichen', 'Problemlöser-Abzeichen', 'Hilfsbereit-Abzeichen'));
+-- Community-Abzeichen stehen nicht in der Liste der selbst eintragbaren Abzeichen (Migration 0001), sie vergibt nur vergib_abzeichen().
 
 -- ---------- Startdaten ----------
 

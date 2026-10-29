@@ -14,3 +14,21 @@ alter table storage.objects enable row level security;
 create function storage.foldername(name text) returns text[] language sql immutable as $$ select (string_to_array(name, '/'))[1:array_length(string_to_array(name, '/'), 1) - 1] $$;
 grant usage on schema storage to anon, authenticated;
 grant all on storage.objects to anon, authenticated;
+
+-- Prüfhelfer: Tests brechen mit Fehler ab, wenn eine Erwartung nicht stimmt.
+create schema if not exists test;
+grant usage on schema test to anon, authenticated;
+create or replace function test.scheitert(q text, muster text default '%') returns void language plpgsql as $$
+begin
+    execute q;
+    raise exception 'TEST FEHLGESCHLAGEN, sollte scheitern: %', q;
+exception when others then
+    if sqlerrm like 'TEST FEHLGESCHLAGEN%' then raise; end if;
+    if sqlerrm not like muster then raise exception 'TEST FEHLGESCHLAGEN, falscher Fehler "%" bei: %', sqlerrm, q; end if;
+end $$;
+create or replace function test.gleich(ist text, soll text, name text) returns void language plpgsql as $$
+begin
+    if ist is distinct from soll then raise exception 'TEST FEHLGESCHLAGEN %: ist %, soll %', name, ist, soll; end if;
+    raise notice 'ok %', name;
+end $$;
+grant execute on function test.scheitert(text, text), test.gleich(text, text, text) to anon, authenticated;

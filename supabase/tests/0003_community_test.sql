@@ -1,5 +1,5 @@
--- Lokaler Test für Migration 0003: Kommentare, Forum, Moderation, Benachrichtigungen, Punkte.
-\set ON_ERROR_STOP 0
+-- Test für Migration 0003: Kommentare, Forum, Moderation, Benachrichtigungen, Punkte. Jede Erwartung ist eine Prüfung.
+\set ON_ERROR_STOP 1
 insert into auth.users (id, email) values
     ('d0000000-0000-0000-0000-000000000001', 'd1@x.de'),
     ('d0000000-0000-0000-0000-000000000002', 'd2@x.de'),
@@ -12,67 +12,59 @@ insert into public.wortfilter values ('casino');
 set role authenticated;
 select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000001', false);
 insert into public.comments (pfad, text) values ('/ratgeber/test', 'Toller Artikel, danke!');
-select 'dora kommentar status=' || status from public.comments where text like 'Toller%';
-\echo '--- erwarte Fehler: fremde user_id wird überschrieben, status nicht setzbar'
-insert into public.comments (pfad, text, status) values ('/ratgeber/test', 'x', 'ausgeblendet');
+select test.gleich((select status from public.comments where text like 'Toller%'), 'sichtbar', 'Kommentar sichtbar');
+select test.scheitert($$insert into public.comments (pfad, text, status) values ('/ratgeber/test', 'x', 'ausgeblendet')$$, '%permission denied%');
+select test.scheitert($$insert into public.comments (pfad, text) values ('/Böse Seite', 'x')$$, '%check constraint%');
 insert into public.comments (pfad, text) values ('/ratgeber/test', 'Hier gibts Casino-Boni!');
-select 'wortfilter status=' || status from public.comments where text like '%Casino%';
+select test.gleich((select status from public.comments where text like '%Casino%'), 'pruefen', 'Wortfilter schickt in die Prüfung');
 insert into public.forum_themen (kategorie_id, titel, text) values ('ki-tools', 'Welches Tool für Podcasts?', 'Suche ein KI-Tool für Schnitt.');
-\echo '--- erwarte Fehler: Team-Kategorie'
-insert into public.forum_themen (kategorie_id, titel, text) values ('ankuendigungen', 'Ich kündige was an', 'Hallo');
-\echo '--- erwarte Fehler: Ratenlimit (5 in 10 Minuten)'
+select test.scheitert($$insert into public.forum_themen (kategorie_id, titel, text) values ('ankuendigungen', 'Ich kündige was an', 'Hallo')$$, '%nur_team%');
 insert into public.comments (pfad, text) values ('/a', '3');
 insert into public.comments (pfad, text) values ('/a', '4');
-insert into public.comments (pfad, text) values ('/a', '5');
+select test.scheitert($$insert into public.comments (pfad, text) values ('/a', '5')$$, '%zu_schnell%');
 
 select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000002', false);
-select 'emil sieht wortfilter-kommentar=' || count(*) from public.comments where text like '%Casino%';
+select test.gleich((select count(*) from public.comments where text like '%Casino%')::text, '0', 'Andere sehen Inhalte in Prüfung nicht');
 insert into public.comments (pfad, parent_id, text) select '/ratgeber/test', id, 'Finde ich auch, @dora!' from public.comments where text like 'Toller%';
-\echo '--- erwarte Fehler: Antwort auf Antwort'
-insert into public.comments (pfad, parent_id, text) select '/ratgeber/test', id, 'tief' from public.comments where text like 'Finde%';
-\echo '--- erwarte Fehler: fremden Kommentar bearbeiten (0 Zeilen)'
+select test.scheitert($$insert into public.comments (pfad, parent_id, text) select '/ratgeber/test', id, 'tief' from public.comments where text like 'Finde%'$$, '%antwort_ungueltig%');
 update public.comments set text = 'gehackt' where text like 'Toller%';
-select 'nach Angriff=' || text from public.comments where text like 'Toller%';
+select test.gleich((select text from public.comments where text like 'Toller%'), 'Toller Artikel, danke!', 'Fremden Kommentar nicht bearbeitbar');
 insert into public.forum_beitraege (thema_id, text) select id, 'Probier Tool X, das kann das.' from public.forum_themen where titel like 'Welches%';
 insert into public.reaktionen (ziel_art, ziel_id, emoji) select 'kommentar', id, '👍' from public.comments where text like 'Toller%';
-\echo '--- erwarte Fehler: Lösung markieren als Fremder'
-select public.loesung_markieren((select id from public.forum_themen limit 1), (select id from public.forum_beitraege limit 1));
-\echo '--- erwarte Fehler: moderieren ohne Rolle'
-select public.moderieren('kommentar', (select id from public.comments where text like 'Toller%'), 'ausgeblendet', 'test');
+select test.scheitert($$select public.loesung_markieren((select id from public.forum_themen limit 1), (select id from public.forum_beitraege limit 1))$$, '%nicht_erlaubt%');
+select test.scheitert($$select public.moderieren('kommentar', (select id from public.comments where text like 'Toller%'), 'ausgeblendet', 'test')$$, '%nicht_erlaubt%');
 insert into public.meldungen (ziel_art, ziel_id, grund, text) values ('kommentar', '1', 'spam', 'Werbung');
-\echo '--- erwarte Fehler: Abzeichen selbst vergeben'
-insert into public.badges (user_id, name) values ('d0000000-0000-0000-0000-000000000002', 'Problemlöser-Abzeichen');
+select test.scheitert($$insert into public.badges (user_id, name) values ('d0000000-0000-0000-0000-000000000002', 'Problemlöser-Abzeichen')$$, '%row-level security%');
+select test.scheitert($$select public.punkte_plus('d0000000-0000-0000-0000-000000000002', 1000)$$, '%permission denied%');
 
 select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000001', false);
-select 'dora benachrichtigungen=' || string_agg(art, ',' order by id) from public.benachrichtigungen;
+select test.gleich((select string_agg(art, ',' order by id) from public.benachrichtigungen), 'antwort,erwaehnung,antwort', 'Antwort, Erwähnung und Forum-Antwort benachrichtigt');
 select public.loesung_markieren((select id from public.forum_themen limit 1), (select id from public.forum_beitraege limit 1));
-select 'thema geloest=' || (geloest_beitrag_id is not null) || ' antworten=' || antworten from public.forum_themen;
+select test.gleich((select (geloest_beitrag_id is not null) || ':' || antworten from public.forum_themen), 'true:1', 'Lösung markiert, Zähler stimmt');
 select public.alles_gelesen();
-select 'ungelesen=' || count(*) from public.benachrichtigungen where not gelesen;
-\echo '--- erwarte Fehler: benachrichtigung text ändern'
-update public.benachrichtigungen set text = 'x';
+select test.gleich((select count(*) from public.benachrichtigungen where not gelesen)::text, '0', 'Alles gelesen');
+select test.scheitert($$update public.benachrichtigungen set text = 'x'$$, '%permission denied%');
 
 select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000003', false);
-select 'mod sieht meldungen=' || count(*) from public.meldungen;
-select 'mod sieht pruefen=' || count(*) from public.comments where status = 'pruefen';
+select test.gleich((select count(*) from public.meldungen)::text, '1', 'Moderation sieht Meldungen');
+select test.gleich((select count(*) from public.comments where status = 'pruefen')::text, '1', 'Moderation sieht Prüf-Warteschlange');
 select public.moderieren('kommentar', (select id from public.comments where text like '%Casino%'), 'ausgeblendet', 'Spam');
 select public.meldung_entscheiden((select id from public.meldungen limit 1), 'erledigt', 'Ausgeblendet, danke!');
 select public.sperren('d0000000-0000-0000-0000-000000000002', 7, 'Test-Sperre');
-select 'log=' || string_agg(aktion, ',' order by id) from public.moderations_log;
+select test.gleich((select string_agg(aktion, ',' order by id) from public.moderations_log), 'ausgeblendet,meldung_erledigt,gesperrt_7_tage', 'Protokoll vollständig');
 
 select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000002', false);
-\echo '--- erwarte Fehler: gesperrt'
-insert into public.comments (pfad, text) values ('/x', 'darf ich?');
-select 'emil benachrichtigungen=' || string_agg(art, ',' order by id) from public.benachrichtigungen;
+select test.scheitert($$insert into public.comments (pfad, text) values ('/x', 'darf ich?')$$, '%schreiben_gesperrt%');
+select test.gleich((select string_agg(art, ',' order by id) from public.benachrichtigungen), 'loesung,moderation,moderation', 'Emil über Lösung, Meldung und Sperre informiert');
 reset role;
 
 set role anon;
-select 'gast sieht kommentare=' || count(*) from public.comments;
-\echo '--- erwarte Fehler: gast schreibt'
-insert into public.comments (pfad, text) values ('/x', 'anonym');
+select test.gleich((select count(*) from public.comments)::text, '4', 'Gäste sehen nur sichtbare Kommentare');
+select test.scheitert($$insert into public.comments (pfad, text) values ('/x', 'anonym')$$, '%permission denied%');
 reset role;
 
-select 'punkte ' || string_agg(handle || ':' || punkte, ' ' order by handle) from public.profiles where handle in ('dora', 'emil', 'moni');
-select 'abzeichen ' || string_agg(p.handle || ':' || b.name, ' ' order by p.handle, b.name) from public.badges b join public.profiles p on p.id = b.user_id where p.handle in ('dora', 'emil');
+select test.gleich((select string_agg(handle || ':' || punkte, ' ' order by handle) from public.profiles where handle in ('dora', 'emil', 'moni')), 'dora:7 emil:17 moni:0', 'Punkte');
+select test.gleich((select string_agg(p.handle || ':' || b.name, ' ' order by p.handle, b.name) from public.badges b join public.profiles p on p.id = b.user_id where p.handle in ('dora', 'emil')),
+    'dora:Erster-Kommentar-Abzeichen dora:Forums-Starter-Abzeichen emil:Erster-Kommentar-Abzeichen emil:Problemlöser-Abzeichen', 'Community-Abzeichen');
 delete from auth.users where id = 'd0000000-0000-0000-0000-000000000001';
-select 'nach löschen dora: kommentare ohne autor=' || count(*) from public.comments where user_id is null;
+select test.gleich((select count(*) from public.comments where user_id is null)::text, '4', 'Beiträge gelöschter Konten bleiben anonym');
