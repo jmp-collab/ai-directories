@@ -1,4 +1,4 @@
--- Lokaler RLS-Test: psql -f supabase/tests/auth-stub.sql -f supabase/migrations/0001_fundament.sql -f supabase/tests/0001_rls.sql
+-- Lokaler RLS-Test: psql -f supabase/tests/auth-stub.sql -f supabase/migrations/0001_fundament.sql -f supabase/tests/0001_rls_test.sql
 -- Zeilen nach "erwarte Fehler" müssen mit permission denied oder einer RLS-Verletzung scheitern.
 \set ON_ERROR_STOP 0
 insert into auth.users (id, email) values ('aaaaaaaa-0000-0000-0000-000000000001','a@x.de'), ('bbbbbbbb-0000-0000-0000-000000000002','b@x.de');

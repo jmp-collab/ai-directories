@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import konfetti from '../../lib/konfetti'
 import { verleihe } from '../../lib/herz'
+import KontoEinladung from './KontoEinladung'
 
 const AUFGABEN = [
     ['schreiben', '✍️', 'Texte schreiben', ['schreiben', 'marketing']],
@@ -110,6 +111,7 @@ export default function ToolFinder({ tools }) {
                                 ))}
                             </ol>
                         )}
+                        <KontoEinladung klein text="Treffer merken und später vergleichen?" />
                     </div>
                 )}
             </div>

@@ -17,6 +17,8 @@ import Herzstuecke from './components/Herzstuecke'
 import SeitenAktionen from './components/SeitenAktionen'
 import FooterExtras from './components/FooterExtras'
 import LeseHelfer from './components/LeseHelfer'
+import KontoKnopf from './components/KontoKnopf'
+import KontoSync from './components/KontoSync'
 import JsonLd from './components/JsonLd'
 import { absoluteUrl } from '../lib/site'
 import { getKbRubriken } from '../lib/kb'
@@ -167,6 +169,7 @@ export default function RootLayout({ children }) {
                             <span className="brand-sub">{SITE_TAGLINE}</span>
                         </Link>
                         <Gruss />
+                        <KontoKnopf />
                         <nav aria-label="Hauptnavigation">
                             <ul>
                                 <li>
@@ -287,6 +290,7 @@ export default function RootLayout({ children }) {
                 <Herzstuecke />
                 <ToastHost />
                 <LeseHelfer />
+                <KontoSync />
             </body>
         </html>
     )

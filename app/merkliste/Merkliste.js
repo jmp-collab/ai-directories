@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { lies, schreib, ABZEICHEN_KATALOG } from '../../lib/herz'
 import { Medaille, WinkeRoboter } from '../components/HerzIcons'
 import { IdeeBox, Weitersagen } from '../components/HerzBoxen'
+import KontoEinladung from '../components/KontoEinladung'
 
 export default function Merkliste() {
     const [daten, setDaten] = useState(null)
@@ -32,6 +33,7 @@ export default function Merkliste() {
 
     return (
         <>
+            <KontoEinladung />
             <h2>⭐ Gemerkte Seiten</h2>
             {daten.liste.length === 0 ? (
                 <div className="merk-leer">

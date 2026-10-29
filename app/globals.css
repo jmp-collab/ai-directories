@@ -5971,3 +5971,134 @@ h2 a {
     :root[data-nacht='an'] .site-header::after { animation: none !important; }
     .jean-face svg ellipse, .jean-face svg circle { transition: none; }
 }
+
+/* ===== Konten, Login und Profile ===== */
+.konto-knopf {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 36px;
+    padding: 4px 12px;
+    border: 2px solid var(--accent-contrast);
+    border-radius: 999px;
+    color: var(--accent-contrast);
+    font-weight: 800;
+    text-decoration: none;
+}
+.konto-knopf:hover { background: rgba(255, 255, 255, 0.15); }
+.konto-knopf-an { padding: 3px 12px 3px 3px; }
+.konto-knopf-name { max-width: 14ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.konto-avatar {
+    display: inline-grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--pop);
+    color: #1b1b1f;
+    font-weight: 800;
+    flex: none;
+}
+.konto-avatar-gross { width: 96px; height: 96px; font-size: 2.4rem; border-width: 4px; box-shadow: var(--shadow); }
+.konto-zwei { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 24px; align-items: start; }
+@media (max-width: 760px) { .konto-zwei { grid-template-columns: minmax(0, 1fr); } }
+.konto-check > span, .konto-check { min-width: 0; overflow-wrap: anywhere; }
+.konto-karte {
+    padding: 20px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+.konto-formular { display: grid; gap: 12px; }
+.konto-formular input[type='email'],
+.konto-gefahr input,
+.profil-editor input:not([type='checkbox']):not([type='file']),
+.profil-editor textarea,
+.profil-editor select {
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 12px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--text);
+    font: inherit;
+}
+.konto-check { display: flex; gap: 10px; align-items: flex-start; font-size: 0.95rem; }
+.konto-check input { margin-top: 4px; width: 18px; height: 18px; flex: none; }
+.konto-fehler { margin: 0; padding: 10px 12px; border-radius: 10px; background: var(--bad-bg); color: var(--bad-fg); font-weight: 700; }
+.konto-ok { background: var(--good-bg); color: var(--good-fg); }
+.konto-gross { margin: 0; font-size: 1.4rem; font-weight: 800; }
+.konto-handle { margin: 2px 0 0; font-weight: 700; opacity: 0.85; }
+.konto-vorteile { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.konto-vorteile li { padding: 12px 14px; border: 2px dashed var(--border); border-radius: var(--radius); font-weight: 700; }
+.konto-kopf,
+.profil-vorschau {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    min-height: 170px;
+    margin: 12px 0 20px;
+    padding: 20px;
+    border: 3px solid var(--border);
+    border-radius: var(--radius);
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--shadow);
+    color: #1b1b1f;
+}
+.profil-vorschau-text,
+.konto-kopf > div {
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.88);
+}
+.banner-sonne { background-image: linear-gradient(120deg, #ffe14d, #ff9a62 60%, #ff6fa8); }
+.banner-meer { background-image: linear-gradient(120deg, #8fd3ff, #4f9dff 55%, #6d5bd0); }
+.banner-wald { background-image: linear-gradient(120deg, #c8f7a6, #3fcf9b 55%, #0f7a4a); }
+.banner-nacht { background-image: linear-gradient(120deg, #2b2350, #4a2f7a 50%, #0e1a3a); }
+.banner-beere { background-image: linear-gradient(120deg, #ffc1d9, #ff6fa8 50%, #8a2be2); }
+.banner-atom { background-image: radial-gradient(circle at 30% 40%, #ffe14d 0 12%, transparent 13%), linear-gradient(120deg, #b3164f, #ff6fa8); }
+.konto-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.konto-schalter { list-style: none; padding: 0; display: grid; gap: 10px; }
+.konto-gefahr { margin: 24px 0; padding: 14px 16px; border: 2px dashed var(--bad-fg); border-radius: var(--radius); }
+.konto-gefahr summary { cursor: pointer; font-weight: 800; color: var(--bad-fg); }
+.konto-gefahr input { max-width: 220px; display: inline-block; }
+.konto-rot { background: var(--bad-fg) !important; color: #fff !important; }
+.konto-rot:disabled { opacity: 0.5; cursor: not-allowed; }
+.konto-einladung-klein { flex-basis: 100%; margin: 4px 0 0; font-weight: 700; }
+.profil-editor { display: grid; gap: 18px; }
+.profil-editor fieldset {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 16px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+.profil-editor legend { padding: 0 6px; font-weight: 800; font-size: 1.1rem; }
+.profil-editor label:not(.konto-check) { display: grid; gap: 6px; font-weight: 700; }
+.profil-datei input { font: inherit; }
+.profil-verlaeufe { display: flex; flex-wrap: wrap; gap: 8px; }
+.verlauf-punkt {
+    min-width: 76px;
+    min-height: 40px;
+    padding: 6px 12px;
+    border: 3px solid var(--border);
+    border-radius: 999px;
+    color: #1b1b1f;
+    font: inherit;
+    font-weight: 800;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+.verlauf-punkt.banner-nacht { color: #fff; text-shadow: none; }
+.verlauf-punkt.an { outline: 3px solid var(--accent); outline-offset: 2px; }
+.profil-rolle { margin-left: 8px; padding: 2px 8px; border-radius: 999px; background: var(--accent); color: var(--accent-contrast); font-size: 0.8rem; }
+.profil-bio { font-size: 1.1rem; white-space: pre-line; }
+.profil-beruf { font-weight: 700; }
+.regel-karte { padding: 14px; border: 2px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }

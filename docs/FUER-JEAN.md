@@ -61,3 +61,13 @@ Die geplanten Sitzungen (Backlog, Sperr-Check, Preis-Check, KI-News) laufen ohne
 ## Gratis-Guides (PDF) freischalten
 
 Die drei Guides sind in Gamma fertig (KI-Agenten-Fahrplan, Sichtbar in KI-Antworten, KI-Skills-Starterkit). Die Cloud-Umgebung durfte die PDFs nicht herunterladen (Host assets.api.gamma.app gesperrt). Entweder den Host in den Netzwerkeinstellungen der Umgebung erlauben oder die drei PDFs aus Gamma exportieren und hochladen. Danach: `python3 utils/guides/import.py ki-agenten-fahrplan <pdf> sichtbar-in-ki-antworten <pdf> ki-skills-starterkit <pdf>`, bauen, PR, mergen.
+
+
+## Konten, Profile und Community (Supabase)
+
+Plan und Stand: `docs/TRAUMSEITE-30.md`. Alles ist gebaut, aber unsichtbar, bis du es einschaltest. Vorher bitte:
+
+1. Supabase-Dashboard, Projekt **aigeddon**: Organization Settings, Legal Documents, AV-Vertrag (DPA) abschließen.
+2. Authentication, URL Configuration: Site URL `https://jmp-collab.github.io/ai-directories`, Redirect URL `https://jmp-collab.github.io/ai-directories/**`.
+3. Authentication, SMTP: eigenen Mailversand eintragen (z. B. Brevo, 300 Mails pro Tag gratis). Ohne eigenen Versand schickt Supabase nur sehr wenige Login-Mails pro Stunde.
+4. Einschalten: GitHub, Settings, Secrets and variables, Actions, Variables, neue Variable `KONTO` mit Wert `1`, danach den Pages-Workflow neu starten.

@@ -13,18 +13,18 @@ Jeder Schritt ist ein eigenständiger Prompt. Er lässt sich einzeln in einer ne
 
 ## Phase A: Fundament
 
-- [ ] **1 Projekt und Client.** Lege das Supabase-Projekt an, füge `@supabase/supabase-js` hinzu, baue `lib/supabase.js` (ein Client, Session im localStorage, PKCE) und `lib/konto.js` mit `KONTO_AKTIV`. Hinterlege URL und öffentlichen Schlüssel im Pages-Workflow.
-- [ ] **2 Schema v1.** Tabellen `profiles` (öffentliche Karte: Handle, Anzeigename, Farben, Avatar- und Banner-Pfad, Rolle, Punkte), `profil_details` (Bio, Beruf, Pronomen, Links; bei privaten Profilen verborgen), `konten` (nur für den Nutzer: Einwilligungen, Segment, Plan, Sperre), `einwilligungs_log` (nur per Trigger), `saved_items`, `badges`; Trigger `handle_new_user`, RLS je Tabelle, Funktion `ist_admin()`.
-- [ ] **3 Login.** Seite `/anmelden` mit Magic Link (E-Mail-Code ohne Passwort), Rückkehr auf die Ausgangsseite, Konto-Knopf im Header mit Avatar, Abmelden. Weiterleitungs-URLs in Supabase für die GitHub-Pages-Domain setzen.
-- [ ] **4 Kontoseite.** `/konto` mit Übersicht, Einwilligungen (Newsletter, persönliche Angebote) zum Umschalten, Datenexport als JSON und Konto löschen über eine abgesicherte Datenbankfunktion.
-- [ ] **5 Sync.** Merkliste, Herzen, Abzeichen und Verlauf aus dem Browser beim Login ins Konto übernehmen (zusammenführen, nicht überschreiben) und danach in beide Richtungen aktuell halten.
-- [ ] **6 Registrierungs-Momente.** Sanfte Einladung „Sichere deine Merkliste“ nach 3 gemerkten Seiten, im Sammelalbum, nach dem Tool-Finder. Datenschutzerklärung um Konto, Supabase und Speicherorte ergänzen.
+- [x] **1 Projekt und Client.** Lege das Supabase-Projekt an, füge `@supabase/supabase-js` hinzu, baue `lib/supabase.js` (ein Client, Session im localStorage, PKCE) und `lib/konto.js` mit `KONTO_AKTIV`. Hinterlege URL und öffentlichen Schlüssel im Pages-Workflow.
+- [x] **2 Schema v1.** Tabellen `profiles` (öffentliche Karte: Handle, Anzeigename, Farben, Avatar- und Banner-Pfad, Rolle, Punkte), `profil_details` (Bio, Beruf, Pronomen, Links; bei privaten Profilen verborgen), `konten` (nur für den Nutzer: Einwilligungen, Segment, Plan, Sperre), `einwilligungs_log` (nur per Trigger), `saved_items`, `badges`; Trigger `handle_new_user`, RLS je Tabelle, Funktion `ist_admin()`.
+- [x] **3 Login.** Seite `/anmelden` mit Magic Link (E-Mail-Code ohne Passwort), Rückkehr auf die Ausgangsseite, Konto-Knopf im Header mit Avatar, Abmelden. Weiterleitungs-URLs in Supabase für die GitHub-Pages-Domain setzen.
+- [x] **4 Kontoseite.** `/konto` mit Übersicht, Einwilligungen (Newsletter, persönliche Angebote) zum Umschalten, Datenexport als JSON und Konto löschen über eine abgesicherte Datenbankfunktion.
+- [x] **5 Sync.** Merkliste, Herzen, Abzeichen und Verlauf aus dem Browser beim Login ins Konto übernehmen (zusammenführen, nicht überschreiben) und danach in beide Richtungen aktuell halten.
+- [x] **6 Registrierungs-Momente.** Sanfte Einladung „Sichere deine Merkliste“ nach 3 gemerkten Seiten, im Sammelalbum, nach dem Tool-Finder. Datenschutzerklärung um Konto, Supabase und Speicherorte ergänzen.
 
 ## Phase B: Profil
 
-- [ ] **7 Profil-Editor.** Anzeigename, eindeutiger Handle, Bio (300 Zeichen), Rolle, bis zu 3 Links, Lieblings-Akzentfarbe, Banner-Farbverlauf, Pronomen optional, Sichtbarkeit öffentlich oder privat.
-- [ ] **8 Eigene Bilder.** Storage-Buckets `avatare` und `banner`: Upload nur in den eigenen Ordner, nur Bildtypen, Größenlimit. Im Browser zuschneiden, verkleinern und als WebP neu kodieren (entfernt Metadaten). Vorschau vor dem Speichern.
-- [ ] **9 Öffentliches Profil.** `/u/?h=handle` mit Banner, Avatar, Bio, Links (rel="nofollow ugc"), Abzeichen-Vitrine, letzte Beiträge und Kommentare. Private Profile zeigen nur Handle, Anzeigename und Bild; Bio, Beruf, Pronomen und Links bleiben verborgen.
+- [x] **7 Profil-Editor.** Anzeigename, eindeutiger Handle, Bio (300 Zeichen), Rolle, bis zu 3 Links, Lieblings-Akzentfarbe, Banner-Farbverlauf, Pronomen optional, Sichtbarkeit öffentlich oder privat.
+- [x] **8 Eigene Bilder.** Storage-Buckets `avatare` und `banner`: Upload nur in den eigenen Ordner, nur Bildtypen, Größenlimit. Im Browser zuschneiden, verkleinern und als WebP neu kodieren (entfernt Metadaten). Vorschau vor dem Speichern.
+- [x] **9 Öffentliches Profil.** `/u/?h=handle` mit Banner, Avatar, Bio, Links (rel="nofollow ugc"), Abzeichen-Vitrine, letzte Beiträge und Kommentare. Private Profile zeigen nur Handle, Anzeigename und Bild; Bio, Beruf, Pronomen und Links bleiben verborgen.
 
 ## Phase C: Community
 
@@ -59,9 +59,15 @@ Jeder Schritt ist ein eigenständiger Prompt. Er lässt sich einzeln in einer ne
 - [ ] **29 Admin-Zentrale.** `/admin` mit Nutzern, Leads, Mitgliedern, Umsatz, Meldungen, Kennzahlen (Registrierungen, aktive Nutzer, Konversion).
 - [ ] **30 Prüfung und Start.** Sicherheits-Audit (Advisors, RLS-Tests mit zwei Testkonten, Ratenlimits), Rechtstexte (AGB, Datenschutz, Widerruf), Last- und Barrierefreiheits-Test, dann Schalter `NEXT_PUBLIC_KONTO=1` dauerhaft an.
 
+## Stand
+
+- Schritte 1 bis 9 sind gebaut und getestet (Code hinter dem Schalter `NEXT_PUBLIC_KONTO`). Die Migrationen `0001_fundament` und `0002_bilder` sind lokal mit `sh supabase/tests/run.sh` geprüft und warten aufs Einspielen ins Supabase-Projekt.
+
 ## Was nur Jean erledigen kann
 
 1. AV-Vertrag (DPA) mit Supabase im Dashboard abschließen: Organization Settings, Legal Documents.
 2. Eigenen Mailversand (SMTP, z. B. Brevo) in Supabase eintragen, sonst schafft der Login nur wenige Mails pro Stunde.
 3. Für Schritt 23: Stripe-Konto und Schlüssel als Edge-Function-Secrets.
 4. Für den Start: AGB und Widerrufsbelehrung juristisch prüfen lassen.
+5. Supabase, Authentication, URL Configuration: Site URL `https://jmp-collab.github.io/ai-directories` und Redirect URL `https://jmp-collab.github.io/ai-directories/**` eintragen.
+6. Zum Einschalten: GitHub, Settings, Secrets and variables, Actions, Variables: `KONTO` = `1`. Zum Ausschalten die Variable löschen.

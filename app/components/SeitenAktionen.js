@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { lies, schreib, toast, ruhig, verleihe } from '../../lib/herz'
 import { StrahlenHerz } from './HerzIcons'
+import KontoEinladung from './KontoEinladung'
 
 // Herz, Merken und Teilen unter jeder Seite. Gespeichert wird nur im eigenen Browser, gezählt wird nichts.
 const sauber = (t) => (t || '').replace(/\s*\|\s*AIGeddon\s*$/, '').trim()
@@ -30,6 +31,7 @@ export default function SeitenAktionen() {
     const [herz, setHerz] = useState(false)
     const [gemerkt, setGemerkt] = useState(false)
     const [bereit, setBereit] = useState(false)
+    const [einladen, setEinladen] = useState(false)
 
     useEffect(() => {
         setHerz((lies('aigeddon-herzen', []) || []).includes(pfad))
@@ -63,6 +65,7 @@ export default function SeitenAktionen() {
         } else {
             schreib('aigeddon-merkliste', [{ pfad, titel: sauber(document.title), zeit: Date.now() }, ...liste].slice(0, 100))
             setGemerkt(true)
+            if (liste.length + 1 >= 3) setEinladen(true)
             toast('Gemerkt! Du findest die Seite unter Merkliste (Taste m).', '⭐')
         }
     }
@@ -94,6 +97,7 @@ export default function SeitenAktionen() {
                 <span aria-hidden="true">💌</span> Teilen
             </button>
             <span className="seiten-aktionen-hinweis">Bleibt nur in deinem Browser, wir zählen nichts.</span>
+            {einladen && <KontoEinladung klein text="Schon 3 Seiten gemerkt! Willst du sie auf allen Geräten haben?" />}
         </div>
     )
 }
