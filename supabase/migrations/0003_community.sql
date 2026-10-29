@@ -57,7 +57,11 @@ create table public.comments (
     status text not null default 'sichtbar' check (status in ('sichtbar', 'pruefen', 'ausgeblendet', 'geloescht')),
     erstellt timestamptz not null default now(),
     bearbeitet timestamptz,
-    belohnt boolean not null default false
+    belohnt boolean not null default false,
+    -- Wann die Punkte vergeben wurden (für das Tageslimit, auch bei später Freigabe).
+    belohnt_am timestamptz,
+    -- Benachrichtigungen gehen pro Inhalt nur einmal raus, auch nach erneuter Prüfung und Freigabe.
+    gemeldet boolean not null default false
 );
 create index comments_pfad_idx on public.comments (pfad, erstellt);
 create index comments_user_idx on public.comments (user_id);
@@ -88,6 +92,7 @@ create table public.forum_themen (
     erstellt timestamptz not null default now(),
     bearbeitet timestamptz,
     belohnt boolean not null default false,
+    gemeldet boolean not null default false,
     suche tsvector generated always as (to_tsvector('german', titel || ' ' || text)) stored
 );
 create index forum_themen_kat_idx on public.forum_themen (kategorie_id, angepinnt desc, letzte_aktivitaet desc);
@@ -102,7 +107,8 @@ create table public.forum_beitraege (
     status text not null default 'sichtbar' check (status in ('sichtbar', 'pruefen', 'ausgeblendet', 'geloescht')),
     erstellt timestamptz not null default now(),
     bearbeitet timestamptz,
-    belohnt boolean not null default false
+    belohnt boolean not null default false,
+    gemeldet boolean not null default false
 );
 create index forum_beitraege_thema_idx on public.forum_beitraege (thema_id, erstellt);
 create index forum_beitraege_user_idx on public.forum_beitraege (user_id);
@@ -329,7 +335,7 @@ declare
     wert integer := case when tg_table_name = 'forum_themen' then 2 else 1 end;
     war_sichtbar boolean := tg_op = 'UPDATE' and old.status = 'sichtbar';
     ist_sichtbar boolean := new.status = 'sichtbar';
-    erstmals boolean := ist_sichtbar and (tg_op = 'INSERT' or old.status = 'pruefen');
+    erstmals boolean := ist_sichtbar and not new.gemeldet and (tg_op = 'INSERT' or old.status <> 'sichtbar');
 begin
     if tg_op = 'INSERT' and new.user_id is not null then
         if tg_table_name = 'forum_beitraege' then
@@ -359,14 +365,21 @@ begin
     if new.user_id is not null then
         if ist_sichtbar and not war_sichtbar and not new.belohnt then
             if tg_table_name <> 'comments'
-                or (select count(*) from public.comments c where c.user_id = new.user_id and c.belohnt and c.erstellt > now() - interval '1 day') < 10 then
+                or (select count(*) from public.comments c where c.user_id = new.user_id and c.belohnt and c.belohnt_am > now() - interval '1 day') < 10 then
                 perform public.punkte_plus(new.user_id, wert);
-                execute format('update public.%I set belohnt = true where id = $1', tg_table_name) using new.id;
+                if tg_table_name = 'comments' then
+                    update public.comments set belohnt = true, belohnt_am = now() where id = new.id;
+                else
+                    execute format('update public.%I set belohnt = true where id = $1', tg_table_name) using new.id;
+                end if;
             end if;
         elsif war_sichtbar and not ist_sichtbar and new.belohnt then
             perform public.punkte_plus(new.user_id, -wert);
             execute format('update public.%I set belohnt = false where id = $1', tg_table_name) using new.id;
         end if;
+    end if;
+    if erstmals then
+        execute format('update public.%I set gemeldet = true where id = $1', tg_table_name) using new.id;
     end if;
     if erstmals and new.user_id is null then
         if tg_table_name = 'comments' then
@@ -510,6 +523,12 @@ begin
     end if;
     if neuer_status not in ('sichtbar', 'ausgeblendet') then
         raise exception 'status_ungueltig' using errcode = 'P0001';
+    end if;
+    -- Freigeben nur, wenn der umgebende Kommentar oder das Thema selbst sichtbar ist.
+    if neuer_status = 'sichtbar' and (
+        (art_ = 'kommentar' and exists (select 1 from public.comments c join public.comments e on e.id = c.parent_id where c.id = id_ and e.status <> 'sichtbar'))
+        or (art_ = 'beitrag' and exists (select 1 from public.forum_beitraege b join public.forum_themen t on t.id = b.thema_id where b.id = id_ and t.status <> 'sichtbar'))) then
+        raise exception 'eltern_verborgen' using errcode = 'P0001';
     end if;
     if art_ = 'kommentar' then
         update public.comments set status = neuer_status where id = id_ returning user_id into autor;

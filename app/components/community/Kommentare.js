@@ -18,7 +18,8 @@ const OHNE = /^\/(anmelden|konto|merkliste|u|forum|moderation|datenschutz|commun
 function Kommentar({ k, antworten, user, profil, mod, reaktionen, setReaktionen, neuLaden, pfad }) {
     const [modus, setModus] = useState('')
     const eigen = user && k.user_id === user.id
-    const gelöscht = k.status === 'geloescht'
+    // 'entfernt' ist ein Platzhalter für einen Eltern-Kommentar, den diese Person nicht sehen darf (zurückgezogen oder ausgeblendet).
+    const gelöscht = k.status === 'geloescht' || k.status === 'entfernt'
     const aktion = async (art) => {
         const sb = await supabase()
         const { error } =
@@ -54,7 +55,7 @@ function Kommentar({ k, antworten, user, profil, mod, reaktionen, setReaktionen,
         <li className={`c-kommentar status-${k.status}`} id={`kommentar-${k.id}`}>
             <Autor autor={k.autor} zeit={k.erstellt} bearbeitet={k.bearbeitet} />
             {gelöscht ? (
-                <p className="c-entfernt">Dieser Kommentar wurde von der Person selbst entfernt.</p>
+                <p className="c-entfernt">{k.status === 'entfernt' ? 'Dieser Kommentar ist nicht mehr verfügbar.' : 'Dieser Kommentar wurde von der Person selbst entfernt.'}</p>
             ) : modus === 'bearbeiten' ? (
                 <Eingabe user={user} pfad={pfad} startText={k.text} knopf="Speichern" autoFocus onSenden={bearbeiten} onAbbrechen={() => setModus('')} />
             ) : (
@@ -125,7 +126,13 @@ export default function Kommentare() {
             const { data: e } = await sb.from('comments').select(`id, parent_id, user_id, text, status, erstellt, bearbeitet, ${AUTOR_FELDER}`).in('id', fehlend)
             eltern = e || []
         }
-        setListe([...liste, ...eltern].sort((a, b) => (a.erstellt < b.erstellt ? -1 : 1)))
+        // Antworten bleiben lesbar, auch wenn ihr Eltern-Kommentar zurückgezogen oder ausgeblendet ist.
+        const alle = [...liste, ...eltern]
+        const geladen = new Set(alle.map((k) => k.id))
+        const platzhalter = fehlend
+            .filter((id) => !geladen.has(id))
+            .map((id) => ({ id, parent_id: null, user_id: null, text: '', status: 'entfernt', autor: null, erstellt: alle.filter((k) => k.parent_id === id).map((k) => k.erstellt).sort()[0] }))
+        setListe([...alle, ...platzhalter].sort((a, b) => (a.erstellt < b.erstellt ? -1 : 1)))
     }, [pfad])
 
     useEffect(() => {

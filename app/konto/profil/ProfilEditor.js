@@ -30,8 +30,16 @@ export default function ProfilEditor() {
     const [status, setStatus] = useState('')
     const [vorschau, setVorschau] = useState({})
 
+    // Kontowechsel: Formular sofort leeren, damit nie Angaben eines anderen Kontos angezeigt oder gespeichert werden.
     useEffect(() => {
-        if (!user || !profil) return
+        setP(null)
+        setD(null)
+        setVorschau({})
+    }, [user?.id])
+
+    useEffect(() => {
+        if (!user || !profil || profil.id !== user.id) return
+        let gilt = true
         setP({
             handle: profil.handle,
             anzeigename: profil.anzeigename,
@@ -43,8 +51,12 @@ export default function ProfilEditor() {
         })
         supabase().then(async (sb) => {
             const { data } = await sb.from('profil_details').select('bio, beruf, pronomen, links').eq('id', user.id).maybeSingle()
+            if (!gilt) return
             setD({ bio: data?.bio || '', beruf: data?.beruf || '', pronomen: data?.pronomen || '', links: [...(data?.links || []), '', '', ''].slice(0, 3) })
         })
+        return () => {
+            gilt = false
+        }
     }, [user, profil])
 
     if (!KONTO_AKTIV) return <p className="lead">Profile sind gerade noch in Vorbereitung.</p>

@@ -157,3 +157,35 @@ select id as beitrag_versteckt from public.forum_beitraege where status = 'sicht
 set role authenticated;
 select test.scheitert(format($$insert into public.reaktionen (ziel_art, ziel_id, emoji) values ('beitrag', %s, '👍')$$, :beitrag_versteckt), '%ziel_fehlt%');
 reset role;
+
+-- Tageslimit gilt auch bei später Freigabe alter Kommentare.
+set role authenticated;
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000005', false);
+insert into public.comments (pfad, text) values ('/ratgeber/spaet', 'Alter Tipp mit casino');
+insert into public.comments (pfad, text) values ('/ratgeber/spaet', 'Zweiter alter Tipp mit casino');
+reset role;
+update public.comments set erstellt = now() - interval '2 days' where user_id = 'd0000000-0000-0000-0000-000000000005';
+set role authenticated;
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000003', false);
+select public.moderieren('kommentar', id, 'sichtbar', 'ok') from public.comments where pfad = '/ratgeber/spaet';
+reset role;
+select test.gleich((select punkte from public.profiles where id = 'd0000000-0000-0000-0000-000000000005')::text, '10', 'Späte Freigabe überschreitet das Tageslimit nicht');
+
+-- Benachrichtigungen nur einmal, auch nach Bearbeiten mit Filterwort und erneuter Freigabe.
+set role authenticated;
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000005', false);
+insert into public.comments (pfad, text) values ('/ratgeber/neu', 'Eltern X');
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000003', false);
+insert into public.comments (pfad, parent_id, text) select '/ratgeber/neu', id, 'Antwort Y' from public.comments where text = 'Eltern X';
+update public.comments set text = 'Antwort Y casino' where text = 'Antwort Y';
+select public.moderieren('kommentar', (select id from public.comments where text = 'Antwort Y casino'), 'sichtbar', 'ok');
+reset role;
+select test.gleich((select count(*) from public.benachrichtigungen where user_id = 'd0000000-0000-0000-0000-000000000005' and art = 'antwort')::text, '1', 'Antwort nur einmal gemeldet');
+
+-- Keine Freigabe, solange der Eltern-Kommentar verborgen ist.
+set role authenticated;
+select set_config('request.jwt.claim.sub', 'd0000000-0000-0000-0000-000000000003', false);
+select public.moderieren('kommentar', (select id from public.comments where text = 'Eltern X'), 'ausgeblendet', 'Test');
+update public.comments set text = 'Antwort Y casino 2' where text = 'Antwort Y casino';
+select test.scheitert($$select public.moderieren('kommentar', (select id from public.comments where text = 'Antwort Y casino 2'), 'sichtbar', 'ok')$$, '%eltern_verborgen%');
+reset role;

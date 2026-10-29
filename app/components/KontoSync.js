@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import useKonto from './useKonto'
-import { supabase } from '../../lib/konto'
+import { supabase, istAktuell } from '../../lib/konto'
 import { erstAbgleich, schreibeNach, SYNC_KEYS } from '../../lib/sync'
 import { toast, verleihe } from '../../lib/herz'
 
@@ -14,12 +14,13 @@ export default function KontoSync() {
         let aktiv = true
         const offen = new Map()
         let sb = null
+        const gilt = () => aktiv && istAktuell(user.id)
         supabase().then(async (client) => {
             sb = client
             if (!sb || !aktiv) return
             const schon = sessionStorage.getItem('aigeddon-sync') === user.id
-            await erstAbgleich(sb, user.id).catch(() => {})
-            if (!schon) {
+            const ok = await erstAbgleich(sb, user.id, gilt).catch(() => false)
+            if (ok && !schon) {
                 sessionStorage.setItem('aigeddon-sync', user.id)
                 toast('Deine Merkliste, Herzen und Abzeichen sind jetzt in deinem Konto gesichert.', '☁️')
                 verleihe('Mitglieds-Abzeichen')
@@ -29,7 +30,7 @@ export default function KontoSync() {
             const key = e.detail?.key
             if (!sb || !SYNC_KEYS.includes(key)) return
             clearTimeout(offen.get(key))
-            offen.set(key, setTimeout(() => schreibeNach(sb, user.id, key).catch(() => {}), 800))
+            offen.set(key, setTimeout(() => gilt() && schreibeNach(sb, user.id, key, gilt).catch(() => {}), 800))
         }
         window.addEventListener('aigeddon-speicher', geaendert)
         return () => {

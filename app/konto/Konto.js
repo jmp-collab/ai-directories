@@ -17,17 +17,26 @@ export default function Konto() {
     const [loeschen, setLoeschen] = useState('')
 
     useEffect(() => {
+        // Kontowechsel: alte Werte sofort weg, späte Antworten des vorigen Kontos verwerfen.
+        setKonto(null)
+        setZahlen(null)
         if (!user) return
+        let gilt = true
         supabase().then(async (sb) => {
             const { data } = await sb.from('konten').select('newsletter, angebote, plan, regeln_akzeptiert').eq('id', user.id).maybeSingle()
+            if (!gilt) return
             setKonto(data)
             const { data: items } = await sb.from('saved_items').select('art').eq('user_id', user.id)
             const { count } = await sb.from('badges').select('name', { count: 'exact', head: true }).eq('user_id', user.id)
+            if (!gilt) return
             const z = { merk: 0, herz: 0, gelesen: 0, abzeichen: count || 0 }
             ;(items || []).forEach((i) => (z[i.art] = (z[i.art] || 0) + 1))
             setZahlen(z)
         })
-    }, [user])
+        return () => {
+            gilt = false
+        }
+    }, [user?.id])
 
     if (!KONTO_AKTIV) return <p className="lead">Konten sind gerade noch in Vorbereitung.</p>
     if (!bereit) return <p className="widget-note">Einen Moment …</p>
@@ -39,6 +48,7 @@ export default function Konto() {
         )
 
     const umschalten = async (feld) => {
+        if (!konto) return
         const sb = await supabase()
         const neu = !konto[feld]
         const { error } = await sb.from('konten').update({ [feld]: neu }).eq('id', user.id)
