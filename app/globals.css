@@ -6286,3 +6286,17 @@ h2 a {
     .lt-felder { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
     .lt-notiz { grid-column: 1 / -1; }
 }
+
+/* Mein KI-Stack */
+.st-neu { margin-bottom: 20px; }
+.st-felder { grid-template-columns: minmax(0, 2fr) repeat(4, minmax(0, 1fr)) auto; align-items: end; }
+.st-kopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin-bottom: 8px; }
+.st-monat { margin-left: auto; font-weight: 800; }
+.st-zeile { padding: 12px 14px; border: 2px solid var(--border); border-radius: var(--radius); min-width: 0; }
+.st-weg { align-self: center; }
+.st-tipps { display: grid; gap: 10px; padding-left: 0; list-style: none; }
+.st-tipps li { padding: 10px 12px; border: 2px dashed var(--border); border-radius: var(--radius); }
+@media (max-width: 760px) {
+    .st-felder { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+    .st-name { grid-column: 1 / -1; }
+}

@@ -68,6 +68,7 @@ export default function Konto() {
             ['saved_items', 'user_id'],
             ['badges', 'user_id'],
             ['launch_eintraege', 'user_id'],
+            ['stack_eintraege', 'user_id'],
             ['comments', 'user_id'],
             ['forum_themen', 'user_id'],
             ['forum_beitraege', 'user_id'],
@@ -165,6 +166,9 @@ export default function Konto() {
                 </Link>{' '}
                 <Link className="button" href="/launch-tracker">
                     🚀 Launch-Tracker
+                </Link>{' '}
+                <Link className="button" href="/mein-stack">
+                    🧰 Mein KI-Stack
                 </Link>
             </p>
 

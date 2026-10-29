@@ -48,7 +48,7 @@ const ABSCHNITTE = [
     [
         'Speicherung in deinem Browser',
         [
-            'Einige Werkzeuge merken sich Eingaben nur in deinem eigenen Browser (localStorage oder sessionStorage), zum Beispiel deine Bewertungen im KI-Test, den Fortschritt im Launch-Kit, ob ein Hinweis schon angezeigt wurde, deine Merkliste, die zuletzt angesehenen Seiten, wie weit du einen Artikel gelesen hast, den Zeitpunkt deines letzten Besuchs (für den Hinweis auf neue KI-News), verschenkte Herzen, Abzeichen, die gewählte Farbe und den Ruhe-Modus. Ohne Anmeldung verlassen diese Daten deinen Browser nicht und lassen sich über die Browser-Einstellungen löschen.',
+            'Einige Werkzeuge merken sich Eingaben nur in deinem eigenen Browser (localStorage oder sessionStorage), zum Beispiel deine Bewertungen im KI-Test, den Fortschritt im Launch-Kit, ob ein Hinweis schon angezeigt wurde, deine Merkliste, deinen KI-Stack, die zuletzt angesehenen Seiten, wie weit du einen Artikel gelesen hast, den Zeitpunkt deines letzten Besuchs (für den Hinweis auf neue KI-News), verschenkte Herzen, Abzeichen, die gewählte Farbe und den Ruhe-Modus. Ohne Anmeldung verlassen diese Daten deinen Browser nicht und lassen sich über die Browser-Einstellungen löschen.',
             ...(KONTO_AKTIV ? ['Wenn du dich mit einem Konto anmeldest, werden Merkliste, Herzen, gelesene Artikel, Verlauf und Abzeichen zusätzlich in deinem Konto gespeichert, damit du sie auf allen Geräten hast (siehe Abschnitt Benutzerkonto). Beim Abmelden entfernen wir sie aus dem Browser.'] : []),
         ],
     ],
@@ -57,11 +57,11 @@ const ABSCHNITTE = [
               [
                   'Benutzerkonto, Profil und Community',
                   [
-                      'Für ein Konto brauchen wir nur deine E-Mail-Adresse. Die Anmeldung läuft ohne Passwort über einen Link per E-Mail. Gespeichert werden außerdem, was du selbst anlegst: Profil (Anzeigename, Handle, Bio, Beruf, Pronomen, Links, Profilbild und Banner), deine Sammlung (Merkliste, Herzen, gelesene Artikel, Verlauf, Abzeichen), dein Launch-Tracker (Status, Notizen und Erinnerungsdaten je Verzeichnis), Kommentare und Forumsbeiträge sowie deine Einwilligungen mit Datum.',
+                      'Für ein Konto brauchen wir nur deine E-Mail-Adresse. Die Anmeldung läuft ohne Passwort über einen Link per E-Mail. Gespeichert werden außerdem, was du selbst anlegst: Profil (Anzeigename, Handle, Bio, Beruf, Pronomen, Links, Profilbild und Banner), deine Sammlung (Merkliste, Herzen, gelesene Artikel, Verlauf, Abzeichen), dein Launch-Tracker (Status, Notizen und Erinnerungsdaten je Verzeichnis), dein KI-Stack (Tools, Tarife und Beträge, die du einträgst), Kommentare und Forumsbeiträge sowie deine Einwilligungen mit Datum.',
                       'Die Daten liegen bei Supabase Inc. auf Servern in Frankfurt am Main (EU). Mit Supabase besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO. Bilder werden vor dem Hochladen in deinem Browser neu gespeichert, dabei gehen Standort- und Kameradaten (EXIF) verloren.',
                       'Rechtsgrundlage für Konto, Profil und Community ist der Nutzungsvertrag (Art. 6 Abs. 1 lit. b DSGVO). Newsletter und persönliche Empfehlungen schicken wir nur mit deiner gesonderten Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit in deinem Konto widerrufen kannst.',
                       'Öffentlich sichtbar sind Handle, Anzeigename, Profilbild und deine Beiträge. Bio, Beruf, Pronomen, Links und Abzeichen siehst nur du, wenn du dein Profil auf privat stellst. Deine E-Mail-Adresse zeigen wir nie öffentlich.',
-                      'Im Konto kannst du alle Daten jederzeit als Datei herunterladen und dein Konto selbst löschen. Dann löschen wir Profil, Bilder, Sammlung und Launch-Tracker sofort; Forumsbeiträge bleiben ohne Namen stehen, damit Diskussionen verständlich bleiben.',
+                      'Im Konto kannst du alle Daten jederzeit als Datei herunterladen und dein Konto selbst löschen. Dann löschen wir Profil, Bilder, Sammlung, Launch-Tracker und KI-Stack sofort; Forumsbeiträge bleiben ohne Namen stehen, damit Diskussionen verständlich bleiben.',
                   ],
               ],
           ]

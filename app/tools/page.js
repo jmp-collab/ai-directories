@@ -49,6 +49,9 @@ function ToolsPage() {
                 <strong>Unentschlossen?</strong> <Link href="/tool-vergleiche">Tool-Vergleiche mit klarer Empfehlung je Anwendungsfall →</Link>
             </p>
             <p className="service-hint">
+                <strong>Was kosten deine Abos?</strong> <Link href="/mein-stack">Mein KI-Stack: Kosten zusammenrechnen und Spar-Hinweise bekommen →</Link>
+            </p>
+            <p className="service-hint">
                 <strong>Mehr Auswahl?</strong> <Link href="/ki-tools">KI-Tool-Datenbank mit über 700 Tools aus den größten Community-Listen →</Link>
             </p>
             <ul className="quick-links">
