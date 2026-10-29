@@ -4,6 +4,7 @@ import JsonLd from '../components/JsonLd'
 import { SITE_NAME } from '../../lib/site'
 import { LEAD_EMAIL } from '../../lib/monetization'
 import Vernetzt, { seitenPfad } from '../components/Vernetzt'
+import { KONTO_AKTIV } from '../../lib/konto'
 
 export const metadata = {
     title: 'Datenschutzerklärung',
@@ -24,7 +25,9 @@ const ABSCHNITTE = [
     [
         'Kurz gesagt',
         [
-            'AIGeddon setzt keine Analyse-Tools, keine Werbe-Cookies und keine Tracking-Pixel ein. Personenbezogene Daten verarbeiten wir nur, wenn du uns über das Formular schreibst, und beim Abruf der Seite durch den Hosting-Anbieter.',
+            KONTO_AKTIV
+                ? 'AIGeddon setzt keine Analyse-Tools, keine Werbe-Cookies und keine Tracking-Pixel ein. Personenbezogene Daten verarbeiten wir, wenn du uns über das Formular schreibst, beim Abruf der Seite durch den Hosting-Anbieter und, falls du ein Konto anlegst, für dein Konto: E-Mail-Adresse, Profil, Sammlung, Kommentare und Forenbeiträge sowie deine Einwilligungen (siehe Abschnitt Benutzerkonto).'
+                : 'AIGeddon setzt keine Analyse-Tools, keine Werbe-Cookies und keine Tracking-Pixel ein. Personenbezogene Daten verarbeiten wir nur, wenn du uns über das Formular schreibst, und beim Abruf der Seite durch den Hosting-Anbieter.',
         ],
     ],
     [
@@ -45,9 +48,24 @@ const ABSCHNITTE = [
     [
         'Speicherung in deinem Browser',
         [
-            'Einige Werkzeuge merken sich Eingaben nur in deinem eigenen Browser (localStorage oder sessionStorage), zum Beispiel deine Bewertungen im KI-Test, den Fortschritt im Launch-Kit ob ein Hinweis schon angezeigt wurde, deine Merkliste, die zuletzt angesehenen Seiten, wie weit du einen Artikel gelesen hast, den Zeitpunkt deines letzten Besuchs (für den Hinweis auf neue KI-News), verschenkte Herzen, Abzeichen, die gewählte Farbe und den Ruhe-Modus. Diese Daten verlassen deinen Browser nicht und lassen sich über die Browser-Einstellungen löschen.',
+            'Einige Werkzeuge merken sich Eingaben nur in deinem eigenen Browser (localStorage oder sessionStorage), zum Beispiel deine Bewertungen im KI-Test, den Fortschritt im Launch-Kit, ob ein Hinweis schon angezeigt wurde, deine Merkliste, die zuletzt angesehenen Seiten, wie weit du einen Artikel gelesen hast, den Zeitpunkt deines letzten Besuchs (für den Hinweis auf neue KI-News), verschenkte Herzen, Abzeichen, die gewählte Farbe und den Ruhe-Modus. Ohne Anmeldung verlassen diese Daten deinen Browser nicht und lassen sich über die Browser-Einstellungen löschen.',
+            ...(KONTO_AKTIV ? ['Wenn du dich mit einem Konto anmeldest, werden Merkliste, Herzen, gelesene Artikel, Verlauf und Abzeichen zusätzlich in deinem Konto gespeichert, damit du sie auf allen Geräten hast (siehe Abschnitt Benutzerkonto). Beim Abmelden entfernen wir sie aus dem Browser.'] : []),
         ],
     ],
+    ...(KONTO_AKTIV
+        ? [
+              [
+                  'Benutzerkonto, Profil und Community',
+                  [
+                      'Für ein Konto brauchen wir nur deine E-Mail-Adresse. Die Anmeldung läuft ohne Passwort über einen Link per E-Mail. Gespeichert werden außerdem, was du selbst anlegst: Profil (Anzeigename, Handle, Bio, Beruf, Pronomen, Links, Profilbild und Banner), deine Sammlung (Merkliste, Herzen, gelesene Artikel, Verlauf, Abzeichen), Kommentare und Forumsbeiträge sowie deine Einwilligungen mit Datum.',
+                      'Die Daten liegen bei Supabase Inc. auf Servern in Frankfurt am Main (EU). Mit Supabase besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO. Bilder werden vor dem Hochladen in deinem Browser neu gespeichert, dabei gehen Standort- und Kameradaten (EXIF) verloren.',
+                      'Rechtsgrundlage für Konto, Profil und Community ist der Nutzungsvertrag (Art. 6 Abs. 1 lit. b DSGVO). Newsletter und persönliche Empfehlungen schicken wir nur mit deiner gesonderten Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit in deinem Konto widerrufen kannst.',
+                      'Öffentlich sichtbar sind Handle, Anzeigename, Profilbild und deine Beiträge. Bio, Beruf, Pronomen, Links und Abzeichen siehst nur du, wenn du dein Profil auf privat stellst. Deine E-Mail-Adresse zeigen wir nie öffentlich.',
+                      'Im Konto kannst du alle Daten jederzeit als Datei herunterladen und dein Konto selbst löschen. Dann löschen wir Profil, Bilder und Sammlung sofort; Forumsbeiträge bleiben ohne Namen stehen, damit Diskussionen verständlich bleiben.',
+                  ],
+              ],
+          ]
+        : []),
     [
         'Links zu anderen Anbietern',
         [

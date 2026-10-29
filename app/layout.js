@@ -17,6 +17,11 @@ import Herzstuecke from './components/Herzstuecke'
 import SeitenAktionen from './components/SeitenAktionen'
 import FooterExtras from './components/FooterExtras'
 import LeseHelfer from './components/LeseHelfer'
+import KontoKnopf from './components/KontoKnopf'
+import KontoSync from './components/KontoSync'
+import Glocke from './components/community/Glocke'
+import Kommentare from './components/community/Kommentare'
+import { KONTO_AKTIV } from '../lib/konto'
 import JsonLd from './components/JsonLd'
 import { absoluteUrl } from '../lib/site'
 import { getKbRubriken } from '../lib/kb'
@@ -167,6 +172,10 @@ export default function RootLayout({ children }) {
                             <span className="brand-sub">{SITE_TAGLINE}</span>
                         </Link>
                         <Gruss />
+                        <div className="konto-leiste">
+                            <Glocke />
+                            <KontoKnopf />
+                        </div>
                         <nav aria-label="Hauptnavigation">
                             <ul>
                                 <li>
@@ -181,6 +190,11 @@ export default function RootLayout({ children }) {
                                 <li>
                                     <Link href="/skills">Skills 🧩</Link>
                                 </li>
+                                {KONTO_AKTIV && (
+                                    <li>
+                                        <Link href="/forum">Forum 🗣️</Link>
+                                    </li>
+                                )}
                                 <li>
                                     <Link href="/tools">Tools 🛠️</Link>
                                 </li>
@@ -223,6 +237,7 @@ export default function RootLayout({ children }) {
                     <main id="inhalt" className="page-main">
                         {children}
                         <SeitenAktionen />
+                        <Kommentare />
                         <JeansSenf />
                         <LeadForm />
                         <LeadBox />
@@ -265,6 +280,11 @@ export default function RootLayout({ children }) {
                             Gebaut von <Link href="/ueber-jean">Jean Maurice Port</Link>, SEO-Manager mit Humor. ·{' '}
                             <Link href="/werben">Werben</Link> · <Link href="/transparenz">Transparenz</Link> · <Link href="/so-pruefen-wir">So prüfen wir</Link> ·{' '}
                             <Link href="/datenschutz">Datenschutz</Link> · <Link href="/merkliste">Merkliste ⭐</Link> ·{' '}
+                            {KONTO_AKTIV && (
+                                <>
+                                    <Link href="/forum">Forum</Link> · <Link href="/community-regeln">Community-Regeln</Link> ·{' '}
+                                </>
+                            )}
                             <a href="https://www.youtube.com/@AIGeddon">YouTube</a>
                         </p>
                         <p>
@@ -287,6 +307,7 @@ export default function RootLayout({ children }) {
                 <Herzstuecke />
                 <ToastHost />
                 <LeseHelfer />
+                <KontoSync />
             </body>
         </html>
     )

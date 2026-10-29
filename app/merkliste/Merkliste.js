@@ -5,10 +5,18 @@ import Link from 'next/link'
 import { lies, schreib, ABZEICHEN_KATALOG } from '../../lib/herz'
 import { Medaille, WinkeRoboter } from '../components/HerzIcons'
 import { IdeeBox, Weitersagen } from '../components/HerzBoxen'
+import KontoEinladung from '../components/KontoEinladung'
+import SpeicherOrt from './SpeicherOrt'
 
 export default function Merkliste() {
     const [daten, setDaten] = useState(null)
 
+    const [runde, setRunde] = useState(0)
+    useEffect(() => {
+        const neu = () => setRunde((r) => r + 1)
+        window.addEventListener('aigeddon-sync', neu)
+        return () => window.removeEventListener('aigeddon-sync', neu)
+    }, [])
     useEffect(() => {
         setDaten({
             liste: lies('aigeddon-merkliste', []) || [],
@@ -19,7 +27,7 @@ export default function Merkliste() {
             abzeichen: lies('aigeddon-abzeichen', []) || [],
             besuche: lies('aigeddon-besuche', 0) || 0,
         })
-    }, [])
+    }, [runde])
 
     if (!daten) return <p className="widget-note">Lade deine Merkliste …</p>
 
@@ -32,6 +40,7 @@ export default function Merkliste() {
 
     return (
         <>
+            <KontoEinladung />
             <h2>⭐ Gemerkte Seiten</h2>
             {daten.liste.length === 0 ? (
                 <div className="merk-leer">
@@ -106,7 +115,7 @@ export default function Merkliste() {
                 })}
             </ul>
             <p className="widget-note">
-                Dein Album liegt nur in deinem Browser. Löschst du den Browser-Speicher, fängt es von vorn an.
+                <SpeicherOrt art="album" />
             </p>
 
             <h2>💛 Für Herzensmenschen</h2>
